@@ -1,0 +1,300 @@
+*   f3068df : Merge remote-tracking branch 'origin/master'
+|\  
+* | 01c9aa8 : Start of minigames and pest control
+|/  
+* ccdc746 : Change drop loading to serialization
+* f7d2205 : Fix pest tick lengths
+* d1ebebd : Pest portals spawning and shield removing
+* 9223a9a : Client changes
+* a1f9b40 : Improve cache loading
+* 25d5afd : Commit after downloading files
+* 376b67e : Make alert box less ugly by using system look and feel
+* 2eeffa5 : Cleaning up
+* f6f2e67 : Add a new configuration file containing the untradeable item ids and names fixes #68
+* 7131032 : Add a message box that shows up when client is unable to connect so that it doesn't just sit at 1% with 0 info
+* e5e4756 : tweak forceleftclick command
+* 6d197ce : Change cache location and a few names to fix an issue with settings not saving Also add an option for toggling always left click for npcs and players as suggested by issue #52
+* 97d018d : Add all veng spells Fixes #57
+* 7121b28 : QuestMapchanges
+* f22b0aa : Add Druidic ritual quest
+* d734503 : Players
+* 64d31a7 : Add stats to kalphite guardians and make kq stronger, fixes #47
+* 5429bce : Add slayer master options Fix #53, Rewards interface is irrelevant at the moment so adding it later when figured out what we should do with it
+* d396bd5 : Make mining's action handler request stop handling when mining is clicked to let the mining action proceed. Fixes #61
+* 4d80efc : Change level requirements and exp gained of gem bolt tips also make them give constantly 12 instead of random number Also fix #56
+* c135f58 : Add slayer info to server tab, fix decimals in kdr and add super antipoison Fixes #64 , #60 and #59
+* 22abcfc : Fix equipment bonus screen removing itemns not working
+* d20a3e7 : Fix #62 : Add animation to reese's sword Also buff all starter weapons to mithril - adamant level so they can actually be used for training and don't need to be changed immediatetly. Edit starter set, Fixes #63
+* 298147b : Make training bow equal shooting iron arrows (only arrows have str bonus) Please note that you aren't supposed to go killing rock crabs with 1 ranged (Added a teleport to lumbridge cow field and increased the number of cows there). Fixes #66
+* 9863581 : Fix a typo in interfacehandler
+* 63c2d4d : Make alch remove item when alched Fixes #67
+*   d40a812 : Merge remote-tracking branch 'origin/master'
+|\  
+| * d655d06 : Object handler and players
+* | 6e636e8 : Complete rework of summoning, pets and familiars.
+|/  
+* ed2eab8 : Add item bonuses editor and make the savingsmarter on npc editor
+* 7c4e6dc : Remove npcdefs and npcbonuses as they are redundant now
+* 7d15510 : Add Npc editor
+* 15ae2a4 : Change elysian sigil id with item recipes, Fixes #31
+* deb4b75 : NPCBonuese
+* 818cdaf : Add a starter set #19
+* d5ba2eb : Stop pkfarming Fixes #50 and fixes some issues with bounty hunter as it didn't actually loop
+* 26ea413 : Modify trade to display information correctly, Fixes #51
+* e21386c : Rework pets and thus fix #43
+* 778dfc5 : Change mage bank tele icon to saradomin staff because infinity hat makes us look incompetent
+* fea241d : Fix #41 : Fix problems with changing hair + fix some clothes glitching when changed
+* e500ae5 : Fix #48 : Actually remove the runes when casting. Not sure if i just forgot this b4 or had it removed for testing
+* 7b7f337 : Teleports and Object handling
+* 758c0cc : Fix 12 : Add revs drop table + Fix some issues with drop editor
+* 52e7753 : Fix #29 Add handling for brimhaven vines
+* 1caddf8 : Fix #13 : remove req assist option for now
+* 41faeba : Fix #3 Add armadyl battlestaff making
+* 2232cc9 : Fix #30 Add dkings tele and add bonuses and defs to dks
+* d963502 : Fix #11 : change the multi area size and make multi area interface visible
+* d9acc9f : Fix #11 add clothes changing to makeover mage
+* 66b3520 : Fix #10 Add makeover mage at home and link dialogue
+* 7b791ae : Fixes #35 : remove abyssal demons from abyss and add all the runecrafting altar teleports + astral altar in the middle.
+* 1d37233 : Fixes #22 : Fix a typo in resource registering of herblore
+* 244f638 : Fix #32 : barrows heads causing null x1 in killed brothers + fix entering tunnel dialogue
+*   0354b3b : Merge remote-tracking branch 'origin/master'
+|\  
+| * bf681cc : Fix Issue #40 by rotating the trapdoor
+* | a0d1f96 : Remove all fist of guthix tokens, turns out there was only one. Fixes #34
+|/  
+*   e7a8875 : Merge remote-tracking branch 'origin/master'
+|\  
+| *   36365b9 : Merge remote-tracking branch 'origin/master'
+| |\  
+| * | 48dddd7 : Spawn Gundai at magebank
+* | | 1fc9a34 : Fix some issues caused by yesterdays interfacemanager update
+| |/  
+|/|   
+* | 3b3f61e : Add Gundai as a banker. Fixes #37
+|/  
+* 5d3cbad : Fixes issue #23 by opening the private chat tab when it should be opened Also partial rewrite of interface handler for easier modifying
+* a433f44 : Drop feed colors and teleportation
+* 19b5365 : Players and serverdata
+* 6e4d73b : rareDrops.json
+* 7308527 : Move drops and rewrite rare drops system
+* 80d681b : Teleport Editing and others
+* 2178127 : Players
+*   e409a97 : Merge remote-tracking branch 'origin/master'
+|\  
+| * a90339d : Make search refresh after refresh is called
+| * e560141 : Remove duped tables and partyhat drops
+| * 2bb4154 : Missed files from last commit
+| * 6ce8cd0 : Add rename to drop editor and make refresh less savage when its not needed. Also remove all null items from drop tables
+* | 636ce5b : Configuring
+|/  
+*   343ae59 : Merge remote-tracking branch 'origin/master'
+|\  
+| * 91e6144 : Configuring
+| * 15f02dc : Player files
+* | 2e37653 : Tormented demons drop change and merge tables
+|/  
+* 1a2a005 : Upload cache
+* 65fd58a : Increase xp rates
+* 96b5fda : Fix npc drops null pointer
+* de8411b : Edit nex lair size
+* 728feec : Drop editor rewrite
+* 68c7848 : Update some rank icons
+* 0bc8c4e : Make chat prefixes server sided and sent upon appearance update
+* 31291da : Add more quests configs and add a method for register npc shops
+* 4d51eb8 : Change economy prices into priceutils and group it with other item utils. Make everything use PriceUtils.getPrice() and PriceUtils.getStoreSellPrice() so we don't get any inconsistencies
+* 7ab320c : Stop shops from saving the items sold there and make the stocks restore
+* f172672 : Rewrite shops and modify shop editor accordingly
+* 231bf72 : Add most construction rooms + fix some bugs
+* 20cddac : Add construction chapel with burners and altars
+* 27ed4f0 : Improve construction by making it remove old objects + make object handler check all objects if spawned objects are present not just the first one
+* c6106e6 : Fix barrows + edit teleports tab
+* 57524cd : Finish GWD
+* 5501d82 : Redo wilderness obelisk
+* 03e3336 : Add Slayer level requirements for slayer monsters
+* 6dc1c15 : Fix choosing most damage recevied player
+* 3637c92 : Clean up drops from bone beads and unstackable items of more than 100 spawned at once causing lag
+* a067bd4 : Make item panel take requestmanager as parameter for better control over loading Remove item icons from server files Make item icons load to user home folder
+* 02ed2f5 : Make item icons loader seperate from shop editor and make item search control for adding item search to any tool Also add some more icons loaded by item icons loader
+* 99581f1 : Add interface option handler
+* ca41433 : Organize npc combat scrips. Add prayer enable animtions Add kq combat
+* d7d1e33 : Rename Scripts to Handlers as its more describing. Rework dragonfire
+* da50b8f : Rework Prayers
+* 507dd2e : Rework special attacks. client exploring
+* 32b463e : Finish making all commands use the script system -> all commands now show up on ;;commands interface.
+* 65626e1 : Add pathfinding serve rsided (leeched from rain which I think is from MXII so thanks to them)
+* 9ccec64 : Renaming and clenaing
+* 8cab16c : Continue magic, Most of the useful spells added. Add magic on npc and magic on player
+* 65a4a0c : Start magic rework, Modern and ancient combat spells done
+* 19acc73 : Refactor some things looking for the reason graphics crashed client. Ended up being the cache and is now fixed
+* 7f8d63e : Make npc bonuses use server database
+* ba115c0 : No character to git
+* e74e078 : Make npc combat definitions use the sqlite database
+* 97dcca5 : Include a class for generating rsa keys
+* f8102dd : Add sha-2 encryption+salting to passwords
+* b8777c1 : Add RsaEncryption to login
+* bfa6e22 : Revert: Client refactoring, Action System that lets you register actions to handlers (ButtonHandler etc) from remote locations for cleaner code, and change the logger class (565e63cd1c26f0c32e306ec5aff4490ce317cf37)
+* 66bb1f4 : Update bh
+* 581795b : Update bh
+* 8777c4a : Update bh
+* ba11951 : Rewrite bh a bit
+* 48216f9 : Remove unused config files
+* 948d8ed : Switch player saving to gson. Remove ipban and pkranks because they used serialization (which was removed) and we can do better than what they were
+* cd0226b : Rewrite ;;commands to use the script system to determine the commands for each rank. Made regular and mod commands use the scripts system fully. Rewrite RanksManager and make everything use RanksManager.Ranks for ranks instead of random rights numbers.
+* 9362b73 : Clean up code and fix global clicks on specified ids on action handler
+* 7b2c2a3 : Remove unused npcs
+* 792d334 : Delete dungeoneering
+* f8a615d : Work on consturction
+* 19a4ebb : Repackage npc classes
+* 62b682b : Repackage npc classes
+* 2a2ec87 : Make rectangle coords use a more sensible patters (cornerX cornerY corner2X corner2Y) though you can mix the ys and xs
+* 54353a7 : Bounty hunter fixes, and fix logging out opening world map
+* e32ceda : Add ba agil (dosnt work yet), remove xteas as they aren't used. Remove useless tools
+* 40ab710 : Add Agility, Remove pointless Todos, Clean up code
+* 3704b06 : CommandHandler
+* c598d64 : Cleaning up code and fixing small things
+* 08fce0d : Add a new command to remove and add npc spawns (::removenpcspawn ::permspawnnpc) and make npcs show as green squares on mapeditor
+* 8f141ee : Initial base for map editor, currently just a map viewer
+* 1bc3f4e : Progress towards map editor and some other stuff
+* 5dce365 : Rewrite WorldPacketDecoder
+* f85ab5e : Client refactoring
+* 565e63c : Client refactoring, Action System that lets you register actions to handlers (ButtonHandler etc) from remote locations for cleaner code, and change the logger class
+* 6a10364 : Construction fixes
+* bb77d0a : Block usernames starting with _ as it causes confusion
+* 952dfec : Some icons loaded by shop editor
+* cf18f12 : Make ShopEditor download the item icons to hard drive and use them next time they are needed
+* 46321a7 : Rewrote dialogue system so its easier to use, also deleted redundant dialogues
+* 12335c2 : Forgot to add fxml to git
+* 83c8c0f : Add shops editor, Edit a few shops and change fishing teleport location
+* 9e89670 : Add teleportation interface
+* 4f83c70 : Fix building furniture on a new room
+* 7ea1388 : Fix building rooms
+* c1034b7 : Add construction non build mode
+* 54d882f : Rename attributtes to atributes lol, and add room creating to construction
+* b6f36d0 : Fix construction house saving and rebuilding things
+* 51d7d6a : Construction Furniture building house saving and player teleporting
+* e749d92 : Add handler for object click 5
+* e44e98a : Fix controller hanlder
+* 5f2e3b0 : Update controller loading
+* 9e5199b : Move house controller
+* 5284db0 : Make house transient
+* fb5439a : Estate agent dialogue
+* c1cca8c : Add construction base
+* 27e6c0c : Fix some mining rocks + nothing interesting happens on object clicks
+* 225093f : Spawns update
+* ac19f51 : Fix sled
+* acecd4c : Increase nex damage cap
+* b5bb5e7 : Reduce poison duration
+* 9037fcc : Fix revs cave teleport
+* e448a45 : Add server support rank
+* bf5ad0a : Fix inventory update when using glory
+* 10e4362 : Fix glory
+* 4c6882a : Remove nulled objects
+* 8c39498 : Drops update
+* d7f1fb7 : Fix drop editor and remove bone beads from jellys to test
+* 333260c : Fix drop editor and remove bone beads from jellys to test
+* 708ddb7 : Fix an error with object spawning
+* c50c03c : Clean up
+*   c602539 : Merge remote-tracking branch 'origin/master'
+|\  
+| * dcad0f2 : Spawns update
+* | 3ba97f7 : Merge two object spawns files
+|/  
+* 3132a3e : Remove hardcoded npc spawns
+* b213489 : Repack npc spawns and fix teleporting with controllers
+* b25b284 : Remove shop builder
+* 0a62978 : Add shop editor
+* 2436860 : Add shops editor
+* 58c390b : Spawns update
+* c68e394 : Fix a few typos
+* 3ec28c7 : Fix a few typos
+* 2bf309d : Fix a few typos
+* d66a292 : Fix fletching arrows
+* 142a195 : fix npc examining
+* 61c214a : Add npc examining
+* 1500c9b : Fix npc renaming
+* 2fdb0e4 : pkranks update
+* 9d4ca90 : Fix npc renaming
+* e5aa2a8 : Fix for perm removing objects
+* c58cdd7 : Attemp to fix remove object
+* 5b9ef01 : Attemp to fix remove object
+* b678547 : Attemp to fix remove object
+* d7a9f1c : Attemp to fix remove object
+* 65be7a0 : Fix examined object getting wrong object
+*   35bf947 : Merge remote-tracking branch 'origin/master'
+|\  
+| *   9166567 : Merge remote-tracking branch 'origin/master'
+| |\  
+| * | f533e2b : Re pack object spawns
+* | | e79dc99 : Fix perm remove command
+| |/  
+|/|   
+* | 64b3276 : Remove hardcoded object spawns
+|/  
+* 6353c42 : Custom object update
+* dfe2ca2 : Fix max stack dupe related to bank
+* 2ab9ca5 : Fix max stack dupe related to bank
+* 93c45e2 : Fix max stack dupe related to summoning
+* 1d11e88 : Add prayer restore to healer
+* 7b59f00 : Add home healer
+* f0fd224 : Add home healer
+* f73415a : Invert slayer tower shortcuts
+* 553d3e5 : Add slayer tower shortcuts
+* b1eaf6a : Fix a problem with controllers checking on teleport
+*   5a8206d : Merge remote-tracking branch 'origin/master'
+|\  
+| * 5ec2247 : Pk ranks update
+* | 2044637 : Fix the easiest max stack dupe ever
+|/  
+* ea62ca9 : Fix the easiest max stack dupe ever
+* 12171d2 : Fix multi areas
+* e9146ae : 2nd attempt at wildy teleporting
+* ffa2617 : Attempt to fix wildy teleporting and Coords Event rotation (eg lumby ladders etc)
+* 601705e : Add spinning (again from rune-server)
+* e1a84dc : Refix herb bug
+* 11583f0 : Add remaining herb recipes and fix some bugs
+* de410a5 : Fix thieving
+* 2e30163 : Remove debug messages from herblore
+* 2bb6a82 : Re package actions
+* 71573b3 : Add gemtipcutting (from rune-server)
+* c0f8528 : Attempt to fix delete object
+* d836c58 : Clean up ObjectHandler and Remove Har aken aka harken
+* 3be92cb : Reformat Firemaking
+* e3fc60e : Increase player made fires lifespan
+* 436d384 : Remove unneeded files
+* 66cfe23 : Add pickables (flax, onion etc.) (this was from rune-server so might be buggy)
+* 28c60ea : Add divergent points for high level npc kills
+* 6f07067 : Remove dominion tower classes
+* e444d62 : Add cooking gloves
+* 40a6e8c : Fix skills dialogue showing even if you dont have the required items to herblore
+* e926433 : Add message when you don't have the items to create a potion
+* cd7b472 : Fix overload
+*   5368870 : Merge remote-tracking branch 'origin/master'
+|\  
+| *   a475fac : Merge remote-tracking branch 'origin/master'
+| |\  
+| * | c074f7f : Edit server.iml
+* | | e5a19d4 : Fix overload
+| |/  
+|/|   
+* | 1ea2686 : Rewrire herblore
+* | c8b5f94 : Add energy pots
+|/  
+*   0bafc3e : Merge remote-tracking branch 'origin/master'
+|\  
+| *   1814b81 : Merge remote-tracking branch 'origin/master'
+| |\  
+| * | 4090c69 : char update
+| * | ca1ff81 : char update
+| * | ff8ca58 : char update
+| * | 7a3e573 : char update
+* | | 9597059 : Clean up NPCHandler
+| |/  
+|/|   
+* | ecca208 : Implement prayer renewal
+* | d33ac5c : Add Launcher build
+* | a513772 : Remove Character files
+|/  
+* 52694d4 : Launcher initial commit
+* 0490278 : Initial Client Commit
+* e0214e2 : Initial Server Commit
+* eaf52ce : Initial
