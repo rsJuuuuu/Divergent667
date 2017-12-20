@@ -1,0 +1,1108 @@
+{
+  "0": {
+    "name": "Black Knights\u0027 Fortress",
+    "questId": 0,
+    "configType": 0,
+    "progressConfig": -1,
+    "completedValue": -1
+  },
+  "1": {
+    "name": "Cook\u0027s Assistant",
+    "questId": 1,
+    "configType": 0,
+    "progressConfig": 29,
+    "completedValue": 2
+  },
+  "2": {
+    "name": "Demon Slayer",
+    "questId": 2,
+    "configType": 1,
+    "progressConfig": 2561,
+    "completedValue": 3
+  },
+  "3": {
+    "name": "Doric\u0027s Quest",
+    "questId": 3,
+    "configType": 0,
+    "progressConfig": 31,
+    "completedValue": 100
+  },
+  "4": {
+    "name": "Dragon Slayer",
+    "questId": 4,
+    "configType": 0,
+    "progressConfig": 176,
+    "completedValue": 10
+  },
+  "5": {
+    "name": "Ernest the Chicken",
+    "questId": 5,
+    "configType": 0,
+    "progressConfig": 32,
+    "completedValue": 3
+  },
+  "6": {
+    "name": "Goblin Diplomacy",
+    "questId": 6,
+    "configType": 1,
+    "progressConfig": 2378,
+    "completedValue": 6
+  },
+  "7": {
+    "name": "Imp Catcher",
+    "questId": 7,
+    "configType": 0,
+    "progressConfig": 160,
+    "completedValue": 2
+  },
+  "8": {
+    "name": "The Knight\u0027s Sword",
+    "questId": 8,
+    "configType": 0,
+    "progressConfig": 122,
+    "completedValue": 7
+  },
+  "9": {
+    "name": "Pirate\u0027s Treasure",
+    "questId": 9,
+    "configType": 0,
+    "progressConfig": 71,
+    "completedValue": 4
+  },
+  "10": {
+    "name": "Prince Ali Rescue",
+    "questId": 10,
+    "configType": 0,
+    "progressConfig": 273,
+    "completedValue": 110
+  },
+  "11": {
+    "name": "The Restless Ghost",
+    "questId": 11,
+    "configType": 0,
+    "progressConfig": 107,
+    "completedValue": 5
+  },
+  "12": {
+    "name": "Romeo \u0026 Juliet",
+    "questId": 12,
+    "configType": 1,
+    "progressConfig": 5332,
+    "completedValue": 120
+  },
+  "13": {
+    "name": "Rune Mysteries",
+    "questId": 13,
+    "configType": 0,
+    "progressConfig": 63,
+    "completedValue": 6
+  },
+  "14": {
+    "name": "Sheep Shearer",
+    "questId": 14,
+    "configType": 1,
+    "progressConfig": 8704,
+    "completedValue": 90
+  },
+  "15": {
+    "name": "Shield of Arrav",
+    "questId": 15,
+    "configType": 0,
+    "progressConfig": 145,
+    "completedValue": 7
+  },
+  "16": {
+    "name": "Vampire Slayer",
+    "questId": 16,
+    "configType": 1,
+    "progressConfig": 6914,
+    "completedValue": 4
+  },
+  "17": {
+    "name": "Witch\u0027s Potion",
+    "questId": 17,
+    "configType": 1,
+    "progressConfig": 5730,
+    "completedValue": 100
+  },
+  "18": {
+    "name": "Animal Magnetism",
+    "questId": 18,
+    "configType": 1,
+    "progressConfig": 3185,
+    "completedValue": 240
+  },
+  "19": {
+    "name": "Between a Rock...",
+    "questId": 19,
+    "configType": 1,
+    "progressConfig": 299,
+    "completedValue": 110
+  },
+  "20": {
+    "name": "Big Chompy Bird Hunting",
+    "questId": 20,
+    "configType": 0,
+    "progressConfig": 293,
+    "completedValue": 65
+  },
+  "21": {
+    "name": "Biohazard",
+    "questId": 21,
+    "configType": 0,
+    "progressConfig": 68,
+    "completedValue": 16
+  },
+  "22": {
+    "name": "Cabin Fever",
+    "questId": 22,
+    "configType": 0,
+    "progressConfig": 655,
+    "completedValue": 140
+  },
+  "23": {
+    "name": "Clock Tower",
+    "questId": 23,
+    "configType": 0,
+    "progressConfig": 10,
+    "completedValue": 8
+  },
+  "24": {
+    "name": "Contact!",
+    "questId": 24,
+    "configType": 1,
+    "progressConfig": 3274,
+    "completedValue": 130
+  },
+  "25": {
+    "name": "Zogre Flesh Eaters",
+    "questId": 25,
+    "configType": 1,
+    "progressConfig": 487,
+    "completedValue": 14
+  },
+  "26": {
+    "name": "Creature of Fenkenstrain",
+    "questId": 26,
+    "configType": 0,
+    "progressConfig": -1,
+    "completedValue": -1
+  },
+  "27": {
+    "name": "Darkness of Hallowvale",
+    "questId": 27,
+    "configType": 1,
+    "progressConfig": 2573,
+    "completedValue": 320
+  },
+  "28": {
+    "name": "Death to the Dorgeshuun",
+    "questId": 28,
+    "configType": 1,
+    "progressConfig": 2258,
+    "completedValue": 13
+  },
+  "29": {
+    "name": "Death Plateau",
+    "questId": 29,
+    "configType": 0,
+    "progressConfig": 314,
+    "completedValue": 80
+  },
+  "30": {
+    "name": "Desert Treasure",
+    "questId": 30,
+    "configType": 1,
+    "progressConfig": 358,
+    "completedValue": 15
+  },
+  "31": {
+    "name": "Devious Minds",
+    "questId": 31,
+    "configType": 1,
+    "progressConfig": 1465,
+    "completedValue": 80
+  },
+  "32": {
+    "name": "The Dig Site",
+    "questId": 32,
+    "configType": 0,
+    "progressConfig": 131,
+    "completedValue": 9
+  },
+  "33": {
+    "name": "Druidic Ritual",
+    "questId": 33,
+    "configType": 0,
+    "progressConfig": 80,
+    "completedValue": 4
+  },
+  "34": {
+    "name": "Dwarf Cannon",
+    "questId": 34,
+    "configType": 0,
+    "progressConfig": 0,
+    "completedValue": 11
+  },
+  "35": {
+    "name": "Eadgar\u0027s Ruse",
+    "questId": 35,
+    "configType": 0,
+    "progressConfig": 335,
+    "completedValue": 110
+  },
+  "36": {
+    "name": "Eagles\u0027 Peak",
+    "questId": 36,
+    "configType": 1,
+    "progressConfig": 2780,
+    "completedValue": 40
+  },
+  "37": {
+    "name": "Elemental Workshop I",
+    "questId": 37,
+    "configType": 1,
+    "progressConfig": 299,
+    "completedValue": 1
+  },
+  "38": {
+    "name": "Elemental Workshop II",
+    "questId": 38,
+    "configType": 1,
+    "progressConfig": 2639,
+    "completedValue": 11
+  },
+  "39": {
+    "name": "Enakhra\u0027s Lament",
+    "questId": 39,
+    "configType": 1,
+    "progressConfig": 1560,
+    "completedValue": 70
+  },
+  "40": {
+    "name": "Enlightened Journey",
+    "questId": 40,
+    "configType": 1,
+    "progressConfig": 2866,
+    "completedValue": 200
+  },
+  "41": {
+    "name": "The Eyes of Glouphrie",
+    "questId": 41,
+    "configType": 1,
+    "progressConfig": 2497,
+    "completedValue": 60
+  },
+  "42": {
+    "name": "Fairytale I - Growing Pains",
+    "questId": 42,
+    "configType": 1,
+    "progressConfig": 1803,
+    "completedValue": 90
+  },
+  "43": {
+    "name": "Fairytale II - Cure a Queen",
+    "questId": 43,
+    "configType": 1,
+    "progressConfig": 2326,
+    "completedValue": 90
+  },
+  "44": {
+    "name": "Family Crest",
+    "questId": 44,
+    "configType": 0,
+    "progressConfig": 148,
+    "completedValue": 11
+  },
+  "45": {
+    "name": "The Feud",
+    "questId": 45,
+    "configType": 1,
+    "progressConfig": 334,
+    "completedValue": 28
+  },
+  "46": {
+    "name": "Fight Arena",
+    "questId": 46,
+    "configType": 0,
+    "progressConfig": 17,
+    "completedValue": 14
+  },
+  "47": {
+    "name": "Fishing Contest",
+    "questId": 47,
+    "configType": 0,
+    "progressConfig": 11,
+    "completedValue": 5
+  },
+  "48": {
+    "name": "Forgettable Tale...",
+    "questId": 48,
+    "configType": 1,
+    "progressConfig": 822,
+    "completedValue": 140
+  },
+  "49": {
+    "name": "The Fremennik Trials",
+    "questId": 49,
+    "configType": 0,
+    "progressConfig": 347,
+    "completedValue": 10
+  },
+  "50": {
+    "name": "Waterfall Quest",
+    "questId": 50,
+    "configType": 0,
+    "progressConfig": 65,
+    "completedValue": 10
+  },
+  "51": {
+    "name": "Garden of Tranquillity",
+    "questId": 51,
+    "configType": 1,
+    "progressConfig": 961,
+    "completedValue": 60
+  },
+  "52": {
+    "name": "Gertrude\u0027s Cat",
+    "questId": 52,
+    "configType": 0,
+    "progressConfig": 180,
+    "completedValue": 6
+  },
+  "53": {
+    "name": "Ghosts Ahoy",
+    "questId": 53,
+    "configType": 1,
+    "progressConfig": 217,
+    "completedValue": 8
+  },
+  "54": {
+    "name": "The Giant Dwarf",
+    "questId": 54,
+    "configType": 1,
+    "progressConfig": 571,
+    "completedValue": 50
+  },
+  "55": {
+    "name": "The Golem",
+    "questId": 55,
+    "configType": 1,
+    "progressConfig": 346,
+    "completedValue": 10
+  },
+  "56": {
+    "name": "The Grand Tree",
+    "questId": 56,
+    "configType": 0,
+    "progressConfig": 150,
+    "completedValue": 160
+  },
+  "57": {
+    "name": "The Hand in the Sand",
+    "questId": 57,
+    "configType": 1,
+    "progressConfig": 1527,
+    "completedValue": 160
+  },
+  "58": {
+    "name": "Haunted Mine",
+    "questId": 58,
+    "configType": 0,
+    "progressConfig": 382,
+    "completedValue": 11
+  },
+  "59": {
+    "name": "Hazeel Cult",
+    "questId": 59,
+    "configType": 0,
+    "progressConfig": 223,
+    "completedValue": 9
+  },
+  "60": {
+    "name": "Heroes\u0027 Quest",
+    "questId": 60,
+    "configType": 0,
+    "progressConfig": 188,
+    "completedValue": 15
+  },
+  "61": {
+    "name": "Holy Grail",
+    "questId": 61,
+    "configType": 0,
+    "progressConfig": 5,
+    "completedValue": 10
+  },
+  "62": {
+    "name": "Horror from the Deep",
+    "questId": 62,
+    "configType": 1,
+    "progressConfig": 34,
+    "completedValue": 10
+  },
+  "63": {
+    "name": "Icthlarin\u0027s Little Helper",
+    "questId": 63,
+    "configType": 1,
+    "progressConfig": 418,
+    "completedValue": 26
+  },
+  "64": {
+    "name": "In Aid of the Myreque",
+    "questId": 64,
+    "configType": 1,
+    "progressConfig": 1990,
+    "completedValue": 430
+  },
+  "65": {
+    "name": "In Search of the Myreque",
+    "questId": 65,
+    "configType": 0,
+    "progressConfig": 387,
+    "completedValue": 105
+  },
+  "66": {
+    "name": "Jungle Potion",
+    "questId": 66,
+    "configType": 0,
+    "progressConfig": 175,
+    "completedValue": 12
+  },
+  "67": {
+    "name": "Legends\u0027 Quest",
+    "questId": 67,
+    "configType": 0,
+    "progressConfig": 139,
+    "completedValue": 75
+  },
+  "68": {
+    "name": "Lost City",
+    "questId": 68,
+    "configType": 0,
+    "progressConfig": 147,
+    "completedValue": 6
+  },
+  "69": {
+    "name": "The Lost Tribe",
+    "questId": 69,
+    "configType": 0,
+    "progressConfig": -1,
+    "completedValue": -1
+  },
+  "70": {
+    "name": "Lunar Diplomacy",
+    "questId": 70,
+    "configType": 1,
+    "progressConfig": 2448,
+    "completedValue": 190
+  },
+  "71": {
+    "name": "Making History",
+    "questId": 71,
+    "configType": 1,
+    "progressConfig": 1383,
+    "completedValue": 4
+  },
+  "72": {
+    "name": "Merlin\u0027s Crystal",
+    "questId": 72,
+    "configType": 0,
+    "progressConfig": 14,
+    "completedValue": 7
+  },
+  "73": {
+    "name": "Monkey Madness",
+    "questId": 73,
+    "configType": 0,
+    "progressConfig": 365,
+    "completedValue": 9
+  },
+  "74": {
+    "name": "Monk\u0027s Friend",
+    "questId": 74,
+    "configType": 0,
+    "progressConfig": 30,
+    "completedValue": 80
+  },
+  "75": {
+    "name": "Mountain Daughter",
+    "questId": 75,
+    "configType": 1,
+    "progressConfig": 260,
+    "completedValue": 70
+  },
+  "76": {
+    "name": "Mourning\u0027s Ends Part I",
+    "questId": 76,
+    "configType": 0,
+    "progressConfig": 517,
+    "completedValue": 8
+  },
+  "77": {
+    "name": "Mourning\u0027s Ends Part II",
+    "questId": 77,
+    "configType": 1,
+    "progressConfig": 1103,
+    "completedValue": 60
+  },
+  "78": {
+    "name": "Murder Mystery",
+    "questId": 78,
+    "configType": 0,
+    "progressConfig": 192,
+    "completedValue": 2
+  },
+  "79": {
+    "name": "My Arm\u0027s Big Adventure",
+    "questId": 79,
+    "configType": 1,
+    "progressConfig": 2790,
+    "completedValue": 320
+  },
+  "80": {
+    "name": "Nature Spirit",
+    "questId": 80,
+    "configType": 0,
+    "progressConfig": 307,
+    "completedValue": 110
+  },
+  "81": {
+    "name": "Observatory Quest",
+    "questId": 81,
+    "configType": 0,
+    "progressConfig": 112,
+    "completedValue": 7
+  },
+  "82": {
+    "name": "One Small Favour",
+    "questId": 82,
+    "configType": 0,
+    "progressConfig": 416,
+    "completedValue": 280
+  },
+  "83": {
+    "name": "Plague City",
+    "questId": 83,
+    "configType": 0,
+    "progressConfig": 165,
+    "completedValue": 29
+  },
+  "84": {
+    "name": "Priest in Peril",
+    "questId": 84,
+    "configType": 0,
+    "progressConfig": 302,
+    "completedValue": 60
+  },
+  "85": {
+    "name": "Rag and Bone Man",
+    "questId": 85,
+    "configType": 1,
+    "progressConfig": 6178,
+    "completedValue": 4
+  },
+  "86": {
+    "name": "Ratcatchers",
+    "questId": 86,
+    "configType": 1,
+    "progressConfig": 1404,
+    "completedValue": 127
+  },
+  "87": {
+    "name": "Recipe for Disaster",
+    "questId": 87,
+    "configType": 1,
+    "progressConfig": 1850,
+    "completedValue": 5
+  },
+  "88": {
+    "name": "Recruitment Drive",
+    "questId": 88,
+    "configType": 1,
+    "progressConfig": 657,
+    "completedValue": 2
+  },
+  "89": {
+    "name": "Regicide",
+    "questId": 89,
+    "configType": 0,
+    "progressConfig": 328,
+    "completedValue": 15
+  },
+  "90": {
+    "name": "Roving Elves",
+    "questId": 90,
+    "configType": 0,
+    "progressConfig": 402,
+    "completedValue": 6
+  },
+  "91": {
+    "name": "Royal Trouble",
+    "questId": 91,
+    "configType": 1,
+    "progressConfig": 2140,
+    "completedValue": 30
+  },
+  "92": {
+    "name": "Rum Deal",
+    "questId": 92,
+    "configType": 0,
+    "progressConfig": 600,
+    "completedValue": 19
+  },
+  "93": {
+    "name": "Scorpion Catcher",
+    "questId": 93,
+    "configType": 0,
+    "progressConfig": 76,
+    "completedValue": 6
+  },
+  "94": {
+    "name": "Sea Slug",
+    "questId": 94,
+    "configType": 0,
+    "progressConfig": 159,
+    "completedValue": 12
+  },
+  "95": {
+    "name": "The Slug Menace",
+    "questId": 95,
+    "configType": 1,
+    "progressConfig": 2610,
+    "completedValue": 14
+  },
+  "96": {
+    "name": "Shades of Mort\u0027ton",
+    "questId": 96,
+    "configType": 0,
+    "progressConfig": 339,
+    "completedValue": 85
+  },
+  "97": {
+    "name": "Shadow of the Storm",
+    "questId": 97,
+    "configType": 1,
+    "progressConfig": 1372,
+    "completedValue": 125
+  },
+  "98": {
+    "name": "Sheep Herder",
+    "questId": 98,
+    "configType": 0,
+    "progressConfig": 60,
+    "completedValue": 3
+  },
+  "99": {
+    "name": "Shilo Village",
+    "questId": 99,
+    "configType": 0,
+    "progressConfig": 116,
+    "completedValue": 15
+  },
+  "100": {
+    "name": "A Soul\u0027s Bane",
+    "questId": 100,
+    "configType": 1,
+    "progressConfig": 2011,
+    "completedValue": 13
+  },
+  "101": {
+    "name": "Spirits of the Elid",
+    "questId": 101,
+    "configType": 1,
+    "progressConfig": 1444,
+    "completedValue": 60
+  },
+  "102": {
+    "name": "Swan Song",
+    "questId": 102,
+    "configType": 1,
+    "progressConfig": 2098,
+    "completedValue": 200
+  },
+  "103": {
+    "name": "Tai Bwo Wannai Trio",
+    "questId": 103,
+    "configType": 0,
+    "progressConfig": 320,
+    "completedValue": 6
+  },
+  "104": {
+    "name": "A Tail of Two Cats",
+    "questId": 104,
+    "configType": 1,
+    "progressConfig": 1028,
+    "completedValue": 70
+  },
+  "105": {
+    "name": "Tears of Guthix",
+    "questId": 105,
+    "configType": 1,
+    "progressConfig": 451,
+    "completedValue": 2
+  },
+  "106": {
+    "name": "Temple of Ikov",
+    "questId": 106,
+    "configType": 0,
+    "progressConfig": 26,
+    "completedValue": 80
+  },
+  "107": {
+    "name": "Throne of Miscellania",
+    "questId": 107,
+    "configType": 0,
+    "progressConfig": 359,
+    "completedValue": 100
+  },
+  "108": {
+    "name": "The Tourist Trap",
+    "questId": 108,
+    "configType": 0,
+    "progressConfig": 197,
+    "completedValue": 30
+  },
+  "109": {
+    "name": "Witch\u0027s House",
+    "questId": 109,
+    "configType": 0,
+    "progressConfig": 226,
+    "completedValue": 7
+  },
+  "110": {
+    "name": "Tree Gnome Village",
+    "questId": 110,
+    "configType": 0,
+    "progressConfig": 111,
+    "completedValue": 9
+  },
+  "111": {
+    "name": "Tribal Totem",
+    "questId": 111,
+    "configType": 0,
+    "progressConfig": 200,
+    "completedValue": 5
+  },
+  "112": {
+    "name": "Troll Romance",
+    "questId": 112,
+    "configType": 0,
+    "progressConfig": 385,
+    "completedValue": 45
+  },
+  "113": {
+    "name": "Troll Stronghold",
+    "questId": 113,
+    "configType": 0,
+    "progressConfig": 317,
+    "completedValue": 50
+  },
+  "114": {
+    "name": "Underground Pass",
+    "questId": 114,
+    "configType": 0,
+    "progressConfig": 162,
+    "completedValue": 11
+  },
+  "115": {
+    "name": "Wanted!",
+    "questId": 115,
+    "configType": 1,
+    "progressConfig": 1051,
+    "completedValue": 11
+  },
+  "116": {
+    "name": "Watchtower",
+    "questId": 116,
+    "configType": 0,
+    "progressConfig": 212,
+    "completedValue": 13
+  },
+  "117": {
+    "name": "Cold War",
+    "questId": 117,
+    "configType": 1,
+    "progressConfig": 3293,
+    "completedValue": 135
+  },
+  "118": {
+    "name": "The Fremennik Isles",
+    "questId": 118,
+    "configType": 1,
+    "progressConfig": 3311,
+    "completedValue": 340
+  },
+  "119": {
+    "name": "Tower of Life",
+    "questId": 119,
+    "configType": 1,
+    "progressConfig": 3337,
+    "completedValue": 18
+  },
+  "120": {
+    "name": "The Great Brain Robbery",
+    "questId": 120,
+    "configType": 0,
+    "progressConfig": 980,
+    "completedValue": 130
+  },
+  "121": {
+    "name": "What Lies Below",
+    "questId": 121,
+    "configType": 1,
+    "progressConfig": 3523,
+    "completedValue": 150
+  },
+  "122": {
+    "name": "Olaf\u0027s Quest",
+    "questId": 122,
+    "configType": 1,
+    "progressConfig": 3534,
+    "completedValue": 80
+  },
+  "123": {
+    "name": "Another Slice of H.A.M.",
+    "questId": 123,
+    "configType": 1,
+    "progressConfig": 3550,
+    "completedValue": 11
+  },
+  "124": {
+    "name": "Dream Mentor",
+    "questId": 124,
+    "configType": 1,
+    "progressConfig": 3618,
+    "completedValue": 28
+  },
+  "125": {
+    "name": "Grim Tales",
+    "questId": 125,
+    "configType": 1,
+    "progressConfig": 2783,
+    "completedValue": 60
+  },
+  "126": {
+    "name": "King\u0027s Ransom",
+    "questId": 126,
+    "configType": 1,
+    "progressConfig": 3888,
+    "completedValue": 90
+  },
+  "127": {
+    "name": "The Path of Glouphrie",
+    "questId": 127,
+    "configType": 1,
+    "progressConfig": 3954,
+    "completedValue": 200
+  },
+  "128": {
+    "name": "Back to my Roots",
+    "questId": 128,
+    "configType": 1,
+    "progressConfig": 4055,
+    "completedValue": 65
+  },
+  "129": {
+    "name": "Land of the Goblins",
+    "questId": 129,
+    "configType": 1,
+    "progressConfig": 4105,
+    "completedValue": 18
+  },
+  "130": {
+    "name": "Dealing with Scabaras",
+    "questId": 130,
+    "configType": 1,
+    "progressConfig": 4230,
+    "completedValue": 700
+  },
+  "131": {
+    "name": "Wolf Whistle",
+    "questId": 131,
+    "configType": 1,
+    "progressConfig": 4302,
+    "completedValue": 110
+  },
+  "132": {
+    "name": "As a First Resort",
+    "questId": 132,
+    "configType": 1,
+    "progressConfig": 4321,
+    "completedValue": 200
+  },
+  "133": {
+    "name": "Catapult Construction",
+    "questId": 133,
+    "configType": 1,
+    "progressConfig": 4396,
+    "completedValue": 60
+  },
+  "134": {
+    "name": "Kennith\u0027s Concerns",
+    "questId": 134,
+    "configType": 1,
+    "progressConfig": 4505,
+    "completedValue": 100
+  },
+  "135": {
+    "name": "Legacy of Seergaze",
+    "questId": 135,
+    "configType": 1,
+    "progressConfig": 4569,
+    "completedValue": 500
+  },
+  "136": {
+    "name": "Perils of Ice Mountain",
+    "questId": 136,
+    "configType": 1,
+    "progressConfig": 4684,
+    "completedValue": 150
+  },
+  "137": {
+    "name": "TokTz-Ket-Dill",
+    "questId": 137,
+    "configType": 1,
+    "progressConfig": 4700,
+    "completedValue": 63
+  },
+  "138": {
+    "name": "Smoking Kills",
+    "questId": 138,
+    "configType": 1,
+    "progressConfig": 4764,
+    "completedValue": 250
+  },
+  "139": {
+    "name": "Rocking Out",
+    "questId": 139,
+    "configType": 1,
+    "progressConfig": 4797,
+    "completedValue": 100
+  },
+  "140": {
+    "name": "Spirit of Summer",
+    "questId": 140,
+    "configType": 1,
+    "progressConfig": 5032,
+    "completedValue": 80
+  },
+  "141": {
+    "name": "Meeting History",
+    "questId": 141,
+    "configType": 1,
+    "progressConfig": 5075,
+    "completedValue": 20
+  },
+  "142": {
+    "name": "All Fired Up",
+    "questId": 142,
+    "configType": 1,
+    "progressConfig": 5133,
+    "completedValue": 90
+  },
+  "143": {
+    "name": "Summer\u0027s End",
+    "questId": 143,
+    "configType": 1,
+    "progressConfig": 5331,
+    "completedValue": 35
+  },
+  "144": {
+    "name": "Defender of Varrock",
+    "questId": 144,
+    "configType": 1,
+    "progressConfig": 5387,
+    "completedValue": 250
+  },
+  "145": {
+    "name": "While Guthix Sleeps",
+    "questId": 145,
+    "configType": 1,
+    "progressConfig": 5491,
+    "completedValue": 910
+  },
+  "146": {
+    "name": "In Pyre Need",
+    "questId": 146,
+    "configType": 1,
+    "progressConfig": 5761,
+    "completedValue": 30
+  },
+  "147": {
+    "name": "Learning the Ropes",
+    "questId": 147,
+    "configType": 0,
+    "progressConfig": 281,
+    "completedValue": 1000
+  },
+  "148": {
+    "name": "Myths of the White Lands",
+    "questId": 148,
+    "configType": 1,
+    "progressConfig": 5733,
+    "completedValue": 60
+  },
+  "149": {
+    "name": "Glorious Memories",
+    "questId": 149,
+    "configType": 1,
+    "progressConfig": 6001,
+    "completedValue": 45
+  },
+  "150": {
+    "name": "The Tale of the Muspah",
+    "questId": 150,
+    "configType": 1,
+    "progressConfig": 6048,
+    "completedValue": 250
+  },
+  "151": {
+    "name": "Hunt for Red Raktuber",
+    "questId": 151,
+    "configType": 1,
+    "progressConfig": 6180,
+    "completedValue": 140
+  },
+  "152": {
+    "name": "The Chosen Commander",
+    "questId": 152,
+    "configType": 1,
+    "progressConfig": 1938,
+    "completedValue": 110
+  },
+  "153": {
+    "name": "Swept Away",
+    "questId": 153,
+    "configType": 1,
+    "progressConfig": 5448,
+    "completedValue": 50
+  },
+  "154": {
+    "name": "Fur \u0027n\u0027 Seek",
+    "questId": 154,
+    "configType": 1,
+    "progressConfig": 6307,
+    "completedValue": 5
+  },
+  "155": {
+    "name": "Missing My Mummy",
+    "questId": 155,
+    "configType": 1,
+    "progressConfig": 6112,
+    "completedValue": 60
+  },
+  "156": {
+    "name": "The Curse of Arrav",
+    "questId": 156,
+    "configType": 1,
+    "progressConfig": 6289,
+    "completedValue": 240
+  },
+  "160": {
+    "name": "Forgiveness of a Chaos Dwarf",
+    "questId": 160,
+    "configType": 1,
+    "progressConfig": 6471,
+    "completedValue": 90
+  }
+}

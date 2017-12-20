@@ -1,0 +1,245 @@
+26 half in ground tired, lean forward
+27 2h holding weapon, across chest
+28 one handed weapon
+30 injured, hand on stomach, weapon angled down.
+31 defensive 21, non walking.
+35 bob? shopkeeper?
+45 tippy toes/sneak look behind you
+49 head wobbles. Non human
+51 one handed weapon, outward angle
+52/290/442/1673 drunk
+53 slow/laggy walk.
+79 weapon up/torch
+81 crying
+93 wierd self stab/mixing with spoon?
+95 shield infront of body weapon ready
+101 deformed tornado. Non Human
+103/326  2h 
+128 crazy invisable thing. non human.
+137 shake hands up
+148 twist 
+152/163/164/188  swim 
+155/330 balance 
+156 side walk 
+158  over shoulder weapon 
+182/390 one handed weapons. 
+189/191/267/1169/1569/1570 fly 
+192 in ground praying 
+182/208/215/235/236/279/184/287/294/11571171/1277/1279/1383/1613/1614 weapon in hand actions: 
+220 godsword
+276 Bj? 
+280 mining
+295 kneeling
+297 huge
+318 squashed
+324/325 dance
+460 push down
+354 statue?
+360 inspect weapon
+370 hunchback
+375 dig
+386 hands up shake
+433 lean back nod
+434 invis girlfriend
+463/467 scared 
+473/474 standing knight
+500 sitting
+508/518 shop keeper stance
+944/375 swing weapon
+518 cocky stance
+370 lean forward movement
+451 head back
+542 ON FLOOR BACK
+540 massive - kree era?
+557 thinking/writing on bench
+579 suprise kinda
+580 cheer
+591/591jumping in ground
+593 forwasr hold weapon`
+594 skip (walk)
+608 angry walk
+602 on floor tired
+618 swag walk
+620 glitchy stab
+662 monkey bars
+666 floating slightly
+681 arms out
+683 posh hand behind back
+684 another stance
+685 clone event crane
+688 cool snazy walk
+689 mr ex
+690 wierd walk
+691 lying on ground
+693 flip weapon
+695 push up
+701 kneeling
+711 zombie
+715 float out of ground
+717 kneeling
+719 hurt
+721 tired
+736 head blows up
+737 high up sitting
+817 sit.
+822 carry
+682 hump
+738 action jump freeze
+747 squating in air
+755 movie chair
+769 macho statue
+771 talking drink?
+772 hoping out of hole
+778 sword from crotch
+793 fishing
+797 sled kinda dig
+813 dead
+814 carry heavy
+864 kneeeling
+867 fall on bum
+869 fall on face.
+870 statue
+871 ghost
+877 arms out - zombie
+883 walk.
+890 2h
+891 gaurd shield out front.
+898-901 action stance
+902-4 worn out stances.
+908 cool stance. head down
+912 really small crawl
+913 fly
+930 swim
+931-4 cheers
+944-7 skill remotes, fish chop.
+950 cover face shield
+951 bend head
+957 epicest sneak walk!
+974 low combat stance
+982 drunk
+983 drunk on ground when stopped.
+984 carrying something
+985 anchor
+999 in floor posed.
+1002 in floor/swamp
+1005 tired on floor
+1007-8 wierd web form.
+1009 crying in a ball
+1021 walking constantly on rope.
+1022 attack when walk
+1023 bent over.
+1026 tired? stance
+1027 fly again
+1028 constant slip
+1033 hide behind shield
+1034 walk shyly
+1035 scratch head
+1050 twist a pipe?
+1063 stand backwards
+1073 posh walk
+1074 retarded?
+1075 soldier march
+1076 sexy thang
+1080 look down walk
+1089 sword down pose
+1093 arm out pose
+1094 teleport
+1095 bend down
+1097 stand back walk
+1104 angry noob 
+1106 kneel
+1111 getting drained
+1119-1123 SLED
+1124 dizzy
+1127 kneel hands up
+1128 sitting on bum
+1131 cruches/skip
+1134 shop keeper
+1135-1136 carrying a box?
+1139 in a swamp
+1155 non human but bouncy.
+1157 some torch/axe in one hand
+1158 sword/axe on back of shoulders
+1160 angel/gargoyle bent position
+1169-1170 gargoyel remote.
+1179 dwarf with warhammer?
+1181 dead/pray
+1185 sexy on ground pose FUNNY
+1186 on ground again. sitting
+1187 lying mangled on ground dead?
+1196 head inflate.
+1198 holding a scroll delivery?
+1199 sitting on floor legs oiut
+1218 crawl
+1245 head stretches up
+1248-1249 panning for gold
+1252 standing with sword down
+1253 sword over shoulder
+1256 shop keeper? arms folded head shake "no"
+1257 ge guy? thinks writes.
+1258 2nd ge guy thinks writes.
+1259 sitting up high. throne?
+1261 backwards ^
+1262 wierd lean turn robot thing.
+1271 sycthe remote
+1272 1 handed weapon
+1277 hold weapon
+1279 weapon one handed over shoulder
+1283 shield up. sword at side.
+1301 head windmill. :]
+1382 shield up , floating defensive.
+1383 sword up infront of face.
+1389 sitting sideways
+1393 thinking writing
+1395 dwarf? shakes fist? knocks?
+1396 lean back, croch forward head straight FUNNY
+1427 against a wall
+1429 ice slip, stuck?
+1482-1495 crowd cheering standing sitting 
+1497 bent still dead?
+1500 safety first? shield up
+1534-1545 rest violin musician snake charm music
+1545 drummer FUNNY
+1547-1548 dancing dance dancer FUNNY
+1549-1551 rest emotes`
+1564 rest emote, sit hands crossed
+1569-1570 tears of guthix float 
+1572 walks then frrezes looks leans on fence?
+1573 shield up
+1576 shake weapon. plant seeds? 
+1577-1582 weapon render emotes holding
+1603 hand cannon
+1613-1616 sir amek vaze dragon fight weapon stance
+1617 walking over wall ^ FUNNY`
+1626 hunched walk in swamp wierd shield lift 
+1628 tornado? wierd spin non human
+1635 glass blowing
+1637 agility log walk cross
+1650 head explode 
+1651 chop down woodcut? axe? canoe station
+1652 sway back and forth kinda float fly
+1656 invisable shield. cool.
+1661-1665 on floor lying sit injured, dead, die ,death
+1666 float
+1671 wierd fighting stance/ push forward
+1672 tired
+1673 drunk with beer glass.
+1682 weapon on downward angle
+1689 dead on ground
+1690 angry shield sways/adjusts helmet
+1695 float weapon
+1699 very nervous looking around touching face
+1707 on knees injured stomach. hand out. weapon front
+17078on knees injured stomach. hand out. weapon side
+1710 smashign something? flip the table? FUNNY
+1713 weapon over shoulder. bit smoother than 158? one
+1714 cutting with scythe again
+1729 blue glow VERY COOL.
+1999 injured
+2182 katana swing back slice down - USE THIS
+2183 punch and block
+2184 bow shoot x2 block
+2185 slice
+2191 look around
+2192 dead on floor
+2198 hands up slap sword.

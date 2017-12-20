@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.MaskerPane?>
+
+<AnchorPane onKeyPressed="#applicationKey" prefHeight="530.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rs.tools.dropEditor.DropEditorController">
+    <SplitPane dividerPositions="0.27759197324414714" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <opaqueInsets>
+            <Insets top="30.0" />
+        </opaqueInsets>
+        <padding>
+            <Insets top="30.0" />
+        </padding>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="-Infinity" prefHeight="160.0" prefWidth="160.0">
+            <children>
+                <AnchorPane layoutX="1.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                    <children>
+                        <ListView fx:id="tableList" onKeyPressed="#tableListClick" onMouseClicked="#openDropData" prefHeight="318.0" prefWidth="161.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="searchField" layoutX="-4.0" layoutY="343.0" promptText="Search" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <AnchorPane layoutX="126.0" prefHeight="35.0" style="-fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color; -fx-background-insets: 0, 1, 2; -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Npc List" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="62.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#addTable" style="-fx-background-color: derive(palegreen, -10%); -fx-border-width: 0.25; -fx-border-color: black; -fx-background-radius: 3; -fx-border-radius: 3; -fx-text-fill: #505050;" text="Add" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+                            <effect>
+                                <InnerShadow choke="0.1" color="#36a336c6" height="38.45" radius="18.915" width="39.21" />
+                            </effect>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <SplitPane dividerPositions="0.6705539358600583" prefHeight="200.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <items>
+                    <SplitPane fx:id="dataPane" disable="true" dividerPositions="0.5" orientation="VERTICAL">
+                        <items>
+                            <TitledPane animated="false" maxHeight="-Infinity" minHeight="-Infinity" text="Settings">
+                                <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                        <children>
+                                            <CheckBox fx:id="rdtBox" layoutX="30.4" layoutY="14.0" mnemonicParsing="false" onAction="#updateRdt" prefHeight="18.0" prefWidth="167.0" text="Use rare drop table" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="2.0" />
+                                            <Label layoutX="65.0" layoutY="43.0" text="Linked npc ids:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0" />
+                                            <ListView fx:id="keyList" layoutX="-9.0" layoutY="-10.0" onKeyPressed="#keyListKeyEvent" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+                                            <TextField fx:id="keyField" layoutX="20.4" layoutY="148.0" onAction="#addKey" prefHeight="26.0" prefWidth="218.0" promptText="Add key." AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="187.0" />
+                                            <Button layoutX="340.0" layoutY="5.0" mnemonicParsing="false" onAction="#deleteTable" style="-fx-background-color: linear-gradient(#ff6400, #ce2d00); -fx-text-fill: #f4f4f4; -fx-border-color: black; -fx-border-width: 0.2;" text="Delete" AnchorPane.rightAnchor="0.0" />
+                                 <Button defaultButton="true" layoutX="350.0" layoutY="15.0" mnemonicParsing="false" onAction="#renameTable" style="-fx-text-fill: #f4f4f4; -fx-background-color: linear-gradient(#64ff00, #2dce00); -fx-border-color: black; -fx-border-width: 0.2;" text="Rename" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="-5.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </content>
+                            </TitledPane>
+                            <TitledPane fx:id="dropsPane" animated="false" collapsible="false" maxHeight="1.7976931348623157E308" prefHeight="368.0" prefWidth="247.0" text="Drop table for: null (ID: #)">
+                                <content>
+                                    <AnchorPane prefHeight="368.0" prefWidth="101.0">
+                                        <children>
+                                            <ListView fx:id="dropsList" onKeyPressed="#dropListPress" prefHeight="341.0" prefWidth="425.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </content>
+                            </TitledPane>
+                        </items>
+                    </SplitPane>
+                    <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="498.0" prefWidth="155.0" text="Item search">
+                        <content>
+                            <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                        </content>
+                    </TitledPane>
+                </items>
+            </SplitPane>
+        </AnchorPane>
+    </SplitPane>
+    <MenuBar maxHeight="20.0" prefHeight="0.0" prefWidth="613.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#saveDrops" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#doClose" text="Quit" />
+        </Menu>
+    </MenuBar>
+    <MaskerPane fx:id="loadingPane" layoutX="154.0" layoutY="-70.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+</AnchorPane>

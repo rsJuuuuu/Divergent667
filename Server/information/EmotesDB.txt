@@ -1,0 +1,1165 @@
+6381 - leaning over as if being sad
+6382 - jumping in joy of something
+6383 - arm's at waist and head looking down
+6384 - cross's arm's and look's up
+6385 - looking up and scratching head
+6386 - arm's at waist and head looking up
+6387 - leaning over and opening something
+6388 - walking with hand's behind back
+6389 - standing with hand's behind back, then write's on something
+6390 - standing with hand's behind back, looking to the east
+6391 - looking to the east with right hand behind back, and left arm swing's
+6392 - looking to the easy with left hand behind back, and right arm swing's
+6393 - standing with hand's at waist, and looking forward
+6394 - breathing hard, then put's one hand in air?
+6395 - new walking emote
+6397 - are's at side hopping up and down?
+6398 - get's down on knee's and bring's hand in the air
+6399 - get's down on knee's and bring's one hand and one leg in the air, then change's
+6401 - get's on ground and slither's like a snake?
+6402 - get's down on knee's and wave's hand's up and down
+6403 - get's down on knee's and move's rear end in the air
+6404 - try's to flap arm's but does something like a headbang insted?
+6405 - get's down on gound and move's upper half of body like a snake?
+6406 - same as 6405
+6752 - mining with Rune Pickaxe
+6753 - mining with Bronze Pickaxe
+6754 - mining with Iron Pickaxe
+6755 - mining with Steel Pickaxe
+6756 - mining with Adamant Pickaxe
+6757 - mining with Mithril Pickaxe
+6758 - mining emote without a Pickaxe
+7071 - Dance party
+7198 - flexing arm's?
+7199 - standing with arm's to side
+7200 - new walking emote?
+7201 - same as 7200
+7202 - strife to the left?
+7203 - strife to the right?
+7204 - OMG head just disapear's, IT'S MAGICAL!
+7206 - running?
+7211 - fletching magic log?
+7227 - digging something with a tool?
+7228 - digging something with a diffrent tool
+7230 - hugging himself?
+7232 - walking up to something slowly, then hitting it?
+7253 - bend's backwards
+7261 - fishing emote with a fishing rod
+7264 - slap's something?
+7265 - standing still, doby slightly turn's
+7266 - in the gound, agility maybe?
+7267 - in the gound moving, agility maybe?
+7268 - jump's in air, agility maybe?
+7269 - jump's in air, and fall's into the gound, agility maybe?
+7270 - lean's over to pick something up
+7271 - lean's over to pick something up, then jump's back
+7272 - dodgeing something, agility maybe?
+7273 - walking up from gound, as if was walking up some stair's, agility maybe?
+7274 - climb something, then fall's
+7275 - walk's over something
+7276 - leaning over to grab something?
+7277 - stick's chest outward's, then put's hand's by face
+7299 - get's hit by something?
+7301 - move's backward's and put's hand's in air and make them touch, like saying time-out
+7302 - returning normal standing animation from 7301
+7303 - disapear, then reapear with hand's by head
+7305 - holding something in hand, look's like he drinks it, then put's hand's by head and disapear's
+7307 - stick's hand's out and move's them in a circle
+7321 - pushing something heavy?
+7363 - leaning over as if he has tummy pain's
+7364 - look's like he's reading a book
+7365 - pretending to have a sword in his tummy? pritty funny though
+7366 - acting suspisous...
+7368 - writing something, then thinking
+7369 - sword through neck?
+7376 - walks forward, then fade's away, look's cool
+7377 - fade's in and walk's forward from the back
+7385 - tossing something far away
+7391 - lean's down and fade's away
+7392 - fade's in leaning down
+8943 - sitting in a chair
+8944 - basicly the same as 8943
+8955 - holding something as if was moving at a high rate of speed
+8956 - same as 8955 but this time he float's upwards
+8957 - same as 8956 but this time he float's downwards
+8959 - holding something then return's to normal stance
+8961 - floating
+8962 - floating with shield coving chest
+8963 - same as 8961 but he float's a little lower
+8964 - same as 8964 but he float's a little lower
+8980 - standing up right, but slightly move's
+8981 - holding right arm outwards
+8982 - another walking emote
+8983 - strife to the left
+8984 - strife to the right
+8985 - walking forward and looking to the left
+8986 - another running emote
+8987 - slightly move's leg's in a odd way, and wave's weapon
+8988 - put's shield/hands up to head for cover
+8989 - pounch emote?
+8990 - FLYING KITE EMOTE!
+8991 - kick's something on ground
+8996 - flexing his arm(s)
+8997 - walking while slouched over
+8998 - standing while sloucher over
+8999 - wave's both arm/hand's to the right?
+9000 - act's like a monkey?
+9001 - walk's like a monkey?
+9002 - strife to the left like a monkey?
+9003 - strife to the right like a monkey?
+9004 - running while holding something
+9012 - tosses something on ground the fades away
+9013 - fades in
+9016 - act's like a monkey, then fade's away
+9018 - fade's in acting like a monkey
+9021 - bring's hands in air, one hand has a sickle in it
+9022 - bring's hands in air, one hand has a staff in it
+9023 - walking while in the middle of two walls?
+9024 - does something on the ground
+9025 - bowing down to someone/something?
+9031 - sawing something WITH the saw in his right hand
+9032 - kicking something down with his foot? saw is in right hand aswell
+9039 - walking while looking sad?
+9040 - sleeping while standing?
+9044 - doing something with his hand's (Not quite sure what it is though)
+9045 - similar to 9044
+9047 - waving a staff around in his right hand?
+9048 - holding staff with snake on the end
+9049 - standing still?
+9050 - another running emote
+9051 - another walking emote
+9052 - walking while looking to the left
+9053 - stright to the left
+9054 - stright to the right
+9055 - DEATH EMOTE
+9057 - getting a running start to just over something
+9058 - put's hand's to side and nod's head up and down, then stand's still for a lil
+9059 - pointing at people, then move's hand's as if he's done with them
+9060 - trying to peek around a wall?
+9061 - peeking around a wall
+9062 - stop's peeking around wall and return's to normal stance
+9063 - look's to the left, then the right
+9064 - setting a trap?
+9065 - finish's setting up a trap?
+9068 - lean's over to set a trap? (no idea what his hand's are doing)
+9069 - leaning to the left?
+9070 - another walking emote
+9071 - sneez?
+9072 - getting ready to sneez?
+9073 - put's right hand behind head a little
+9074 - takes right hand from behind head and return's to normal stance
+9086 - digging something up with his hands?
+9087 - same as 9086
+9091 - walk's around something to his right?
+9092 - walk's around something to his left?
+9095 - get's a running start, then jump's over something
+9096 - shake's hand's in air with a staff that has a snake on the top of it
+9097 - bring's staff up from ground into air, staff has a snake on the top of it
+9098 - raise's staff into air, staff has snake on the top of it
+9099 - leaning down as if was bowing to someone/something
+9100 - bow's down again?
+9104 - holding hand's in air, right hand has a sickle in it
+9105 - knocking on a door?
+9109 - standing around, then put's finger to chin and think's about something
+9110 - same as 9109 but insted of putting a finger to his chin, he nod's his head
+9111 - same as 9110 - but insted of noding his head, he clap's his hand's
+
+STOPPING HERE TO TAKE A BREATH
+0866 - Dance
+0865 - Clap
+0864 - Beckon
+0863 - Wave
+0862 - Cheer
+0861 - Laugh
+0860 - Cry
+0859 - Angry
+0858 - Bow
+0857 - Thinking
+0856 - No
+0855 - Yes
+0899 - Smelting (furnace)
+0898 - Smithing (anvil)
+0897 - Cooking (fire)
+0894 - Spinning wheel
+0885 - Cutting gems
+0884 - Blowing Glass
+0883 - Cooking (range)
+0881 - Pickpocket emote
+0625 - Mining emote
+0875 - Woodcutting emote
+0827 - Burying Bones emote
+0791 - Runecrafting emote
+0733 - Lighting Logs Emote
+0622 - Fishing Rod fishing
+0619 - Lobster pot fishing
+0618 - Harpoon fishing (slight paus)
+0645 - Praying at Alter emote
+0831 - Digging emote
+0828 - LADDER EMOTE
+0827 - Burying Bones emote
+0794 - Balloon Stomp
+
+********************
+0829 - EATING EMOTE!!
+********************
+
+MAGIC
+
+0811 - GOD SPELL emote
+0713 - High Alch
+0712 - Low Alch
+0714 - Teleport emote
+0722 - Bones to Bananas
+0708 - IBAN STAFF ATTACK EMOTE
+0724 - Crumble Undead
+0725 - Superheat
+0716 - Curse, Weaken, or Confuse
+0729 - Curse, Weaken, or Confuse
+
+RANGE
+
+0427 - Range (Cross-Bow)
+0426 - Range (Bow)
+
+MELEE
+
+0423 - KICK
+0422 - PUNCH
+0424 - Fore-arm block
+0412 - Stab
+0451 - Slash attack style (longsword, shortsword, ect.)
+0440 - Halberd "Slash" attack style
+0410 - Defensive block when 2h weapon equiped
+0408 - Scythe 'REAP' attack style
+0407 - 2h slash style emote
+0406 - 2h crush style emote
+0405 - Dragon spear special
+0404 - Block no shield defensive emote
+0403 - Block with shield defensive emote
+0402 - Dragon Dagger stab emote
+
+FUNNY ONES  
+
+0439 - lol SPIN ATTACK!>!<!
+0734 - Wall Monster attack without spiney helmet on
+0750 - Looks like you're pushed by someone, 2 squares backward, and you stumble
+0760 - Turn Right and face plant rofl
+0755 - Skate boarding rofl, facing right
+0837 - ROFL Drop dead  
+
+NEW - (everything under here has been added after it originally was posted)
+
+0812 - CHARGE (as a ghost?)
+0528 - WHIRLPOOL!!! *cough* *choke* *gurggle*
+0841 - Walking invisible
+0776 - Pull rope emote from waterfall
+0804 - Disapearing when jumping into puddle at mage arena
+0505 - Arms dislocate and revolve around you... well would ya look at that...
+0554 - Lean to the left, then to the right
+
+0334 - RSC man (Basically StickMan)
+0346 - sitting down
+0347 - sitting down CHARGE
+
+Agility
+
+0749 - full pipe climb emote, only in one sq though
+0770 - Falling emote, as if off of a rope or log (agility)
+0748 - Pipe climb exiting emote
+0746 - Pipe climb starting emote
+0747 - entrance part of pipe emote, (non-animated)
+0745 - part of the monkey bar crossing emote (right arm back)
+0744 - fast monkey bar cross emote
+0839 - Climb over something
+0844 - Crawling
+0839 - Climb over obstacle
+0529 - Falling rocks emote for karamja agility course
+
+STRANGE PLANT
+
+0348 - Strange plant growing - start (random event)
+0349 - Strange plant fully grown (random event)
+0350 - Strange plant shrinking - end (random event)
+<Agility>
+
+744 - fast monkey bar cross emote
+745 - part of the monkey bar crossing emote (right arm back)
+746 - Pipe climb starting emote
+747 - entrance part of pipe emote, (non-animated)
+748 - Pipe climb exiting emote
+749 - full pipe climb emote, only in one sq though
+770 - Falling emote, as if off of a rope or log (agility)
+839 - Climb over something
+844 - Crawling
+1110 - MATRIX
+1114 - hit by darts
+1115 - jumping over spikes or rocks
+1117 - part of hand holds
+1118 - "                "
+1119 - falling from hand holds
+1120 - hand holds
+1125 - hit by rocks + stumbles back
+2239 - BOOM!!! shoots in the air - rogues den
+2240 - going through bent bars - rogues den
+2241 - poison gas - rogues den
+2242 - launch in air, hit floor - rogues den
+2243 - disable wall trap - rogues den
+2244 - disable floor trap - rogues den
+2245 - side wall trap? - rogues den
+2246 - picking lock - roges den
+2247 - listening to lock - rogues den
+2750 - jump over fence emote
+2753 - huge jump to side
+2761 - jumping jacks - Drill seargent random
+2756 - Push-Ups - Drill seargent random
+2763 - sit-ups - Drill seargent random
+2764 - jog in ground - Drill seargent random
+3063 - climb up a wall, then climb down
+3067 - jumping over something, landing nicely
+3068 - jumping over something, not landing very nicely...
+3094 - looses balance falls forward
+
+<WeaponsCombat>
+
+402 - Dragon Dagger stab emote
+403 - Block with shield defensive emote
+404 - Block no shield defensive emote
+405 - Dragon spear special
+406 - 2h crush style emote
+407 - 2h slash style emote
+408 - Scythe 'REAP' attack style
+410 - Defensive block when 2h weapon equiped
+412 - Stab
+422 - PUNCH
+423 - KICK
+424 - Fore-arm block
+440 - Halberd "Slash" attack style
+451 - Slash attack style (longsword, shortsword, ect.)
+1060 - drag mace spec
+1658 - Whip attack
+1659 - Whip block
+1660 - Whip walk
+1661 - Whip run
+1662 - Granite Maul stand
+1663 - Granite Maul walk
+1664 - Granite Maul run
+1665 - Granite maul attack
+1666 - Granite Maul block
+1667 - Granite Maul special
+1833 - drag baxe attack
+2316 - standing holding toad shooter (fixed defice)
+2318 - walking holding toad shooter
+2323 - kick attack while wielding fixed device
+2876 - DRAG AXE SPEC!!
+2890 - DARKLIGHT SPEC!
+2910 - spinning something and then throwing it
+2927 - twirling weapon then hitting something
+3157 - Dragon 2h special
+
+<Barrows>
+
+2060 - veracs walk
+2061 - veracs standing
+2062 - veracs attack!!
+2063 - veracs block
+2064 - dharoks walk
+2065 - dharoks standing
+2066 - dharoks crush
+2067 - dharoks slash
+2068 - torags attack
+2074 - karils holding bow
+2075 - karils shooting
+2076 - karils walking
+2077 - karils running
+2078 - ahrims attack non-magic
+2079 - ahrims block
+2080 - guthans 'poke'?
+2081 - guthans slash
+2082 - guthans crush
+
+<Magic>
+
+708 - IBAN STAFF ATTACK EMOTE
+712 - Low Alch
+713 - High Alch
+714 - Teleport emote
+716 - Curse, Weaken, or Confuse
+722 - Superheat
+724 - Crumble Undead
+729 - Curse, Weaken, or Confuse
+811 - CHARGE
+1816 - teleother - person being teled
+1818 - teleother - cast on player
+1819 - teleblock - cast
+1820 - teleblock - cast
+
+<Range>
+
+0426 - Range (Bow)
+0427 - Range (Cross-Bow)
+
+<Holiday Items>
+
+1457 - yo-yo
+1458 - spin - yo-yo
+1459 - walk yo-yo emote
+1460 - crazy yo-yo
+1835 - chicken dance
+1836 - SKIPPING!!!
+2836 - SCARED EMOTE!
+2840 - ALAS emote
+2844 - SHOW HEAD EMOTE 'Muahahahah'
+3003 - marionette jump
+3004 - marionette walk
+3005 - marionette bow
+3006 - mationette dance
+3007 - shaking the imps emote
+
+<Standard  Mime>
+
+855 - Yes
+856 - No
+857 - Thinking
+858 - Bow
+859 - Angry
+860 - Cry
+861 - Laugh
+862 - Cheer
+863 - Wave
+864 - Beckon
+865 - Clap
+866 - Dance
+2105 - panic emote
+2106 - slow jig emote
+2107 - spin emote
+2108 - headbang emote
+2109 - joy jump emote
+2110 - rasp' berry emote
+2111 - yawn emote
+2112 - salute emote
+2113 - shrug emote
+1128 - GLASS WALL - MIME
+1129 - LEAN       - MIME
+1130 - CLIMB ROPE - MIME
+1131 - GLASS BOX  - MIME
+
+<Funny>
+
+439 - lol SPIN ATTACK
+505 - Arms dislocate and revolve around you... well would ya look at that...
+528 - WHIRLPOOL!!! *cough* *choke* *gurggle*
+725 - Looks like you're holding onto something that's floating over top of you, you grab it, and then let it go and stumble forward
+734 - Wall Monster attack without spiney helmet on
+750 - Looks like you're pushed by someone, 2 squares backward, and you stumble
+755 - Skate boarding rofl, facing right
+760 - Turn Right and face plant rofl
+812 - CHARGE (as a ghost?)
+837 - ROFL Drop dead
+841 - Walking invisible
+1375 - blinking
+1500 - FLoats up
+1501 - 'God' - continuation of 1500
+1654 - dies in chair
+1655 - motionless, dies in chair
+1656 - leans back in chair
+1739 - walking like holding somethign on back
+1745 - walking stomp
+1765-1769 - Straight up funny
+1770 - HILARIOUS ( makes it look like you have a big **** )
+1746 - crazy lol, funny!
+1811 - twitch - push stand
+1851 - super man
+1861 - glare to right
+1914 - uurghh... raawr!!!!
+1938 - head throbbing
+1950 - falling in pyramid - Desert treasure
+1972 - evil laugh emote
+2256 - arms crossed
+2261 - FLYING CARPET
+2262 - flying carpet - take off
+2264 - flying carpet - landing
+2339 - sitting moving arms
+2340 - falls backwards while sitting down
+2383 - twitching
+2390 - backstepping, something in face?
+2555 - fairy kick
+2588 - jumping in the air
+2592 - stand sideways and knod head
+2769 - walking drunk
+2770 - drunk
+2780 - throws item in hand in the air
+2720 - scrapes the air with a weapon?
+2797 - holds sword weird and angry emote..
+2820 - dying emote + fades away..
+2895 - flying away
+2939 - sitting, as if on a throne
+2968 - something
+2995 - face plant
+3001 - boot to the nuts
+3040 - standing drunk
+3039 - walking drunk
+
+<Miscellaneous>
+
+618 - Harpoon fishing (slight paus)
+619 - Lobster pot fishing
+622 - Fishing Rod fishing
+625 - Mining emote (one of them)
+645 - Praying at Alter emote
+733 - Lighting Logs Emote
+776 - Pull rope emote from waterfall
+791 - Runecrafting emote
+794 - Balloon Stomp
+804 - Disapearing when jumping into puddle at mage arena
+827 - Burying Bones emote
+828 - LADDER EMOTE
+831 - Digging emote
+875 - Woodcutting emote
+881 - Pickpocket emote
+883 - Cooking (range)
+884 - Blowing Glass
+885 - Cutting gems
+894 - Spinning wheel
+897 - Cooking (fire)
+898 - Smithing (anvil)
+899 - Smelting (furnace)
+921 - toy horsey emote
+1327 - drinking beer!
+1329 - KEG!
+1330 - "  "
+1331 - Kneeling
+1332 - Kneeling
+1333 - STROKE PET ROCK
+1350 - reading
+1351 - sitting looking down
+1352 - sitting using think emote
+1353 - sitting and smoking
+1461 - bending down 1
+1462-1470 - bending down cape waving
+1502 - swim?
+1540 - punch in the air, floating
+1542 - ""
+1648 - cranking wheel ectophuntus
+1649 - putting bones into machine
+1651 - ectophuntus pray emote
+1652 - ""
+1670 - prayer book preach
+1810 - wall monster caught by head
+1877 - snake charmer
+1895 - sneaks a peek at something
+1902 - Spinning plate
+1906 - dropping
+1911 - turning head to the right
+1913 - breathing hard
+1914 - breaking out of something
+1991-1997 - some weird ones
+2046-2048 - in the air doing somethin2g
+2273 - raking - farming
+2304 - dead emote
+2306 - jumping on something alot then jjumping off
+2338 - on knees looking foward
+2389 - ti bwoi wanna or we.. thing
+2400 - rants then takes a knee
+2412 - dr jekkel emote!
+3129 - holding on to something like you're flying
+3141 - turning pages in a book
+3103 - sits up brushes self off
+3114 - rises from the grave!
+3170 - ELECTRICUTED!
+
+1978 - Blitz
+1979 - Barrage
+
+2269 = greendhide crafting
+
+2271 = endless seed planting ( put a resetanim )
+2272 = seed planting
+2273 = raking
+2274 = harvest ( or prod )
+2281 = harvest for sure.
+2282 = harvest
+2283 = compost
+2284 = some weird pot ( nothing to do with farming in my opinion )
+2285 = cure diseases
+2286 = pick herbs
+2287 = put tree sapling into patch?
+2288 = cure diseases bit different then 2285
+2289 = drink from weird pot , links with 2284
+2290 = scrape something out of weird pot links with 2289 and 2284
+2291 = plant seeds
+2292 = harvest again.
+2293 = Watering!! finally got it.
+2295 = stroke plant wtf?
+
+*************************
+ADDED BY EMILY ALL BELOW
+*************************
+3 = Looks both ways
+5 = Leaning foward spinning spinning wheal
+13 = Walking Invisable
+14 = Sort of Cheer
+15 = Invisable stand
+
+380 = Looks like Dhoraks Axe slam down
+381 = cattle prod jab like attack
+382 = Two hand jab
+383 = The Defense to the above attacks
+
+385 = Throwing something
+386 = Stab
+387 = Defense
+388 = Sword Block 
+389 = Ghost block
+390 = like a rolling attack
+
+
+4330 = Drinking from blue bottle
+4340 = Leaning Foward and loosing balance im guessing
+4341 = Small hop and slamming both fists down
+4342 = Leaning forward fast, and holding some item up
+4343 = Leaning Forward preparing to push
+4344 = "" the Pushing/walking emote
+4345 = "" same as above, but the end of the emote
+
+4348 = Mixing a white bottle and red bottle
+4349 = "" same as above
+4350 = "" same as above but white and blue bottle
+4352 = Swinging arms randomly 
+
+4365 = Something like floating
+4366 = Falling through something
+4367 = Falling onto belly from sky and getting back up slowly
+4368 = Shinning a lantern
+4369 = Shinning some lantern down
+4370 = Floating and leaning onto something
+4371 = Wierd Floating
+
+4378 = Wierd slicing emote with sword i think
+4379 = Floating up wierdly
+4380 = Running Jumping up, up again, and landing
+4381 = Running, jumping, body flashes a bit, then landes
+4382 = Flashes in and out similar to the part of 4380
+
+4479 - 4534 = Sitting in different chairs (some construction)
+
+4540 = Walking up to something and unlocking it
+
+6724 = rise up and float away
+6723 = jump into whirlpool
+6689 = Stringing Magic long bow
+6688 = Stringing Yew long bow
+6687 = Stringing maple long bow
+6686 = Stringing willow long bow
+6685 = Stringing oak long bow
+6684 = Stringing normal long bow
+6683 = Sting Magic Short bow
+6682 = String Yew short bow
+6681 = String maple short bow
+6680 = String willow short bow
+6679 = String oak short bow
+6678 = String normal short bow
+
+6695 = DFS charge?
+6696 = DFS special
+6700 = Something with DFS
+6702 = Gem Crafting? or Fletching
+6703 = Fishing with Hands
+6704 = Fishing with hands cont...
+6705 = Catching Sharks with Hand
+6706 = Catching Sharks with Hand
+6707 = Catching Swordfish with Hand
+6708 = Catching Swordfish with Hand
+6709 = Gets up cleans hands, then fishes again
+6710 = Catching Tuna with Hand
+6711 = Catching Tuna with Hand
+6712 = Hamering on Anvil
+6713 = Starting Fire with Training bow
+6714 = Starting Fire with Normal Short
+6715 = Starting Fire with Oak Short
+6716 = Starting Fire with Willow Short
+6717 = Starting Fire with Maple Short
+6718 = Starting Fire with Yew Short
+6719 = Starting Fire with Magic Short
+6720 = Starting Fire with SeerCull
+6723 = Running into Whirl Pool and Jumping
+6724 = Rises up and Floats Away
+6738 = Hacking at something with Rune Axe/Hatchet
+6739 = Hacking at something with Addy Hatchet
+6740 = "" Mithril Hatchet
+6741 = "" Black Hatchet
+6742 = "" Steel Hatchet
+6743 = "" Iron Hatchet
+6744 = "" Bronze Hatchet
+6745 = "" Dragon Hatchet
+6746 = Mining Rune Pickaxe
+6756 = Mining Essence with Addy Pick
+
+8953 = Disappears, then seconds later appears on knees and gets up
+8954 = Bends over and disappears, the first part of the above
+
+8973 = Raises something up to the sky
+8975 = Raises something up to the sky
+8976 = Raises something up to the sky
+8977 = Raises right arm with something in hand
+8978 = Swings backwards with something in hand
+8979 = Walking with something in hand
+8980 = Raises right arm alittle
+8981 = Raises right arm up
+8982 = Walking forwards (beer in hand)
+8983 = Walking Sideways
+8984 = Walking Sideways
+8985 = Walking Backwards?
+8986 = Running
+8987 = Staggering
+8988 = Block
+8989 = Melee Punch
+8990 = Flying Kite Emote
+8991 = Kicking a ball on the ground
+8996 = Raisies arm and flexes, then kisses it (cool)
+8997 = Walking with FOG rock
+8998 = Standing with FOG rock
+8999 = Block with FOG rock
+9000 = Fist of Guthix carrying rock?
+9001 = Fist of Guthix Walking with Rock
+9002 = "" Moving with rock
+9003 = Pushing Something
+9004 = Running with FOG rock
+
+9070 = Looking down and walking
+9071 = Drinking something then puking?
+9072 = "" similar to above
+9073 = Swings right arm over head
+9074 = Swings right arm back to normal
+
+9086 = Looks like tieing shoes?
+9087 = Looks like tieing shoes?
+9099 = Bowing on knee
+9100 = Bowing on knee
+
+9350 = Hitting something in hand with hammer
+9365 = Wierd type of mining with some pick axe
+9367 = Walking up to grand tree and being dragged down
+9368 = Pushing something together
+
+9497 = Pulling on something
+9498 = Hitting something with wierd axe
+9499 = Hands to mouth and doing something
+
+9570 = Looks like holding someones arm and walking
+9571 = "" Same as above but not walking
+9572 = Jumping on something, spinning, talking, then doing a 360 (amazing)
+9573 = Bending over and doing something
+
+9595 = Holds hands out and up
+9596 = Flying up and disappearing (looks cool)
+9597 = Teletab throwing down
+9598 = Raises up out of Ground
+9599 = Holding both arms in air then dispappearing
+9600 = Holding axe and swaying, then disappearing
+9601 = Something with Skull Sceptre guessing a tele
+9602 = Flying straight up into the air and disappearing (fucken amazing)
+9603 = Amulet & ring Teleporting
+9604 = Drinking a bottle then falling to the ground
+9605 = "" same as above but red bottle
+9606 = Teleporing, raises up and gets smaller the higher it gets
+9607 = Clapping NOT THE SAME AS ON EMOTE LIST
+9608 = Bending down and disappearing
+9609 = Pouring a potion on something
+9610 = Leans back then Flys up into the air
+330
+9676 = Retard Walk
+9677 = Raises hand and does something
+9678 = Carrying something heavy and walking
+9679 = Holding something with two hands, and sometimes checking hand
+9680 = Walking faster with something heavy
+
+9685 = Crawling (agility)
+9686 = Bashes on the head with two fists
+9687 = Raises leg and bunch
+9688 = Hard left Hook
+9689 = Catching imps with hands ( i think)
+9690 = Hard Elbow to someones face
+9691 = "" similar to above
+9692 = Right Upper Cut
+9693 = Hard downward right punch
+9694 = ""Same as above but squating
+9694 = One hand hitting on the head
+9695 = "" Same as above
+9699 = "" Pretty much the same from 9695-9699
+9700 = 2h down cut
+9701 = 2h Straight up cut
+9703 = Wierd right punch
+9704 = "shank"
+9706 = "similar"
+9707 = Slam Dunk
+9712 = Kicking ownage
+9713 = Jump kicking
+9721 = Running
+9724 = Walking
+9725 = Bends over and froze
+9726 = Bends over and does something
+9727 = Climbing down ladder 1st part
+9728 = Climbing down ladder 1st part (different then above)
+9734 = Old lady emote
+9738 = Carrying somethign 2h style
+9739 = Dash run
+9872 = Sitting on Nothing? lol
+9873 = "" Same as above
+9874 = "" Same as above
+9875 = "" Same as above
+9876 = "" Same as above
+9879 = Running with 2h 
+9880 = Pushing something off
+9883 = Turned sideways wierd o.0
+9884 = ""Same as above
+9885 = Turned sideways moving, then disappear/reappear (agility)
+9886 = Spinning rope over head
+
+9936 = Pulls out some sort of paper
+
+9939 = Turned sideways punch
+9940 = Turned sideways preparing to run
+9942 = Bends down shaking
+9943 = Throwing something
+9944 = Blocking with shield
+9945 = "" same as above
+9946 = "" same above but blockin on other side
+9959 = Turned sideways wierd
+
+10017 = Stomping
+10018 = Chicken Dance
+10019 = Running
+10022 = ""same as above
+10023 = Climbing a net/ladder
+
+10069 = Spins arm in counter clock wise?
+10070 = Jumps a foot, then lands on but looks pretty cool
+10071 = Swings axe at something then shakes his/her head no
+10078 = "" Same as above but with Dragon axe
+
+10082 = Run
+
+10100 = Slunked alittle then disappears
+10101 = Looks left and right then disappears
+10102 = Doing something, then wipes face from sweat
+10104 = Slunked over and doing hand motions
+10105 = Series of wierd emotes, dancing ect.
+10106 = Running bended over
+10109 = Drunk wavering?
+10110 = Taking something  yellow out of a case
+10112 = Turned around saying stuff, then turns back around
+10113 = Appears from dust
+10114 = Jumps out of a pipe, appear
+10115 = Thinking, then doing something
+10119 = Doing something with hands
+
+10180 = Raises arms in air, then disappears wierd
+10182 = Same as above but the appearing back
+10184 = Bended over raises arm up
+10186 = Opposite of above
+10202 = Swings something up then slams down infront
+10210 = Walking while holding something against chest
+
+10213 = Playing something with violin series of emotes
+10222 = Mining Essense with Inferno Adze
+10223 = Mining Essense with Inferno Adze
+10224 = Mining with Inferno Adze
+10225 = Cutting Ivy with Inferno Adze?
+10226 = Mining faster with Inferno Adze
+10227 = Downward swing with Inferno Adze
+10228 = Mining With Inferno Adze
+
+10246 = Chopping a log with inferno adze, can see the log
+10247 = Wierd Emote with Inferno Adze
+10248 = Wierd woodcutting with Inferno Adze
+10249 = Wierd woodcutting with Inferno Adze
+10250 = Wood cutting with Inferno Adze
+10251 = Wood Cutting with Inferno Adze
+
+10252 = Turmoils Throws arm up (actually summoning)
+10253 = Throwing something downward
+10254 = Taking a step back, then a step forward
+10255 = Walks forward hits something then walks back
+10256 = "" same as above but hits it longer
+10257 = "" same as above
+10258 = "" same as above
+10260 = Pulling back and shooting a bow, but not normal (training targets)
+10261 = Swinging with like a paint brush?
+10262 = Swiniging with BattleAxe
+10265 = Swininging Hands down
+10266 = 2h Stand Stance
+10267 = One hand slam down
+10269 = "" same as above
+10271 = Ripping something yellow in half then disappearing
+10288 = Walking on rope Agility
+10289 = Standing on rope Agility
+10290 = Falling on croutch then getting up on rope, Agility
+10291 = Standing on rope one leg (circus emote)
+10292 = Jumping on rope (circus emote)
+10293 = Hand stand on rope (circus emote)
+10294 = "" Getting back up of the above emote
+10295 = Cart Wheel on rope (circus emote i think)
+10296 = 360 jump on rope (circus emote i think)
+10297 = Jump on rope (circus emote i think)
+10298 = "" same as above but higher jump
+10299 = 360 kind of twirl on rope
+10300 = barrel roll on something
+10301 = Backflip
+10303 = Heavy weight tied to feet drowning in water
+10305 = "" similar to above
+10312 = "" similar to above but also bends down
+10313 = ""same as above
+10342 = Mining rune essense with mithril pick
+
+10470 = Right arm punch
+10471 = Looking at something left hand
+10473 = Crawling on ground
+10475 = Digging with Spade/Shovel
+10476 = Hitting something with shovel/spade
+10477 = Bending over
+10478 = "" same as above
+10481 = Slowly your body is created
+10482 = Fake lunge at something
+10483 = Woodcutting cape Emote
+10485 = Series of aggresive emotes
+10492 = Looks over sholder, turns around then climbs something
+10493 = Spins jumps off something then punches someone
+
+10841 = Getting energized by something? (perhaps assist emote)
+
+10846 = New Dieing Emote
+10847 = "" same as above
+10848 = Turn sideways shooting bow
+10849 = Smelling flower
+10850 = Dieing emote
+
+10970 = Cool new 2h stance
+10975 = Laying on the ground
+10977 = Death emote
+10980 = Climbing over a very low object
+10982 = Spinning and raising up
+10988 = On ground sitting then gets up
+10990 = Starting Fire with Stealing creations bow!
+10992 = Cutting Tree wtih Stealing Creations Axe!
+10993 = "" same as above but different angle
+10994 = Start of Turkey emote
+10995 = End of turkey emote
+
+11010 = Climbing something, jumping, climbing, jumping
+11011 = "" similar to above
+11019 = Mining with Stealing Creation Pick Axe
+11020 = Mining Essense with Stealing Creation Pick Axe
+11021 = Mining with Stealing creatoin pick axe
+11022 = "" same as above
+11023 = mining something wierd with stealing creation axe
+11024 = "" similar to above
+11025 = "" similar to above
+11026 = "" similar to above
+11028 = Pushing something
+11030 = backing up
+11041 = Hitting something in hand with hammer
+11042 = Climbing into something then fades away
+11043 = "" same as above but getting out of the tunnel
+11044 = Christmas Frozen Emote
+11048 = Full force two hand thingy?
+11051 = Falling on butt
+11052 = Sitting on butt
+11053 = "" same as above
+11057 = 360 spin disappears
+11060 = Mining with Stealing Creation Axe I think
+11061 = "" similar to above
+11062 = Hitting anvil with some wierd hammer
+11063 = "" same as above
+11064 = Hard leather crafting!
+11065 = "" same/similar to above
+11066 = Hitting something with that wierd hammer again
+11067 = "" same as above
+11068 = Something with Stealing Creation Pick axe 
+11069 = "" same as above
+11070 = using wierd hammer on anvil again
+11071 = "" same as above
+
+11088 = Looks like hedge trimmers/clippers (farming)
+11089 = Using some green tools (farming)
+11091 = Pushing something togeather with hands
+
+11150 = Using wierd hammer again hitting something in hand
+11151 = "" same as above
+11152 = rubbing something white (bead) in hand
+11153 = "" same as above
+11154 = "" same as above but red (bead)
+11155 = Using wierd hammer hitting something into ground
+11156 = "" same as above
+11157 = "" same as above
+11158 = "" same as above
+11159 = Hitting something hard with weird hammer
+11160 = "" same as above
+11161 = Making a bamboo shield?
+11162 = "" same as above but green shield
+11163 = "" same as above but orangeish color
+11164 = "" same as 11161
+11165 = "" same as 11162
+11166 = "" same as 11163
+11167 = Hiting something with wierd hammer/making something
+11168 = "" same as above
+11169 = Hitting a wall with the wierd hammer
+11170 = "" same as above
+11171 = hitting wood with wierd hammer, then checking it
+11172 = "" same as above
+11173 = Hitting something in hand with wierd hammer
+11174 = "" same as above
+11175 = Leaning forward and hitting something with the hammer
+11176 = "" same as above
+11177 = Leaning forward and hitting a plank with the hammer
+11178 = "" same as above
+11179 = Leaning/bending and hitting something with the hammer
+11180 = "" same as above
+11181 = "" same as above
+11182 = "" same as above
+
+11227 = leans back and throws something
+11288 = Swaying arms back and forth
+11229 = Jumping over something
+11230 = Jumping over something
+11231 = "" same as above
+11232 = jumps and lands on side
+11233 = "" same as 11230 but different landing
+11234 = "" same as above
+11235 = jumps but turned alittle
+11236 = "" same as above but turned opposite direction
+
+11380 = Raises something up in one hand and disappears
+
+11489 = Kind of like tugs on a rope?
+11490 = Leans forward and touches something
+11491 = Looks down and does something with hands
+11492 = "" same as above
+11493 = "" same as above
+11495 = Side ways dig with spade/shovel
+
+11588 = "" similar to 11589
+11589 = throws body forward in a sway motion
+11590 = raises something up then turns sideways
+
+11598 = "" same as 11599 but black hatchet
+11599 = "" same as 11600 but steel hatchet
+11600 = Wierd rune hatchet wood cutting emote
+11601 = "" same as above but with Dragon Hatchet
+11602 = "" same as above but Stealing Creation Axe
+11603 = "" similar to above
+11604 = "" same as above but inferno adze
+
+11617 = "" same as 11618
+11618 = Woodcut Stealing Creation Axe
+11620 = lifts something white up
+
+11656 = Thinking
+11657 = Claping Hands
+11658 = Holds chest and throws head back
+11659 = Holding head and shaking no
+11660 = Huging self
+11661 = GROWING LMFAO
+11662 = VERY slow walk
+11663 = kicking something
+11665 = shanking downwards
+11666 = Falls down and shrinks
+
+11671 = Sitting
+11672 = Two hands looks like your getting **cked up the butt
+11673 = "" same as 11674
+11674 = Looks similar to a wave
+11676 = Sitting down shaking yes over at the right
+11676 = Sitting down looking to its left
+11677 = Sitting down with head resting on one hand
+11678 = Turned around sitting
+11679 = Turned around doing something
+11680 = Turned around waving?
+11681 = "" same as above
+
+11782 = Pulling up a penguin?
+11784 = Getting running start for something
+11785 = Preparing to jump to pole (agility)
+11786 = Sitting down to rest
+11787 = Resting
+11788 = Getting up from rest
+11789 = Swinging then jumping to the next pole (agility)
+11790 = Sitting Cape Waving behind, Looks like riding a carpet?
+11793 = Runs grabs a ledge, crawls along, then drops down (agility)
+11795 = Playing a bungo drum
+11796 = Playing Guitar
+11797 = "" same as above
+11798 = "" same as above
+
+11809 = Playing Cymbols
+11810 = Playing Violin on Sholder
+11811 = "" same as above
+11812 = "" same as above
+11813 = Playing Flute
+11814 = Sitting turning something then looking over at sholder
+11816 = Sitting Playing Flute
+
+11879 = Puts both hands on hips
+11880 = Looks over right sholder
+11881 = Thinking, scratches head
+
+11900 = Rolling something, i think dice
+11901 = Shaking skull in hands (can see the skull)
+11904 = Blowing into a Horn
+11908 = Checking a timer
+11909 = "" same as above
+11910 = "" same as above
+11911 = "" same as above
+
+11921 = Falling over dead
+11922 = Raises both hands up then slaming down
+
+11948 = Holding onto something with 1 hand then falling
+11949 = Belly Flop
+11950 = Sitting on butt legs spread apart 
+
+11970 = Swinging Arm
+11971 = Swinging Other Arm
+
+11980 = Swinging a 2h weapon down
+11981 = 2h Side Swipe
+11982 = 2h Stand Stance
+11983 = 2h walking stance
+11984 = 2h Running stance
+
+11989 = Armadyl Godsword Spec
+11991 = Godsword Spec Downward
+11993 = Saradomin Sword Spec
+11995 = Saradomin Godsword Special
+
+12002 = Some sort of hally swipe attack
+
+12120 = Sitting in a chair, seeing a chair
+12122 = Using a screw driver
+
+12169 = Mining with Dragon Pickaxe
+12174 = Hand cannon attack
+12175 = Hand cannon attack
+
+12187 = Weird Mining Emote, Dragon Pickaxe
+12188 = "" Same as 12189
+12189 = "" Same as 12190
+12190 = Mining Essence with Dragon Pickaxe
+12191 = "" Same as above
+
+12193+ End of the List, No more Emotes Above This! (562)
+
+12450 = Floating Down invisable
+
+12466 = Agility
+
+13030 - Weapon Changed odd colors lol
+
+13050 - Chaotic Maul attack maybe?
+
+13190 - To egg emote
+
+13272 - Shooting bow o.0
+
+13980 - Raising something  up 
+
+14600 - Odd swinging attack
