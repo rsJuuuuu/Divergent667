@@ -110,7 +110,7 @@ public class HandlerManager {
         interfaceHandler.init();
         objectHandler.init();
         commandHandler.init();
-        String fileLoc = "out/com/rs/game";
+        String fileLoc = ClassLoader.getSystemClassLoader().getResource("./").getPath()+"/com/rs/game";
         String packageDir = "com.rs.game";
         List<Object> classes = FileUtils.getScriptObjects(new File(fileLoc), packageDir, Handler.class);
         for (Object obj : classes)
