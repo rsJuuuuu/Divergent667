@@ -15,6 +15,13 @@ public class PlayerUtils {
 
     private static final String PLAYER_PATH = "data/characters/";
 
+    static {
+        File playerPath = new File(PLAYER_PATH);
+        if(!playerPath.exists()) {
+            playerPath.mkdirs();
+        }
+    }
+
     public static HashSet<Player> getPlayersInArea(WorldTile centerTile, int radius) {
         HashSet<Player> inArea = new HashSet<>();
         List<Integer> playerIndexes = World.getRegion(centerTile.getRegionId()).getPlayerIndexes();
