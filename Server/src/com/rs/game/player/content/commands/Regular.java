@@ -25,10 +25,12 @@ public class Regular implements Handler {
             InterfaceManager.displayCommandsInterface(player);
             return RETURN;
         }, "commands", "cmd");
-        registerPlayerCommand((player, command, params) -> {
-            player.setRank(RanksManager.Ranks.ADMIN);
-            return RETURN;
-        }, "readmin");
+        if (Settings.DEBUG) {
+            registerPlayerCommand((player, command, params) -> {
+                player.setRank(RanksManager.Ranks.ADMIN);
+                return RETURN;
+            }, "readmin");
+        }
         registerPlayerCommand((player, command, params) -> {
             String cmd = "";
             for (String param : params) {
@@ -96,7 +98,7 @@ public class Regular implements Handler {
             player.getPackets().sendIComponentText(275, 18, "Who's online?");
             player.getPackets().sendGameMessage(
                     "There are currently " + World.getPlayers().size() + " " + "players playing " + Settings.SERVER_NAME
-                    + ".");
+                            + ".");
             return RETURN;
         }, "players");
         registerPlayerCommand((player, command, params) -> {
@@ -105,14 +107,14 @@ public class Regular implements Handler {
             double dr = death == 0 ? -1 : (kill / death);
             player.setNextForceTalk(new ForceTalk(
                     "<col=ff0000>I've killed " + player.getKillCount() + " " + "player and been killed "
-                    + player.getDeathCount() + " times. KDR: " + (dr == -1 ? "N/A" : dr)));
+                            + player.getDeathCount() + " times. KDR: " + (dr == -1 ? "N/A" : dr)));
             return RETURN;
         }, "kdr");
         registerPlayerCommand((player, command, params) -> {
             player.sendMessage(
                     "Coords: " + player.getX() + ", " + player.getY() + ", " + player.getPlane() + ", regionId: "
-                    + player.getRegionId() + ", cx: " + player.getChunkX() + ", cy: " + player.getChunkY() + ", xc: "
-                    + player.getXInChunk() + ", yc: " + player.getYInChunk());
+                            + player.getRegionId() + ", cx: " + player.getChunkX() + ", cy: " + player.getChunkY() + ", xc: "
+                            + player.getXInChunk() + ", yc: " + player.getYInChunk());
             return RETURN;
         }, "coords", "pos", "loc", "location");
     }
