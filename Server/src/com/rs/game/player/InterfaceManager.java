@@ -204,6 +204,7 @@ public class InterfaceManager {
         player.getPackets().sendIComponentText(275, 16, "");
         int index = 19;
         for (RanksManager.Ranks rank : RanksManager.Ranks.values()) {
+            if(!player.hasRights(rank)) continue;
             index = printCommands(player, rank, index);
         }
     }
