@@ -38,11 +38,9 @@ import java.util.concurrent.TimeUnit;
 public final class Launcher {
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 1) {
-            Logger.error("USE: debug(boolean)");
-            return;
+        if (args.length >= 1) {
+            Settings.DEBUG = Boolean.parseBoolean(args[0]);
         }
-        Settings.DEBUG = Boolean.parseBoolean(args[0]);
 
         Logger.info("Launching server...");
         NpcDataLoader.init();
