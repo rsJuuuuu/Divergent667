@@ -120,7 +120,7 @@ public class Follower extends Npc {
             return;
         }
         if ((!clippedProjectile(owner, true)) || distanceX > size || distanceX < -1 || distanceY > size
-            || distanceY < -1) {
+                || distanceY < -1) {
             resetWalkSteps();
             addWalkStepsInteract(owner.getX(), owner.getY(), 2, size, true);
         } else resetWalkSteps();
@@ -265,7 +265,7 @@ public class Follower extends Npc {
             transformIntoNPC(data.getNpcId());
             call(false);
             return;
-        } else if (!owner.isCanPvp() && getId() == data.getNpcId()) {
+        } else if (!owner.isCanPvp() && getId() == data.getNpcId() && getCombatLevel() > 0) {
             transformIntoNPC(data.getNpcId() - 1);
             call(false);
             return;
@@ -275,7 +275,7 @@ public class Follower extends Npc {
         }
         if (!getCombat().process()) {
             if (data.isAggressive() && owner.getAttackedBy() != null && owner.getAttackedByDelay() > TimeUtils.getTime()
-                && canAttack(owner.getAttackedBy()) && Utils.getRandom(25) == 0)
+                    && canAttack(owner.getAttackedBy()) && Utils.getRandom(25) == 0)
                 getCombat().setTarget(owner.getAttackedBy());
             else follow();
         }
@@ -318,7 +318,7 @@ public class Follower extends Npc {
             if (!owner.isCanPvp() || !player.isCanPvp()) return false;
         }
         return !target.isDead() && owner.isAtMultiArea() && isAtMultiArea() && target.isAtMultiArea()
-               && owner.getControllerManager().canAttack(target);
+                && owner.getControllerManager().canAttack(target);
     }
 
     public void setSpecial(boolean on) {
@@ -389,12 +389,12 @@ public class Follower extends Npc {
     public boolean renewFamiliar() {
         if (ticks > 5) {
             owner.getPackets().sendGameMessage("You need to have at least two minutes and fifty seconds remaining "
-                                               + "before you can renew your familiar.", true);
+                    + "before you can renew your familiar.", true);
             return false;
         } else if (!owner.getInventory().getItems().contains(new Item(data.getPouchId(), 1))) {
             owner.getPackets().sendGameMessage(
                     "You need a " + ItemDefinitions.getItemDefinitions(data.getPouchId()).getName().toLowerCase()
-                    + " to renew your familiar's timer.");
+                            + " to renew your familiar's timer.");
             return false;
         }
         resetTickets();

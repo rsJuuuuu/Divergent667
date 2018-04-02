@@ -435,7 +435,7 @@ public enum FollowerData {
             "Magic attack that " + "drains an " + "opponent's " + "Ranged skill", 6),
     VAMPYRE_BAT(6836, 33, 1.5, 0, true, PouchData.VAMPYRE_BAT, SpecialAttack.NONE, "Vampyre Touch",
             "Damages up to " + "120 with a " + "chance of " + "restoring 20 " + "of your own " + "Life Points", 4),
-    BEAVER(9475, 27, 0.7, 0, false, PouchData.BEAVER, SpecialAttack.OBJECT, "Multichop",
+    BEAVER(6808, 27, 0.7, 0, false, PouchData.BEAVER, SpecialAttack.OBJECT, "Multichop",
             "Cuts up to 3 logs on a nearby" + " tree", 3) {
     },
     HONEY_BADGER(6846, 25, 1.6, 0, true, PouchData.HONEY_BADGER, SpecialAttack.ENTITY, "Insane Ferocity",
