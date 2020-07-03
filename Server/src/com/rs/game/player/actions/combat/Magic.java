@@ -3,9 +3,11 @@ package com.rs.game.player.actions.combat;
 import com.rs.Settings;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cores.CoresManager;
+import com.rs.game.Hit;
 import com.rs.game.item.FloorItem;
 import com.rs.game.item.Item;
 import com.rs.game.npc.Npc;
+import com.rs.game.npc.data.NpcDataLoader;
 import com.rs.game.npc.impl.summoning.Follower;
 import com.rs.game.player.Player;
 import com.rs.game.player.PlayerUtils;
@@ -18,10 +20,12 @@ import com.rs.utils.Constants;
 import com.rs.utils.game.itemUtils.PriceUtils;
 import com.rs.utils.stringUtils.TimeUtils;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 
 import static com.rs.utils.Constants.*;
+import static com.rs.utils.Constants.BonusType.*;
 
 public class Magic {
 
@@ -33,46 +37,61 @@ public class Magic {
         void execute(Player player, Spell spell);
     }
 
+    /*
+        Saradomin strike:
+            SpellId 66 Config 41
+        Claws of Guthix
+            SpellId 66 Config 39
+        Flames of Zamorak
+            SpellId 68 Config 43
+        Armadyl storm
+            SpellId 99 Config 145
+     */
+
     public enum Spell {
-        WIND_STRIKE(25, 1, 5.5, 20, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType.MODERN_AIR_SPELL,
+        /*
+            Standard combat spells
+         */
+        WIND_RUSH(98, 1, 2.7, 10, 143, 2836, 2836, Projectile.getDefaultMagicProjectile(2835), SpellType.MODERN_AIR_SPELL, AIR_RUNE, 2),
+        WIND_STRIKE(25, 1, 5.5, 20, 3, 2699, 2700, Projectile.getDefaultMagicProjectile(2835), SpellType.MODERN_AIR_SPELL,
                 AIR_RUNE, 1, MIND_RUNE, 1),
-        WATER_STRIKE(28, 5, 7.5, 40, 2701, 2708, Projectile.getDefaultMagicProjectile(2703), SpellType
+        WATER_STRIKE(28, 5, 7.5, 40, 5, 2701, 2708, Projectile.getDefaultMagicProjectile(2703), SpellType
                 .MODERN_WATER_SPELL, AIR_RUNE, 1, MIND_RUNE, 1, WATER_RUNE, 1),
-        EARTH_STRIKE(30, 9, 9.5, 60, 2713, 2723, Projectile.getDefaultMagicProjectile(2718), SpellType
+        EARTH_STRIKE(30, 9, 9.5, 60, 7, 2713, 2723, Projectile.getDefaultMagicProjectile(2718), SpellType
                 .MODERN_EARTH_SPELL, AIR_RUNE, 1, MIND_RUNE, 1, EARTH_RUNE, 2),
-        FIRE_STRIKE(32, 13, 11.5, 80, 2728, 2737, Projectile.getDefaultMagicProjectile(2729), SpellType
+        FIRE_STRIKE(32, 13, 11.5, 80, 9, 2728, 2737, Projectile.getDefaultMagicProjectile(2729), SpellType
                 .MODERN_FIRE_SPELL, AIR_RUNE, 2, FIRE_RUNE, 3, MIND_RUNE, 1),
-        WIND_BOLT(34, 17, 13.5, 90, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType.MODERN_AIR_SPELL,
+        WIND_BOLT(34, 17, 13.5, 90, 11, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType.MODERN_AIR_SPELL,
                 CHAOS_RUNE, 1, AIR_RUNE, 2),
-        WATER_BOLT(39, 23, 16.5, 100, 2707, 2709, Projectile.getDefaultMagicProjectile(2704), SpellType
+        WATER_BOLT(39, 23, 16.5, 100, 13, 2707, 2709, Projectile.getDefaultMagicProjectile(2704), SpellType
                 .MODERN_WATER_SPELL, CHAOS_RUNE, 1, AIR_RUNE, 2, WATER_RUNE, 2),
-        EARTH_BOLT(42, 29, 19.5, 110, 2714, 2724, Projectile.getDefaultMagicProjectile(2719), SpellType
+        EARTH_BOLT(42, 29, 19.5, 110, 15, 2714, 2724, Projectile.getDefaultMagicProjectile(2719), SpellType
                 .MODERN_EARTH_SPELL, CHAOS_RUNE, 1, AIR_RUNE, 3, EARTH_RUNE, 1),
-        FIRE_BOLT(45, 35, 22.5, 120, 2728, 2738, Projectile.getDefaultMagicProjectile(2731), SpellType
+        FIRE_BOLT(45, 35, 22.5, 120, 17, 2728, 2738, Projectile.getDefaultMagicProjectile(2731), SpellType
                 .MODERN_FIRE_SPELL, CHAOS_RUNE, 1, FIRE_RUNE, 4, AIR_RUNE, 3),
-        WIND_BLAST(49, 41, 25.5, 130, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType
+        WIND_BLAST(49, 41, 25.5, 130, 19, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType
                 .MODERN_AIR_SPELL, AIR_RUNE, 3, DEATH_RUNE, 1),
-        WATER_BLAST(52, 47, 28.5, 140, 2701, 2710, Projectile.getDefaultMagicProjectile(2705), SpellType
+        WATER_BLAST(52, 47, 28.5, 140, 21, 2701, 2710, Projectile.getDefaultMagicProjectile(2705), SpellType
                 .MODERN_WATER_SPELL, AIR_RUNE, 3, WATER_RUNE, 3, DEATH_RUNE, 1),
-        EARTH_BLAST(58, 53, 31.5, 150, 2715, 2725, Projectile.getDefaultMagicProjectile(2720), SpellType
+        EARTH_BLAST(58, 53, 31.5, 150, 23, 2715, 2725, Projectile.getDefaultMagicProjectile(2720), SpellType
                 .MODERN_EARTH_SPELL, AIR_RUNE, 3, DEATH_RUNE, 1, EARTH_RUNE, 4),
-        FIRE_BLAST(63, 59, 34.5, 160, 2728, 2739, Projectile.getDefaultMagicProjectile(2733), SpellType
+        FIRE_BLAST(63, 59, 34.5, 160, 25, 2728, 2739, Projectile.getDefaultMagicProjectile(2733), SpellType
                 .MODERN_FIRE_SPELL, AIR_RUNE, 4, DEATH_RUNE, 1, FIRE_RUNE, 5),
-        WIND_WAVE(70, 62, 36, 170, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType.MODERN_AIR_SPELL,
+        WIND_WAVE(70, 62, 36, 170, 27, -1, 2700, Projectile.getDefaultMagicProjectile(2699), SpellType.MODERN_AIR_SPELL,
                 AIR_RUNE, 5, BLOOD_RUNE, 1),
-        WATER_WAVE(73, 65, 37.5, 180, 2702, 2710, Projectile.getDefaultMagicProjectile(2706), SpellType
+        WATER_WAVE(73, 65, 37.5, 180, 29, 2702, 2710, Projectile.getDefaultMagicProjectile(2706), SpellType
                 .MODERN_WATER_SPELL, AIR_RUNE, 5, WATER_RUNE, 7, BLOOD_RUNE, 1),
-        EARTH_WAVE(77, 70, 40, 190, 2716, 2726, Projectile.getDefaultMagicProjectile(2721), SpellType
+        EARTH_WAVE(77, 70, 40, 190, 31, 2716, 2726, Projectile.getDefaultMagicProjectile(2721), SpellType
                 .MODERN_EARTH_SPELL, AIR_RUNE, 5, BLOOD_RUNE, 1, EARTH_RUNE, 7),
-        FIRE_WAVE(80, 75, 42.5, 200, 2728, 2740, Projectile.getDefaultMagicProjectile(2735), SpellType
+        FIRE_WAVE(80, 75, 42.5, 200, 33, 2728, 2740, Projectile.getDefaultMagicProjectile(2735), SpellType
                 .MODERN_FIRE_SPELL, AIR_RUNE, 5, FIRE_RUNE, 7, BLOOD_RUNE, 1),
-        WIND_SURGE(84, 81, 75, 220, 457, 2700, Projectile.getDefaultMagicProjectile(462), SpellType.MODERN_AIR_SPELL,
+        WIND_SURGE(84, 81, 75, 220, 47, 457, 2700, Projectile.getDefaultMagicProjectile(462), SpellType.MODERN_AIR_SPELL,
                 AIR_RUNE, 7, BLOOD_RUNE, 1, DEATH_RUNE, 1),
-        WATER_SURGE(87, 85, 80, 240, 2701, 2712, Projectile.getDefaultMagicProjectile(2707), SpellType
+        WATER_SURGE(87, 85, 80, 240, 49, 2701, 2712, Projectile.getDefaultMagicProjectile(2707), SpellType
                 .MODERN_WATER_SPELL, AIR_RUNE, 7, BLOOD_RUNE, 1, DEATH_RUNE, 1, WATER_RUNE, 10),
-        EARTH_SURGE(89, 90, 85, 260, 2717, 2727, Projectile.getDefaultMagicProjectile(2722), SpellType
+        EARTH_SURGE(89, 90, 85, 260, 51, 2717, 2727, Projectile.getDefaultMagicProjectile(2722), SpellType
                 .MODERN_EARTH_SPELL, AIR_RUNE, 7, BLOOD_RUNE, 1, DEATH_RUNE, 1, EARTH_RUNE, 10),
-        FIRE_SURGE(91, 96, 90, 280, 2728, 2741, Projectile.getDefaultMagicProjectile(2735), SpellType
+        FIRE_SURGE(91, 96, 90, 280, 53, 2728, 2741, Projectile.getDefaultMagicProjectile(2735), SpellType
                 .MODERN_FIRE_SPELL, FIRE_RUNE, 10, BLOOD_RUNE, 1, DEATH_RUNE, 1, AIR_RUNE, 7) {
             @Override
             public boolean sendCustomProjectile(Player player, PlayerCombat combat) {
@@ -82,14 +101,26 @@ public class Magic {
                 return true;
             }
         },
-        SMOKE_RUSH(28, 50, 30, 140, -1, 385, Projectile.getDefaultCurvedProjectile(386), SpellType.RUSH, DEATH_RUNE,
+        /*
+            Standard Drain Spells
+        */
+        CONFUSE(26, 3, 13, -1, 102, 104, Projectile.getDefaultMagicProjectile(103), 710, SpellType.MODERN_DRAIN_SPELL, WATER_RUNE, 3, EARTH_RUNE, 2, BODY_RUNE, 1),
+        WEAKEN(31, 11, 21, -1, 105, 107, Projectile.getDefaultMagicProjectile(106), 716, SpellType.MODERN_DRAIN_SPELL, WATER_RUNE, 3, EARTH_RUNE, 2, BODY_RUNE, 1),
+        CURSE(35, 19, 29, -1, 108, 110, Projectile.getDefaultMagicProjectile(109), 718, SpellType.MODERN_DRAIN_SPELL, WATER_RUNE, 2, EARTH_RUNE, 3, BODY_RUNE, 1),
+        VULNERABILITY(75, 66, 76, -1, 167, 169, Projectile.getDefaultMagicProjectile(168), 718, SpellType.MODERN_DRAIN_SPELL, EARTH_RUNE, 5, WATER_RUNE, 5, SOUL_RUNE, 1),
+        ENFEEBLE(78, 73, 83, -1, 170, 172, Projectile.getDefaultMagicProjectile(171), 723, SpellType.MODERN_DRAIN_SPELL, EARTH_RUNE, 8, WATER_RUNE, 8, SOUL_RUNE, 1),
+        STUN(82, 80, 90, -1, 173, 254, Projectile.getDefaultMagicProjectile(174), 729, SpellType.MODERN_DRAIN_SPELL, EARTH_RUNE, 12, WATER_RUNE, 12, SOUL_RUNE, 1),
+        /*
+            Ancients
+         */
+        SMOKE_RUSH(28, 50, 30, 140, 63, -1, 385, Projectile.getDefaultCurvedProjectile(386), SpellType.RUSH, DEATH_RUNE,
                 2, CHAOS_RUNE, 2, FIRE_RUNE, 1, AIR_RUNE, 1) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(20);
             }
         },
-        SHADOW_RUSH(32, 52, 31, 150, -1, 379, Projectile.getDefaultCurvedProjectile(380), SpellType.RUSH, SOUL_RUNE,
+        SHADOW_RUSH(32, 52, 31, 150, 65, -1, 379, Projectile.getDefaultCurvedProjectile(380), SpellType.RUSH, SOUL_RUNE,
                 1, DEATH_RUNE, 2, CHAOS_RUNE, 2, AIR_RUNE, 1) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -99,27 +130,27 @@ public class Magic {
                 }
             }
         },
-        BLOOD_RUSH(24, 56, 33, 160, -1, 373, null, SpellType.RUSH, BLOOD_RUNE, 1, DEATH_RUNE, 2, CHAOS_RUNE, 2) {
+        BLOOD_RUSH(24, 56, 33, 160, 67, -1, 373, null, SpellType.RUSH, BLOOD_RUNE, 1, DEATH_RUNE, 2, CHAOS_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
-        ICE_RUSH(20, 58, 34, 170, -1, 361, Projectile.getDefaultCurvedProjectile(362), SpellType.RUSH, WATER_RUNE, 2,
+        ICE_RUSH(20, 58, 34, 170, 69, -1, 361, Projectile.getDefaultCurvedProjectile(362), SpellType.RUSH, WATER_RUNE, 2,
                 CHAOS_RUNE, 2, DEATH_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().addFreezeDelay(5000);
             }
         },
-        SMOKE_BURST(30, 62, 36, 180, -1, 389, null, SpellType.ANCIENT_MULTI, DEATH_RUNE, 2, CHAOS_RUNE, 4, FIRE_RUNE,
+        SMOKE_BURST(30, 62, 36, 180, 71, -1, 389, null, SpellType.ANCIENT_MULTI, DEATH_RUNE, 2, CHAOS_RUNE, 4, FIRE_RUNE,
                 2, AIR_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(20);
             }
         },
-        SHADOW_BURST(34, 64, 37, 190, -1, 382, null, SpellType.ANCIENT_MULTI, SOUL_RUNE, 2, DEATH_RUNE, 2,
+        SHADOW_BURST(34, 64, 37, 190, 73, -1, 382, null, SpellType.ANCIENT_MULTI, SOUL_RUNE, 2, DEATH_RUNE, 2,
                 CHAOS_RUNE, 4, AIR_RUNE, 1) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -129,28 +160,28 @@ public class Magic {
                 }
             }
         },
-        BLOOD_BURST(26, 68, 39, 210, -1, 376, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, DEATH_RUNE, 2,
+        BLOOD_BURST(26, 68, 39, 210, 75, -1, 376, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, DEATH_RUNE, 2,
                 CHAOS_RUNE, 4) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
-        ICE_BURST(22, 70, 40, 220, -1, 363, null, SpellType.ANCIENT_MULTI, DEATH_RUNE, 2, CHAOS_RUNE, 4, WATER_RUNE,
+        ICE_BURST(22, 70, 40, 220, 77, -1, 363, null, SpellType.ANCIENT_MULTI, DEATH_RUNE, 2, CHAOS_RUNE, 4, WATER_RUNE,
                 4) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().addFreezeDelay(10000);
             }
         },
-        SMOKE_BLITZ(29, 74, 42, 230, -1, 387, Projectile.getDefaultCurvedProjectile(386), SpellType.BLITZ,
+        SMOKE_BLITZ(29, 74, 42, 230, 79, -1, 387, Projectile.getDefaultCurvedProjectile(386), SpellType.BLITZ,
                 BLOOD_RUNE, 2, DEATH_RUNE, 2, FIRE_RUNE, 2, AIR_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(40);
             }
         },
-        SHADOW_BLITZ(33, 76, 43, 240, -1, 381, Projectile.getDefaultCurvedProjectile(380), SpellType.BLITZ,
+        SHADOW_BLITZ(33, 76, 43, 240, 81, -1, 381, Projectile.getDefaultCurvedProjectile(380), SpellType.BLITZ,
                 BLOOD_RUNE, 2, SOUL_RUNE, 2, DEATH_RUNE, 2, AIR_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -160,27 +191,27 @@ public class Magic {
                 }
             }
         },
-        BLOOD_BLITZ(25, 80, 45, 250, -1, 375, Projectile.getDefaultCurvedProjectile(374), SpellType.BLITZ,
+        BLOOD_BLITZ(25, 80, 45, 250, 83, -1, 375, Projectile.getDefaultCurvedProjectile(374), SpellType.BLITZ,
                 BLOOD_RUNE, 4, DEATH_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
-        ICE_BLITZ(21, 82, 46, 260, 366, 367, null, SpellType.BLITZ, BLOOD_RUNE, 2, DEATH_RUNE, 2, WATER_RUNE, 3) {
+        ICE_BLITZ(21, 82, 46, 260, 85, 366, 367, null, SpellType.BLITZ, BLOOD_RUNE, 2, DEATH_RUNE, 2, WATER_RUNE, 3) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().addFreezeDelay(15000);
             }
         },
-        SMOKE_BARRAGE(31, 86, 48, 270, -1, 391, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, DEATH_RUNE, 4,
+        SMOKE_BARRAGE(31, 86, 48, 270, 87, -1, 391, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, DEATH_RUNE, 4,
                 FIRE_RUNE, 4, AIR_RUNE, 4) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(40);
             }
         },
-        SHADOW_BARRAGE(35, 88, 49, 280, -1, 383, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, SOUL_RUNE, 3,
+        SHADOW_BARRAGE(35, 88, 49, 280, 89, -1, 383, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, SOUL_RUNE, 3,
                 DEATH_RUNE, 4, AIR_RUNE, 4) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -190,20 +221,20 @@ public class Magic {
                 }
             }
         },
-        BLOOD_BARRAGE(27, 92, 51, 290, -1, 377, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 4, SOUL_RUNE, 1,
+        BLOOD_BARRAGE(27, 92, 51, 290, 91, -1, 377, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 4, SOUL_RUNE, 1,
                 DEATH_RUNE, 4) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
-        ICE_BARRAGE(23, 94, 52, 300, -1, 369, Projectile.getDefaultCurvedProjectile(368), SpellType.ANCIENT_MULTI,
+        ICE_BARRAGE(23, 94, 52, 300, 93, -1, 369, Projectile.getDefaultCurvedProjectile(368), SpellType.ANCIENT_MULTI,
                 BLOOD_RUNE, 2, DEATH_RUNE, 4, WATER_RUNE, 6) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage <= 0) return;
                 if (combat.getTarget().getFreezeDelay() >= TimeUtils.getTime()
-                    || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime())
+                        || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime())
                     combat.setMagicHitGfx(new Graphics(1677));
                 else combat.getTarget().addFreezeDelay(20000);
             }
@@ -223,7 +254,7 @@ public class Magic {
         WATCHTOWER(62, 58, 68, SpellType.MODERN_TELEPORT, new WorldTile(2547, 3113, 2), LAW_RUNE, 2, EARTH_RUNE, 2),
         TROLLHEIM(69, 61, 68, SpellType.MODERN_TELEPORT, new WorldTile(2888, 3674, 0), FIRE_RUNE, 2, LAW_RUNE, 2),
         APE_ATOLL(72, 64, 74, SpellType.MODERN_TELEPORT, new WorldTile(2762, 9094, 0), FIRE_RUNE, 2, LAW_RUNE, 2,
-                WATER_RUNE, 2, 1963),
+                WATER_RUNE, 2, 1963, 1),
         ANCIENT_HOME(48, 0, 0, SpellType.ANCIENT_TELEPORT, Settings.START_PLAYER_LOCATION),
         PADDEWA(40, 54, 64, SpellType.ANCIENT_TELEPORT, new WorldTile(3099, 9882, 0), LAW_RUNE, 2, FIRE_RUNE, 1,
                 AIR_RUNE, 1),
@@ -246,7 +277,7 @@ public class Magic {
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage <= 0) return;
                 if (!(combat.getTarget().getFreezeDelay() >= TimeUtils.getTime()
-                      || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime()))
+                        || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime()))
                     combat.getTarget().addFreezeDelay(5000);
             }
         },
@@ -256,7 +287,7 @@ public class Magic {
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage <= 0) return;
                 if (!(combat.getTarget().getFreezeDelay() >= TimeUtils.getTime()
-                      || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime()))
+                        || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime()))
                     combat.getTarget().addFreezeDelay(10000);
             }
         },
@@ -266,22 +297,54 @@ public class Magic {
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage <= 0) return;
                 if (!(combat.getTarget().getFreezeDelay() >= TimeUtils.getTime()
-                      || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime()))
+                        || combat.getTarget().getFrozenBlockedDelay() >= TimeUtils.getTime()))
                     combat.getTarget().addFreezeDelay(15000);
             }
         };
 
-        private int spellId, level, damage, uniqueAnimationId = -1;
-        private double xp;
+        private final int spellId;
+        private final int level;
+        private int damage;
+        private int uniqueAnimationId = -1;
+        private int autoCastConfigId = 0;
+        private final double xp;
         int[] runeData;
         private ClickSpellAction action;
         private WorldTile targetTile;
         private Projectile projectile;
         private Graphics castGfx, endGfx;
-        private SpellType type;
+        private final SpellType type;
 
         Spell(int spellId, int level, double xp, int damage, int castGfx, int hitGfx, Projectile projectile,
               SpellType type, int... runeData) {
+            this.spellId = spellId;
+            this.level = level;
+            this.xp = xp;
+            this.damage = damage;
+            this.castGfx = new Graphics(castGfx);
+            this.endGfx = new Graphics(hitGfx);
+            this.projectile = projectile;
+            this.type = type;
+            this.runeData = runeData;
+        }
+
+        Spell(int spellId, int level, double xp, int damage, int castGfx, int hitGfx, Projectile projectile, int animationId,
+              SpellType type, int... runeData) {
+            this.uniqueAnimationId = animationId;
+            this.spellId = spellId;
+            this.level = level;
+            this.xp = xp;
+            this.damage = damage;
+            this.castGfx = new Graphics(castGfx);
+            this.endGfx = new Graphics(hitGfx);
+            this.projectile = projectile;
+            this.type = type;
+            this.runeData = runeData;
+        }
+
+        Spell(int spellId, int level, double xp, int damage, int autoCastConfigId, int castGfx, int hitGfx, Projectile projectile,
+              SpellType type, int... runeData) {
+            this.autoCastConfigId = autoCastConfigId;
             this.spellId = spellId;
             this.level = level;
             this.xp = xp;
@@ -352,6 +415,10 @@ public class Magic {
 
         public int getDamage() {
             return damage;
+        }
+
+        public int getAutoCastConfigId() {
+            return autoCastConfigId;
         }
 
         public double getXp() {
@@ -425,13 +492,20 @@ public class Magic {
             return type.delay;
         }
 
+        private static final HashMap<Integer, HashMap<Integer, Spell>> spells = new HashMap<>();
+
+        static {
+            for (Spell spell : Spell.values()) {
+                spells.putIfAbsent(spell.type.spellBook, new HashMap<>());
+                spells.get(spell.type.spellBook).put(spell.spellId, spell);
+            }
+        }
+
         /**
          * Fetch a spell based on the spell id and book its being cast from
          */
         public static Spell forId(int id, int spellBook) {
-            for (Spell spell : Spell.values())
-                if (spell.spellId == id && spell.type.spellBook == spellBook) return spell;
-            return null;
+            return spells.getOrDefault(spellBook, new HashMap<>()).get(id);
         }
 
     }
@@ -450,6 +524,16 @@ public class Magic {
                 return damage;
             }
         },
+        MODERN_DRAIN_SPELL(MODERN_SPELLBOOK, 5, 14223, 2791, Magic::castDrainSpell, 2) {
+            @Override
+            public int applyPreHitEffects(Player player, PlayerCombat combat, int damage) {
+                if (damage > 0) {
+                    return -1; // This is to do no damage, but not splash as -1 is rounded to 0
+                } else {
+                    return 0;
+                }
+            }
+        },
         BIND_SPELL(MODERN_SPELLBOOK, 5, 710, -1, Magic::castNormalCombatSpell, 2),
         BLITZ(ANCIENT_SPELLBOOK, 4, 1978, Magic::castNormalCombatSpell, 4),
         RUSH(ANCIENT_SPELLBOOK, 4, 1978, Magic::castNormalCombatSpell, 2),
@@ -465,7 +549,12 @@ public class Magic {
         LUNAR_USE_SPELL(LUNAR_SPELLBOOK, USE_SPELL),
         MODERN_SPELL(MODERN_SPELLBOOK);
 
-        private int spellBook, delay, baseAnimation, alternativeAnimation, hitDelay, spellType;
+        private final int spellBook;
+        private int delay;
+        private int baseAnimation;
+        private int alternativeAnimation;
+        private int hitDelay;
+        private final int spellType;
         private SpellAction action;
         private Graphics baseGfx, secondaryGfx;
 
@@ -634,7 +723,7 @@ public class Magic {
                 if (player.getAttackedBy() != other && player.getAttackedByDelay() > TimeUtils.getTime()) {
                     player.getPackets().sendGameMessage(
                             "That " + (player.getAttackedBy() instanceof Player ? "player" : "npc") + " is "
-                            + "already in " + "combat.");
+                                    + "already in " + "combat.");
                     return;
                 }
                 if (other.getAttackedBy() != player && other.getAttackedByDelay() > TimeUtils.getTime()) {
@@ -821,6 +910,111 @@ public class Magic {
                 (player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage()))));
     }
 
+    private static boolean checkDrain(Player player, PlayerCombat combat, Spell spell, boolean apply) {
+        // These are a bit weird because of the way the combat works, for instance npc max hit only depends on the attack level
+        final BonusType[] attackBonuses = {STAB_ATTACK, RANGE_ATTACK, MAGIC_ATTACK};
+        final BonusType[] defenceBonuses = {RANGE_DEF, MAGIC_DEF, STAB_DEF};
+        final BonusType[] strengthBonuses = {STAB_ATTACK, RANGE_ATTACK, MAGIC_ATTACK};
+
+        switch (spell) {
+            case CONFUSE:
+                return checkModernDrain(combat, 0.05, apply, Skills.ATTACK, attackBonuses);
+            case WEAKEN:
+                return checkModernDrain(combat, 0.05, apply, Skills.STRENGTH, strengthBonuses);
+            case CURSE:
+                return checkModernDrain(combat, 0.05, apply, Skills.DEFENCE, defenceBonuses);
+            case VULNERABILITY:
+                return checkModernDrain(combat, 0.10, apply, Skills.DEFENCE, defenceBonuses);
+            case ENFEEBLE:
+                return checkModernDrain(combat, 0.10, apply, Skills.STRENGTH, strengthBonuses);
+            case STUN:
+                return checkModernDrain(combat, 0.10, apply, Skills.ATTACK, attackBonuses);
+            default:
+                return false;
+        }
+    }
+
+    private static void castDrainSpell(Player player, PlayerCombat combat, Spell spell) {
+        if (!checkDrain(player, combat, spell, false)) {
+            player.sendMessage("Your target is already weakened.");
+            return;
+        }
+
+        Hit hit = combat.getMagicHit(player, spell.processPreHitEffects
+                (player, combat, combat.getRandomMagicMaxHit(player, 1)));
+
+        if (hit.getDamage() < 0) {
+            checkDrain(player, combat, spell, true);
+        }
+
+        player.setNextAnimation(new Animation(spell.getAnimationId(player)));
+
+        player.setNextGraphics(spell.getCastGfx());
+        combat.setMagicHitGfx(spell.getEndGfx());
+        combat.setBaseMagicXp(spell.getXp());
+
+        combat.delayMagicHit(spell.getType().getHitDelay(), hit);
+        if (spell.getProjectile() != null && !spell.sendCustomProjectile(player, combat))
+            World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
+    }
+
+    /**
+     * Check and apply modern (spellbook) drain spell
+     *
+     * @param combat  the combat of the attacker
+     * @param drain   amount to drain
+     * @param skillID skill to drain
+     * @param toDrain the npc bonuses to drain
+     * @return whether drain was possible
+     */
+    public static boolean checkModernDrain(PlayerCombat combat, double drain, boolean apply, int skillID, BonusType... toDrain) {
+        Entity target = combat.getTarget();
+        if (target instanceof Player) {
+            Player other = (Player) target;
+            if (other.getSkills().level[skillID] >= other.getSkills().getLevelForXp(skillID)) {
+                if (apply) {
+                    other.getSkills().drainLevelByPercentage(skillID, drain);
+                }
+                return true;
+            } else {
+                return false;
+            }
+        } else if (target instanceof Npc) {
+            return checkNpcDrain((Npc) target, drain, apply, toDrain);
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Check if the npc stats can be drained by a drain spell
+     *
+     * @param npc     the npc attacked
+     * @param drain   amount of drain in fraction from 0.0 to 1.0
+     * @param bonuses the bonuses to be drained
+     * @return wheter or not one of the given stats was drainable
+     */
+    public static boolean checkNpcDrain(Npc npc, double drain, boolean apply, Constants.BonusType... bonuses) {
+        boolean drained = false;
+        int[] initialBonuses = NpcDataLoader.getBonuses(npc.getId());
+        if (initialBonuses == null) {
+            return false;
+        }
+        for (Constants.BonusType bonus : bonuses) {
+            if (initialBonuses[bonus.getId()] == 0) {
+                continue;
+            }
+            if (npc.getBonuses()[bonus.getId()] == initialBonuses[bonus.getId()]) {
+                if (!apply) {
+                    return true;
+                }
+                drained = true;
+                npc.getBonuses()[bonus.getId()] = (int) Math.floor((double) npc.getBonuses()[bonus.getId()] * (1.0 - drain));
+            }
+        }
+        return drained;
+    }
+
     /**
      * Attack multiple enemies using magic
      */
@@ -857,7 +1051,7 @@ public class Magic {
     private static boolean wearingStaff(Player player) {
         ItemDefinitions definitions = ItemDefinitions.getItemDefinitions(player.getEquipment().getWeaponId());
         return definitions != null && (definitions.getName().toLowerCase().contains("staff")
-                                       || definitions.getName().toLowerCase().contains("wand"));
+                || definitions.getName().toLowerCase().contains("wand"));
     }
 
     /**
@@ -865,17 +1059,17 @@ public class Magic {
      */
     private static boolean hasInfiniteRunes(int runeId, int weaponId, int shieldId) {
         if (runeId == AIR_RUNE) {
-            if (weaponId == 1381 || weaponId == 21777) // air staff
-                return true;
+            // air staff
+            return weaponId == 1381 || weaponId == 21777;
         } else if (runeId == WATER_RUNE) {
-            if (weaponId == 1383 || shieldId == 18346) // water staff
-                return true;
+            // water staff
+            return weaponId == 1383 || shieldId == 18346;
         } else if (runeId == EARTH_RUNE) {
-            if (weaponId == 1385) // earth staff
-                return true;
+            // earth staff
+            return weaponId == 1385;
         } else if (runeId == FIRE_RUNE) {
-            if (weaponId == 1387) // fire staff
-                return true;
+            // fire staff
+            return weaponId == 1387;
         }
         return false;
     }
@@ -885,13 +1079,16 @@ public class Magic {
      */
     private static boolean checkCombatSpell(Player player, int spellId, int set, boolean delete) {
         Spell spell = Spell.forId(spellId, player.getCombatDefinitions().getSpellBook());
-        if (spell == null || !checkRequirements(player, spell)) return false;
-        if (set >= 0) {
-            if (set == 0) player.getCombatDefinitions().setAutoCastSpell(spellId);
-            else player.getTemporaryAttributes().put("tempCastSpell", spellId);
+        if (spell != null && checkRequirements(player, spell)) {
+            if (set >= 0) {
+                if (set == 0) player.getCombatDefinitions().setAutoCastSpell(spellId);
+                else player.getTemporaryAttributes().put("tempCastSpell", spellId);
+            }
+            if (delete) deleteRunes(player, spell);
+            return true;
+        } else {
+            return false;
         }
-        if (delete) deleteRunes(player, spell);
-        return true;
     }
 
     /**

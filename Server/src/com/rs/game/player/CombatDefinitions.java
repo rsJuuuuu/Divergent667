@@ -2,7 +2,9 @@ package com.rs.game.player;
 
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.item.Item;
+import com.rs.game.player.actions.combat.Magic;
 import com.rs.game.player.actions.combat.PlayerCombat;
+import com.rs.utils.Constants;
 import com.rs.utils.game.itemUtils.ItemBonuses;
 
 import java.io.Serializable;
@@ -59,104 +61,13 @@ public final class CombatDefinitions implements Serializable {
 
     private void refreshAutoCastSpell() {
         refreshAttackStyle();
-        player.getPackets().sendConfig(108, getSpellAutoCastConfigValue());
-    }
-
-    private int getSpellAutoCastConfigValue() {
-        if (dungeonneringSpellBook) return 0;
-        if (spellBook == MODERN) {
-            switch (autoCastSpell) {
-                case 25:
-                    return 3;
-                case 28:
-                    return 5;
-                case 30:
-                    return 7;
-                case 32:
-                    return 9;
-                case 34:
-                    return 11; // air bolt
-                case 39:
-                    return 13;// water bolt
-                case 42:
-                    return 15;// earth bolt
-                case 45:
-                    return 17; // fire bolt
-                case 49:
-                    return 19;// air blast
-                case 52:
-                    return 21;// water blast
-                case 58:
-                    return 23;// earth blast
-                case 63:
-                    return 25;// fire blast
-                case 66: // Saradomin Strike
-                    return 41;
-                case 67:// Claws of Guthix
-                    return 39;
-                case 68:// Flames of Zammorak
-                    return 43;
-                case 70:
-                    return 27;// air wave
-                case 73:
-                    return 29;// water wave
-                case 77:
-                    return 31;// earth wave
-                case 80:
-                    return 33;// fire wave
-                case 84:
-                    return 47;
-                case 87:
-                    return 49;
-                case 89:
-                    return 51;
-                case 91:
-                    return 53;
-                case 99:
-                    return 145;
-                default:
-                    return 0;
-            }
-        } else if (spellBook == ANCIENT) {
-            switch (autoCastSpell) {
-                case 28:
-                    return 63;
-                case 32:
-                    return 65;
-                case 24:
-                    return 67;
-                case 20:
-                    return 69;
-                case 30:
-                    return 71;
-                case 34:
-                    return 73;
-                case 26:
-                    return 75;
-                case 22:
-                    return 77;
-                case 29:
-                    return 79;
-                case 33:
-                    return 81;
-                case 25:
-                    return 83;
-                case 21:
-                    return 85;
-                case 31:
-                    return 87;
-                case 35:
-                    return 89;
-                case 27:
-                    return 91;
-                case 23:
-                    return 93;
-                default:
-                    return 0;
-            }
+        Magic.Spell spell = Magic.Spell.forId(autoCastSpell, Constants.interfaceIdForSpellbook(spellBook));
+        if (spell != null) {
+            player.getPackets().sendConfig(108, spell.getAutoCastConfigId());
         } else {
-            return 0;
+            player.getPackets().sendConfig(108, 0);
         }
+
     }
 
     CombatDefinitions() {
@@ -227,14 +138,14 @@ public final class CombatDefinitions implements Serializable {
         if (spellBook == MODERN) {
             player.getPackets().sendConfig(1376,
                     sortSpellBook | (showCombatSpells ? 0 : 1 << 9) | (showSkillSpells ? 0 : 1 << 10)
-                    | (showMiscellaneousSpells ? 0 : 1 << 11) | (showTeleportSpells ? 0 : 1 << 12));
+                            | (showMiscellaneousSpells ? 0 : 1 << 11) | (showTeleportSpells ? 0 : 1 << 12));
         } else if (spellBook == ANCIENT) {
             player.getPackets().sendConfig(1376,
                     sortSpellBook << 3 | (showCombatSpells ? 0 : 1 << 16) | (showTeleportSpells ? 0 : 1 << 17));
         } else if (spellBook == LUNAR) {
             player.getPackets().sendConfig(1376,
                     sortSpellBook << 6 | (showCombatSpells ? 0 : 1 << 13) | (showMiscellaneousSpells ? 0 : 1 << 14)
-                    | (showTeleportSpells ? 0 : 1 << 15));
+                            | (showTeleportSpells ? 0 : 1 << 15));
         }
     }
 
@@ -259,10 +170,11 @@ public final class CombatDefinitions implements Serializable {
                 }
             }
             if (weaponName.contains("staff") || weaponName.contains("granite mace") || weaponName.contains("warhammer")
-                || weaponName.contains("tzhaar-ket-em") || weaponName.contains("tzhaar-ket-om")
-                || weaponName.contains("staff of peace") || weaponName.contains("maul")) return CRUSH_ATTACK.getId();
+                    || weaponName.contains("tzhaar-ket-em") || weaponName.contains("tzhaar-ket-om")
+                    || weaponName.contains("staff of peace") || weaponName.contains("maul"))
+                return CRUSH_ATTACK.getId();
             if (weaponName.contains("scimitar") || weaponName.contains("korasi's sword")
-                || weaponName.contains("hatchet") || weaponName.contains("claws") || weaponName.contains("longsword")) {
+                    || weaponName.contains("hatchet") || weaponName.contains("claws") || weaponName.contains("longsword")) {
                 switch (attackStyle) {
                     case 2:
                         return STAB_ATTACK.getId();
@@ -315,7 +227,7 @@ public final class CombatDefinitions implements Serializable {
             }
 
             if (weaponName.contains("godsword") || weaponName.contains("greataxe") || weaponName.contains("2h sword")
-                || weaponName.equals("saradomin sword")) {
+                    || weaponName.equals("saradomin sword")) {
                 switch (attackStyle) {
                     case 2:
                         return CRUSH_ATTACK.getId();

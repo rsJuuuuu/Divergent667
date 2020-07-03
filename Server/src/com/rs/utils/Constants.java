@@ -26,11 +26,33 @@ public class Constants {
     public static final int MODERN = 0;
     public static final int ANCIENT = 1;
     public static final int LUNAR = 2;
+    public static final int DUNGEONEERING = 3;
 
     public static final int LUNAR_SPELLBOOK = 430;
     public static final int ANCIENT_SPELLBOOK = 193;
     public static final int MODERN_SPELLBOOK = 192;
     public static final int DUNGEONEERING_SPELLBOOK = 950;
+
+    /**
+     * Map spellbook id to interface id
+     *
+     * @param spellbook the id of the spellbook
+     * @return interface id
+     */
+    public static int interfaceIdForSpellbook(int spellbook) {
+        switch (spellbook) {
+            case MODERN:
+                return MODERN_SPELLBOOK;
+            case ANCIENT:
+                return ANCIENT_SPELLBOOK;
+            case LUNAR:
+                return LUNAR_SPELLBOOK;
+            case DUNGEONEERING:
+                return DUNGEONEERING_SPELLBOOK;
+            default:
+                return 0;
+        }
+    }
 
     /**
      * Prayer
@@ -163,11 +185,11 @@ public class Constants {
         ABSORB_RANGE_BONUS(13, "Absorb range bonus"),
         STRENGTH_BONUS(14, "Strength bonus"),
         RANGED_STR_BONUS(15, "Range str bonus"),
-        MAGIC_DAMAGE(17, "Magic damage"),
-        PRAYER_BONUS(16, "Prayer bonus");
+        PRAYER_BONUS(16, "Prayer bonus"),
+        MAGIC_DAMAGE(17, "Magic damage");
 
-        private int id;
-        private String name;
+        private final int id;
+        private final String name;
 
         BonusType(int id, String name) {
             this.id = id;

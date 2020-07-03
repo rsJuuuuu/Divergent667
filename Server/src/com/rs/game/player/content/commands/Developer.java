@@ -4,6 +4,7 @@ import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cache.loaders.NPCDefinitions;
 import com.rs.game.actionHandling.Handler;
 import com.rs.game.item.Item;
+import com.rs.game.npc.data.NpcDataLoader;
 import com.rs.game.player.content.Notes;
 import com.rs.game.player.content.interfaces.Teleportation;
 import com.rs.game.player.info.RanksManager;
@@ -25,6 +26,13 @@ import static com.rs.game.actionHandling.HandlerManager.registerInterfaceAction;
 public class Developer implements Handler {
     @Override
     public void register() {
+
+        registerDeveloperCommand((player, command, params) -> {
+            NpcDataLoader.init();
+            player.sendMessage("Reloaded all npc bonuses. Active after respawn");
+            return RETURN;
+        }, "reloadnpcbonuses");
+
         registerDeveloperCommand((player, command, params) -> {
             player.getPoison().makePoisoned(200);
             return RETURN;
@@ -37,14 +45,14 @@ public class Developer implements Handler {
             return RETURN;
         }, "listranks");
 
-        registerDeveloperCommand((player, command, params)->{
+        registerDeveloperCommand((player, command, params) -> {
             Teleportation.openTeleportationInterface(player);
             return RETURN;
-        },"resendteleinter");
+        }, "resendteleinter");
 
         registerDeveloperCommand((player, command, params) -> {
             try {
-                for (int i = Integer.valueOf(params[0]); i < Integer.valueOf(params[1]); i++)
+                for (int i = Integer.parseInt(params[0]); i < Integer.parseInt(params[1]); i++)
                     player.sendMessage("<img=" + i + ">");
             } catch (NumberFormatException nfe) {
                 player.sendMessage("Invalid number input");
@@ -61,12 +69,12 @@ public class Developer implements Handler {
         }, "listWorldObjects");
 
         registerDeveloperCommand((player, command, params) -> {
-            System.out.println(ItemDefinitions.getItemDefinitions(Integer.valueOf(params[0])).toString());
+            System.out.println(ItemDefinitions.getItemDefinitions(Integer.parseInt(params[0])).toString());
             return RETURN;
         }, "printitemdefs");
 
         registerDeveloperCommand((player, command, params) -> {
-            System.out.println(NPCDefinitions.getNPCDefinitions(Integer.valueOf(params[0])).toString());
+            System.out.println(NPCDefinitions.getNPCDefinitions(Integer.parseInt(params[0])).toString());
             return RETURN;
         }, "printnpcdefs");
 
@@ -92,7 +100,7 @@ public class Developer implements Handler {
 
         registerDeveloperCommand((player, command, params) -> {
             int startInter = 1;
-            if (params.length > 0) startInter = Integer.valueOf(params[0]);
+            if (params.length > 0) startInter = Integer.parseInt(params[0]);
             int finalStartInter = startInter;
             WorldTasksManager.schedule(new WorldTask() {
                 int currentInter = finalStartInter;
@@ -113,7 +121,7 @@ public class Developer implements Handler {
                 return RETURN;
             }
             try {
-                player.getPackets().sendConfigByFile(Integer.valueOf(params[0]), Integer.valueOf(params[1]));
+                player.getPackets().sendConfigByFile(Integer.parseInt(params[0]), Integer.parseInt(params[1]));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: config id value");
             }
@@ -141,7 +149,7 @@ public class Developer implements Handler {
 
         registerDeveloperCommand((player, command, params) -> {
             int startInter = 1;
-            if (params.length > 0) startInter = Integer.valueOf(params[0]);
+            if (params.length > 0) startInter = Integer.parseInt(params[0]);
             int finalStartInter = startInter;
             WorldTasksManager.schedule(new WorldTask() {
                 int currentTab = finalStartInter;
@@ -159,9 +167,9 @@ public class Developer implements Handler {
 
         registerDeveloperCommand((player, command, params) -> {
             try {
-                for (int i = 0; i < Integer.valueOf(params[2]); i++) {
-                    player.getPackets().sendItemOnIComponent(Integer.valueOf(params[0]),
-                            Integer.valueOf(params[1]) + i, 1, i);
+                for (int i = 0; i < Integer.parseInt(params[2]); i++) {
+                    player.getPackets().sendItemOnIComponent(Integer.parseInt(params[0]),
+                            Integer.parseInt(params[1]) + i, 1, i);
                 }
             } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 player.sendMessage("Invalid params");

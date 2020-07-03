@@ -37,7 +37,7 @@ public class Npc extends Entity implements Serializable {
     private static final long serialVersionUID = -4794678936277614443L;
 
     private int id;
-    private int mapAreaNameHash;
+    private final int mapAreaNameHash;
     private int capDamage;
     private int lureDelay;
     private int forceTargetDistance;
@@ -45,10 +45,10 @@ public class Npc extends Entity implements Serializable {
 
     private long lastAttackedByTarget;
 
-    private boolean canBeAttackFromOutOfArea;
+    private final boolean canBeAttackFromOutOfArea;
     private boolean cantInteract;
     private boolean randomWalk;
-    private boolean spawned;
+    private final boolean spawned;
     private boolean cantFollowUnderCombat;
     private boolean forceAggressive;
     private boolean forceFollowClose;
@@ -58,7 +58,7 @@ public class Npc extends Entity implements Serializable {
 
     private int[] bonuses;
 
-    private WorldTile spawnTile;
+    private final WorldTile spawnTile;
     private WorldTile forceWalk;
 
     private transient NPCCombat combat;
@@ -84,7 +84,8 @@ public class Npc extends Entity implements Serializable {
         setHealth(getMaxHitPoints());
         setDirection(getSpawnDirection());
         setRandomWalk((getDefinitions().walkMask & 0x2) != 0);
-        bonuses = NpcDataLoader.getBonuses(id);
+        setBonuses(NpcDataLoader.getBonuses(id));
+
         combat = new NPCCombat(this);
         capDamage = -1;
         lureDelay = 12000;
@@ -93,6 +94,14 @@ public class Npc extends Entity implements Serializable {
         World.updateEntityRegion(this);
         loadMapRegions();
         checkMultiArea();
+    }
+
+    public void setBonuses(int[] bonuses) {
+        if (bonuses == null) {
+            this.bonuses = null;
+        } else {
+            this.bonuses = bonuses.clone();
+        }
     }
 
     public boolean isFollower() {
@@ -124,7 +133,7 @@ public class Npc extends Entity implements Serializable {
 
     protected void setNpcId(int id) {
         this.id = id;
-        bonuses = NpcDataLoader.getBonuses(id);
+        setBonuses(NpcDataLoader.getBonuses(id));
     }
 
     public int getMapAreaNameHash() {
@@ -155,7 +164,7 @@ public class Npc extends Entity implements Serializable {
                     if (!checkAggressiveness()) {
                         if (getFreezeDelay() < TimeUtils.getTime()) {
                             if (((hasRandomWalk()) && World.getRotation(getPlane(), getX(), getY()) == 0)
-                                && Math.random() * 1000.0 < 100.0) {
+                                    && Math.random() * 1000.0 < 100.0) {
                                 int moveX = (int) Math.round(Math.random() * 10.0 - 5.0);
                                 int moveY = (int) Math.round(Math.random() * 10.0 - 5.0);
                                 resetWalkSteps();
@@ -281,17 +290,17 @@ public class Npc extends Entity implements Serializable {
                             "You have finished your slayer task, talk to Kuradal for a " + "new task.");
                     killer.getPackets().sendGameMessage(
                             "Kuradal rewarded you " + "20" + " Slayer points! You now " + "have "
-                            + killer.getSlayerPoints() + " Slayer points.");
+                                    + killer.getSlayerPoints() + " Slayer points.");
                     killer.addServerPoints((int) (killer.getTask().getDifficulty(killer) * 0.5
-                                                  * Settings.SLAYER_SERVER_POINTS));
+                            * Settings.SLAYER_SERVER_POINTS));
                     killer.setTask(null);
                     return;
                 }
                 killer.getTask().setAmountKilled(killer.getTask().getAmountKilled() + 1);
 
                 killer.getPackets().sendGameMessage("You need to defeat " + killer.getTask().getTaskAmount() + " "
-                                                    + killer.getTask().getName().toLowerCase()
-                                                    + " to complete your task.");
+                        + killer.getTask().getName().toLowerCase()
+                        + " to complete your task.");
             }
         }
     }
@@ -323,7 +332,7 @@ public class Npc extends Entity implements Serializable {
         super.reset();
         setDirection(getSpawnDirection());
         combat.reset();
-        bonuses = NpcDataLoader.getBonuses(id); // back to real bonuses
+        setBonuses(NpcDataLoader.getBonuses(id)); // back to real bonuses
         forceWalk = null;
     }
 
@@ -446,16 +455,16 @@ public class Npc extends Entity implements Serializable {
                 for (int npcIndex : playerIndexes) {
                     Player player = World.getPlayers().get(npcIndex);
                     if (player == null || player.isDead() || player.hasFinished() || !player.isRunning()
-                        || !player.withinDistance(this, forceTargetDistance > 0 ? forceTargetDistance : (
+                            || !player.withinDistance(this, forceTargetDistance > 0 ? forceTargetDistance : (
                             getCombatDefinitions().getAttackStyle() == NpcCombatDefinitions.MELEE ? 4 :
                                     getCombatDefinitions().getAttackStyle() == NpcCombatDefinitions.SPECIAL ? 64 : 8))
-                        || (!forceMultiAttacked && (!isAtMultiArea() || !player.isAtMultiArea())
+                            || (!forceMultiAttacked && (!isAtMultiArea() || !player.isAtMultiArea())
                             && player.getAttackedBy() != this && (
-                                    player.getAttackedByDelay() > System.currentTimeMillis()
+                            player.getAttackedByDelay() > System.currentTimeMillis()
                                     || player.getFindTargetDelay() > System.currentTimeMillis()))
-                        || !clippedProjectile(player, false) || (!forceAggressive && !Wilderness.isAtWild(this)
-                                                                 && player.getSkills().getCombatLevelWithSummoning()
-                                                                    >= getDefinitions().combatLevel * 2)) continue;
+                            || !clippedProjectile(player, false) || (!forceAggressive && !Wilderness.isAtWild(this)
+                            && player.getSkills().getCombatLevelWithSummoning()
+                            >= getDefinitions().combatLevel * 2)) continue;
                     possibleTarget.add(player);
                 }
             }
