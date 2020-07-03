@@ -2,12 +2,11 @@ package com.rs.utils;
 
 import com.rs.Settings;
 import com.rs.cache.Cache;
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
+import com.rs.game.world.WorldTile;
 import org.pmw.tinylog.Logger;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -43,7 +42,7 @@ public final class Utils {
         for (File directory : dirs) {
             classes.addAll(findClasses(directory, packageName));
         }
-        return classes.toArray(new Class[classes.size()]);
+        return classes.toArray(new Class[0]);
     }
 
     private static List<Class> findClasses(File directory, String packageName) {
@@ -185,7 +184,7 @@ public final class Utils {
         if (l <= 0L || l >= 0x5b5b57f8a98a5dd1L) return null;
         if (l % 37L == 0L) return null;
         int i = 0;
-        char ac[] = new char[12];
+        char[] ac = new char[12];
         while (l != 0L) {
             long l1 = l;
             l /= 37L;
@@ -339,7 +338,7 @@ public final class Utils {
         return charByte;
     }
 
-    private static char[] aCharArray6385 = {'\u20ac', '\0', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020',
+    private static final char[] aCharArray6385 = {'\u20ac', '\0', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020',
             '\u2021', '\u02c6', '\u2030', '\u0160', '\u2039', '\u0152', '\0', '\u017d', '\0', '\0', '\u2018',
             '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161', '\u203a',
             '\u0153', '\0', '\u017e', '\u0178'};
@@ -349,8 +348,8 @@ public final class Utils {
         int i = 0;
         for (int i_6_ = 0; i_6_ < messageDataLength; i_6_++) {
             int i_7_ = 0xff & messageData[i_6_ + messageDataOffset];
-            if ((i_7_ ^ 0xffffffff) != -1) {
-                if ((i_7_ ^ 0xffffffff) <= -129 && (i_7_ ^ 0xffffffff) > -161) {
+            if ((~i_7_) != -1) {
+                if ((~i_7_) <= -129 && (~i_7_) > -161) {
                     int i_8_ = aCharArray6385[i_7_ - 128];
                     if (i_8_ == 0) i_8_ = 63;
                     i_7_ = i_8_;
@@ -364,34 +363,34 @@ public final class Utils {
     public static byte[] getFormatedMessage(String message) {
         int i_0_ = message.length();
         byte[] is = new byte[i_0_];
-        for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > (i_0_ ^ 0xffffffff); i_1_++) {
+        for (int i_1_ = 0; (~i_1_) > (~i_0_); i_1_++) {
             int i_2_ = message.charAt(i_1_);
-            if (((i_2_ ^ 0xffffffff) >= -1 || i_2_ >= 128) && (i_2_ < 160 || i_2_ > 255)) {
-                if ((i_2_ ^ 0xffffffff) != -8365) {
-                    if ((i_2_ ^ 0xffffffff) == -8219) is[i_1_] = (byte) -126;
-                    else if ((i_2_ ^ 0xffffffff) == -403) is[i_1_] = (byte) -125;
+            if (((~i_2_) >= -1 || i_2_ >= 128) && (i_2_ < 160 || i_2_ > 255)) {
+                if ((~i_2_) != -8365) {
+                    if ((~i_2_) == -8219) is[i_1_] = (byte) -126;
+                    else if ((~i_2_) == -403) is[i_1_] = (byte) -125;
                     else if (i_2_ == 8222) is[i_1_] = (byte) -124;
                     else if (i_2_ != 8230) {
-                        if ((i_2_ ^ 0xffffffff) != -8225) {
-                            if ((i_2_ ^ 0xffffffff) != -8226) {
-                                if ((i_2_ ^ 0xffffffff) == -711) is[i_1_] = (byte) -120;
+                        if ((~i_2_) != -8225) {
+                            if ((~i_2_) != -8226) {
+                                if ((~i_2_) == -711) is[i_1_] = (byte) -120;
                                 else if (i_2_ == 8240) is[i_1_] = (byte) -119;
-                                else if ((i_2_ ^ 0xffffffff) == -353) is[i_1_] = (byte) -118;
-                                else if ((i_2_ ^ 0xffffffff) != -8250) {
+                                else if ((~i_2_) == -353) is[i_1_] = (byte) -118;
+                                else if ((~i_2_) != -8250) {
                                     if (i_2_ == 338) is[i_1_] = (byte) -116;
                                     else if (i_2_ == 381) is[i_1_] = (byte) -114;
-                                    else if ((i_2_ ^ 0xffffffff) == -8217) is[i_1_] = (byte) -111;
+                                    else if ((~i_2_) == -8217) is[i_1_] = (byte) -111;
                                     else if (i_2_ == 8217) is[i_1_] = (byte) -110;
                                     else if (i_2_ != 8220) {
                                         if (i_2_ == 8221) is[i_1_] = (byte) -108;
-                                        else if ((i_2_ ^ 0xffffffff) == -8227) is[i_1_] = (byte) -107;
-                                        else if ((i_2_ ^ 0xffffffff) != -8212) {
+                                        else if ((~i_2_) == -8227) is[i_1_] = (byte) -107;
+                                        else if ((~i_2_) != -8212) {
                                             if (i_2_ == 8212) is[i_1_] = (byte) -105;
-                                            else if ((i_2_ ^ 0xffffffff) != -733) {
+                                            else if ((~i_2_) != -733) {
                                                 if (i_2_ != 8482) {
                                                     if (i_2_ == 353) is[i_1_] = (byte) -102;
                                                     else if (i_2_ != 8250) {
-                                                        if ((i_2_ ^ 0xffffffff) == -340) is[i_1_] = (byte) -100;
+                                                        if ((~i_2_) == -340) is[i_1_] = (byte) -100;
                                                         else if (i_2_ != 382) {
                                                             if (i_2_ == 376) is[i_1_] = (byte) -97;
                                                             else is[i_1_] = (byte) 63;
@@ -415,9 +414,9 @@ public final class Utils {
         int byteChar = 0xff & value;
         if (byteChar == 0) throw new IllegalArgumentException(
                 "Non cp1252 character 0x" + Integer.toString(byteChar, 16) + " " + "provided");
-        if ((byteChar ^ 0xffffffff) <= -129 && byteChar < 160) {
+        if ((~byteChar) <= -129 && byteChar < 160) {
             int i_4_ = aCharArray6385[-128 + byteChar];
-            if ((i_4_ ^ 0xffffffff) == -1) i_4_ = 63;
+            if ((~i_4_) == -1) i_4_ = 63;
             byteChar = i_4_;
         }
         return (char) byteChar;
@@ -425,11 +424,11 @@ public final class Utils {
 
     public static int getHashMapSize(int size) {
         size--;
-        size |= size >>> -1810941663;
-        size |= size >>> 2010624802;
-        size |= size >>> 10996420;
-        size |= size >>> 491045480;
-        size |= size >>> 1388313616;
+        size |= size >>> 1;
+        size |= size >>> 2;
+        size |= size >>> 4;
+        size |= size >>> 8;
+        size |= size >>> 16;
         return 1 + size;
     }
 

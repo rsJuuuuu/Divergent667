@@ -14,20 +14,20 @@ import com.rs.utils.stringUtils.TimeUtils;
 
 public class TowersPkController extends Controller {
 
-	private static WorldTile[] RESPAWN_PLACES = {
+	private static final WorldTile[] RESPAWN_PLACES = {
 			new WorldTile(10008, 10009, 0), new WorldTile(10064, 10009, 0),
-			new WorldTile(10008, 10065, 0), new WorldTile(10064, 10065, 0) };
+			new WorldTile(10008, 10065, 0), new WorldTile(10064, 10065, 0)};
 
-	private static WorldTile[] ENTRACE_PLACES = {
+	private static final WorldTile[] ENTRACE_PLACES = {
 			new WorldTile(10015, 10054, 0), new WorldTile(10015, 9998, 0),
-			new WorldTile(10071, 9998, 0), new WorldTile(10071, 10054, 0) };
+			new WorldTile(10071, 9998, 0), new WorldTile(10071, 10054, 0)};
 
-	private static int[] WIN_MATCH_SOUND_EFFECTS = { 121, 122, 123, 124 };
+	private static final int[] WIN_MATCH_SOUND_EFFECTS = {121, 122, 123, 124};
 
 	/*
 	 * climbed tower musics: Waste Defaced Slain to Waste
 	 */
-	private static int[] CLIMBED_MUSICS = new int[] { 426, 543, 856 };
+	private static final int[] CLIMBED_MUSICS = new int[]{426, 543, 856};
 
 	@Override
 	public void start() {

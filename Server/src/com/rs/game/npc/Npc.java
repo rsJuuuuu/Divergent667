@@ -203,7 +203,7 @@ public class Npc extends Entity implements Serializable {
 
     private int getSpawnDirection() {
         NPCDefinitions definitions = getDefinitions();
-        if (definitions.anInt853 << 32 != 0 && definitions.respawnDirection > 0 && definitions.respawnDirection <= 8)
+        if (definitions.anInt853 != 0 && definitions.respawnDirection > 0 && definitions.respawnDirection <= 8)
             return (4 + definitions.respawnDirection) << 11;
         return 0;
     }

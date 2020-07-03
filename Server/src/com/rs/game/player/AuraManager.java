@@ -1,9 +1,9 @@
 package com.rs.game.player;
 
+import com.rs.game.item.Item;
 import com.rs.game.world.Animation;
 import com.rs.game.world.Graphics;
 import com.rs.game.world.World;
-import com.rs.game.item.Item;
 import com.rs.utils.stringUtils.TimeUtils;
 import org.pmw.tinylog.Logger;
 
@@ -17,7 +17,7 @@ public class AuraManager implements Serializable {
     private transient Player player;
     private transient boolean warned;
     private long activation;
-    private HashMap<Integer, Long> cooldowns;
+    private final HashMap<Integer, Long> cooldowns;
 
     public AuraManager() {
         cooldowns = new HashMap<>();
@@ -66,7 +66,6 @@ public class AuraManager implements Serializable {
         if (toId != -1) {
             player.getEquipment().getItem(Equipment.SLOT_AURA).setId(toId);
             player.getEquipment().refresh(Equipment.SLOT_AURA);
-            player.getAppearance().generateAppearanceData();
         } else {
             if (activation != 0) {
                 player.sendMessage("You already have an aura active. Please wait until it depletes.");
@@ -81,8 +80,8 @@ public class AuraManager implements Serializable {
             cooldowns.put(item.getId(), activation + getCooldown(item.getId()) * 1000);
             player.setNextAnimation(new Animation(2231));
             player.setNextGraphics(new Graphics(getActiveGraphic(tier)));
-            player.getAppearance().generateAppearanceData();
         }
+        player.getAppearance().generateAppearanceData();
     }
 
     public int getTransformIntoAura(int aura) {
@@ -137,7 +136,7 @@ public class AuraManager implements Serializable {
         }
         player.getPackets().sendGameMessage(
                 "Currently active. <col=00ff00>" + getFormatedTime((activation - TimeUtils.getTime()) / 1000)
-                + " remaining");
+                        + " remaining");
     }
 
     public String getFormatedTime(long seconds) {
@@ -158,7 +157,7 @@ public class AuraManager implements Serializable {
         }
         player.getPackets().sendGameMessage(
                 "Currently recharging. <col=ff0000>" + getFormatedTime((cooldown - TimeUtils.getTime()) / 1000)
-                + " remaining.");
+                        + " remaining.");
     }
 
     public boolean isActivated() {
@@ -434,9 +433,7 @@ public class AuraManager implements Serializable {
             case 20959:
                 return 10800; // 3hours
             case 23854:
-                return 60000;
             case 23874:
-                return 60000;
             case 23876:
                 return 60000;
             default:
@@ -447,9 +444,7 @@ public class AuraManager implements Serializable {
     public static int getCooldown(int aura) {
         switch (aura) {
             case 23854:
-                return 1;
             case 23874:
-                return 1;
             case 23876:
                 return 1;
             default:

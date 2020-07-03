@@ -20,7 +20,6 @@ import com.rs.game.player.controllers.ControllerHandler;
 import com.rs.game.player.cutscenes.CutSceneHandler;
 import com.rs.game.player.dialogues.DialogueHandler;
 import com.rs.game.player.info.FriendChatsManager;
-import com.rs.game.player.quests.QuestHandler;
 import com.rs.game.spawning.NpcSpawning;
 import com.rs.game.spawning.ObjectSpawning;
 import com.rs.game.world.Region;

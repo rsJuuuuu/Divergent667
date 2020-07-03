@@ -63,10 +63,10 @@ public class ItemSet {
                 (6585, 1), new Item(18349, 1), new Item(4736, 1), new Item(20072, 1), new Item(11726, 1), new Item
                 (7462, 1), new Item(11732, 1), new Item(2572, 1));
 
-        private Item[] items;
-        private String name;
-        private int type;
-        private boolean adminSet;
+        private final Item[] items;
+        private final String name;
+        private final int type;
+        private final boolean adminSet;
         private Set linkedSet;
 
         Set(String name, int type, Item... items) {
@@ -132,8 +132,8 @@ public class ItemSet {
                 .PRAYER, 95}, new int[]{Skills.RANGE, 99}, new int[]{Skills.MAGIC, 99}, new int[]{Skills.HITPOINTS,
                 99});
 
-        private String name;
-        private Skills skills;
+        private final String name;
+        private final Skills skills;
 
         SkillSet(String name, int[]... stats) {
             this.skills = new Skills();
@@ -176,18 +176,18 @@ public class ItemSet {
     }
 
     public static void listSets(Player player) {
-        String message = "Current sets: ";
+        StringBuilder message = new StringBuilder("Current sets: ");
         for (Set set : Set.values()) {
-            if (!set.isAdminSet()) message += set.getName() + ", ";
+            if (!set.isAdminSet()) message.append(set.getName()).append(", ");
         }
-        player.sendMessage(message);
+        player.sendMessage(message.toString());
         if (player.hasRights(RanksManager.Ranks.ADMIN)) {
-            message = "Available Admin sets: ";
+            message = new StringBuilder("Available Admin sets: ");
             for (Set set : Set.values()) {
-                if (set.isAdminSet()) message += set.getName() + ", ";
+                if (set.isAdminSet()) message.append(set.getName()).append(", ");
             }
         }
-        player.sendMessage(message);
+        player.sendMessage(message.toString());
     }
 
     public static void addInvSet(Player player, String name) {

@@ -29,9 +29,9 @@ public class WildernessObelisk implements Handler {
         LVL_44(14826, new WorldTile(2980, 3866)),
         LVL_50(14831, new WorldTile(3307, 3916));
 
-        private int id;
+        private final int id;
         private boolean active = false;
-        private WorldTile center;
+        private final WorldTile center;
 
         Obelisk(int id, WorldTile center) {
             this.center = center;

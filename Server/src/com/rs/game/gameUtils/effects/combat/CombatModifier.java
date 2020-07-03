@@ -7,8 +7,8 @@ import com.rs.game.gameUtils.effects.Effect;
  */
 public class CombatModifier extends Effect {
 
-    private int skillId;
-    private double boost;
+    private final int skillId;
+    private final double boost;
 
     public CombatModifier(int skillId, double boost) {
         this.skillId = skillId;

@@ -5,7 +5,10 @@ package com.rs.utils.areas;
  */
 public class Rectangle extends Area {
 
-    private int x, y, x2, y2;
+    private final int x;
+    private final int y;
+    private final int x2;
+    private final int y2;
 
     /**
      * Rectangle (x, y, x2, y2) doesn't matter which corners
@@ -18,23 +21,19 @@ public class Rectangle extends Area {
     }
 
     public int getSmallX() {
-        if (x < x2) return x;
-        else return x2;
+        return Math.min(x, x2);
     }
 
     public int getSmallY() {
-        if (y < y2) return y;
-        else return y2;
+        return Math.min(y, y2);
     }
 
     public int getBigX() {
-        if (x >= x2) return x;
-        else return x2;
+        return Math.max(x, x2);
     }
 
     public int getBigY() {
-        if (y >= y2) return y;
-        else return y2;
+        return Math.max(y, y2);
     }
 
     public boolean check(int tileX, int tileY, int firstX, int firstY, int scndX, int scndY) {

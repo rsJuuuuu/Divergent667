@@ -1,8 +1,8 @@
 package com.rs.game.player.social;
 
-import com.rs.game.world.World;
 import com.rs.game.player.Player;
 import com.rs.game.player.info.FriendChatsManager;
+import com.rs.game.world.World;
 import com.rs.utils.stringUtils.TextUtils;
 
 import java.io.Serializable;
@@ -29,9 +29,9 @@ public class FriendsIgnores implements Serializable {
     private boolean coinshare;
 
     // friends list
-    private ArrayList<String> friends;
+    private final ArrayList<String> friends;
     @SuppressWarnings("unused")
-    private ArrayList<String> ignores;
+    private final ArrayList<String> ignores;
     private byte privateStatus;
 
     private transient Player player;

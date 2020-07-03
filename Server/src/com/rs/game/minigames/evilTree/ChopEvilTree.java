@@ -19,7 +19,7 @@ public class ChopEvilTree extends Action {
      */
     private EvilTree tree;
     private EvilRoot root;
-    private TreeManager.EvilTreeDefinitions definitions;
+    private final TreeManager.EvilTreeDefinitions definitions;
 
     private int emoteId;
     private int axeTime;

@@ -1,20 +1,20 @@
 package com.rs.game.npc.impl.slayer;
 
-import com.rs.game.world.Animation;
-import com.rs.game.world.WorldTile;
 import com.rs.game.npc.Npc;
 import com.rs.game.player.Player;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.world.Animation;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.stringUtils.TimeUtils;
 
 @SuppressWarnings("serial")
 public class Strykewyrm extends Npc {
 
-	private int stompId;
+	private final int stompId;
 
 	public Strykewyrm(int id, WorldTile tile, int mapAreaNameHash,
-			boolean canBeAttackFromOutOfArea) {
+					  boolean canBeAttackFromOutOfArea) {
 		super(id, tile, mapAreaNameHash, canBeAttackFromOutOfArea, true);
 		stompId = id;
 	}

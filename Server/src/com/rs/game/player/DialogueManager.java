@@ -5,7 +5,7 @@ import com.rs.game.player.dialogues.DialogueHandler;
 
 public class DialogueManager {
 
-    private Player player;
+    private final Player player;
     private Dialogue lastDialogue;
 
     DialogueManager(Player player) {

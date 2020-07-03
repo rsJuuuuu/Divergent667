@@ -19,9 +19,9 @@ public class ActionTab {
         WorldTasksManager.schedule(new WorldTask() {
             @Override
             public void run() {
-                String bossKills = "";
+                StringBuilder bossKills = new StringBuilder();
                 for (String line : player.getBossCounter().getNpcStrings()) {
-                    bossKills += "<col=FFFFFF>" + line + "</col><br>";
+                    bossKills.append("<col=FFFFFF>").append(line).append("</col><br>");
                 }
                 String col = "<col=FFFFFF>";
                 player.getPackets().sendIComponentText(930, 10,

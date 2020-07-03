@@ -38,7 +38,7 @@ public class Wave implements Serializable {
     }
 
     public Npc[] getSpawns() {
-        int npcs[] = new int[6];
+        int[] npcs = new int[6];
         int index = 0;
         int id = stage;
         for (int i = 6; i >= 1; i--) {
@@ -52,7 +52,7 @@ public class Wave implements Serializable {
             }
         }
 
-        FightCaveNpc enemies[] = new FightCaveNpc[index];
+        FightCaveNpc[] enemies = new FightCaveNpc[index];
         for (int i = 0; i < enemies.length; i++) {
             int random = Utils.random(3);
             switch (random) {
@@ -90,7 +90,7 @@ public class Wave implements Serializable {
     }
 
     private static final Random RANDOM = new Random();
-    private static final int BASE_NPCS[] = {2734, 2736, 2739, 2741, 2743, 2745};
+    private static final int[] BASE_NPCS = {2734, 2736, 2739, 2741, 2743, 2745};
     private int stage;
 
 }

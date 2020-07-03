@@ -35,7 +35,7 @@ public class Seeds {
          */
         HERB(new int[]{8151, 8150, 8153, 8152});
 
-        private int[] patchIds;
+        private final int[] patchIds;
 
         PatchGroup(int[] patchIds) {
             this.patchIds = patchIds;
@@ -150,14 +150,14 @@ public class Seeds {
 
         FELLSTALK(new Item(21621, 1), 110, 4, 91, new Item(21626, 4), PatchGroup.HERB, 315.6);
 
-        private Item item;
-        private int startConfig;
-        private int configLength;
-        private int level;
-        private Item produce;
-        private PatchGroup suitablePatches;
+        private final Item item;
+        private final int startConfig;
+        private final int configLength;
+        private final int level;
+        private final Item produce;
+        private final PatchGroup suitablePatches;
         private int time; // Time to grow (In Seconds)
-        private double xp;
+        private final double xp;
 
         Seed(Item item, int startConfig, int configLength, int level, Item produce, PatchGroup suitablePatches,
              double xp) {

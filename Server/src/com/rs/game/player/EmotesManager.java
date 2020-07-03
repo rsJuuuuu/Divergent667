@@ -3,12 +3,12 @@ package com.rs.game.player;
 import com.rs.Settings;
 import com.rs.cache.loaders.NPCDefinitions;
 import com.rs.game.npc.Npc;
+import com.rs.game.tasks.WorldTask;
+import com.rs.game.tasks.WorldTasksManager;
 import com.rs.game.world.Animation;
 import com.rs.game.world.Graphics;
 import com.rs.game.world.World;
 import com.rs.game.world.WorldTile;
-import com.rs.game.tasks.WorldTask;
-import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.Utils;
 import com.rs.utils.stringUtils.TimeUtils;
 
@@ -17,29 +17,30 @@ import java.util.ArrayList;
 
 public final class EmotesManager implements Serializable {
 
-	private static final long serialVersionUID = 8489480378717534336L;
+        private static final long serialVersionUID = 8489480378717534336L;
 
-	private ArrayList<Integer> unlockedEmotes;
-	private transient Player player;
-	private transient long nextEmoteEnd;
+        private final ArrayList<Integer> unlockedEmotes;
+        private transient Player player;
+        private transient long nextEmoteEnd;
 
-	public EmotesManager() {
-		unlockedEmotes = new ArrayList<>();
-		
-	for (int emoteId = 2; emoteId < 150; emoteId++)
-			unlockedEmotes.add(emoteId);
-		unlockedEmotes.add(37); // skillcape
-	}
-	public void unlockAllEmotes() {
-		unlockEmote(24);
-		unlockEmote(25);
-		unlockEmote(26);
-		unlockEmote(27);
-		unlockEmote(28);
-		unlockEmote(29);
-		unlockEmote(30);
-		unlockEmote(31);
-		unlockEmote(32);
+        public EmotesManager() {
+                unlockedEmotes = new ArrayList<>();
+
+                for (int emoteId = 2; emoteId < 150; emoteId++)
+                        unlockedEmotes.add(emoteId);
+                unlockedEmotes.add(37); // skillcape
+        }
+
+        public void unlockAllEmotes() {
+                unlockEmote(24);
+                unlockEmote(25);
+                unlockEmote(26);
+                unlockEmote(27);
+                unlockEmote(28);
+                unlockEmote(29);
+                unlockEmote(30);
+                unlockEmote(31);
+                unlockEmote(32);
 		unlockEmote(33);
 		unlockEmote(34);
 		unlockEmote(35);

@@ -1,6 +1,7 @@
 package com.rs.game.item;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  * Container class.
@@ -126,7 +127,6 @@ public final class ItemsContainer<T extends Item> implements Serializable {
                     if (amt > toRemove) {
                         removed += toRemove;
                         amt -= toRemove;
-                        toRemove = 0;
                         data[i] = new Item(data[i].getId(), amt);
                         return removed;
                     } else {
@@ -183,9 +183,7 @@ public final class ItemsContainer<T extends Item> implements Serializable {
     }
 
     public void clear() {
-        for (int i = 0; i < data.length; i++) {
-            data[i] = null;
-        }
+        Arrays.fill(data, null);
     }
 
     public int getSize() {
@@ -308,7 +306,6 @@ public final class ItemsContainer<T extends Item> implements Serializable {
                 if (amt > toRemove) {
                     removed += toRemove;
                     amt -= toRemove;
-                    toRemove = 0;
                     // data[preferredSlot] = new
                     // Item(data[preferredSlot].getDefinition().getId(), amt);
                     set2(preferredSlot, new Item(data[preferredSlot].getId(), amt));
@@ -328,7 +325,6 @@ public final class ItemsContainer<T extends Item> implements Serializable {
                     if (amt > toRemove) {
                         removed += toRemove;
                         amt -= toRemove;
-                        toRemove = 0;
                         // data[i] = new Item(data[i].getDefinition().getId(),
                         // amt);
                         set2(i, new Item(data[i].getId(), amt));

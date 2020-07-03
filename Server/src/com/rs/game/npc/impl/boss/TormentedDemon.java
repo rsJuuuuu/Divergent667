@@ -78,7 +78,7 @@ public final class TormentedDemon extends Npc {
         if (hit.getSource() instanceof Player) {// darklight
             Player player = (Player) hit.getSource();
             if ((player.getEquipment().getWeaponId() == 6746 || player.getEquipment().getWeaponId() == 2402)
-                && hit.getLook() == HitLook.MELEE_DAMAGE && hit.getDamage() > 0) {
+                    && hit.getLook() == HitLook.MELEE_DAMAGE && hit.getDamage() > 0) {
                 shieldTimer = 60;
                 player.getPackets().sendGameMessage("The demon is temporarily weakend by your weapon.");
             }
@@ -93,15 +93,13 @@ public final class TormentedDemon extends Npc {
             } else {
                 cachedDamage[0] += hit.getDamage();
             }
-        } else if (hit.getLook() == HitLook.MELEE_DAMAGE) {
-            type = 1;
+        } else if (hit.getLook() == HitLook.MAGIC_DAMAGE) {
             if (demonPrayer[1]) {
                 hit.setDamage(0);
             } else {
                 cachedDamage[1] += hit.getDamage();
             }
         } else if (hit.getLook() == HitLook.RANGE_DAMAGE) {
-            type = 2;
             if (demonPrayer[2]) {
                 hit.setDamage(0);
             } else {
@@ -151,7 +149,7 @@ public final class TormentedDemon extends Npc {
                 for (int npcIndex : playerIndexes) {
                     Player player = World.getPlayers().get(npcIndex);
                     if (player == null || player.isDead() || player.hasFinished() || !player.isRunning()
-                        || !player.withinDistance(tile, 3)) continue;
+                            || !player.withinDistance(tile, 3)) continue;
                     player.getPackets().sendGameMessage("The demon's magical attack splashes on you.");
                     player.applyHit(new Hit(this, 281, HitLook.MAGIC_DAMAGE, 1));
                 }

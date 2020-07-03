@@ -4,8 +4,8 @@ import com.rs.game.world.Entity;
 
 public class HintIconsManager {
 
-	private Player player;
-	private HintIcon[] loadedIcons;
+	private final Player player;
+	private final HintIcon[] loadedIcons;
 
 	public HintIconsManager(Player p) {
 		this.player = p;
@@ -13,7 +13,7 @@ public class HintIconsManager {
 	}
 
 	public int addHintIcon(Entity target, int arrowType, int modelId,
-			boolean saveIcon) {
+						   boolean saveIcon) {
 		int index = saveIcon ? getFreeIndex() : 7;
 		if (index != -1) {
 			HintIcon icon = new HintIcon(target.getIndex(),

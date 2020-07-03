@@ -11,9 +11,9 @@ import javafx.scene.layout.Priority;
  */
 public class ItemPanel extends GridPane {
 
-    private static ItemIconsLoader.RequestManager defaultRequestManager = ItemIconsLoader.getRequestManager();
+    private static final ItemIconsLoader.RequestManager defaultRequestManager = ItemIconsLoader.getRequestManager();
 
-    private Item item;
+    private final Item item;
 
     public ItemPanel(Item item) {
         this(item, defaultRequestManager);

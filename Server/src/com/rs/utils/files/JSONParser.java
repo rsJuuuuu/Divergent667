@@ -14,7 +14,7 @@ import java.text.DateFormat;
 
 public class JSONParser {
 
-    private static Gson GSON;
+    private static final Gson GSON;
 
     static {
         GSON = new GsonBuilder().enableComplexMapKeySerialization().serializeNulls().setDateFormat(DateFormat.LONG)

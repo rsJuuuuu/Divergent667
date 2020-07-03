@@ -6,7 +6,7 @@ package com.rs.game.npc.data;
 public class NpcData {
 
     private int[] bonuses;
-    private NpcCombatDefinitions defs;
+    private final NpcCombatDefinitions defs;
 
     public NpcData(int[] bonuses, NpcCombatDefinitions combatDefinitions) {
         this.bonuses = bonuses;

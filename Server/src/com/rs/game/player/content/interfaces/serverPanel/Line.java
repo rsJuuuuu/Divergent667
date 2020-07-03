@@ -5,8 +5,8 @@ package com.rs.game.player.content.interfaces.serverPanel;
  */
 public class Line {
 
-    private StringBuilder builder;
-    private int value;
+    private final StringBuilder builder;
+    private final int value;
 
     public Line(StringBuilder builder, int color) {
         this.builder = builder;

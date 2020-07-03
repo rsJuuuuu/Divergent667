@@ -1,7 +1,5 @@
 package com.rs.game.npc.data;
 
-import com.rs.utils.fxUtils.propertyItems.IntegerItem;
-
 /**
  * Created by Peng on 19.11.2016 11:55.
  */

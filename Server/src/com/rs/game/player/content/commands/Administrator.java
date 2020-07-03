@@ -57,7 +57,7 @@ public class Administrator implements Handler {
 
         registerAdminCommand((player, command, params) -> {
             try {
-                NpcDrops.checkRareDrop(player, new Item(Integer.valueOf(params[0])));
+                NpcDrops.checkRareDrop(player, new Item(Integer.parseInt(params[0])));
             } catch (NumberFormatException nfe) {
                 player.sendMessage("Usage: testdrop [itemid]");
             }
@@ -116,17 +116,17 @@ public class Administrator implements Handler {
         }, "setgear");
         registerAdminCommand((player, command, params) -> {
             if (!(params.length + 1 >= 2)) return RETURN;
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++) {
-                name += params[i - 1];
+                name.append(params[i - 1]);
             }
-            ItemSet.addInvSet(player, name);
+            ItemSet.addInvSet(player, name.toString());
             return RETURN;
         }, "setinv");
         registerAdminCommand((player, command, params) -> {
             try {
-                int itemId = Integer.valueOf(params[0]);
-                player.getInventory().addItem(itemId, params.length + 1 >= 3 ? Integer.valueOf(params[1]) : 1);
+                int itemId = Integer.parseInt(params[0]);
+                player.getInventory().addItem(itemId, params.length + 1 >= 3 ? Integer.parseInt(params[1]) : 1);
             } catch (NumberFormatException e) {
                 player.getPackets().sendGameMessage("Use: ::item id (optional:amount)");
             }
@@ -176,10 +176,10 @@ public class Administrator implements Handler {
             other.getSkills().setXp(skill, Skills.getXPForLevel(level));
             other.getPackets().sendGameMessage(
                     "One of your skills:  " + other.getSkills().getLevel(skill) + " has been set to " + level + " from "
-                    + player.getDisplayName() + ".");
+                            + player.getDisplayName() + ".");
             player.getPackets().sendGameMessage(
                     "You have set the skill:  " + other.getSkills().getLevel(skill) + " to " + level + " for "
-                    + other.getDisplayName() + ".");
+                            + other.getDisplayName() + ".");
             return RETURN;
         }, "setlevelother");
         registerAdminCommand((player, command, params) -> {
@@ -265,9 +265,9 @@ public class Administrator implements Handler {
         }, "npc", "spawnnpc");
         registerAdminCommand((player, command, params) -> {
             try {
-                World.spawnObject(new WorldObject(Integer.valueOf(params[0]),
-                        params.length + 1 > 2 ? Integer.valueOf(params[1]) : 10, params.length + 1
-                                                                                 > 3 ? Integer.parseInt(params[2]) :
+                World.spawnObject(new WorldObject(Integer.parseInt(params[0]),
+                        params.length + 1 > 2 ? Integer.parseInt(params[1]) : 10, params.length + 1
+                        > 3 ? Integer.parseInt(params[2]) :
                         0, player.getX(), player.getY(), player.getPlane()), true);
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::" + command + " id type rotation");
@@ -286,8 +286,8 @@ public class Administrator implements Handler {
                 return RETURN;
             }
             try {
-                player.getSkills().setXp(Integer.valueOf(params[0]), 0);
-                player.getSkills().set(Integer.valueOf(params[0]), 1);
+                player.getSkills().setXp(Integer.parseInt(params[0]), 0);
+                player.getSkills().set(Integer.parseInt(params[0]), 1);
                 player.getSkills().restoreSkills();
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::reset skill");
@@ -302,7 +302,7 @@ public class Administrator implements Handler {
                 return RETURN;
             }
             try {
-                player.getSkills().setXp(Integer.valueOf(params[0]), 15000000);
+                player.getSkills().setXp(Integer.parseInt(params[0]), 15000000);
                 player.getSkills().restoreSkills();
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::master skill");
@@ -310,11 +310,11 @@ public class Administrator implements Handler {
             return RETURN;
         }, "master");
         registerAdminCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
 
-            Player target = World.getPlayerByDisplayName(name);
+            Player target = World.getPlayerByDisplayName(name.toString());
             if (target != null) {
                 target.setBanned(TimeUtils.getTime() + (48 * 60 * 60 * 1000));
                 target.getSession().getChannel().close();
@@ -330,7 +330,7 @@ public class Administrator implements Handler {
                 return RETURN;
             }
             try {
-                player.getAppearance().transformIntoNPC(Integer.valueOf(params[0]));
+                player.getAppearance().transformIntoNPC(Integer.parseInt(params[0]));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::tonpc id(-1 for player)");
             }
@@ -349,9 +349,9 @@ public class Administrator implements Handler {
                 try {
                     //shift click
                     String[] teleParams = params[0].split(",");
-                    int plane = Integer.valueOf(teleParams[0]);
-                    int x = Integer.valueOf(teleParams[1]) << 6 | Integer.valueOf(teleParams[3]);
-                    int y = Integer.valueOf(teleParams[2]) << 6 | Integer.valueOf(teleParams[4]);
+                    int plane = Integer.parseInt(teleParams[0]);
+                    int x = Integer.parseInt(teleParams[1]) << 6 | Integer.parseInt(teleParams[3]);
+                    int y = Integer.parseInt(teleParams[2]) << 6 | Integer.parseInt(teleParams[4]);
                     player.setNextWorldTile(new WorldTile(x, y, plane));
                     return RETURN;
                 } catch (Exception e) {
@@ -366,8 +366,8 @@ public class Administrator implements Handler {
                 }
                 try {
                     player.resetWalkSteps();
-                    player.setNextWorldTile(new WorldTile(Integer.valueOf(params[0]), Integer.valueOf(params[1]),
-                            params.length >= 3 ? Integer.valueOf(params[2]) : player.getPlane()));
+                    player.setNextWorldTile(new WorldTile(Integer.parseInt(params[0]), Integer.parseInt(params[1]),
+                            params.length >= 3 ? Integer.parseInt(params[2]) : player.getPlane()));
                 } catch (NumberFormatException nfe) {
                     nfe.printStackTrace();
                     player.getPackets().sendPanelBoxMessage("Use: ::tele coordX coordY plane");
@@ -388,7 +388,7 @@ public class Administrator implements Handler {
                 return RETURN;
             }
             try {
-                player.setNextAnimation(new Animation(Integer.valueOf(params[0])));
+                player.setNextAnimation(new Animation(Integer.parseInt(params[0])));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::emote id");
             }
@@ -400,7 +400,7 @@ public class Administrator implements Handler {
                 return RETURN;
             }
             try {
-                player.getAppearance().setRenderEmote(Integer.valueOf(params[0]));
+                player.getAppearance().setRenderEmote(Integer.parseInt(params[0]));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::emote id");
             }
@@ -423,14 +423,14 @@ public class Administrator implements Handler {
             return RETURN;
         }, "removeadmin");
         registerAdminCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
-            Player other = World.getPlayerByDisplayName(name);
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
+            Player other = World.getPlayerByDisplayName(name.toString());
             boolean loggedIn = true;
             if (other == null) {
-                other = PlayerUtils.loadPlayer(TextUtils.formatPlayerNameForProtocol(name));
-                if (other != null) other.setUsername(TextUtils.formatPlayerNameForProtocol(name));
+                other = PlayerUtils.loadPlayer(TextUtils.formatPlayerNameForProtocol(name.toString()));
+                if (other != null) other.setUsername(TextUtils.formatPlayerNameForProtocol(name.toString()));
                 loggedIn = false;
             }
             if (other != null) {
@@ -438,20 +438,20 @@ public class Administrator implements Handler {
                 if (loggedIn) other.getSession().getChannel().close();
                 else PlayerUtils.savePlayer(other);
                 player.getPackets().sendGameMessage(
-                        "You've permanently banned " + (loggedIn ? other.getDisplayName() : name) + ".");
+                        "You've permanently banned " + (loggedIn ? other.getDisplayName() : name.toString()) + ".");
             } else {
                 player.getPackets().sendGameMessage("Couldn't find player " + name + ".");
             }
             return RETURN;
         }, "permban");
         registerAdminCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
-            Player other = World.getPlayerByDisplayName(name);
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
+            Player other = World.getPlayerByDisplayName(name.toString());
             boolean loggedIn = true;
             if (other == null) {
-                other = PlayerUtils.loadPlayer(TextUtils.formatPlayerNameForProtocol(name));
+                other = PlayerUtils.loadPlayer(TextUtils.formatPlayerNameForProtocol(name.toString()));
                 loggedIn = false;
             }
             if (other != null) {
@@ -461,7 +461,7 @@ public class Administrator implements Handler {
                 if (loggedIn) other.getSession().getChannel().close();
                 else PlayerUtils.savePlayer(other);
                 player.getPackets().sendGameMessage(
-                        "You've permanently unbanned " + (loggedIn ? other.getDisplayName() : name) + ".");
+                        "You've permanently unbanned " + (loggedIn ? other.getDisplayName() : name.toString()) + ".");
             } else {
                 player.getPackets().sendGameMessage("Couldn't find player " + name + ".");
             }

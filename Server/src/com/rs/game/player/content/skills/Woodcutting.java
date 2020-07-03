@@ -18,7 +18,10 @@ public class Woodcutting {
         IRON(1349, 0, 877, 2),
         BRONZE(1351, 0, 879, 1);
 
-        private int itemId, level, emoteId, time;
+        private final int itemId;
+        private final int level;
+        private final int emoteId;
+        private final int time;
 
         Hatchet(int itemId, int level, int emoteId, int time) {
             this.itemId = itemId;

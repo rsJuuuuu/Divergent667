@@ -2,14 +2,17 @@ package com.rs.game.world;
 
 public final class Graphics {
 
-	private int id, height, speed, rotation;
+	private final int id;
+	private final int height;
+	private final int speed;
+	private final int rotation;
 
 	public Graphics(int id) {
 		this(id, 0, 0, 0);
 
 	}
 
-	public Graphics(int id, int height){
+	public Graphics(int id, int height) {
 		this(id, 0, height, 0);
 	}
 

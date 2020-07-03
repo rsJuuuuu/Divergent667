@@ -59,14 +59,11 @@ public class BountyHunter implements Serializable {
     boolean isSuitableTarget(Player target) {
         if (!player.mayBenefitFromKilling(target, false)) return false;
         if (likelihood < 60) {
-            if (Math.abs(player.getSkills().getCombatLevel() - target.getSkills().getCombatLevel())
-                <= ((Wilderness) player.getControllerManager().getController()).getWildLevel()) {
-                return true;
-            }
+            return Math.abs(player.getSkills().getCombatLevel() - target.getSkills().getCombatLevel())
+                    <= ((Wilderness) player.getControllerManager().getController()).getWildLevel();
         } else {
-            if (target.getBountyHunter().likelihood > 30) return true;
+            return target.getBountyHunter().likelihood > 30;
         }
-        return false;
     }
 
     /**
@@ -152,7 +149,7 @@ public class BountyHunter implements Serializable {
             player.getPackets().sendIComponentText(548, 13,
                     "EP: <col=" + getEpColor() + ">" + getEpPercentage() + "%");//EP
         }
-        player.getPackets().sendConfig(1410, likelihood > 60 ? 60 : likelihood);
+        player.getPackets().sendConfig(1410, Math.min(likelihood, 60));
     }
 
     /**

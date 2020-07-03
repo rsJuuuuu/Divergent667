@@ -1,6 +1,6 @@
 package com.rs.game.player.controllers.impl;
 
-import com.rs.game.*;
+import com.rs.game.Hit;
 import com.rs.game.Hit.HitLook;
 import com.rs.game.item.Item;
 import com.rs.game.minigames.CastleWars;
@@ -88,9 +88,9 @@ public class CastleWarsPlaying extends Controller {
 	private void doBandageEffect(Item item) {
 		int gloves = player.getEquipment().getGlovesId();
 		player.heal((int) (player.getMaxHitPoints() * (gloves >= 11079
-													   && gloves <= 11084 ? 0.15 : 0.10)));
+				&& gloves <= 11084 ? 0.15 : 0.10)));
 		int restoredEnergy = (int) (player.getRunEnergy() * 1.3);
-		player.setRunEnergy(restoredEnergy > 100 ? 100 : restoredEnergy);
+		player.setRunEnergy(Math.min(restoredEnergy, 100));
 		player.getInventory().deleteItem(item);
 	}
 

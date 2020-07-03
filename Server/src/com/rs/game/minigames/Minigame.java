@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public abstract class Minigame {
 
     private ArrayList<Player> participants = new ArrayList<>();
-    private ArrayList<Player> playersToRemove = new ArrayList<>();
+    private final ArrayList<Player> playersToRemove = new ArrayList<>();
 
     protected abstract void startGame();
 

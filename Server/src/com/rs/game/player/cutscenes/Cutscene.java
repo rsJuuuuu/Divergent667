@@ -3,13 +3,13 @@ package com.rs.game.player.cutscenes;
 import com.rs.Settings;
 import com.rs.cores.CoresManager;
 import com.rs.game.npc.Npc;
-import com.rs.game.world.RegionBuilder;
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.InterfaceManager;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.actions.CutsceneAction;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.world.RegionBuilder;
+import com.rs.game.world.WorldTile;
 import org.pmw.tinylog.Logger;
 
 public abstract class Cutscene {
@@ -67,46 +67,43 @@ public abstract class Cutscene {
 			final int baseChunkY, final int widthChunks, final int heightChunks) {
 		constructingRegion = true;
 		player.getPackets().sendWindowsPane(56, 0);
-		CoresManager.slowExecutor.execute(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					final int[] oldData = currentMapData;
-					int[] mapBaseChunks = RegionBuilder.findEmptyMap(
-							widthChunks, heightChunks);
-					RegionBuilder.copyAllPlanesMap(baseChunkX, baseChunkY,
-							mapBaseChunks[0], mapBaseChunks[1], widthChunks,
-							heightChunks);
-					currentMapData = new int[] { mapBaseChunks[0],
-							mapBaseChunks[1], widthChunks, heightChunks };
-					player.setNextWorldTile(new WorldTile(getBaseX()
-							+ widthChunks * 4, +getBaseY() + heightChunks * 4,
-							0));
-					constructingRegion = false;
-					if (Settings.DEBUG) Logger.info("Cutsecene", "Bases: " + getBaseX() + ", " + getBaseY());
-					WorldTasksManager.schedule(new WorldTask() {
+		CoresManager.slowExecutor.execute(() -> {
+			try {
+				final int[] oldData = currentMapData;
+				int[] mapBaseChunks = RegionBuilder.findEmptyMap(
+						widthChunks, heightChunks);
+				RegionBuilder.copyAllPlanesMap(baseChunkX, baseChunkY,
+						mapBaseChunks[0], mapBaseChunks[1], widthChunks,
+						heightChunks);
+				currentMapData = new int[]{mapBaseChunks[0],
+						mapBaseChunks[1], widthChunks, heightChunks};
+				player.setNextWorldTile(new WorldTile(getBaseX()
+						+ widthChunks * 4, +getBaseY() + heightChunks * 4,
+						0));
+				constructingRegion = false;
+				if (Settings.DEBUG) Logger.info("Cutsecene", "Bases: " + getBaseX() + ", " + getBaseY());
+				WorldTasksManager.schedule(new WorldTask() {
 
-						@Override
-						public void run() {
+					@Override
+					public void run() {
 
-							CoresManager.slowExecutor.execute(() -> {
-                                player.getPackets()
-                                        .sendWindowsPane(
-                                                player.getInterfaceManager()
-                                                        .hasResizableScreen() ? InterfaceManager.RESIZABLE_WINDOW_ID
-                                                        : InterfaceManager.FIXED_WINDOW_ID,
-                                                0);
-                                if (oldData != null)
-                                    RegionBuilder.destroyMap(oldData[0],
-                                            oldData[1], oldData[1],
-                                            oldData[2]);
-                            });
-						}
+						CoresManager.slowExecutor.execute(() -> {
+							player.getPackets()
+									.sendWindowsPane(
+											player.getInterfaceManager()
+													.hasResizableScreen() ? InterfaceManager.RESIZABLE_WINDOW_ID
+													: InterfaceManager.FIXED_WINDOW_ID,
+											0);
+							if (oldData != null)
+								RegionBuilder.destroyMap(oldData[0],
+										oldData[1], oldData[1],
+										oldData[2]);
+						});
+					}
 
-					}, 1);
-				} catch (Throwable e) {
-                    Logger.error(e);
-				}
+				}, 1);
+			} catch (Throwable e) {
+				Logger.error(e);
 			}
 		});
 	}

@@ -102,8 +102,7 @@ public final class ItemDefinitions {
     }
 
     public static void clearItemsDefinitions() {
-        for (int i = 0; i < itemsDefinitions.length; i++)
-            itemsDefinitions[i] = null;
+        Arrays.fill(itemsDefinitions, null);
     }
 
     public ItemDefinitions(int id) {
@@ -211,13 +210,13 @@ public final class ItemDefinitions {
     public boolean hasSpecialBar() {
         if (clientScriptData == null) return false;
         Object specialBar = clientScriptData.get(686);
-        return specialBar != null && specialBar instanceof Integer && (Integer) specialBar == 1;
+        return specialBar instanceof Integer && (Integer) specialBar == 1;
     }
 
     public int getRenderAnimId() {
         if (clientScriptData == null) return 1426;
         Object animId = clientScriptData.get(644);
-        if (animId != null && animId instanceof Integer) return (Integer) animId;
+        if (animId instanceof Integer) return (Integer) animId;
         return 1426;
     }
 

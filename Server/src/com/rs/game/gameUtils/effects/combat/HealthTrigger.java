@@ -2,8 +2,8 @@ package com.rs.game.gameUtils.effects.combat;
 
 import com.rs.game.Hit;
 import com.rs.game.gameUtils.effects.Effect;
-import com.rs.game.world.Entity;
 import com.rs.game.gameUtils.events.EntityEvent;
+import com.rs.game.world.Entity;
 
 import static com.rs.utils.Constants.LOW_PRIORITY;
 
@@ -12,8 +12,8 @@ import static com.rs.utils.Constants.LOW_PRIORITY;
  */
 public class HealthTrigger extends Effect {
 
-    private EntityEvent event;
-    private double triggerHealth;
+    private final EntityEvent event;
+    private final double triggerHealth;
 
     public HealthTrigger(double triggerHealth, EntityEvent event) {
         this.triggerHealth = triggerHealth;

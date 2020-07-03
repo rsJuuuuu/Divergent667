@@ -9,24 +9,25 @@ import com.rs.utils.stringUtils.TimeUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public final class MusicsManager implements Serializable {
 
 	private static final long serialVersionUID = 1020415702861567375L;
 
-	private static final int[] CONFIG_IDS = new int[] { 20, 21, 22, 23, 24, 25,
+	private static final int[] CONFIG_IDS = new int[]{20, 21, 22, 23, 24, 25,
 			298, 311, 346, 414, 464, 598, 662, 721, 906, 1009, 1104, 1136,
 			1180, 1202, 1381, 1394, 1434, 1596, 1618, 1619, 1620, 1865, 1864,
-			2246, 2019 };
-	private static final int[] PLAY_LIST_CONFIG_IDS = new int[] { 1621, 1622,
-			1623, 1624, 1625, 1626 };
+			2246, 2019};
+	private static final int[] PLAY_LIST_CONFIG_IDS = new int[]{1621, 1622,
+			1623, 1624, 1625, 1626};
 
 	private transient Player player;
 	private transient int playingMusic;
 	private transient long playingMusicDelay;
 	private transient boolean settedMusic;
-	private ArrayList<Integer> unlockedMusics;
-	private ArrayList<Integer> playList;
+	private final ArrayList<Integer> unlockedMusics;
+	private final ArrayList<Integer> playList;
 
 	private transient boolean playListOn;
 	private transient int nextPlayListMusic;
@@ -127,8 +128,7 @@ public final class MusicsManager implements Serializable {
 
 	public void refreshPlayListConfigs() {
 		int[] configValues = new int[PLAY_LIST_CONFIG_IDS.length];
-		for (int i = 0; i < configValues.length; i++)
-			configValues[i] = -1;
+		Arrays.fill(configValues, -1);
 		for (int i = 0; i < playList.size(); i += 2) {
 			Integer musicId1 = playList.get(i);
 			Integer musicId2 = (i + 1) >= playList.size() ? null : playList

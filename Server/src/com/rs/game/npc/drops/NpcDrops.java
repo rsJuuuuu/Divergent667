@@ -21,10 +21,10 @@ public class NpcDrops {
     private static final String DROP_PATH = "data/npcs/drops.dat";
 
     private static HashSet<DropTable> dropTables = new HashSet<>();
-    private static HashMap<Integer, DropTable> npcDrops = new HashMap<>();
+    private static final HashMap<Integer, DropTable> npcDrops = new HashMap<>();
 
-    private static HashSet<String> rareDropNames = new HashSet<>();
-    private static HashSet<Integer> rareDropIds = new HashSet<>();
+    private static final HashSet<String> rareDropNames = new HashSet<>();
+    private static final HashSet<Integer> rareDropIds = new HashSet<>();
 
     @SuppressWarnings("unchecked")
     public static void init() {

@@ -26,7 +26,7 @@ public class GeyserTitanCombat extends CombatScript {
         int size = npc.getSize();
         Follower familiar = (Follower) npc;
         boolean usingSpecial = familiar.hasSpecialOn();
-        int damage = 0;
+        int damage;
         if (distanceX > size || distanceX < -1 || distanceY > size || distanceY < -1) distant = true;
         if (usingSpecial) {// priority over regular attack
             npc.setNextAnimation(new Animation(7883));

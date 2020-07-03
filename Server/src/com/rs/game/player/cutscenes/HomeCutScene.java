@@ -1,9 +1,9 @@
 package com.rs.game.player.cutscenes;
 
-import com.rs.game.world.Animation;
-import com.rs.game.world.Graphics;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.actions.*;
+import com.rs.game.world.Animation;
+import com.rs.game.world.Graphics;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,9 @@ public class HomeCutScene extends Cutscene {
 		return true;
 	}
 
-	private static int GUTHIX = 1, GUARD1 = 2, GUARD2 = 3;
+	private static final int GUTHIX = 1;
+	private static final int GUARD1 = 2;
+	private static final int GUARD2 = 3;
 
 	@Override
 	public CutsceneAction[] getActions(Player player) {
@@ -96,7 +98,7 @@ public class HomeCutScene extends Cutscene {
 		actionsList.add(new MoveNPCAction(GUARD1, 15, 40, false, -1));
 		actionsList.add(new MoveNPCAction(GUARD2, 17, 40, false, -1));
 		actionsList.add(new PosCameraAction(14, 35, 3000, 6, 6, 10));
-		return actionsList.toArray(new CutsceneAction[actionsList.size()]);
+		return actionsList.toArray(new CutsceneAction[0]);
 	}
 
 }

@@ -4,10 +4,10 @@ import com.rs.cache.loaders.ObjectDefinitions;
 
 public class WorldObject extends WorldTile {
 
-    private static final long serialVersionUID = 5945496773263752522L;
+	private static final long serialVersionUID = 5945496773263752522L;
 
 	private int id;
-	private int type;
+	private final int type;
 	private int rotation;
 	private int life;
 
@@ -18,7 +18,7 @@ public class WorldObject extends WorldTile {
 		this.rotation = rotation;
 		this.life = 1;
 	}
-	
+
 	public WorldObject(int id, int type, int rotation, int x, int y, int plane, int life) {
 		super(x, y, plane);
 		this.id = id;
@@ -27,7 +27,7 @@ public class WorldObject extends WorldTile {
 		this.life = life;
 	}
 
-    @Override
+	@Override
     public String toString() {
         return "WorldObject{name=" + getDefinitions().name + ", id=" + id + ", type=" + type + ", rotation=" +
                 rotation + ", life=" + life + "} " + super.toString();

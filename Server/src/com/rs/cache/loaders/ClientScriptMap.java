@@ -56,7 +56,7 @@ public final class ClientScriptMap {
 		if (script != null)
 			return script;
 		byte[] data = Cache.STORE.getIndexes()[17].getFile(
-				scriptId >>> 0xba9ed5a8, scriptId & 0xff);
+				scriptId >>> 8, scriptId & 0xff);
 		script = new ClientScriptMap();
 		if (data != null)
 			script.readValueLoop(new InputStream(data));
@@ -91,7 +91,7 @@ public final class ClientScriptMap {
 		if (values == null)
 			return defaultIntValue;
 		Object value = values.get(key);
-		if (value == null || !(value instanceof Integer))
+		if (!(value instanceof Integer))
 			return defaultIntValue;
 		return (Integer) value;
 	}
@@ -100,7 +100,7 @@ public final class ClientScriptMap {
 		if (values == null)
 			return defaultStringValue;
 		Object value = values.get(key);
-		if (value == null || !(value instanceof String))
+		if (!(value instanceof String))
 			return defaultStringValue;
 		return (String) value;
 	}

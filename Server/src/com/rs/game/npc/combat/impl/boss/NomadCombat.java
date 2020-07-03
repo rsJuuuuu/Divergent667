@@ -1,10 +1,10 @@
 package com.rs.game.npc.combat.impl.boss;
 
 import com.rs.game.npc.Npc;
-import com.rs.game.world.Animation;
-import com.rs.game.world.Entity;
 import com.rs.game.npc.combat.CombatScript;
 import com.rs.game.npc.data.NpcCombatDefinitions;
+import com.rs.game.world.Animation;
+import com.rs.game.world.Entity;
 import com.rs.utils.Utils;
 
 /**
@@ -16,9 +16,9 @@ public class NomadCombat extends CombatScript {
 
 	  public Object[] getKeys()
 	    {
-	        return (new Object[] {
-	            Integer.valueOf(8528)
-	        });
+	        return (new Object[]{
+					8528
+			});
 	    }
 	//Melee Emote-12696
 	//Mage Emote-9300

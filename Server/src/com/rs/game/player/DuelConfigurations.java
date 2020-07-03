@@ -1,13 +1,15 @@
 package com.rs.game.player;
 
-import com.rs.game.world.WorldTile;
+import com.rs.game.actionHandling.Handler;
+import com.rs.game.actionHandling.handlers.InterfaceHandler;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemConstants;
 import com.rs.game.item.ItemsContainer;
-import com.rs.game.actionHandling.Handler;
-import com.rs.game.actionHandling.handlers.InterfaceHandler;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
 import com.rs.utils.stringUtils.TextUtils;
+
+import java.util.Arrays;
 
 import static com.rs.game.actionHandling.HandlerManager.HandlerConstants.*;
 import static com.rs.game.actionHandling.HandlerManager.registerInterfaceAction;
@@ -25,22 +27,22 @@ public class DuelConfigurations implements Handler {
     /**
      * Boolean array for duel rules.
      */
-    private transient boolean[] duelRules = new boolean[26];
+    private final transient boolean[] duelRules = new boolean[26];
 
     /**
      * Duel arena lobby location.
      */
-    private WorldTile DUEL_ARENA_LOBBY = new WorldTile(3365, 3275, 0);
+    private final WorldTile DUEL_ARENA_LOBBY = new WorldTile(3365, 3275, 0);
 
     /**
      * Player's stake.
      */
-    private ItemsContainer<Item> stake = new ItemsContainer<>(28, false);
+    private final ItemsContainer<Item> stake = new ItemsContainer<>(28, false);
 
     /**
      * Target's stake.
      */
-    private ItemsContainer<Item> stake2 = new ItemsContainer<>(28, false);
+    private final ItemsContainer<Item> stake2 = new ItemsContainer<>(28, false);
 
     /**
      * Constructs a new instance.
@@ -99,9 +101,7 @@ public class DuelConfigurations implements Handler {
      * @param logout   {@code true} if logged out, {@code false} if not.
      */
     public void endDuel(Player player, boolean declined, boolean logout) {
-        for (int i = 0; i < duelRules.length; i++) {
-            duelRules[i] = false;
-        }
+        Arrays.fill(duelRules, false);
         if (!declined) {
             if (logout) player.setLocation(DUEL_ARENA_LOBBY);
             else player.setNextWorldTile(DUEL_ARENA_LOBBY);
@@ -486,7 +486,7 @@ public class DuelConfigurations implements Handler {
      * @param player The player who's equipment is going to be removed.
      */
     private void removeEquipment(Player player) {
-        int slot = 0;
+        int slot;
         for (int i = 10; i < 24; i++) {
             if (getRule(i)) {
                 slot = i - 10;
@@ -637,8 +637,7 @@ public class DuelConfigurations implements Handler {
         target.getTemporaryAttributes().remove("accepted");
         Item[] itemsBefore = getStake(p).getItemsCopy();
         int maxAmount = p.getInventory().getItems().getNumberOf(item);
-        int trueAmount = amount > maxAmount ? maxAmount : amount;
-        if (item.getAmount() < amount) amount = item.getAmount();
+        int trueAmount = Math.min(amount, maxAmount);
         item = new Item(item.getId(), trueAmount);
         getStake(p).add(item);
         p.getInventory().deleteItem(slot, item);

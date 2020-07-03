@@ -60,7 +60,7 @@ public class PestLobby extends MinigameLobby {
     private void sendInterfaces(Player player) {
         player.getPackets().sendIComponentText(407, 13, "Next Departure: " + (int) (getWaitLeft() * 0.6) + " sec");
         player.getPackets().sendIComponentText(407, 14, "Players Ready: " + getPlayers().size());
-        player.getPackets().sendIComponentText(407, 16, "Pest Points: " + Integer.toString(player.getPestPoints()));
+        player.getPackets().sendIComponentText(407, 16, "Pest Points: " + player.getPestPoints());
         player.getPackets().sendIComponentText(407, 3, "Novice");
         player.getInterfaceManager().openInterfaces(PEST_LANDER);
     }

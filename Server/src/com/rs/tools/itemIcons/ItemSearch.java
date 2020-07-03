@@ -27,10 +27,10 @@ public class ItemSearch extends AnchorPane {
 
     private String lastKeyWord = "";
 
-    private ListView<ItemPanel> searchResults = new ListView<>();
-    private TextField searchField = new TextField();
+    private final ListView<ItemPanel> searchResults = new ListView<>();
+    private final TextField searchField = new TextField();
 
-    private ItemIconsLoader.RequestManager requestManager = ItemIconsLoader.getRequestManager();
+    private final ItemIconsLoader.RequestManager requestManager = ItemIconsLoader.getRequestManager();
 
     public ItemSearch() {
         searchField.textProperty().addListener((observable, oldValue, newValue) -> search(searchField.getText()));
@@ -66,7 +66,7 @@ public class ItemSearch extends AnchorPane {
     }
 
     private ArrayList<String> results = new ArrayList<>();
-    private ArrayList<ItemPanel> panels = new ArrayList<>();
+    private final ArrayList<ItemPanel> panels = new ArrayList<>();
 
     private void search(String keyword) {
         results.clear();
@@ -81,7 +81,7 @@ public class ItemSearch extends AnchorPane {
         if (lastKeyWord.equals("") || lastKeyWord.length() < 3 || lastKeyWord.length() > keyword.length()) {
             results = IdSearch.searchForItem(keyword, false, 500, null);
             for (String result : results) {
-                int id = Integer.valueOf(result.substring(result.indexOf("(Id: ") + 5, result.lastIndexOf(")")));
+                int id = Integer.parseInt(result.substring(result.indexOf("(Id: ") + 5, result.lastIndexOf(")")));
                 panels.add(new ItemPanel(new Item(id), requestManager));
             }
         } else {

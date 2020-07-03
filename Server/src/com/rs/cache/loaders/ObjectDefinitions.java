@@ -630,7 +630,7 @@ public class ObjectDefinitions {
     }
 
     private static int getArchiveId(int i_0_) {
-        return i_0_ >>> -1135990488;
+        return i_0_ >>> 8;
     }
 
     public static ObjectDefinitions getObjectDefinitions(int id) {

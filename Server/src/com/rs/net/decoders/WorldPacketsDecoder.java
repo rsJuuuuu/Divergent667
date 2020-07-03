@@ -32,7 +32,7 @@ import static com.rs.utils.Constants.*;
 
 public final class WorldPacketsDecoder extends Decoder {
 
-    private Player player;
+    private final Player player;
 
     public WorldPacketsDecoder(Session session, Player player) {
         super(session);
@@ -64,7 +64,7 @@ public final class WorldPacketsDecoder extends Decoder {
         int npcIndex = stream.readUnsignedShort128();
         final Npc npc = World.getNPCs().get(npcIndex);
         if (npc == null || npc.isCantInteract() || npc.isDead() || npc.hasFinished()
-            || !player.getMapRegionsIds().contains(npc.getRegionId())) return;
+                || !player.getMapRegionsIds().contains(npc.getRegionId())) return;
         NPCHandler.handleClick(player, npc, packet);
     }
 
@@ -171,7 +171,7 @@ public final class WorldPacketsDecoder extends Decoder {
                 player.resetWalkSteps();
                 if ((interfaceId == 747 && componentId == 14) || (interfaceId == 662 && componentId == 65) || (
                         interfaceId == 662 && componentId == 74) || interfaceId == 747 && componentId == 17
-                    || interfaceId == 747 && componentId == 23) {
+                        || interfaceId == 747 && componentId == 23) {
                     if ((interfaceId == 662 && componentId == 74 || interfaceId == 747 && componentId == 17)) {
                         if (player.getFollower().getSpecialAttack() != SpecialAttack.ENTITY) return;
                     }
@@ -216,7 +216,7 @@ public final class WorldPacketsDecoder extends Decoder {
         if (componentId != -1 && Utils.getInterfaceDefinitionsComponentsSize(interfaceId) <= componentId) return;
         Player other = World.getPlayers().get(playerIndex);
         if (other == null || other.isDead() || other.hasFinished()
-            || !player.getMapRegionsIds().contains(other.getRegionId())) return;
+                || !player.getMapRegionsIds().contains(other.getRegionId())) return;
         player.stopAll(false);
         switch (interfaceId) {
             case 662:
@@ -257,7 +257,7 @@ public final class WorldPacketsDecoder extends Decoder {
         int intValue = stream.readInt();
         if (intValue <= 0) return;
         if ((player.getInterfaceManager().containsInterface(762) && player.getInterfaceManager().containsInterface(763))
-            || player.getInterfaceManager().containsInterface(11)) {
+                || player.getInterfaceManager().containsInterface(11)) {
             Integer bank_item_X_Slot = (Integer) player.getTemporaryAttributes().remove("bank_item_X_Slot");
             if (bank_item_X_Slot == null) return;
             if (player.getTemporaryAttributes().remove("bank_isWithdraw") != null)
@@ -266,14 +266,14 @@ public final class WorldPacketsDecoder extends Decoder {
                 player.getBank().depositItem(bank_item_X_Slot, intValue, !player.getInterfaceManager()
                         .containsInterface(11));
         } else if (player.getInterfaceManager().containsInterface(206)
-                   && player.getInterfaceManager().containsInterface(207)) {
+                && player.getInterfaceManager().containsInterface(207)) {
             Integer pc_item_X_Slot = (Integer) player.getTemporaryAttributes().remove("pc_item_X_Slot");
             if (pc_item_X_Slot == null) return;
             if (player.getTemporaryAttributes().remove("pc_isRemove") != null)
                 player.getPriceCheckManager().removeItem(pc_item_X_Slot, intValue);
             else player.getPriceCheckManager().addItem(pc_item_X_Slot, intValue);
         } else if (player.getInterfaceManager().containsInterface(671)
-                   && player.getInterfaceManager().containsInterface(665)) {
+                && player.getInterfaceManager().containsInterface(665)) {
             if (player.getFollower() == null || player.getFollower().getBob() == null) return;
             Integer bob_item_X_Slot = (Integer) player.getTemporaryAttributes().remove("bob_item_X_Slot");
             if (bob_item_X_Slot == null) return;
@@ -290,13 +290,13 @@ public final class WorldPacketsDecoder extends Decoder {
             player.getAppearance().generateAppearanceData();
             player.getDialogueManager().finishDialogue();
         } else if (player.getTemporaryAttributes().get("offerX") != null
-                   && player.getInterfaceManager().containsInterface(335)
-                   && player.getTrade().getState() == Trade.TradeState.STATE_ONE) {
+                && player.getInterfaceManager().containsInterface(335)
+                && player.getTrade().getState() == Trade.TradeState.STATE_ONE) {
             player.getTrade().addItem(player, (Integer) player.getTemporaryAttributes().get("offerX"), intValue);
             player.getTemporaryAttributes().remove("offerX");
         } else if (player.getTemporaryAttributes().get("removeX") != null
-                   && player.getInterfaceManager().containsInterface(335)
-                   && player.getTrade().getState() == Trade.TradeState.STATE_ONE) {
+                && player.getInterfaceManager().containsInterface(335)
+                && player.getTrade().getState() == Trade.TradeState.STATE_ONE) {
             player.getTrade().removeItem(player, (Integer) player.getTemporaryAttributes().get("removeX"), intValue);
             player.getTemporaryAttributes().remove("removeX");
 
@@ -397,7 +397,7 @@ public final class WorldPacketsDecoder extends Decoder {
         player.setScreenHeight(stream.readUnsignedShort());
         boolean switchScreenMode = stream.readUnsignedByte() == 1;
         if (!player.hasStarted() || player.hasFinished() || displayMode == player.getDisplayMode()
-            || !player.getInterfaceManager().containsInterface(742)) return;
+                || !player.getInterfaceManager().containsInterface(742)) return;
         player.setDisplayMode(displayMode);
         player.getInterfaceManager().removeAll();
         player.getInterfaceManager().sendInterfaces();
@@ -438,7 +438,8 @@ public final class WorldPacketsDecoder extends Decoder {
         int positionHash = stream.readIntV1();
         int y = positionHash >> 16; // y;
         int x = positionHash - (y << 16); // x
-        if (time <= 1 || x < 0 || x > player.getScreenWidth() || y < 0 || y > player.getScreenHeight()) return;
+        //TODO What is the below code trying to achieve?
+//        if (time <= 1 || x < 0 || x > player.getScreenWidth() || y < 0 || y > player.getScreenHeight()) return;
     }
 
     /**
@@ -475,21 +476,21 @@ public final class WorldPacketsDecoder extends Decoder {
         int toComponentId = interface2Hash - (toInterfaceId << 16);
 
         if (Utils.getInterfaceDefinitionsSize() <= fromInterfaceId
-            || Utils.getInterfaceDefinitionsSize() <= toInterfaceId) return;
+                || Utils.getInterfaceDefinitionsSize() <= toInterfaceId) return;
         if (!player.getInterfaceManager().containsInterface(fromInterfaceId)
-            || !player.getInterfaceManager().containsInterface(toInterfaceId)) return;
+                || !player.getInterfaceManager().containsInterface(toInterfaceId)) return;
         if (fromComponentId != -1 && Utils.getInterfaceDefinitionsComponentsSize(fromInterfaceId) <= fromComponentId)
             return;
         if (toComponentId != -1 && Utils.getInterfaceDefinitionsComponentsSize(toInterfaceId) <= toComponentId) return;
         if (fromInterfaceId == Inventory.INVENTORY_INTERFACE && fromComponentId == 0
-            && toInterfaceId == Inventory.INVENTORY_INTERFACE && toComponentId == 0) {
+                && toInterfaceId == Inventory.INVENTORY_INTERFACE && toComponentId == 0) {
             toSlot -= 28;
             if (toSlot < 0 || toSlot >= player.getInventory().getItemsContainerSize()
-                || fromSlot >= player.getInventory().getItemsContainerSize()) return;
+                    || fromSlot >= player.getInventory().getItemsContainerSize()) return;
             player.getInventory().switchItem(fromSlot, toSlot);
         } else if (fromInterfaceId == 763 && fromComponentId == 0 && toInterfaceId == 763 && toComponentId == 0) {
             if (toSlot >= player.getInventory().getItemsContainerSize()
-                || fromSlot >= player.getInventory().getItemsContainerSize()) return;
+                    || fromSlot >= player.getInventory().getItemsContainerSize()) return;
             player.getInventory().switchItem(fromSlot, toSlot);
         } else if (fromInterfaceId == 762 && toInterfaceId == 762) {
             player.getBank().switchItem(fromSlot, toSlot, fromComponentId, toComponentId);
@@ -671,8 +672,8 @@ public final class WorldPacketsDecoder extends Decoder {
      */
     private static boolean mayProcessActionPacket(Player player, Packets packet) {
         return packet != null && !(!player.hasStarted() || !player.clientHasLoadedMapRegion() || player.isDead()
-                                   || player.hasStopDelay())
-               && player.getEmotesManager().getNextEmoteEnd() < TimeUtils.getTime();
+                || player.hasStopDelay())
+                && player.getEmotesManager().getNextEmoteEnd() < TimeUtils.getTime();
     }
 
     /**
@@ -796,7 +797,7 @@ public final class WorldPacketsDecoder extends Decoder {
         private final int id;
         private final int size;
         private final boolean logicPacket;
-        private PacketAction action;
+        private final PacketAction action;
 
         Packets(int id, int size, PacketAction action, boolean logicPacket) {
             this.id = id;

@@ -26,7 +26,7 @@ public class Shop {
     private boolean generalStore;
     private boolean allowSelling;
 
-    private int currency;
+    private final int currency;
 
     private String shopName;
 
@@ -339,14 +339,13 @@ public class Shop {
         if (bonuses != null) {
             HashMap<Integer, Integer> requirements = item.getDefinitions().getWearingSkillRequirements();
             if (requirements != null && !requirements.isEmpty()) {
-                String requirementText = "";
+                StringBuilder requirementText = new StringBuilder();
                 for (int skillId : requirements.keySet()) {
                     if (skillId > 24 || skillId < 0) continue;
                     int level = requirements.get(skillId);
                     if (level < 0 || level > 120) continue;
                     boolean hasReq = player.getSkills().getLevelForXp(skillId) >= level;
-                    requirementText += "<br>" + (hasReq ? "<col=00ff00>" : "<col=ff0000>") + "Level " + level + " "
-                                       + Skills.SKILL_NAME[skillId];
+                    requirementText.append("<br>").append(hasReq ? "<col=00ff00>" : "<col=ff0000>").append("Level ").append(level).append(" ").append(Skills.SKILL_NAME[skillId]);
                 }
                 player.getPackets().sendGlobalString(26, "<br>Worn on yourself, requiring: " + requirementText);
             } else player.getPackets().sendGlobalString(26, "<br>Worn on yourself");

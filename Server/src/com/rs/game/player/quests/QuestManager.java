@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 public class QuestManager {
 
-    private HashMap<Integer, Integer> questProgress = new HashMap<>();
+    private final HashMap<Integer, Integer> questProgress = new HashMap<>();
 
     transient Player player;
 

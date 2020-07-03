@@ -16,13 +16,14 @@ import com.rs.utils.Utils;
  */
 public class OtherDrainEffect extends Effect {
 
-    private int projectileId;
+    private final int projectileId;
 
-    private boolean leech;
-    private boolean spec;
+    private final boolean leech;
+    private final boolean spec;
 
-    private Animation animation;
-    private Graphics startGfx, endGfx;
+    private final Animation animation;
+    private final Graphics startGfx;
+    private final Graphics endGfx;
 
     /**
      * Sap curse

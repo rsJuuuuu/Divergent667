@@ -1,8 +1,8 @@
 package com.rs.game.minigames;
 
 import com.rs.cores.CoresManager;
-import com.rs.game.world.RegionBuilder;
 import com.rs.game.player.Player;
+import com.rs.game.world.RegionBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -151,7 +151,7 @@ public class War extends TimerTask {
 	/**
 	 * A list to store war rules.
 	 */
-	private List<Rule> rules = new ArrayList<>();
+	private final List<Rule> rules = new ArrayList<>();
 
 	/**
 	 * Time limit.
@@ -186,34 +186,34 @@ public class War extends TimerTask {
 	/**
 	 * A list to store challenger's clan players
 	 */
-	private List<Player> challengerTeam = new ArrayList<>();
+	private final List<Player> challengerTeam = new ArrayList<>();
 
 	/**
-	 * A list to store opponent's clan players. 
+	 * A list to store opponent's clan players.
 	 */
-	private List<Player> opponentTeam = new ArrayList<>();
+	private final List<Player> opponentTeam = new ArrayList<>();
 
 	/**
 	 * A list to store challenger's clan players
 	 */
-	private List<Player> challengerTeamKills = new ArrayList<>();
+	private final List<Player> challengerTeamKills = new ArrayList<>();
 
 	/**
-	 * A list to store opponent's clan players. 
+	 * A list to store opponent's clan players.
 	 */
-	private List<Player> opponentTeamKills = new ArrayList<>();
+	private final List<Player> opponentTeamKills = new ArrayList<>();
 
 	/**
 	 * Time limit (In seconds)
 	 */
-	private int[] timeLimit = {
+	private final int[] timeLimit = {
 			5, 10, 30, 60, 90, 120, 150, 180, 240, 300, 360, 480, 1
 	};
 
 	/**
 	 * Goals (How many to kill) 0 = knock out. 1 = most kills at end.
 	 */
-	private int[] victory = {
+	private final int[] victory = {
 			0, 25, 50, 100, 200, 400, 750, 1000, 2500, 5000, 10000, 1
 	};
 
@@ -362,18 +362,16 @@ public class War extends TimerTask {
 	 */
 	public void createArea(final Player player, final Player other, final int fromRegionX, final int fromRegionY, final int widthRegions, final int heightRegions) {
 		CoresManager.slowExecutor.execute(() -> {
-            try {
-                mapBaseCoords = RegionBuilder.findEmptyMap(widthRegions, heightRegions);
-                RegionBuilder.copyAllPlanesMap(fromRegionX, fromRegionY, mapBaseCoords[0], mapBaseCoords[1], 16);
-                startController(player);
-                startController(other);
-            } catch (Exception e) {
-                e.printStackTrace();
-            } catch (Error e) {
-                e.printStackTrace();
+			try {
+				mapBaseCoords = RegionBuilder.findEmptyMap(widthRegions, heightRegions);
+				RegionBuilder.copyAllPlanesMap(fromRegionX, fromRegionY, mapBaseCoords[0], mapBaseCoords[1], 16);
+				startController(player);
+				startController(other);
+			} catch (Exception | Error e) {
+				e.printStackTrace();
             }
 
-        });
+		});
 	}
 
 	/**
@@ -490,7 +488,7 @@ public class War extends TimerTask {
 	 * @return {@code True} If the rule is set, {@code false} if not.
 	 */
 	public boolean isSet(Rule rule) {
-		return rules.contains(rules);
+		return rules.contains(rule);
 	}
 
 	/**

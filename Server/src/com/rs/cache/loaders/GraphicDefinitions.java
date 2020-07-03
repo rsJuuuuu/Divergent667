@@ -34,7 +34,7 @@ public class GraphicDefinitions {
 		if (defs != null)
 			return defs;
 		byte[] data = Cache.STORE.getIndexes()[21].getFile(
-				emoteId >>> 735411752, emoteId & 0xff);
+				emoteId >>> 8, emoteId & 0xff);
 		defs = new GraphicDefinitions();
 		defs.graphicsId = emoteId;
 		if (data != null)
@@ -54,15 +54,15 @@ public class GraphicDefinitions {
 
 	public void readValues(InputStream stream, int opcode) {
 		if (opcode != 1) {
-			if ((opcode ^ 0xffffffff) == -3)
+			if ((~opcode) == -3)
 				anInt1450 = stream.readBigSmart();
 			else if (opcode == 4)
 				anInt1446 = stream.readUnsignedShort();
 			else if (opcode != 5) {
-				if ((opcode ^ 0xffffffff) != -7) {
+				if ((~opcode) != -7) {
 					if (opcode == 7)
 						anInt1440 = stream.readUnsignedByte();
-					else if ((opcode ^ 0xffffffff) == -9)
+					else if ((~opcode) == -9)
 						anInt1451 = stream.readUnsignedByte();
 					else if (opcode != 9) {
 						if (opcode != 10) {
@@ -89,7 +89,7 @@ public class GraphicDefinitions {
 								byteValue = (byte) 3;
 								intValue = stream.readInt();
 							} else if (opcode != 40) {
-								if ((opcode ^ 0xffffffff) == -42) {
+								if ((~opcode) == -42) {
 									int i = stream.readUnsignedByte();
 									aShortArray1455 = new short[i];
 									aShortArray1435 = new short[i];
@@ -104,7 +104,7 @@ public class GraphicDefinitions {
 								int i = stream.readUnsignedByte();
 								aShortArray1438 = new short[i];
 								aShortArray1456 = new short[i];
-								for (int i_1_ = 0; ((i ^ 0xffffffff) < (i_1_ ^ 0xffffffff)); i_1_++) {
+								for (int i_1_ = 0; ((~i) < (~i_1_)); i_1_++) {
 									aShortArray1438[i_1_] = (short) stream
 											.readUnsignedShort();
 									aShortArray1456[i_1_] = (short) stream

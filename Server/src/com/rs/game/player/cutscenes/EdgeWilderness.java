@@ -17,7 +17,7 @@ public class EdgeWilderness extends Cutscene {
 		actionsList.add(new LookCameraAction(30, 75, 1000, 6, 6, 10));
 		actionsList.add(new PosCameraAction(30, 75, 5000, 3, 3, 10));
 
-		return actionsList.toArray(new CutsceneAction[actionsList.size()]);
+		return actionsList.toArray(new CutsceneAction[0]);
 	}
 
 	@Override

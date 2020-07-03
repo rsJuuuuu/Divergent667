@@ -1,12 +1,12 @@
 package com.rs.game.player.content.commands;
 
 import com.rs.Settings;
-import com.rs.game.world.ForceTalk;
-import com.rs.game.world.World;
+import com.rs.game.actionHandling.Handler;
 import com.rs.game.player.Player;
 import com.rs.game.player.PlayerUtils;
 import com.rs.game.player.controllers.impl.JailController;
-import com.rs.game.actionHandling.Handler;
+import com.rs.game.world.ForceTalk;
+import com.rs.game.world.World;
 import com.rs.utils.stringUtils.TextUtils;
 import com.rs.utils.stringUtils.TimeUtils;
 
@@ -42,10 +42,10 @@ public class Moderator implements Handler {
         }, "hide");
         registerModCommand(Moderator::kickCommand, "kick");
         registerModCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
-            Player other = World.getPlayerByDisplayName(name);
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
+            Player other = World.getPlayerByDisplayName(name.toString());
             if (other != null) {
                 other.setMuted(0);
                 player.getPackets().sendGameMessage("You have unmuted: " + other.getDisplayName() + ".");
@@ -55,18 +55,18 @@ public class Moderator implements Handler {
                 for (Player players : World.getPlayers())
                     players.getPackets().sendGameMessage(
                             "<col=ffff00><shad=ff0000>[<img=1>Punishments<img=1>]" + other.getDisplayName()
-                            + " has been unmuted by " + player.getDisplayName() + ".");
+                                    + " has been unmuted by " + player.getDisplayName() + ".");
             } else {
                 player.getPackets().sendGameMessage("Couldn't find player " + name + ".");
             }
             return RETURN;
         }, "unmute");
         registerModCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
 
-            Player other = World.getPlayerByDisplayName(name);
+            Player other = World.getPlayerByDisplayName(name.toString());
             if (other != null) {
                 other.setJailed(0);
                 JailController.stopController(other);
@@ -85,10 +85,10 @@ public class Moderator implements Handler {
             return RETURN;
         }, "unjail");
         registerModCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
-            Player other = World.getPlayerByDisplayName(name);
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
+            Player other = World.getPlayerByDisplayName(name.toString());
             if (other != null) {
                 other.setJailed(TimeUtils.getTime() + (24 * 60 * 60 * 1000));
                 other.getControllerManager().startController("JailController");
@@ -106,11 +106,11 @@ public class Moderator implements Handler {
             return RETURN;
         }, "jail");
         registerModCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
 
-            Player other = World.getPlayerByDisplayName(name);
+            Player other = World.getPlayerByDisplayName(name.toString());
             if (other != null) {
                 other.setMuted(TimeUtils.getTime() + (48 * 60 * 60 * 1000));
                 other.getPackets().sendGameMessage("You've been muted for 48 hours.");
@@ -127,10 +127,10 @@ public class Moderator implements Handler {
             return RETURN;
         }, "mute");
         registerModCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
-            Player other = World.getPlayerByDisplayName(name);
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
+            Player other = World.getPlayerByDisplayName(name.toString());
             if (other == null) return RETURN;
             player.setNextWorldTile(other);
             player.stopAll();

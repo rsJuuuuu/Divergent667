@@ -21,9 +21,9 @@ import java.util.Scanner;
  */
 public class VaryingTool {
 
-    private static Scanner input = new Scanner(System.in);
+    private static final Scanner input = new Scanner(System.in);
 
-    private static ArrayList<String> results = new ArrayList<>();
+    private static final ArrayList<String> results = new ArrayList<>();
 
     private static class SummoningData {
 

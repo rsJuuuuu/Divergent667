@@ -17,7 +17,7 @@ public class BossKillCounter implements Serializable {
      * @author Peng
      */
 
-    transient private Player player;
+    final transient private Player player;
 
     private static final long serialVersionUID = 5232496323313748054L;
 
@@ -25,7 +25,7 @@ public class BossKillCounter implements Serializable {
         this.player = player;
     }
 
-    private Map<Integer, Integer> kills = new HashMap<>();
+    private final Map<Integer, Integer> kills = new HashMap<>();
 
     public int getKills(int npcId) {
         if (!kills.containsKey(npcId)) return 0;

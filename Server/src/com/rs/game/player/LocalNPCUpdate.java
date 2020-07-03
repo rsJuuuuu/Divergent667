@@ -13,8 +13,8 @@ import java.util.List;
 
 public final class LocalNPCUpdate {
 
-	private Player player;
-	private LinkedList<Npc> localNpcs;
+	private final Player player;
+	private final LinkedList<Npc> localNpcs;
 
 	public void reset() {
 		localNpcs.clear();

@@ -11,11 +11,11 @@ import com.rs.game.world.Graphics;
  */
 public class DeflectEffect extends Effect {
 
-    private double deflectAmount;
+    private final double deflectAmount;
 
-    private Graphics graphics;
-    private Animation animation;
-    private Hit.HitLook[] types;
+    private final Graphics graphics;
+    private final Animation animation;
+    private final Hit.HitLook[] types;
 
     public DeflectEffect(double deflectAmount, int graphicsId, Hit.HitLook... toDeflect) {
         this.deflectAmount = deflectAmount;

@@ -1,12 +1,15 @@
 package com.rs.game.player.cutscenes.actions;
 
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.Cutscene;
+import com.rs.game.world.WorldTile;
 
 public class MovePlayerAction extends CutsceneAction {
 
-	private int x, y, plane, movementType;
+	private final int x;
+	private final int y;
+	private final int plane;
+	private final int movementType;
 
 	public MovePlayerAction(int x, int y, boolean run, int actionDelay) {
 		this(x, y, -1, run ? Player.RUN_MOVE_TYPE : Player.WALK_MOVE_TYPE,
@@ -14,7 +17,7 @@ public class MovePlayerAction extends CutsceneAction {
 	}
 
 	public MovePlayerAction(int x, int y, int plane, int movementType,
-			int actionDelay) {
+							int actionDelay) {
 		super(-1, actionDelay);
 		this.x = x;
 		this.y = y;

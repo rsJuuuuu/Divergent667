@@ -9,8 +9,8 @@ public class Notes {
 
 	public static class Note {
 
-		private StringBuilder builder;
-		private int value;
+		private final StringBuilder builder;
+		private final int value;
 
 		public Note(StringBuilder builder, int color) {
 			this.builder = builder;
@@ -26,7 +26,7 @@ public class Notes {
 		}
 	}
 
-	private static List<Note> notes = new LinkedList<>();
+	private static final List<Note> notes = new LinkedList<>();
 
 	public Notes() {
 	}
@@ -45,7 +45,7 @@ public class Notes {
 		}
 		int noteId = notes.size() - 1;
 		player.getPackets().sendConfig(1439, noteId);
-        player.getTemporaryAttributes().put("selectedNote", noteId);
+		player.getTemporaryAttributes().put("selectedNote", noteId);
 
 	}
 

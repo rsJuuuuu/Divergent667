@@ -215,9 +215,9 @@ public class Furniture {
             }
         };
 
-        private int[] ids;
-        private boolean water;
-        private FurnitureObj[] pieces;
+        private final int[] ids;
+        private final boolean water;
+        private final FurnitureObj[] pieces;
 
         Builds(int id, boolean water, FurnitureObj... pieces) {
             this(new int[]{id}, water, pieces);
@@ -716,10 +716,11 @@ public class Furniture {
         STAINED_GLASS(8078, new int[]{13255, 13228, 13237, 13246, 13219, 13264, 39254}, 89, 5, new Item(MOLTEN_GLASS,
                 16));
 
-        private int itemId, level;
-        private int[] ids;
-        private double xp;
-        private Item[] reqs;
+        private final int itemId;
+        private final int level;
+        private final int[] ids;
+        private final double xp;
+        private final Item[] reqs;
 
         FurnitureObj(int itemId, int id, int level, double xp, Item... reqs) {
             this(itemId, new int[]{id}, level, xp, reqs);

@@ -105,7 +105,7 @@ public final class PlayerLook implements Handler {
         } else if (buttonId == 12) { // set part
             Integer stage = (Integer) player.getTemporaryAttributes().get("ThessaliasMakeOver");
             if (stage == null || stage == 0) {
-                player.getAppearance().setTopStyle((int) ClientScriptMap.getMap(player.getAppearance().isMale() ? 690
+                player.getAppearance().setTopStyle(ClientScriptMap.getMap(player.getAppearance().isMale() ? 690
                         : 1591).getIntValue(
                         slotId / 2));
                 if (!player.getAppearance().isMale())

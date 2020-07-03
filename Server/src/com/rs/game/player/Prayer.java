@@ -113,9 +113,13 @@ public class Prayer implements Serializable {
             entity.setNextGraphics(new Graphics(2226));
         }, new TurmoilEffect());
 
-        private int slot, enabledValue, level, book, overheadValue = 0;
-        private double drain;
-        private Effect[] effects;
+        private final int slot;
+        private final int enabledValue;
+        private final int level;
+        private final int book;
+        private int overheadValue = 0;
+        private final double drain;
+        private final Effect[] effects;
         private EntityEvent activateEvent;
 
         /**
@@ -208,7 +212,7 @@ public class Prayer implements Serializable {
         OVERHEAD_EXCEPTIONS(PrayerSpell.PROTECT_SUMMONING, PrayerSpell.RETRIBUTION, PrayerSpell.SMITE, PrayerSpell
                 .REDEMPTION, PrayerSpell.DEFLECT_SUMMONING, PrayerSpell.WRATH, PrayerSpell.SOUL_SPLIT);
 
-        private ArrayList<PrayerSpell> members;
+        private final ArrayList<PrayerSpell> members;
 
         PrayerGroup(PrayerSpell... members) {
             this.members = new ArrayList<>();
@@ -231,12 +235,12 @@ public class Prayer implements Serializable {
 
     private transient Player player;
 
-    private transient ArrayList<PrayerSpell> activePrayers = new ArrayList<>();
+    private final transient ArrayList<PrayerSpell> activePrayers = new ArrayList<>();
 
     private int prayerPoints;
     private boolean ancientCurses;
-    private ArrayList<PrayerSpell> quickPrayers = new ArrayList<>();
-    private ArrayList<PrayerSpell> quickCurses = new ArrayList<>();
+    private final ArrayList<PrayerSpell> quickPrayers = new ArrayList<>();
+    private final ArrayList<PrayerSpell> quickCurses = new ArrayList<>();
 
     public Prayer() {
         prayerPoints = 10;

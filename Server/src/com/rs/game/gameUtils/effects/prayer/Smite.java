@@ -10,7 +10,7 @@ import com.rs.game.world.Entity;
  */
 public class Smite extends Effect {
 
-    private double drain;
+    private final double drain;
 
     public Smite(double drain) {
         this.drain = drain;

@@ -41,9 +41,7 @@ public class KalphiteQueenCombat extends CombatScript {
         added.sort((o1, o2) -> {
             if (o1 == null) return 1;
             if (o2 == null) return -1;
-            if (Utils.getDistance(o1, fromEntity) > Utils.getDistance(o2, fromEntity)) return 1;
-            else if (Utils.getDistance(o1, fromEntity) < Utils.getDistance(o2, fromEntity)) return -1;
-            else return 0;
+            return Integer.compare(Utils.getDistance(o1, fromEntity), Utils.getDistance(o2, fromEntity));
         });
         return added.get(0);
 
@@ -95,7 +93,7 @@ public class KalphiteQueenCombat extends CombatScript {
 
                 @Override
                 public void run() {
-                    attackMageTarget(new ArrayList<Player>(), npc, npc, target);
+                    attackMageTarget(new ArrayList<>(), npc, npc, target);
                 }
 
             });

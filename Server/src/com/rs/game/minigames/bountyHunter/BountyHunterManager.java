@@ -35,7 +35,7 @@ public class BountyHunterManager {
     static final int RESIZABLE_TAB_ID = 10;
     static final int FIXED_TAB_ID = 8;
 
-    private static CopyOnWriteArrayList<Player> handledPlayers = new CopyOnWriteArrayList<>();
+    private static final CopyOnWriteArrayList<Player> handledPlayers = new CopyOnWriteArrayList<>();
 
     /**
      * Initiate the bounty hunter

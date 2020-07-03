@@ -26,10 +26,10 @@ public class HerbCleaning {
         DWARF_WEED(217, 13.8, 70, 267),
         TORSTOL(219, 15, 75, 269);
 
-        private int herbId;
-        private int level;
-        private int cleanId;
-        private double xp;
+        private final int herbId;
+        private final int level;
+        private final int cleanId;
+        private final double xp;
 
         Herbs(int herbId, double xp, int level, int cleanId) {
             this.herbId = herbId;

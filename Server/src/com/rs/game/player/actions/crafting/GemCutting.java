@@ -1,11 +1,11 @@
 package com.rs.game.player.actions.crafting;
 
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.world.Animation;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
+import com.rs.game.world.Animation;
 
 public class GemCutting extends Action {
 
@@ -25,11 +25,12 @@ public class GemCutting extends Action {
         DRAGONSTONE(1631, 1615, 137.5, 55, 885),
         ONYX(6571, 6573, 168, 67, 2717);
 
-        private double experience;
-        private int levelRequired;
-        private int uncut, cut;
+        private final double experience;
+        private final int levelRequired;
+        private final int uncut;
+        private final int cut;
 
-        private int emote;
+        private final int emote;
 
         Gem(int uncut, int cut, double experience, int levelRequired, int emote) {
             this.uncut = uncut;
@@ -68,7 +69,7 @@ public class GemCutting extends Action {
         else player.getDialogueManager().startDialogue("GemCuttingD", gem);
     }
 
-    private Gem gem;
+    private final Gem gem;
     private int quantity;
 
     public GemCutting(Gem gem, int quantity) {

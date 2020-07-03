@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 public class LeechedEffect extends Effect {
 
-    private HashMap<Integer, Double> stats = new HashMap<>();
+    private final HashMap<Integer, Double> stats = new HashMap<>();
 
     @Override
     public double getCombatModifier(int skillId) {

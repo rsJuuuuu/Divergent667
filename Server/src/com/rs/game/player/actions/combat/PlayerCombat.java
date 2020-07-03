@@ -182,7 +182,7 @@ public class PlayerCombat extends Action {
         att += style == Skills.ATTACK ? 3 : style == CombatDefinitions.SHARED ? 1 : 0;
         att *= player.getAuraManager().getMagicAccurayMultiplier();
         if (CombatUtils.hasFullVoid(player, 11663, 11674)) att *= 1.3;
-        double def = 0;
+        double def;
         if (target instanceof Player) {
             Player p2 = (Player) target;
             int p2style = CombatDefinitions.getXpStyle(p2.getEquipment().getWeaponId(), p2.getCombatDefinitions()
@@ -241,7 +241,7 @@ public class PlayerCombat extends Action {
                             attackStyle, true)));
                     dropAmmo(player, -1);
                 } else if (weaponName.contains("crossbow")) {
-                    int damage = 0;
+                    int damage;
                     int ammoId = player.getEquipment().getAmmoId();
                     if (ammoId != -1 && Utils.getRandom(10) == 5) {
                         switch (ammoId) {
@@ -367,7 +367,7 @@ public class PlayerCombat extends Action {
     }
 
     private Entity[] getMultiAttackTargets(Player player, int maxDistance, int maxAmtTargets) {
-        List<Entity> possibleTargets = new ArrayList<Entity>();
+        List<Entity> possibleTargets = new ArrayList<>();
         possibleTargets.add(target);
         if (target.isAtMultiArea()) {
             y:
@@ -400,7 +400,7 @@ public class PlayerCombat extends Action {
                 }
             }
         }
-        return possibleTargets.toArray(new Entity[possibleTargets.size()]);
+        return possibleTargets.toArray(new Entity[0]);
     }
 
     Entity[] getMultiAttackTargets(Player player) {

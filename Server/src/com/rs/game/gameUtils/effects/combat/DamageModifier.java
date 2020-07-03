@@ -10,8 +10,9 @@ import com.rs.game.world.Entity;
  */
 public class DamageModifier extends Effect {
 
-    private double defaultModifier, playerModifier;
-    private Hit.HitLook[] types;
+    private final double defaultModifier;
+    private final double playerModifier;
+    private final Hit.HitLook[] types;
 
     public DamageModifier(double defaultModifier, double playerModifier, Hit.HitLook... types) {
         this.defaultModifier = defaultModifier;

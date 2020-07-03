@@ -13,7 +13,7 @@ public class ServerPanelManager {
 
     private transient Player player;
 
-    private ArrayList<ServerPanelModule> modules = new ArrayList<>();
+    private final ArrayList<ServerPanelModule> modules = new ArrayList<>();
 
     public ServerPanelManager() {
         modules.add(ServerPanelModule.SLAYER_DATA_MODULE);

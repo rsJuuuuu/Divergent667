@@ -71,45 +71,45 @@ public class AnimationDefinitions {
 	}
 
 	private void readValues(InputStream stream, int opcode) {
-		if ((opcode ^ 0xffffffff) == -2) {
+		if ((~opcode) == -2) {
 			int i = stream.readUnsignedShort();
 			anIntArray2153 = new int[i];
-			for (int i_16_ = 0; (i ^ 0xffffffff) < (i_16_ ^ 0xffffffff); i_16_++)
+			for (int i_16_ = 0; (~i) < (~i_16_); i_16_++)
 				anIntArray2153[i_16_] = stream.readUnsignedShort();
 			anIntArray2139 = new int[i];
-			for (int i_17_ = 0; (i_17_ ^ 0xffffffff) > (i ^ 0xffffffff); i_17_++)
+			for (int i_17_ = 0; (~i_17_) > (~i); i_17_++)
 				anIntArray2139[i_17_] = stream.readUnsignedShort();
 			for (int i_18_ = 0; i_18_ < i; i_18_++)
 				anIntArray2139[i_18_] = ((stream.readUnsignedShort() << 16) + anIntArray2139[i_18_]);
-		} else if ((opcode ^ 0xffffffff) != -3) {
-			if ((opcode ^ 0xffffffff) != -4) {
-				if ((opcode ^ 0xffffffff) == -5)
+		} else if ((~opcode) != -3) {
+			if ((~opcode) != -4) {
+				if ((~opcode) == -5)
 					aBoolean2152 = true;
 				else if (opcode == 5)
 					anInt2142 = stream.readUnsignedByte();
 				else if (opcode != 6) {
-					if ((opcode ^ 0xffffffff) == -8)
+					if ((~opcode) == -8)
 						emoteItem = stream.readUnsignedShort();
-					else if ((opcode ^ 0xffffffff) != -9) {
+					else if ((~opcode) != -9) {
 						if (opcode != 9) {
-							if ((opcode ^ 0xffffffff) != -11) {
-								if ((opcode ^ 0xffffffff) == -12)
+							if ((~opcode) != -11) {
+								if ((~opcode) == -12)
 									anInt2155 = stream.readUnsignedByte();
 								else if (opcode == 12) {
 									int i = stream.readUnsignedByte();
 									anIntArray2151 = new int[i];
-									for (int i_19_ = 0; ((i_19_ ^ 0xffffffff) > (i ^ 0xffffffff)); i_19_++)
+									for (int i_19_ = 0; ((~i_19_) > (~i)); i_19_++)
 										anIntArray2151[i_19_] = stream
 												.readUnsignedShort();
 									for (int i_20_ = 0; i > i_20_; i_20_++)
 										anIntArray2151[i_20_] = ((stream
 												.readUnsignedShort() << 16) + anIntArray2151[i_20_]);
-								} else if ((opcode ^ 0xffffffff) != -14) {
+								} else if ((~opcode) != -14) {
 									if (opcode != 14) {
 										if (opcode != 15) {
 											if (opcode == 16)
 												aBoolean2158 = true;
-											// added opcode
+												// added opcode
 											else if (opcode == 17) {
 												@SuppressWarnings("unused")
 												int anInt2145 = stream
@@ -154,11 +154,11 @@ public class AnimationDefinitions {
 									handledSounds = new int[i][];
 									for (int i_21_ = 0; i_21_ < i; i_21_++) {
 										int i_22_ = stream.readUnsignedByte();
-										if ((i_22_ ^ 0xffffffff) < -1) {
+										if ((~i_22_) < -1) {
 											handledSounds[i_21_] = new int[i_22_];
 											handledSounds[i_21_][0] = stream
 													.read24BitInt();
-											for (int i_23_ = 1; ((i_22_ ^ 0xffffffff) < (i_23_ ^ 0xffffffff)); i_23_++) {
+											for (int i_23_ = 1; ((~i_22_) < (~i_23_)); i_23_++) {
 												handledSounds[i_21_][i_23_] = stream
 														.readUnsignedShort();
 											}
@@ -176,7 +176,7 @@ public class AnimationDefinitions {
 			} else {
 				aBooleanArray2149 = new boolean[256];
 				int i = stream.readUnsignedByte();
-				for (int i_24_ = 0; (i ^ 0xffffffff) < (i_24_ ^ 0xffffffff); i_24_++)
+				for (int i_24_ = 0; (~i) < (~i_24_); i_24_++)
 					aBooleanArray2149[stream.readUnsignedByte()] = true;
 			}
 		} else

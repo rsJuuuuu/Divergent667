@@ -620,25 +620,24 @@ public class ObjectHandler extends ActionHandler<Integer> {
                 otherDoor = World.getObject(new WorldTile(object.getX(),
                         object.getY() - 1, object.getPlane()), object.getType());
                 if (otherDoor == null || otherDoor.getRotation() != object.getRotation()
-                    || otherDoor.getType() != object.getType()
-                    || !otherDoor.getDefinitions().name.equalsIgnoreCase(object.getDefinitions().name)) return false;
+                        || otherDoor.getType() != object.getType()
+                        || !otherDoor.getDefinitions().name.equalsIgnoreCase(object.getDefinitions().name))
+                    return false;
                 south = false;
             }
             WorldObject openedDoor1 = new WorldObject(object.getId(), object.getType(),
                     object.getRotation() + 1, object.getX(), object.getY(), object.getPlane());
             WorldObject openedDoor2 = new WorldObject(otherDoor.getId(), otherDoor.getType(),
                     otherDoor.getRotation() + 1, otherDoor.getX(), otherDoor.getY(), otherDoor.getPlane());
+            openedDoor1.moveLocation(1, 0, 0);
             if (south) {
-                openedDoor1.moveLocation(1, 0, 0);
                 openedDoor2.setRotation(1);
-                openedDoor2.moveLocation(1, 0, 0);
             } else {
-                openedDoor1.moveLocation(1, 0, 0);
                 openedDoor1.setRotation(1);
-                openedDoor2.moveLocation(1, 0, 0);
             }
+            openedDoor2.moveLocation(1, 0, 0);
             if (World.removeTemporaryObject(object, 60000, true)
-                && World.removeTemporaryObject(otherDoor, 60000, true)) {
+                    && World.removeTemporaryObject(otherDoor, 60000, true)) {
                 player.faceObject(openedDoor1);
                 World.spawnTemporaryObject(openedDoor1, 60000, true);
                 World.spawnTemporaryObject(openedDoor2, 60000, true);
@@ -655,27 +654,26 @@ public class ObjectHandler extends ActionHandler<Integer> {
                 otherDoor = World.getObject(new WorldTile(
                         object.getX() + 1, object.getY(), object.getPlane()), object.getType());
                 if (otherDoor == null || otherDoor.getRotation() != object.getRotation()
-                    || otherDoor.getType() != object.getType()
-                    || !otherDoor.getDefinitions().name.equalsIgnoreCase(object.getDefinitions().name)) return false;
+                        || otherDoor.getType() != object.getType()
+                        || !otherDoor.getDefinitions().name.equalsIgnoreCase(object.getDefinitions().name))
+                    return false;
                 right = false;
             }
             WorldObject openedDoor1 = new WorldObject(object.getId(), object.getType(),
                     object.getRotation() + 1, object.getX(), object.getY(), object.getPlane());
             WorldObject openedDoor2 = new WorldObject(otherDoor.getId(), otherDoor.getType(),
                     otherDoor.getRotation() + 1, otherDoor.getX(), otherDoor.getY(), otherDoor.getPlane());
+            openedDoor1.moveLocation(0, -1, 0);
             if (right) {
-                openedDoor1.moveLocation(0, -1, 0);
                 openedDoor2.setRotation(0);
                 openedDoor1.setRotation(2);
-                openedDoor2.moveLocation(0, -1, 0);
             } else {
-                openedDoor1.moveLocation(0, -1, 0);
                 openedDoor1.setRotation(0);
                 openedDoor2.setRotation(2);
-                openedDoor2.moveLocation(0, -1, 0);
             }
+            openedDoor2.moveLocation(0, -1, 0);
             if (World.removeTemporaryObject(object, 60000, true)
-                && World.removeTemporaryObject(otherDoor, 60000, true)) {
+                    && World.removeTemporaryObject(otherDoor, 60000, true)) {
                 player.faceObject(openedDoor1);
                 World.spawnTemporaryObject(openedDoor1, 60000, true);
                 World.spawnTemporaryObject(openedDoor2, 60000, true);
@@ -692,25 +690,24 @@ public class ObjectHandler extends ActionHandler<Integer> {
                 otherDoor = World.getObject(new WorldTile(
                         object.getX() + 1, object.getY(), object.getPlane()), object.getType());
                 if (otherDoor == null || otherDoor.getRotation() != object.getRotation()
-                    || otherDoor.getType() != object.getType()
-                    || !otherDoor.getDefinitions().name.equalsIgnoreCase(object.getDefinitions().name)) return false;
+                        || otherDoor.getType() != object.getType()
+                        || !otherDoor.getDefinitions().name.equalsIgnoreCase(object.getDefinitions().name))
+                    return false;
                 right = false;
             }
             WorldObject openedDoor1 = new WorldObject(object.getId(), object.getType(),
                     object.getRotation() + 1, object.getX(), object.getY(), object.getPlane());
             WorldObject openedDoor2 = new WorldObject(otherDoor.getId(), otherDoor.getType(),
                     otherDoor.getRotation() + 1, otherDoor.getX(), otherDoor.getY(), otherDoor.getPlane());
+            openedDoor1.moveLocation(0, 1, 0);
             if (right) {
-                openedDoor1.moveLocation(0, 1, 0);
                 openedDoor1.setRotation(0);
-                openedDoor2.moveLocation(0, 1, 0);
             } else {
-                openedDoor1.moveLocation(0, 1, 0);
                 openedDoor2.setRotation(0);
-                openedDoor2.moveLocation(0, 1, 0);
             }
+            openedDoor2.moveLocation(0, 1, 0);
             if (World.removeTemporaryObject(object, 60000, true)
-                && World.removeTemporaryObject(otherDoor, 60000, true)) {
+                    && World.removeTemporaryObject(otherDoor, 60000, true)) {
                 player.faceObject(openedDoor1);
                 World.spawnTemporaryObject(openedDoor1, 60000, true);
                 World.spawnTemporaryObject(openedDoor2, 60000, true);

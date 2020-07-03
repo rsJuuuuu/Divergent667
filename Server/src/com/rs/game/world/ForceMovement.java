@@ -2,20 +2,20 @@ package com.rs.game.world;
 
 public final class ForceMovement {
 
-public static final int NORTH = 0, EAST = 1, SOUTH = 2, WEST = 3;
+	public static final int NORTH = 0, EAST = 1, SOUTH = 2, WEST = 3;
 
-	private WorldTile toFirstTile;
-	private WorldTile toSecondTile;
-	private int firstTileTicketDelay;
-	private int secondTileTicketDelay;
-	private int direction;
+	private final WorldTile toFirstTile;
+	private final WorldTile toSecondTile;
+	private final int firstTileTicketDelay;
+	private final int secondTileTicketDelay;
+	private final int direction;
 
 	/*
 	 * USE: moves to firsttile firstTileTicketDelay: the delay in game tickets
 	 * between your tile and first tile the direction
 	 */
 	public ForceMovement(WorldTile toFirstTile, int firstTileTicketDelay,
-			int direction) {
+						 int direction) {
 		this(toFirstTile, firstTileTicketDelay, null, 0, direction);
 	}
 
@@ -26,7 +26,7 @@ public static final int NORTH = 0, EAST = 1, SOUTH = 2, WEST = 3;
 	 * tile and second tile the direction
 	 */
 	public ForceMovement(WorldTile toFirstTile, int firstTileTicketDelay,
-			WorldTile toSecondTile, int secondTileTicketDelay, int direction) {
+						 WorldTile toSecondTile, int secondTileTicketDelay, int direction) {
 		this.toFirstTile = toFirstTile;
 		this.firstTileTicketDelay = firstTileTicketDelay;
 		this.toSecondTile = toSecondTile;

@@ -41,7 +41,7 @@ public class Teleportation implements Handler {
         MINIGAME("Minigame"),
         CITY("City");
 
-        private String name;
+        private final String name;
 
         TeleportType(String name) {
             this.name = name;
@@ -190,14 +190,12 @@ public class Teleportation implements Handler {
     }
 
     private static void listCommands(Player player) {
-        String message = "";
-        message += "Usage: ::tp [teleport],,Commands:,::tp list [category](optional) - lists possible teleports,"
-                   + "::tp alias [teleport] - lists possible aliases for teleport," + "::tp help - this command,,"
-                   + "Categories:,";
+        StringBuilder message = new StringBuilder();
+        message.append("Usage: ::tp [teleport],,Commands:,::tp list [category](optional) - lists possible teleports," + "::tp alias [teleport] - lists possible aliases for teleport," + "::tp help - this command,," + "Categories:,");
         for (TeleportType teleportType : TeleportType.values()) {
-            message += teleportType.getName() + ",";
+            message.append(teleportType.getName()).append(",");
         }
-        sendInterfaceMessage("Help", message, player);
+        sendInterfaceMessage("Help", message.toString(), player);
     }
 
     private static void listAliases(String[] command, Player player) {
@@ -206,35 +204,35 @@ public class Teleportation implements Handler {
             return;
         }
         String title = "Aliases for " + command[1] + ":";
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int aliasCount = 0;
         for (Location loc : Location.values()) {
             if (loc.matches(command[1])) {
-                result += loc.getName() + ", ";
+                result.append(loc.getName()).append(", ");
                 for (String alias : loc.getAliases()) {
-                    result += alias + ", ";
+                    result.append(alias).append(", ");
                     aliasCount++;
                 }
                 break;
             }
         }
-        if (aliasCount == 0) result += "None ";
+        if (aliasCount == 0) result.append("None ");
         sendInterfaceMessage(title, result.substring(0, result.length() - 2), player);
     }
 
     private static void listTeleports(String[] command, Player player) {
         String title = "Teleports:";
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (command.length < 2) {
             for (Location loc : Location.values()) {
-                result += loc.getName() + ", ";
+                result.append(loc.getName()).append(", ");
             }
         } else {
             String search = command[1];
             title = "Teleports in category: " + search;
-            result = "";
+            result = new StringBuilder();
             for (Location loc : Location.values()) {
-                if (loc.getType().getName().equalsIgnoreCase(search)) result += loc.getName() + ", ";
+                if (loc.getType().getName().equalsIgnoreCase(search)) result.append(loc.getName()).append(", ");
             }
         }
         sendInterfaceMessage(title, result.substring(0, result.length() - 2), player);
@@ -305,8 +303,8 @@ public class Teleportation implements Handler {
         player.getPackets().sendIComponentText(895, 18, "Teleportation");
     }
 
-    private static HashMap<TeleportType, ArrayList<Location>> locations = new HashMap<>();
-    private static HashMap<Integer, Location> indexMap = new HashMap<>();
+    private static final HashMap<TeleportType, ArrayList<Location>> locations = new HashMap<>();
+    private static final HashMap<Integer, Location> indexMap = new HashMap<>();
 
     static {
         for (Location loc : Location.values()) {

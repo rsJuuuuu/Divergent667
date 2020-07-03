@@ -1,26 +1,26 @@
 package com.rs.game.route.strategy;
 
-import com.rs.game.world.Entity;
 import com.rs.game.route.RouteStrategy;
+import com.rs.game.world.Entity;
 
 public class EntityStrategy extends RouteStrategy {
 
 	/**
 	 * Entity position x.
 	 */
-	private int x;
+	private final int x;
 	/**
 	 * Entity position y.
 	 */
-	private int y;
+	private final int y;
 	/**
 	 * Entity size.
 	 */
-	private int size;
+	private final int size;
 	/**
 	 * Access block flag, see RouteStrategy static final values.
 	 */
-	private int accessBlockFlag;
+	private final int accessBlockFlag;
 
 	public EntityStrategy(Entity entity) {
 		this(entity, 0);

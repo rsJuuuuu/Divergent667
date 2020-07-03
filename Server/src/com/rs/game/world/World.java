@@ -58,7 +58,7 @@ public final class World {
 
     private static final EntityList<Player> players = new EntityList<>(Settings.PLAYERS_LIMIT);
     private static final EntityList<Npc> npcList = new EntityList<>(Settings.NPCS_LIMIT);
-    private static final Map<Integer, Region> regions = Collections.synchronizedMap(new HashMap<Integer, Region>());
+    private static final Map<Integer, Region> regions = Collections.synchronizedMap(new HashMap<>());
     private static final ArrayList<Area> multiAreas = new ArrayList<>();
 
     /**
@@ -121,8 +121,8 @@ public final class World {
      */
     public static void sendDropMessage(String playerName, String itemName) {
         sendWorldMessage("<col=000099><shad=ffffff><img=6>News: </col></shad><col=ffffff> " + playerName
-                         + " has received <col=000099><shad=ffffff>" + itemName
-                         + "</col></shad><col=ffffff> as a rare drop!</col>");
+                + " has received <col=000099><shad=ffffff>" + itemName
+                + "</col></shad><col=ffffff> as a rare drop!</col>");
     }
 
     /**
@@ -253,9 +253,9 @@ public final class World {
                 try {
                     for (Player player : getPlayers()) {
                         if (player == null || player.isDead() || !player.isRunning() || (checkAgility &&
-                                                                                         player.getSkills().getLevel
-                                                                                                 (Skills.AGILITY)
-                                                                                         < 70)) continue;
+                                player.getSkills().getLevel
+                                        (Skills.AGILITY)
+                                        < 70)) continue;
                         player.restoreRunEnergy();
                     }
                     checkAgility = !checkAgility;
@@ -303,7 +303,7 @@ public final class World {
                                 int normalLevel = player.getSkills().getLevelForXp(skill);
                                 if (currentLevel > normalLevel) {
                                     if (skill == Skills.ATTACK || skill == Skills.STRENGTH || skill == Skills.DEFENCE
-                                        || skill == Skills.RANGE || skill == Skills.MAGIC) {
+                                            || skill == Skills.RANGE || skill == Skills.MAGIC) {
                                         if (berserker && Utils.getRandom(100) <= 15) continue;
                                     }
                                     player.getSkills().set(skill, currentLevel - 1);
@@ -473,7 +473,7 @@ public final class World {
 
                 Rev(id, tile, mapAreaNameHash, canBeAttackFromOutOfArea, spawned);
         else if (NPCDefinitions.getNPCDefinitions(id) != null
-                 && NPCDefinitions.getNPCDefinitions(id).name.equalsIgnoreCase("Tormented demon"))
+                && NPCDefinitions.getNPCDefinitions(id).name.equalsIgnoreCase("Tormented demon"))
             n = new TormentedDemon(id, tile, mapAreaNameHash, canBeAttackFromOutOfArea, spawned);
         else if (id == 14301) n = new Glacor(id, tile, mapAreaNameHash, canBeAttackFromOutOfArea, spawned);
         else n = new
@@ -596,82 +596,83 @@ public final class World {
             if (xOffset == 0 && yOffset == 1) return (mask & 0x48240000) == 0;
             if (xOffset == -1 && yOffset == -1) {
                 return (mask & 0x43a40000) == 0 && (getClippedOnlyMask(plane, x - 1, y) & 0x42240000) == 0
-                       && (getClippedOnlyMask(plane, x, y - 1) & 0x40a40000) == 0;
+                        && (getClippedOnlyMask(plane, x, y - 1) & 0x40a40000) == 0;
             }
             if (xOffset == 1 && yOffset == -1) {
                 return (mask & 0x60e40000) == 0 && (getClippedOnlyMask(plane, x + 1, y) & 0x60240000) == 0
-                       && (getClippedOnlyMask(plane, x, y - 1) & 0x40a40000) == 0;
+                        && (getClippedOnlyMask(plane, x, y - 1) & 0x40a40000) == 0;
             }
             if (xOffset == -1 && yOffset == 1) {
                 return (mask & 0x4e240000) == 0 && (getClippedOnlyMask(plane, x - 1, y) & 0x42240000) == 0
-                       && (getClippedOnlyMask(plane, x, y + 1) & 0x48240000) == 0;
+                        && (getClippedOnlyMask(plane, x, y + 1) & 0x48240000) == 0;
             }
             if (xOffset == 1 && yOffset == 1) {
                 return (mask & 0x78240000) == 0 && (getClippedOnlyMask(plane, x + 1, y) & 0x60240000) == 0
-                       && (getClippedOnlyMask(plane, x, y + 1) & 0x48240000) == 0;
+                        && (getClippedOnlyMask(plane, x, y + 1) & 0x48240000) == 0;
             }
         } else if (size == 2) {
             if (xOffset == -1 && yOffset == 0) return (getClippedOnlyMask(plane, x - 1, y) & 0x43a40000) == 0
-                                                      && (getClippedOnlyMask(plane, x - 1, y + 1) & 0x4e240000) == 0;
+                    && (getClippedOnlyMask(plane, x - 1, y + 1) & 0x4e240000) == 0;
             if (xOffset == 1 && yOffset == 0) return (getClippedOnlyMask(plane, x + 2, y) & 0x60e40000) == 0
-                                                     && (getClippedOnlyMask(plane, x + 2, y + 1) & 0x78240000) == 0;
+                    && (getClippedOnlyMask(plane, x + 2, y + 1) & 0x78240000) == 0;
             if (xOffset == 0 && yOffset == -1) return (getClippedOnlyMask(plane, x, y - 1) & 0x43a40000) == 0
-                                                      && (getClippedOnlyMask(plane, x + 1, y - 1) & 0x60e40000) == 0;
+                    && (getClippedOnlyMask(plane, x + 1, y - 1) & 0x60e40000) == 0;
             if (xOffset == 0 && yOffset == 1) return (getClippedOnlyMask(plane, x, y + 2) & 0x4e240000) == 0
-                                                     && (getClippedOnlyMask(plane, x + 1, y + 2) & 0x78240000) == 0;
+                    && (getClippedOnlyMask(plane, x + 1, y + 2) & 0x78240000) == 0;
             if (xOffset == -1 && yOffset == -1) return (getClippedOnlyMask(plane, x - 1, y) & 0x4fa40000) == 0
-                                                       && (getClippedOnlyMask(plane, x - 1, y - 1) & 0x43a40000) == 0
-                                                       && (getClippedOnlyMask(plane, x, y - 1) & 0x63e40000) == 0;
+                    && (getClippedOnlyMask(plane, x - 1, y - 1) & 0x43a40000) == 0
+                    && (getClippedOnlyMask(plane, x, y - 1) & 0x63e40000) == 0;
             if (xOffset == 1 && yOffset == -1) return (getClippedOnlyMask(plane, x + 1, y - 1) & 0x63e40000) == 0
-                                                      && (getClippedOnlyMask(plane, x + 2, y - 1) & 0x60e40000) == 0
-                                                      && (getClippedOnlyMask(plane, x + 2, y) & 0x78e40000) == 0;
+                    && (getClippedOnlyMask(plane, x + 2, y - 1) & 0x60e40000) == 0
+                    && (getClippedOnlyMask(plane, x + 2, y) & 0x78e40000) == 0;
             if (xOffset == -1 && yOffset == 1) return (getClippedOnlyMask(plane, x - 1, y + 1) & 0x4fa40000) == 0
-                                                      && (getClippedOnlyMask(plane, x - 1, y + 1) & 0x4e240000) == 0
-                                                      && (getClippedOnlyMask(plane, x, y + 2) & 0x7e240000) == 0;
+                    && (getClippedOnlyMask(plane, x - 1, y + 1) & 0x4e240000) == 0
+                    && (getClippedOnlyMask(plane, x, y + 2) & 0x7e240000) == 0;
             if (xOffset == 1 && yOffset == 1) return (getClippedOnlyMask(plane, x + 1, y + 2) & 0x7e240000) == 0
-                                                     && (getClippedOnlyMask(plane, x + 2, y + 2) & 0x78240000) == 0
-                                                     && (getClippedOnlyMask(plane, x + 1, y + 1) & 0x78e40000) == 0;
+                    && (getClippedOnlyMask(plane, x + 2, y + 2) & 0x78240000) == 0
+                    && (getClippedOnlyMask(plane, x + 1, y + 1) & 0x78e40000) == 0;
         } else {
             if (xOffset == -1 && yOffset == 0) {
                 if ((getClippedOnlyMask(plane, x - 1, y) & 0x43a40000) != 0
-                    || (getClippedOnlyMask(plane, x - 1, -1 + (y + size)) & 0x4e240000) != 0) return false;
+                        || (getClippedOnlyMask(plane, x - 1, -1 + (y + size)) & 0x4e240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x - 1, y + sizeOffset) & 0x4fa40000) != 0) return false;
             } else if (xOffset == 1 && yOffset == 0) {
                 if ((getClippedOnlyMask(plane, x + size, y) & 0x60e40000) != 0
-                    || (getClippedOnlyMask(plane, x + size, y - (-size + 1)) & 0x78240000) != 0) return false;
+                        || (getClippedOnlyMask(plane, x + size, y - (-size + 1)) & 0x78240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x + size, y + sizeOffset) & 0x78e40000) != 0) return false;
             } else if (xOffset == 0 && yOffset == -1) {
                 if ((getClippedOnlyMask(plane, x, y - 1) & 0x43a40000) != 0
-                    || (getClippedOnlyMask(plane, x + size - 1, y - 1) & 0x60e40000) != 0) return false;
+                        || (getClippedOnlyMask(plane, x + size - 1, y - 1) & 0x60e40000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x + sizeOffset, y - 1) & 0x63e40000) != 0) return false;
             } else if (xOffset == 0 && yOffset == 1) {
                 if ((getClippedOnlyMask(plane, x, y + size) & 0x4e240000) != 0
-                    || (getClippedOnlyMask(plane, x + (size - 1), y + size) & 0x78240000) != 0) return false;
+                        || (getClippedOnlyMask(plane, x + (size - 1), y + size) & 0x78240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x + sizeOffset, y + size) & 0x7e240000) != 0) return false;
             } else if (xOffset == -1 && yOffset == -1) {
                 if ((getClippedOnlyMask(plane, x - 1, y - 1) & 0x43a40000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x - 1, y + (-1 + sizeOffset)) & 0x4fa40000) != 0
-                        || (getClippedOnlyMask(plane, sizeOffset - 1 + x, y - 1) & 0x63e40000) != 0) return false;
+                            || (getClippedOnlyMask(plane, sizeOffset - 1 + x, y - 1) & 0x63e40000) != 0) return false;
             } else if (xOffset == 1 && yOffset == -1) {
                 if ((getClippedOnlyMask(plane, x + size, y - 1) & 0x60e40000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x + size, sizeOffset + (-1 + y)) & 0x78e40000) != 0
-                        || (getClippedOnlyMask(plane, x + sizeOffset, y - 1) & 0x63e40000) != 0) return false;
+                            || (getClippedOnlyMask(plane, x + sizeOffset, y - 1) & 0x63e40000) != 0) return false;
             } else if (xOffset == -1 && yOffset == 1) {
                 if ((getClippedOnlyMask(plane, x - 1, y + size) & 0x4e240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x - 1, y + sizeOffset) & 0x4fa40000) != 0
-                        || (getClippedOnlyMask(plane, -1 + (x + sizeOffset), y + size) & 0x7e240000) != 0) return false;
+                            || (getClippedOnlyMask(plane, -1 + (x + sizeOffset), y + size) & 0x7e240000) != 0)
+                        return false;
             } else if (xOffset == 1 && yOffset == 1) {
                 if ((getClippedOnlyMask(plane, x + size, y + size) & 0x78240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getClippedOnlyMask(plane, x + sizeOffset, y + size) & 0x7e240000) != 0
-                        || (getClippedOnlyMask(plane, x + size, y + sizeOffset) & 0x78e40000) != 0) return false;
+                            || (getClippedOnlyMask(plane, x + size, y + sizeOffset) & 0x78e40000) != 0) return false;
             }
         }
         return true;
@@ -685,7 +686,7 @@ public final class World {
             for (int rotate = 0; rotate < (4 - rotation); rotate++) {
                 int fakeChunckX = xOffset;
                 xOffset = yOffset;
-                yOffset = 0 - fakeChunckX;
+                yOffset = -fakeChunckX;
             }
         }
 
@@ -697,19 +698,19 @@ public final class World {
             if (xOffset == 0 && yOffset == 1) return (mask & 0x48240000) == 0;
             if (xOffset == -1 && yOffset == -1) {
                 return (mask & 0x43a40000) == 0 && (getMask(plane, x - 1, y) & 0x42240000) == 0
-                       && (getMask(plane, x, y - 1) & 0x40a40000) == 0;
+                        && (getMask(plane, x, y - 1) & 0x40a40000) == 0;
             }
             if (xOffset == 1 && yOffset == -1) {
                 return (mask & 0x60e40000) == 0 && (getMask(plane, x + 1, y) & 0x60240000) == 0
-                       && (getMask(plane, x, y - 1) & 0x40a40000) == 0;
+                        && (getMask(plane, x, y - 1) & 0x40a40000) == 0;
             }
             if (xOffset == -1 && yOffset == 1) {
                 return (mask & 0x4e240000) == 0 && (getMask(plane, x - 1, y) & 0x42240000) == 0
-                       && (getMask(plane, x, y + 1) & 0x48240000) == 0;
+                        && (getMask(plane, x, y + 1) & 0x48240000) == 0;
             }
             if (xOffset == 1 && yOffset == 1) {
                 return (mask & 0x78240000) == 0 && (getMask(plane, x + 1, y) & 0x60240000) == 0
-                       && (getMask(plane, x, y + 1) & 0x48240000) == 0;
+                        && (getMask(plane, x, y + 1) & 0x48240000) == 0;
             }
         } else if (size == 2) {
             if (xOffset == -1 && yOffset == 0)
@@ -722,57 +723,57 @@ public final class World {
                 return (getMask(plane, x, y + 2) & 0x4e240000) == 0 && (getMask(plane, x + 1, y + 2) & 0x78240000) == 0;
             if (xOffset == -1 && yOffset == -1)
                 return (getMask(plane, x - 1, y) & 0x4fa40000) == 0 && (getMask(plane, x - 1, y - 1) & 0x43a40000) == 0
-                       && (getMask(plane, x, y - 1) & 0x63e40000) == 0;
+                        && (getMask(plane, x, y - 1) & 0x63e40000) == 0;
             if (xOffset == 1 && yOffset == -1) return (getMask(plane, x + 1, y - 1) & 0x63e40000) == 0
-                                                      && (getMask(plane, x + 2, y - 1) & 0x60e40000) == 0
-                                                      && (getMask(plane, x + 2, y) & 0x78e40000) == 0;
+                    && (getMask(plane, x + 2, y - 1) & 0x60e40000) == 0
+                    && (getMask(plane, x + 2, y) & 0x78e40000) == 0;
             if (xOffset == -1 && yOffset == 1) return (getMask(plane, x - 1, y + 1) & 0x4fa40000) == 0
-                                                      && (getMask(plane, x - 1, y + 1) & 0x4e240000) == 0
-                                                      && (getMask(plane, x, y + 2) & 0x7e240000) == 0;
+                    && (getMask(plane, x - 1, y + 1) & 0x4e240000) == 0
+                    && (getMask(plane, x, y + 2) & 0x7e240000) == 0;
             if (xOffset == 1 && yOffset == 1) return (getMask(plane, x + 1, y + 2) & 0x7e240000) == 0
-                                                     && (getMask(plane, x + 2, y + 2) & 0x78240000) == 0
-                                                     && (getMask(plane, x + 1, y + 1) & 0x78e40000) == 0;
+                    && (getMask(plane, x + 2, y + 2) & 0x78240000) == 0
+                    && (getMask(plane, x + 1, y + 1) & 0x78e40000) == 0;
         } else {
             if (xOffset == -1 && yOffset == 0) {
                 if ((getMask(plane, x - 1, y) & 0x43a40000) != 0
-                    || (getMask(plane, x - 1, -1 + (y + size)) & 0x4e240000) != 0) return false;
+                        || (getMask(plane, x - 1, -1 + (y + size)) & 0x4e240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getMask(plane, x - 1, y + sizeOffset) & 0x4fa40000) != 0) return false;
             } else if (xOffset == 1 && yOffset == 0) {
                 if ((getMask(plane, x + size, y) & 0x60e40000) != 0
-                    || (getMask(plane, x + size, y - (-size + 1)) & 0x78240000) != 0) return false;
+                        || (getMask(plane, x + size, y - (-size + 1)) & 0x78240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getMask(plane, x + size, y + sizeOffset) & 0x78e40000) != 0) return false;
             } else if (xOffset == 0 && yOffset == -1) {
                 if ((getMask(plane, x, y - 1) & 0x43a40000) != 0
-                    || (getMask(plane, x + size - 1, y - 1) & 0x60e40000) != 0) return false;
+                        || (getMask(plane, x + size - 1, y - 1) & 0x60e40000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getMask(plane, x + sizeOffset, y - 1) & 0x63e40000) != 0) return false;
             } else if (xOffset == 0 && yOffset == 1) {
                 if ((getMask(plane, x, y + size) & 0x4e240000) != 0
-                    || (getMask(plane, x + (size - 1), y + size) & 0x78240000) != 0) return false;
+                        || (getMask(plane, x + (size - 1), y + size) & 0x78240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size - 1; sizeOffset++)
                     if ((getMask(plane, x + sizeOffset, y + size) & 0x7e240000) != 0) return false;
             } else if (xOffset == -1 && yOffset == -1) {
                 if ((getMask(plane, x - 1, y - 1) & 0x43a40000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getMask(plane, x - 1, y + (-1 + sizeOffset)) & 0x4fa40000) != 0
-                        || (getMask(plane, sizeOffset - 1 + x, y - 1) & 0x63e40000) != 0) return false;
+                            || (getMask(plane, sizeOffset - 1 + x, y - 1) & 0x63e40000) != 0) return false;
             } else if (xOffset == 1 && yOffset == -1) {
                 if ((getMask(plane, x + size, y - 1) & 0x60e40000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getMask(plane, x + size, sizeOffset + (-1 + y)) & 0x78e40000) != 0
-                        || (getMask(plane, x + sizeOffset, y - 1) & 0x63e40000) != 0) return false;
+                            || (getMask(plane, x + sizeOffset, y - 1) & 0x63e40000) != 0) return false;
             } else if (xOffset == -1 && yOffset == 1) {
                 if ((getMask(plane, x - 1, y + size) & 0x4e240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getMask(plane, x - 1, y + sizeOffset) & 0x4fa40000) != 0
-                        || (getMask(plane, -1 + (x + sizeOffset), y + size) & 0x7e240000) != 0) return false;
+                            || (getMask(plane, -1 + (x + sizeOffset), y + size) & 0x7e240000) != 0) return false;
             } else if (xOffset == 1 && yOffset == 1) {
                 if ((getMask(plane, x + size, y + size) & 0x78240000) != 0) return false;
                 for (int sizeOffset = 1; sizeOffset < size; sizeOffset++)
                     if ((getMask(plane, x + sizeOffset, y + size) & 0x7e240000) != 0
-                        || (getMask(plane, x + size, y + sizeOffset) & 0x78e40000) != 0) return false;
+                            || (getMask(plane, x + size, y + sizeOffset) & 0x78e40000) != 0) return false;
             }
         }
         return true;
@@ -854,7 +855,7 @@ public final class World {
         final int regionId = object.getRegionId();
         WorldObject realMapObject = getRegion(regionId).getRealObject(object);
         final WorldObject realObject = realMapObject
-                                       == null ? null : new WorldObject(realMapObject.getId(), realMapObject.getType
+                == null ? null : new WorldObject(realMapObject.getId(), realMapObject.getType
                 (), realMapObject.getRotation(), object.getX(), object.getY(), object.getPlane());
         spawnObject(object, clip);
         final int baseLocalX = object.getX() - ((regionId >> 8) * 64);
@@ -985,7 +986,7 @@ public final class World {
         int regionId = tile.getRegionId();
         for (Player player : players) {
             if (player == null || !player.hasStarted() || player.hasFinished() || player.getPlane() != tile.getPlane()
-                || !player.getMapRegionsIds().contains(regionId)) continue;
+                    || !player.getMapRegionsIds().contains(regionId)) continue;
             addGroundItem(item, tile, player, false, 3600, true);
         }
     }
@@ -1019,7 +1020,7 @@ public final class World {
                     floorItem.setInvisible(false);
                     for (Player player : players) {
                         if (player == null || player == owner || !player.hasStarted() || player.hasFinished()
-                            || player.getPlane() != tile.getPlane() || !player.getMapRegionsIds().contains(regionId))
+                                || player.getPlane() != tile.getPlane() || !player.getMapRegionsIds().contains(regionId))
                             continue;
                         player.getPackets().sendGroundItem(floorItem);
                     }
@@ -1033,7 +1034,7 @@ public final class World {
         int regionId = tile.getRegionId();
         for (Player player : players) {
             if (player == null || !player.hasStarted() || player.hasFinished() || player.getPlane() != tile.getPlane()
-                || !player.getMapRegionsIds().contains(regionId)) continue;
+                    || !player.getMapRegionsIds().contains(regionId)) continue;
             player.getPackets().sendGroundItem(floorItem);
         }
         removeGroundItem(floorItem, 180);
@@ -1060,8 +1061,8 @@ public final class World {
                 region.forceGetFloorItems().remove(floorItem);
                 for (Player player : World.getPlayers()) {
                     if (player == null || !player.hasStarted() || player.hasFinished()
-                        || player.getPlane() != floorItem.getTile().getPlane()
-                        || !player.getMapRegionsIds().contains(regionId)) continue;
+                            || player.getPlane() != floorItem.getTile().getPlane()
+                            || !player.getMapRegionsIds().contains(regionId)) continue;
                     player.getPackets().sendRemoveGroundItem(floorItem);
                 }
             } catch (Throwable e) {
@@ -1127,7 +1128,7 @@ public final class World {
         } else {
             for (Player p2 : World.getPlayers()) {
                 if (p2 == null || !p2.hasStarted() || p2.hasFinished()
-                    || p2.getPlane() != floorItem.getTile().getPlane() || !p2.getMapRegionsIds().contains(regionId))
+                        || p2.getPlane() != floorItem.getTile().getPlane() || !p2.getMapRegionsIds().contains(regionId))
                     continue;
                 p2.getPackets().sendRemoveGroundItem(floorItem);
             }
@@ -1164,7 +1165,7 @@ public final class World {
             for (Integer playerIndex : playersIndexes) {
                 Player player = players.get(playerIndex);
                 if (player == null || !player.hasStarted() || player.hasFinished() || (!player.withinDistance(shooter)
-                                                                                       && !player.withinDistance
+                        && !player.withinDistance
                         (receiver)))
                     continue;
                 player.getPackets().sendProjectile(null, startTile, receiver, gfxId, startHeight, endHeight, speed,
@@ -1181,7 +1182,7 @@ public final class World {
             for (Integer playerIndex : playersIndexes) {
                 Player player = players.get(playerIndex);
                 if (player == null || !player.hasStarted() || player.hasFinished() || (!player.withinDistance(shooter)
-                                                                                       && !player.withinDistance
+                        && !player.withinDistance
                         (receiver)))
                     continue;
                 player.getPackets().sendProjectile(null, shooter, receiver, gfxId, startHeight, endHeight, speed,
@@ -1204,12 +1205,12 @@ public final class World {
             for (Integer playerIndex : playersIndexes) {
                 Player player = players.get(playerIndex);
                 if (player == null || !player.hasStarted() || player.hasFinished() || (!player.withinDistance(shooter)
-                                                                                       && !player.withinDistance
+                        && !player.withinDistance
                         (receiver)))
                     continue;
                 int size = shooter.getSize();
                 player.getPackets().sendProjectile(receiver, new WorldTile(shooter.getCoordFaceX(size), shooter
-                        .getCoordFaceY(size), shooter.getPlane()), receiver, gfxId, startHeight, endHeight, speed,
+                                .getCoordFaceY(size), shooter.getPlane()), receiver, gfxId, startHeight, endHeight, speed,
                         delay, curve, startDistanceOffset, size);
             }
         }
@@ -1255,7 +1256,7 @@ public final class World {
         final int regionId = object.getRegionId();
         WorldObject realMapObject = getRegion(regionId).getRealObject(object);
         final WorldObject realObject = realMapObject
-                                       == null ? null : new WorldObject(realMapObject.getId(), realMapObject.getType
+                == null ? null : new WorldObject(realMapObject.getId(), realMapObject.getType
                 (), realMapObject.getRotation(), object.getX(), object.getY(), object.getPlane());
         spawnObject(object, false);
         CoresManager.slowExecutor.schedule(() -> {
@@ -1264,7 +1265,7 @@ public final class World {
                 addGroundItem(new Item(replaceId), object, null, false, 180, false);
                 for (Player p2 : players) {
                     if (p2 == null || !p2.hasStarted() || p2.hasFinished() || p2.getPlane() != object.getPlane()
-                        || !p2.getMapRegionsIds().contains(regionId)) continue;
+                            || !p2.getMapRegionsIds().contains(regionId)) continue;
                     if (realObject != null) p2.getPackets().sendSpawnedObject(realObject);
                     else p2.getPackets().sendDestroyObject(object);
                 }

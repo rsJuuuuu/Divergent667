@@ -6,8 +6,9 @@ enum Roof {
     ROOF1(233, 634, RegionBuilder.NORTH, RegionBuilder.SOUTH),
     ROOF2(235, 634, RegionBuilder.NORTH, RegionBuilder.EAST, RegionBuilder.SOUTH),
     ROOF3(236, 633, RegionBuilder.NORTH, RegionBuilder.EAST, RegionBuilder.SOUTH, RegionBuilder.WEST);
-    private int chunkX, chunkY;
-    private int[] dirs;
+    private final int chunkX;
+    private final int chunkY;
+    private final int[] dirs;
 
     Roof(int chunkX, int chunkY, int... dirs) {
         this.chunkX = chunkX;

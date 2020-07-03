@@ -16,11 +16,11 @@ public class OwnedObjectManager {
 	private static final Map<String, OwnedObjectManager> ownedObjects = new ConcurrentHashMap<>();
 
 	private Player player;
-	private WorldObject[] objects;
+	private final WorldObject[] objects;
 	private int count;
-	private long cycleTime;
+	private final long cycleTime;
 	private long lifeTime;
-	private String managerKey;
+	private final String managerKey;
 
 	public static void processAll() {
 		for (OwnedObjectManager object : ownedObjects.values())
@@ -29,7 +29,7 @@ public class OwnedObjectManager {
 
 	public static boolean isPlayerObject(Player player, WorldObject object) {
 		for (Iterator<String> it = player.getOwnedObjectManagerKeys()
-				.iterator(); it.hasNext();) {
+				.iterator(); it.hasNext(); ) {
 			OwnedObjectManager manager = ownedObjects.get(it.next());
 			if (manager == null) {
 				it.remove();
@@ -38,7 +38,7 @@ public class OwnedObjectManager {
 			if (manager.getCurrentObject().getX() == object.getX()
 					&& manager.getCurrentObject().getY() == object.getY()
 					&& manager.getCurrentObject().getPlane() == object
-							.getPlane()
+					.getPlane()
 					&& manager.getCurrentObject().getId() == object.getId())
 				return true;
 		}

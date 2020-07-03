@@ -1,17 +1,20 @@
 package com.rs.game.player.cutscenes.actions;
 
-import com.rs.game.world.World;
-import com.rs.game.world.WorldTile;
 import com.rs.game.npc.Npc;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.Cutscene;
+import com.rs.game.world.World;
+import com.rs.game.world.WorldTile;
 
 public class CreateNPCAction extends CutsceneAction {
 
-	private int id, x, y, plane;
+	private final int id;
+	private final int x;
+	private final int y;
+	private final int plane;
 
 	public CreateNPCAction(int cachedObjectIndex, int id, int x, int y,
-			int plane, int actionDelay) {
+						   int plane, int actionDelay) {
 		super(cachedObjectIndex, actionDelay);
 		this.id = id;
 		this.x = x;

@@ -9,9 +9,9 @@ import java.util.Hashtable;
 @SuppressWarnings("unused")
 public class IComponentDefinitions {
 
-	private static IComponentDefinitions[][] icomponentsdefs = new IComponentDefinitions[Utils
+	private static final IComponentDefinitions[][] icomponentsdefs = new IComponentDefinitions[Utils
 			.getInterfaceDefinitionsSize()][];
-	private static IComponentSettings GLOBAL_SETTINGS = new IComponentSettings(
+	private static final IComponentSettings GLOBAL_SETTINGS = new IComponentSettings(
 			0, -1);
 
 	protected int anInt4679;
@@ -210,7 +210,7 @@ public class IComponentDefinitions {
 			newInt = -1;
 		}
 		type = stream.readUnsignedByte();
-		if ((type & 0x80 ^ 0xffffffff) != -1) {
+		if ((~(type & 0x80)) != -1) {
 			type &= 0x7f;
 			aString4765 = stream.readString();
 		}
@@ -230,14 +230,14 @@ public class IComponentDefinitions {
 			parentId = -1;
 		}
 		int i_17_ = stream.readUnsignedByte();
-		hidden = (0x1 & i_17_ ^ 0xffffffff) != -1;
+		hidden = (~(0x1 & i_17_)) != -1;
 		if (newInt >= 0) {
-			aBoolean4858 = (i_17_ & 0x2 ^ 0xffffffff) != -1;
+			aBoolean4858 = (~(i_17_ & 0x2)) != -1;
 		}
 		if (type == 0) {
 			anInt4735 = stream.readUnsignedShort();
 			anInt4691 = stream.readUnsignedShort();
-			if ((newInt ^ 0xffffffff) > -1) {
+			if ((~newInt) > -1) {
 				aBoolean4858 = stream.readUnsignedByte() == 1;
 			}
 		}
@@ -245,7 +245,7 @@ public class IComponentDefinitions {
 			anInt4820 = stream.readInt();
 			anInt4728 = stream.readUnsignedShort();
 			int i_18_ = stream.readUnsignedByte();
-			aBoolean4861 = (i_18_ & 0x1 ^ 0xffffffff) != -1;
+			aBoolean4861 = (~(i_18_ & 0x1)) != -1;
 			aBoolean4738 = (i_18_ & 0x2) != 0;
 			anInt4757 = stream.readUnsignedByte();
 			anInt4744 = stream.readUnsignedByte();
@@ -253,8 +253,8 @@ public class IComponentDefinitions {
 			aBoolean4732 = stream.readUnsignedByte() == 1;
 			aBoolean4743 = stream.readUnsignedByte() == 1;
 			anInt4754 = stream.readInt();
-			if ((newInt ^ 0xffffffff) <= -4) {
-				aBoolean4782 = (stream.readUnsignedByte() ^ 0xffffffff) == -2;
+			if ((~newInt) <= -4) {
+				aBoolean4782 = (~stream.readUnsignedByte()) == -2;
 			}
 		}
 		if (type == 6) {
@@ -263,15 +263,15 @@ public class IComponentDefinitions {
 				anInt4864 = stream.readBigSmart();
 			else {
 				anInt4864 = stream.readUnsignedShort();
-				if ((anInt4864 ^ 0xffffffff) == -65536) {
+				if ((~anInt4864) == -65536) {
 					anInt4864 = -1;
 				}
 			}
 			int i_19_ = stream.readUnsignedByte();
 			aBoolean4707 = (0x4 & i_19_) == 4;
 			boolean bool = (0x1 & i_19_) == 1;
-			aBoolean4865 = (i_19_ & 0x2 ^ 0xffffffff) == -3;
-			aBoolean4727 = (0x8 & i_19_ ^ 0xffffffff) == -9;
+			aBoolean4865 = (~(i_19_ & 0x2)) == -3;
+			aBoolean4727 = (~(0x8 & i_19_)) == -9;
 			if (bool) {
 				anInt4709 = stream.readShort();
 				anInt4797 = stream.readShort();
@@ -292,14 +292,14 @@ public class IComponentDefinitions {
 				anInt4773 = stream.readBigSmart();
 			else {
 				anInt4773 = stream.readUnsignedShort();
-				if ((anInt4773 ^ 0xffffffff) == -65536) {
+				if ((~anInt4773) == -65536) {
 					anInt4773 = -1;
 				}
 			}
 			if (aByte4750 != 0) {
 				anInt4800 = stream.readUnsignedShort();
 			}
-			if ((aByte4741 ^ 0xffffffff) != -1) {
+			if ((~aByte4741) != -1) {
 				anInt4849 = stream.readUnsignedShort();
 			}
 		}
@@ -308,37 +308,37 @@ public class IComponentDefinitions {
 				anInt4759 = stream.readBigSmart();
 			else {
 				anInt4759 = stream.readUnsignedShort();
-				if ((anInt4759 ^ 0xffffffff) == -65536) {
+				if ((~anInt4759) == -65536) {
 					anInt4759 = -1;
 				}
 			}
-			if ((newInt ^ 0xffffffff) <= -3) {
-				aBoolean4832 = (stream.readUnsignedByte() ^ 0xffffffff) == -2;
+			if ((~newInt) <= -3) {
+				aBoolean4832 = (~stream.readUnsignedByte()) == -2;
 			}
 			aString4790 = stream.readString();
 			anInt4697 = stream.readUnsignedByte();
 			anInt4835 = stream.readUnsignedByte();
 			anInt4825 = stream.readUnsignedByte();
-			aBoolean4710 = (stream.readUnsignedByte() ^ 0xffffffff) == -2;
+			aBoolean4710 = (~stream.readUnsignedByte()) == -2;
 			anInt4754 = stream.readInt();
 			anInt4757 = stream.readUnsignedByte();
-			if ((newInt ^ 0xffffffff) <= -1) {
+			if ((~newInt) <= -1) {
 				anInt4767 = stream.readUnsignedByte();
 			}
 		}
-		if ((type ^ 0xffffffff) == -4) {
+		if ((~type) == -4) {
 			anInt4754 = stream.readInt();
-			aBoolean4769 = (stream.readUnsignedByte() ^ 0xffffffff) == -2;
+			aBoolean4769 = (~stream.readUnsignedByte()) == -2;
 			anInt4757 = stream.readUnsignedByte();
 		}
-		if ((type ^ 0xffffffff) == -10) {
+		if ((~type) == -10) {
 			anInt4752 = stream.readUnsignedByte();
 			anInt4754 = stream.readInt();
 			aBoolean4721 = stream.readUnsignedByte() == 1;
 		}
 		int i_20_ = stream.read24BitInt();
 		int i_21_ = stream.readUnsignedByte();
-		if ((i_21_ ^ 0xffffffff) != -1) {
+		if ((~i_21_) != -1) {
 			aByteArray4806 = new byte[11];
 			aByteArray4733 = new byte[11];
 			anIntArray4705 = new int[11];
@@ -350,7 +350,7 @@ public class IComponentDefinitions {
 					i_21_ = -1;
 				}
 				byte b_23_ = (byte) stream.readByte();
-				if ((b_23_ ^ 0xffffffff) != -1) {
+				if ((~b_23_) != -1) {
 					aBoolean4802 = true;
 				}
 				byte b_24_ = (byte) stream.readByte();
@@ -364,18 +364,18 @@ public class IComponentDefinitions {
 		int i_26_ = 0xf & i_25_;
 		if (i_26_ > 0) {
 			aStringArray4686 = new String[i_26_];
-			for (int i_27_ = 0; (i_27_ ^ 0xffffffff) > (i_26_ ^ 0xffffffff); i_27_++)
+			for (int i_27_ = 0; (~i_27_) > (~i_26_); i_27_++)
 				aStringArray4686[i_27_] = stream.readString();
 		}
 		int i_28_ = i_25_ >> 4;
-		if ((i_28_ ^ 0xffffffff) < -1) {
+		if ((~i_28_) < -1) {
 			int i_29_ = stream.readUnsignedByte();
 			anIntArray4863 = new int[i_29_ - -1];
-			for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > (anIntArray4863.length ^ 0xffffffff); i_30_++)
+			for (int i_30_ = 0; (~i_30_) > (~anIntArray4863.length); i_30_++)
 				anIntArray4863[i_30_] = -1;
 			anIntArray4863[i_29_] = stream.readUnsignedShort();
 		}
-		if ((i_28_ ^ 0xffffffff) < -2) {
+		if ((~i_28_) < -2) {
 			int i_31_ = stream.readUnsignedByte();
 			anIntArray4863[i_31_] = stream.readUnsignedShort();
 		}
@@ -388,13 +388,13 @@ public class IComponentDefinitions {
 		anInt4860 = stream.readUnsignedByte();
 		aString4786 = stream.readString();
 		int i_32_ = -1;
-		if ((method925(i_20_) ^ 0xffffffff) != -1) {
+		if ((~method925(i_20_)) != -1) {
 			i_32_ = stream.readUnsignedShort();
 			if (i_32_ == 65535) {
 				i_32_ = -1;
 			}
 			anInt4698 = stream.readUnsignedShort();
-			if ((anInt4698 ^ 0xffffffff) == -65536) {
+			if ((~anInt4698) == -65536) {
 				anInt4698 = -1;
 			}
 			anInt4839 = stream.readUnsignedShort();
@@ -433,7 +433,7 @@ public class IComponentDefinitions {
 		anObjectArray4788 = decodeScript(stream);
 		anObjectArray4701 = decodeScript(stream);
 		anObjectArray4770 = decodeScript(stream);
-		if ((newInt ^ 0xffffffff) <= -1) {
+		if ((~newInt) <= -1) {
 			anObjectArray4751 = decodeScript(stream);
 		}
 		anObjectArray4834 = decodeScript(stream);
@@ -455,7 +455,7 @@ public class IComponentDefinitions {
 
 	private final Object[] decodeScript(InputStream buffer) {
 		int i = buffer.readUnsignedByte();
-		if ((i ^ 0xffffffff) == -1) {
+		if ((~i) == -1) {
 			return null;
 		}
 		Object[] objects = new Object[i];
@@ -463,7 +463,7 @@ public class IComponentDefinitions {
 			int i_4_ = buffer.readUnsignedByte();
 			if (i_4_ == 0) {
 				objects[i_3_] = buffer.readInt();
-			} else if ((i_4_ ^ 0xffffffff) == -2) {
+			} else if ((~i_4_) == -2) {
 				objects[i_3_] = buffer.readString();
 			}
 		}

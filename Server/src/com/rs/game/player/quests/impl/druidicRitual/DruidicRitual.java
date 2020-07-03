@@ -24,8 +24,8 @@ public class DruidicRitual extends Quest {
     static final int KAQEMEEX = 455;
     static final int SANFEW = 454;
 
-    private Dialogue kaqemeexDialogue = new KaqemeexDialogue();
-    private Dialogue sanfewDialogue = new SanfewDialogue();
+    private final Dialogue kaqemeexDialogue = new KaqemeexDialogue();
+    private final Dialogue sanfewDialogue = new SanfewDialogue();
 
     @Override
     public int getQuestId() {

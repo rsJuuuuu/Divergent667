@@ -20,7 +20,7 @@ public final class Huffman {
 		huffmanAlgorithm3 = new int[8];
 		int[] is = new int[33];
 		int i_4_ = 0;
-		for (int i_5_ = 0; (fileLength ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++) {
+		for (int i_5_ = 0; (~fileLength) < (~i_5_); i_5_++) {
 			int i_6_ = huffmanFile[i_5_];
 			if (i_6_ != 0) {
 				int i_7_ = 1 << 32 - i_6_;
@@ -33,7 +33,7 @@ public final class Huffman {
 						if (i_8_ != i_11_)
 							break;
 						int i_12_ = 1 << 32 + -i_10_;
-						if ((i_12_ & i_11_ ^ 0xffffffff) != -1) {
+						if ((~(i_12_ & i_11_)) != -1) {
 							is[i_10_] = is[-1 + i_10_];
 							break;
 						}
@@ -48,24 +48,23 @@ public final class Huffman {
 						is[i_13_] = i_9_;
 				}
 				int i_14_ = 0;
-				for (int i_15_ = 0; (i_6_ ^ 0xffffffff) < (i_15_ ^ 0xffffffff); i_15_++) {
+				for (int i_15_ = 0; (~i_6_) < (~i_15_); i_15_++) {
 					int i_16_ = -2147483648 >>> i_15_;
-					if ((i_8_ & i_16_ ^ 0xffffffff) == -1)
+					if ((~(i_8_ & i_16_)) == -1)
 						i_14_++;
 					else {
 						if (huffmanAlgorithm3[i_14_] == 0)
 							huffmanAlgorithm3[i_14_] = i_4_;
 						i_14_ = huffmanAlgorithm3[i_14_];
 					}
-					if ((huffmanAlgorithm3.length ^ 0xffffffff) >= (i_14_ ^ 0xffffffff)) {
+					if ((~huffmanAlgorithm3.length) >= (~i_14_)) {
 						int[] is_17_ = new int[huffmanAlgorithm3.length * 2];
 						System.arraycopy(huffmanAlgorithm3, 0, is_17_, 0, huffmanAlgorithm3.length);
 						huffmanAlgorithm3 = is_17_;
 					}
-					i_16_ >>>= 1;
 				}
-				huffmanAlgorithm3[i_14_] = i_5_ ^ 0xffffffff;
-				if ((i_4_ ^ 0xffffffff) >= (i_14_ ^ 0xffffffff))
+				huffmanAlgorithm3[i_14_] = ~i_5_;
+				if ((~i_4_) >= (~i_14_))
 					i_4_ = 1 + i_14_;
 			}
 		}
@@ -74,51 +73,51 @@ public final class Huffman {
 	public static int decryptMessage(byte[] messageData,
                                      int messagedDataLength, byte[] streamBuffer, int streamOffset,
                                      int messageDataOffset) {
-		if ((messagedDataLength ^ 0xffffffff) == -1)
+		if ((~messagedDataLength) == -1)
 			return 0;
 		int i = 0;
 		messagedDataLength += messageDataOffset;
 		int i_1_ = streamOffset;
-		for (;;) {
+		for (; ; ) {
 			byte i_2_ = streamBuffer[i_1_];
-			if ((i_2_ ^ 0xffffffff) <= -1)
+			if ((~i_2_) <= -1)
 				i++;
 			else
 				i = huffmanAlgorithm3[i];
 			int i_3_;
 			if ((i_3_ = huffmanAlgorithm3[i]) < 0) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
+				messageData[messageDataOffset++] = (byte) (~i_3_);
 				if (messagedDataLength <= messageDataOffset)
 					break;
 				i = 0;
 			}
-			if ((i_2_ & 0x40 ^ 0xffffffff) == -1)
+			if ((~(i_2_ & 0x40)) == -1)
 				i++;
 			else
 				i = huffmanAlgorithm3[i];
-			if (((i_3_ = huffmanAlgorithm3[i]) ^ 0xffffffff) > -1) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
+			if ((~(i_3_ = huffmanAlgorithm3[i])) > -1) {
+				messageData[messageDataOffset++] = (byte) (~i_3_);
 				if (messagedDataLength <= messageDataOffset)
 					break;
 				i = 0;
 			}
-			if ((0x20 & i_2_ ^ 0xffffffff) != -1)
-				i = huffmanAlgorithm3[i];
-			else
-				i++;
-			if ((i_3_ = huffmanAlgorithm3[i]) < 0) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
-				if (messagedDataLength <= messageDataOffset)
-					break;
-				i = 0;
-			}
-			if ((0x10 & i_2_ ^ 0xffffffff) != -1)
+			if ((~(0x20 & i_2_)) != -1)
 				i = huffmanAlgorithm3[i];
 			else
 				i++;
 			if ((i_3_ = huffmanAlgorithm3[i]) < 0) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
-				if ((messageDataOffset ^ 0xffffffff) <= (messagedDataLength ^ 0xffffffff))
+				messageData[messageDataOffset++] = (byte) (~i_3_);
+				if (messagedDataLength <= messageDataOffset)
+					break;
+				i = 0;
+			}
+			if ((~(0x10 & i_2_)) != -1)
+				i = huffmanAlgorithm3[i];
+			else
+				i++;
+			if ((i_3_ = huffmanAlgorithm3[i]) < 0) {
+				messageData[messageDataOffset++] = (byte) (~i_3_);
+				if ((~messageDataOffset) <= (~messagedDataLength))
 					break;
 				i = 0;
 			}
@@ -127,17 +126,17 @@ public final class Huffman {
 			else
 				i = huffmanAlgorithm3[i];
 			if ((i_3_ = huffmanAlgorithm3[i]) < 0) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
+				messageData[messageDataOffset++] = (byte) (~i_3_);
 				if (messageDataOffset >= messagedDataLength)
 					break;
 				i = 0;
 			}
-			if ((0x4 & i_2_ ^ 0xffffffff) != -1)
+			if ((~(0x4 & i_2_)) != -1)
 				i = huffmanAlgorithm3[i];
 			else
 				i++;
-			if (((i_3_ = huffmanAlgorithm3[i]) ^ 0xffffffff) > -1) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
+			if ((~(i_3_ = huffmanAlgorithm3[i])) > -1) {
+				messageData[messageDataOffset++] = (byte) (~i_3_);
 				if (messageDataOffset >= messagedDataLength)
 					break;
 				i = 0;
@@ -146,19 +145,19 @@ public final class Huffman {
 				i = huffmanAlgorithm3[i];
 			else
 				i++;
-			if (((i_3_ = huffmanAlgorithm3[i]) ^ 0xffffffff) > -1) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
+			if ((~(i_3_ = huffmanAlgorithm3[i])) > -1) {
+				messageData[messageDataOffset++] = (byte) (~i_3_);
 				if (messagedDataLength <= messageDataOffset)
 					break;
 				i = 0;
 			}
-			if ((0x1 & i_2_ ^ 0xffffffff) != -1)
+			if ((~(0x1 & i_2_)) != -1)
 				i = huffmanAlgorithm3[i];
 			else
 				i++;
 			if ((i_3_ = huffmanAlgorithm3[i]) < 0) {
-				messageData[messageDataOffset++] = (byte) (i_3_ ^ 0xffffffff);
-				if ((messageDataOffset ^ 0xffffffff) <= (messagedDataLength ^ 0xffffffff))
+				messageData[messageDataOffset++] = (byte) (~i_3_);
+				if ((~messageDataOffset) <= (~messagedDataLength))
 					break;
 				i = 0;
 			}
@@ -172,7 +171,7 @@ public final class Huffman {
                                      byte[] messageData) {
 		int i = 0;
 		messageDataLength += messageDataOffset;
-		int i_19_ = streamOffset << 309760323;
+		int i_19_ = streamOffset << 3;
 		for (/**/; messageDataOffset < messageDataLength; messageDataOffset++) {
 			int i_20_ = 0xff & messageData[messageDataOffset];
 			int i_21_ = huffmanAlgorithm1[i_20_];
@@ -180,10 +179,10 @@ public final class Huffman {
 			if (i_22_ == 0)
 				throw new RuntimeException("No codeword for data value "
 						+ i_20_);
-			int i_23_ = i_19_ >> -976077821;
+			int i_23_ = i_19_ >> 3;
 			int i_24_ = 0x7 & i_19_;
-			i &= -i_24_ >> -1041773793;
-			int i_25_ = (-1 + i_24_ - -i_22_ >> -2003626461) + i_23_;
+			i &= -i_24_ >> 31;
+			int i_25_ = (-1 + i_24_ - -i_22_ >> 3) + i_23_;
 			i_19_ += i_22_;
 			i_24_ += 24;
 			streamBuffer[i_23_] = (byte) (i = (i | (i_21_ >>> i_24_)));
@@ -191,15 +190,15 @@ public final class Huffman {
 				i_24_ -= 8;
 				i_23_++;
 				streamBuffer[i_23_] = (byte) (i = i_21_ >>> i_24_);
-				if ((i_23_ ^ 0xffffffff) > (i_25_ ^ 0xffffffff)) {
+				if ((~i_23_) > (~i_25_)) {
 					i_24_ -= 8;
 					i_23_++;
 					streamBuffer[i_23_] = (byte) (i = i_21_ >>> i_24_);
-					if ((i_23_ ^ 0xffffffff) > (i_25_ ^ 0xffffffff)) {
+					if ((~i_23_) > (~i_25_)) {
 						i_24_ -= 8;
 						i_23_++;
 						streamBuffer[i_23_] = (byte) (i = i_21_ >>> i_24_);
-						if ((i_25_ ^ 0xffffffff) < (i_23_ ^ 0xffffffff)) {
+						if ((~i_25_) < (~i_23_)) {
 							i_23_++;
 							i_24_ -= 8;
 							streamBuffer[i_23_] = (byte) (i = i_21_ << -i_24_);
@@ -208,7 +207,7 @@ public final class Huffman {
 				}
 			}
 		}
-		return -streamOffset + (7 + i_19_ >> 1737794179);
+		return -streamOffset + (7 + i_19_ >> 3);
 	}
 
 	public static int sendEncryptMessage(OutputStream stream, String message) {

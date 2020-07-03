@@ -1,42 +1,41 @@
 package com.rs.game.player.controllers.impl;
 
-import com.rs.game.world.Animation;
-import com.rs.game.world.WorldObject;
-import com.rs.game.world.WorldTile;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.controllers.Controller;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.world.Animation;
+import com.rs.game.world.WorldObject;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
 
 import java.util.LinkedList;
 
 /**
  * Controlls the fightpits minigames.
- * 
+ *
  * @author Dj Khaled :troll:
- * 
  */
 public class PitsController extends Controller {
 
-	private LinkedList<Player> playing = new LinkedList<>();
+	private final LinkedList<Player> playing = new LinkedList<>();
 
-	private LinkedList<Player> lobby = new LinkedList<>();
+	private final LinkedList<Player> lobby = new LinkedList<>();
 
-	private WorldTile[] GAME_TELEPORTS = {
+	private final WorldTile[] GAME_TELEPORTS = {
 			new WorldTile(2384 + Utils.random(28), 5133 + Utils.random(3), 0),
 			new WorldTile(2410 + Utils.random(3), 5140 + Utils.random(17), 0),
 			new WorldTile(2392 + Utils.random(10), 5141 + Utils.random(25), 0),
 			new WorldTile(2383 + Utils.random(2), 5141 + Utils.random(14), 0),
-			new WorldTile(2392 + Utils.random(11), 5145 + Utils.random(19), 0) };
+			new WorldTile(2392 + Utils.random(11), 5145 + Utils.random(19), 0)};
 
-	private WorldTile[] ORB_TELEPORTS = { new WorldTile(2399, 5171, 0),
+	private final WorldTile[] ORB_TELEPORTS = {new WorldTile(2399, 5171, 0),
 			new WorldTile(2398, 5150, 0), new WorldTile(2384, 5157, 0),
 			new WorldTile(2409, 5158, 0), new WorldTile(2411, 5137, 0),
-			new WorldTile(2388, 5138, 0) };
+			new WorldTile(2388, 5138, 0)};
 
-	private WorldTile LOBBY_TELEPORT = new WorldTile(2395 + Utils.random(8),
+	private final WorldTile LOBBY_TELEPORT = new WorldTile(2395 + Utils.random(8),
 			5170 + Utils.random(3), 0);
 
 	private int reward;

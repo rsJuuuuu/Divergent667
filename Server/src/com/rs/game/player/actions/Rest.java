@@ -1,14 +1,14 @@
 package com.rs.game.player.actions;
 
-import com.rs.game.world.Animation;
 import com.rs.game.player.Player;
+import com.rs.game.world.Animation;
 import com.rs.utils.Utils;
 import com.rs.utils.stringUtils.TimeUtils;
 
 public class Rest extends Action {
 
-	private static int[][] REST_DEFS = { { 5713, 1549, 5748 },
-			{ 11786, 1550, 11788 }, { 5713, 1551, 2921 }
+	private static final int[][] REST_DEFS = {{5713, 1549, 5748},
+			{11786, 1550, 11788}, {5713, 1551, 2921}
 
 	};
 

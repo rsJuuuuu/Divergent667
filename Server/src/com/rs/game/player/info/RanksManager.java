@@ -27,9 +27,13 @@ public class RanksManager {
         PLATINUM_MEMBER("Platinum Member", new Color(255, 0, 0), null, new Color(255, 255, 255), null, 14, 6),
         NORMAL("Player", new Color(0, 255, 255), null, new Color(0, 0, 255), null, -1, 0);
 
-        private int crown, rights;
-        private String title;
-        private Color titleColor, titleShade, messageColor, messageShade;
+        private final int crown;
+        private final int rights;
+        private final String title;
+        private final Color titleColor;
+        private final Color titleShade;
+        private final Color messageColor;
+        private final Color messageShade;
 
         Ranks(String title, Color titleColor, Color titleShade, Color messageColor, Color messageShade, int crown,
               int rights) {

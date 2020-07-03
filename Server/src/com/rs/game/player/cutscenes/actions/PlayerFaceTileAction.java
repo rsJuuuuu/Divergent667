@@ -1,12 +1,13 @@
 package com.rs.game.player.cutscenes.actions;
 
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.Cutscene;
+import com.rs.game.world.WorldTile;
 
 public class PlayerFaceTileAction extends CutsceneAction {
 
-	private int x, y;
+	private final int x;
+	private final int y;
 
 	public PlayerFaceTileAction(int x, int y, int actionDelay) {
 		super(-1, actionDelay);

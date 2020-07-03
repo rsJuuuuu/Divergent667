@@ -29,7 +29,7 @@ public final class ConfigDefinitions {
 		ConfigDefinitions script = configDefs.get(id);
 		if (script != null)
 			return script;
-		byte[] data = Cache.STORE.getIndexes()[22].getFile(id >>> 1416501898,
+		byte[] data = Cache.STORE.getIndexes()[22].getFile(id >>> 10,
 				id & 0x3ff);
 		script = new ConfigDefinitions();
 		if (data != null)

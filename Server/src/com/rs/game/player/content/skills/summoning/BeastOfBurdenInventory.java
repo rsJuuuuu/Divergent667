@@ -27,7 +27,7 @@ public class BeastOfBurdenInventory implements Serializable {
     private transient Player player;
     private transient Follower follower;
 
-    private ItemsContainer<Item> beastItems;
+    private final ItemsContainer<Item> beastItems;
 
     public BeastOfBurdenInventory(int size) {
         beastItems = new ItemsContainer<>(size, false);

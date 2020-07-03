@@ -44,17 +44,17 @@ public final class Mining extends Action implements Handler {
         Adamant_Ore(70, 95, 449, 130, 25, 11552, 180, 0, new int[]{3273, 3040, 11939, 11941}),
         Runite_Ore(85, 125, 451, 150, 30, 11552, 360, 0, new int[]{14860, 14861});
 
-        private double xp;
+        private final double xp;
 
-        private int level;
-        private int oreId;
-        private int oreBaseTime;
-        private int oreRandomTime;
-        private int emptySpot;
-        private int respawnDelay;
-        private int randomLifeProbability;
+        private final int level;
+        private final int oreId;
+        private final int oreBaseTime;
+        private final int oreRandomTime;
+        private final int emptySpot;
+        private final int respawnDelay;
+        private final int randomLifeProbability;
 
-        private int[] objectIds;
+        private final int[] objectIds;
 
         RockDefinitions(int level, double xp, int oreId, int oreBaseTime, int oreRandomTime, int emptySpot, int
                 respawnDelay, int randomLifeProbability, int[] objectIds) {

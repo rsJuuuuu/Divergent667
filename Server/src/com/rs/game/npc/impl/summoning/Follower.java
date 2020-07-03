@@ -29,7 +29,7 @@ public class Follower extends Npc {
 
     private transient Player owner;
 
-    private FollowerData data;
+    private final FollowerData data;
 
     private BeastOfBurdenInventory bob;
 
@@ -44,7 +44,7 @@ public class Follower extends Npc {
         setRun(true);
     }
 
-    private transient int checkNearDirs[][];
+    private transient int[][] checkNearDirs;
     private transient boolean sentRequestMoveMessage;
 
     private void spawnPet() {
@@ -456,7 +456,7 @@ public class Follower extends Npc {
 
     public void restoreSpecialAttack(int energy) {
         if (specialEnergy >= 60) return;
-        specialEnergy = energy + specialEnergy >= 60 ? 60 : specialEnergy + energy;
+        specialEnergy = Math.min(energy + specialEnergy, 60);
         refreshSpecialEnergy();
     }
 }

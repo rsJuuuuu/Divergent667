@@ -65,15 +65,15 @@ public class ArmourSets {
 				11860, 10334, 10330, 10332, 10336), THIRDAGEMAGE(11862, 10342,
 				10334, 10338, 10340);
 
-		private int setId;
-		private int[] items;
+		private final int setId;
+		private final int[] items;
 
 		Sets(int setId, int... items) {
 			this.setId = setId;
 			this.items = items;
 		}
 
-		private static Map<Integer, Sets> sets = new HashMap<>();
+		private static final Map<Integer, Sets> sets = new HashMap<>();
 
 		public static Sets forId(int itemId) {
 			return sets.get(itemId);

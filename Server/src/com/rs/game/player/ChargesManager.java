@@ -14,7 +14,7 @@ public class ChargesManager implements Serializable {
 
 	private transient Player player;
 
-	private HashMap<Integer, Integer> charges;
+	private final HashMap<Integer, Integer> charges;
 
 	public ChargesManager() {
 		charges = new HashMap<>();

@@ -18,18 +18,19 @@ import java.util.HashMap;
  */
 public class StatDrainEffect extends Effect {
 
-    private int[] skills;
+    private final int[] skills;
 
-    private int projectileId;
+    private final int projectileId;
 
     private double initial, boostCap;
 
-    private boolean leech;
+    private final boolean leech;
 
-    private Animation animation;
-    private Graphics startGfx, endGfx;
+    private final Animation animation;
+    private final Graphics startGfx;
+    private final Graphics endGfx;
 
-    private HashMap<Integer, Double> stats = new HashMap<>();
+    private final HashMap<Integer, Double> stats = new HashMap<>();
 
     /**
      * Sap curse

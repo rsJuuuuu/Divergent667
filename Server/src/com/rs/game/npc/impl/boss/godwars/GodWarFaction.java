@@ -19,7 +19,7 @@ import static com.rs.utils.Constants.*;
  */
 public class GodWarFaction extends Npc {
 
-    private int faction;
+    private final int faction;
 
     public GodWarFaction(int id, WorldTile tile, int mapAreaNameHash, boolean canBeAttackFromOutOfArea, boolean
             spawned, int faction) {

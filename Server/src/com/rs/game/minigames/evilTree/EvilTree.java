@@ -4,13 +4,13 @@ import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.info.RequirementsManager;
-import com.rs.utils.game.CombatUtils;
 import com.rs.game.world.Animation;
 import com.rs.game.world.World;
 import com.rs.game.world.WorldObject;
 import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
 import com.rs.utils.areas.Rectangle;
+import com.rs.utils.game.CombatUtils;
 import com.rs.utils.stringUtils.TimeUtils;
 
 import java.util.HashMap;
@@ -30,14 +30,14 @@ public class EvilTree extends WorldObject {
     private boolean grown = false;
 
     private EvilRoot[] roots = new EvilRoot[4];
-    private WorldObject[] fires = new WorldObject[9];
+    private final WorldObject[] fires = new WorldObject[9];
 
-    private TreeManager.EvilTreeDefinitions definitions;
+    private final TreeManager.EvilTreeDefinitions definitions;
 
     /**
      * Who has damaged this -> who shall be rewarded
      */
-    private HashMap<String, Integer> damageReceived = new HashMap<>();
+    private final HashMap<String, Integer> damageReceived = new HashMap<>();
 
     EvilTree(TreeManager.EvilTreeDefinitions definitions, WorldTile location) {
         super(TreeManager.SAPLING_ID, 10, 0, location.getX(), location.getY(), location.getPlane());

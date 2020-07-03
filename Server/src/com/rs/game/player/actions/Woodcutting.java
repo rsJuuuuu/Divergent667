@@ -35,14 +35,14 @@ public final class Woodcutting extends Action {
         MUTATED_JADE(95, 375.5, 21358, 185, 15, -1, 199, 10),
         VINES(1, 1, -1, 15, 15, -1, 15, 0);
 
-        private int level;
-        private double xp;
-        private int logsId;
-        private int logBaseTime;
-        private int logRandomTime;
-        private int stumpId;
-        private int respawnDelay;
-        private int randomLifeProbability;
+        private final int level;
+        private final double xp;
+        private final int logsId;
+        private final int logBaseTime;
+        private final int logRandomTime;
+        private final int stumpId;
+        private final int respawnDelay;
+        private final int randomLifeProbability;
 
         TreeDefinitions(int level, double xp, int logsId, int logBaseTime, int logRandomTime, int stumpId, int
                 respawnDelay, int randomLifeProbability) {
@@ -89,11 +89,11 @@ public final class Woodcutting extends Action {
         }
     }
 
-    private WorldObject tree;
-    private TreeDefinitions definitions;
+    private final WorldObject tree;
+    private final TreeDefinitions definitions;
 
     private int emoteId;
-    private boolean usingBeaver = false;
+    private final boolean usingBeaver = false;
     private int axeTime;
 
     public Woodcutting(WorldObject tree, TreeDefinitions definitions) {

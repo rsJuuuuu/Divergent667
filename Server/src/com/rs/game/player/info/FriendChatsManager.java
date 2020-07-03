@@ -1,14 +1,14 @@
 package com.rs.game.player.info;
 
 import com.rs.Settings;
-import com.rs.game.world.World;
 import com.rs.game.minigames.War;
 import com.rs.game.player.Player;
+import com.rs.game.player.PlayerUtils;
 import com.rs.game.player.social.FriendsIgnores;
 import com.rs.game.player.social.QuickChatMessage;
+import com.rs.game.world.World;
 import com.rs.io.OutputStream;
 import com.rs.utils.Utils;
-import com.rs.game.player.PlayerUtils;
 import com.rs.utils.stringUtils.TextUtils;
 import com.rs.utils.stringUtils.TimeUtils;
 
@@ -18,11 +18,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class FriendChatsManager {
 
-    private String owner;
-    private String ownerDisplayName;
+    private final String owner;
+    private final String ownerDisplayName;
     private FriendsIgnores settings;
-    private CopyOnWriteArrayList<Player> players;
-    private ConcurrentHashMap<String, Long> bannedPlayers;
+    private final CopyOnWriteArrayList<Player> players;
+    private final ConcurrentHashMap<String, Long> bannedPlayers;
     private byte[] dataBlock;
     private War war;
     private boolean challenger;

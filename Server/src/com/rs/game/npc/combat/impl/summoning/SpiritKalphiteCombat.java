@@ -21,16 +21,14 @@ public class SpiritKalphiteCombat extends CombatScript {
         Follower follower = (Follower) npc;
         boolean usingSpecial = follower.hasSpecialOn();
         int damage;
+        npc.setNextAnimation(new Animation(8519));
         if (usingSpecial) {
-            npc.setNextAnimation(new Animation(8519));
             npc.setNextGraphics(new Graphics(8519));
             damage = getRandomMaxHit(npc, 20, NpcCombatDefinitions.MELEE, target);
-            delayHit(npc, 1, target, getMeleeHit(npc, damage));
         } else {
-            npc.setNextAnimation(new Animation(8519));
             damage = getRandomMaxHit(npc, 50, NpcCombatDefinitions.MELEE, target);
-            delayHit(npc, 1, target, getMeleeHit(npc, damage));
         }
+        delayHit(npc, 1, target, getMeleeHit(npc, damage));
         return defs.getAttackDelay();
     }
 }

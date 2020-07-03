@@ -8,7 +8,7 @@ package com.rs.game.tasks;
 public class SimpleTimer {
 
     private int tick;
-    private int ticks;
+    private final int ticks;
 
     /**
      * Create a new timer

@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public final class ZarosGodwars {
 
-    private static final List<Player> playersOn = Collections.synchronizedList(new ArrayList<Player>());
+    private static final List<Player> playersOn = Collections.synchronizedList(new ArrayList<>());
     // private static final Object LOCK = new Object();
 
     public static Nex nex;
@@ -130,7 +130,7 @@ public final class ZarosGodwars {
     public static void endWar() {
         // synchronized(LOCK) {
         deleteNPCS();
-        CoresManager.slowExecutor.schedule(() -> startWar(), 1, TimeUnit.MINUTES);
+        CoresManager.slowExecutor.schedule(ZarosGodwars::startWar, 1, TimeUnit.MINUTES);
         // }
     }
 

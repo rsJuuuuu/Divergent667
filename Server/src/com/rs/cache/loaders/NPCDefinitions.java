@@ -74,7 +74,7 @@ public final class NPCDefinitions {
         if (def == null) {
             def = new NPCDefinitions(id);
             def.method694();
-            byte[] data = Cache.STORE.getIndexes()[18].getFile(id >>> 134238215, id & 0x7f);
+            byte[] data = Cache.STORE.getIndexes()[18].getFile(id >>> 7, id & 0x7f);
             if (data == null) System.out.println("Failed loading Npc " + id + ".");
             else def.readValueLoop(new InputStream(data));
             npcDefinitions.put(id, def);
@@ -99,33 +99,33 @@ public final class NPCDefinitions {
     private void readValues(InputStream stream, int opcode) {
         if (opcode != 1) {
             if (opcode == 2) name = stream.readString();
-            else if ((opcode ^ 0xffffffff) != -13) {
-                if (opcode >= 30 && (opcode ^ 0xffffffff) > -36) {
+            else if ((~opcode) != -13) {
+                if (opcode >= 30 && (~opcode) > -36) {
                     options[opcode - 30] = stream.readString();
                     if (options[-30 + opcode].equalsIgnoreCase("Hidden")) options[-30 + opcode] = null;
-                } else if ((opcode ^ 0xffffffff) != -41) {
+                } else if ((~opcode) != -41) {
                     if (opcode == 41) {
                         int i = stream.readUnsignedByte();
                         aShortArray880 = new short[i];
                         aShortArray866 = new short[i];
-                        for (int i_54_ = 0; (i_54_ ^ 0xffffffff) > (i ^ 0xffffffff); i_54_++) {
+                        for (int i_54_ = 0; (~i_54_) > (~i); i_54_++) {
                             aShortArray880[i_54_] = (short) stream.readUnsignedShort();
                             aShortArray866[i_54_] = (short) stream.readUnsignedShort();
                         }
-                    } else if ((opcode ^ 0xffffffff) == -43) {
+                    } else if ((~opcode) == -43) {
                         int i = stream.readUnsignedByte();
                         aByteArray861 = new byte[i];
                         for (int i_55_ = 0; i > i_55_; i_55_++)
                             aByteArray861[i_55_] = (byte) stream.readByte();
-                    } else if ((opcode ^ 0xffffffff) != -61) {
+                    } else if ((~opcode) != -61) {
                         if (opcode == 93) isVisibleOnMap = false;
-                        else if ((opcode ^ 0xffffffff) == -96) combatLevel = stream.readUnsignedShort();
+                        else if ((~opcode) == -96) combatLevel = stream.readUnsignedShort();
                         else if (opcode != 97) {
-                            if ((opcode ^ 0xffffffff) == -99) anInt899 = stream.readUnsignedShort();
-                            else if ((opcode ^ 0xffffffff) == -100) aBoolean863 = true;
+                            if ((~opcode) == -99) anInt899 = stream.readUnsignedShort();
+                            else if ((~opcode) == -100) aBoolean863 = true;
                             else if (opcode == 100) anInt869 = stream.readByte();
-                            else if ((opcode ^ 0xffffffff) == -102) anInt897 = stream.readByte() * 5;
-                            else if ((opcode ^ 0xffffffff) == -103) headIcons = stream.readUnsignedShort();
+                            else if ((~opcode) == -102) anInt897 = stream.readByte() * 5;
+                            else if ((~opcode) == -103) headIcons = stream.readUnsignedShort();
                             else if (opcode != 103) {
                                 if (opcode == 106 || opcode == 118) {
                                     anInt844 = stream.readUnsignedShort();
@@ -133,9 +133,9 @@ public final class NPCDefinitions {
                                     anInt888 = stream.readUnsignedShort();
                                     if (anInt888 == 65535) anInt888 = -1;
                                     int i = -1;
-                                    if ((opcode ^ 0xffffffff) == -119) {
+                                    if ((~opcode) == -119) {
                                         i = stream.readUnsignedShort();
-                                        if ((i ^ 0xffffffff) == -65536) i = -1;
+                                        if ((~i) == -65536) i = -1;
                                     }
                                     int i_56_ = stream.readUnsignedByte();
                                     anIntArray845 = new int[2 + i_56_];
@@ -144,9 +144,9 @@ public final class NPCDefinitions {
                                         if (anIntArray845[i_57_] == 65535) anIntArray845[i_57_] = -1;
                                     }
                                     anIntArray845[i_56_ - -1] = i;
-                                } else if ((opcode ^ 0xffffffff) != -108) {
-                                    if ((opcode ^ 0xffffffff) == -110) aBoolean852 = false;
-                                    else if ((opcode ^ 0xffffffff) != -112) {
+                                } else if ((~opcode) != -108) {
+                                    if ((~opcode) == -110) aBoolean852 = false;
+                                    else if ((~opcode) != -112) {
                                         if (opcode != 113) {
                                             if (opcode == 114) {
                                                 aByte851 = (byte) (stream.readByte());
@@ -154,14 +154,14 @@ public final class NPCDefinitions {
                                             } else if (opcode == 115) {
                                                 stream.readUnsignedByte();
                                                 stream.readUnsignedByte();
-                                            } else if ((opcode ^ 0xffffffff) != -120) {
+                                            } else if ((~opcode) != -120) {
                                                 if (opcode != 121) {
-                                                    if ((opcode ^ 0xffffffff) != -123) {
+                                                    if ((~opcode) != -123) {
                                                         if (opcode == 123) anInt846 = (stream.readUnsignedShort());
                                                         else if (opcode != 125) {
                                                             if (opcode == 127)
                                                                 renderEmote = (stream.readUnsignedShort());
-                                                            else if ((opcode ^ 0xffffffff) == -129)
+                                                            else if ((~opcode) == -129)
                                                                 stream.readUnsignedByte();
                                                             else if (opcode != 134) {
                                                                 if (opcode == 135) {
@@ -170,17 +170,17 @@ public final class NPCDefinitions {
                                                                 } else if (opcode != 136) {
                                                                     if (opcode != 137) {
                                                                         if (opcode != 138) {
-                                                                            if ((opcode ^ 0xffffffff) != -140) {
+                                                                            if ((~opcode) != -140) {
                                                                                 if (opcode == 140)
                                                                                     anInt850 = stream
                                                                                             .readUnsignedByte();
                                                                                 else if (opcode == 141)
                                                                                     aBoolean849 = true;
-                                                                                else if ((opcode ^ 0xffffffff) !=
+                                                                                else if ((~opcode) !=
                                                                                         -143) {
                                                                                     if (opcode == 143)
                                                                                         aBoolean856 = true;
-                                                                                    else if ((opcode ^ 0xffffffff) <=
+                                                                                    else if ((~opcode) <=
                                                                                             -151 && opcode < 155) {
                                                                                         options[opcode - 150] =
                                                                                                 stream.readString();
@@ -189,7 +189,7 @@ public final class NPCDefinitions {
                                                                                                         ("Hidden"))
                                                                                             options[opcode + -150] =
                                                                                                     null;
-                                                                                    } else if ((opcode ^ 0xffffffff)
+                                                                                    } else if ((~opcode)
                                                                                             == -161) {
                                                                                         int i = stream
                                                                                                 .readUnsignedByte();
@@ -271,9 +271,9 @@ public final class NPCDefinitions {
                                                                 anInt842 = (stream.readUnsignedShort());
                                                                 if (anInt842 == 65535) anInt842 = -1;
                                                                 anInt884 = (stream.readUnsignedShort());
-                                                                if ((anInt884 ^ 0xffffffff) == -65536) anInt884 = -1;
+                                                                if ((~anInt884) == -65536) anInt884 = -1;
                                                                 anInt871 = (stream.readUnsignedShort());
-                                                                if ((anInt871 ^ 0xffffffff) == -65536) anInt871 = -1;
+                                                                if ((~anInt871) == -65536) anInt871 = -1;
                                                                 anInt875 = (stream.readUnsignedByte());
                                                             }
                                                         } else respawnDirection = (byte) (stream.readByte());
@@ -281,7 +281,7 @@ public final class NPCDefinitions {
                                                 } else {
                                                     anIntArrayArray840 = (new int[modelIds.length][]);
                                                     int i = (stream.readUnsignedByte());
-                                                    for (int i_62_ = 0; ((i_62_ ^ 0xffffffff) > (i ^ 0xffffffff));
+                                                    for (int i_62_ = 0; ((~i_62_) > (~i));
                                                          i_62_++) {
                                                         int i_63_ = (stream.readUnsignedByte());
                                                         int[] is = (anIntArrayArray840[i_63_] = (new int[3]));
@@ -302,14 +302,14 @@ public final class NPCDefinitions {
                     } else {
                         int i = stream.readUnsignedByte();
                         anIntArray892 = new int[i];
-                        for (int i_64_ = 0; (i_64_ ^ 0xffffffff) > (i ^ 0xffffffff); i_64_++)
+                        for (int i_64_ = 0; (~i_64_) > (~i); i_64_++)
                             anIntArray892[i_64_] = stream.readBigSmart();
                     }
                 } else {
                     int i = stream.readUnsignedByte();
                     aShortArray859 = new short[i];
                     aShortArray896 = new short[i];
-                    for (int i_65_ = 0; (i ^ 0xffffffff) < (i_65_ ^ 0xffffffff); i_65_++) {
+                    for (int i_65_ = 0; (~i) < (~i_65_); i_65_++) {
                         aShortArray896[i_65_] = (short) stream.readUnsignedShort();
                         aShortArray859[i_65_] = (short) stream.readUnsignedShort();
                     }
@@ -320,13 +320,13 @@ public final class NPCDefinitions {
             modelIds = new int[i];
             for (int i_66_ = 0; i_66_ < i; i_66_++) {
                 modelIds[i_66_] = stream.readBigSmart();
-                if ((modelIds[i_66_] ^ 0xffffffff) == -65536) modelIds[i_66_] = -1;
+                if ((~modelIds[i_66_]) == -65536) modelIds[i_66_] = -1;
             }
         }
     }
 
     public boolean hasPickupOption() {
-        String as[];
+        String[] as;
         int j = (as = options).length;
         for (int i = 0; i < j; i++) {
             String option = as[i];
@@ -337,7 +337,7 @@ public final class NPCDefinitions {
     }
 
     public boolean hasTakeOption() {
-        String as[];
+        String[] as;
         int j = (as = options).length;
         for (int i = 0; i < j; i++) {
             String option = as[i];
@@ -428,24 +428,24 @@ public final class NPCDefinitions {
     @Override
     public String toString() {
         return "NPCDefinitions{" + "id=" + id + ", aClass180_832=" + aClass180_832 + ", anInt833=" + anInt833
-               + ", anInt836=" + anInt836 + ", anInt837=" + anInt837 + ", respawnDirection=" + respawnDirection
-               + ", size=" + size + ", anIntArrayArray840=" + Arrays.toString(anIntArrayArray840) + ", aBoolean841="
-               + aBoolean841 + ", anInt842=" + anInt842 + ", anInt844=" + anInt844 + ", anIntArray845="
-               + Arrays.toString(anIntArray845) + ", anInt846=" + anInt846 + ", renderEmote=" + renderEmote
-               + ", aBoolean849=" + aBoolean849 + ", anInt850=" + anInt850 + ", aByte851=" + aByte851 + ", aBoolean852="
-               + aBoolean852 + ", anInt853=" + anInt853 + ", aByte854=" + aByte854 + ", aBoolean856=" + aBoolean856
-               + ", aBoolean857=" + aBoolean857 + ", aShortArray859=" + Arrays.toString(aShortArray859)
-               + ", combatLevel=" + combatLevel + ", aByteArray861=" + Arrays.toString(aByteArray861) + ", aShort862="
-               + aShort862 + ", aBoolean863=" + aBoolean863 + ", anInt864=" + anInt864 + ", name='" + name + '\''
-               + ", aShortArray866=" + Arrays.toString(aShortArray866) + ", walkMask=" + walkMask + ", modelIds="
-               + Arrays.toString(modelIds) + ", anInt869=" + anInt869 + ", anInt870=" + anInt870 + ", anInt871="
-               + anInt871 + ", anInt872=" + anInt872 + ", anInt874=" + anInt874 + ", anInt875=" + anInt875
-               + ", anInt876=" + anInt876 + ", headIcons=" + headIcons + ", anInt879=" + anInt879 + ", aShortArray880="
-               + Arrays.toString(aShortArray880) + ", anIntArrayArray882=" + Arrays.toString(anIntArrayArray882)
-               + ", anInt884=" + anInt884 + ", anIntArray885=" + Arrays.toString(anIntArray885) + ", anInt888="
-               + anInt888 + ", anInt889=" + anInt889 + ", isVisibleOnMap=" + isVisibleOnMap + ", anIntArray892="
-               + Arrays.toString(anIntArray892) + ", aShort894=" + aShort894 + ", options=" + Arrays.toString(options)
-               + ", aShortArray896=" + Arrays.toString(aShortArray896) + ", anInt897=" + anInt897 + ", anInt899="
-               + anInt899 + ", npcId=" + npcId + ", anInt901=" + anInt901 + ", aBoolean3190=" + aBoolean3190 + '}';
+                + ", anInt836=" + anInt836 + ", anInt837=" + anInt837 + ", respawnDirection=" + respawnDirection
+                + ", size=" + size + ", anIntArrayArray840=" + Arrays.toString(anIntArrayArray840) + ", aBoolean841="
+                + aBoolean841 + ", anInt842=" + anInt842 + ", anInt844=" + anInt844 + ", anIntArray845="
+                + Arrays.toString(anIntArray845) + ", anInt846=" + anInt846 + ", renderEmote=" + renderEmote
+                + ", aBoolean849=" + aBoolean849 + ", anInt850=" + anInt850 + ", aByte851=" + aByte851 + ", aBoolean852="
+                + aBoolean852 + ", anInt853=" + anInt853 + ", aByte854=" + aByte854 + ", aBoolean856=" + aBoolean856
+                + ", aBoolean857=" + aBoolean857 + ", aShortArray859=" + Arrays.toString(aShortArray859)
+                + ", combatLevel=" + combatLevel + ", aByteArray861=" + Arrays.toString(aByteArray861) + ", aShort862="
+                + aShort862 + ", aBoolean863=" + aBoolean863 + ", anInt864=" + anInt864 + ", name='" + name + '\''
+                + ", aShortArray866=" + Arrays.toString(aShortArray866) + ", walkMask=" + walkMask + ", modelIds="
+                + Arrays.toString(modelIds) + ", anInt869=" + anInt869 + ", anInt870=" + anInt870 + ", anInt871="
+                + anInt871 + ", anInt872=" + anInt872 + ", anInt874=" + anInt874 + ", anInt875=" + anInt875
+                + ", anInt876=" + anInt876 + ", headIcons=" + headIcons + ", anInt879=" + anInt879 + ", aShortArray880="
+                + Arrays.toString(aShortArray880) + ", anIntArrayArray882=" + Arrays.toString(anIntArrayArray882)
+                + ", anInt884=" + anInt884 + ", anIntArray885=" + Arrays.toString(anIntArray885) + ", anInt888="
+                + anInt888 + ", anInt889=" + anInt889 + ", isVisibleOnMap=" + isVisibleOnMap + ", anIntArray892="
+                + Arrays.toString(anIntArray892) + ", aShort894=" + aShort894 + ", options=" + Arrays.toString(options)
+                + ", aShortArray896=" + Arrays.toString(aShortArray896) + ", anInt897=" + anInt897 + ", anInt899="
+                + anInt899 + ", npcId=" + npcId + ", anInt901=" + anInt901 + ", aBoolean3190=" + aBoolean3190 + '}';
     }
 }

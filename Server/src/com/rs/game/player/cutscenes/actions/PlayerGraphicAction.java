@@ -1,11 +1,11 @@
 package com.rs.game.player.cutscenes.actions;
 
-import com.rs.game.world.Graphics;
 import com.rs.game.player.Player;
+import com.rs.game.world.Graphics;
 
 public class PlayerGraphicAction extends CutsceneAction {
 
-	private Graphics gfx;
+	private final Graphics gfx;
 
 	public PlayerGraphicAction(Graphics gfx, int actionDelay) {
 		super(-1, actionDelay);

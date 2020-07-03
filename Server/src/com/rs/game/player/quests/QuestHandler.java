@@ -19,7 +19,7 @@ import static com.rs.utils.Constants.NORMAL_CONFIG;
 
 public class QuestHandler implements Handler {
 
-    private static Map<Integer, Quest> quests = new HashMap<>();
+    private static final Map<Integer, Quest> quests = new HashMap<>();
 
     private static HashMap<Integer, QuestData> questDataMap;
 

@@ -1,11 +1,11 @@
 package com.rs.game.player.actions.crafting;
 
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.world.Animation;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
+import com.rs.game.world.Animation;
 import com.rs.utils.Utils;
 
 import java.util.HashMap;
@@ -26,9 +26,9 @@ public class LeatherCrafting extends Action {
 	private LeatherData data;
 	private int removeThread = 5;
 
-	public static final int LEATHER[] = { 1745, 2505, 2507, 2509 };
-	public static final int PRODUCTS[][] = { { 1065, 1099, 1135 },
-			{ 2487, 2493, 2499 }, { 2489, 2495, 2501 }, { 2491, 2497, 2503 } };
+	public static final int[] LEATHER = {1745, 2505, 2507, 2509};
+	public static final int[][] PRODUCTS = {{1065, 1099, 1135},
+			{2487, 2493, 2499}, {2489, 2495, 2501}, {2491, 2497, 2503}};
 
 	public enum LeatherData {
 		GREEN_D_HIDE_VAMBS(1745, 1, 1065, 57, 62), GREEN_D_HIDE_CHAPS(1745, 2,
@@ -40,11 +40,14 @@ public class LeatherCrafting extends Action {
 				86), BLACK_D_HIDE_CHAPS(2509, 2, 2497, 82, 172), BLACK_D_HIDE_BODY(
 				2509, 3, 2503, 84, 258);
 
-		private int leatherId, leatherAmount, finalProduct, requiredLevel;
-		private double experience;
-		private String name;
+		private final int leatherId;
+		private final int leatherAmount;
+		private final int finalProduct;
+		private final int requiredLevel;
+		private final double experience;
+		private final String name;
 
-		private static Map<Integer, LeatherData> leatherItems = new HashMap<>();
+		private static final Map<Integer, LeatherData> leatherItems = new HashMap<>();
 
 		public static LeatherData forId(int id) {
 			return leatherItems.get(id);

@@ -22,10 +22,10 @@ public class RuneConfigs {
         DEATH(DEATH_RUNE, 65, 10),
         BLOOD(BLOOD_RUNE, 77, 23.8),
         SOUL(SOUL_RUNE, 90, 29.7);
-        private int runeId;
-        private int level;
+        private final int runeId;
+        private final int level;
 
-        private double exp;
+        private final double exp;
 
         Rune(int runeId, int level, double exp) {
             this.runeId = runeId;
@@ -33,7 +33,7 @@ public class RuneConfigs {
             this.exp = exp;
         }
 
-        public int getLevel(){
+        public int getLevel() {
             return level;
         }
 

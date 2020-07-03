@@ -10,18 +10,18 @@ import java.security.MessageDigest;
 
 public final class LocalPlayerUpdate {
 
-	private Player player;
+	private final Player player;
 
-	private Player[] localPlayers;
-	private int[] localPlayersIndexes;
+	private final Player[] localPlayers;
+	private final int[] localPlayersIndexes;
 	private int localPlayersIndexesCount;
 
-	private int[] outPlayersIndexes;
+	private final int[] outPlayersIndexes;
 	private int outPlayersIndexesCount;
 
-	private int[] regionHashes;
+	private final int[] regionHashes;
 
-	private byte[][] cachedAppearanceHashes;
+	private final byte[][] cachedAppearanceHashes;
 	private int totalRenderDataSentLength;
 
 	public Player[] getLocalPlayers() {
@@ -29,9 +29,9 @@ public final class LocalPlayerUpdate {
 	}
 
 	public boolean needAppearanceUpdate(int index, byte[] hash) {
-        return !(totalRenderDataSentLength > ((Settings.PACKET_SIZE_LIMIT - 500) / 2)
-                || hash == null) && (cachedAppearanceHashes[index] == null || !MessageDigest.isEqual(cachedAppearanceHashes[index], hash));
-    }
+		return !(totalRenderDataSentLength > ((Settings.PACKET_SIZE_LIMIT - 500) / 2)
+				|| hash == null) && (cachedAppearanceHashes[index] == null || !MessageDigest.isEqual(cachedAppearanceHashes[index], hash));
+	}
 
 	public LocalPlayerUpdate(Player player) {
 		this.player = player;

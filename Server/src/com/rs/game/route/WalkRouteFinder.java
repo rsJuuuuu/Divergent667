@@ -59,17 +59,17 @@ public class WalkRouteFinder {
 		// we could use performCalculationSX() for every size, but since most
 		// combat size's are 1 and 2,
 		// we will have optimized algorhytm's for them.
-		boolean found = false;
+		boolean found;
 		switch (srcSizeXY) {
-		case 1:
-			found = performCalculationS1(srcX, srcY, strategy);
-			break;
-		case 2:
-			found = performCalculationS2(srcX, srcY, strategy);
-			break;
-		default:
-			found = performCalculationSX(srcX, srcY, srcSizeXY, strategy);
-			break;
+			case 1:
+				found = performCalculationS1(srcX, srcY, strategy);
+				break;
+			case 2:
+				found = performCalculationS2(srcX, srcY, strategy);
+				break;
+			default:
+				found = performCalculationSX(srcX, srcY, srcSizeXY, strategy);
+				break;
 		}
 
 		if (!found && !findAlternative)
@@ -108,12 +108,12 @@ public class WalkRouteFinder {
 					if (graphX < 0 || graphY < 0 || graphX >= GRAPH_SIZE || graphY >= GRAPH_SIZE
 							|| distances[graphX][graphY] >= ALTERNATIVE_ROUTE_MAX_DISTANCE)
 						continue; // we are out of graph's bounds or too much
-									// steps.
+					// steps.
 					// calculate the delta's.
 					// when calculating, we are also taking the approximated
 					// destination size into account to increase precise.
-					int deltaX = 0;
-					int deltaY = 0;
+					int deltaX;
+					int deltaY;
 					if (approxDestX <= checkX) {
 						deltaX = 1 - approxDestX - (strategy.getApproxDestinationSizeX() - checkX);
 						// deltaX = (approxDestX +

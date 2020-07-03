@@ -1,14 +1,14 @@
 package com.rs.game.player.content.skills;
 
 import com.rs.game.npc.Npc;
-import com.rs.game.world.Animation;
-import com.rs.game.world.ForceTalk;
-import com.rs.game.world.World;
-import com.rs.game.world.WorldObject;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.world.Animation;
+import com.rs.game.world.ForceTalk;
+import com.rs.game.world.World;
+import com.rs.game.world.WorldObject;
 import com.rs.utils.Utils;
 import com.rs.utils.stringUtils.TimeUtils;
 
@@ -40,13 +40,13 @@ public class Thieving {
         SCIMITAR_STALL(4878, 65, new int[]{1323}, 1, 80, 100, 34381),
         GEM_STALL(34385, 75, new int[]{1623, 1621, 1619, 1617}, 1, 180, 16, 34381);
 
-        private int[] item;
-        private int level;
-        private int amount;
-        private int objectId;
-        private int replaceObject;
-        private double experience;
-        private double seconds;
+        private final int[] item;
+        private final int level;
+        private final int amount;
+        private final int objectId;
+        private final int replaceObject;
+        private final double experience;
+        private final double seconds;
 
         Stalls(int objectId, int level, int[] item, int amount, double seconds, double experience, int replaceObject) {
             this.objectId = objectId;

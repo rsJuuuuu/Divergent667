@@ -37,12 +37,12 @@ public class Encryption {
      * @param password the pass, should be salted by now
      */
     public static String getSHAHash(String password) {
-        MessageDigest md = null;
+        MessageDigest md;
         StringBuilder sb = new StringBuilder();
         try {
             md = MessageDigest.getInstance("SHA-256");
             md.update(password.getBytes());
-            byte byteData[] = md.digest();
+            byte[] byteData = md.digest();
             for (byte aByteData : byteData) {
                 sb.append(Integer.toString((aByteData & 0xff) + 0x100, 16).substring(1));
             }

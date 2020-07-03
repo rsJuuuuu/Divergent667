@@ -1,16 +1,16 @@
 package com.rs.game.player.actions.thieving;
 
-import com.rs.game.npc.Npc;
-import com.rs.game.world.Animation;
-import com.rs.game.world.ForceTalk;
-import com.rs.game.world.Graphics;
 import com.rs.game.Hit;
 import com.rs.game.Hit.HitLook;
 import com.rs.game.item.Item;
+import com.rs.game.npc.Npc;
 import com.rs.game.player.Equipment;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
+import com.rs.game.world.Animation;
+import com.rs.game.world.ForceTalk;
+import com.rs.game.world.Graphics;
 import com.rs.utils.Utils;
 import com.rs.utils.stringUtils.TimeUtils;
 
@@ -25,12 +25,12 @@ public class PickPocketAction extends Action {
 	/**
 	 * Pick pocketing npc.
 	 */
-	private Npc npc;
+	private final Npc npc;
 
 	/**
 	 * Data of an npc.
 	 */
-	private PickPocketableNPC npcData;
+	private final PickPocketableNPC npcData;
 
 	/**
 	 * The npc stun animation.
@@ -189,7 +189,6 @@ public class PickPocketAction extends Action {
 		int chance = 0;
 		if (Equipment.getItemSlot(Equipment.SLOT_HANDS) == 10075)
 			chance += 12;
-		player.getEquipment();
 		if (Equipment.getItemSlot(Equipment.SLOT_CAPE) == 15349)
 			chance += 15;
 		if (npc.getDefinitions().name.contains("H.A.M")) {

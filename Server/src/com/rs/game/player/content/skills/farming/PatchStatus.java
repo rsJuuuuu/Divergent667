@@ -10,12 +10,12 @@ public class PatchStatus implements Serializable {
 
 	private static final long serialVersionUID = 4641462661859309514L;
 
-	private int objectId;
-	private int configId;
+	private final int objectId;
+	private final int configId;
 	private int configValue;
-	private int maxConfigValue;
-	private String inspect;
-	private int delay;
+	private final int maxConfigValue;
+	private final String inspect;
+	private final int delay;
 	private int configTicks;
 
 	public PatchStatus(int objectId, int configId, int configValue, int maxConfigValue, String inspect, int delay) {

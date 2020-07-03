@@ -7,7 +7,7 @@ import java.util.TimerTask;
 
 public class LoyaltyManager {
 
-    private transient Player player;
+    private final transient Player player;
 
     public LoyaltyManager(Player player) {
         this.player = player;

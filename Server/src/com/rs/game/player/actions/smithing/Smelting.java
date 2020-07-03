@@ -1,12 +1,12 @@
 package com.rs.game.player.actions.smithing;
 
-import com.rs.game.world.Animation;
-import com.rs.game.world.WorldObject;
 import com.rs.game.item.Item;
 import com.rs.game.player.Equipment;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
+import com.rs.game.world.Animation;
+import com.rs.game.world.WorldObject;
 import com.rs.utils.Utils;
 
 import java.util.HashMap;
@@ -30,26 +30,26 @@ public class Smelting extends Action {
 
 		GOLD(40, 22.5, new Item[] { new Item(444) }, new Item(2357), 5),
 
-		MITHRIL(50, 30, new Item[] { new Item(447), new Item(453, 4) },
+		MITHRIL(50, 30, new Item[]{new Item(447), new Item(453, 4)},
 				new Item(2359), 6),
 
-		ADAMANT(70, 37.5, new Item[] { new Item(449), new Item(453, 6) },
+		ADAMANT(70, 37.5, new Item[]{new Item(449), new Item(453, 6)},
 				new Item(2361), 7),
 
-		RUNE(85, 50, new Item[] { new Item(451), new Item(453, 8) }, new Item(
+		RUNE(85, 50, new Item[]{new Item(451), new Item(453, 8)}, new Item(
 				2363), 8),
 
-		DRAGONBANE(80, 50, new Item[] { new Item(21779) }, new Item(21783, 1),
+		DRAGONBANE(80, 50, new Item[]{new Item(21779)}, new Item(21783, 1),
 				9),
 
-		WALLASALKIBANE(80, 50, new Item[] { new Item(21780) }, new Item(21784,
+		WALLASALKIBANE(80, 50, new Item[]{new Item(21780)}, new Item(21784,
 				1), 10),
 
-		BASILISKBANE(80, 50, new Item[] { new Item(21781) },
+		BASILISKBANE(80, 50, new Item[]{new Item(21781)},
 				new Item(21785, 1), 11), ABYSSSALBANE(80, 50,
-				new Item[] { new Item(21782) }, new Item(21786, 1), 11);
+				new Item[]{new Item(21782)}, new Item(21786, 1), 11);
 
-		private static Map<Integer, SmeltingBar> bars = new HashMap<>();
+		private static final Map<Integer, SmeltingBar> bars = new HashMap<>();
 
 		public static SmeltingBar forId(int buttonId) {
 			return bars.get(buttonId);
@@ -61,14 +61,14 @@ public class Smelting extends Action {
 			}
 		}
 
-		private int levelRequired;
-		private double experience;
-		private Item[] itemsRequired;
-		private int buttonId;
-		private Item producedBar;
+		private final int levelRequired;
+		private final double experience;
+		private final Item[] itemsRequired;
+		private final int buttonId;
+		private final Item producedBar;
 
 		SmeltingBar(int levelRequired, double experience,
-                    Item[] itemsRequired, Item producedBar, int buttonId) {
+					Item[] itemsRequired, Item producedBar, int buttonId) {
 			this.levelRequired = levelRequired;
 			this.experience = experience;
 			this.itemsRequired = itemsRequired;

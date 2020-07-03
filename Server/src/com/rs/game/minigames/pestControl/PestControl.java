@@ -14,8 +14,8 @@ import static com.rs.game.actionHandling.HandlerManager.registerObjectAction;
  */
 public class PestControl implements Handler {
 
-    private static PestLobby lobby = new PestLobby();
-    private static PestGame game = new PestGame();
+    private static final PestLobby lobby = new PestLobby();
+    private static final PestGame game = new PestGame();
 
     @Override
     public void register() {

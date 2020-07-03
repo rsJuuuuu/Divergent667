@@ -18,7 +18,7 @@ import java.io.IOException;
  */
 public class DropPanel extends AnchorPane {
 
-    private static ItemIconsLoader.RequestManager requestManager;
+    private static final ItemIconsLoader.RequestManager requestManager;
 
     static {
         requestManager = ItemIconsLoader.getRequestManager();
@@ -35,7 +35,7 @@ public class DropPanel extends AnchorPane {
     @FXML
     private TextField rateField;
 
-    private Drop drop;
+    private final Drop drop;
 
     DropPanel(Drop drop, DropEditorController parent) {
         this.drop = drop;

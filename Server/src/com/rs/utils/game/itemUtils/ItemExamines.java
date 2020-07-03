@@ -70,7 +70,7 @@ public class ItemExamines {
 				if (splitedLine.length < 2)
 					throw new RuntimeException(
 							"Invalid list for item examine line: " + line);
-				int itemId = Integer.valueOf(splitedLine[0]);
+				int itemId = Integer.parseInt(splitedLine[0]);
 				out.writeShort(itemId);
 				writeAlexString(out, splitedLine[1]);
 				itemExamines.put(itemId, splitedLine[1]);

@@ -1,8 +1,8 @@
 package com.rs.game.actionHandling.handlers;
 
 import com.rs.Settings;
-import com.rs.game.player.Player;
 import com.rs.game.actionHandling.actions.ActionListener;
+import com.rs.game.player.Player;
 import com.rs.net.decoders.WorldPacketsDecoder;
 import org.pmw.tinylog.Logger;
 
@@ -17,7 +17,7 @@ import static com.rs.game.actionHandling.HandlerManager.HandlerConstants.*;
 public abstract class ActionHandler<T> {
 
     protected HashMap<Integer, HashMap<T, ArrayList<ActionListener>>> actions = new HashMap<>();
-    private HashMap<Integer, ArrayList<ActionListener>> listeners = new HashMap<>();
+    private final HashMap<Integer, ArrayList<ActionListener>> listeners = new HashMap<>();
 
     private int normalActions = 0;
     private int globalActions = 0;

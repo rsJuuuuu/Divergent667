@@ -4,7 +4,13 @@ package com.rs.game.world;
  * Created by Peng on 19.11.2016 20:47.
  */
 public class Projectile {
-    private int gfxId, startHeight, endHeight, speed, delay, curve, startDistanceOffset;
+    private final int gfxId;
+    private final int startHeight;
+    private final int endHeight;
+    private final int speed;
+    private final int delay;
+    private final int curve;
+    private final int startDistanceOffset;
 
     public Projectile(int gfxId, int startHeight, int endHeight, int speed, int delay, int curve, int
             startDistanceOffset) {

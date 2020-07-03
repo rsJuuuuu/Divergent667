@@ -7,11 +7,11 @@ public class SimpleMessage extends Dialogue {
 
     @Override
     public void start() {
-        String message = "";
+        StringBuilder message = new StringBuilder();
         for (Object parameter : parameters) {
-            message += parameter;
+            message.append(parameter);
         }
-        sendText(message);
+        sendText(message.toString());
     }
 
     @Override

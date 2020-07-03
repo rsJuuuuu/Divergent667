@@ -11,7 +11,7 @@ public class EvilRoot extends WorldObject {
 
     private boolean alive = false;
 
-    private  EvilTree parent;
+    private final EvilTree parent;
 
     EvilRoot(EvilTree parent, WorldTile tile) {
         super(TreeManager.EVIL_ROOT_ID, 10, 0, tile.getX(), tile.getY(), tile.getPlane());

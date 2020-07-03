@@ -11,10 +11,10 @@ public class EntityList<T extends Entity> extends AbstractCollection<T> {
     private final Object lock = new Object();
 
     private int curIndex = MIN_VALUE;
-    private int capacity;
+    private final int capacity;
 
-    private Set<Integer> indices = new HashSet<>();
-    private Entity[] entities;
+    private final Set<Integer> indices = new HashSet<>();
+    private final Entity[] entities;
 
     public EntityList(int capacity) {
         entities = new Entity[capacity];

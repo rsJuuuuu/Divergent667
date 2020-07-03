@@ -10,6 +10,7 @@ import com.rs.game.world.WorldObject;
 import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -44,8 +45,14 @@ public class Barrows extends Controller {
         VERAC(2030, 5, 6823, 6707, new WorldTile(3556, 3297, 0), new WorldTile(3554, 3294, 0), new WorldTile(3559,
                 3300, 0), new WorldTile(3578, 9706, 0));
 
-        private int npcId, coffinId, stairsId, index;
-        private WorldTile exitLocation, moundArea, moundArea2, playerEntry;
+        private final int npcId;
+        private final int coffinId;
+        private final int stairsId;
+        private final int index;
+        private final WorldTile exitLocation;
+        private final WorldTile moundArea;
+        private final WorldTile moundArea2;
+        private final WorldTile playerEntry;
 
         Brothers(int npcId, int index, int coffinId, int stairsId, WorldTile exitLocation, WorldTile moundArea,
                  WorldTile moundArea2, WorldTile playerEntry) {
@@ -260,9 +267,7 @@ public class Barrows extends Controller {
     }
 
     private void reset() {
-        for (int i = 0; i < player.getKilledBarrowBrothers().length; i++) {
-            player.getKilledBarrowBrothers()[i] = false;
-        }
+        Arrays.fill(player.getKilledBarrowBrothers(), false);
         player.setHiddenBrother(0);
         player.setBarrowsKillCount(0);
         if (brother != null) {
@@ -383,10 +388,10 @@ public class Barrows extends Controller {
         }
     }
 
-    private int[] BARROW_REWARDS = {4708, 4710, 4712, 4714, 4716, 4718, 4720, 4722, 4724, 4726, 4728, 4730, 4732,
+    private final int[] BARROW_REWARDS = {4708, 4710, 4712, 4714, 4716, 4718, 4720, 4722, 4724, 4726, 4728, 4730, 4732,
             4734, 4736, 4738, 4745, 4747, 4749, 4751, 4753, 4755, 4757, 4749,};
 
-    private int[] NOTED_LOOT = {1080, 1114, 1148, 1164, 1202, 1214, 1276, 1304, 1320, 1334, 1402, 1404, 562, 563,
+    private final int[] NOTED_LOOT = {1080, 1114, 1148, 1164, 1202, 1214, 1276, 1304, 1320, 1334, 1402, 1404, 562, 563,
             564, 565,};
 
     private final int[] COMMON_LOOT = {558, 560, 562, 565, 4740, 995};

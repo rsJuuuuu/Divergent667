@@ -201,7 +201,7 @@ public class SlayerTask implements Serializable {
         int level;
         Task[] tasks;
 
-        private monsterSet(int level, Task[] tasks) {
+        monsterSet(int level, Task[] tasks) {
             this.level = level;
             this.tasks = tasks;
         }

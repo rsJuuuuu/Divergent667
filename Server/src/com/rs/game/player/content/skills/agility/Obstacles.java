@@ -1,15 +1,15 @@
 package com.rs.game.player.content.skills.agility;
 
 import com.rs.cores.CoresManager;
+import com.rs.game.actionHandling.Handler;
+import com.rs.game.player.Player;
+import com.rs.game.player.Skills;
 import com.rs.game.player.info.RequirementsManager;
+import com.rs.game.tasks.WorldTask;
+import com.rs.game.tasks.WorldTasksManager;
 import com.rs.game.world.Animation;
 import com.rs.game.world.ForceMovement;
 import com.rs.game.world.WorldTile;
-import com.rs.game.player.Player;
-import com.rs.game.player.Skills;
-import com.rs.game.actionHandling.Handler;
-import com.rs.game.tasks.WorldTask;
-import com.rs.game.tasks.WorldTasksManager;
 
 import java.util.concurrent.TimeUnit;
 
@@ -61,14 +61,15 @@ public class Obstacles implements Handler {
         BARBARIAN_BALANCE_GAP(43531, 1, 1, 2, -1, Obstacles::startBalanceGap, Obstacles::stopBalanceGap),
         BARBARIAN_ROOF_SLIDE(43532, 1, 1, 2, -1, player -> startSlideRoof(player, 2544, -1), null);
 
-        private int[] objectIds;
-        private int levelReq;
-        private int delay;
-        private int renderEmote;
+        private final int[] objectIds;
+        private final int levelReq;
+        private final int delay;
+        private final int renderEmote;
 
-        private double xp;
+        private final double xp;
 
-        private ObstacleAction start, end;
+        private final ObstacleAction start;
+        private final ObstacleAction end;
 
         Obstacle(int[] objectIds, int levelReq, double xp, int delay, int renderEmote, ObstacleAction start,
                  ObstacleAction end) {
@@ -440,9 +441,9 @@ public class Obstacles implements Handler {
             if (player.getX() > delimiterX) return false;
         }
         if (delimiterY != -1 && targetY != -1) if (delimiterY > targetY) {
-            if (player.getY() < delimiterY) return false;
+            return player.getY() >= delimiterY;
         } else {
-            if (player.getY() > delimiterY) return false;
+            return player.getY() <= delimiterY;
         }
         return true;
     }

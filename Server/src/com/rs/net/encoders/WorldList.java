@@ -4,31 +4,31 @@ public class WorldList {
 	/**
 	 * The activity (What type of World it is)
 	 */
-	private String activity;
+	private final String activity;
 	/**
 	 * The country
 	 */
-	private int country;
+	private final int country;
 	/**
 	 * The flag (What type of server it is)
 	 */
-	private int flag;
+	private final int flag;
 	/**
 	 * The IP Address of the world
 	 */
-	private String ip;
+	private final String ip;
 	/**
-	 * The location 
+	 * The location
 	 */
-	private int location;
+	private final int location;
 	/**
 	 * The region of the server
 	 */
-	private String region;
+	private final String region;
 	/**
 	 * The World id
 	 */
-	private int worldId;
+	private final int worldId;
 
 	/**
 	 * The WorldList constructor.

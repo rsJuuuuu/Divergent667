@@ -22,14 +22,14 @@ public class EntityListIterator<E extends Entity> implements Iterator<E> {
 
     private int curIndex = 0;
 
-    private EntityList entityList;
+    private final EntityList entityList;
 
-    private Integer[] indices;
-    private Object[] entities;
+    private final Integer[] indices;
+    private final Object[] entities;
 
     EntityListIterator(Object[] entities, Set<Integer> indices, @SuppressWarnings("rawtypes") EntityList entityList) {
         this.entities = entities;
-        this.indices = indices.toArray(new Integer[indices.size()]);
+        this.indices = indices.toArray(new Integer[0]);
         this.entityList = entityList;
     }
 

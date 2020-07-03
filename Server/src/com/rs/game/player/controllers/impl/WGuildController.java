@@ -159,12 +159,12 @@ public class WGuildController extends Controller {
 	
 	public static boolean isArmour(int itemId) {
         for (int[] ARMOUR : ARMOURS) {
-            for (int i2 = 0; i2 < ARMOUR.length; i2++) {
-                if (itemId == ARMOUR[i2]) {
-                    return true;
-                }
-            }
-        }
+			for (int i : ARMOUR) {
+				if (itemId == i) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 	

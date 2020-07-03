@@ -18,7 +18,7 @@ public class TowersPkCutscene extends Cutscene {
 		actionsList.add(new LookCameraAction(getX(player, player.getX()), getY(
 				player, player.getY() + 7), 6000, 6, 6, 10));
 
-		return actionsList.toArray(new CutsceneAction[actionsList.size()]);
+		return actionsList.toArray(new CutsceneAction[0]);
 	}
 
 	@Override

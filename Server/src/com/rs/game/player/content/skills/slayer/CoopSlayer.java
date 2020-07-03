@@ -10,7 +10,7 @@ public class CoopSlayer implements Serializable {
      *
      */
     private static final long serialVersionUID = -3787391374833919591L;
-    private transient Player player;
+    private final transient Player player;
     private Player partner;
 
     public int killAmount;

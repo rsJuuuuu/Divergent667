@@ -18,7 +18,7 @@ public class AbyssalTitanCombat extends CombatScript {
     @Override
     public int attack(Npc npc, Entity target) {
         final NpcCombatDefinitions defs = npc.getCombatDefinitions();
-        int damage = 0;
+        int damage;
         damage = getRandomMaxHit(npc, 140, NpcCombatDefinitions.MELEE, target);
         npc.setNextAnimation(new Animation(7980));
         npc.setNextGraphics(new Graphics(1490));

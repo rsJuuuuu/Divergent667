@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Region {
-    private int regionId;
+    private final int regionId;
     private RegionMap map;
     private RegionMap clipedOnlyMap;
 
@@ -136,7 +136,7 @@ public class Region {
         if (x < 0 || y < 0 || x >= map.getMasks()[plane].length || y >= map.getMasks()[plane][x].length) return;
         ObjectDefinitions objectDefinition = ObjectDefinitions.getObjectDefinitions(object.getId()); // load here
 
-        if (type == 22 ? objectDefinition.getClipType() != 0 : objectDefinition.getClipType() == 0) return;
+        if ((type == 22) == (objectDefinition.getClipType() != 0)) return;
         if (type >= 0 && type <= 3) {
             map.addWall(plane, x, y, type, rotation, objectDefinition.isProjectileCliped(), true);
             if (objectDefinition.isProjectileCliped())
@@ -167,7 +167,7 @@ public class Region {
         int rotation = object.getRotation();
         if (x < 0 || y < 0 || x >= map.getMasks()[plane].length || y >= map.getMasks()[plane][x].length) return;
         ObjectDefinitions objectDefinition = ObjectDefinitions.getObjectDefinitions(object.getId()); // load here
-        if (type == 22 ? objectDefinition.getClipType() != 0 : objectDefinition.getClipType() == 0) return;
+        if ((type == 22) == (objectDefinition.getClipType() != 0)) return;
         if (type >= 0 && type <= 3) {
             map.removeWall(plane, x, y, type, rotation, objectDefinition.isProjectileCliped(), true);
             if (objectDefinition.isProjectileCliped())

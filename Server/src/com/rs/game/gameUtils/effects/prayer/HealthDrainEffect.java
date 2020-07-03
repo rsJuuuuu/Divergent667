@@ -13,8 +13,8 @@ import com.rs.game.world.World;
  */
 public class HealthDrainEffect extends Effect {
 
-    private boolean soulSplit;
-    private double percentage;
+    private final boolean soulSplit;
+    private final double percentage;
 
     public HealthDrainEffect(double percentage, boolean soulSplit) {
         this.soulSplit = soulSplit;

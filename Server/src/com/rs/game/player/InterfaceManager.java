@@ -48,7 +48,9 @@ public class InterfaceManager {
          */
         PEST_LANDER(407, 19, 10);
 
-        private int interfaceId, fixedTabId, resizableTabId;
+        private final int interfaceId;
+        private final int fixedTabId;
+        private final int resizableTabId;
         private PlayerEvent openAction;
 
         GameInterface(int interfaceId, int fixedTabId, int resizableTabId) {
@@ -73,11 +75,11 @@ public class InterfaceManager {
     private static final int FIXED_INV_TAB_ID = 199;
     private static final int RESIZABLE_INV_TAB_ID = 87;
 
-    private Player player;
+    private final Player player;
 
     private final ConcurrentHashMap<Integer, int[]> openInterfaces = new ConcurrentHashMap<>();
 
-    private CopyOnWriteArrayList<GameInterface> openInterfaceList = new CopyOnWriteArrayList<>();
+    private final CopyOnWriteArrayList<GameInterface> openInterfaceList = new CopyOnWriteArrayList<>();
 
     private boolean resizableScreen;
     private int windowsPane;

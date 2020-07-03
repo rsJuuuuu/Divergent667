@@ -1,11 +1,11 @@
 package com.rs.game.player.actions;
 
-import com.rs.game.world.Animation;
-import com.rs.game.world.World;
-import com.rs.game.world.WorldObject;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
+import com.rs.game.world.Animation;
+import com.rs.game.world.World;
+import com.rs.game.world.WorldObject;
 import com.rs.utils.Utils;
 
 import java.util.HashMap;
@@ -245,7 +245,7 @@ public class Cooking extends Action {
          */
         RAW_POTATO(new Item(1942, 1), 7, 200, 15, new Item(6699, 1), new Item(6701, 1), false, false);
 
-        private static Map<Short, Cookables> ingredients = new HashMap<>();
+        private static final Map<Short, Cookables> ingredients = new HashMap<>();
 
         public static Cookables forId(short itemId) {
             return ingredients.get(itemId);
@@ -257,14 +257,14 @@ public class Cooking extends Action {
             }
         }
 
-        private Item raw;
-        private int lvl;
-        private int burningLvl;
-        private int xp;
-        private Item burnt;
-        private Item total;
-        private boolean spitRoast;
-        private boolean fireOnly;
+        private final Item raw;
+        private final int lvl;
+        private final int burningLvl;
+        private final int xp;
+        private final Item burnt;
+        private final Item total;
+        private final boolean spitRoast;
+        private final boolean fireOnly;
 
         Cookables(Item raw, int lvl, int burningLvl, int exp, Item burnt, Item total, boolean spitRoast, boolean
                 fireOnly) {
@@ -317,9 +317,9 @@ public class Cooking extends Action {
 
     private int amount;
     private Cookables cook;
-    private Item item;
-    private WorldObject object;
-    private Animation COOKING = new Animation(883);
+    private final Item item;
+    private final WorldObject object;
+    private final Animation COOKING = new Animation(883);
 
     public Cooking(WorldObject object, Item item, int amount) {
         this.amount = amount;

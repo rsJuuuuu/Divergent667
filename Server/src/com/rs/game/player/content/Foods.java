@@ -1,12 +1,12 @@
 package com.rs.game.player.content;
 
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.world.Animation;
 import com.rs.game.Hit;
 import com.rs.game.Hit.HitLook;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
+import com.rs.game.world.Animation;
 import com.rs.utils.Utils;
 import com.rs.utils.stringUtils.TimeUtils;
 
@@ -271,12 +271,12 @@ public class Foods {
 		/**
 		 * The food id
 		 */
-		private int id;
+		private final int id;
 
 		/**
 		 * The healing health
 		 */
-		private int heal;
+		private final int heal;
 
 		/**
 		 * The new food id if needed
@@ -293,7 +293,7 @@ public class Foods {
 		/**
 		 * A map of object ids to foods.
 		 */
-		private static Map<Integer, Food> foods = new HashMap<>();
+		private static final Map<Integer, Food> foods = new HashMap<>();
 
 		/**
 		 * Gets a food by an object id.

@@ -74,7 +74,7 @@ public class Player extends Entity {
     private int slayerPoints = 0;
     private int wGuildTokens;
     private int pestPoints;
-    private double donationAmount = 0.0;
+    private final double donationAmount = 0.0;
     /**
      * Effects
      */
@@ -88,7 +88,7 @@ public class Player extends Entity {
      * Player variables
      */
     private String password;
-    private String salt;
+    private final String salt;
     private String displayName;
     private String lastIP;
     private long muted;
@@ -117,7 +117,7 @@ public class Player extends Entity {
      * Ranks
      */
     private RanksManager.Ranks playerRank = RanksManager.Ranks.NORMAL;
-    private RanksManager.Ranks donorRank = RanksManager.Ranks.NORMAL;
+    private final RanksManager.Ranks donorRank = RanksManager.Ranks.NORMAL;
 
     /**
      * Misc variables
@@ -128,18 +128,18 @@ public class Player extends Entity {
     /**
      * Content
      */
-    private Appearance appearance;
-    private Inventory inventory;
-    private Equipment equipment;
-    private Skills skills;
-    private CombatDefinitions combatDefinitions;
-    private Prayer prayer;
-    private Bank bank;
-    private ControllerManager controllerManager;
-    private MusicsManager musicsManager;
-    private EmotesManager emotesManager;
-    private ChargesManager charges;
-    private FriendsIgnores friendsIgnores;
+    private final Appearance appearance;
+    private final Inventory inventory;
+    private final Equipment equipment;
+    private final Skills skills;
+    private final CombatDefinitions combatDefinitions;
+    private final Prayer prayer;
+    private final Bank bank;
+    private final ControllerManager controllerManager;
+    private final MusicsManager musicsManager;
+    private final EmotesManager emotesManager;
+    private final ChargesManager charges;
+    private final FriendsIgnores friendsIgnores;
     private FollowerManager followerManager;
     private Farming farming;
     private AuraManager auraManager;
@@ -155,13 +155,13 @@ public class Player extends Entity {
      */
     private int lastVeng;
     private boolean castedVeng;
-    private int[] pouches;
-    private HashMap<String, Long> recentKills = new HashMap<>();
+    private final int[] pouches;
+    private HashMap<String, Long> recentKills;
 
     /**
      * Barrows
      */
-    private boolean[] killedBarrowBrothers;
+    private final boolean[] killedBarrowBrothers;
     private int hiddenBrother;
     private int barrowsKillCount;
 
@@ -325,7 +325,7 @@ public class Player extends Entity {
 
         setDirection(Utils.getFaceDirection(0, -1));
         logicPackets = new ConcurrentLinkedQueue<>();
-        switchItemCache = Collections.synchronizedList(new ArrayList<Integer>());
+        switchItemCache = Collections.synchronizedList(new ArrayList<>());
         initEntity();
         packetsDecoderPing = TimeUtils.getTime();
 
@@ -1268,8 +1268,6 @@ public class Player extends Entity {
                 p.setNextWorldTile(new WorldTile(3018, 3180, 0));
                 break;
             case 5:
-                p.setNextWorldTile(new WorldTile(3018, 3189, 0));
-                break;
             case 6:
                 p.setNextWorldTile(new WorldTile(3018, 3189, 0));
                 break;

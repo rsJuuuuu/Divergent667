@@ -207,15 +207,14 @@ public enum FollowerData {
                     if (follower.getOwner().getSkills().getLevel(Skills.COOKING) < fish.getLevel()) {
                         follower.getOwner().getPackets().sendGameMessage(
                                 "Your cooking level is not high enough for " + "the bunyip to eat this fish.");
-                        return;
                     } else {
                         follower.getOwner().setNextGraphics(new Graphics(1316));
                         follower.getOwner().setNextAnimation(new Animation(7660));
                         follower.getOwner().heal(Foods.Food.forId(Cooking.Cookables.forId((short) item.getId())
                                 .getProduct().getId()).getHeal());
                         follower.getOwner().getInventory().deleteItem(item.getId(), item.getAmount());
-                        return;
                     }
+                    return;
                 }
             }
             follower.getOwner().getPackets().sendGameMessage("Your bunyip can't eat this.");
@@ -265,7 +264,7 @@ public enum FollowerData {
             player.setNextGraphics(new Graphics(1300));
             player.setNextAnimation(new Animation(7660));
             player.getSkills().set(Skills.AGILITY, newLevel);
-            player.setRunEnergy(runEnergy > 100 ? 100 : runEnergy);
+            player.setRunEnergy(Math.min(runEnergy, 100));
         }
 
         @Override
@@ -304,7 +303,7 @@ public enum FollowerData {
             int runEnergy = player.getRunEnergy() + (Math.round(agilityLevel / 2));
             player.setNextGraphics(new Graphics(1300));
             player.setNextAnimation(new Animation(7660));
-            player.setRunEnergy(runEnergy > 100 ? 100 : runEnergy);
+            player.setRunEnergy(Math.min(runEnergy, 100));
 
         }
 
@@ -497,7 +496,7 @@ public enum FollowerData {
 
     private int itemId = 0;
     private int specialAmount = 0;
-    private int npcId;
+    private final int npcId;
     private int life;
     private int summonCost;
 
@@ -508,7 +507,7 @@ public enum FollowerData {
     private String specialName;
     private String specialDescription;
 
-    private SpecialAttack specialAttack;
+    private final SpecialAttack specialAttack;
     private Animation spawnAnimation;
 
     private PouchData pouchData;

@@ -1,10 +1,10 @@
 package com.rs.game.minigames;
 
-import com.rs.game.world.RegionBuilder;
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.Player;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.world.RegionBuilder;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.stringUtils.TimeUtils;
 
 import java.util.ArrayList;
@@ -15,24 +15,25 @@ public class ClanWars {
 
     private long fightTime;
 
-    private boolean[][] rules;
+    private final boolean[][] rules;
 
     private boolean allowedEnter, whiteTeam;
 
-    private Player player, other;
+    private final Player player;
+    private final Player other;
 
     /**
      * Holds the team's members.
      */
-    private ArrayList<Player> team;
+    private final ArrayList<Player> team;
 
     /**
      * Arranges and separates the teleports of each team via north, south, in
      * the following order Platue, Turrets, Quarry, Forest & Classic.
      */
     public static WorldTile[][] ARENA_TELEPORTS = {{new WorldTile(2883, 5941, 0), new WorldTile(2883, 5900, 0)}, {new WorldTile(2815, 5511, 0), new WorldTile(2891, 5515, 0)}, {new WorldTile(2993, 5558, 0), new WorldTile
-			(2891, 5515, 0)}, {new WorldTile(2930, 5668, 0), new WorldTile(2892, 5641, 0)}, {new WorldTile(2883, 5941,
-			0), new WorldTile(2883, 5900, 0)}};
+            (2891, 5515, 0)}, {new WorldTile(2930, 5668, 0), new WorldTile(2892, 5641, 0)}, {new WorldTile(2883, 5941,
+            0), new WorldTile(2883, 5900, 0)}};
 
     // x, x, y
     /**
@@ -46,9 +47,9 @@ public class ClanWars {
      * the following order Platue, Turrets, Quarry, Forest, Classic.
      */
     public static WorldTile[][] DEATH_TELEPORTS = {{new WorldTile(2851, 5931, 0), new WorldTile(2851, 5909, 0)}, {new
-			WorldTile(2815, 5511, 0), new WorldTile(2891, 5515, 0)}, // done
+            WorldTile(2815, 5511, 0), new WorldTile(2891, 5515, 0)}, // done
             {new WorldTile(2908, 5686, 0), new WorldTile(2915, 5537, 0)}, {new WorldTile(2929, 5667, 0), new
-			WorldTile(2892, 5661, 0)}, {new WorldTile(2883, 5941, 0), new WorldTile(2883, 5900, 0)}};
+            WorldTile(2892, 5661, 0)}, {new WorldTile(2883, 5941, 0), new WorldTile(2883, 5900, 0)}};
 
     public static int[] KILLS_REQUIRED = {25, 50, 100, 200, 400, 750, 1000, 2000, 5000, 10000};
     // seconds
@@ -68,8 +69,9 @@ public class ClanWars {
     }
 
     private void swapRule(Player target, int rule, int index) {
-        boolean current = rules[rule][index];
-        current = !current;
+        // TODO The two commented out lines do nothing.. Is the intention to change the value at rules[rule][index]
+        // boolean current = rules[rule][index];
+        // current = !current;
         if (player != target) other.getClanWars().swapRule(target, rule, index);
     }
 
@@ -203,10 +205,10 @@ public class ClanWars {
             if (other.getTemporaryAttributes().get("hasChallenged") == null) return;
             player.getCurrentFriendChat().sendMessage(player,
                     "The battle will begin in two minutes between " + player.getCurrentFriendChat().getChannelName()
-                    + " and " + other.getCurrentFriendChat().getChannelName() + ".");
+                            + " and " + other.getCurrentFriendChat().getChannelName() + ".");
             other.getCurrentFriendChat().sendMessage(player,
                     "The battle will begin in two minutes between " + other.getCurrentFriendChat().getChannelName()
-                    + " and " + player.getCurrentFriendChat().getChannelName() + ".");
+                            + " and " + player.getCurrentFriendChat().getChannelName() + ".");
             player.stopAll();
             for (Player teamPlayer : player.getCurrentFriendChat().getPlayers())
                 teamPlayer.getClanWars().setAllowedEnter(true);
@@ -237,7 +239,7 @@ public class ClanWars {
         }
 
         public static boolean processButtonClick(Player player, Player other, int interfaceId, int componentId, int
-				slotId, int packetId) {
+                slotId, int packetId) {
             if (interfaceId == 791) {
                 for (int i = 25; i < 52; i += 3) {// Victory
                     if (componentId == i) player.getClanWars().swapRule(other, 0, (28 - i) / 3);
@@ -290,13 +292,13 @@ public class ClanWars {
         }
 
         public static void refreshClanInterface(Player player) {
-			/*
-			 * file: 5280, 3, 0 - Kills, index easy :p file: 5281, 7, 4 file:
-			 * 5282, 8, 8 file: 5283, 9, 9 file: 5284, 10, 10 file: 5285, 11, 11
-			 * file: 5286, 13, 12 file: 5287, 14, 14 file: 5288, 15, 15 file:
-			 * 5289, 16, 16 file: 5290, 17, 17 file: 5291, 17, 0 file: 5292, 30,
-			 * 26 file: 5293, 31, 31
-			 */
+            /*
+             * file: 5280, 3, 0 - Kills, index easy :p file: 5281, 7, 4 file:
+             * 5282, 8, 8 file: 5283, 9, 9 file: 5284, 10, 10 file: 5285, 11, 11
+             * file: 5286, 13, 12 file: 5287, 14, 14 file: 5288, 15, 15 file:
+             * 5289, 16, 16 file: 5290, 17, 17 file: 5291, 17, 0 file: 5292, 30,
+             * 26 file: 5293, 31, 31
+             */
         }
 
         public static void sendDrawInterface(Player leader) {

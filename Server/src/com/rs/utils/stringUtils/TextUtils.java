@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
  */
 public class TextUtils {
 
-    private static DecimalFormat decimalFormat = new DecimalFormat("#.##");
+    private static final DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     /**
      * Allow max 2 digits on a double

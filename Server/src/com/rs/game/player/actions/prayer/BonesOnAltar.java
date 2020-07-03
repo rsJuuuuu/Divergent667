@@ -21,8 +21,8 @@ public class BonesOnAltar extends Action {
         LIMESTONE(13191, 1.75),
         MARBLE(13194, 2.0),
         GILDED(13197, 2.5);
-        private int id;
-        private double boost;
+        private final int id;
+        private final double boost;
 
         Altar(int id, double boost) {
             this.id = id;
@@ -36,9 +36,9 @@ public class BonesOnAltar extends Action {
         }
     }
 
-    private int boneId;
-    private Bone bone;
-    private Altar altar;
+    private final int boneId;
+    private final Bone bone;
+    private final Altar altar;
     private WorldTile faceTile;
 
     private BonesOnAltar(int boneId, Altar altar) {

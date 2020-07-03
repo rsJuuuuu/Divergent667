@@ -7,11 +7,11 @@ import java.util.List;
 public class WorldTasksManager {
 
 	private static final List<WorldTaskInformation> tasks = Collections
-			.synchronizedList(new LinkedList<WorldTaskInformation>());
+			.synchronizedList(new LinkedList<>());
 
 	public static void processTasks() {
 		for (WorldTaskInformation taskInformation : tasks
-				.toArray(new WorldTaskInformation[tasks.size()])) {
+				.toArray(new WorldTaskInformation[0])) {
 			if (taskInformation.continueCount > 0) {
 				taskInformation.continueCount--;
 				continue;
@@ -86,12 +86,12 @@ public class WorldTasksManager {
 
 	private static final class WorldTaskInformation {
 
-		private WorldTask task;
-		private int continueMaxCount;
+		private final WorldTask task;
+		private final int continueMaxCount;
 		private int continueCount;
 
 		public WorldTaskInformation(WorldTask task, int continueCount,
-				int continueMaxCount) {
+									int continueMaxCount) {
 			this.task = task;
 			this.continueCount = continueCount;
 			this.continueMaxCount = continueMaxCount;

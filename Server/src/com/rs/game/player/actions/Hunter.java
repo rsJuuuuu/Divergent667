@@ -1,11 +1,11 @@
 package com.rs.game.player.actions;
 
-import com.rs.game.world.Animation;
-import com.rs.game.world.World;
-import com.rs.game.world.WorldObject;
 import com.rs.game.player.OwnedObjectManager;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
+import com.rs.game.world.Animation;
+import com.rs.game.world.World;
+import com.rs.game.world.WorldObject;
 
 import java.util.HashMap;
 import java.util.List;
@@ -39,9 +39,12 @@ public class Hunter extends Action {
                 5072, 10087, 19, 95.2, HunterEquipment.BIRD_SNARE, 19178), WIMPY_BIRD(
                 7031, 11525, 39, 167, HunterEquipment.BIRD_SNARE, 28930);
 
-        private int npcId, level, item, transformObjectId;
-        private double xp;
-        private HunterEquipment hunter;
+        private final int npcId;
+        private final int level;
+        private final int item;
+        private final int transformObjectId;
+        private final double xp;
+        private final HunterEquipment hunter;
 
         static final Map<Integer, HunterNPC> npc = new HashMap<>();
         static final Map<Integer, HunterNPC> object = new HashMap<>();
@@ -106,8 +109,10 @@ public class Hunter extends Action {
         BOX(10008, 19187, new Animation(5208), 27), BIRD_SNARE(10006, 19175,
                 new Animation(5207), 1);
 
-        private int itemId, objectId, baseLevel;
-        private Animation pickUpAnimation;
+        private final int itemId;
+        private final int objectId;
+        private final int baseLevel;
+        private final Animation pickUpAnimation;
 
         HunterEquipment(int itemId, int objectId,
                         Animation pickUpAnimation, int baseLevel) {
@@ -137,7 +142,7 @@ public class Hunter extends Action {
     /**
      * Hunter's equipment.
      */
-    private HunterEquipment hunt;
+    private final HunterEquipment hunt;
 
     /**
      * Gets the amount of traps a player can set.

@@ -141,7 +141,7 @@ public class FXUtils {
      */
     public static int parseDragInteger(String content, String key) {
         try {
-            return Integer.valueOf(getDragParameter(content, key));
+            return Integer.parseInt(getDragParameter(content, key));
         } catch (Exception e) {
             return -1;
         }
@@ -152,7 +152,7 @@ public class FXUtils {
      */
     public static boolean parseDragBoolean(String content, String key) {
         try {
-            return Boolean.valueOf(getDragParameter(content, key));
+            return Boolean.parseBoolean(getDragParameter(content, key));
         } catch (Exception e) {
             return false;
         }

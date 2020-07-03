@@ -19,7 +19,7 @@ public abstract class Dialogue {
 
     }
 
-    private LinkedList<Runnable> actionQueue = new LinkedList<>();
+    private final LinkedList<Runnable> actionQueue = new LinkedList<>();
 
     public Object[] parameters;
 
@@ -140,7 +140,7 @@ public abstract class Dialogue {
             int lastIndex = temp.lastIndexOf(" ");
 
             lines[i] = temp.substring(0, lastIndex == 0 ? maxLineLength : lastIndex);
-            message = message.substring(lines[i].length(), message.length());
+            message = message.substring(lines[i].length());
         }
         return lines;
     }

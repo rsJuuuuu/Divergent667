@@ -1,12 +1,12 @@
 package com.rs.game.npc.impl.boss.corp;
 
-import com.rs.game.npc.Npc;
-import com.rs.game.world.Entity;
 import com.rs.game.Hit;
 import com.rs.game.Hit.HitLook;
+import com.rs.game.npc.Npc;
+import com.rs.game.player.Player;
+import com.rs.game.world.Entity;
 import com.rs.game.world.World;
 import com.rs.game.world.WorldTile;
-import com.rs.game.player.Player;
 import com.rs.utils.Utils;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class DarkEnergyCore extends Npc {
 
-	private CorporealBeast beast;
+	private final CorporealBeast beast;
 	private Entity target;
 
 	public DarkEnergyCore(CorporealBeast beast) {

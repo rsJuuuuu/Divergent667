@@ -1,13 +1,13 @@
 package com.rs.game.player.actions.mining;
 
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.world.Animation;
-import com.rs.game.world.World;
-import com.rs.game.world.WorldObject;
+import com.rs.game.actionHandling.Handler;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
-import com.rs.game.actionHandling.Handler;
+import com.rs.game.world.Animation;
+import com.rs.game.world.World;
+import com.rs.game.world.WorldObject;
 import com.rs.utils.Utils;
 
 import static com.rs.game.actionHandling.HandlerManager.HandlerConstants.CLICK_1;
@@ -31,11 +31,11 @@ public class EssenceMining extends Action implements Handler {
     private enum EssenceDefinitions {
         Rune_Essence(1, 5, 1436, 1, 1),
         Pure_Essence(30, 5, 7936, 1, 1);
-        private int level;
-        private double xp;
-        private int oreId;
-        private int oreBaseTime;
-        private int oreRandomTime;
+        private final int level;
+        private final double xp;
+        private final int oreId;
+        private final int oreBaseTime;
+        private final int oreRandomTime;
 
         EssenceDefinitions(int level, double xp, int oreId, int oreBaseTime, int oreRandomTime) {
             this.level = level;

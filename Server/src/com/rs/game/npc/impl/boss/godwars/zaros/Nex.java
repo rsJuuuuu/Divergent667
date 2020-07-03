@@ -24,7 +24,7 @@ public final class Nex extends Npc {
     private boolean trapsSettedUp;
     private long lastSiphon;
     private boolean doingSiphon;
-    private Npc[] bloodReavers;
+    private final Npc[] bloodReavers;
     private int switchPrayersDelay;
 
     public Nex(int id, WorldTile tile, int mapAreaNameHash, boolean canBeAttackFromOutOfArea, boolean spawned) {

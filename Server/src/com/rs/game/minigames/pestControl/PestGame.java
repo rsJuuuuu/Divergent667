@@ -15,12 +15,12 @@ import java.util.Optional;
  */
 public class PestGame extends Minigame {
 
-    private ArrayList<PestPortal> portals = new ArrayList<>();
+    private final ArrayList<PestPortal> portals = new ArrayList<>();
 
 
     private static final WorldTile EXIT_TILE = new WorldTile(2657, 2639, 0);
 
-    private SimpleTimer portalTimer = new SimpleTimer(25);
+    private final SimpleTimer portalTimer = new SimpleTimer(25);
 
     @Override
     protected void startGame() {
@@ -58,7 +58,7 @@ public class PestGame extends Minigame {
         return true;
     }
 
-    private HashMap<String, Integer> damages = new HashMap<>();
+    private final HashMap<String, Integer> damages = new HashMap<>();
 
     /**
      * Register the damage dealt by this player

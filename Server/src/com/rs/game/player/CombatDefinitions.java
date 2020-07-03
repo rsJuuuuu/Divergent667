@@ -284,7 +284,6 @@ public final class CombatDefinitions implements Serializable {
                     case 0:
                         return Skills.ATTACK;
                     case 1:
-                        return Skills.STRENGTH;
                     case 2:
                         return Skills.STRENGTH;
                     case 3:

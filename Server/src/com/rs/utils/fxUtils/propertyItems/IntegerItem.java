@@ -21,10 +21,10 @@ public class IntegerItem implements PropertySheet.Item {
         }
     }
 
-    private IntegerProperty value = new SimpleIntegerProperty();
+    private final IntegerProperty value = new SimpleIntegerProperty();
 
-    private String name;
-    private String category;
+    private final String name;
+    private final String category;
 
     public IntegerItem(String name) {
         this.name = name;

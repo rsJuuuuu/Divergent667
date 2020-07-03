@@ -25,10 +25,10 @@ public enum Bone {
     OURG(4834, 140),
     FROST_DRAGON(18830, 180);
 
-    private int id;
-    private double experience;
+    private final int id;
+    private final double experience;
 
-    private static Map<Integer, Bone> bones = new HashMap<>();
+    private static final Map<Integer, Bone> bones = new HashMap<>();
 
     static {
         for (Bone bone : Bone.values()) {

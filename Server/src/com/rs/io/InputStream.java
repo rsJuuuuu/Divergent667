@@ -18,15 +18,15 @@ public final class InputStream extends Stream {
 
 	public int readBits(int bitOffset) {
 
-		int bytePos = bitPosition >> 1779819011;
+		int bytePos = bitPosition >> 3;
 		int i_8_ = -(0x7 & bitPosition) + 8;
 		bitPosition += bitOffset;
 		int value = 0;
-		for (/**/; (bitOffset ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_ = 8) {
+		for (/**/; (~bitOffset) < (~i_8_); i_8_ = 8) {
 			value += (BIT_MASK[i_8_] & buffer[bytePos++]) << -i_8_ + bitOffset;
 			bitOffset -= i_8_;
 		}
-		if ((i_8_ ^ 0xffffffff) == (bitOffset ^ 0xffffffff))
+		if ((~i_8_) == (~bitOffset))
 			value += buffer[bytePos] & BIT_MASK[i_8_];
 		else
 			value += (buffer[bytePos] >> -bitOffset + i_8_ & BIT_MASK[bitOffset]);
@@ -85,13 +85,13 @@ public final class InputStream extends Stream {
 		return getRemaining() > 0 ? buffer[offset++] : 0;
 	}
 
-	public void readBytes(byte buffer[], int off, int len) {
+	public void readBytes(byte[] buffer, int off, int len) {
 		for (int k = off; k < len + off; k++) {
 			buffer[k] = (byte) readByte();
 		}
 	}
 
-	public void readBytes(byte buffer[]) {
+	public void readBytes(byte[] buffer) {
 		readBytes(buffer, 0, buffer.length);
 	}
 
@@ -187,7 +187,7 @@ public final class InputStream extends Stream {
 		/*
 		 * if(Settings.CLIENT_BUILD < 670) return readUnsignedShort();
 		 */
-		if ((buffer[getOffset()] ^ 0xffffffff) <= -1) {
+		if ((~buffer[getOffset()]) <= -1) {
 			int value = readUnsignedShort();
 			if (value == 32767) {
 				return -1;
@@ -246,12 +246,12 @@ public final class InputStream extends Stream {
 
 	public String readJagString() {
 		readByte();
-		String s = "";
+		StringBuilder s = new StringBuilder();
 		int b;
 		while ((b = readByte()) != 0) {
-			s += (char) b;
+			s.append((char) b);
 		}
-		return s;
+		return s.toString();
 	}
 
 	public int readUnsignedSmart() {

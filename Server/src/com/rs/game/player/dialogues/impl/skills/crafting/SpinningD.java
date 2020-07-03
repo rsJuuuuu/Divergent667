@@ -3,9 +3,9 @@ package com.rs.game.player.dialogues.impl.skills.crafting;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.Action;
-import com.rs.game.player.dialogues.SkillsDialogue;
 import com.rs.game.player.content.skills.crafting.Spinning;
 import com.rs.game.player.dialogues.Dialogue;
+import com.rs.game.player.dialogues.SkillsDialogue;
 
 /**
  * The dialogue of the spinning wheel.
@@ -14,7 +14,7 @@ import com.rs.game.player.dialogues.Dialogue;
  */
 public class SpinningD extends Dialogue {
 
-    private int itemId[];
+    private int[] itemId;
 
     @Override
     public void start() {
@@ -48,18 +48,12 @@ public class SpinningD extends Dialogue {
         Action action = new Action() {
             @Override
             public boolean start(Player player) {
-                if (quantity[0] <= 0) {
-                    return false;
-                }
-                return true;
+                return quantity[0] > 0;
             }
 
             @Override
             public boolean process(Player player) {
-                if (quantity[0] <= 0) {
-                    return false;
-                }
-                return true;
+                return quantity[0] > 0;
             }
 
             @Override

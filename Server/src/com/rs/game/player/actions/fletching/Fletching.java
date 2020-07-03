@@ -1,10 +1,10 @@
 package com.rs.game.player.actions.fletching;
 
-import com.rs.game.world.Animation;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
+import com.rs.game.world.Animation;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -172,7 +172,7 @@ public class Fletching extends Action {
 
         DRAGON_DART(11232, 314, new int[]{11230}, new int[]{95}, new double[]{18.4}, new Animation(-1));
 
-        private static Map<Integer, Fletch> fletching = new HashMap<>();
+        private static final Map<Integer, Fletch> fletching = new HashMap<>();
 
         public static Fletch forId(int id) {
             return fletching.get(id);
@@ -183,12 +183,14 @@ public class Fletching extends Action {
                 fletching.put(fletch.id, fletch);
         }
 
-        private int[] product, level;
-        private int id, selected;
-        private double[] xp;
-        private Animation anim;
+        private final int[] product;
+        private final int[] level;
+        private final int id;
+        private final int selected;
+        private final double[] xp;
+        private final Animation anim;
 
-        Fletch(int id, int selected, int[] product, int level[], double[] xp, Animation anim) {
+        Fletch(int id, int selected, int[] product, int[] level, double[] xp, Animation anim) {
             this.id = id;
             this.product = product;
             this.selected = selected;
@@ -222,8 +224,8 @@ public class Fletching extends Action {
         }
     }
 
-    private Fletch fletch;
-    private int option;
+    private final Fletch fletch;
+    private final int option;
     private int ticks;
 
     public Fletching(Fletch fletch, int option, int ticks) {
@@ -248,7 +250,7 @@ public class Fletching extends Action {
                 .getSelected(), 1))
             return false;
         if (player.getSkills().getLevel(Skills.FLETCHING) < fletch.getLevel()[option]) {
-            player.getDialogueManager().startDialogue("SimpleMessage", "You need a level of " + fletch.getLevel() +
+            player.getDialogueManager().startDialogue("SimpleMessage", "You need a level of " + fletch.getLevel()[option] +
                     "" + " to fletch this.");
             return false;
         }

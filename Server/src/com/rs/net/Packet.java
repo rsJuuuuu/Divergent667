@@ -26,15 +26,15 @@ public final class Packet {
     /**
 	 * The ID of the packet
 	 */
-	private int pID;
+	private final int pID;
 	/**
 	 * The length of the payload
 	 */
-	private int pLength;
+	private final int pLength;
 	/**
 	 * The payload
 	 */
-	private byte[] pData;
+	private final byte[] pData;
 	/**
 	 * The current index into the payload buffer for reading
 	 */
@@ -103,7 +103,7 @@ public final class Packet {
 	 */
 	public byte[] getRemainingData() {
 		byte[] data = new byte[pLength - caret];
-        System.arraycopy(pData, 0 + caret, data, 0, data.length);
+		System.arraycopy(pData, caret, data, 0, data.length);
 		caret += data.length;
 		return data;
 
@@ -246,8 +246,8 @@ public final class Packet {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("[id=" + pID + ",len=" + pLength + ",data=0x");
-		for(int x = 0;x < pLength;x++) {
+		sb.append("[id=").append(pID).append(",len=").append(pLength).append(",data=0x");
+		for (int x = 0; x < pLength; x++) {
 			sb.append(byteToHex(pData[x], true));
 		}
 		sb.append("]");

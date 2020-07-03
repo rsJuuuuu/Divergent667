@@ -1,7 +1,7 @@
 package com.rs.game.npc.impl.others;
 
 import com.rs.cores.CoresManager;
-import com.rs.game.*;
+import com.rs.game.Hit;
 import com.rs.game.Hit.HitLook;
 import com.rs.game.npc.Npc;
 import com.rs.game.npc.data.NpcCombatDefinitions;
@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 @SuppressWarnings("serial")
 public final class Glacor extends Npc {
 
-    private boolean[] demonPrayer;
+    private final boolean[] demonPrayer;
     private int fixedCombatType;
     private int[] cachedDamage;
     private int shieldTimer;
@@ -52,12 +52,14 @@ public final class Glacor extends Npc {
             for (int i = 0; i < cachedDamage.length; i++) {
                 if (cachedDamage[i] >= 310) {
                     cachedDamage = new int[3];
+                    break;
                 }
             }
         }
         for (int i = 0; i < cachedDamage.length; i++) {
             if (cachedDamage[i] >= 310) {
                 cachedDamage = new int[3];
+                break;
             }
         }
     }
@@ -81,14 +83,12 @@ public final class Glacor extends Npc {
                 cachedDamage[0] += hit.getDamage();
             }
         } else if (hit.getLook() == HitLook.MELEE_DAMAGE) {
-            type = 1;
             if (demonPrayer[1]) {
                 hit.setDamage(0);
             } else {
                 cachedDamage[1] += hit.getDamage();
             }
         } else if (hit.getLook() == HitLook.RANGE_DAMAGE) {
-            type = 2;
             if (demonPrayer[2]) {
                 hit.setDamage(0);
             } else {

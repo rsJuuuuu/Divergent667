@@ -1,11 +1,11 @@
 package com.rs.game.player.cutscenes.actions;
 
-import com.rs.game.world.ForceTalk;
 import com.rs.game.player.Player;
+import com.rs.game.world.ForceTalk;
 
 public class PlayerForceTalkAction extends CutsceneAction {
 
-	private String text;
+	private final String text;
 
 	public PlayerForceTalkAction(String text, int actionDelay) {
 		super(-1, actionDelay);

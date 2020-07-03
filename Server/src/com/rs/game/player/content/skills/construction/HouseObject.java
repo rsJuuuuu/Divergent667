@@ -9,11 +9,11 @@ public class HouseObject implements Serializable {
 
     private static final long serialVersionUID = 2011232556974180375L;
 
-    private int x;
-    private int y;
-    private int rotation;
-    private int objectId;
-    private int objectType;
+    private final int x;
+    private final int y;
+    private final int rotation;
+    private final int objectId;
+    private final int objectType;
 
     /**
      * @param x          coordinate on room

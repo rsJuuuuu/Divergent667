@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static com.rs.game.actionHandling.HandlerManager.HandlerConstants.CLICK_3;
 import static com.rs.game.actionHandling.HandlerManager.registerNpcShop;
 
 public class ShopHandler implements Handler {

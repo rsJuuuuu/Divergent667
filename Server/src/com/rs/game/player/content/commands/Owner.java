@@ -24,14 +24,14 @@ public class Owner implements Handler {
     public void register() {
         registerOwnerCommand((player, command, params) -> {
             try {
-                player.getPackets().sendConfig(Integer.valueOf(params[0]), Integer.valueOf(params[1]));
+                player.getPackets().sendConfig(Integer.parseInt(params[0]), Integer.parseInt(params[1]));
             } catch (Exception e) {
                 player.sendMessage("Invalid input!");
             }
             return RETURN;
         }, "sendconfig");
         registerOwnerCommand((player, command, params) -> {
-            final int value = Integer.valueOf(params[0]);
+            final int value = Integer.parseInt(params[0]);
             WorldTasksManager.schedule(new WorldTask() {
                 int value2;
 
@@ -59,7 +59,7 @@ public class Owner implements Handler {
                 return RETURN;
             }
             try {
-                World.sendGraphics(player, new Graphics(Integer.valueOf(params[0])), new WorldTile(player.getX(),
+                World.sendGraphics(player, new Graphics(Integer.parseInt(params[0])), new WorldTile(player.getX(),
                         player.getY() + 1, player.getPlane()));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::gfx id");
@@ -67,10 +67,10 @@ public class Owner implements Handler {
             return RETURN;
         }, "gfx", "graphics");
         registerOwnerCommand((player, command, params) -> {
-            String name = "";
+            StringBuilder name = new StringBuilder();
             for (int i = 1; i < params.length + 1; i++)
-                name += params[i - 1] + ((i == params.length + 1 - 1) ? "" : " ");
-            Player target = World.getPlayerByDisplayName(name);
+                name.append(params[i - 1]).append((i == params.length + 1 - 1) ? "" : " ");
+            Player target = World.getPlayerByDisplayName(name.toString());
             String[] invalids = {"<img", "<img=", "<str>", "<u>"};
             for (String s : invalids)
                 if (target.getDisplayName().contains(s)) {
@@ -81,15 +81,15 @@ public class Owner implements Handler {
             return RETURN;
         }, "changedisplay");
         registerOwnerCommand((player, command, params) -> {
-            int interId = Integer.valueOf(params[0]);
-            int componentId = Integer.valueOf(params[1]);
-            int id = Integer.valueOf(params[2]);
+            int interId = Integer.parseInt(params[0]);
+            int componentId = Integer.parseInt(params[1]);
+            int id = Integer.parseInt(params[2]);
             player.getPackets().sendItemOnIComponent(interId, componentId, id, 1);
             return RETURN;
         }, "imteoni", "iteminter", "interitem");
         registerOwnerCommand((player, command, params) -> {
             try {
-                player.getInterfaceManager().sendTab(Integer.valueOf(params[1]), Integer.valueOf(params[0]));
+                player.getInterfaceManager().sendTab(Integer.parseInt(params[1]), Integer.parseInt(params[0]));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: tab id inter");
             }
@@ -108,7 +108,7 @@ public class Owner implements Handler {
             String name = params[0].substring(params[0].indexOf(" ") + 1);
             Player other = World.getPlayerByDisplayName(name);
             if (other == null) return RETURN;
-            other.setRank(RanksManager.Ranks.values()[Integer.valueOf(params[1])]);
+            other.setRank(RanksManager.Ranks.values()[Integer.parseInt(params[1])]);
             return RETURN;
         }, "setrights");
         registerOwnerCommand((player, command, params) -> {
@@ -117,8 +117,8 @@ public class Owner implements Handler {
                 return RETURN;
             }
             try {
-                player.getPackets().sendHideIComponent(Integer.valueOf(params[0]), Integer.valueOf(params[1]),
-                        Boolean.valueOf(params[2]));
+                player.getPackets().sendHideIComponent(Integer.parseInt(params[0]), Integer.parseInt(params[1]),
+                        Boolean.parseBoolean(params[2]));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::hidec interfaceid componentId hidden");
             }
@@ -126,8 +126,8 @@ public class Owner implements Handler {
         }, "hidec", "hidecomponent");
         registerOwnerCommand((player, command, params) -> {
             try {
-                int inter = Integer.valueOf(params[0]);
-                int maxchild = Integer.valueOf(params[1]);
+                int inter = Integer.parseInt(params[0]);
+                int maxchild = Integer.parseInt(params[1]);
                 player.getInterfaceManager().sendInterface(inter);
                 for (int i = 0; i <= maxchild; i++)
                     player.getPackets().sendIComponentText(inter, i, "child: " + i);
@@ -143,7 +143,7 @@ public class Owner implements Handler {
             }
 
             try {
-                for (int i = 0; i < Integer.valueOf(params[0]); i++) {
+                for (int i = 0; i < Integer.parseInt(params[0]); i++) {
                     player.getPackets().sendGlobalString(i, "String " + i);
                 }
             } catch (NumberFormatException e) {
@@ -157,7 +157,7 @@ public class Owner implements Handler {
                 return RETURN;
             }
             try {
-                for (int i = 0; i < Integer.valueOf(params[0]); i++) {
+                for (int i = 0; i < Integer.parseInt(params[0]); i++) {
                     player.getPackets().sendGlobalConfig(i, 1);
                 }
             } catch (NumberFormatException e) {
@@ -192,7 +192,7 @@ public class Owner implements Handler {
                 return RETURN;
             }
             try {
-                player.getInterfaceManager().sendInterface(Integer.valueOf(params[0]));
+                player.getInterfaceManager().sendInterface(Integer.parseInt(params[0]));
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::inter interfaceId");
             }
@@ -216,8 +216,8 @@ public class Owner implements Handler {
                 return RETURN;
             }
             try {
-                player.getPackets().sendSound(Integer.valueOf(params[0]), 0,
-                        params.length + 1 > 2 ? Integer.valueOf(params[1]) : 1);
+                player.getPackets().sendSound(Integer.parseInt(params[0]), 0,
+                        params.length + 1 > 2 ? Integer.parseInt(params[1]) : 1);
             } catch (NumberFormatException e) {
                 player.getPackets().sendPanelBoxMessage("Use: ::sound soundid");
             }
@@ -227,7 +227,7 @@ public class Owner implements Handler {
             int delay = 60;
             if (params.length + 1 >= 2) {
                 try {
-                    delay = Integer.valueOf(params[0]);
+                    delay = Integer.parseInt(params[0]);
                 } catch (NumberFormatException e) {
                     player.getPackets().sendPanelBoxMessage("Use: ::restart secondsDelay(IntegerValue)");
                     return RETURN;

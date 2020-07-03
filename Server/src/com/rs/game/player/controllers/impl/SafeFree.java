@@ -68,9 +68,7 @@ public class SafeFree extends Controller {
 
     @Override
     public void moved() {
-        if (!isInClanSafe(player)) {
-            player.setCanPvp(false);
-        } else player.setCanPvp(true);
+        player.setCanPvp(isInClanSafe(player));
     }
 
     private void teleportPlayer(Player player) {

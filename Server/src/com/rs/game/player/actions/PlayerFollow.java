@@ -5,7 +5,7 @@ import com.rs.utils.stringUtils.TimeUtils;
 
 public class PlayerFollow extends Action {
 
-	private Player target;
+	private final Player target;
 
 	public PlayerFollow(Player target) {
 		this.target = target;

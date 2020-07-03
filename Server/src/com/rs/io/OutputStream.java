@@ -316,11 +316,11 @@ public final class OutputStream extends Stream {
 	public final void rsaEncode(BigInteger key, BigInteger modulus) {
 		int length = getOffset();
 		setOffset(0);
-		byte data[] = new byte[length];
+		byte[] data = new byte[length];
 		getBytes(data, 0, length);
 		BigInteger biginteger2 = new BigInteger(data);
 		BigInteger biginteger3 = biginteger2.modPow(key, modulus);
-		byte out[] = biginteger3.toByteArray();
+		byte[] out = biginteger3.toByteArray();
 		setOffset(0);
 		writeBytes(out, 0, out.length);
 	}

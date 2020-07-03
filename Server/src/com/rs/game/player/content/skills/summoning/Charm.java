@@ -17,7 +17,7 @@ public enum Charm {
     TORCHER(12167),
     OBSIDIAN(12168);
 
-    private int itemId;
+    private final int itemId;
     Charm(int itemId){
         this.itemId = itemId;
     }

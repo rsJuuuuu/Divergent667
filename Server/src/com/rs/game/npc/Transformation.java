@@ -2,13 +2,13 @@ package com.rs.game.npc;
 
 public final class Transformation {
 
-	private int toNPCId;
+    private final int toNPCId;
 
-	public Transformation(int toNPCId) {
-		this.toNPCId = toNPCId;
-	}
+    public Transformation(int toNPCId) {
+        this.toNPCId = toNPCId;
+    }
 
-	public int getToNPCId() {
-		return toNPCId;
-	}
+    public int getToNPCId() {
+        return toNPCId;
+    }
 }

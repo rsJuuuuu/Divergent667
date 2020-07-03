@@ -127,7 +127,7 @@ public class Trade implements Serializable {
                 player.getPackets().sendGameMessage("That item isn't tradeable.");
                 return;
             }
-            Item itemsBefore[] = getOffer(player).getItemsCopy();
+            Item[] itemsBefore = getOffer(player).getItemsCopy();
             int maxAmount = player.getInventory().getItems().getNumberOf(item);
             if (amount < maxAmount) item = new Item(item.getId(), amount);
             else item = new Item(item.getId(), maxAmount);
@@ -166,7 +166,7 @@ public class Trade implements Serializable {
      * Gets other offer
      */
     private Player getOther(Player other) {
-        return other != partner ? partner : other;
+        return partner;
     }
 
     /**
@@ -176,7 +176,7 @@ public class Trade implements Serializable {
         if (currentState != TradeState.STATE_TWO) {
             Item item = getOffer(player).get(slotId);
             if (item == null) return;
-            Item itemsBefore[] = getOffer(player).getItemsCopy();
+            Item[] itemsBefore = getOffer(player).getItemsCopy();
             int maxAmount = getOffer(player).getNumberOf(item);
             if (amount < maxAmount) item = new Item(item.getId(), amount);
             else item = new Item(item.getId(), maxAmount);
@@ -191,14 +191,14 @@ public class Trade implements Serializable {
     /**
      * refreshes items on inter
      */
-    private void refreshItems(Player player, Item itemsBefore[]) {
-        int changedSlots[] = new int[itemsBefore.length];
+    private void refreshItems(Player player, Item[] itemsBefore) {
+        int[] changedSlots = new int[itemsBefore.length];
         int count = 0;
         for (int index = 0; index < itemsBefore.length; index++) {
             Item item = getOffer(player).getItems()[index];
             if (itemsBefore[index] != item) changedSlots[count++] = index;
         }
-        int finalChangedSlots[] = new int[count];
+        int[] finalChangedSlots = new int[count];
         System.arraycopy(changedSlots, 0, finalChangedSlots, 0, count);
         refreshScreen();
     }

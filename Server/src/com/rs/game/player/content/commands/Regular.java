@@ -1,14 +1,14 @@
 package com.rs.game.player.content.commands;
 
 import com.rs.Settings;
-import com.rs.game.world.ForceTalk;
-import com.rs.game.world.World;
+import com.rs.game.actionHandling.Handler;
 import com.rs.game.player.InterfaceManager;
 import com.rs.game.player.Player;
-import com.rs.game.player.content.interfaces.Teleportation;
 import com.rs.game.player.actions.combat.Magic;
+import com.rs.game.player.content.interfaces.Teleportation;
 import com.rs.game.player.info.RanksManager;
-import com.rs.game.actionHandling.Handler;
+import com.rs.game.world.ForceTalk;
+import com.rs.game.world.World;
 import com.rs.utils.stringUtils.TextUtils;
 
 import static com.rs.game.actionHandling.HandlerManager.HandlerConstants.RETURN;
@@ -32,18 +32,18 @@ public class Regular implements Handler {
             }, "readmin");
         }
         registerPlayerCommand((player, command, params) -> {
-            String cmd = "";
+            StringBuilder cmd = new StringBuilder();
             for (String param : params) {
-                cmd += param + " ";
+                cmd.append(param).append(" ");
             }
-            Teleportation.handleCommand(cmd.trim(), player);
+            Teleportation.handleCommand(cmd.toString().trim(), player);
             return RETURN;
         }, "tp");
         registerPlayerCommand((player, command, params) -> {
-            String message = "";
+            StringBuilder message = new StringBuilder();
             for (int i = 0; i < params.length; i++)
-                message += params[i] + (i == params.length - 1 ? "" : " ");
-            RanksManager.sendYell(player, TextUtils.fixChatMessage(message));
+                message.append(params[i]).append(i == params.length - 1 ? "" : " ");
+            RanksManager.sendYell(player, TextUtils.fixChatMessage(message.toString()));
             return RETURN;
         }, "yell");
         registerPlayerCommand((player, command, params) -> {

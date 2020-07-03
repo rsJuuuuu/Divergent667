@@ -12,8 +12,8 @@ public abstract class MinigameLobby {
     /**
      * List of players, use list order as priority so first ones get to game first.
      */
-    private ArrayList<Player> players = new ArrayList<>();
-    private ArrayList<Player> playersRequiringRemove = new ArrayList<>();
+    private final ArrayList<Player> players = new ArrayList<>();
+    private final ArrayList<Player> playersRequiringRemove = new ArrayList<>();
 
     private int ticks = 0;
 

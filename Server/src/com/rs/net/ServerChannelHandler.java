@@ -62,7 +62,7 @@ public final class ServerChannelHandler extends SimpleChannelHandler {
 	public void channelDisconnected(ChannelHandlerContext ctx,
 			ChannelStateEvent e) {
 		Object sessionObject = ctx.getAttachment();
-		if (sessionObject != null && sessionObject instanceof Session) {
+		if (sessionObject instanceof Session) {
 			Session session = (Session) sessionObject;
 			if (session.getDecoder() == null)
 				return;
@@ -76,7 +76,7 @@ public final class ServerChannelHandler extends SimpleChannelHandler {
 		if (!(e.getMessage() instanceof ChannelBuffer))
 			return;
 		Object sessionObject = ctx.getAttachment();
-		if (sessionObject != null && sessionObject instanceof Session) {
+		if (sessionObject instanceof Session) {
 			Session session = (Session) sessionObject;
 			if (session.getDecoder() == null)
 				return;

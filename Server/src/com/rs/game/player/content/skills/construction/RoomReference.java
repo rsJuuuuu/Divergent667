@@ -7,7 +7,7 @@ public class RoomReference implements Serializable {
 
     private static final long serialVersionUID = 738514883298748999L;
 
-    private CopyOnWriteArrayList<HouseObject> roomObjects = new CopyOnWriteArrayList<>();
+    private final CopyOnWriteArrayList<HouseObject> roomObjects = new CopyOnWriteArrayList<>();
 
     public RoomReference(Rooms.Room room, int x, int y, int plane, int rotation) {
         this.room = room;
@@ -17,8 +17,11 @@ public class RoomReference implements Serializable {
         this.rotation = (byte) rotation;
     }
 
-    private Rooms.Room room;
-    private byte x, y, plane, rotation;
+    private final Rooms.Room room;
+    private final byte x;
+    private final byte y;
+    private final byte plane;
+    private byte rotation;
 
     public byte getRotation() {
         return rotation;

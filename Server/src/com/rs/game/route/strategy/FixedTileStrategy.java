@@ -7,11 +7,11 @@ public class FixedTileStrategy extends RouteStrategy {
 	/**
 	 * X position of tile.
 	 */
-	private int x;
+	private final int x;
 	/**
 	 * Y position of tile.
 	 */
-	private int y;
+	private final int y;
 
 	public FixedTileStrategy(int x, int y) {
 		this.x = x;

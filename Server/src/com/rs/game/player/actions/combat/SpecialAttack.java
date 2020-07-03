@@ -120,18 +120,21 @@ public class SpecialAttack {
         },
         ZANIK_C_BOW(new int[14648], 50, -1, 2075, 1714, new Projectile(2001, 41, 41, 41, 35, 0, 0), -1,
                 SpecialAttack::zanikBowSpecial, 1, 2);
-        private int specialAmount, soundId, numberOfHits = 1, delay = 1;
+        private final int specialAmount;
+        private final int soundId;
+        private final int numberOfHits;
+        private int delay = 1;
 
-        private double damageMultiplier;
+        private final double damageMultiplier;
 
         private boolean instantSpecial = false;
 
-        private int[] weaponIds;
+        private final int[] weaponIds;
 
-        private Graphics graphics;
-        private Animation animation;
+        private final Graphics graphics;
+        private final Animation animation;
         private Projectile projectile;
-        private Attack attack;
+        private final Attack attack;
 
         Special(int[] weaponIds, int specialAmount, double damageMultiplier, Animation animation, Graphics gfx, int
                 soundId, Attack attack, int numberOfHits) {

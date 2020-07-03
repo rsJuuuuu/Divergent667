@@ -16,7 +16,7 @@ public final class Hit {
         POISON_DAMAGE(6),
         DESEASE_DAMAGE(7),
         HEALED_DAMAGE(9);
-        private int mark;
+        private final int mark;
 
         HitLook(int mark) {
             this.mark = mark;
@@ -28,7 +28,7 @@ public final class Hit {
     }
 
     private int damage;
-    private int delay;
+    private final int delay;
 
     private boolean critical;
     private boolean ignoreDamageModifier = false;

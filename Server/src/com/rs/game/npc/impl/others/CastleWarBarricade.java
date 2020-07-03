@@ -1,15 +1,15 @@
 package com.rs.game.npc.impl.others;
 
-import com.rs.game.world.Entity;
-import com.rs.game.world.WorldTile;
 import com.rs.game.minigames.CastleWars;
 import com.rs.game.npc.Npc;
+import com.rs.game.world.Entity;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
 
 @SuppressWarnings("serial")
 public class CastleWarBarricade extends Npc {
 
-	private int team;
+	private final int team;
 
 	public CastleWarBarricade(int team, WorldTile tile) {
 		super(1532, tile, -1, true, true);

@@ -23,15 +23,15 @@ public class ItemIconsLoader {
 
     private static boolean runThread = true;
 
-    private static ArrayList<LoadFormat> loadFormats = new ArrayList<>();
+    private static final ArrayList<LoadFormat> loadFormats = new ArrayList<>();
 
     private static final Image LOADING_IMAGE = new Image("http://i.imgur.com/5GytW.gif");
     private static final File ICON_PATH = new File(
             System.getProperty("user.home") + File.separator + ".itemIcons" + File.separator);
 
-    private static CopyOnWriteArrayList<RequestManager> registeredManagers = new CopyOnWriteArrayList<>();
+    private static final CopyOnWriteArrayList<RequestManager> registeredManagers = new CopyOnWriteArrayList<>();
 
-    private static HashMap<Integer, Background> backgroundImages = new HashMap<>();
+    private static final HashMap<Integer, Background> backgroundImages = new HashMap<>();
 
     static {
         try {
@@ -172,7 +172,7 @@ public class ItemIconsLoader {
     }
 
     public static class RequestManager {
-        private ConcurrentHashMap<Item, Region> requestMap = new ConcurrentHashMap<>();
+        private final ConcurrentHashMap<Item, Region> requestMap = new ConcurrentHashMap<>();
         private boolean closeRequested = false;
 
         public void loadBackground(int itemId, Region region) {

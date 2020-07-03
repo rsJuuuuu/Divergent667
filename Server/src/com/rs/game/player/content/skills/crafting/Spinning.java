@@ -1,9 +1,9 @@
 package com.rs.game.player.content.skills.crafting;
 
-import com.rs.game.world.Animation;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
+import com.rs.game.world.Animation;
 
 /**
  * The spinning wheel.
@@ -100,19 +100,19 @@ public class Spinning {
         /**
          * The ID before.
          */
-        private int[] beforeId;
+        private final int[] beforeId;
         /**
          * The ID after.
          */
-        private int afterId;
+        private final int afterId;
         /**
          * The required level.
          */
-        private int skillRequirement;
+        private final int skillRequirement;
         /**
          * The experience gained.
          */
-        private double exp;
+        private final double exp;
 
         /**
          * The single spinning Item.

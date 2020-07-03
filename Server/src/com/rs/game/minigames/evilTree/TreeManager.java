@@ -1,8 +1,8 @@
 package com.rs.game.minigames.evilTree;
 
 import com.rs.cores.CoresManager;
-import com.rs.game.item.Item;
 import com.rs.game.actionHandling.Handler;
+import com.rs.game.item.Item;
 import com.rs.game.world.World;
 import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
@@ -118,10 +118,17 @@ public class TreeManager implements Handler {
         EVIL_ELDER_TREE("Elder Evil Tree", 11922, 90, 42, 90, 77.8, 687.5, 2000.5, 3500, 8694, new Item(6334, 375),
                 new Item(8836, 102), new Item(1516, 59), new Item(1514, 18));
 
-        private String treeName;
-        private int id, woodcuttingLevel, farmingLevel, firemakingLevel, coinsAmount, treeHealth;
-        private double woodcuttingXp, farmingXp, firemakingXp;
-        private Item[] logs;
+        private final String treeName;
+        private final int id;
+        private final int woodcuttingLevel;
+        private final int farmingLevel;
+        private final int firemakingLevel;
+        private final int coinsAmount;
+        private final int treeHealth;
+        private final double woodcuttingXp;
+        private final double farmingXp;
+        private final double firemakingXp;
+        private final Item[] logs;
 
         EvilTreeDefinitions(String treeName, int id, int woodcuttingLevel, int farmingLevel, int firemakingLevel,
                             double woodcuttingXp, double farmingXp, double firemakingXp, int treeHealth, int

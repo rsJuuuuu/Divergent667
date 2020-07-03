@@ -42,8 +42,8 @@ public class IdSearch {
         for (String message : results)
             player.getPackets().sendPanelBoxMessage(message);
         player.getPackets().sendPanelBoxMessage(
-                "<col=FF0000>Found " + (results.size() > MAX_RESULTS ? MAX_RESULTS : results.size())
-                + " results for the item " + TextUtils.formatPlayerNameForDisplay(itemName) + ".");
+                "<col=FF0000>Found " + (Math.min(results.size(), MAX_RESULTS))
+                        + " results for the item " + TextUtils.formatPlayerNameForDisplay(itemName) + ".");
     }
 
     public static ArrayList<String> searchForItem(String keyword, boolean addEffects, int limit, @Nullable Player
@@ -74,8 +74,8 @@ public class IdSearch {
         for (String message : results)
             player.getPackets().sendPanelBoxMessage(message);
         player.getPackets().sendPanelBoxMessage(
-                "<col=FF0000>Found " + (results.size() > MAX_RESULTS ? MAX_RESULTS : results.size())
-                + " results for the item " + TextUtils.formatPlayerNameForDisplay(itemName) + ".");
+                "<col=FF0000>Found " + (Math.min(results.size(), MAX_RESULTS))
+                        + " results for the item " + TextUtils.formatPlayerNameForDisplay(itemName) + ".");
     }
 
     private static ArrayList<String> searchForObject(String keyword, boolean addEffects, int limit, @Nullable Player
@@ -104,7 +104,7 @@ public class IdSearch {
         for (String message : results)
             player.getPackets().sendPanelBoxMessage(message);
         player.getPackets().sendPanelBoxMessage(
-                "<col=FF0000>Found " + (results.size() > MAX_RESULTS ? MAX_RESULTS : results.size())
-                + " results for the item " + TextUtils.formatPlayerNameForDisplay(itemName) + ".");
+                "<col=FF0000>Found " + (Math.min(results.size(), MAX_RESULTS))
+                        + " results for the item " + TextUtils.formatPlayerNameForDisplay(itemName) + ".");
     }
 }

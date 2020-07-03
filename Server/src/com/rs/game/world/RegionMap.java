@@ -15,10 +15,10 @@ package com.rs.game.world;
  */
 public class RegionMap {
 
-	private int regionX;
-	private int regionY;
-	private int masks[][][];
-	private boolean clipedOnly;
+	private final int regionX;
+	private final int regionY;
+	private final int[][][] masks;
+	private final boolean clipedOnly;
 
 	public RegionMap(int regionId, boolean clipedOnly) {
 		regionX = (regionId >> 8) * 64;

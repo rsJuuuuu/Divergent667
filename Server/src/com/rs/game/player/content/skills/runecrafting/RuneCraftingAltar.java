@@ -38,8 +38,11 @@ public enum RuneCraftingAltar {
             4889, 1)),
     ASTRAL_ALTAR(17010, new int[]{}, ASTRAL, ASTRAL_TIARA, -1, -1, new WorldTile(2153, 3868));
 
-    private int altarId, tiaraId, talismanId, staffId;
-    private int[] enterIds;
+    private final int altarId;
+    private final int tiaraId;
+    private final int talismanId;
+    private final int staffId;
+    private final int[] enterIds;
     RuneConfigs.Rune rune;
     WorldTile teleTile;
 

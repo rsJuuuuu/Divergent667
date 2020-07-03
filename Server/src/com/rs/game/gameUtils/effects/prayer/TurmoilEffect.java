@@ -17,7 +17,7 @@ public class TurmoilEffect extends Effect {
         Player opponent = null;
         if (player.getActionManager().getAction() instanceof PlayerCombat)
             target = ((PlayerCombat) player.getActionManager().getAction()).getTarget();
-        if (target != null && target instanceof Player) opponent = (Player) target;
+        if (target instanceof Player) opponent = (Player) target;
         switch (skillId) {
             case Skills.ATTACK:
             case Skills.DEFENCE:

@@ -20,11 +20,11 @@ import java.util.List;
  */
 public class WrathEffect extends Effect {
 
-    private int size;
-    private int projectileId;
-    private Graphics centerGraphics;
-    private Graphics surroundingGraphics;
-    private double prayerMultiplier;
+    private final int size;
+    private final int projectileId;
+    private final Graphics centerGraphics;
+    private final Graphics surroundingGraphics;
+    private final double prayerMultiplier;
 
     public WrathEffect(int size, int centerGfx, int projectileId, int surroundingGfx, double prayerMultiplier) {
         this.size = size;

@@ -19,7 +19,7 @@ public abstract class Stream {
         return offset;
     }
 
-    public final void decodeXTEA(int keys[], int start, int end) {
+    public final void decodeXTEA(int[] keys, int start, int end) {
         int l = getOffset();
         setOffset(start);
         int i1 = (end - start) / 8;
@@ -59,7 +59,7 @@ public abstract class Stream {
         buffer[offset++] = (byte) value;
     }
 
-    public final void getBytes(byte data[], int off, int len) {
+    public final void getBytes(byte[] data, int off, int len) {
         for (int k = off; k < len + off; k++) {
             data[k] = buffer[offset++];
         }

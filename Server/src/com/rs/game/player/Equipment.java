@@ -17,71 +17,71 @@ public final class Equipment implements Serializable {
             SLOT_SHIELD = 5, SLOT_LEGS = 7, SLOT_HANDS = 9, SLOT_FEET = 10, SLOT_RING = 12, SLOT_ARROWS = 13,
             SLOT_AURA = 14;
 
-    private static String[] CAPES = {"cloak", "cape", "ava's", "tokhaar"};
+    private static final String[] CAPES = {"cloak", "cape", "ava's", "tokhaar"};
 
-    private static String[] HATS = {"visor", "ears", "goggles", "bearhead", "tiara", "cowl", "druidic wreath",
+    private static final String[] HATS = {"visor", "ears", "goggles", "bearhead", "tiara", "cowl", "druidic wreath",
             "halo", "crown", "sallet", "helm", "hood", "coif", "flaming skull", "Coif", "partyhat", "hat", "cap", " bandana", "full helm (t)", "full helm (g)", "full helm (or)", "cav", "boater", "helmet", "afro", "beard", "gnome goggles", "mask", "Helm of neitiznot", "mitre", "nemes", "wig", "headdress"};
 
-    private static String[] BOOTS = {"boots", "Boots", "shoes", "Shoes", "flippers"};
+    private static final String[] BOOTS = {"boots", "Boots", "shoes", "Shoes", "flippers"};
 
-    private static String[] GLOVES = {"gloves", "gauntlets", "Gloves", "vambraces", "vamb", "bracers", "brace"};
+    private static final String[] GLOVES = {"gloves", "gauntlets", "Gloves", "vambraces", "vamb", "bracers", "brace"};
 
-    private static String[] AMULETS = {"stole", "amulet", "necklace", "Amulet of", "scarf", "Super dominion medallion"};
+    private static final String[] AMULETS = {"stole", "amulet", "necklace", "Amulet of", "scarf", "Super dominion medallion"};
 
-    private static String[] SHIELDS = {"tome of frost", "kiteshield", "sq shield", "Toktz-ket", "books", "book",
+    private static final String[] SHIELDS = {"tome of frost", "kiteshield", "sq shield", "Toktz-ket", "books", "book",
             "kiteshield (t)", "kiteshield (g)", "kiteshield(h)", "defender", "shield", "deflector", "off-hand"};
 
-    private static String[] ARROWS = {"arrow", "arrows", "arrow(p)", "arrow(+)", "arrow(s)", "bolt", "Bolt rack",
+    private static final String[] ARROWS = {"arrow", "arrows", "arrow(p)", "arrow(+)", "arrow(s)", "bolt", "Bolt rack",
             "Opal bolts", "Dragon bolts", "bolts (e)", "bolts", "Hand cannon shot", "grapple"};
 
-    private static String[] RINGS = {"ring"};
+    private static final String[] RINGS = {"ring"};
 
-    private static String[] BODY = {"poncho", "apron", "robe top", "armour", "hauberk", "platebody", "chainbody",
+    private static final String[] BODY = {"poncho", "apron", "robe top", "armour", "hauberk", "platebody", "chainbody",
             "breastplate", "blouse", "robetop", "leathertop", "platemail", "top", "brassard", "body", "wizard robe",
             "chestguard", "platebody (g)", "body(g)", "body_(g)", "chestplate", "torso", "shirt",
             "Rock-shell " + "plate", "coat", "jacket"};
 
-    private static String[] AURAS = {"poison purge", "Salvation", "Corruption", "salvation", "corruption", "runic "
-                                                                                                           +
-                                                                                                           "accuracy", "sharpshooter", "lumberjack", "quarrymaster", "call of the sea", "reverence", "five finger discount", "resourceful", "equilibrium", "inspiration", "vampyrism", "penance", "wisdom", "jack of trades", "gaze"};
-    private static int[] BODY_LIST = {21463, 21549, 544, 6107};
+    private static final String[] AURAS = {"poison purge", "Salvation", "Corruption", "salvation", "corruption", "runic "
+            +
+            "accuracy", "sharpshooter", "lumberjack", "quarrymaster", "call of the sea", "reverence", "five finger discount", "resourceful", "equilibrium", "inspiration", "vampyrism", "penance", "wisdom", "jack of trades", "gaze"};
+    private static final int[] BODY_LIST = {21463, 21549, 544, 6107};
 
-    private static int[] LEGS_LIST = {542, 6108, 10340, 7398};
+    private static final int[] LEGS_LIST = {542, 6108, 10340, 7398};
 
-    private static String[] LEGS = {"leggings", "void knight robe", "druidic robe", "cuisse", "pants", "platelegs",
+    private static final String[] LEGS = {"leggings", "void knight robe", "druidic robe", "cuisse", "pants", "platelegs",
             "plateskirt", "skirt", "bottoms", "chaps", "platelegs (t)", "platelegs (or)", "platelegs (g)", "bottom",
             "skirt", "skirt (g)", "skirt (t)", "chaps (g)", "chaps (t)", "tassets", "legs", "trousers",
             "robe " + "bottom", "shorts",};
 
-    private static String[] WEAPONS = {"bolas", "stick", "blade", "Butterfly net", "scythe", "rapier", "hatchet",
+    private static final String[] WEAPONS = {"bolas", "stick", "blade", "Butterfly net", "scythe", "rapier", "hatchet",
             "bow", "Hand cannon", "sword of destruction", "Inferno adze", "Silverlight", "Darklight", "wand",
             "Upgraded Ags", "Statius's warhammer", "anchor", "spear.", "Vesta's longsword.", "scimitar", "longsword",
             "sword", "longbow", "shortbow", "dagger", "mace", "halberd", "spear", "Abyssal whip",
             "Abyssal vine " + "whip", "Ornate "
-                                      + "katana","sling", "axe", "flail", "crossbow", "Torags hammers", "Crossbow of love",
+            + "katana", "sling", "axe", "flail", "crossbow", "Torags hammers", "Crossbow of love",
             "dagger(p)", "dagger (p++)",
             "dagger(+)"
-            + "", "dagger(s)", "spear(p)", "spear(+)", "spear(s)", "spear(kp)", "maul", "dart", "dart(p)", "javelin",
+                    + "", "dagger(s)", "spear(p)", "spear(+)", "spear(s)", "spear(kp)", "maul", "dart", "dart(p)", "javelin",
             "javelin(p)", "knife", "knife(p)", "Longbow", "primal 1h sword", "Shortbow", "Crossbow", "Toktz-xil",
             "Shark fists", "Toktz-mej", "Tzhaar-ket", "staff", "Staff", "godsword", "c'bow", "Crystal bow",
             "Dark " + "bow", "staff of peace", "claws", "warhammer", "hammers", "adze", "hand", "Broomstick",
             "Upgraded "
-            + "Korasi", "Flowers", "flowers", "trident", "excalibur", "cane", "sled", "Katana", "bag", "tenderiser",
+                    + "Korasi", "Flowers", "flowers", "trident", "excalibur", "cane", "sled", "Katana", "bag", "tenderiser",
             "eggsterminator", "Sled", "chinchompa", "sceptre", "decimation", "obliteration", "annihilation"};
 
-    private static String[] NOT_FULL_BODY = {"zombie shirt"};
+    private static final String[] NOT_FULL_BODY = {"zombie shirt"};
 
-    private static String[] FULL_BODY = {"robe", "breastplate", "blouse", "pernix body", "vesta's chainbody",
+    private static final String[] FULL_BODY = {"robe", "breastplate", "blouse", "pernix body", "vesta's chainbody",
             "armour", "hauberk", "top", "shirt", "platebody", "Ahrims robetop", "Karils leathertop", "brassard",
             "chestplate", "torso", "Morrigan's", "Zuriel's", "changshan jacket"};
 
-    private static String[] FULL_HAT = {"helm", "cowl", "sallet", "med helm", "coif", "Dharoks helm",
+    private static final String[] FULL_HAT = {"helm", "cowl", "sallet", "med helm", "coif", "Dharoks helm",
             "Initiate " + "helm", "Coif", "Helm of neitiznot"};
 
-    private static String[] FULL_MASK = {"sallet", "mask", "full helm", "mask", "Veracs helm", "Guthans helm",
+    private static final String[] FULL_MASK = {"sallet", "mask", "full helm", "mask", "Veracs helm", "Guthans helm",
             "Torags helm", "flaming skull", "Karils coif", "full helm (t)", "full helm (g)"};
 
-    private ItemsContainer<Item> items;
+    private final ItemsContainer<Item> items;
 
     private transient Player player;
     private transient int equipmentHpIncrease;
@@ -133,9 +133,9 @@ public final class Equipment implements Serializable {
             int id = item.getId();
             if (index == Equipment.SLOT_HAT) {
                 if (id == 20135 || id == 20137 // torva
-                    || id == 20147 || id == 20149 // pernix
-                    || id == 20159 || id == 20161 // virtus
-                        ) hpIncrease += 66;
+                        || id == 20147 || id == 20149 // pernix
+                        || id == 20159 || id == 20161 // virtus
+                ) hpIncrease += 66;
                 else if (id == AIR_TIARA) player.getPackets().sendConfig(491, 1);
                 else if (id == EARTH_TIARA) player.getPackets().sendConfig(491, 8);
                 else if (id == FIRE_TIARA) player.getPackets().sendConfig(491, 16);
@@ -146,14 +146,14 @@ public final class Equipment implements Serializable {
 
             } else if (index == Equipment.SLOT_CHEST) {
                 if (id == 20139 || id == 20141 // torva
-                    || id == 20151 || id == 20153 // pernix
-                    || id == 20163 || id == 20165 // virtus
-                        ) hpIncrease += 200;
+                        || id == 20151 || id == 20153 // pernix
+                        || id == 20163 || id == 20165 // virtus
+                ) hpIncrease += 200;
             } else if (index == Equipment.SLOT_LEGS) {
                 if (id == 20143 || id == 20145 // torva
-                    || id == 20155 || id == 20157 // pernix
-                    || id == 20167 || id == 20169 // virtus
-                        ) hpIncrease += 134;
+                        || id == 20155 || id == 20157 // pernix
+                        || id == 20167 || id == 20169 // virtus
+                ) hpIncrease += 134;
             }
 
         }
@@ -254,7 +254,6 @@ public final class Equipment implements Serializable {
         else if (wepEquipped.contains("2h sword")) return true;
         else if (wepEquipped.contains("katana")) return true;
         else if (wepEquipped.equals("seercull")) return true;
-        else if (wepEquipped.contains("shortbow")) return true;
         else if (wepEquipped.contains("longbow")) return true;
         else if (wepEquipped.contains("shortbow")) return true;
         else if (wepEquipped.contains("bow full")) return true;
@@ -271,9 +270,7 @@ public final class Equipment implements Serializable {
         else if (wepEquipped.contains("godsword")) return true;
         else if (wepEquipped.equals("saradomin sword")) return true;
         else if (wepEquipped.equals("hand cannon")) return true;
-        else if (wepEquipped.equals("primal 1h sword")) return true;
-        else if (wepEquipped.equals("Ags")) return true;
-        return false;
+        else return wepEquipped.equals("primal 1h sword");
     }
 
     int getWeaponRenderEmote() {

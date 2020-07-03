@@ -14,7 +14,7 @@ import org.jboss.netty.channel.ChannelFuture;
 
 public class Session {
 
-    private Channel channel;
+    private final Channel channel;
     private Decoder decoder;
     private Encoder encoder;
 

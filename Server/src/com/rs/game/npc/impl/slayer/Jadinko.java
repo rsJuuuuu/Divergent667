@@ -2,14 +2,14 @@ package com.rs.game.npc.impl.slayer;
 
 import com.rs.cores.CoresManager;
 import com.rs.game.npc.Npc;
-import com.rs.game.world.Animation;
-import com.rs.game.world.Entity;
-import com.rs.game.world.World;
-import com.rs.game.world.WorldTile;
 import com.rs.game.npc.data.NpcCombatDefinitions;
 import com.rs.game.player.Player;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.world.Animation;
+import com.rs.game.world.Entity;
+import com.rs.game.world.World;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.stringUtils.TimeUtils;
 
 import java.util.ArrayList;
@@ -85,14 +85,12 @@ public class Jadinko extends Npc {
 			setLocation(getSpawnTile());
 			finish();
 		}CoresManager.slowExecutor.schedule(() -> {
-            try {
-                respawn();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } catch (Error e) {
-                e.printStackTrace();
-            }
-        }, getCombatDefinitions().getSpawnDelay() * 600,
+					try {
+						respawn();
+					} catch (Exception | Error e) {
+						e.printStackTrace();
+					}
+				}, getCombatDefinitions().getSpawnDelay() * 600,
 				TimeUnit.MILLISECONDS);
 	}
 

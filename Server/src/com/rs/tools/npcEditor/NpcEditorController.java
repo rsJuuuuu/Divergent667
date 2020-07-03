@@ -29,11 +29,11 @@ public class NpcEditorController {
     public TextField searchField;
     public Label statusLabel;
 
-    private IntegerItem[] bonuses = new IntegerItem[10];
+    private final IntegerItem[] bonuses = new IntegerItem[10];
 
-    private HashMap<String, IntegerItem> otherIntValues = new HashMap<>();
+    private final HashMap<String, IntegerItem> otherIntValues = new HashMap<>();
 
-    private HashMap<Integer, NpcData> npcDataMap;
+    private final HashMap<Integer, NpcData> npcDataMap;
     private NpcData openData;
 
     public NpcEditorController() throws IOException {
@@ -80,7 +80,7 @@ public class NpcEditorController {
         if (openData != null) saveData();
         String line = npcList.getSelectionModel().getSelectedItem();
         if (line == null) return;
-        int id = Integer.valueOf(line.substring(line.indexOf("(ID: ") + "(ID: ".length(), line.indexOf(")")));
+        int id = Integer.parseInt(line.substring(line.indexOf("(ID: ") + "(ID: ".length(), line.indexOf(")")));
         NpcData data = npcDataMap.get(id);
         this.openData = data;
         if (data.getBonuses() != null) {

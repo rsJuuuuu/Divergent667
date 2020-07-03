@@ -91,7 +91,7 @@ public abstract class Entity extends WorldTile {
 
     private boolean run;
 
-    private Poison poison;
+    private final Poison poison;
 
     public Entity(WorldTile tile) {
         super(tile);
@@ -290,7 +290,7 @@ public abstract class Entity extends WorldTile {
     }
 
     public void heal(int amount, int extra) {
-        health = health + amount >= getMaxHitPoints() + extra ? getMaxHitPoints() + extra : health + amount;
+        health = Math.min(health + amount, getMaxHitPoints() + extra);
     }
 
     public boolean hasWalkSteps() {
@@ -513,7 +513,7 @@ public abstract class Entity extends WorldTile {
     private int[] getLastWalkTile() {
         Object[] objects = walkSteps.toArray();
         if (objects.length == 0) return new int[]{getX(), getY()};
-        int step[] = (int[]) objects[objects.length - 1];
+        int[] step = (int[]) objects[objects.length - 1];
         return new int[]{step[1], step[2]};
     }
 
@@ -537,7 +537,7 @@ public abstract class Entity extends WorldTile {
     }
 
     private int getNextWalkStep() {
-        int step[] = walkSteps.poll();
+        int[] step = walkSteps.poll();
         if (step == null) return -1;
         return step[0];
 

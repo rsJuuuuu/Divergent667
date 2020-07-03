@@ -29,25 +29,25 @@ public class Rooms {
                 ATTACK_STONE, RANGING_GAME),
         COMBAT_ROOM(235, 636, 32, 101, 25000, "Combat room", true, true, COMBAT_RING, WEAPONS_RACK, DECORATIONS),
         QUEST_HALL_1(237, 638, 35, 102, 25000, "Quest hall 1", true, true, RUG, BOOKCASE, GUILD_TROPHY, SWORD,
-                PORTRAIT,LANDSCAPE, MAP, STAIRCASE),
+                PORTRAIT, LANDSCAPE, MAP, STAIRCASE),
         QUEST_HALL_2(239, 638, 0, 0, 0, "Quest hall 2", true, true),
-        STUDY(236, 637, 40, 104, 50000, "Study", true, true, BOOKCASE, CHARTS, TELESCOPE, GLOBE, LECTERN,CRYSTAL_BALL, STUDY_STATUE),
+        STUDY(236, 637, 40, 104, 50000, "Study", true, true, BOOKCASE, CHARTS, TELESCOPE, GLOBE, LECTERN, CRYSTAL_BALL, STUDY_STATUE),
         COSTUME_ROOM(238, 633, 42, 105, 50000, "Costume room", true, true),
         CHAPEL(234, 637, 45, 106, 50000, "Chapel", true, true, RUG, ALTAR, STATUES, MUSICAL, ICON, LAMP, WINDOW),
         PORTALROOM(233, 636, 50, 107, 100000, "Portal room", true, true),
         FANCYGARDEN(234, 633, 55, 108, 75000, "Formal garden", true, false),
         THRONEROOM(238, 637, 60, 109, 150000, "Throne room", true, true);
 
-        private int chunkX;
-        private int chunkY;
-        private int level;
-        private int componentId;
-        private int cost;
-        private String name;
-        private boolean showRoof;
-        private boolean hasDoors;
+        private final int chunkX;
+        private final int chunkY;
+        private final int level;
+        private final int componentId;
+        private final int cost;
+        private final String name;
+        private final boolean showRoof;
+        private final boolean hasDoors;
 
-        private Furniture.Builds[] builds;
+        private final Furniture.Builds[] builds;
 
         Room(int chunkX, int chunkY, int level, int componentId, int cost, String name, boolean showRoof, boolean
                 hasDoors, Furniture.Builds... builds) {

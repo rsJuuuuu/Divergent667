@@ -25,9 +25,9 @@ public class BonusEditorController {
     public TextField searchField;
     public PropertySheet propertySheet;
 
-    private HashMap<Integer, int[]> itemBonuses;
+    private final HashMap<Integer, int[]> itemBonuses;
 
-    private IntegerItem[] bonuses = new IntegerItem[18];
+    private final IntegerItem[] bonuses = new IntegerItem[18];
 
     private int[] currentData;
 
@@ -77,7 +77,7 @@ public class BonusEditorController {
         if (currentData != null) save();
         String line = itemList.getSelectionModel().getSelectedItem();
         if (line == null) return;
-        int id = Integer.valueOf(line.substring(line.indexOf("(ID: ") + "(ID: ".length(), line.lastIndexOf(")")));
+        int id = Integer.parseInt(line.substring(line.indexOf("(ID: ") + "(ID: ".length(), line.lastIndexOf(")")));
         int[] bonuses = itemBonuses.get(id);
         currentData = bonuses;
         for (int i = 0; i < bonuses.length; i++) {

@@ -32,12 +32,12 @@ public class GemTipCutting extends Action {
 
         ONYX(6573, 9, 73, 2717, 9194);
 
-        private double experience;
-        private int levelRequired;
-        private int cut;
+        private final double experience;
+        private final int levelRequired;
+        private final int cut;
 
-        private int emote;
-        private int boltTips;
+        private final int emote;
+        private final int boltTips;
 
         GemTips(int cut, double experience, int levelRequired, int emote, int boltTips) {
             this.cut = cut;
@@ -80,7 +80,7 @@ public class GemTipCutting extends Action {
         player.getActionManager().setAction(new GemTipCutting(gem, player.getInventory().numberOf(gem.getCut())));
     }
 
-    private GemTips gem;
+    private final GemTips gem;
     private int quantity;
 
     private GemTipCutting(GemTips gem, int quantity) {

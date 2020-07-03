@@ -1,17 +1,17 @@
 package com.rs.game.player.cutscenes;
 
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.actions.CutsceneAction;
 import com.rs.game.player.cutscenes.actions.LookCameraAction;
 import com.rs.game.player.cutscenes.actions.PosCameraAction;
+import com.rs.game.world.WorldTile;
 
 import java.util.ArrayList;
 
 public class NexCutScene extends Cutscene {
 
-	private WorldTile dir;
-	private int selected;
+	private final WorldTile dir;
+	private final int selected;
 
 	public NexCutScene(WorldTile dir, int selected) {
 		this.dir = dir;
@@ -40,7 +40,7 @@ public class NexCutScene extends Cutscene {
 				player, 5203 + yExtra), 2500, -1));
 		actionsList.add(new LookCameraAction(getX(player, dir.getX()), getY(
 				player, dir.getY()), 2500, 3));
-		return actionsList.toArray(new CutsceneAction[actionsList.size()]);
+		return actionsList.toArray(new CutsceneAction[0]);
 	}
 
 }

@@ -83,15 +83,15 @@ public enum PouchData {
     MACAW(41, 72.4, 12071, 12422, Charm.GREEN, 78, 249),
     SPIRIT_SCORPION(19, 83.2, 12055, 12432, Charm.CRIMSON, 57, 3095);
 
-    private int level;
-    private int pouchId;
-    private int scrollId;
-    private int charmId;
-    private int shardAmount;
+    private final int level;
+    private final int pouchId;
+    private final int scrollId;
+    private final int charmId;
+    private final int shardAmount;
 
-    private double creationExp;
+    private final double creationExp;
 
-    private int[] tertiaryIds;
+    private final int[] tertiaryIds;
 
     PouchData(int level, double creationExp, int pouchId, int scrollId, Charm charm, int shards, int... tertiaryIds) {
         this.level = level;

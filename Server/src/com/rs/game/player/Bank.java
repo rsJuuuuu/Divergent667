@@ -327,7 +327,7 @@ public class Bank implements Serializable {
     private int addItems(Item[] items, boolean refresh) {
         int space = (int) (MAX_BANK_SIZE - getBankSize());
         if (space != 0) {
-            space = (space < items.length ? space : items.length);
+            space = (Math.min(space, items.length));
             for (int i = 0; i < space; i++) {
                 if (items[i] == null) continue;
                 addItem(items[i], false);

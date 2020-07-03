@@ -1,14 +1,14 @@
 package com.rs.game.player;
 
 import com.rs.game.item.Item;
-import com.rs.game.item.ItemsContainer;
 import com.rs.game.item.ItemConstants;
+import com.rs.game.item.ItemsContainer;
 import com.rs.utils.game.itemUtils.PriceUtils;
 
 public class PriceCheckManager {
 
-	private Player player;
-	private ItemsContainer<Item> pcInv;
+	private final Player player;
+	private final ItemsContainer<Item> pcInv;
 
 	public PriceCheckManager(Player player) {
 		this.player = player;

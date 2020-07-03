@@ -26,7 +26,7 @@ import org.pmw.tinylog.Logger;
 public class WorldPacketsEncoder extends Encoder {
     private int ID;
 
-    private Player player;
+    private final Player player;
 
     public WorldPacketsEncoder(Session session, Player player) {
         super(session);
@@ -82,7 +82,7 @@ public class WorldPacketsEncoder extends Encoder {
                 id = item.getId();
                 amount = item.getAmount();
             }
-            stream.writeByte(amount >= 255 ? 255 : amount);
+            stream.writeByte(Math.min(amount, 255));
             if (amount >= 255) {
                 stream.writeInt(amount);
             }
@@ -375,7 +375,7 @@ public class WorldPacketsEncoder extends Encoder {
         stream.writeByte(endHeight);
         stream.writeShort(delay);
         int duration = (Utils.getDistance(startTile.getX(), startTile.getY(), endTile.getX(), endTile.getY()) * 30 / (
-                (speed / 10) < 1 ? 1 : (speed / 10))) + delay;
+                Math.max((speed / 10), 1))) + delay;
         stream.writeShort(duration);
         stream.writeByte(curve);
         stream.writeShort(creatorSize * 64 + startDistanceOffset * 64);
@@ -420,14 +420,14 @@ public class WorldPacketsEncoder extends Encoder {
         try {
             OutputStream stream = new OutputStream();
             stream.writePacketVarShort(50);
-            String parameterTypes = "";
+            StringBuilder parameterTypes = new StringBuilder();
             if (params != null) {
                 for (int count = params.length - 1; count >= 0; count--) {
-                    if (params[count] instanceof String) parameterTypes += "s"; // string
-                    else parameterTypes += "i"; // integer
+                    if (params[count] instanceof String) parameterTypes.append("s"); // string
+                    else parameterTypes.append("i"); // integer
                 }
             }
-            stream.writeString(parameterTypes);
+            stream.writeString(parameterTypes.toString());
             if (params != null) {
                 int index = 0;
                 for (int count = parameterTypes.length() - 1; count >= 0; count--) {
@@ -1037,7 +1037,7 @@ public class WorldPacketsEncoder extends Encoder {
             }
             stream.writeShort(id + 1);
             if (id != -1) {
-                stream.writeByte(amount >= 255 ? 255 : amount);
+                stream.writeByte(Math.min(amount, 255));
                 if (amount >= 255) stream.writeInt(amount);
             }
         }

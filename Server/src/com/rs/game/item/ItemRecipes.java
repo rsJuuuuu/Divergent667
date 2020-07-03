@@ -278,9 +278,9 @@ public class ItemRecipes {
          */
         void sendSkillReqs(Player player) {
             player.sendMessage("You don't have the skills required to make this item.");
-            String message = "(";
+            StringBuilder message = new StringBuilder("(");
             for (int skill : skillReqs.keySet())
-                message += Skills.SKILL_NAME[skill] + ": " + skillReqs.get(skill) + ", ";
+                message.append(Skills.SKILL_NAME[skill]).append(": ").append(skillReqs.get(skill)).append(", ");
             player.sendMessage(message.substring(0, message.length() - 2) + ")");
         }
 
@@ -291,9 +291,9 @@ public class ItemRecipes {
          */
         void sendItemReqs(Player player) {
             player.sendMessage("You don't have the items required to make this item.");
-            String message = "(";
+            StringBuilder message = new StringBuilder("(");
             for (Item item : itemReqs)
-                message += item.getAmount() + "x " + item.getName() + ", ";
+                message.append(item.getAmount()).append("x ").append(item.getName()).append(", ");
             player.sendMessage(message.substring(0, message.length() - 2) + ")");
         }
 

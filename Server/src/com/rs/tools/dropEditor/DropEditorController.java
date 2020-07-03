@@ -48,7 +48,7 @@ public class DropEditorController {
 
     private DropTable currentTable;
 
-    private ObservableList<String> npcData = FXCollections.observableArrayList();
+    private final ObservableList<String> npcData = FXCollections.observableArrayList();
     private HashMap<String, DropTable> dropData;
 
     public DropEditorController() {

@@ -49,8 +49,7 @@ public class Wilderness extends Controller {
                 player.getPackets().sendGameMessage("That player is not in the wilderness.");
                 return false;
             }
-            if (canHit(target)) return true;
-            return false;
+            return canHit(target);
         }
         return true;
     }
@@ -59,9 +58,7 @@ public class Wilderness extends Controller {
     public boolean canHit(Entity target) {
         if (target instanceof Npc) return true;
         Player p2 = (Player) target;
-        if (Math.abs(player.getSkills().getCombatLevel() - p2.getSkills().getCombatLevel()) > getWildLevel())
-            return false;
-        return true;
+        return Math.abs(player.getSkills().getCombatLevel() - p2.getSkills().getCombatLevel()) <= getWildLevel();
     }
 
     @Override

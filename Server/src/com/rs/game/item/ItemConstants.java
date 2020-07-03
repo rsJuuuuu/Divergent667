@@ -7,14 +7,14 @@ import java.util.HashSet;
 
 public class ItemConstants {
 
-    private static HashSet<Integer> untradeableIds = new HashSet<>();
-    private static HashSet<String> untradeableNames = new HashSet<>();
+    private static final HashSet<Integer> untradeableIds = new HashSet<>();
+    private static final HashSet<String> untradeableNames = new HashSet<>();
 
     static {
         //noinspection unchecked
         HashSet<Object> untradeables = (HashSet<Object>) JSONParser.load("data/items/untradeables.json", new
                 TypeToken<HashSet<Object>>() {
-        }.getType());
+                }.getType());
         if (untradeables != null) for (Object object : untradeables)
             if (object instanceof Double)
                 untradeableIds.add((int) Math.round((Double) object));//they come through from json as doubles so

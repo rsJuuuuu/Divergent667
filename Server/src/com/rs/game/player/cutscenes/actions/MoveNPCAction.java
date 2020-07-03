@@ -1,22 +1,25 @@
 package com.rs.game.player.cutscenes.actions;
 
-import com.rs.game.world.WorldTile;
 import com.rs.game.npc.Npc;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.Cutscene;
+import com.rs.game.world.WorldTile;
 
 public class MoveNPCAction extends CutsceneAction {
 
-	private int x, y, plane, movementType;
+	private final int x;
+	private final int y;
+	private final int plane;
+	private final int movementType;
 
 	public MoveNPCAction(int cachedObjectIndex, int x, int y, boolean run,
-			int actionDelay) {
+						 int actionDelay) {
 		this(cachedObjectIndex, x, y, -1, run ? Player.RUN_MOVE_TYPE
 				: Player.WALK_MOVE_TYPE, actionDelay);
 	}
 
 	public MoveNPCAction(int cachedObjectIndex, int x, int y, int plane,
-			int movementType, int actionDelay) {
+						 int movementType, int actionDelay) {
 		super(cachedObjectIndex, actionDelay);
 		this.x = x;
 		this.y = y;

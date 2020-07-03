@@ -26,7 +26,7 @@ public class House implements Serializable {
 
     transient private Player player;
 
-    private ArrayList<RoomReference> rooms;
+    private final ArrayList<RoomReference> rooms;
 
     private WorldTile enterTile;
 
@@ -119,7 +119,7 @@ public class House implements Serializable {
         }
     }
 
-    private static int[] WALL_IDS = new int[]{13098, 13090, 13004, 13111, -1, 13116, 52829};
+    private static final int[] WALL_IDS = new int[]{13098, 13090, 13004, 13111, -1, 13116, 52829};
 
     /**
      * Construct the POH and the grounds around it

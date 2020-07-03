@@ -1,12 +1,12 @@
 package com.rs.game.player.actions;
 
-import com.rs.game.npc.Npc;
-import com.rs.game.world.Animation;
-import com.rs.game.world.WorldTile;
 import com.rs.game.item.Item;
+import com.rs.game.npc.FishingSpotsHandler;
+import com.rs.game.npc.Npc;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
-import com.rs.game.npc.FishingSpotsHandler;
+import com.rs.game.world.Animation;
+import com.rs.game.world.WorldTile;
 import com.rs.utils.Utils;
 
 import java.util.HashMap;
@@ -145,13 +145,13 @@ public class Fishing extends Action {
     /**
      * The fishing spot, where the player is fishing.
      */
-    private FishingSpots spot;
+    private final FishingSpots spot;
 
     /**
      * The npc, fishing spot is an npc.
      */
-    private Npc npc;
-    private WorldTile tile;
+    private final Npc npc;
+    private final WorldTile tile;
     /**
      * The fish id.
      */
@@ -212,7 +212,7 @@ public class Fishing extends Action {
         int fishLevel = spot.getFish()[fishId].getLevel();
         int modifier = spot.getFish()[fishId].getLevel();
         int randomAmt = Utils.random(4);
-        double cycleCount = 1, otherBonus = 0;
+        double cycleCount, otherBonus = 0;
         if (player.getFollower() != null) otherBonus = getSpecialFamiliarBonus(player.getFollower().getId());
         cycleCount = Math.ceil(((fishLevel + otherBonus) * 50 - playerLevel * 10) / modifier * 0.25 - randomAmt * 4);
         if (cycleCount < 1) {

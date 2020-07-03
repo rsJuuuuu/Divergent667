@@ -145,9 +145,9 @@ public class Appearance implements Serializable {
                         hash |= 1 << slotFlag;
                         stream.writeByte(0x4); // modify 4 model colors
                         int[] cape = capeId
-                                     == 20767 ? player.getMaxedCapeCustomized() : player
+                                == 20767 ? player.getMaxedCapeCustomized() : player
                                 .getCompletionistCapeCustomized();
-                        int slots = 0 | 1 << 4 | 2 << 8 | 3 << 12;
+                        int slots = 1 << 4 | 2 << 8 | 3 << 12;
                         stream.writeShort(slots);
                         for (int i = 0; i < 4; i++)
                             stream.writeShort(cape[i]);
@@ -171,9 +171,9 @@ public class Appearance implements Serializable {
                         hash |= 1 << slotFlag;
                         stream.writeByte(0x4); // modify 4 model colors
                         int[] hat = hatId
-                                    == 20768 ? player.getMaxedCapeCustomized() : player
+                                == 20768 ? player.getMaxedCapeCustomized() : player
                                 .getCompletionistCapeCustomized();
-                        int slots = 0 | 1 << 4 | 2 << 8 | 3 << 12;
+                        int slots = 1 << 4 | 2 << 8 | 3 << 12;
                         stream.writeShort(slots);
                         for (int i = 0; i < 4; i++)
                             stream.writeShort(hat[i]);

@@ -13,7 +13,7 @@ public class Summoning {
 
     public static void sendInterface(Player player) {
         player.getInterfaceManager().sendInterface(INTERFACE);
-        Object options[] = {78, 1, "Infuse-All<col=FF9040>", "Infuse-10<col=FF9040>", "Infuse-5<col=FF9040>",
+        Object[] options = {78, 1, "Infuse-All<col=FF9040>", "Infuse-10<col=FF9040>", "Infuse-5<col=FF9040>",
                 "Infuse<col=FF9040>", 10, 8,
                 INTERFACE << 16 | 0x10};
         player.getPackets().sendRunScript(757, options);
@@ -124,7 +124,7 @@ public class Summoning {
         player.setNextAnimation(new Animation(9068));
     }
 
-    private static int INTERFACE = 672;
+    private static final int INTERFACE = 672;
 
     public static void infusePouches(Player player) {
         player.getInterfaceManager().sendInterface(INTERFACE);// close to this

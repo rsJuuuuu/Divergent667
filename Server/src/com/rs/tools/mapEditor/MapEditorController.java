@@ -65,14 +65,14 @@ public class MapEditorController {
 
     private Image mapImage;
 
-    private HashMap<WorldTile, ArrayList<ObjectSpawn>> spawnedObjectMap = new HashMap<>();
-    private HashMap<WorldTile, ArrayList<ObjectSpawn>> removedObjectMap = new HashMap<>();
-    private HashMap<WorldTile, ArrayList<NpcSpawn>> npcSpawnsMap = new HashMap<>();
+    private final HashMap<WorldTile, ArrayList<ObjectSpawn>> spawnedObjectMap = new HashMap<>();
+    private final HashMap<WorldTile, ArrayList<ObjectSpawn>> removedObjectMap = new HashMap<>();
+    private final HashMap<WorldTile, ArrayList<NpcSpawn>> npcSpawnsMap = new HashMap<>();
 
     private int viewRadius = 25;
     private double viewX = 3081;
     private double viewY = 3478;
-    private int viewPlane = 0;
+    private final int viewPlane = 0;
 
     private boolean needsRepaint = false;
     private boolean running = true;

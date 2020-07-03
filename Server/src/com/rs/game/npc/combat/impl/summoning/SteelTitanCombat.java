@@ -26,7 +26,7 @@ public class SteelTitanCombat extends CombatScript {
         int size = npc.getSize();
         Follower follower = (Follower) npc;
         boolean usingSpecial = follower.hasSpecialOn();
-        int damage = 0;
+        int damage;
         if (distanceX > size || distanceX < -1 || distanceY > size || distanceY < -1) distant = true;
         if (usingSpecial) {// priority over regular attack
             npc.setNextAnimation(new Animation(8190));

@@ -12,7 +12,7 @@ import com.rs.utils.stringUtils.TimeUtils;
 
 public final class NPCCombat {
 
-    private Npc npc;
+    private final Npc npc;
     private int combatDelay;
     private Entity target;
 

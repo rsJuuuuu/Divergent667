@@ -24,8 +24,8 @@ public final class Skills implements Serializable {
             "Mining", "Herblore", "Agility", "Thieving", "Slayer", "Farming", "Runecrafting", "Hunter",
             "Construction", "Summoning", "Dungeoneering"};
 
-    public short level[];
-    private double xp[];
+    public short[] level;
+    private final double[] xp;
     private double xpCounter;
 
     private transient Player player;
@@ -70,7 +70,7 @@ public final class Skills implements Serializable {
         int prayer = getLevelForXp(5);
         int ranged = getLevelForXp(4);
         int magic = getLevelForXp(6);
-        int combatLevel = 3;
+        int combatLevel;
         combatLevel = (int) ((defence + hp + Math.floor(prayer / 2)) * 0.25) + 1;
         double melee = (attack + strength) * 0.325;
         double ranger = Math.floor(ranged * 1.5) * 0.325;

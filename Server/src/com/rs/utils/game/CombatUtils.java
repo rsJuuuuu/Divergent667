@@ -80,14 +80,14 @@ public class CombatUtils {
             else return false;
         }
         int legsId = player.getEquipment().getLegsId();
-        boolean hasLegs = legsId != -1 && (legsId == 8840 || legsId == 19786 || legsId == 19788 || legsId == 19790);
+        boolean hasLegs = (legsId == 8840 || legsId == 19786 || legsId == 19788 || legsId == 19790);
         if (!hasLegs) {
             if (hasDeflector) hasDeflector = false;
             else return false;
         }
         int torsoId = player.getEquipment().getChestId();
-        boolean hasTorso = torsoId != -1 && (torsoId == 8839 || torsoId == 10611 || torsoId == 19785 || torsoId == 19787
-                                             || torsoId == 19789);
+        boolean hasTorso = (torsoId == 8839 || torsoId == 10611 || torsoId == 19785 || torsoId == 19787
+                || torsoId == 19789);
         if (!hasTorso) {
             if (hasDeflector) hasDeflector = false;
             else return false;

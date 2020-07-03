@@ -1,16 +1,17 @@
 package com.rs.game.player.cutscenes.actions;
 
 import com.rs.game.npc.Npc;
-import com.rs.game.world.WorldTile;
 import com.rs.game.player.Player;
 import com.rs.game.player.cutscenes.Cutscene;
+import com.rs.game.world.WorldTile;
 
 public class NPCFaceTileAction extends CutsceneAction {
 
-	private int x, y;
+	private final int x;
+	private final int y;
 
 	public NPCFaceTileAction(int cachedObjectIndex, int x, int y,
-			int actionDelay) {
+							 int actionDelay) {
 		super(cachedObjectIndex, actionDelay);
 		this.x = x;
 		this.y = y;

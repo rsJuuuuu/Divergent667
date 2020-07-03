@@ -1,11 +1,11 @@
 package com.rs.game.player.content;
 
 import com.rs.cores.CoresManager;
+import com.rs.game.item.Item;
+import com.rs.game.player.Player;
 import com.rs.game.world.Animation;
 import com.rs.game.world.World;
 import com.rs.game.world.WorldObject;
-import com.rs.game.item.Item;
-import com.rs.game.player.Player;
 
 import java.util.TimerTask;
 
@@ -71,8 +71,8 @@ public class Pickables {
         POTATO(new int[]{312, 8562, 9408}, new Item(1942)),
         FLAX(new int[]{2646, 15075, 15076, 15077, 15078, 67264, 67263}, new Item(1779)),
         BANANA(new int[]{2073}, new Item(1963));
-        private int[] objectIds;
-        private Item harvestedItem;
+        private final int[] objectIds;
+        private final Item harvestedItem;
 
         Pickable(int[] objectIds, Item harvestedItem) {
             this.objectIds = objectIds;

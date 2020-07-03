@@ -1,17 +1,17 @@
 package com.rs.game.npc.combat.impl.slayer;
 
 import com.rs.game.npc.Npc;
+import com.rs.game.npc.combat.CombatScript;
+import com.rs.game.npc.data.NpcCombatDefinitions;
 import com.rs.game.world.Animation;
 import com.rs.game.world.Entity;
 import com.rs.game.world.Graphics;
-import com.rs.game.npc.combat.CombatScript;
-import com.rs.game.npc.data.NpcCombatDefinitions;
 import com.rs.utils.Utils;
 
 public class JadinkoMaleCombat extends CombatScript {
 
     public Object[] getKeys() {
-        return (new Object[]{Integer.valueOf(13822)});
+        return (new Object[]{13822});
     }
 
     public int attack(Npc jM, Entity target) {

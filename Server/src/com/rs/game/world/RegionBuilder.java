@@ -119,7 +119,7 @@ public final class RegionBuilder {
         if (Cache.STORE.getIndexes()[5].getArchiveId("m" + rx + "_" + ry) != -1)
             return false; // a real map already exists
         Region region = World.getRegions().get((rx << 8) + ry);
-        return region == null || !(region instanceof DynamicRegion);
+        return !(region instanceof DynamicRegion);
     }
 
     public static void cutRegion(int regionX, int regionY, int plane) {

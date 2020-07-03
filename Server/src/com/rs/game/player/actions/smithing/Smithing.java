@@ -1,11 +1,11 @@
 package com.rs.game.player.actions.smithing;
 
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.world.Animation;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
+import com.rs.game.world.Animation;
 import com.rs.utils.stringUtils.TextUtils;
 
 import java.util.HashMap;
@@ -67,7 +67,7 @@ public class Smithing extends Action {
                 new Item(3097, 1), new Item(1311, 1), new Item(1083, 1), new Item(1069, 1), new Item(1119, 1),
                 new Item(1269, 1)}, new double[]{37.5, 75, 112.5, 187.5}, new int[]{66, 98, 162, 210, 267});
 
-        private static Map<Integer, ForgingBar> bars = new HashMap<>();
+        private static final Map<Integer, ForgingBar> bars = new HashMap<>();
 
         static {
             for (ForgingBar bar : ForgingBar.values()) {
@@ -79,11 +79,11 @@ public class Smithing extends Action {
             return bars.get(id);
         }
 
-        private int barId;
-        private int[] componentChilds;
-        private double[] experience;
-        private Item items[];
-        private int level;
+        private final int barId;
+        private final int[] componentChilds;
+        private final double[] experience;
+        private final Item[] items;
+        private final int level;
 
         ForgingBar(int barId, int level, Item[] items, double[] experience, int[] componentChilds) {
             this.barId = barId;
@@ -115,9 +115,9 @@ public class Smithing extends Action {
     }
 
     public static int HAMMER = 2347;
-    private static int SMITHING_INTERFACE = 300;
+    private static final int SMITHING_INTERFACE = 300;
     private ForgingBar bar;
-    private int index;
+    private final int index;
     private int ticks;
 
     public Smithing(int ticks, int index) {
@@ -199,8 +199,8 @@ public class Smithing extends Action {
 
     public static class ForgingInterface {
 
-        public static final int componentChilds[] = new int[30];
-        public static final int CLICKED_CHILDS[] = {28, -1, 5, 1};
+        public static final int[] componentChilds = new int[30];
+        public static final int[] CLICKED_CHILDS = {28, -1, 5, 1};
 
         public static void handleIComponents(Player player, int componentId) {
             int slot = -1;

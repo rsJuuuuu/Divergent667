@@ -2,6 +2,7 @@ package com.rs.game.actionHandling.handlers.listeners;
 
 import com.rs.cores.CoresManager;
 import com.rs.game.actionHandling.Handler;
+import com.rs.game.gameUtils.events.EntityAtTileEvent;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.skills.construction.Furniture;
@@ -9,7 +10,6 @@ import com.rs.game.player.content.skills.construction.Rooms;
 import com.rs.game.player.info.RequirementsManager;
 import com.rs.game.world.World;
 import com.rs.game.world.WorldObject;
-import com.rs.game.gameUtils.events.EntityAtTileEvent;
 import org.pmw.tinylog.Logger;
 
 import java.util.concurrent.TimeUnit;
@@ -24,11 +24,11 @@ import static com.rs.game.actionHandling.HandlerManager.registerObjectAction;
 @SuppressWarnings("unused")
 public class Construction implements Handler {
 
-    private static EntityAtTileEvent burnerEvent = (entity, tile) -> {
+    private static final EntityAtTileEvent burnerEvent = (entity, tile) -> {
         if (!(tile instanceof WorldObject) || !(entity instanceof Player)) return;
         final WorldObject object = (WorldObject) tile;
         final WorldObject spawnedObject = new WorldObject(object.getId()
-                                                          + 1, object.getType(), object.getRotation(), object.getX(),
+                + 1, object.getType(), object.getRotation(), object.getX(),
                 object.getY(), object.getPlane());
         ((Player) entity).getInventory().removeItems(new Item(251));
         World.removeSpawnedObject(object, true);
@@ -52,10 +52,10 @@ public class Construction implements Handler {
     enum InteractableBuild {
         BURNER(new int[]{13212}, CLICK_1, burnerEvent, Furniture.Builds.LAMP);
 
-        private int[] objectIds;
+        private final int[] objectIds;
 
-        private EntityAtTileEvent event;
-        private Furniture.Builds[] builds;
+        private final EntityAtTileEvent event;
+        private final Furniture.Builds[] builds;
 
         InteractableBuild(int[] objectIds, int clickType, EntityAtTileEvent event, Furniture.Builds... builds) {
             this.objectIds = objectIds;

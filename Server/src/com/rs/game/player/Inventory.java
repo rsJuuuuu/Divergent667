@@ -11,7 +11,7 @@ public final class Inventory implements Serializable {
 
     private static final long serialVersionUID = 8842800123753277093L;
 
-    private ItemsContainer<Item> items;
+    private final ItemsContainer<Item> items;
 
     private transient Player player;
 

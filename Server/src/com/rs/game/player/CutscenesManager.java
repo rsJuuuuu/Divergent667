@@ -1,11 +1,11 @@
 package com.rs.game.player;
 
-import com.rs.game.player.cutscenes.Cutscene;
 import com.rs.game.player.cutscenes.CutSceneHandler;
+import com.rs.game.player.cutscenes.Cutscene;
 
 public final class CutscenesManager {
 
-	transient private Player player;
+	final transient private Player player;
 	private Cutscene cutscene;
 
 	/*
