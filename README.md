@@ -1,20 +1,12 @@
 # Divergent667
 An open source 667 base.
 
-Main features:
-- Alot of easily configurable variables in Settings.java files
- - Quest system -- example quest Druidic ritual
- - Rewritten dialogue system for convinient dialogue writing
- - Rewritten Magic
- - Rewritten prayer (most bases don't have proper prayer draining)
- - Rewritten most packet handling
- - Action registeration system that lets you register actions from anywhere in your code.
- Actions include object actions, npc actions, player actions and command actions
- - Construction (pathing in a POH is broken and some rotations don't save correctly otherwise quite functional)
- - Server sided path correction (might be related to the above. It's more likely though that the objects are added in a way that the pathfinding doesn't recognize)
- -  An effect system for things like soulsplit, antifire etc.
- 
-Drawbacks:
-- somewhat unfamiliar structure compared to other stuff. So if you can't read code you might want to stay away from this as most guides out there won't help you. 
-- Unfinished stuff (mainly missing configs that basically just need to be typed out) 
-- Custom client (a normal client might work if you disable RSA server sided)
+## Running the project
+
+- These instructions are for IntelliJ IDEA IDE
+- ROOT in these instructions means the folder you downloaded the source to, containing this readme
+1. Download the project
+2. Extract the cache in ROOT/Server/data/cache/ 
+2. Open the downloaded folder as an IntelliJ project
+3. Create a new run configuration for the Launcher and Loader main classes. For Launcher, and any other server side tool, set the working directory to ROOT/Server/
+4. Run
