@@ -2,3 +2,5 @@
 /Server/data/characters/
 out/
 .idea/
+Server/src/main/java/com/rs/cache/
+Server/target

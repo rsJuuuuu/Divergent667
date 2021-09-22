@@ -2,7 +2,7 @@ package com.rs.game.player.dialogues;
 
 import com.rs.cache.loaders.NPCDefinitions;
 import com.rs.game.player.Player;
-import com.sun.istack.internal.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;

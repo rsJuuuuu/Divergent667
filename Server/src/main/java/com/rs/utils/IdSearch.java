@@ -6,7 +6,7 @@ import com.rs.cache.loaders.ObjectDefinitions;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.utils.stringUtils.TextUtils;
-import com.sun.istack.internal.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 

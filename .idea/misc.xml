@@ -3,7 +3,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/ShopBuilder/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
