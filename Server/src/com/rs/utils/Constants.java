@@ -180,6 +180,8 @@ public class Constants {
 
     public static final int IBANS_STAFF = 1409;
 
+    public static final int SLAYER_STAFF = 4170;
+
     public enum BonusType {
         STAB_ATTACK(0, "Stab attack"),
         SLASH_ATTACK(1, "Slash attack"),

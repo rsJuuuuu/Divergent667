@@ -9,11 +9,11 @@ import com.rs.game.item.Item;
 import com.rs.game.npc.Npc;
 import com.rs.game.npc.data.NpcDataLoader;
 import com.rs.game.npc.impl.summoning.Follower;
+import com.rs.game.player.Equipment;
 import com.rs.game.player.Player;
 import com.rs.game.player.PlayerUtils;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.smithing.Smelting;
-import com.rs.game.player.actions.smithing.Smithing;
 import com.rs.game.player.info.RequirementsManager;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
@@ -22,7 +22,6 @@ import com.rs.utils.Constants;
 import com.rs.utils.game.itemUtils.PriceUtils;
 import com.rs.utils.stringUtils.TimeUtils;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
@@ -120,14 +119,24 @@ public class Magic {
         IBAN_BLAST(54, 50, 30, 250, 45, 87, 89, Projectile.getDefaultMagicProjectile(88), 708, SpellType.MODERN_FIRE_SPELL, FIRE_RUNE, 5, DEATH_RUNE, 1) {
             @Override
             public boolean checkRequirements(Player player) {
-                if (player.getEquipment().getWeaponId() != IBANS_STAFF) {
-                    player.sendMessage("You need to equip Iban's staff to cast Iban Blast.");
-                    return false;
-                }
-                return super.checkRequirements(player);
+                return RequirementsManager.hasEquipment(player, Equipment.SLOT_WEAPON, IBANS_STAFF, "cast Iban Blast.")
+                        && super.checkRequirements(player);
             }
         },
-        // UNDEAD AUTOCAST 35, SLAYER DART 37 CLAW OF GUTHIX 39 SS 41 Flames 43
+        MAGIC_DART(56, 50, 30, 0, 37, -1, 329, Projectile.getDefaultMagicProjectile(328), 1575, SpellType.MAGIC_DART, DEATH_RUNE, 1, MIND_RUNE, 4) {
+            @Override
+            public boolean checkRequirements(Player player) {
+                return RequirementsManager.hasRequirement(player, Skills.SLAYER, 55, "to cast Magic Dart")
+                        && RequirementsManager.hasEquipment(player, Equipment.SLOT_WEAPON, SLAYER_STAFF, "cast Magic Dart")
+                        && super.checkRequirements(player);
+            }
+
+            @Override
+            public int getDamage(Player player) {
+                return (int) (Math.floor(player.getSkills().getLevel(Skills.MAGIC)) + 100);
+            }
+        },
+        // UNDEAD AUTOCAST 35, CLAW OF GUTHIX 39 SS 41 Flames 43
         /*
             Ancients
          */
@@ -463,7 +472,7 @@ public class Magic {
             return level;
         }
 
-        public int getDamage() {
+        public int getDamage(Player player) {
             return damage;
         }
 
@@ -579,6 +588,7 @@ public class Magic {
     }
 
     public enum SpellType {
+        MAGIC_DART(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2),
         MODERN_AIR_SPELL(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2),
         MODERN_WATER_SPELL(MODERN_SPELLBOOK, 5, 14220, 10542, Magic::castNormalCombatSpell, 2),
         MODERN_EARTH_SPELL(MODERN_SPELLBOOK, 5, 14222, 14209, Magic::castNormalCombatSpell, 2),
@@ -1000,7 +1010,7 @@ public class Magic {
         if (spell.getProjectile() != null && !spell.sendCustomProjectile(player, combat))
             World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
         combat.delayMagicHit(spell.getType().getHitDelay(player), combat.getMagicHit(player, spell.processPreHitEffects
-                (player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage()))));
+                (player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage(player)))));
     }
 
     private static boolean checkDrain(Player player, PlayerCombat combat, Spell spell, boolean apply) {
@@ -1144,9 +1154,10 @@ public class Magic {
             public boolean attack() {
                 if (spell.projectile != null && !spell.sendCustomProjectile(player, combat))
                     World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
-                int damage = combat.getRandomMagicMaxHit(player, spell.getDamage());
+                int damage = combat.getRandomMagicMaxHit(player, spell.getDamage(player));
                 combat.delayMagicHit(spell.getType().getHitDelay(player), combat.getMagicHit(player, spell
-                        .processPreHitEffects(player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage()))));
+                        .processPreHitEffects(player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage(player)
+                        ))));
                 if (!nextTarget) {
                     if (damage == -1) return false;
                     nextTarget = true;

@@ -1,6 +1,8 @@
 package com.rs.game.player.info;
 
+import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.item.Item;
+import com.rs.game.player.Equipment;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.utils.Utils;
@@ -54,8 +56,17 @@ public class RequirementsManager {
         return true;
     }
 
+    public static boolean hasEquipment(Player player, int slot, int itemId, String message) {
+        Item item = player.getEquipment().getItem(slot);
+        if(item == null || item.getId() != itemId){
+            player.sendMessage("You need to equip a " + ItemDefinitions.getItemDefinitions(itemId).getName() + " to " + message);
+            return false;
+        }
+        return true;
+    }
+
     /**
-     * Is the player carrying at least one of one of the given ids
+     * Is the player carrying at least one of the given ids
      */
     public static boolean carryingAnyOf(Player player, int... ids) {
         for (int id : ids)

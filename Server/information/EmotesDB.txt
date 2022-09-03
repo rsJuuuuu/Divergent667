@@ -215,6 +215,7 @@ MAGIC
 0725 - Superheat
 0716 - Curse, Weaken, or Confuse
 0729 - Curse, Weaken, or Confuse
+1575 - Magic Dart / Slayer Dart
 
 RANGE
 
