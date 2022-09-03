@@ -325,6 +325,17 @@ public final class NPCDefinitions {
         }
     }
 
+    /**
+     * Check whether this npc is undead
+     * <p>
+     * This should be done properly, atm just a simple check
+     *
+     * @return undead
+     */
+    public boolean isUndead() {
+        return name.toLowerCase().contains("skeleton");
+    }
+
     public boolean hasPickupOption() {
         String[] as;
         int j = (as = options).length;

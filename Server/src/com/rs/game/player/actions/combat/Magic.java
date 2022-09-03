@@ -136,7 +136,21 @@ public class Magic {
                 return (int) (Math.floor(player.getSkills().getLevel(Skills.MAGIC)) + 100);
             }
         },
-        // UNDEAD AUTOCAST 35, CLAW OF GUTHIX 39 SS 41 Flames 43
+        CRUMBLE_UNDEAD(47, 39, 24.5, 150, 35, 145, 147, Projectile.getDefaultMagicProjectile(146), 724, SpellType.CRUMBLE_UNDEAD, AIR_RUNE, 2, EARTH_RUNE, 2, CHAOS_RUNE, 2) {
+            @Override
+            public boolean checkRequirements(Player player) {
+                if (!(player.getActionManager().getAction() instanceof PlayerCombat))
+                    return super.checkRequirements(player);
+
+                PlayerCombat combat = (PlayerCombat) player.getActionManager().getAction();
+
+                if (!(combat.getTarget() instanceof Npc)) return false;
+                Npc target = (Npc) combat.getTarget();
+
+                return target.getDefinitions().isUndead() && super.checkRequirements(player);
+            }
+        },
+        // CLAW OF GUTHIX 39 SS 41 Flames 43
         /*
             Ancients
          */
@@ -588,6 +602,7 @@ public class Magic {
     }
 
     public enum SpellType {
+        CRUMBLE_UNDEAD(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2) {},
         MAGIC_DART(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2),
         MODERN_AIR_SPELL(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2),
         MODERN_WATER_SPELL(MODERN_SPELLBOOK, 5, 14220, 10542, Magic::castNormalCombatSpell, 2),
@@ -797,6 +812,10 @@ public class Magic {
      */
     public static void processSpellOnNpc(Player player, Npc npc, int spellId) {
         if (Magic.checkCombatSpell(player, spellId, 1, false)) {
+            if (spellId == Spell.CRUMBLE_UNDEAD.spellId && !npc.getDefinitions().isUndead()) {
+                player.getCombatDefinitions().resetSpells(true);
+                return;
+            }
             player.setNextFaceWorldTile(new WorldTile(npc.getCoordFaceX(npc.getSize()), npc.getCoordFaceY(npc.getSize
                     ()), npc.getPlane()));
             if (!player.getControllerManager().canAttack(npc)) return;
