@@ -39,15 +39,6 @@ public class Magic {
         void execute(Player player, Spell spell);
     }
 
-    /*
-        Saradomin strike:
-            SpellId 66 Config 41
-        Claws of Guthix
-            SpellId 66 Config 39
-        Flames of Zamorak
-            SpellId 68 Config 43
-     */
-
     public enum Spell {
         /*
             Standard combat spells
@@ -150,7 +141,76 @@ public class Magic {
                 return target.getDefinitions().isUndead() && super.checkRequirements(player);
             }
         },
-        // CLAW OF GUTHIX 39 SS 41 Flames 43
+        CLAWS_OF_GUTHIX(67, 60, 35, 200, 39, -1, 77, null, SpellType.GOD_SPELL, FIRE_RUNE, 1, BLOOD_RUNE, 2, AIR_RUNE, 4) {
+            @Override
+            public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
+                if (damage > 0) {
+                    checkDrain(player, combat, this, true);
+                }
+            }
+
+            @Override
+            public int getDamage(Player player) {
+                return super.getDamage(player) + getGodSpellBoost(player, GUTHIX_CAPE);
+            }
+
+            @Override
+            public boolean checkRequirements(Player player) {
+                return RequirementsManager.hasEquipment(player, Equipment.SLOT_WEAPON, STAFF_OF_BALANCE, "cast Claws of Guthix")
+                        && super.checkRequirements(player);
+            }
+        },
+        SARADOMIN_STRIKE(66, 60, 35, 200, 41, -1, 76, null, SpellType.GOD_SPELL, AIR_RUNE, 4, FIRE_RUNE, 2, BLOOD_RUNE, 2) {
+            @Override
+            public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
+                if (damage > 0 && combat.getTarget() instanceof Player) {
+                    Player other = (Player) combat.getTarget();
+                    other.getPrayer().drainPrayer(1);
+                }
+            }
+
+            @Override
+            public int getDamage(Player player) {
+                return super.getDamage(player) + getGodSpellBoost(player, SARADOMIN_CAPE);
+            }
+
+
+            @Override
+            public boolean checkRequirements(Player player) {
+                return RequirementsManager.hasEquipment(player, Equipment.SLOT_WEAPON, SARADOMIN_STAFF, "cast Claws of Guthix")
+                        && super.checkRequirements(player);
+            }
+        },
+        FLAMES_OF_ZAMORAK(68, 60, 35, 200, 43, -1, 78, null, SpellType.GOD_SPELL, AIR_RUNE, 1, FIRE_RUNE, 4, BLOOD_RUNE, 2) {
+            @Override
+            public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
+                if (damage > 0 && combat.getTarget() instanceof Player) {
+                    Player other = (Player) combat.getTarget();
+                    checkDrain(player, combat, this, true);
+                }
+            }
+
+            @Override
+            public int getDamage(Player player) {
+                return super.getDamage(player) + getGodSpellBoost(player, ZAMORAK_CAPE);
+            }
+
+            @Override
+            public boolean checkRequirements(Player player) {
+                return RequirementsManager.hasEquipment(player, Equipment.SLOT_WEAPON, ZAMORAK_STAFF, "cast Flames of Zamorak")
+                        && super.checkRequirements(player);
+            }
+        },
+        CHARGE_SPELL(83, 80, 180, SpellType.MODERN_SPELL, (player, spell) -> {
+            player.sendMessage("You feel charged with magic power.");
+            player.setNextAnimation(new Animation(811));
+            player.setChargeSpellDelay(700);
+        }, AIR_RUNE, 3, FIRE_RUNE, 3, BLOOD_RUNE, 3) {
+            @Override
+            public boolean checkRequirements(Player player) {
+                return player.getChargeSpellDelay() < 700 - 175 && super.checkRequirements(player);
+            }
+        },
         /*
             Ancients
          */
@@ -161,6 +221,7 @@ public class Magic {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(20);
             }
         },
+
         SHADOW_RUSH(32, 52, 31, 150, 65, -1, 379, Projectile.getDefaultCurvedProjectile(380), SpellType.RUSH, SOUL_RUNE,
                 1, DEATH_RUNE, 2, CHAOS_RUNE, 2, AIR_RUNE, 1) {
             @Override
@@ -171,12 +232,14 @@ public class Magic {
                 }
             }
         },
+
         BLOOD_RUSH(24, 56, 33, 160, 67, -1, 373, null, SpellType.RUSH, BLOOD_RUNE, 1, DEATH_RUNE, 2, CHAOS_RUNE, 2) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
+
         ICE_RUSH(20, 58, 34, 170, 69, -1, 361, Projectile.getDefaultCurvedProjectile(362), SpellType.RUSH, WATER_RUNE, 2,
                 CHAOS_RUNE, 2, DEATH_RUNE, 2) {
             @Override
@@ -184,6 +247,7 @@ public class Magic {
                 if (damage > 0) combat.getTarget().addFreezeDelay(5000);
             }
         },
+
         SMOKE_BURST(30, 62, 36, 180, 71, -1, 389, null, SpellType.ANCIENT_MULTI, DEATH_RUNE, 2, CHAOS_RUNE, 4, FIRE_RUNE,
                 2, AIR_RUNE, 2) {
             @Override
@@ -191,6 +255,7 @@ public class Magic {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(20);
             }
         },
+
         SHADOW_BURST(34, 64, 37, 190, 73, -1, 382, null, SpellType.ANCIENT_MULTI, SOUL_RUNE, 2, DEATH_RUNE, 2,
                 CHAOS_RUNE, 4, AIR_RUNE, 1) {
             @Override
@@ -201,6 +266,7 @@ public class Magic {
                 }
             }
         },
+
         BLOOD_BURST(26, 68, 39, 210, 75, -1, 376, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, DEATH_RUNE, 2,
                 CHAOS_RUNE, 4) {
             @Override
@@ -208,6 +274,7 @@ public class Magic {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
+
         ICE_BURST(22, 70, 40, 220, 77, -1, 363, null, SpellType.ANCIENT_MULTI, DEATH_RUNE, 2, CHAOS_RUNE, 4, WATER_RUNE,
                 4) {
             @Override
@@ -215,6 +282,7 @@ public class Magic {
                 if (damage > 0) combat.getTarget().addFreezeDelay(10000);
             }
         },
+
         SMOKE_BLITZ(29, 74, 42, 230, 79, -1, 387, Projectile.getDefaultCurvedProjectile(386), SpellType.BLITZ,
                 BLOOD_RUNE, 2, DEATH_RUNE, 2, FIRE_RUNE, 2, AIR_RUNE, 2) {
             @Override
@@ -222,6 +290,7 @@ public class Magic {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(40);
             }
         },
+
         SHADOW_BLITZ(33, 76, 43, 240, 81, -1, 381, Projectile.getDefaultCurvedProjectile(380), SpellType.BLITZ,
                 BLOOD_RUNE, 2, SOUL_RUNE, 2, DEATH_RUNE, 2, AIR_RUNE, 2) {
             @Override
@@ -232,6 +301,7 @@ public class Magic {
                 }
             }
         },
+
         BLOOD_BLITZ(25, 80, 45, 250, 83, -1, 375, Projectile.getDefaultCurvedProjectile(374), SpellType.BLITZ,
                 BLOOD_RUNE, 4, DEATH_RUNE, 2) {
             @Override
@@ -239,12 +309,14 @@ public class Magic {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
+
         ICE_BLITZ(21, 82, 46, 260, 85, 366, 367, null, SpellType.BLITZ, BLOOD_RUNE, 2, DEATH_RUNE, 2, WATER_RUNE, 3) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
                 if (damage > 0) combat.getTarget().addFreezeDelay(15000);
             }
         },
+
         SMOKE_BARRAGE(31, 86, 48, 270, 87, -1, 391, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, DEATH_RUNE, 4,
                 FIRE_RUNE, 4, AIR_RUNE, 4) {
             @Override
@@ -252,6 +324,7 @@ public class Magic {
                 if (damage > 0) combat.getTarget().getPoison().makePoisoned(40);
             }
         },
+
         SHADOW_BARRAGE(35, 88, 49, 280, 89, -1, 383, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 2, SOUL_RUNE, 3,
                 DEATH_RUNE, 4, AIR_RUNE, 4) {
             @Override
@@ -262,6 +335,7 @@ public class Magic {
                 }
             }
         },
+
         BLOOD_BARRAGE(27, 92, 51, 290, 91, -1, 377, null, SpellType.ANCIENT_MULTI, BLOOD_RUNE, 4, SOUL_RUNE, 1,
                 DEATH_RUNE, 4) {
             @Override
@@ -269,6 +343,7 @@ public class Magic {
                 if (damage > 0) player.heal((int) (damage * 0.25));
             }
         },
+
         ICE_BARRAGE(23, 94, 52, 300, 93, -1, 369, Projectile.getDefaultCurvedProjectile(368), SpellType.ANCIENT_MULTI,
                 BLOOD_RUNE, 2, DEATH_RUNE, 4, WATER_RUNE, 6) {
             @Override
@@ -280,36 +355,60 @@ public class Magic {
                 else combat.getTarget().addFreezeDelay(20000);
             }
         },
+
         MODERN_HOME(24, 0, 0, SpellType.MODERN_TELEPORT, Settings.START_PLAYER_LOCATION),
+
         MA(37, 10, 19, SpellType.MODERN_TELEPORT, new WorldTile(2413, 2853, 0), LAW_RUNE, 1, WATER_RUNE, 1, AIR_RUNE,
                 1),
+
         VARROCK(40, 25, 35, SpellType.MODERN_TELEPORT, new WorldTile(3212, 3424, 0), LAW_RUNE, 1, AIR_RUNE, 3,
                 FIRE_RUNE, 1),
+
         LUMBRIDGE(43, 31, 41, SpellType.MODERN_TELEPORT, new WorldTile(3222, 3218, 0), LAW_RUNE, 1, AIR_RUNE, 3,
                 EARTH_RUNE, 1),
+
         FALADOR(46, 37, 47, SpellType.MODERN_TELEPORT, new WorldTile(2964, 3379, 0), LAW_RUNE, 1, WATER_RUNE, 1,
                 AIR_RUNE, 3),
+
         //TODO HOUSE
         CAMELOT(51, 45, 55.5, SpellType.MODERN_TELEPORT, new WorldTile(2757, 3478, 0), LAW_RUNE, 1, AIR_RUNE, 5),
+
         ARDOUGNE(57, 51, 61, SpellType.MODERN_TELEPORT, new WorldTile(2664, 3305, 0), LAW_RUNE, 2, WATER_RUNE, 2),
+
         WATCHTOWER(62, 58, 68, SpellType.MODERN_TELEPORT, new WorldTile(2547, 3113, 2), LAW_RUNE, 2, EARTH_RUNE, 2),
+
         TROLLHEIM(69, 61, 68, SpellType.MODERN_TELEPORT, new WorldTile(2888, 3674, 0), FIRE_RUNE, 2, LAW_RUNE, 2),
+
         APE_ATOLL(72, 64, 74, SpellType.MODERN_TELEPORT, new WorldTile(2762, 9094, 0), FIRE_RUNE, 2, LAW_RUNE, 2,
                 WATER_RUNE, 2, 1963, 1),
+
         ANCIENT_HOME(48, 0, 0, SpellType.ANCIENT_TELEPORT, Settings.START_PLAYER_LOCATION),
+
         PADDEWA(40, 54, 64, SpellType.ANCIENT_TELEPORT, new WorldTile(3099, 9882, 0), LAW_RUNE, 2, FIRE_RUNE, 1,
                 AIR_RUNE, 1),
+
         SENNTISTEN(41, 60, 70, SpellType.ANCIENT_TELEPORT, new WorldTile(3222, 3336, 0), LAW_RUNE, 2, SOUL_RUNE, 1),
+
         KHARYRLL(42, 66, 76, SpellType.ANCIENT_TELEPORT, new WorldTile(3492, 3471, 0), LAW_RUNE, 2, BLOOD_RUNE, 1),
+
         LASSAR(43, 72, 82, SpellType.ANCIENT_TELEPORT, new WorldTile(3006, 3471, 0), LAW_RUNE, 2, WATER_RUNE, 4),
+
         DAREEYAK(44, 78, 88, SpellType.ANCIENT_TELEPORT, new WorldTile(2990, 3696, 0), LAW_RUNE, 2, FIRE_RUNE, 3,
                 AIR_RUNE, 2),
+
         CARRALLANGAR(45, 84, 94, SpellType.ANCIENT_TELEPORT, new WorldTile(3217, 3677, 0), LAW_RUNE, 2, SOUL_RUNE, 2),
+
         ANNAKARL(46, 90, 100, SpellType.ANCIENT_TELEPORT, new WorldTile(3288, 3886, 0), LAW_RUNE, 2, BLOOD_RUNE, 2),
+
         GHORROCK(47, 96, 106, SpellType.ANCIENT_TELEPORT, new WorldTile(2977, 3873, 0), LAW_RUNE, 2, WATER_RUNE, 8),
+
         LOW_ALCHEMY(38, 35, 31, SpellType.MODERN_SPELL, FIRE_RUNE, 3, NATURE_RUNE, 1),
+
         HIGH_ALCHEMY(59, 55, 65, SpellType.MODERN_SPELL, FIRE_RUNE, 5, NATURE_RUNE, 1),
-        BONES_TO_BANANAS(33, 15, 25, SpellType.MODERN_SPELL, (player, spell) -> {
+
+        BONES_TO_BANANAS(33, 15, 25, SpellType.MODERN_SPELL, (player, spell) ->
+
+        {
             castBonesToX(player, BANANA);
         }, EARTH_RUNE, 2, WATER_RUNE, 2, NATURE_RUNE, 1) {
             @Override
@@ -317,7 +416,10 @@ public class Magic {
                 return super.checkRequirements(player) && checkBones(player);
             }
         },
-        BONES_TO_PEACHES(65, 60, 35.5, SpellType.MODERN_SPELL, (player, spell) -> {
+
+        BONES_TO_PEACHES(65, 60, 35.5, SpellType.MODERN_SPELL, (player, spell) ->
+
+        {
             castBonesToX(player, PEACH);
         }, EARTH_RUNE, 4, WATER_RUNE, 4, NATURE_RUNE, 2) {
             @Override
@@ -325,11 +427,21 @@ public class Magic {
                 return super.checkRequirements(player) && checkBones(player);
             }
         },
+
         SUPERHEAT(50, 43, 53, SpellType.MODERN_SPELL, FIRE_RUNE, 4, NATURE_RUNE, 1),
+
         VENGEANCE_OTHER(42, 93, 108, SpellType.LUNAR_USE_SPELL),
+
         VENGEANCE(37, 94, 112, SpellType.LUNAR_SPELL, Magic::castVeng),
+
         VENGEANCE_GROUP(74, 95, 120, SpellType.LUNAR_SPELL, Magic::castVeng),
-        BIND(36, 20, 30, 20, new Graphics(177), new Graphics(181, 100), Projectile.getDefaultMagicProjectile(178),
+
+        BIND(36, 20, 30, 20, new Graphics(177), new
+
+                Graphics(181, 100), Projectile.
+
+                getDefaultMagicProjectile(178),
+
                 SpellType.BIND_SPELL, NATURE_RUNE, 2, WATER_RUNE, 3, EARTH_RUNE, 3) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -339,7 +451,13 @@ public class Magic {
                     combat.getTarget().addFreezeDelay(5000);
             }
         },
-        SNARE(55, 50, 60, 30, new Graphics(177), new Graphics(180, 100), Projectile.getDefaultMagicProjectile(178),
+
+        SNARE(55, 50, 60, 30, new Graphics(177), new
+
+                Graphics(180, 100), Projectile.
+
+                getDefaultMagicProjectile(178),
+
                 SpellType.BIND_SPELL, NATURE_RUNE, 2, WATER_RUNE, 3, EARTH_RUNE, 3) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -349,7 +467,12 @@ public class Magic {
                     combat.getTarget().addFreezeDelay(10000);
             }
         },
-        ENTANGLE(81, 79, 89, 50, new Graphics(177), new Graphics(179, 100), Projectile.getDefaultMagicProjectile(178)
+
+        ENTANGLE(81, 79, 89, 50, new Graphics(177), new
+
+                Graphics(179, 100), Projectile.
+
+                getDefaultMagicProjectile(178)
                 , SpellType.BIND_SPELL, NATURE_RUNE, 4, WATER_RUNE, 5, EARTH_RUNE, 5) {
             @Override
             public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
@@ -604,6 +727,7 @@ public class Magic {
     public enum SpellType {
         CRUMBLE_UNDEAD(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2) {},
         MAGIC_DART(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2),
+        GOD_SPELL(MODERN_SPELLBOOK, 5, 811, 811, Magic::castNormalCombatSpell, 2),
         MODERN_AIR_SPELL(MODERN_SPELLBOOK, 5, 14221, 10546, Magic::castNormalCombatSpell, 2),
         MODERN_WATER_SPELL(MODERN_SPELLBOOK, 5, 14220, 10542, Magic::castNormalCombatSpell, 2),
         MODERN_EARTH_SPELL(MODERN_SPELLBOOK, 5, 14222, 14209, Magic::castNormalCombatSpell, 2),
@@ -1037,6 +1161,7 @@ public class Magic {
         final BonusType[] attackBonuses = {STAB_ATTACK, RANGE_ATTACK, MAGIC_ATTACK};
         final BonusType[] defenceBonuses = {RANGE_DEF, MAGIC_DEF, STAB_DEF};
         final BonusType[] strengthBonuses = {STAB_ATTACK, RANGE_ATTACK, MAGIC_ATTACK};
+        final BonusType[] magicBonuses = {MAGIC_ATTACK, MAGIC_DEF};
 
         switch (spell) {
             case CONFUSE:
@@ -1044,6 +1169,7 @@ public class Magic {
             case WEAKEN:
                 return checkModernDrain(combat, 0.05, apply, Skills.STRENGTH, strengthBonuses);
             case CURSE:
+            case CLAWS_OF_GUTHIX:
                 return checkModernDrain(combat, 0.05, apply, Skills.DEFENCE, defenceBonuses);
             case VULNERABILITY:
                 return checkModernDrain(combat, 0.10, apply, Skills.DEFENCE, defenceBonuses);
@@ -1051,6 +1177,8 @@ public class Magic {
                 return checkModernDrain(combat, 0.10, apply, Skills.STRENGTH, strengthBonuses);
             case STUN:
                 return checkModernDrain(combat, 0.10, apply, Skills.ATTACK, attackBonuses);
+            case FLAMES_OF_ZAMORAK:
+                return checkModernDrain(combat, 0.05, apply, Skills.MAGIC, magicBonuses);
             default:
                 return false;
         }
@@ -1078,6 +1206,12 @@ public class Magic {
         combat.delayMagicHit(spell.getType().getHitDelay(player), hit);
         if (spell.getProjectile() != null && !spell.sendCustomProjectile(player, combat))
             World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
+    }
+
+
+    private static int getGodSpellBoost(Player player, int itemId) {
+        if (player.getChargeSpellDelay() <= 0) return 0;
+        return player.getEquipment().getCapeId() == itemId ? 100 : 0;
     }
 
     private static boolean checkBones(Player player) {

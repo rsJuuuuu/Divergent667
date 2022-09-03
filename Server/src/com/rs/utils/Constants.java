@@ -182,6 +182,13 @@ public class Constants {
 
     public static final int SLAYER_STAFF = 4170;
 
+    public static final int STAFF_OF_BALANCE = 2416;
+    public static final int GUTHIX_CAPE = 2413;
+    public static final int SARADOMIN_STAFF = 2415;
+    public static final int SARADOMIN_CAPE = 2412;
+    public static final int ZAMORAK_STAFF = 2417;
+    public static final int ZAMORAK_CAPE = 2414;
+
     public enum BonusType {
         STAB_ATTACK(0, "Stab attack"),
         SLASH_ATTACK(1, "Slash attack"),

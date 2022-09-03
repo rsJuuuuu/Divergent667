@@ -84,6 +84,8 @@ public class Player extends Entity {
     private int overloadDelay;
     private int renewalDelay;
 
+    private int chargeSpellDelay;
+
     /**
      * Player variables
      */
@@ -485,7 +487,7 @@ public class Player extends Entity {
             if (floorItems == null) continue;
             for (FloorItem item : floorItems) {
                 if ((item.isInvisible() || item.isGrave()) && this != item.getOwner()
-                    || item.getTile().getPlane() != getPlane()) continue;
+                        || item.getTile().getPlane() != getPlane()) continue;
                 getPackets().sendRemoveGroundItem(item);
             }
         }
@@ -494,7 +496,7 @@ public class Player extends Entity {
             if (floorItems == null) continue;
             for (FloorItem item : floorItems) {
                 if ((item.isInvisible() || item.isGrave()) && this != item.getOwner()
-                    || item.getTile().getPlane() != getPlane()) continue;
+                        || item.getTile().getPlane() != getPlane()) continue;
                 getPackets().sendGroundItem(item);
             }
         }
@@ -507,11 +509,11 @@ public class Player extends Entity {
         for (int regionId : getMapRegionsIds()) {
             List<WorldObject> spawnedObjects = World.getRegion(regionId).getSpawnedObjects();
             if (spawnedObjects != null) spawnedObjects.stream().filter(object -> object.getPlane()
-                                                                                 == getPlane()).forEach(object ->
+                    == getPlane()).forEach(object ->
                     getPackets().sendSpawnedObject(object));
             List<WorldObject> removedObjects = World.getRegion(regionId).getRemovedObjects();
             if (removedObjects != null) removedObjects.stream().filter(object -> object.getPlane()
-                                                                                 == getPlane()).forEach(object ->
+                    == getPlane()).forEach(object ->
                     getPackets().sendDestroyObject(object));
         }
         for (WorldObject object : World.removedObjects) {
@@ -887,7 +889,7 @@ public class Player extends Entity {
     @Override
     public void handleIngoingHit(final Hit hit) {
         if (hit.getLook() != HitLook.MELEE_DAMAGE && hit.getLook() != HitLook.RANGE_DAMAGE
-            && hit.getLook() != HitLook.MAGIC_DAMAGE) return;
+                && hit.getLook() != HitLook.MAGIC_DAMAGE) return;
         if (auraManager.usingPenance()) {
             int amount = (int) (hit.getDamage() * 0.2);
             if (amount > 0) prayer.restorePrayer(amount);
@@ -1053,7 +1055,7 @@ public class Player extends Entity {
         finishing = true;
         long currentTime = TimeUtils.getTime();
         if (getAttackedByDelay() + 10000 > currentTime || getEmotesManager().getNextEmoteEnd() >= currentTime
-            || stopDelay >= currentTime) {
+                || stopDelay >= currentTime) {
             CoresManager.slowExecutor.schedule(() -> {
                 try {
                     packetsDecoderPing = TimeUtils.getTime();
@@ -1092,6 +1094,11 @@ public class Player extends Entity {
                 return;
             } else if ((overloadDelay - 1) % 25 == 0) Pots.applyOverLoadEffect(this);
             overloadDelay--;
+        }
+
+        chargeSpellDelay--;
+        if (chargeSpellDelay == 0) {
+            sendMessage("Your magical charge fades away.");
         }
 
         if (renewalDelay > 0) {
@@ -1181,12 +1188,12 @@ public class Player extends Entity {
         CopyOnWriteArrayList<Item> containedItems = new CopyOnWriteArrayList<>();
         for (int i = 0; i < 14; i++) {
             if (equipment.getItem(i) != null && equipment.getItem(i).getId() != -1
-                && equipment.getItem(i).getAmount() != -1)
+                    && equipment.getItem(i).getAmount() != -1)
                 containedItems.add(new Item(equipment.getItem(i).getId(), equipment.getItem(i).getAmount()));
         }
         for (int i = 0; i < 28; i++) {
             if (inventory.getItem(i) != null && inventory.getItem(i).getId() != -1
-                && inventory.getItem(i).getAmount() != -1)
+                    && inventory.getItem(i).getAmount() != -1)
                 containedItems.add(new Item(getInventory().getItem(i).getId(), getInventory().getItem(i).getAmount()));
         }
         if (containedItems.isEmpty()) return;
@@ -1245,7 +1252,7 @@ public class Player extends Entity {
         killCount++;
         getPackets().sendGameMessage(
                 "<col=ff0000>You have slayed " + killed.getDisplayName() + ", you have now " + killCount
-                + " kills. You receive 10 pk points.");
+                        + " kills. You receive 10 pk points.");
         pkPoints += 10;
     }
 
@@ -1366,6 +1373,14 @@ public class Player extends Entity {
     public void switchAllowChatEffects() {
         allowChatEffects = !allowChatEffects;
         refreshAllowChatEffects();
+    }
+
+    public int getChargeSpellDelay() {
+        return chargeSpellDelay;
+    }
+
+    public void setChargeSpellDelay(int chargeSpellDelay) {
+        this.chargeSpellDelay = chargeSpellDelay;
     }
 
     private void refreshAllowChatEffects() {
@@ -1616,7 +1631,7 @@ public class Player extends Entity {
             for (Integer playerIndex : playersIndexes) {
                 Player p = World.getPlayers().get(playerIndex);
                 if (p == null || !p.hasStarted() || p.hasFinished()
-                    || p.getLocalPlayerUpdate().getLocalPlayers()[getIndex()] == null) continue;
+                        || p.getLocalPlayerUpdate().getLocalPlayers()[getIndex()] == null) continue;
                 p.getPackets().sendPublicMessage(this, message);
             }
         }
@@ -1642,7 +1657,7 @@ public class Player extends Entity {
         if (cutscenesManager.hasCutscene()) return getMapRegionsIds().contains(tile.getRegionId());
         else {
             return tile.getPlane() == getPlane() && Math.abs(tile.getX() - getX()) <= 14
-                   && Math.abs(tile.getY() - getY()) <= 14;
+                    && Math.abs(tile.getY() - getY()) <= 14;
         }
     }
 
