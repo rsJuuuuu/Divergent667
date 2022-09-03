@@ -20,6 +20,7 @@ import com.rs.utils.Constants;
 import com.rs.utils.game.itemUtils.PriceUtils;
 import com.rs.utils.stringUtils.TimeUtils;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
@@ -272,6 +273,22 @@ public class Magic {
         GHORROCK(47, 96, 106, SpellType.ANCIENT_TELEPORT, new WorldTile(2977, 3873, 0), LAW_RUNE, 2, WATER_RUNE, 8),
         LOW_ALCHEMY(38, 35, 31, SpellType.MODERN_SPELL, FIRE_RUNE, 3, NATURE_RUNE, 1),
         HIGH_ALCHEMY(59, 55, 65, SpellType.MODERN_SPELL, FIRE_RUNE, 5, NATURE_RUNE, 1),
+        BONES_TO_BANANAS(33, 15, 25, SpellType.MODERN_SPELL, (player, spell) -> {
+            castBonesToX(player, BANANA);
+        }, EARTH_RUNE, 2, WATER_RUNE, 2, NATURE_RUNE, 1) {
+            @Override
+            public boolean checkRequirements(Player player) {
+                return super.checkRequirements(player) || checkBones(player);
+            }
+        },
+        BONES_TO_PEACHES(65, 60, 35.5, SpellType.MODERN_SPELL, (player, spell) -> {
+            castBonesToX(player, PEACH);
+        }, EARTH_RUNE, 4, WATER_RUNE, 4, NATURE_RUNE, 2) {
+            @Override
+            public boolean checkRequirements(Player player) {
+                return super.checkRequirements(player) || checkBones(player);
+            }
+        },
         VENGEANCE_OTHER(42, 93, 108, SpellType.LUNAR_USE_SPELL),
         VENGEANCE(37, 94, 112, SpellType.LUNAR_SPELL, Magic::castVeng),
         VENGEANCE_GROUP(74, 95, 120, SpellType.LUNAR_SPELL, Magic::castVeng),
@@ -504,11 +521,29 @@ public class Magic {
          * Execute the casting of this spell
          */
         public int process(Player player, PlayerCombat combat) {
-            if (!checkRequirements(player, this)) return -1;
+            if (!checkRequirements(player)) return -1;
             if (action != null) action.execute(player, this);
             if (type.action != null) type.action.execute(player, combat, this);
             deleteRunes(player, this);
             return type.getDelay(player);
+        }
+
+        /**
+         * May the player cast this spell?
+         */
+        public boolean checkRequirements(Player player) {
+            int[] runeData = getRuneData();
+            if (!RequirementsManager.hasRequirement(player, Skills.MAGIC, getLevel(), "to cast this spell."))
+                return false;
+            for (int i = 0; i < runeData.length - 1; i += 2) {
+                if (hasInfiniteRunes(runeData[i], player.getEquipment().getWeaponId(), player.getEquipment().getShieldId()))
+                    continue;
+                if (!player.getInventory().containsItem(runeData[i], runeData[i + 1])) {
+                    player.sendMessage("You don't have enough runes to cast this spell.");
+                    return false;
+                }
+            }
+            return true;
         }
 
         private static final HashMap<Integer, HashMap<Integer, Spell>> spells = new HashMap<>();
@@ -812,24 +847,6 @@ public class Magic {
     }
 
     /**
-     * May the player cast this spell?
-     */
-    private static boolean checkRequirements(Player player, Spell spell) {
-        int[] runeData = spell.getRuneData();
-        if (!RequirementsManager.hasRequirement(player, Skills.MAGIC, spell.getLevel(), "to cast this spell."))
-            return false;
-        for (int i = 0; i < runeData.length - 1; i += 2) {
-            if (hasInfiniteRunes(runeData[i], player.getEquipment().getWeaponId(), player.getEquipment().getShieldId()))
-                continue;
-            if (!player.getInventory().containsItem(runeData[i], runeData[i + 1])) {
-                player.sendMessage("You don't have enough runes to cast this spell.");
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * Remove the runes from players inventory
      */
     private static void deleteRunes(Player player, Spell spell) {
@@ -1020,6 +1037,24 @@ public class Magic {
             World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
     }
 
+    private static boolean checkBones(Player player) {
+        if (!player.getInventory().containsOneItem(BONES, BIG_BONES)) {
+            player.sendMessage("You aren't holding any bones!");
+            return false;
+        }
+        return true;
+    }
+
+    private static void castBonesToX(Player player, int toItem) {
+        player.setNextAnimation(new Animation(722));
+        player.setNextGraphics(new Graphics(141));
+        int bones = player.getInventory().numberOf(BONES);
+        int bigBones = player.getInventory().numberOf(BIG_BONES);
+        player.getInventory().deleteItem(BONES, bones);
+        player.getInventory().deleteItem(BIG_BONES, bigBones);
+        player.getInventory().addItem(toItem, bones + bigBones);
+    }
+
     /**
      * Check and apply modern (spellbook) drain spell
      *
@@ -1141,7 +1176,7 @@ public class Magic {
      */
     private static boolean checkCombatSpell(Player player, int spellId, int set, boolean delete) {
         Spell spell = Spell.forId(spellId, player.getCombatDefinitions().getSpellBook());
-        if (spell != null && checkRequirements(player, spell)) {
+        if (spell != null && spell.checkRequirements(player)) {
             if (set >= 0) {
                 if (set == 0) player.getCombatDefinitions().setAutoCastSpell(spellId);
                 else player.getTemporaryAttributes().put("tempCastSpell", spellId);
@@ -1224,7 +1259,7 @@ public class Magic {
     public static void handleMagicOnItem(Player player, int spellId, int itemId, int interfaceId) {
         Spell spell = Spell.forId(spellId, interfaceId);
         if (spell == null) return;
-        if (!checkRequirements(player, spell)) return;
+        if (!spell.checkRequirements(player)) return;
         switch (spell) {
             case HIGH_ALCHEMY:
                 alch(player, itemId, 0.6D);

@@ -170,6 +170,11 @@ public class Constants {
 
     public static final int ARMADYL_BATTLESTAFF = 21777;
 
+    public static final int BANANA = 1963;
+    public static final int PEACH = 6883;
+    public static final int BONES = 526;
+    public static final int BIG_BONES = 532;
+
     public enum BonusType {
         STAB_ATTACK(0, "Stab attack"),
         SLASH_ATTACK(1, "Slash attack"),
