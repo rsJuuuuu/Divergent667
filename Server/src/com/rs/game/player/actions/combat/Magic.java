@@ -278,7 +278,7 @@ public class Magic {
         }, EARTH_RUNE, 2, WATER_RUNE, 2, NATURE_RUNE, 1) {
             @Override
             public boolean checkRequirements(Player player) {
-                return super.checkRequirements(player) || checkBones(player);
+                return super.checkRequirements(player) && checkBones(player);
             }
         },
         BONES_TO_PEACHES(65, 60, 35.5, SpellType.MODERN_SPELL, (player, spell) -> {
@@ -286,7 +286,7 @@ public class Magic {
         }, EARTH_RUNE, 4, WATER_RUNE, 4, NATURE_RUNE, 2) {
             @Override
             public boolean checkRequirements(Player player) {
-                return super.checkRequirements(player) || checkBones(player);
+                return super.checkRequirements(player) && checkBones(player);
             }
         },
         VENGEANCE_OTHER(42, 93, 108, SpellType.LUNAR_USE_SPELL),
