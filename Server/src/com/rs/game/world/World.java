@@ -1156,9 +1156,9 @@ public final class World {
             }
         }
     }
-
     public static void sendProjectile(Entity shooter, WorldTile startTile, WorldTile receiver, int gfxId, int
             startHeight, int endHeight, int speed, int delay, int curve, int startDistanceOffset) {
+        // HERE
         for (int regionId : shooter.getMapRegionsIds()) {
             List<Integer> playersIndexes = getRegion(regionId).getPlayerIndexes();
             if (playersIndexes == null) continue;
@@ -1170,6 +1170,23 @@ public final class World {
                     continue;
                 player.getPackets().sendProjectile(null, startTile, receiver, gfxId, startHeight, endHeight, speed,
                         delay, curve, startDistanceOffset, 1);
+            }
+        }
+    }
+    public static void sendProjectile(Entity shooter, WorldTile startTile, WorldTile receiver, int gfxId, int
+            startHeight, int endHeight, int speed, int delay, int curve, int startDistanceOffset, int delayOnTarget) {
+        // HERE
+        for (int regionId : shooter.getMapRegionsIds()) {
+            List<Integer> playersIndexes = getRegion(regionId).getPlayerIndexes();
+            if (playersIndexes == null) continue;
+            for (Integer playerIndex : playersIndexes) {
+                Player player = players.get(playerIndex);
+                if (player == null || !player.hasStarted() || player.hasFinished() || (!player.withinDistance(shooter)
+                        && !player.withinDistance
+                        (receiver)))
+                    continue;
+                player.getPackets().sendProjectile(null, startTile, receiver, gfxId, startHeight, endHeight, speed,
+                        delay, curve, startDistanceOffset, 1, delayOnTarget);
             }
         }
     }
@@ -1194,11 +1211,11 @@ public final class World {
     public static void sendProjectile(Entity shooter, Entity receiver, Projectile projectile) {
         World.sendProjectile(shooter, receiver, projectile.getGfxId(), projectile.getStartHeight(), projectile
                 .getEndHeight(), projectile.getSpeed(), projectile.getDelay(), projectile.getCurve(), projectile
-                .getStartDistanceOffset());
+                .getStartDistanceOffset(), projectile.getDelayOnTarget());
     }
 
     public static void sendProjectile(Entity shooter, Entity receiver, int gfxId, int startHeight, int endHeight, int
-            speed, int delay, int curve, int startDistanceOffset) {
+            speed, int delay, int curve, int startDistanceOffset, int delayOnTarget) {
         for (int regionId : shooter.getMapRegionsIds()) {
             List<Integer> playersIndexes = getRegion(regionId).getPlayerIndexes();
             if (playersIndexes == null) continue;
@@ -1211,7 +1228,7 @@ public final class World {
                 int size = shooter.getSize();
                 player.getPackets().sendProjectile(receiver, new WorldTile(shooter.getCoordFaceX(size), shooter
                                 .getCoordFaceY(size), shooter.getPlane()), receiver, gfxId, startHeight, endHeight, speed,
-                        delay, curve, startDistanceOffset, size);
+                        delay, curve, startDistanceOffset, size, delayOnTarget);
             }
         }
     }

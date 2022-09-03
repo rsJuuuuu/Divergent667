@@ -128,9 +128,6 @@ public class PlayerCombat extends Action {
                     case 15704:
                         delay = 9;
                         break;
-                    default:
-                        delay = 6;
-                        break;
                 }
             }
         }

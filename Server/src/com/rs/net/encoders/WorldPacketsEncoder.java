@@ -54,7 +54,7 @@ public class WorldPacketsEncoder extends Encoder {
     public void setGe(int slot, int progress, int item, int price, int amount, int currentAmount) {
         player.getSession().write(new StaticPacketBuilder().setId(134).addByte((byte) slot).addByte((byte) progress)
                 .addShort(item).addInt(price).addInt(amount).addInt(currentAmount).addInt(
-                price * currentAmount).toStream());
+                        price * currentAmount).toStream());
     }
 
     public void sendItems(int key, ItemsContainer<Item> items) {
@@ -228,7 +228,7 @@ public class WorldPacketsEncoder extends Encoder {
     public void sendAccessMask(int set, int inter, int child, int off, int len) {
         StaticPacketBuilder packet = new StaticPacketBuilder().setId(113).addInt(set).addLEShort(len).addLEShort(off)
                 .addLEShortA(ID++).addLEInt(
-                inter << 16 | child);
+                        inter << 16 | child);
         player.getSession().write(packet.toStream());
     }
 
@@ -358,6 +358,12 @@ public class WorldPacketsEncoder extends Encoder {
     public void sendProjectile(Entity receiver, WorldTile startTile, WorldTile endTile, int gfxId, int startHeight,
                                int endHeight, int speed, int delay, int curve, int startDistanceOffset, int
                                        creatorSize) {
+        sendProjectile(receiver, startTile, endTile, gfxId, startHeight, endHeight, speed, delay, curve, startDistanceOffset, creatorSize, 0);
+    }
+
+    public void sendProjectile(Entity receiver, WorldTile startTile, WorldTile endTile, int gfxId, int startHeight,
+                               int endHeight, int speed, int delay, int curve, int startDistanceOffset, int
+                                       creatorSize, int delayOnTarget) {
         sendWorldTile(startTile);
         OutputStream stream = new OutputStream(17);
         stream.writePacket(62);
@@ -369,13 +375,13 @@ public class WorldPacketsEncoder extends Encoder {
         stream.writeByte(endTile.getX() - startTile.getX());
         stream.writeByte(endTile.getY() - startTile.getY());
         stream.writeShort(receiver == null ? 0 : (receiver instanceof Player ? -(receiver.getIndex() + 1) :
-                                                          receiver.getIndex() + 1));
+                receiver.getIndex() + 1));
         stream.writeShort(gfxId);
         stream.writeByte(startHeight);
         stream.writeByte(endHeight);
         stream.writeShort(delay);
         int duration = (Utils.getDistance(startTile.getX(), startTile.getY(), endTile.getX(), endTile.getY()) * 30 / (
-                Math.max((speed / 10), 1))) + delay;
+                Math.max((speed / 10), 1))) + delay + delayOnTarget;
         stream.writeShort(duration);
         stream.writeByte(curve);
         stream.writeShort(creatorSize * 64 + startDistanceOffset * 64);
@@ -801,7 +807,7 @@ public class WorldPacketsEncoder extends Encoder {
                     if (region instanceof DynamicRegion) { // generated map
                         DynamicRegion dynamicRegion = (DynamicRegion) region;
                         int[] regionCoords = dynamicRegion.getRegionCoords()[plane][thisRegionX - ((thisRegionX / 8)
-                                                                                                   * 8)][thisRegionY - (
+                                * 8)][thisRegionY - (
                                 (thisRegionY / 8) * 8)];
                         realRegionX = regionCoords[0];
                         realRegionY = regionCoords[1];
@@ -908,7 +914,7 @@ public class WorldPacketsEncoder extends Encoder {
             byte[] chatStr = new byte[250];
             chatStr[0] = (byte) message.getMessage().length();
             int offset = 1
-                         + Huffman.encryptMessage(1, message.getMessage().length(), chatStr, 0, message.getMessage()
+                    + Huffman.encryptMessage(1, message.getMessage().length(), chatStr, 0, message.getMessage()
                     .getBytes());
             stream.writeBytes(chatStr, 0, offset);
         }

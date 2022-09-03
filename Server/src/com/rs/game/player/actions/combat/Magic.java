@@ -44,8 +44,6 @@ public class Magic {
             SpellId 66 Config 39
         Flames of Zamorak
             SpellId 68 Config 43
-        Armadyl storm
-            SpellId 99 Config 145
      */
 
     public enum Spell {
@@ -110,6 +108,12 @@ public class Magic {
         VULNERABILITY(75, 66, 76, -1, 167, 169, Projectile.getDefaultMagicProjectile(168), 718, SpellType.MODERN_DRAIN_SPELL, EARTH_RUNE, 5, WATER_RUNE, 5, SOUL_RUNE, 1),
         ENFEEBLE(78, 73, 83, -1, 170, 172, Projectile.getDefaultMagicProjectile(171), 723, SpellType.MODERN_DRAIN_SPELL, EARTH_RUNE, 8, WATER_RUNE, 8, SOUL_RUNE, 1),
         STUN(82, 80, 90, -1, 173, 254, Projectile.getDefaultMagicProjectile(174), 729, SpellType.MODERN_DRAIN_SPELL, EARTH_RUNE, 12, WATER_RUNE, 12, SOUL_RUNE, 1),
+        /*
+         * God Spells
+         */
+        STORM_OF_ARMADYL(99, 77, 70, 160, 145, 457, -1,
+                new Projectile(1019, 0, 0, 2000, 50, 0, 0, 50),
+                10546, SpellType.STORM_OF_ARMADYL, ARMADYL_RUNE, 1),
         /*
             Ancients
          */
@@ -356,6 +360,21 @@ public class Magic {
             this.runeData = runeData;
         }
 
+        Spell(int spellId, int level, double xp, int damage, int autoCastConfigId, int castGfx, int hitGfx, Projectile projectile, int animationId,
+              SpellType type, int... runeData) {
+            this.uniqueAnimationId = animationId;
+            this.autoCastConfigId = autoCastConfigId;
+            this.spellId = spellId;
+            this.level = level;
+            this.xp = xp;
+            this.damage = damage;
+            this.castGfx = new Graphics(castGfx);
+            this.endGfx = new Graphics(hitGfx);
+            this.projectile = projectile;
+            this.type = type;
+            this.runeData = runeData;
+        }
+
         Spell(int spellId, int level, double xp, int damage, Graphics castGfx, Graphics hitGfx, Projectile
                 projectile, SpellType type, int... runeData) {
             this.spellId = spellId;
@@ -489,7 +508,7 @@ public class Magic {
             if (action != null) action.execute(player, this);
             if (type.action != null) type.action.execute(player, combat, this);
             deleteRunes(player, this);
-            return type.delay;
+            return type.getDelay(player);
         }
 
         private static final HashMap<Integer, HashMap<Integer, Spell>> spells = new HashMap<>();
@@ -535,6 +554,49 @@ public class Magic {
             }
         },
         BIND_SPELL(MODERN_SPELLBOOK, 5, 710, -1, Magic::castNormalCombatSpell, 2),
+        STORM_OF_ARMADYL(MODERN_SPELLBOOK, 5, 10546, -1, Magic::castNormalCombatSpell, 2) {
+            @Override
+            public int getDelay(Player player) {
+                // SOA cast is 2.4 seconds if wearing armadyl battlestaff, otherwise 3 seconds like normal spells
+                return player.getEquipment().getWeaponId() == Constants.ARMADYL_BATTLESTAFF ? 4 : 5;
+            }
+
+            @Override
+            public int applyPreHitEffects(Player player, PlayerCombat combat, int damage) {
+                // The max hit of SOA is 160 at 77 and increased by 5 for each level over 77 up to 270 at 99
+                // Furthermore, it has a minimum hit of (MAGIC_LVL - 77) * 5 up to 110 and at least 0
+                // Observe that adding this minimum to the base hit of 160 is the same as increasing the max
+                // Thus this pre hit effect is sufficient to complete the full formula. Note that is is also affected
+                // by the MAGIC_DAMAGE multiplier
+                double extraDamage = player.getCombatDefinitions().getBonuses()[MAGIC_DAMAGE.getId()];
+                int minimumHit = (int) ((Math.max((Math.min(player.getSkills().getLevel(Skills.MAGIC), 99) - 77), 0) * 5) * (1.0 + extraDamage / 100));
+                return damage + minimumHit;
+            }
+
+            @Override
+            public void applyPostHitEffects(Player player, PlayerCombat combat, int damage) {
+                // SOA Drains the targets defence by 1 whether it is successful or not
+                if (combat.getTarget() instanceof Player) {
+                    Player target = (Player) combat.getTarget();
+                    target.getSkills().drainLevel(Skills.DEFENCE, 1);
+                } else if (combat.getTarget() instanceof Npc) {
+                    Npc npc = (Npc) combat.getTarget();
+                    // Not sure about these, should figure out the correct attack formula to know what bonuses
+                    // To drain
+                    final BonusType[] bonuses = {RANGE_DEF, MAGIC_DEF, STAB_DEF, CRUSH_DEF, SLASH_DEF};
+                    int[] initialBonuses = NpcDataLoader.getBonuses(npc.getId());
+                    if (initialBonuses == null) {
+                        return;
+                    }
+                    for (Constants.BonusType bonus : bonuses) {
+                        if (initialBonuses[bonus.getId()] == 0) {
+                            continue;
+                        }
+                        npc.getBonuses()[bonus.getId()] = Math.max(npc.getBonuses()[bonus.getId()] - 1, 0);
+                    }
+                }
+            }
+        },
         BLITZ(ANCIENT_SPELLBOOK, 4, 1978, Magic::castNormalCombatSpell, 4),
         RUSH(ANCIENT_SPELLBOOK, 4, 1978, Magic::castNormalCombatSpell, 2),
         ANCIENT_MULTI(ANCIENT_SPELLBOOK, 4, 1979, Magic::castMultiTargetCombatSpell, 2),
@@ -624,11 +686,11 @@ public class Magic {
             return spellType;
         }
 
-        public int getHitDelay() {
+        public int getHitDelay(Player player) {
             return hitDelay;
         }
 
-        public int getDelay() {
+        public int getDelay(Player player) {
             return delay;
         }
 
@@ -788,7 +850,7 @@ public class Magic {
             player.setNextAnimation(new Animation(teleportType.getBaseAnimation()));
         if (teleportType.getBaseGfx() != null) player.setNextGraphics(teleportType.getBaseGfx());
         player.stopAll(true, true);
-        player.addStopDelay(teleportType.getDelay() + 3);
+        player.addStopDelay(teleportType.getDelay(player) + 3);
         WorldTasksManager.schedule(new WorldTask() {
             @Override
             public void run() {
@@ -800,7 +862,7 @@ public class Magic {
                 player.setNextFaceWorldTile(new WorldTile(toTile.getX(), toTile.getY() - 1, toTile.getPlane()));
                 player.setDirection(6);
             }
-        }, teleportType.getDelay());
+        }, teleportType.getDelay(player));
         return true;
     }
 
@@ -879,7 +941,7 @@ public class Magic {
         if (spell.type.getBaseGfx() != null) player.setNextGraphics(spell.type.getBaseGfx());
         if (spell.getXp() != 0) player.getSkills().addXp(Skills.MAGIC, spell.getXp());
         player.stopAll(true, true);
-        player.addStopDelay(spell.getType().getDelay() + 3);
+        player.addStopDelay(spell.getType().getDelay(player) + 3);
         WorldTasksManager.schedule(new WorldTask() {
             @Override
             public void run() {
@@ -893,7 +955,7 @@ public class Magic {
                         spell.getTargetTile().getY() - 1, spell.getTargetTile().getPlane()));
                 player.setDirection(6);
             }
-        }, spell.getType().getDelay());
+        }, spell.getType().getDelay(player));
     }
 
     /**
@@ -906,7 +968,7 @@ public class Magic {
         combat.setBaseMagicXp(spell.getXp());
         if (spell.getProjectile() != null && !spell.sendCustomProjectile(player, combat))
             World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
-        combat.delayMagicHit(spell.getType().getHitDelay(), combat.getMagicHit(player, spell.processPreHitEffects
+        combat.delayMagicHit(spell.getType().getHitDelay(player), combat.getMagicHit(player, spell.processPreHitEffects
                 (player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage()))));
     }
 
@@ -953,7 +1015,7 @@ public class Magic {
         combat.setMagicHitGfx(spell.getEndGfx());
         combat.setBaseMagicXp(spell.getXp());
 
-        combat.delayMagicHit(spell.getType().getHitDelay(), hit);
+        combat.delayMagicHit(spell.getType().getHitDelay(player), hit);
         if (spell.getProjectile() != null && !spell.sendCustomProjectile(player, combat))
             World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
     }
@@ -1034,7 +1096,7 @@ public class Magic {
                 if (spell.projectile != null && !spell.sendCustomProjectile(player, combat))
                     World.sendProjectile(player, combat.getTarget(), spell.getProjectile());
                 int damage = combat.getRandomMagicMaxHit(player, spell.getDamage());
-                combat.delayMagicHit(spell.getType().getHitDelay(), combat.getMagicHit(player, spell
+                combat.delayMagicHit(spell.getType().getHitDelay(player), combat.getMagicHit(player, spell
                         .processPreHitEffects(player, combat, combat.getRandomMagicMaxHit(player, spell.getDamage()))));
                 if (!nextTarget) {
                     if (damage == -1) return false;

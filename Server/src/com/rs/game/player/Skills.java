@@ -90,6 +90,13 @@ public final class Skills implements Serializable {
         refresh(skill);
     }
 
+    /**
+     * Drain the players skill by a given number of levels
+     *
+     * @param skill the skill to drain
+     * @param drain the number of levels to drain
+     * @return the overflow of levels left to drain
+     */
     public int drainLevel(int skill, int drain) {
         int drainLeft = drain - level[skill];
         if (drainLeft < 0) {
@@ -176,7 +183,7 @@ public final class Skills implements Serializable {
         if (player.isLockXp()) return;
         player.getControllerManager().trackXP(skill, (int) exp);
         if (skill != ATTACK && skill != DEFENCE && skill != STRENGTH && skill != MAGIC && skill != RANGE
-            && skill != HITPOINTS) exp *= Settings.SKILLING_XP_RATE;
+                && skill != HITPOINTS) exp *= Settings.SKILLING_XP_RATE;
         else exp *= Settings.COMBAT_XP_RATE;
 
         if (player.getAuraManager().usingWisdom()) exp *= 1.025;

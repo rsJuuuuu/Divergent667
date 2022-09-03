@@ -168,6 +168,8 @@ public class Constants {
     public static final int ARMADYL_RUNE = 21773;
     public static final int ELEMENTAL_RUNE = 12850;
 
+    public static final int ARMADYL_BATTLESTAFF = 21777;
+
     public enum BonusType {
         STAB_ATTACK(0, "Stab attack"),
         SLASH_ATTACK(1, "Slash attack"),

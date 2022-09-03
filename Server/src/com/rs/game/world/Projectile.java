@@ -12,6 +12,17 @@ public class Projectile {
     private final int curve;
     private final int startDistanceOffset;
 
+    private final int delayOnTarget;
+
+    /**
+     * @param gfxId               the id of the graphic to display on the projectile
+     * @param startHeight         starting height of the projectile
+     * @param endHeight           ending height of the projectile
+     * @param speed               the flying speed of the projectile
+     * @param delay               delay before showing the projectile
+     * @param curve               the curve of the projectile
+     * @param startDistanceOffset the offset from the source towards the target
+     */
     public Projectile(int gfxId, int startHeight, int endHeight, int speed, int delay, int curve, int
             startDistanceOffset) {
         this.gfxId = gfxId;
@@ -21,6 +32,29 @@ public class Projectile {
         this.delay = delay;
         this.curve = curve;
         this.startDistanceOffset = startDistanceOffset;
+        this.delayOnTarget = 0;
+    }
+
+    /**
+     * @param gfxId               the id of the graphic to display on the projectile
+     * @param startHeight         starting height of the projectile
+     * @param endHeight           ending height of the projectile
+     * @param speed               the flying speed of the projectile
+     * @param delay               delay before showing the projectile
+     * @param curve               the curve of the projectile
+     * @param startDistanceOffset the offset from the source towards the target
+     * @param delayOnTarget       the delay the projectile stays on the target after reaching it
+     */
+    public Projectile(int gfxId, int startHeight, int endHeight, int speed, int delay, int curve, int
+            startDistanceOffset, int delayOnTarget) {
+        this.gfxId = gfxId;
+        this.startHeight = startHeight;
+        this.endHeight = endHeight;
+        this.speed = speed;
+        this.delay = delay;
+        this.curve = curve;
+        this.startDistanceOffset = startDistanceOffset;
+        this.delayOnTarget = delayOnTarget;
     }
 
     int getGfxId() {
@@ -51,7 +85,11 @@ public class Projectile {
         return startDistanceOffset;
     }
 
-    public static Projectile getDefaultRangedProjectile(int gfxId){
+    int getDelayOnTarget() {
+        return delayOnTarget;
+    }
+
+    public static Projectile getDefaultRangedProjectile(int gfxId) {
         return new Projectile(gfxId, 41, 16, 25, 35, 16, 0);
     }
 
