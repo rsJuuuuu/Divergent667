@@ -12,6 +12,8 @@ import com.rs.game.npc.impl.summoning.Follower;
 import com.rs.game.player.Player;
 import com.rs.game.player.PlayerUtils;
 import com.rs.game.player.Skills;
+import com.rs.game.player.actions.smithing.Smelting;
+import com.rs.game.player.actions.smithing.Smithing;
 import com.rs.game.player.info.RequirementsManager;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
@@ -289,6 +291,7 @@ public class Magic {
                 return super.checkRequirements(player) && checkBones(player);
             }
         },
+        SUPERHEAT(50, 43, 53, SpellType.MODERN_SPELL, FIRE_RUNE, 4, NATURE_RUNE, 1),
         VENGEANCE_OTHER(42, 93, 108, SpellType.LUNAR_USE_SPELL),
         VENGEANCE(37, 94, 112, SpellType.LUNAR_SPELL, Magic::castVeng),
         VENGEANCE_GROUP(74, 95, 120, SpellType.LUNAR_SPELL, Magic::castVeng),
@@ -1253,6 +1256,30 @@ public class Magic {
         player.getInterfaceManager().sendMagicBook();
     }
 
+    private static boolean superheat(Player player, int itemId) {
+        Smelting.SmeltingBar bar = Smelting.SmeltingBar.getBarForSuperheatItem(player, itemId);
+        if (bar == null) {
+            player.sendMessage("You need to cast superheat item on ore.");
+            player.setNextGraphics(new Graphics(85));
+            return false;
+        }
+        if (!player.getInventory().containsItems(bar.getItemsRequired())) {
+            player.sendMessage("You do not have the required materials to smelt a " + bar.getProducedBar().getName() + ".");
+            return false;
+        }
+        if (!RequirementsManager.hasRequirement(player, Skills.SMITHING, bar.getLevelRequired(), "to smelt " + bar.getProducedBar().getDefinitions().getName()))
+            return false;
+        player.setNextAnimation(new Animation(725));
+        player.setNextGraphics(new Graphics(148));
+        for (Item required : bar.getItemsRequired()) {
+            player.getInventory().deleteItem(required.getId(),
+                    required.getAmount());
+        }
+        player.getSkills().addXp(Skills.SMITHING, bar.getExperience());
+        player.getInventory().addItem(bar.getProducedBar());
+        return true;
+    }
+
     /**
      * Handles using a spell on an item
      */
@@ -1266,6 +1293,11 @@ public class Magic {
                 break;
             case LOW_ALCHEMY:
                 alch(player, itemId, 0.3);
+                break;
+            case SUPERHEAT:
+                if (!superheat(player, itemId)) {
+                    return;
+                }
                 break;
             default:
                 return;

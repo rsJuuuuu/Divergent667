@@ -12,229 +12,251 @@ import com.rs.utils.Utils;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.rs.utils.Constants.COAL;
+import static com.rs.utils.Constants.IRON_ORE;
+
 public class Smelting extends Action {
 
-	public enum SmeltingBar {
+    public enum SmeltingBar {
 
-		BRONZE(1, 6.2, new Item[] { new Item(436), new Item(438) }, new Item(
-				2349), 0),
+        BRONZE(1, 6.2, new Item[]{new Item(436), new Item(438)}, new Item(
+                2349), 0),
 
-		BLURITE(8, 8.0, new Item[] { new Item(668) }, new Item(9467), 1),
+        BLURITE(8, 8.0, new Item[]{new Item(668)}, new Item(9467), 1),
 
-		IRON(15, 12.5, new Item[] { new Item(440) }, new Item(2351), 2),
+        IRON(15, 12.5, new Item[]{new Item(440)}, new Item(2351), 2),
 
-		SILVER(20, 13.7, new Item[] { new Item(442) }, new Item(2355), 3),
+        SILVER(20, 13.7, new Item[]{new Item(442)}, new Item(2355), 3),
 
-		STEEL(30, 17.5, new Item[] { new Item(440), new Item(453, 2) },
-				new Item(2353), 4),
+        STEEL(30, 17.5, new Item[]{new Item(440), new Item(453, 2)},
+                new Item(2353), 4),
 
-		GOLD(40, 22.5, new Item[] { new Item(444) }, new Item(2357), 5),
+        GOLD(40, 22.5, new Item[]{new Item(444)}, new Item(2357), 5),
 
-		MITHRIL(50, 30, new Item[]{new Item(447), new Item(453, 4)},
-				new Item(2359), 6),
+        MITHRIL(50, 30, new Item[]{new Item(447), new Item(453, 4)},
+                new Item(2359), 6),
 
-		ADAMANT(70, 37.5, new Item[]{new Item(449), new Item(453, 6)},
-				new Item(2361), 7),
+        ADAMANT(70, 37.5, new Item[]{new Item(449), new Item(453, 6)},
+                new Item(2361), 7),
 
-		RUNE(85, 50, new Item[]{new Item(451), new Item(453, 8)}, new Item(
-				2363), 8),
+        RUNE(85, 50, new Item[]{new Item(451), new Item(453, 8)}, new Item(
+                2363), 8),
 
-		DRAGONBANE(80, 50, new Item[]{new Item(21779)}, new Item(21783, 1),
-				9),
+        DRAGONBANE(80, 50, new Item[]{new Item(21779)}, new Item(21783, 1),
+                9),
 
-		WALLASALKIBANE(80, 50, new Item[]{new Item(21780)}, new Item(21784,
-				1), 10),
+        WALLASALKIBANE(80, 50, new Item[]{new Item(21780)}, new Item(21784,
+                1), 10),
 
-		BASILISKBANE(80, 50, new Item[]{new Item(21781)},
-				new Item(21785, 1), 11), ABYSSSALBANE(80, 50,
-				new Item[]{new Item(21782)}, new Item(21786, 1), 11);
+        BASILISKBANE(80, 50, new Item[]{new Item(21781)},
+                new Item(21785, 1), 11), ABYSSSALBANE(80, 50,
+                new Item[]{new Item(21782)}, new Item(21786, 1), 11);
 
-		private static final Map<Integer, SmeltingBar> bars = new HashMap<>();
+        private static final Map<Integer, SmeltingBar> bars = new HashMap<>();
 
-		public static SmeltingBar forId(int buttonId) {
-			return bars.get(buttonId);
-		}
+        public static SmeltingBar forId(int buttonId) {
+            return bars.get(buttonId);
+        }
 
-		static {
-			for (SmeltingBar bar : SmeltingBar.values()) {
-				bars.put(bar.getButtonId(), bar);
-			}
-		}
+        private static final Map<Integer, SmeltingBar> barsForOre = new HashMap<>();
 
-		private final int levelRequired;
-		private final double experience;
-		private final Item[] itemsRequired;
-		private final int buttonId;
-		private final Item producedBar;
+        public static SmeltingBar getBarForSuperheatItem(Player player, int itemId) {
+            if (itemId == IRON_ORE) { // Iron defaults to steel if coal is present
+                if (player.getInventory().containsItem(COAL, 2)) {
+                    return STEEL;
+                } else {
+                    return IRON;
+                }
+            }
+            return barsForOre.get(itemId);
+        }
 
-		SmeltingBar(int levelRequired, double experience,
-					Item[] itemsRequired, Item producedBar, int buttonId) {
-			this.levelRequired = levelRequired;
-			this.experience = experience;
-			this.itemsRequired = itemsRequired;
-			this.producedBar = producedBar;
-			this.buttonId = buttonId;
-		}
+        static {
+            for (SmeltingBar bar : SmeltingBar.values()) {
+                bars.put(bar.getButtonId(), bar);
+                for (Item item : bar.getItemsRequired()) {
+                    // Store for superheat
+                    barsForOre.put(item.getId(), bar);
+                }
+                // Superheat on coal does nothing
+                barsForOre.remove(COAL);
+            }
+        }
 
-		public Item[] getItemsRequired() {
-			return itemsRequired;
-		}
+        private final int levelRequired;
+        private final double experience;
+        private final Item[] itemsRequired;
+        private final int buttonId;
+        private final Item producedBar;
 
-		public int getLevelRequired() {
-			return levelRequired;
-		}
+        SmeltingBar(int levelRequired, double experience,
+                    Item[] itemsRequired, Item producedBar, int buttonId) {
+            this.levelRequired = levelRequired;
+            this.experience = experience;
+            this.itemsRequired = itemsRequired;
+            this.producedBar = producedBar;
+            this.buttonId = buttonId;
+        }
 
-		public Item getProducedBar() {
-			return producedBar;
-		}
+        public Item[] getItemsRequired() {
+            return itemsRequired;
+        }
 
-		public double getExperience() {
-			return experience;
-		}
+        public int getLevelRequired() {
+            return levelRequired;
+        }
 
-		public int getButtonId() {
-			return buttonId;
-		}
-	}
+        public Item getProducedBar() {
+            return producedBar;
+        }
 
-	public SmeltingBar bar;
-	public WorldObject object;
-	public int ticks;
+        public double getExperience() {
+            return experience;
+        }
 
-	public Smelting(int slotId, WorldObject object, int ticks) {
-		this.object = object;
-		this.bar = SmeltingBar.forId(slotId);
-		this.ticks = ticks;
-	}
+        public int getButtonId() {
+            return buttonId;
+        }
+    }
 
-	@Override
-	public boolean start(Player player) {
-		if (bar == null || player == null || object == null) {
-			return false;
-		}
-		if (!player.getInventory().containsItem(
-				bar.getItemsRequired()[0].getId(),
-				bar.getItemsRequired()[0].getAmount())) {
-			player.getDialogueManager().startDialogue(
-					"SimpleMessage",
-					"You need "
-							+ bar.getItemsRequired()[0].getDefinitions()
-									.getName() + " to create a "
-							+ bar.getProducedBar().getDefinitions().getName()
-							+ ".");
-			return false;
-		}
-		if (bar.getItemsRequired().length > 1) {
-			if (!player.getInventory().containsItem(
-					bar.getItemsRequired()[1].getId(),
-					bar.getItemsRequired()[1].getAmount())) {
-				player.getDialogueManager().startDialogue(
-						"SimpleMessage",
-						"You need "
-								+ bar.getItemsRequired()[1].getDefinitions()
-										.getName()
-								+ " to create a "
-								+ bar.getProducedBar().getDefinitions()
-										.getName() + ".");
-				return false;
-			}
-		}
-		if (player.getSkills().getLevel(Skills.SMITHING) < bar
-				.getLevelRequired()) {
-			player.getDialogueManager().startDialogue(
-					"SimpleMessage",
-					"You need a Smithing level of at least "
-							+ bar.getLevelRequired() + " to smelt "
-							+ bar.getProducedBar().getDefinitions().getName());
-			return false;
-		}
-		player.getPackets().sendGameMessage(
-				"You place the required ores and attempt to create a bar of "
-						+ bar.getProducedBar().getDefinitions().getName()
-								.toLowerCase().replace(" bar", "") + ".", true);
-		return true;
-	}
+    public SmeltingBar bar;
+    public WorldObject object;
+    public int ticks;
 
-	@Override
-	public boolean process(Player player) {
-		if (bar == null || player == null || object == null) {
-			return false;
-		}
-		if (!player.getInventory().containsItem(
-				bar.getItemsRequired()[0].getId(),
-				bar.getItemsRequired()[0].getAmount())) {
-			player.getDialogueManager().startDialogue(
-					"SimpleMessage",
-					"You need "
-							+ bar.getItemsRequired()[0].getDefinitions()
-									.getName() + " to create a "
-							+ bar.getProducedBar().getDefinitions().getName()
-							+ ".");
-			return false;
-		}
-		if (bar.getItemsRequired().length > 1) {
-			if (!player.getInventory().containsItem(
-					bar.getItemsRequired()[1].getId(),
-					bar.getItemsRequired()[1].getAmount())) {
-				player.getDialogueManager().startDialogue(
-						"SimpleMessage",
-						"You need "
-								+ bar.getItemsRequired()[1].getDefinitions()
-										.getName()
-								+ " to create a "
-								+ bar.getProducedBar().getDefinitions()
-										.getName() + ".");
-				return false;
-			}
-		}
-		if (player.getSkills().getLevel(Skills.SMITHING) < bar
-				.getLevelRequired()) {
-			player.getDialogueManager().startDialogue(
-					"SimpleMessage",
-					"You need a Smithing level of at least "
-							+ bar.getLevelRequired() + " to smelt "
-							+ bar.getProducedBar().getDefinitions().getName());
-			return false;
-		}
-		player.faceObject(object);
-		return true;
-	}
+    public Smelting(int slotId, WorldObject object, int ticks) {
+        this.object = object;
+        this.bar = SmeltingBar.forId(slotId);
+        this.ticks = ticks;
+    }
 
-	public boolean isSuccessFull(Player player) {
-		if (bar == SmeltingBar.IRON) {
+    @Override
+    public boolean start(Player player) {
+        if (bar == null || player == null || object == null) {
+            return false;
+        }
+        if (!player.getInventory().containsItem(
+                bar.getItemsRequired()[0].getId(),
+                bar.getItemsRequired()[0].getAmount())) {
+            player.getDialogueManager().startDialogue(
+                    "SimpleMessage",
+                    "You need "
+                            + bar.getItemsRequired()[0].getDefinitions()
+                            .getName() + " to create a "
+                            + bar.getProducedBar().getDefinitions().getName()
+                            + ".");
+            return false;
+        }
+        if (bar.getItemsRequired().length > 1) {
+            if (!player.getInventory().containsItem(
+                    bar.getItemsRequired()[1].getId(),
+                    bar.getItemsRequired()[1].getAmount())) {
+                player.getDialogueManager().startDialogue(
+                        "SimpleMessage",
+                        "You need "
+                                + bar.getItemsRequired()[1].getDefinitions()
+                                .getName()
+                                + " to create a "
+                                + bar.getProducedBar().getDefinitions()
+                                .getName() + ".");
+                return false;
+            }
+        }
+        if (player.getSkills().getLevel(Skills.SMITHING) < bar
+                .getLevelRequired()) {
+            player.getDialogueManager().startDialogue(
+                    "SimpleMessage",
+                    "You need a Smithing level of at least "
+                            + bar.getLevelRequired() + " to smelt "
+                            + bar.getProducedBar().getDefinitions().getName());
+            return false;
+        }
+        player.getPackets().sendGameMessage(
+                "You place the required ores and attempt to create a bar of "
+                        + bar.getProducedBar().getDefinitions().getName()
+                        .toLowerCase().replace(" bar", "") + ".", true);
+        return true;
+    }
+
+    @Override
+    public boolean process(Player player) {
+        if (bar == null || player == null || object == null) {
+            return false;
+        }
+        if (!player.getInventory().containsItem(
+                bar.getItemsRequired()[0].getId(),
+                bar.getItemsRequired()[0].getAmount())) {
+            player.getDialogueManager().startDialogue(
+                    "SimpleMessage",
+                    "You need "
+                            + bar.getItemsRequired()[0].getDefinitions()
+                            .getName() + " to create a "
+                            + bar.getProducedBar().getDefinitions().getName()
+                            + ".");
+            return false;
+        }
+        if (bar.getItemsRequired().length > 1) {
+            if (!player.getInventory().containsItem(
+                    bar.getItemsRequired()[1].getId(),
+                    bar.getItemsRequired()[1].getAmount())) {
+                player.getDialogueManager().startDialogue(
+                        "SimpleMessage",
+                        "You need "
+                                + bar.getItemsRequired()[1].getDefinitions()
+                                .getName()
+                                + " to create a "
+                                + bar.getProducedBar().getDefinitions()
+                                .getName() + ".");
+                return false;
+            }
+        }
+        if (player.getSkills().getLevel(Skills.SMITHING) < bar
+                .getLevelRequired()) {
+            player.getDialogueManager().startDialogue(
+                    "SimpleMessage",
+                    "You need a Smithing level of at least "
+                            + bar.getLevelRequired() + " to smelt "
+                            + bar.getProducedBar().getDefinitions().getName());
+            return false;
+        }
+        player.faceObject(object);
+        return true;
+    }
+
+    public boolean ifSuccessful(Player player) {
+        if (bar == SmeltingBar.IRON) {
             return player.getEquipment().getItem(Equipment.SLOT_RING) != null && player.getEquipment().getItem(Equipment.SLOT_RING).getId() == 2568 || Utils.getRandom(100) <= (player.getSkills().getLevel(Skills.SMITHING) >= 45 ? 80 : 50);
         }
-		return true;
-	}
+        return true;
+    }
 
-	@Override
-	public int processWithDelay(Player player) {
-		ticks--;
-		player.setNextAnimation(new Animation(3243));
-		player.getSkills().addXp(Skills.SMITHING, bar.getExperience());
-		for (Item required : bar.getItemsRequired()) {
-			player.getInventory().deleteItem(required.getId(),
-					required.getAmount());
-		}
-		if (isSuccessFull(player)) {
-			player.getInventory().addItem(bar.getProducedBar());
-			player.getPackets().sendGameMessage(
-					"You retrieve a bar of "
-							+ bar.getProducedBar().getDefinitions().getName()
-									.toLowerCase().replace(" bar", "") + ".",
-					true);
-		} else {
-			player.getPackets().sendGameMessage(
-					"The ore is too impure and you fail to refine it.", true);
-		}
-		if (ticks > 0) {
-			return 1;
-		}
-		return -1;
-	}
+    @Override
+    public int processWithDelay(Player player) {
+        ticks--;
+        player.setNextAnimation(new Animation(3243));
+        player.getSkills().addXp(Skills.SMITHING, bar.getExperience());
+        for (Item required : bar.getItemsRequired()) {
+            player.getInventory().deleteItem(required.getId(),
+                    required.getAmount());
+        }
+        if (ifSuccessful(player)) {
+            player.getInventory().addItem(bar.getProducedBar());
+            player.getPackets().sendGameMessage(
+                    "You retrieve a bar of "
+                            + bar.getProducedBar().getDefinitions().getName()
+                            .toLowerCase().replace(" bar", "") + ".",
+                    true);
+        } else {
+            player.getPackets().sendGameMessage(
+                    "The ore is too impure and you fail to refine it.", true);
+        }
+        if (ticks > 0) {
+            return 1;
+        }
+        return -1;
+    }
 
-	@Override
-	public void stop(Player player) {
-		this.setActionDelay(player, 3);
-	}
+    @Override
+    public void stop(Player player) {
+        this.setActionDelay(player, 3);
+    }
 }
