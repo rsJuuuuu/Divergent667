@@ -117,6 +117,17 @@ public class Magic {
         STORM_OF_ARMADYL(99, 77, 70, 160, 145, 457, -1,
                 new Projectile(1019, 0, 0, 2000, 50, 0, 0, 50),
                 10546, SpellType.STORM_OF_ARMADYL, ARMADYL_RUNE, 1),
+        IBAN_BLAST(54, 50, 30, 250, 45, 87, 89, Projectile.getDefaultMagicProjectile(88), 708, SpellType.MODERN_FIRE_SPELL, FIRE_RUNE, 5, DEATH_RUNE, 1) {
+            @Override
+            public boolean checkRequirements(Player player) {
+                if (player.getEquipment().getWeaponId() != IBANS_STAFF) {
+                    player.sendMessage("You need to equip Iban's staff to cast Iban Blast.");
+                    return false;
+                }
+                return super.checkRequirements(player);
+            }
+        },
+        // UNDEAD AUTOCAST 35, SLAYER DART 37 CLAW OF GUTHIX 39 SS 41 Flames 43
         /*
             Ancients
          */

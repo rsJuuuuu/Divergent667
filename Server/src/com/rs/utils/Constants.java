@@ -178,6 +178,8 @@ public class Constants {
     public static final int COAL = 453;
     public static final int IRON_ORE = 440;
 
+    public static final int IBANS_STAFF = 1409;
+
     public enum BonusType {
         STAB_ATTACK(0, "Stab attack"),
         SLASH_ATTACK(1, "Slash attack"),
