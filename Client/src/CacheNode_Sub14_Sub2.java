@@ -51,19 +51,19 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14
 	
 	static final void method2353(byte b, BufferedStream buffer) {
 		anInt11031++;
-		if ((buffer.buffer.length - buffer.offset ^ 0xffffffff) <= -2) {
+		if (buffer.buffer.length - buffer.offset >= 1) {
 			int i = buffer.readUnsignedByte();
-			if (i >= 0 && (i ^ 0xffffffff) >= -2) {
+			if (i >= 0 && i <= 1) {
 				if (b > -21) {
 					method2354(null, -121, true, -60, -117, 43, false);
 				}
-				if ((buffer.buffer.length + -buffer.offset ^ 0xffffffff) <= -3) {
+				if (buffer.buffer.length + -buffer.offset >= 2) {
 					int i_2_ = buffer.readUnsignedShort();
-					if ((6 * i_2_ ^ 0xffffffff) >= (buffer.buffer.length - buffer.offset ^ 0xffffffff)) {
-						for (int i_3_ = 0; (i_2_ ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+					if (buffer.buffer.length - buffer.offset >= 6 * i_2_) {
+						for (int i_3_ = 0; i_3_ < i_2_; i_3_++) {
 							int i_4_ = buffer.readUnsignedShort();
 							int i_5_ = buffer.readInt();
-							if ((i_4_ ^ 0xffffffff) > (Class320_Sub22.anIntArray8417.length ^ 0xffffffff) && FileOnDisk.aBooleanArray1332[i_4_] && ((Node_Sub53.aClass176_7667.method1805(i_4_, -4409).aChar3210 ^ 0xffffffff) != -50 || i_5_ >= -1 && (i_5_ ^ 0xffffffff) >= -2)) {
+							if (Class320_Sub22.anIntArray8417.length > i_4_ && FileOnDisk.aBooleanArray1332[i_4_] && (Node_Sub53.aClass176_7667.method1805(i_4_, -4409).aChar3210 != 49 || i_5_ >= -1 && i_5_ <= 1)) {
 								Class320_Sub22.anIntArray8417[i_4_] = i_5_;
 							}
 						}
@@ -75,7 +75,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14
 	
 	static final void method2354(Index class302, int i, boolean bool, int i_6_, int i_7_, int i_8_, boolean bool_9_) {
 		anInt11036++;
-		if ((i_8_ ^ 0xffffffff) >= -1) {
+		if (i_8_ <= 0) {
 			Class339_Sub8.method3946(i_7_, i_6_, i, class302, bool, 23732);
 		} else {
 			Class17.anInt282 = i;
@@ -86,7 +86,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14
 			CacheNode_Sub6.anInt9485 = i_7_;
 			Class101.anInt1306 = i_6_;
 			Class107.anInt1362 = Class307.aNode_Sub9_Sub1_3902.method2471(15) / i_8_;
-			if ((Class107.anInt1362 ^ 0xffffffff) > -2) {
+			if (Class107.anInt1362 < 1) {
 				Class107.anInt1362 = 1;
 			}
 		}
@@ -131,25 +131,23 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14
 				i_20_ = graphicstoolkit.c(i_20_, drawablemodel_21_.ua());
 			}
 			int i_22_;
-			if (i_15_ != 1) {
-				if ((i_15_ ^ 0xffffffff) == -3) {
-					i_22_ = 12;
-				} else if ((i_15_ ^ 0xffffffff) == -4) {
-					i_22_ = 15;
-				} else if (i_15_ != 4) {
-					i_22_ = 21;
-				} else {
-					i_22_ = 18;
-				}
-			} else {
+			if (i_15_ == 1) {
 				i_22_ = 9;
-			}
-			int i_23_ = 3;
+			} else if (i_15_ == 2) {
+                i_22_ = 12;
+            } else if (i_15_ == 3) {
+                i_22_ = 15;
+            } else if (i_15_ == 4) {
+                i_22_ = 18;
+            } else {
+                i_22_ = 21;
+            }
+            int i_23_ = 3;
 			int[] is = { 64, 96, 128 };
 			Model model = new Model(1 - -(i_23_ * i_22_), -i_22_ + i_22_ * (i_23_ * 2), 0);
 			int i_24_ = model.method2079(-112, 0, 0, 0);
 			int[][] is_25_ = new int[i_23_][i_22_];
-			for (int i_26_ = 0; (i_26_ ^ 0xffffffff) > (i_23_ ^ 0xffffffff); i_26_++) {
+			for (int i_26_ = 0; i_23_ > i_26_; i_26_++) {
 				int i_27_ = is[i_26_];
 				int i_28_ = is[i_26_];
 				for (int i_29_ = 0; i_29_ < i_22_; i_29_++) {
@@ -159,7 +157,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14
 					is_25_[i_26_][i_29_] = model.method2079(-118, i_32_, 0, i_31_);
 				}
 			}
-			for (int i_33_ = 0; (i_23_ ^ 0xffffffff) < (i_33_ ^ 0xffffffff); i_33_++) {
+			for (int i_33_ = 0; i_33_ < i_23_; i_33_++) {
 				int i_34_ = (i_33_ * 256 - -128) / i_23_;
 				int i_35_ = 256 - i_34_;
 				byte b = (byte) (i * i_34_ + i_16_ * i_35_ >> 8);
@@ -182,17 +180,17 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14
 		int i_38_ = drawablemodel.RA();
 		int i_39_ = drawablemodel.HA();
 		int i_40_ = drawablemodel.G();
-		if (animator != null) {
+		if (animator == null) {
+			drawablemodel_21_ = drawablemodel_21_.method633((byte) 3, i_20_, true);
+			drawablemodel_21_.O(-i_37_ + i_38_ >> 1, 128, i_40_ + -i_39_ >> 1);
+			drawablemodel_21_.H(i_38_ + i_37_ >> 1, 0, i_40_ + i_39_ >> 1);
+		} else {
 			drawablemodel_21_ = drawablemodel_21_.method633((byte) 3, i_20_, true);
 			drawablemodel_21_.O(i_38_ + -i_37_ >> 1, 128, -i_39_ + i_40_ >> 1);
 			drawablemodel_21_.H(i_38_ + i_37_ >> 1, 0, i_39_ + i_40_ >> 1);
 			animator.method241(drawablemodel_21_, 0);
-		} else {
-			drawablemodel_21_ = drawablemodel_21_.method633((byte) 3, i_20_, true);
-			drawablemodel_21_.O(-i_37_ + i_38_ >> 1, 128, i_40_ + -i_39_ >> 1);
-			drawablemodel_21_.H(i_38_ + i_37_ >> 1, 0, i_40_ + i_39_ >> 1);
 		}
-		if ((i_17_ ^ 0xffffffff) != -1) {
+        if (i_17_ != 0) {
 			drawablemodel_21_.FA(i_17_);
 		}
 		if (i_12_ != 0) {

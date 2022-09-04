@@ -9,7 +9,7 @@ public class NativeBuffer implements Buffer, Source
 	private long b;
 	
 	public void a(byte[] bs, int i, int i_0_, int i_1_) {
-		if ((i_0_ ^ 0xffffffff) > -1 | (bs == null | b == 0L | (i ^ 0xffffffff) > -1 | (bs.length ^ 0xffffffff) > (i + i_1_ ^ 0xffffffff)) | i_0_ - -i_1_ > a) {
+		if (i_0_ < 0 | (bs == null | b == 0L | i < 0 | i + i_1_ > bs.length) | i_0_ - -i_1_ > a) {
 			throw new RuntimeException();
 		}
 		put(b, bs, i, i_0_, i_1_);

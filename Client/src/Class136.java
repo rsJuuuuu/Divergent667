@@ -30,7 +30,9 @@ public class Class136
 		if (class372 == Class372.aClass372_4592) {
 			return 5122;
 		}
-		if (class372 != Class372.aClass372_4593) {
+		if (class372 == Class372.aClass372_4593) {
+			return 5124;
+		} else {
 			if (Class372.aClass372_4594 == class372) {
 				return 5121;
 			}
@@ -46,8 +48,6 @@ public class Class136
 			if (Class372.aClass372_4598 == class372) {
 				return 5126;
 			}
-		} else {
-			return 5124;
 		}
 		throw new IllegalArgumentException("");
 	}
@@ -87,12 +87,12 @@ public class Class136
 			class169_sub2 = new Class169_Sub2(aGLToolkit1696, 3553, 34842, i_0_, i_0_, class91.aByte1207 != 0, fs, 6408);
 		} else {
 			int[] is;
-			if ((class91.anInt1226 ^ 0xffffffff) != -3 && Class377_Sub1.method4129((byte) 83, class91.aByte1214)) {
+			if (class91.anInt1226 != 2 && Class377_Sub1.method4129((byte) 83, class91.aByte1214)) {
 				is = aD1698.method11(i_0_, true, i_0_, i, (byte) 0, 0.7F);
 			} else {
 				is = aD1698.method8(0.7F, i, i_0_, false, false, i_0_);
 			}
-			class169_sub2 = new Class169_Sub2(aGLToolkit1696, 3553, 6408, i_0_, i_0_, (class91.aByte1207 ^ 0xffffffff) != -1, is, 0, 0, false);
+			class169_sub2 = new Class169_Sub2(aGLToolkit1696, 3553, 6408, i_0_, i_0_, class91.aByte1207 != 0, is, 0, 0, false);
 		}
 		class169_sub2.method1776(class91.aBoolean1212, -100, class91.aBoolean1210);
 		aClass61_1699.method601(class169_sub2, 25566, (long) i);

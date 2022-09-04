@@ -23,7 +23,7 @@ public class Class320_Sub24 extends Class320
 	}
 	
 	final void method3673(byte b) {
-		if (anInt4064 != 1 && (anInt4064 ^ 0xffffffff) != -1) {
+		if (anInt4064 != 1 && anInt4064 != 0) {
 			anInt4064 = method3677(0);
 		}
 		anInt8437++;
@@ -79,19 +79,19 @@ public class Class320_Sub24 extends Class320
 			for (CacheNode_Sub12 cachenode_sub12 = (CacheNode_Sub12) Class270.aClass312_3477.method3613(65280); cachenode_sub12 != null; cachenode_sub12 = (CacheNode_Sub12) Class270.aClass312_3477.method3620(16776960)) {
 				Mobile_Sub1 mobile_sub1 = cachenode_sub12.aMobile_Sub1_9554;
 				if (Class174.clientCycle <= mobile_sub1.anInt10923) {
-					if ((Class174.clientCycle ^ 0xffffffff) <= (mobile_sub1.anInt10958 ^ 0xffffffff)) {
+					if (mobile_sub1.anInt10958 <= Class174.clientCycle) {
 						mobile_sub1.method898(false);
-						if ((mobile_sub1.anInt10942 ^ 0xffffffff) < -1) {
-							if ((aa.anInt101 ^ 0xffffffff) == -4) {
+						if (mobile_sub1.anInt10942 > 0) {
+							if (aa.anInt101 == 3) {
 								Actor actor = Class121.aClass206Array1529[mobile_sub1.anInt10942 - 1].method2037(-102);
-								if (actor != null && (actor.anInt5934 ^ 0xffffffff) <= -1 && actor.anInt5934 < Node_Sub54.GAME_SCENE_WDITH * 512 && actor.anInt5940 >= 0 && (actor.anInt5940 ^ 0xffffffff) > (512 * Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff)) {
+								if (actor != null && actor.anInt5934 >= 0 && actor.anInt5934 < Node_Sub54.GAME_SCENE_WDITH * 512 && actor.anInt5940 >= 0 && 512 * Class377_Sub1.GAME_SCENE_HEIGHT > actor.anInt5940) {
 									mobile_sub1.method895(Node_Sub38_Sub7.method2809(mobile_sub1.plane, -29754, actor.anInt5940, actor.anInt5934) + -mobile_sub1.anInt10938, false, Class174.clientCycle, actor.anInt5940, actor.anInt5934);
 								}
 							} else {
 								Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) (-1 + mobile_sub1.anInt10942));
 								if (node_sub41 != null) {
 									Npc npc = node_sub41.aNpc7518;
-									if (npc.anInt5934 >= 0 && npc.anInt5934 < Node_Sub54.GAME_SCENE_WDITH * 512 && npc.anInt5940 >= 0 && (npc.anInt5940 ^ 0xffffffff) > (512 * Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff)) {
+									if (npc.anInt5934 >= 0 && npc.anInt5934 < Node_Sub54.GAME_SCENE_WDITH * 512 && npc.anInt5940 >= 0 && 512 * Class377_Sub1.GAME_SCENE_HEIGHT > npc.anInt5940) {
 										mobile_sub1.method895(Node_Sub38_Sub7.method2809(mobile_sub1.plane, -29754, npc.anInt5940, npc.anInt5934) - mobile_sub1.anInt10938, false, Class174.clientCycle, npc.anInt5940, npc.anInt5934);
 									}
 								}

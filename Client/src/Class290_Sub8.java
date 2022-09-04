@@ -57,14 +57,14 @@ public class Class290_Sub8 extends Class290
 			anIDirect3DVertexShader8143 = aD3DToolkit8147.anIDirect3DDevice9199.b(class302.method3529("dx", "uw_ground_lit", 1));
 			anIDirect3DVertexShader8146 = aD3DToolkit8147.anIDirect3DDevice9199.b(class302.method3529("dx", "uw_model_unlit", 1));
 			anIDirect3DVertexShader8137 = aD3DToolkit8147.anIDirect3DDevice9199.b(class302.method3529("dx", "uw_model_lit", 1));
-			if (!(anIDirect3DVertexShader8137 != null & (anIDirect3DVertexShader8146 != null & (anIDirect3DVertexShader8143 != null & anIDirect3DVertexShader8142 != null)))) {
-				aBoolean8141 = false;
-			} else {
+			if (anIDirect3DVertexShader8137 != null & (anIDirect3DVertexShader8146 != null & (anIDirect3DVertexShader8143 != null & anIDirect3DVertexShader8142 != null))) {
 				anInterface13_Impl1_8139 = anAbstractToolkit3654.method1258(false, 1, true, 2, new int[] { 0, -1 });
 				anInterface13_Impl1_8139.method51(false, false, false);
 				aBoolean8141 = true;
+			} else {
+				aBoolean8141 = false;
 			}
-		} else {
+        } else {
 			aBoolean8141 = false;
 		}
 	}
@@ -191,7 +191,7 @@ public class Class290_Sub8 extends Class290
 		Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1342(-49);
 		IDirect3DVertexShader idirect3dvertexshader;
 		if (aBoolean8144) {
-			idirect3dvertexshader = (i_5_ ^ 0xffffffff) == -2147483648 ? anIDirect3DVertexShader8143 : anIDirect3DVertexShader8137;
+			idirect3dvertexshader = i_5_ == 2147483647 ? anIDirect3DVertexShader8143 : anIDirect3DVertexShader8137;
 		} else {
 			idirect3dvertexshader = i_5_ != 2147483647 ? anIDirect3DVertexShader8146 : anIDirect3DVertexShader8142;
 		}

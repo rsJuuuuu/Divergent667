@@ -41,7 +41,7 @@ public class CacheNode_Sub3 extends CacheNode
 		Class188_Sub1_Sub1.aByteArrayArray9334 = new byte[i_2_][];
 		FileOnDisk.aByteArrayArray1331 = new byte[i_2_][];
 		i_2_ = 0;
-		for (int i_3_ = (-(Node_Sub54.GAME_SCENE_WDITH >> 4) + i_0_) / 8; ((i_0_ - -(Node_Sub54.GAME_SCENE_WDITH >> 4)) / 8 ^ 0xffffffff) <= (i_3_ ^ 0xffffffff); i_3_++) {
+		for (int i_3_ = (-(Node_Sub54.GAME_SCENE_WDITH >> 4) + i_0_) / 8; i_3_ <= (i_0_ - -(Node_Sub54.GAME_SCENE_WDITH >> 4)) / 8; i_3_++) {
 			for (int i_4_ = (-(Class377_Sub1.GAME_SCENE_HEIGHT >> 4) + i_1_) / 8; i_4_ <= ((Class377_Sub1.GAME_SCENE_HEIGHT >> 4) + i_1_) / 8; i_4_++) {
 				int i_5_ = i_4_ + (i_3_ << 8);
 				Class262_Sub1.MAP_REGION_HASHES[i_2_] = i_5_;
@@ -59,7 +59,7 @@ public class CacheNode_Sub3 extends CacheNode
 				i_2_++;
 			}
 		}
-		for (int i_6_ = i_2_; (Class204.anIntArray2460.length ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++) {
+		for (int i_6_ = i_2_; i_6_ < Class204.anIntArray2460.length; i_6_++) {
 			Class204.anIntArray2460[i_6_] = -1;
 			StandardPlane.anIntArray7980[i_6_] = -1;
 			Class144.anIntArray1789[i_6_] = -1;
@@ -67,18 +67,14 @@ public class CacheNode_Sub3 extends CacheNode
 			ProducingGraphicsBuffer.anIntArray9895[i_6_] = -1;
 		}
 		int i_7_;
-		if (Class151.anInt1843 != 3) {
-			if (Class151.anInt1843 != 9) {
-				if ((Class151.anInt1843 ^ 0xffffffff) == -8) {
-					i_7_ = 8;
-				} else {
-					throw new RuntimeException(String.valueOf(Class151.anInt1843));
-				}
-			} else {
-				i_7_ = 10;
-			}
-		} else {
+		if (Class151.anInt1843 == 3) {
 			i_7_ = 4;
+		} else if (Class151.anInt1843 == 9) {
+			i_7_ = 10;
+		} else if (Class151.anInt1843 == 7) {
+			i_7_ = 8;
+		} else {
+			throw new RuntimeException(String.valueOf(Class151.anInt1843));
 		}
 		Class364.method4057(false, i_0_, i_7_, i_1_, (byte) -36);
 	}
@@ -86,7 +82,7 @@ public class CacheNode_Sub3 extends CacheNode
 	final void method2293(BufferedStream buffer, boolean bool) {
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method2294(-32, buffer, i);
@@ -99,25 +95,25 @@ public class CacheNode_Sub3 extends CacheNode
 	
 	private final void method2294(int i, BufferedStream buffer, int i_8_) {
 		anInt9450++;
-		if ((i_8_ ^ 0xffffffff) == -2) {
+		if (i_8_ == 1) {
 			aString9443 = buffer.readString();
 		} else if (i_8_ == 2) {
 			int i_9_ = buffer.readUnsignedByte();
 			anIntArray9445 = new int[i_9_];
 			aCharArray9444 = new char[i_9_];
-			for (int i_10_ = 0; (i_9_ ^ 0xffffffff) < (i_10_ ^ 0xffffffff); i_10_++) {
+			for (int i_10_ = 0; i_10_ < i_9_; i_10_++) {
 				anIntArray9445[i_10_] = buffer.readUnsignedShort();
 				byte b = buffer.readByte();
 				aCharArray9444[i_10_] = b == 0 ? '\0' : Class20_Sub1.method294(b, (byte) 127);
 			}
-		} else if ((i_8_ ^ 0xffffffff) == -4) {
+		} else if (i_8_ == 3) {
 			int i_11_ = buffer.readUnsignedByte();
 			aCharArray9452 = new char[i_11_];
 			anIntArray9448 = new int[i_11_];
 			for (int i_12_ = 0; i_12_ < i_11_; i_12_++) {
 				anIntArray9448[i_12_] = buffer.readUnsignedShort();
 				byte b = buffer.readByte();
-				aCharArray9452[i_12_] = (b ^ 0xffffffff) != -1 ? Class20_Sub1.method294(b, (byte) 121) : '\0';
+				aCharArray9452[i_12_] = b != 0 ? Class20_Sub1.method294(b, (byte) 121) : '\0';
 			}
 		}
 		if (i > -12) {
@@ -137,7 +133,7 @@ public class CacheNode_Sub3 extends CacheNode
 		anInt9447++;
 		@SuppressWarnings("unused")
 		int i_14_ = -28 / ((b - 43) / 32);
-        return (0x84080 & i_13_ ^ 0xffffffff) != -1;
+        return (0x84080 & i_13_) != 0;
     }
 	
 	final int method2297(char c, int i) {

@@ -35,7 +35,7 @@ public class Class190
 		int i_8_ = is[i_1_];
 		int i_9_ = i_8_ + is_2_[i_1_];
 		int i_10_ = i_6_;
-		if ((i_8_ ^ 0xffffffff) < (i_6_ ^ 0xffffffff)) {
+		if (i_6_ < i_8_) {
 			i_10_ = i_8_;
 		}
 		int i_11_ = i_7_;
@@ -43,14 +43,14 @@ public class Class190
 			i_11_ = i_9_;
 		}
 		int i_12_ = bs_4_[i_3_] & i;
-		if ((0xff & bs_4_[i_1_] ^ 0xffffffff) > (i_12_ ^ 0xffffffff)) {
+		if (i_12_ > (0xff & bs_4_[i_1_])) {
 			i_12_ = bs_4_[i_1_] & 0xff;
 		}
 		byte[] bs_13_ = bs_5_[i_3_];
 		byte[] bs_14_ = bs[i_1_];
 		int i_15_ = -i_6_ + i_10_;
 		int i_16_ = i_10_ + -i_8_;
-		for (int i_17_ = i_10_; (i_17_ ^ 0xffffffff) > (i_11_ ^ 0xffffffff); i_17_++) {
+		for (int i_17_ = i_10_; i_11_ > i_17_; i_17_++) {
 			int i_18_ = bs_14_[i_16_++] + bs_13_[i_15_++];
 			if (i_12_ > i_18_) {
 				i_12_ = i_18_;

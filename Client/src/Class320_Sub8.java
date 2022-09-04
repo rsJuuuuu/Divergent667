@@ -54,7 +54,7 @@ public class Class320_Sub8 extends Class320
 	
 	final void method3673(byte b) {
 		anInt8280++;
-		if (anInt4064 != 1 && (anInt4064 ^ 0xffffffff) != -1) {
+		if (anInt4064 != 1 && anInt4064 != 0) {
 			anInt4064 = method3677(0);
 		}
 		if (b > -35) {

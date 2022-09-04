@@ -24,7 +24,7 @@ public class Class219
 		int i = -107 % ((b - 50) / 57);
 		anInt2626++;
 		Node_Sub5 node_sub5 = (Node_Sub5) GraphicsToolkit.aClass312_1545.method3613(65280);
-		boolean bool = Class58.aWidget861 != null || (Class290_Sub6.anInt8116 ^ 0xffffffff) < -1;
+		boolean bool = Class58.aWidget861 != null || Class290_Sub6.anInt8116 > 0;
 		int i_2_ = node_sub5.method2270(2);
 		int i_3_ = node_sub5.method2272(5);
 		if (bool) {

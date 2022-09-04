@@ -34,7 +34,7 @@ public class Class320_Sub12 extends Class320
 		int i_3_ = -41 / ((-70 - b) / 56);
 		Node_Sub19 node_sub19 = null;
 		for (Node_Sub19 node_sub19_4_ = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(65280); node_sub19_4_ != null; node_sub19_4_ = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620(16776960)) {
-			if (node_sub19_4_.anInt7165 == i && node_sub19_4_.anInt7171 == i_1_ && (node_sub19_4_.anInt7161 ^ 0xffffffff) == (i_2_ ^ 0xffffffff) && (i_0_ ^ 0xffffffff) == (node_sub19_4_.anInt7166 ^ 0xffffffff)) {
+			if (node_sub19_4_.anInt7165 == i && node_sub19_4_.anInt7171 == i_1_ && i_2_ == node_sub19_4_.anInt7161 && node_sub19_4_.anInt7166 == i_0_) {
 				node_sub19 = node_sub19_4_;
 				break;
 			}
@@ -139,10 +139,10 @@ public class Class320_Sub12 extends Class320
 			anInt4064 = 0;
 		}
 		anInt8316++;
-		if ((aNode_Sub27_4063.aClass320_Sub30_7275.method3796(false) ^ 0xffffffff) == -1) {
+		if (aNode_Sub27_4063.aClass320_Sub30_7275.method3796(false) == 0) {
 			anInt4064 = 0;
 		}
-		if ((anInt4064 ^ 0xffffffff) > -1 || anInt4064 > 2) {
+		if (anInt4064 < 0 || anInt4064 > 2) {
 			anInt4064 = method3677(0);
 		}
 	}

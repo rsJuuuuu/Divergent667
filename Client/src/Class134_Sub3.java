@@ -34,7 +34,7 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1
 		aGLXToolkit5299.method1312((byte) -21, this);
 		OpenGL.glGetTexImagei(anInt5296, 0, 32993, 5121, is_7_, 0);
 		if (b == 64) {
-			for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff); i_8_++)
+			for (int i_8_ = 0; i_6_ > i_8_; i_8_++)
 				Class311.method3609(is_7_, (-i_8_ + (-1 - -i_6_ + i_3_)) * anInt9030, is, i_5_ * i_8_ + i, i_5_);
 		}
 	}
@@ -93,7 +93,7 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1
 		if (i_16_ != 23110) {
 			anInt9032 = 92;
 		}
-		if ((i_17_ ^ 0xffffffff) != (i_19_ ^ 0xffffffff)) {
+		if (i_19_ != i_17_) {
 			OpenGL.glPixelStorei(3314, 0);
 		}
 	}
@@ -150,7 +150,7 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1
 	public final void method50(int i, int i_24_, int i_25_, int i_26_, byte[] bs, int i_27_, Class68 class68, int i_28_, int i_29_) {
 		anInt9027++;
 		aGLXToolkit5299.method1312((byte) -21, this);
-		if ((i_24_ ^ 0xffffffff) == -1) {
+		if (i_24_ == 0) {
 			i_24_ = i_29_;
 		}
 		OpenGL.glPixelStorei(3317, 1);
@@ -161,7 +161,7 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1
 			method45(1.0271162F, -71);
 		}
 		OpenGL.glTexSubImage2Dub(anInt5296, 0, i_28_, i_27_, i_29_, i_25_, Node_Sub36.method2753((byte) -18, class68), 5121, bs, i);
-		if ((i_24_ ^ 0xffffffff) != (i_29_ ^ 0xffffffff)) {
+		if (i_29_ != i_24_) {
 			OpenGL.glPixelStorei(3314, 0);
 		}
 		OpenGL.glPixelStorei(3317, 4);

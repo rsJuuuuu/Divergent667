@@ -29,7 +29,7 @@ public class Class134_Sub2 extends Class134 implements Interface13_Impl2
 		anInt9023++;
 		int i_6_ = i_3_ % i;
 		int i_7_;
-		if ((i_6_ ^ 0xffffffff) == -1) {
+		if (i_6_ == 0) {
 			i_7_ = 0;
 		} else {
 			i_7_ = -i_6_ + i;
@@ -37,14 +37,14 @@ public class Class134_Sub2 extends Class134 implements Interface13_Impl2
 		int i_8_ = -((i_4_ + i + -1) / i);
 		int i_9_ = -((i_3_ + (i + -1)) / i);
 		for (int i_10_ = i_8_; i_10_ < 0; i_10_++) {
-			for (int i_11_ = i_9_; (i_11_ ^ 0xffffffff) > -1; i_11_++) {
-				if ((bs[i_2_] ^ 0xffffffff) == -1) {
+			for (int i_11_ = i_9_; i_11_ < 0; i_11_++) {
+				if (bs[i_2_] == 0) {
 					return true;
 				}
 				i_2_ += i;
 			}
 			i_2_ -= i_7_;
-			if ((bs[i_2_ - 1] ^ 0xffffffff) == -1) {
+			if (bs[i_2_ - 1] == 0) {
 				return true;
 			}
 			i_2_ += i_5_;

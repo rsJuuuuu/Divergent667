@@ -182,7 +182,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 			Node_Sub29.aFrame7344.setSize(Class36.anInt542 - -insets.left - -insets.right, insets.bottom + insets.top + CacheNode_Sub3.anInt9441);
 			Class152.aSignLink1940 = Class240.aSignLink2946 = new SignLink(i_1_, string, i, true);
 			Class241 class241 = Class240.aSignLink2946.method3641((byte) 50, this, 1);
-			while ((class241.anInt2953 ^ 0xffffffff) == -1)
+			while (class241.anInt2953 == 0)
 				Class262_Sub22.method3208(10L, false);
 		} catch (Exception exception) {
 			ClanChat.method507(exception, null, -128);
@@ -262,7 +262,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 		}
 		long l_5_ = Class253.aLongArray3193[Class376.anInt4662];
 		Class253.aLongArray3193[Class376.anInt4662] = l;
-		if (l_5_ != 0L && (l_5_ ^ 0xffffffffffffffffL) > (l ^ 0xffffffffffffffffL)) {
+		if (l_5_ != 0L && l > l_5_) {
 			int i_6_ = (int) (l - l_5_);
 			Node_Sub9_Sub4.anInt9732 = (32000 - -(i_6_ >> 1)) / i_6_;
 		}
@@ -289,14 +289,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 	final void method92(int i, int i_7_, int i_8_, int i_9_, String string, int i_10_, int i_11_) {
 		anInt32++;
 		try {
-			if (Class82.aGameStub1123 != null) {
-				Class230.anInt5210++;
-				if ((Class230.anInt5210 ^ 0xffffffff) <= -4) {
-					method90("alreadyloaded", (byte) 39);
-				} else {
-					getAppletContext().showDocument(getDocumentBase(), "_self");
-				}
-			} else {
+			if (Class82.aGameStub1123 == null) {
 				CacheNode_Sub16.anApplet9601 = Class96.anApplet1270;
 				Class36.anInt542 = Class360.screenWidth = i_8_;
 				Class320_Sub14.anInt8347 = i_7_;
@@ -308,8 +301,15 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 				Class241 class241 = Class240.aSignLink2946.method3641((byte) 50, this, 1);
 				while (class241.anInt2953 == 0)
 					Class262_Sub22.method3208(10L, false);
+			} else {
+				Class230.anInt5210++;
+				if (Class230.anInt5210 >= 3) {
+					method90("alreadyloaded", (byte) 39);
+				} else {
+					getAppletContext().showDocument(getDocumentBase(), "_self");
+				}
 			}
-		} catch (Throwable throwable) {
+        } catch (Throwable throwable) {
 			ClanChat.method507(throwable, null, -109);
 			method90("crash", (byte) 39);
 		}
@@ -321,7 +321,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 			try {
 				if (SignLink.aString3989 != null) {
 					String string = SignLink.aString3989.toLowerCase();
-					if ((string.indexOf("sun") ^ 0xffffffff) != 0 || string.indexOf("apple") != -1) {
+					if (string.indexOf("sun") != -1 || string.indexOf("apple") != -1) {
 						String string_13_ = SignLink.aString3995;
 						if (string_13_.equals("1.1") || string_13_.startsWith("1.1.") || string_13_.equals("1.2") || string_13_.startsWith("1.2.")) {
 							method90("wrongjava", (byte) 39);
@@ -335,15 +335,15 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 				if (SignLink.aString3995 != null && SignLink.aString3995.startsWith("1.")) {
 					int i = 2;
 					int i_14_ = 0;
-					while ((i ^ 0xffffffff) > (SignLink.aString3995.length() ^ 0xffffffff)) {
+					while (SignLink.aString3995.length() > i) {
 						int i_15_ = SignLink.aString3995.charAt(i);
-						if ((i_15_ ^ 0xffffffff) > -49 || i_15_ > 57) {
+						if (i_15_ < 48 || i_15_ > 57) {
 							break;
 						}
 						i++;
 						i_14_ = i_15_ - (48 - i_14_ * 10);
 					}
-					if ((i_14_ ^ 0xffffffff) <= -6) {
+					if (i_14_ >= 5) {
 						Class250.aBoolean3175 = true;
 					}
 				}
@@ -366,7 +366,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 				Animable_Sub3_Sub1.aClass234_11017 = Class300.method3498(4);
 				while (Class321.aLong4068 == 0L || Class313.method3650(false) < Class321.aLong4068) {
 					Class22.anInt431 = Animable_Sub3_Sub1.aClass234_11017.method2147(Class171.aLong2071, 75);
-					for (int i = 0; (i ^ 0xffffffff) > (Class22.anInt431 ^ 0xffffffff); i++)
+					for (int i = 0; Class22.anInt431 > i; i++)
 						method98(-15337);
 					method91(-74);
 					ObjectDefinition.method3049(Class240.aSignLink2946, Node_Sub38_Sub20.aCanvas10309, (byte) 102);
@@ -444,13 +444,13 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 		container.add(Node_Sub38_Sub20.aCanvas10309);
 		Node_Sub38_Sub20.aCanvas10309.setSize(Class360.screenWidth, Class205.screenHeight);
 		Node_Sub38_Sub20.aCanvas10309.setVisible(true);
-		if (container != Node_Sub29.aFrame7344) {
-			Node_Sub38_Sub20.aCanvas10309.setLocation(Class270_Sub1.anInt8033, Class131.anInt5447);
-		} else {
+		if (container == Node_Sub29.aFrame7344) {
 			Insets insets = Node_Sub29.aFrame7344.getInsets();
 			Node_Sub38_Sub20.aCanvas10309.setLocation(Class270_Sub1.anInt8033 + insets.left, insets.top + Class131.anInt5447);
+		} else {
+			Node_Sub38_Sub20.aCanvas10309.setLocation(Class270_Sub1.anInt8033, Class131.anInt5447);
 		}
-		Node_Sub38_Sub20.aCanvas10309.addFocusListener(this);
+        Node_Sub38_Sub20.aCanvas10309.addFocusListener(this);
 		Node_Sub38_Sub20.aCanvas10309.requestFocus();
 		Class51.aBoolean5331 = true;
 		Class114.aBoolean1458 = true;
@@ -488,7 +488,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 		long l = Class313.method3650(false);
 		long l_17_ = Class66_Sub2.aLongArray8997[Class209.anInt2491];
 		Class66_Sub2.aLongArray8997[Class209.anInt2491] = l;
-		if ((l_17_ ^ 0xffffffffffffffffL) != -1L && (l_17_ ^ 0xffffffffffffffffL) > (l ^ 0xffffffffffffffffL)) {
+		if (l_17_ != 0 && l > l_17_) {
 			/* empty */
 		}
 		Class209.anInt2491 = 0x1f & 1 + Class209.anInt2491;

@@ -18,7 +18,7 @@ public class Class329
 		if (b != -61) {
 			method3835(null, true);
 		}
-        return !((i ^ 0xffffffff) != -8 && i != 8 && (i ^ 0xffffffff) != -10 && (i ^ 0xffffffff) != -11);
+        return !(i != 7 && i != 8 && i != 9 && i != 10);
     }
 	
 	static final void method3834(int i, int i_0_, int i_1_, aa var_aa, GraphicsToolkit graphicstoolkit, int i_2_, int i_3_, int i_4_, IComponentDefinitions widget) {
@@ -29,14 +29,14 @@ public class Class329
 				int[] is = new int[class79.anIntArray1049.length];
 				for (int i_5_ = 0; i_5_ < is.length / 2; i_5_++) {
 					int i_6_;
-					if (Class320_Sub22.anInt8415 != 4) {
-						i_6_ = 0x3fff & (int) Node_Sub12.aFloat5450 - -Mobile_Sub1.anInt10960;
-					} else {
+					if (Class320_Sub22.anInt8415 == 4) {
 						i_6_ = 0x3fff & (int) Node_Sub12.aFloat5450;
+					} else {
+						i_6_ = 0x3fff & (int) Node_Sub12.aFloat5450 - -Mobile_Sub1.anInt10960;
 					}
-					int i_7_ = Class335.anIntArray4167[i_6_];
+                    int i_7_ = Class335.anIntArray4167[i_6_];
 					int i_8_ = Class335.anIntArray4165[i_6_];
-					if ((Class320_Sub22.anInt8415 ^ 0xffffffff) != -5) {
+					if (Class320_Sub22.anInt8415 != 4) {
 						i_7_ = 256 * i_7_ / (256 + Node_Sub15_Sub13.anInt9870);
 						i_8_ = 256 * i_8_ / (256 + Node_Sub15_Sub13.anInt9870);
 					}
@@ -53,14 +53,14 @@ public class Class329
 						int i_11_ = is[1 + 2 * i_9_];
 						int i_12_ = is[2 + 2 * i_9_];
 						int i_13_ = is[2 + (i_9_ * 2 + 1)];
-						if ((i_10_ ^ 0xffffffff) < (i_12_ ^ 0xffffffff)) {
+						if (i_12_ < i_10_) {
 							int i_14_ = i_10_;
 							int i_15_ = i_11_;
 							i_10_ = i_12_;
 							i_12_ = i_14_;
 							i_11_ = i_13_;
 							i_13_ = i_15_;
-						} else if ((i_10_ ^ 0xffffffff) == (i_12_ ^ 0xffffffff) && i_13_ < i_11_) {
+						} else if (i_12_ == i_10_ && i_13_ < i_11_) {
 							int i_16_ = i_11_;
 							i_11_ = i_13_;
 							i_13_ = i_16_;
@@ -78,20 +78,20 @@ public class Class329
 						i_19_ = i_21_;
 						i_18_ = i_20_;
 						i_20_ = i_22_;
-					} else if ((i_17_ ^ 0xffffffff) == (i_19_ ^ 0xffffffff) && (i_18_ ^ 0xffffffff) < (i_20_ ^ 0xffffffff)) {
+					} else if (i_19_ == i_17_ && i_20_ < i_18_) {
 						int i_23_ = i_18_;
 						i_18_ = i_20_;
 						i_20_ = i_23_;
 					}
 					graphicstoolkit.a(i_17_, i_18_, i_19_, i_20_, class79.anIntArray1066[class79.aByteArray1057[-1 + class79.aByteArray1057.length] & 0xff], 1, var_aa, i_1_, i_3_, class79.anInt1074, class79.anInt1050, class79.anInt1080);
 				} else {
-					for (int i_24_ = 0; (i_24_ ^ 0xffffffff) > (is.length / 2 - 1 ^ 0xffffffff); i_24_++)
+					for (int i_24_ = 0; is.length / 2 - 1 > i_24_; i_24_++)
 						graphicstoolkit.a(is[2 * i_24_], is[2 * i_24_ + 1], is[i_24_ * 2 + 2], is[1 + (1 + i_24_) * 2], class79.anIntArray1066[0xff & class79.aByteArray1057[i_24_]], 1, var_aa, i_1_, i_3_);
 					graphicstoolkit.a(is[-2 + is.length], is[is.length - 1], is[0], is[1], class79.anIntArray1066[0xff & class79.aByteArray1057[-1 + class79.aByteArray1057.length]], 1, var_aa, i_1_, i_3_);
 				}
 			}
 			GLSprite glsprite = null;
-			if ((class79.anInt1062 ^ 0xffffffff) != 0) {
+			if (class79.anInt1062 != -1) {
 				glsprite = class79.method790(false, (byte) -91, graphicstoolkit);
 				if (glsprite != null) {
 					Class4.method171((byte) -116, i_3_, var_aa, glsprite, i, i_4_, widget, i_1_);
@@ -104,7 +104,7 @@ public class Class329
 				}
 				Class52 class52 = CacheNode_Sub18.aClass52_9609;
 				Class357 class357 = Class85.aClass357_1159;
-				if ((class79.anInt1090 ^ 0xffffffff) == -2) {
+				if (class79.anInt1090 == 1) {
 					class52 = StandardSprite.aClass52_8945;
 					class357 = Class169_Sub3.aClass357_8820;
 				}

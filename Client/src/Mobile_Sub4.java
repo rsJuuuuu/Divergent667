@@ -147,13 +147,13 @@ public class Mobile_Sub4 extends Mobile
 			CacheNode_Sub17.anInt8835 = 0;
 			int i = (Class295.myPlayer.anInt5934 >> 9) + Node_Sub53.gameSceneBaseX;
 			int i_3_ = Class320_Sub4.gameSceneBaseY + (Class295.myPlayer.anInt5940 >> 9);
-			if (i >= 3053 && (i ^ 0xffffffff) >= -3157 && i_3_ >= 3056 && (i_3_ ^ 0xffffffff) >= -3137) {
+			if (i >= 3053 && i <= 3156 && i_3_ >= 3056 && i_3_ <= 3136) {
 				CacheNode_Sub17.anInt8835 = 1;
 			}
-			if (i >= 3072 && i <= 3118 && i_3_ >= 9492 && (i_3_ ^ 0xffffffff) >= -9536) {
+			if (i >= 3072 && i <= 3118 && i_3_ >= 9492 && i_3_ <= 9535) {
 				CacheNode_Sub17.anInt8835 = 1;
 			}
-			if (CacheNode_Sub17.anInt8835 == 1 && i >= 3139 && (i ^ 0xffffffff) >= -3200 && i_3_ >= 3008 && i_3_ <= 3062) {
+			if (CacheNode_Sub17.anInt8835 == 1 && i >= 3139 && i <= 3199 && i_3_ >= 3008 && i_3_ <= 3062) {
 				CacheNode_Sub17.anInt8835 = 0;
 			}
 		}
@@ -213,13 +213,13 @@ public class Mobile_Sub4 extends Mobile
 		int i_21_ = (bool ? Node_Sub36_Sub1.aClass109_10035.anInt1369 : Node_Sub36_Sub1.aClass109_10035.anInt1373) + i_20_;
 		for (int i_22_ = i_20_; i_22_ < i_21_; i_22_++) {
 			CacheNode_Sub10 cachenode_sub10 = Node_Sub36_Sub1.aClass109_10035.method1128(i_22_, false);
-			if (cachenode_sub10.aBoolean9521 && (cachenode_sub10.method2332(-19244).toLowerCase().indexOf(string) ^ 0xffffffff) != 0) {
-				if ((i_19_ ^ 0xffffffff) <= -51) {
+			if (cachenode_sub10.aBoolean9521 && cachenode_sub10.method2332(-19244).toLowerCase().indexOf(string) != -1) {
+				if (i_19_ >= 50) {
 					Node_Sub20.aShortArray7175 = null;
 					Class365_Sub1.anInt8759 = -1;
 					return;
 				}
-				if ((i_19_ ^ 0xffffffff) <= (ses.length ^ 0xffffffff)) {
+				if (ses.length <= i_19_) {
 					short[] ses_23_ = new short[ses.length * 2];
 					for (int i_24_ = 0; i_19_ > i_24_; i_24_++)
 						ses_23_[i_24_] = ses[i_24_];
@@ -232,7 +232,7 @@ public class Mobile_Sub4 extends Mobile
 		Class365_Sub1.anInt8759 = i_19_;
 		Node_Sub20.aShortArray7175 = ses;
 		String[] strings = new String[Class365_Sub1.anInt8759];
-		for (int i_26_ = 0; (Class365_Sub1.anInt8759 ^ 0xffffffff) < (i_26_ ^ 0xffffffff); i_26_++)
+		for (int i_26_ = 0; i_26_ < Class365_Sub1.anInt8759; i_26_++)
 			strings[i_26_] = Node_Sub36_Sub1.aClass109_10035.method1128(ses[i_26_], false).method2332(-19244);
 		Class293.method3461(strings, Node_Sub20.aShortArray7175, -43);
 	}
@@ -258,23 +258,23 @@ public class Mobile_Sub4 extends Mobile
 	static final void method915(int i, Class54 class54, int i_27_, GraphicsToolkit graphicstoolkit) {
 		anInt10971++;
 		if (Class290_Sub11.anIntArray8180 != null && i <= class54.aByte824) {
-			for (int i_28_ = 0; (Class290_Sub11.anIntArray8180.length ^ 0xffffffff) < (i_28_ ^ 0xffffffff); i_28_++) {
-				if ((Class290_Sub11.anIntArray8180[i_28_] ^ 0xffffffff) != 999999 && (class54.anIntArray814[0] <= Class290_Sub11.anIntArray8180[i_28_] || (Class290_Sub11.anIntArray8180[i_28_] ^ 0xffffffff) <= (class54.anIntArray814[1] ^ 0xffffffff) || (Class290_Sub11.anIntArray8180[i_28_] ^ 0xffffffff) <= (class54.anIntArray814[2] ^ 0xffffffff) || (Class290_Sub11.anIntArray8180[i_28_] ^ 0xffffffff) <= (class54.anIntArray814[3] ^ 0xffffffff)) && ((EntityNode_Sub3_Sub1.anIntArray9161[i_28_] ^ 0xffffffff) <= (class54.anIntArray810[0] ^ 0xffffffff) || class54.anIntArray810[1] <= EntityNode_Sub3_Sub1.anIntArray9161[i_28_] || class54.anIntArray810[2] <= EntityNode_Sub3_Sub1.anIntArray9161[i_28_] || EntityNode_Sub3_Sub1.anIntArray9161[i_28_] >= class54.anIntArray810[3]) && ((class54.anIntArray810[0] ^ 0xffffffff) <= (aa_Sub3.anIntArray5490[i_28_] ^ 0xffffffff) || aa_Sub3.anIntArray5490[i_28_] <= class54.anIntArray810[1] || class54.anIntArray810[2] >= aa_Sub3.anIntArray5490[i_28_] || aa_Sub3.anIntArray5490[i_28_] <= class54.anIntArray810[3]) && (class54.anIntArray820[0] <= Class121.anIntArray1528[i_28_] || (class54.anIntArray820[1] ^ 0xffffffff) >= (Class121.anIntArray1528[i_28_] ^ 0xffffffff) || (Class121.anIntArray1528[i_28_] ^ 0xffffffff) <= (class54.anIntArray820[2] ^ 0xffffffff) || (Class121.anIntArray1528[i_28_] ^ 0xffffffff) <= (class54.anIntArray820[3] ^ 0xffffffff)) && ((CacheNode_Sub18.anIntArray9605[i_28_] ^ 0xffffffff) >= (class54.anIntArray820[0] ^ 0xffffffff) || (CacheNode_Sub18.anIntArray9605[i_28_] ^ 0xffffffff) >= (class54.anIntArray820[1] ^ 0xffffffff) || (CacheNode_Sub18.anIntArray9605[i_28_] ^ 0xffffffff) >= (class54.anIntArray820[2] ^ 0xffffffff) || (CacheNode_Sub18.anIntArray9605[i_28_] ^ 0xffffffff) >= (class54.anIntArray820[3] ^ 0xffffffff))) {
+			for (int i_28_ = 0; i_28_ < Class290_Sub11.anIntArray8180.length; i_28_++) {
+				if (Class290_Sub11.anIntArray8180[i_28_] != -1000000 && (class54.anIntArray814[0] <= Class290_Sub11.anIntArray8180[i_28_] || class54.anIntArray814[1] <= Class290_Sub11.anIntArray8180[i_28_] || class54.anIntArray814[2] <= Class290_Sub11.anIntArray8180[i_28_] || class54.anIntArray814[3] <= Class290_Sub11.anIntArray8180[i_28_]) && (class54.anIntArray810[0] <= EntityNode_Sub3_Sub1.anIntArray9161[i_28_] || class54.anIntArray810[1] <= EntityNode_Sub3_Sub1.anIntArray9161[i_28_] || class54.anIntArray810[2] <= EntityNode_Sub3_Sub1.anIntArray9161[i_28_] || EntityNode_Sub3_Sub1.anIntArray9161[i_28_] >= class54.anIntArray810[3]) && (aa_Sub3.anIntArray5490[i_28_] <= class54.anIntArray810[0] || aa_Sub3.anIntArray5490[i_28_] <= class54.anIntArray810[1] || class54.anIntArray810[2] >= aa_Sub3.anIntArray5490[i_28_] || aa_Sub3.anIntArray5490[i_28_] <= class54.anIntArray810[3]) && (class54.anIntArray820[0] <= Class121.anIntArray1528[i_28_] || Class121.anIntArray1528[i_28_] >= class54.anIntArray820[1] || class54.anIntArray820[2] <= Class121.anIntArray1528[i_28_] || class54.anIntArray820[3] <= Class121.anIntArray1528[i_28_]) && (class54.anIntArray820[0] >= CacheNode_Sub18.anIntArray9605[i_28_] || class54.anIntArray820[1] >= CacheNode_Sub18.anIntArray9605[i_28_] || class54.anIntArray820[2] >= CacheNode_Sub18.anIntArray9605[i_28_] || class54.anIntArray820[3] >= CacheNode_Sub18.anIntArray9605[i_28_])) {
 					return;
 				}
 			}
 		}
-		if ((class54.aByte822 ^ 0xffffffff) == -2) {
+		if (class54.aByte822 == 1) {
 			int i_29_ = Node_Sub9_Sub1.anInt9656 + -Class216.anInt2551 + class54.aShort821;
-			if ((i_29_ ^ 0xffffffff) <= -1 && i_29_ <= Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656) {
+			if (i_29_ >= 0 && i_29_ <= Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656) {
 				int i_30_ = class54.aShort815 - EntityNode_Sub7.anInt6013 - -Node_Sub9_Sub1.anInt9656;
-				if ((i_30_ ^ 0xffffffff) > -1) {
+				if (i_30_ < 0) {
 					i_30_ = 0;
-				} else if ((i_30_ ^ 0xffffffff) < (Node_Sub9_Sub1.anInt9656 - -Node_Sub9_Sub1.anInt9656 ^ 0xffffffff)) {
+				} else if (Node_Sub9_Sub1.anInt9656 - -Node_Sub9_Sub1.anInt9656 < i_30_) {
 					return;
 				}
 				int i_31_ = Node_Sub9_Sub1.anInt9656 + class54.aShort819 - EntityNode_Sub7.anInt6013;
-				if ((Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 ^ 0xffffffff) <= (i_31_ ^ 0xffffffff)) {
+				if (i_31_ <= Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656) {
 					if (i_31_ < 0) {
 						return;
 					}
@@ -300,7 +300,7 @@ public class Mobile_Sub4 extends Mobile
 			}
 		} else if (class54.aByte822 == 2) {
 			int i_32_ = Node_Sub9_Sub1.anInt9656 + class54.aShort815 - EntityNode_Sub7.anInt6013;
-			if (i_32_ >= 0 && (i_32_ ^ 0xffffffff) >= (Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 ^ 0xffffffff)) {
+			if (i_32_ >= 0 && Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 >= i_32_) {
 				int i_33_ = Node_Sub9_Sub1.anInt9656 + class54.aShort821 + -Class216.anInt2551;
 				if (i_33_ < 0) {
 					i_33_ = 0;
@@ -332,9 +332,9 @@ public class Mobile_Sub4 extends Mobile
 					}
 				}
 			}
-		} else if (class54.aByte822 == i_27_ || (class54.aByte822 ^ 0xffffffff) == -9) {
+		} else if (class54.aByte822 == i_27_ || class54.aByte822 == 8) {
 			int i_35_ = -Class216.anInt2551 + (class54.aShort821 + Node_Sub9_Sub1.anInt9656);
-			if ((i_35_ ^ 0xffffffff) <= -1 && Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 >= i_35_) {
+			if (i_35_ >= 0 && Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 >= i_35_) {
 				int i_36_ = -EntityNode_Sub7.anInt6013 + class54.aShort815 + Node_Sub9_Sub1.anInt9656;
 				if (i_36_ >= 0 && Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 >= i_36_ && Class139.aBooleanArrayArray1730[i_35_][i_36_]) {
 					float f = (float) (GLPlane.anInt7920 - class54.anIntArray810[0]);
@@ -354,7 +354,7 @@ public class Mobile_Sub4 extends Mobile
 			float f = (float) (class54.anIntArray814[0] - Class194_Sub3.anInt6900);
 			if (!(f <= (float) Class134_Sub4.anInt9047)) {
 				int i_38_ = -EntityNode_Sub7.anInt6013 + (class54.aShort815 + Node_Sub9_Sub1.anInt9656);
-				if ((i_38_ ^ 0xffffffff) <= -1) {
+				if (i_38_ >= 0) {
 					if (i_38_ > Node_Sub9_Sub1.anInt9656 - -Node_Sub9_Sub1.anInt9656) {
 						return;
 					}
@@ -363,7 +363,7 @@ public class Mobile_Sub4 extends Mobile
 				}
 				int i_39_ = Node_Sub9_Sub1.anInt9656 + class54.aShort819 + -EntityNode_Sub7.anInt6013;
 				if (Node_Sub9_Sub1.anInt9656 - -Node_Sub9_Sub1.anInt9656 >= i_39_) {
-					if ((i_39_ ^ 0xffffffff) > -1) {
+					if (i_39_ < 0) {
 						return;
 					}
 				} else {
@@ -371,7 +371,7 @@ public class Mobile_Sub4 extends Mobile
 				}
 				int i_40_ = -Class216.anInt2551 + (class54.aShort821 - -Node_Sub9_Sub1.anInt9656);
 				if (i_40_ >= 0) {
-					if ((Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 ^ 0xffffffff) > (i_40_ ^ 0xffffffff)) {
+					if (i_40_ > Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656) {
 						return;
 					}
 				} else {
@@ -386,7 +386,7 @@ public class Mobile_Sub4 extends Mobile
 				boolean bool = false;
 			while_221_:
 				for (int i_42_ = i_40_; i_41_ >= i_42_; i_42_++) {
-					for (int i_43_ = i_38_; (i_39_ ^ 0xffffffff) <= (i_43_ ^ 0xffffffff); i_43_++) {
+					for (int i_43_ = i_38_; i_43_ <= i_39_; i_43_++) {
 						if (Class139.aBooleanArrayArray1730[i_42_][i_43_]) {
 							bool = true;
 							break while_221_;
@@ -410,7 +410,7 @@ public class Mobile_Sub4 extends Mobile
 	
 	final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
 		anInt10990++;
-		DrawableModel drawablemodel = method908(14437, gfxId, graphicstoolkit, ((anInt10976 ^ 0xffffffff) == -1 ? 0 : 5) | 0x800);
+		DrawableModel drawablemodel = method908(14437, gfxId, graphicstoolkit, (anInt10976 == 0 ? 0 : 5) | 0x800);
 		if (drawablemodel == null) {
 			return null;
 		}
@@ -428,10 +428,10 @@ public class Mobile_Sub4 extends Mobile
 		}
 		if (anEntityNode_Sub4_10965 != null) {
 			Class198 class198 = anEntityNode_Sub4_10965.method954();
-			if (!Node_Sub15_Sub10.aBoolean9850) {
-				graphicstoolkit.a(class198);
-			} else {
+			if (Node_Sub15_Sub10.aBoolean9850) {
 				graphicstoolkit.a(class198, Class308.anInt3912);
+			} else {
+				graphicstoolkit.a(class198);
 			}
 		}
 		aBoolean10977 = drawablemodel.F();

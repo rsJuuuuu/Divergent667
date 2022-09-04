@@ -21,7 +21,7 @@ public class Node_Sub13 extends Node
 		}
 		anInt7112++;
 		int i_2_ = 0;
-		while ((i ^ 0xffffffff) < -1) {
+		while (i > 0) {
 			i_2_ = 0x1 & i_1_ | i_2_ << 1;
 			i--;
 			i_1_ >>>= 1;
@@ -48,7 +48,7 @@ public class Node_Sub13 extends Node
     }
 	
 	static final void method2549(int i, int i_3_, int i_4_, int i_5_, boolean bool, int i_6_, int i_7_, int i_8_) {
-		if (((bool ? Class213.aNode_Sub27_2512.aClass320_Sub25_7276.method3776(false) : Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776(false)) ^ 0xffffffff) != -1 && (i ^ 0xffffffff) != -1 && (Class23.anInt434 ^ 0xffffffff) > -51 && i_8_ != -1) {
+		if ((bool ? Class213.aNode_Sub27_2512.aClass320_Sub25_7276.method3776(false) : Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776(false)) != 0 && i != 0 && Class23.anInt434 < 50 && i_8_ != -1) {
 			Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78(!bool ? (byte) 2 : (byte) 3, i_8_, i, i_3_, i_7_, i_4_, i_6_, null);
 		}
 		if (i_5_ == -620649727) {

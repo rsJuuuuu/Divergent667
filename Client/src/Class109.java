@@ -36,7 +36,7 @@ public class Class109
 				node_sub19.method2160((byte) 97);
 			} else {
 				node_sub19.aBoolean7159 = true;
-				if (node_sub19.anInt7171 >= 0 && (node_sub19.anInt7161 ^ 0xffffffff) <= -1 && Node_Sub54.GAME_SCENE_WDITH > node_sub19.anInt7171 && (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (node_sub19.anInt7161 ^ 0xffffffff)) {
+				if (node_sub19.anInt7171 >= 0 && node_sub19.anInt7161 >= 0 && Node_Sub54.GAME_SCENE_WDITH > node_sub19.anInt7171 && node_sub19.anInt7161 < Class377_Sub1.GAME_SCENE_HEIGHT) {
 					FloatBuffer.method2247(103, node_sub19);
 				}
 			}
@@ -69,7 +69,7 @@ public class Class109
 		if (bs != null) {
 			cachenode_sub10.method2325(new BufferedStream(bs), -958);
 		}
-		if ((i ^ 0xffffffff) <= -32769) {
+		if (i >= 32768) {
 			cachenode_sub10.method2328(51);
 		}
 		if (bool != false) {

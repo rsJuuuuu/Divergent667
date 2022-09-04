@@ -40,10 +40,10 @@ public class Class205 implements Interface7
 			return null;
 		}
 		anInt5101++;
-		if ((Client.method113(widget).method2743(-70) ^ 0xffffffff) == -1) {
+		if (Client.method113(widget).method2743(-70) == 0) {
 			return null;
 		}
-		if (widget.aString4786 == null || (widget.aString4786.trim().length() ^ 0xffffffff) == -1) {
+		if (widget.aString4786 == null || widget.aString4786.trim().length() == 0) {
 			if (Class54.aBoolean817) {
 				return "Hidden-use";
 			}

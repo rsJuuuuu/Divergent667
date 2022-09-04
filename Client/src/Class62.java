@@ -41,13 +41,13 @@ public class Class62
 			i_12_ += 2;
 			i_10_ += i_12_;
 			i_8_ += i_11_;
-			if ((i_10_ ^ 0xffffffff) <= -1 && (i_9_ ^ 0xffffffff) <= -2) {
+			if (i_10_ >= 0 && i_9_ >= 1) {
 				Class188_Sub1_Sub2.anIntArray9345[i_9_] = i_5_;
 				i_9_--;
 				i_10_ -= i_9_ << 1;
 			}
 			i_5_++;
-			if ((i_8_ ^ 0xffffffff) <= -1) {
+			if (i_8_ >= 0) {
 				if (--i_7_ < i_6_) {
 					int[] is_15_ = Class169_Sub4.anIntArrayArray8826[i_7_ + i_1_];
 					int[] is_16_ = Class169_Sub4.anIntArrayArray8826[-i_7_ + i_1_];
@@ -77,7 +77,7 @@ public class Class62
 			int i_28_ = i_7_ + i_3_;
 			int i_29_ = -i_7_ + i_3_;
 			if (i_6_ > i_5_) {
-				int i_30_ = (i_9_ ^ 0xffffffff) > (i_5_ ^ 0xffffffff) ? Class188_Sub1_Sub2.anIntArray9345[i_5_] : i_9_;
+				int i_30_ = i_5_ > i_9_ ? Class188_Sub1_Sub2.anIntArray9345[i_5_] : i_9_;
 				int i_31_ = i_3_ + i_30_;
 				int i_32_ = -i_30_ + i_3_;
 				Class369.method4086(i_32_, i, i_29_, is_26_, 0);

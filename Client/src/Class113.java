@@ -23,20 +23,20 @@ public class Class113
 		if (bool != true) {
 			return 95;
 		}
-		if ((i_0_ ^ 0xffffffff) == 1) {
+		if (i_0_ == -2) {
 			return 12345678;
 		}
 		if (i_0_ == -1) {
-			if ((i ^ 0xffffffff) > -3) {
+			if (i < 2) {
 				i = 2;
-			} else if ((i ^ 0xffffffff) < -127) {
+			} else if (i > 126) {
 				i = 126;
 			}
 			return i;
 		}
 		i = (i_0_ & 0x7f) * i >> 7;
-		if ((i ^ 0xffffffff) <= -3) {
-			if ((i ^ 0xffffffff) < -127) {
+		if (i >= 2) {
+			if (i > 126) {
 				i = 126;
 			}
 		} else {
@@ -103,7 +103,7 @@ public class Class113
 		if (i > -65) {
 			method1152(-37);
 		}
-        return (Class52.anInt800 ^ 0xffffffff) != -1;
+        return Class52.anInt800 != 0;
     }
 	
 	Class113() {
@@ -117,7 +117,7 @@ public class Class113
 		}
 		int i_7_ = string.length();
 		long l = 0L;
-		for (int i_8_ = 0; (i_7_ ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++)
+		for (int i_8_ = 0; i_8_ < i_7_; i_8_++)
 			l = (long) string.charAt(i_8_) + ((l << 5) + -l);
 		return l;
 	}

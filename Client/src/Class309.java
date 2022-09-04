@@ -25,7 +25,7 @@ public class Class309
 			int i_2_ = 0;
 			@SuppressWarnings("unused")
 			int i_3_ = 111 / ((14 - i) / 59);
-			for (/**/; (i_2_ ^ 0xffffffff) > -4; i_2_++) {
+			for (/**/; i_2_ < 3; i_2_++) {
 				int i_4_ = 3 * Class277_Sub1.anIntArrayArrayArray8042[Class109.anInt1367][i_1_][i_2_];
 				int i_5_ = Class277_Sub1.anIntArrayArrayArray8042[Class109.anInt1367][1 + i_1_][i_2_] * 3;
 				int i_6_ = (Class277_Sub1.anIntArrayArrayArray8042[Class109.anInt1367][i_1_ - -2][i_2_] + (-Class277_Sub1.anIntArrayArrayArray8042[Class109.anInt1367][3 + i_1_][i_2_] + Class277_Sub1.anIntArrayArrayArray8042[Class109.anInt1367][2 + i_1_][i_2_])) * 3;

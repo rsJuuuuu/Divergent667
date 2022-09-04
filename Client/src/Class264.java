@@ -22,43 +22,35 @@ public class Class264
 	
 	private final void method3225(byte b, int i, BufferedStream buffer) {
 		anInt3361++;
-		if ((i ^ 0xffffffff) != -2) {
-			if (i != 2) {
-				if (i != 3) {
-					if ((i ^ 0xffffffff) != -41) {
-						if (i != 41) {
-							if ((i ^ 0xffffffff) <= -61 && i < 70) {
-								anIntArray3362[-60 + i] = buffer.readBigSmart();
-							}
-						} else {
-							int i_0_ = buffer.readUnsignedByte();
-							aShortArray3353 = new short[i_0_];
-							aShortArray3356 = new short[i_0_];
-							for (int i_1_ = 0; i_1_ < i_0_; i_1_++) {
-								aShortArray3356[i_1_] = (short) buffer.readUnsignedShort();
-								aShortArray3353[i_1_] = (short) buffer.readUnsignedShort();
-							}
-						}
-					} else {
-						int i_2_ = buffer.readUnsignedByte();
-						aShortArray3359 = new short[i_2_];
-						aShortArray3349 = new short[i_2_];
-						for (int i_3_ = 0; i_2_ > i_3_; i_3_++) {
-							aShortArray3349[i_3_] = (short) buffer.readUnsignedShort();
-							aShortArray3359[i_3_] = (short) buffer.readUnsignedShort();
-						}
-					}
-				}
-			} else {
-				int i_4_ = buffer.readUnsignedByte();
-				anIntArray3357 = new int[i_4_];
-				for (int i_5_ = 0; (i_4_ ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++)
-					anIntArray3357[i_5_] = buffer.readBigSmart();
-			}
-		} else {
+		if (i == 1) {
 			buffer.readUnsignedByte();
-		}
-		if (b != 11) {
+		} else if (i == 2) {
+            int i_4_ = buffer.readUnsignedByte();
+            anIntArray3357 = new int[i_4_];
+            for (int i_5_ = 0; i_5_ < i_4_; i_5_++)
+                anIntArray3357[i_5_] = buffer.readBigSmart();
+        } else if (i != 3) {
+            if (i == 40) {
+                int i_2_ = buffer.readUnsignedByte();
+                aShortArray3359 = new short[i_2_];
+                aShortArray3349 = new short[i_2_];
+                for (int i_3_ = 0; i_2_ > i_3_; i_3_++) {
+                    aShortArray3349[i_3_] = (short) buffer.readUnsignedShort();
+                    aShortArray3359[i_3_] = (short) buffer.readUnsignedShort();
+                }
+            } else if (i == 41) {
+                int i_0_ = buffer.readUnsignedByte();
+                aShortArray3353 = new short[i_0_];
+                aShortArray3356 = new short[i_0_];
+                for (int i_1_ = 0; i_1_ < i_0_; i_1_++) {
+                    aShortArray3356[i_1_] = (short) buffer.readUnsignedShort();
+                    aShortArray3353[i_1_] = (short) buffer.readUnsignedShort();
+                }
+            } else if (i >= 60 && i < 70) {
+                anIntArray3362[-60 + i] = buffer.readBigSmart();
+            }
+        }
+        if (b != 11) {
 			aShortArray3349 = null;
 		}
 	}
@@ -67,7 +59,7 @@ public class Class264
 		anInt3358++;
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method3225((byte) 11, i, buffer);
@@ -91,18 +83,18 @@ public class Class264
 				}
 			}
 		}
-		for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > -6; i_7_++) {
+		for (int i_7_ = 0; i_7_ < 5; i_7_++) {
 			if (models[i_7_] != null && models[i_7_].anInt2614 < 13) {
 				models[i_7_].method2081(2, 0);
 			}
 		}
 		Model model = new Model(models, i);
 		if (aShortArray3349 != null) {
-			for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > (aShortArray3349.length ^ 0xffffffff); i_8_++)
+			for (int i_8_ = 0; aShortArray3349.length > i_8_; i_8_++)
 				model.method2089(aShortArray3349[i_8_], aShortArray3359[i_8_], -93);
 		}
 		if (aShortArray3356 != null) {
-			for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > (aShortArray3356.length ^ 0xffffffff); i_9_++)
+			for (int i_9_ = 0; aShortArray3356.length > i_9_; i_9_++)
 				model.method2087(aShortArray3356[i_9_], aShortArray3353[i_9_], 74);
 		}
 		return model;
@@ -112,8 +104,8 @@ public class Class264
 		anInt3354++;
 		boolean bool_10_ = bool;
 		synchronized (aClass181_3360.aClass302_2156) {
-			for (int i = 0; (i ^ 0xffffffff) > -6; i++) {
-				if ((anIntArray3362[i] ^ 0xffffffff) != 0 && !aClass181_3360.aClass302_2156.method3515(0, anIntArray3362[i], 0)) {
+			for (int i = 0; i < 5; i++) {
+				if (anIntArray3362[i] != -1 && !aClass181_3360.aClass302_2156.method3515(0, anIntArray3362[i], 0)) {
 					bool_10_ = false;
 				}
 			}
@@ -128,7 +120,7 @@ public class Class264
 		}
 		boolean bool = true;
 		synchronized (aClass181_3360.aClass302_2156) {
-			for (int i_11_ = i; (anIntArray3357.length ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++) {
+			for (int i_11_ = i; i_11_ < anIntArray3357.length; i_11_++) {
 				if (!aClass181_3360.aClass302_2156.method3515(0, anIntArray3357[i_11_], 0)) {
 					bool = false;
 				}
@@ -151,11 +143,11 @@ public class Class264
 		}
 		Model[] models = new Model[anIntArray3357.length];
 		synchronized (aClass181_3360.aClass302_2156) {
-			for (int i_12_ = i; (i_12_ ^ 0xffffffff) > (anIntArray3357.length ^ 0xffffffff); i_12_++)
+			for (int i_12_ = i; anIntArray3357.length > i_12_; i_12_++)
 				models[i_12_] = Renderer.method3448(anIntArray3357[i_12_], i + 7, 0, aClass181_3360.aClass302_2156);
 		}
-		for (int i_13_ = 0; (i_13_ ^ 0xffffffff) > (anIntArray3357.length ^ 0xffffffff); i_13_++) {
-			if ((models[i_13_].anInt2614 ^ 0xffffffff) > -14) {
+		for (int i_13_ = 0; anIntArray3357.length > i_13_; i_13_++) {
+			if (models[i_13_].anInt2614 < 13) {
 				models[i_13_].method2081(2, 0);
 			}
 		}
@@ -169,7 +161,7 @@ public class Class264
 			return null;
 		}
 		if (aShortArray3349 != null) {
-			for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > (aShortArray3349.length ^ 0xffffffff); i_14_++)
+			for (int i_14_ = 0; aShortArray3349.length > i_14_; i_14_++)
 				model.method2089(aShortArray3349[i_14_], aShortArray3359[i_14_], 77);
 		}
 		if (aShortArray3356 != null) {

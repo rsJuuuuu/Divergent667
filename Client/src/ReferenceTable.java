@@ -31,17 +31,17 @@ public class ReferenceTable
 		anInt297++;
 		BufferedStream buffer = new BufferedStream(Node_Sub38_Sub26.method2875(bs, (byte) -104));
 		int i = buffer.readUnsignedByte();
-		if ((i ^ 0xffffffff) > -6 || i > 7) {
+		if (i < 5 || i > 7) {
 			throw new RuntimeException();
 		}
-		if ((i ^ 0xffffffff) <= -7) {
+		if (i >= 6) {
 			anInt292 = buffer.readInt();
 		} else {
 			anInt292 = 0;
 		}
 		int i_0_ = buffer.readUnsignedByte();
 		boolean bool_1_ = (0x1 & i_0_) != 0;
-		boolean bool_2_ = (0x2 & i_0_ ^ 0xffffffff) != -1;
+		boolean bool_2_ = (0x2 & i_0_) != 0;
 		if (i >= 7) {
 			anInt294 = buffer.readBigSmart();
 		} else {
@@ -50,17 +50,17 @@ public class ReferenceTable
 		int i_3_ = 0;
 		int i_4_ = -1;
 		anIntArray300 = new int[anInt294];
-		if ((i ^ 0xffffffff) <= -8) {
+		if (i >= 7) {
 			for (int i_5_ = 0; anInt294 > i_5_; i_5_++) {
 				anIntArray300[i_5_] = i_3_ += buffer.readBigSmart();
-				if ((anIntArray300[i_5_] ^ 0xffffffff) < (i_4_ ^ 0xffffffff)) {
+				if (i_4_ < anIntArray300[i_5_]) {
 					i_4_ = anIntArray300[i_5_];
 				}
 			}
 		} else {
-			for (int i_6_ = 0; (anInt294 ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++) {
+			for (int i_6_ = 0; i_6_ < anInt294; i_6_++) {
 				anIntArray300[i_6_] = i_3_ += buffer.readUnsignedShort();
-				if ((i_4_ ^ 0xffffffff) > (anIntArray300[i_6_] ^ 0xffffffff)) {
+				if (anIntArray300[i_6_] > i_4_) {
 					i_4_ = anIntArray300[i_6_];
 				}
 			}
@@ -76,25 +76,25 @@ public class ReferenceTable
 		anIntArrayArray290 = new int[anInt296][];
 		if (bool_1_) {
 			anIntArray287 = new int[anInt296];
-			for (int i_7_ = 0; (anInt296 ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++)
+			for (int i_7_ = 0; i_7_ < anInt296; i_7_++)
 				anIntArray287[i_7_] = -1;
-			for (int i_8_ = 0; (anInt294 ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++)
+			for (int i_8_ = 0; i_8_ < anInt294; i_8_++)
 				anIntArray287[anIntArray300[i_8_]] = buffer.readInt();
 			aClass75_301 = new Class75(anIntArray287);
 		}
-		for (int i_9_ = 0; (anInt294 ^ 0xffffffff) < (i_9_ ^ 0xffffffff); i_9_++)
+		for (int i_9_ = 0; i_9_ < anInt294; i_9_++)
 			anIntArray299[anIntArray300[i_9_]] = buffer.readInt();
 		if (bool_2_) {
-			for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > (anInt294 ^ 0xffffffff); i_10_++) {
+			for (int i_10_ = 0; anInt294 > i_10_; i_10_++) {
 				byte[] bs_11_ = new byte[64];
 				buffer.readBytes(bs_11_, 0, 64);
 				aByteArrayArray298[anIntArray300[i_10_]] = bs_11_;
 			}
 		}
-		for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (anInt294 ^ 0xffffffff); i_12_++)
+		for (int i_12_ = 0; anInt294 > i_12_; i_12_++)
 			anIntArray293[anIntArray300[i_12_]] = buffer.readInt();
-		if ((i ^ 0xffffffff) > -8) {
-			for (int i_13_ = 0; (i_13_ ^ 0xffffffff) > (anInt294 ^ 0xffffffff); i_13_++)
+		if (i < 7) {
+			for (int i_13_ = 0; anInt294 > i_13_; i_13_++)
 				anIntArray295[anIntArray300[i_13_]] = buffer.readUnsignedShort();
 			for (int i_14_ = 0; i_14_ < anInt294; i_14_++) {
 				int i_15_ = anIntArray300[i_14_];
@@ -104,7 +104,7 @@ public class ReferenceTable
 				anIntArrayArray290[i_15_] = new int[i_16_];
 				for (int i_18_ = 0; i_18_ < i_16_; i_18_++) {
 					int i_19_ = anIntArrayArray290[i_15_][i_18_] = i_3_ += buffer.readUnsignedShort();
-					if ((i_17_ ^ 0xffffffff) > (i_19_ ^ 0xffffffff)) {
+					if (i_19_ > i_17_) {
 						i_17_ = i_19_;
 					}
 				}
@@ -116,7 +116,7 @@ public class ReferenceTable
 		} else {
 			for (int i_20_ = 0; anInt294 > i_20_; i_20_++)
 				anIntArray295[anIntArray300[i_20_]] = buffer.readBigSmart();
-			for (int i_21_ = 0; (anInt294 ^ 0xffffffff) < (i_21_ ^ 0xffffffff); i_21_++) {
+			for (int i_21_ = 0; i_21_ < anInt294; i_21_++) {
 				int i_22_ = anIntArray300[i_21_];
 				int i_23_ = anIntArray295[i_22_];
 				i_3_ = 0;
@@ -124,7 +124,7 @@ public class ReferenceTable
 				anIntArrayArray290[i_22_] = new int[i_23_];
 				for (int i_25_ = 0; i_23_ > i_25_; i_25_++) {
 					int i_26_ = anIntArrayArray290[i_22_][i_25_] = i_3_ += buffer.readBigSmart();
-					if ((i_26_ ^ 0xffffffff) < (i_24_ ^ 0xffffffff)) {
+					if (i_24_ < i_26_) {
 						i_24_ = i_26_;
 					}
 				}
@@ -141,16 +141,16 @@ public class ReferenceTable
 				int i_28_ = anIntArray300[i_27_];
 				int i_29_ = anIntArray295[i_28_];
 				anIntArrayArray303[i_28_] = new int[anIntArray285[i_28_]];
-				for (int i_30_ = 0; (anIntArray285[i_28_] ^ 0xffffffff) < (i_30_ ^ 0xffffffff); i_30_++)
+				for (int i_30_ = 0; i_30_ < anIntArray285[i_28_]; i_30_++)
 					anIntArrayArray303[i_28_][i_30_] = -1;
-				for (int i_31_ = 0; (i_29_ ^ 0xffffffff) < (i_31_ ^ 0xffffffff); i_31_++) {
+				for (int i_31_ = 0; i_31_ < i_29_; i_31_++) {
 					int i_32_;
-					if (anIntArrayArray290[i_28_] != null) {
-						i_32_ = anIntArrayArray290[i_28_][i_31_];
-					} else {
+					if (anIntArrayArray290[i_28_] == null) {
 						i_32_ = i_31_;
+					} else {
+						i_32_ = anIntArrayArray290[i_28_][i_31_];
 					}
-					anIntArrayArray303[i_28_][i_32_] = buffer.readInt();
+                    anIntArrayArray303[i_28_][i_32_] = buffer.readInt();
 				}
 				aClass75Array288[i_28_] = new Class75(anIntArrayArray303[i_28_]);
 			}
@@ -170,7 +170,7 @@ public class ReferenceTable
 	
 	ReferenceTable(byte[] bs, int i, byte[] bs_33_) {
 		anInt291 = Class66_Sub2_Sub1.method728(bs.length, false, bs);
-		if ((i ^ 0xffffffff) != (anInt291 ^ 0xffffffff)) {
+		if (anInt291 != i) {
 			throw new RuntimeException();
 		}
 		if (bs_33_ != null) {
@@ -179,7 +179,7 @@ public class ReferenceTable
 			}
 			aByteArray289 = GLXToolkit.generateWhirpoolHash((byte) 119, bs, bs.length, 0);
 			for (int i_34_ = 0; i_34_ < 64; i_34_++) {
-				if ((bs_33_[i_34_] ^ 0xffffffff) != (aByteArray289[i_34_] ^ 0xffffffff)) {
+				if (aByteArray289[i_34_] != bs_33_[i_34_]) {
 					throw new RuntimeException();
 				}
 			}

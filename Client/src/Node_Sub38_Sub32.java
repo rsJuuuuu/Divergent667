@@ -28,18 +28,16 @@ public class Node_Sub38_Sub32 extends Node_Sub38
 	while_263_:
 		do {
 			do {
-				if ((i_0_ ^ 0xffffffff) != -1) {
-					if ((i_0_ ^ 0xffffffff) != -2) {
-						if (i_0_ == 2) {
-							break;
-						}
-						break while_263_;
-					}
-				} else {
+				if (i_0_ == 0) {
 					anInt10424 = buffer.readUnsignedShort();
 					return;
-				}
-				anInt10425 = buffer.readUnsignedShort();
+				} else if (i_0_ != 1) {
+                    if (i_0_ == 2) {
+                        break;
+                    }
+                    break while_263_;
+                }
+                anInt10425 = buffer.readUnsignedShort();
 				return;
 			} while (false);
 			anInt10426 = buffer.readUnsignedShort();
@@ -60,7 +58,7 @@ public class Node_Sub38_Sub32 extends Node_Sub38
 			int[] is_3_ = this.method2786(r_Sub2.anInt11054 & i_1_ - 1, 0, 0);
 			int[] is_4_ = this.method2786(i_1_, 0, 0);
 			int[] is_5_ = this.method2786(i_1_ + 1 & r_Sub2.anInt11054, 0, 0);
-			for (int i_6_ = 0; (i_6_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_6_++) {
+			for (int i_6_ = 0; Class339_Sub7.anInt8728 > i_6_; i_6_++) {
 				int i_7_ = i_2_ * (is_5_[i_6_] + -is_3_[i_6_]) >> 12;
 				int i_8_ = (-is_4_[Class303.anInt3824 & i_6_ - -1] + is_4_[Class303.anInt3824 & i_6_ - 1]) * i_2_ >> 12;
 				int i_9_ = i_8_ >> 4;
@@ -71,10 +69,10 @@ public class Node_Sub38_Sub32 extends Node_Sub38
 				if (i_9_ > 255) {
 					i_9_ = 255;
 				}
-				if ((i_10_ ^ 0xffffffff) > -1) {
+				if (i_10_ < 0) {
 					i_10_ = -i_10_;
 				}
-				if ((i_10_ ^ 0xffffffff) < -256) {
+				if (i_10_ > 255) {
 					i_10_ = 255;
 				}
 				int i_11_ = Node_Sub25.aByteArray7239[i_9_ + ((1 + i_10_) * i_10_ >> 1)] & 0xff;
@@ -98,7 +96,7 @@ public class Node_Sub38_Sub32 extends Node_Sub38
 		if (i_16_ != 929798380) {
 			return 77;
 		}
-		if ((i_17_ ^ 0xffffffff) <= (i ^ 0xffffffff)) {
+		if (i <= i_17_) {
 			if (i_15_ < i_17_) {
 				return i_15_;
 			}
@@ -127,7 +125,7 @@ public class Node_Sub38_Sub32 extends Node_Sub38
 		int i_18_ = anIntArray10432[1] * anIntArray10432[1] >> 12;
 		int i_19_ = anIntArray10432[2] * anIntArray10432[2] >> 12;
 		int i_20_ = (int) (Math.sqrt((double) (i + (i_18_ + i_19_) >> 12)) * 4096.0);
-		if ((i_20_ ^ 0xffffffff) != -1) {
+		if (i_20_ != 0) {
 			anIntArray10432[0] = (anIntArray10432[0] << 12) / i_20_;
 			anIntArray10432[1] = (anIntArray10432[1] << 12) / i_20_;
 			anIntArray10432[2] = (anIntArray10432[2] << 12) / i_20_;

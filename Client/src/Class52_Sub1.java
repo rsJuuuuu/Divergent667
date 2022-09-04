@@ -50,15 +50,15 @@ public class Class52_Sub1 extends Class52
 					}
 				}
 			}
-			if (!abstracttoolkit.method1295(Node_Sub52.aClass68_7639, Class372.aClass372_4594, 1)) {
+			if (abstracttoolkit.method1295(Node_Sub52.aClass68_7639, Class372.aClass372_4594, 1)) {
+				anInterface13_Impl1_5560 = abstracttoolkit.method1252(i_1_, bs, Node_Sub52.aClass68_7639, i_1_, (byte) -3, false);
+			} else {
 				int[] is = new int[bs.length];
 				for (int i_15_ = 0; i_15_ < bs.length; i_15_++)
 					is[i_15_] = bs[i_15_] << 24;
 				anInterface13_Impl1_5560 = abstracttoolkit.method1258(false, i_1_, true, i_1_, is);
-			} else {
-				anInterface13_Impl1_5560 = abstracttoolkit.method1252(i_1_, bs, Node_Sub52.aClass68_7639, i_1_, (byte) -3, false);
 			}
-			aBoolean5559 = true;
+            aBoolean5559 = true;
 		} else {
 			int[] is = new int[i_1_ * i_1_];
 			for (int i_16_ = 0; i_16_ < 256; i_16_++) {
@@ -72,7 +72,19 @@ public class Class52_Sub1 extends Class52
 				int i_22_ = i_16_ / 16 * i;
 				int i_23_ = i_22_ * i_1_ + i_21_;
 				int i_24_ = 0;
-				if (bs != null) {
+				if (bs == null) {
+					for (int i_27_ = 0; i_27_ < i_19_; i_27_++) {
+						for (int i_28_ = 0; i_28_ < i_20_; i_28_++) {
+							int i_29_;
+							if ((i_29_ = bs_18_[i_24_++]) == 0) {
+								i_23_++;
+							} else {
+								is[i_23_++] = ~0xffffff | is_17_[i_29_ & 0xff];
+							}
+                        }
+						i_23_ += i_1_ - i_20_;
+					}
+				} else {
 					for (int i_25_ = 0; i_25_ < i_19_; i_25_++) {
 						for (int i_26_ = 0; i_26_ < i_20_; i_26_++) {
 							is[i_23_++] = bs[i_24_] << 24 | is_17_[bs_18_[i_24_] & 0xff];
@@ -80,20 +92,8 @@ public class Class52_Sub1 extends Class52
 						}
 						i_23_ += i_1_ - i_20_;
 					}
-				} else {
-					for (int i_27_ = 0; i_27_ < i_19_; i_27_++) {
-						for (int i_28_ = 0; i_28_ < i_20_; i_28_++) {
-							int i_29_;
-							if ((i_29_ = bs_18_[i_24_++]) != 0) {
-								is[i_23_++] = ~0xffffff | is_17_[i_29_ & 0xff];
-							} else {
-								i_23_++;
-							}
-						}
-						i_23_ += i_1_ - i_20_;
-					}
 				}
-			}
+            }
 			anInterface13_Impl1_5560 = abstracttoolkit.method1258(false, i_1_, true, i_1_, is);
 			aBoolean5559 = false;
 		}

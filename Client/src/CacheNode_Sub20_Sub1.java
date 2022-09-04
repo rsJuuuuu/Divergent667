@@ -29,14 +29,14 @@ public class CacheNode_Sub20_Sub1 extends CacheNode_Sub20
 			float f_14_ = f_1_ + f_5_ * f_8_;
 			int i_15_ = (int) f_12_ >> 9;
 			int i_16_ = (int) f_14_ >> 9;
-			if ((i_15_ ^ 0xffffffff) < -1 && (i_16_ ^ 0xffffffff) < -1 && Node_Sub54.GAME_SCENE_WDITH > i_15_ && (i_16_ ^ 0xffffffff) > (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff)) {
+			if (i_15_ > 0 && i_16_ > 0 && Node_Sub54.GAME_SCENE_WDITH > i_15_ && Class377_Sub1.GAME_SCENE_HEIGHT > i_16_) {
 				int i_17_ = Class295.myPlayer.plane;
-				if (i_17_ < 3 && (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_15_][i_16_] & 0x2 ^ 0xffffffff) != -1) {
+				if (i_17_ < 3 && (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_15_][i_16_] & 0x2) != 0) {
 					i_17_++;
 				}
 				int i_18_ = Node_Sub38_Sub37.aPlaneArray10466[i_17_].method3260((int) f_14_, -113, (int) f_12_);
 				if (f_13_ > (float) i_18_) {
-					if ((i ^ 0xffffffff) > -3) {
+					if (i < 2) {
 						return f_5_;
 					}
 					return method2412((byte) 52, f_9_, f_14_, -1 + i, f_11_, f_13_, f_10_, f_12_) * 0.1F + (-0.1F + f_5_);

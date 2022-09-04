@@ -65,18 +65,18 @@ public class Class171
 		if (anInt2059 > i_13_ || anInt2063 < i_13_) {
 			return false;
 		}
-		if ((anInt2072 ^ 0xffffffff) < (i ^ 0xffffffff) || i > anInt2073) {
+		if (i < anInt2072 || i > anInt2073) {
 			return false;
 		}
 		if (b < 105) {
 			method1793(87, 15, -33, 83, -55, -120, -79, 45, -10, -121, 6);
 		}
-		if (i_12_ < anInt2068 || (anInt2061 ^ 0xffffffff) > (i_12_ ^ 0xffffffff)) {
+		if (i_12_ < anInt2068 || i_12_ > anInt2061) {
 			return false;
 		}
 		int i_14_ = -anInt2060 + i_13_;
 		int i_15_ = i_12_ - anInt2067;
-        return (i_15_ * i_15_ + i_14_ * i_14_ ^ 0xffffffff) > (anInt2069 ^ 0xffffffff);
+        return anInt2069 > i_15_ * i_15_ + i_14_ * i_14_;
     }
 	
 	Class171(int i, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_) {

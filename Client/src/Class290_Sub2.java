@@ -21,14 +21,14 @@ public class Class290_Sub2 extends Class290
 		anAbstractToolkit3654.method1362(255, 1);
 		if ((i & 0x80) == 0) {
 			if ((i_0_ & 0x1) == 1) {
-				if (!aClass5_8066.aBoolean128) {
-					int i_1_ = anAbstractToolkit3654.anInt6332 % 4000 * 16 / 4000;
-					anAbstractToolkit3654.method1312((byte) -21, aClass5_8066.anInterface13_Impl1Array131[i_1_]);
-				} else {
+				if (aClass5_8066.aBoolean128) {
 					aFloat8065 = (float) (anAbstractToolkit3654.anInt6332 % 4000) / 4000.0F;
 					anAbstractToolkit3654.method1312((byte) -21, aClass5_8066.anInterface13_Impl3_130);
+				} else {
+					int i_1_ = anAbstractToolkit3654.anInt6332 % 4000 * 16 / 4000;
+					anAbstractToolkit3654.method1312((byte) -21, aClass5_8066.anInterface13_Impl1Array131[i_1_]);
 				}
-			} else if (aClass5_8066.aBoolean128) {
+            } else if (aClass5_8066.aBoolean128) {
 				anAbstractToolkit3654.method1312((byte) -21, aClass5_8066.anInterface13_Impl3_130);
 			} else {
 				anAbstractToolkit3654.method1312((byte) -21, aClass5_8066.anInterface13_Impl1Array131[0]);

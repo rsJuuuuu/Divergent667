@@ -53,43 +53,43 @@ public class Class163
 				i_4_ = anIntArray2010[i_4_];
 			}
 			int i_6_;
-			if (((i_6_ = anIntArray2010[i_4_]) ^ 0xffffffff) > -1) {
+			if ((i_6_ = anIntArray2010[i_4_]) < 0) {
 				bs[i_3_++] = (byte) (i_6_ ^ 0xffffffff);
 				if (i_3_ >= i_1_) {
 					break;
 				}
 				i_4_ = 0;
 			}
-			if ((0x40 & b ^ 0xffffffff) == -1) {
+			if ((0x40 & b) == 0) {
 				i_4_++;
 			} else {
 				i_4_ = anIntArray2010[i_4_];
 			}
 			if ((i_6_ = anIntArray2010[i_4_]) < 0) {
-				bs[i_3_++] = (byte) (i_6_ ^ 0xffffffff);
-				if ((i_3_ ^ 0xffffffff) <= (i_1_ ^ 0xffffffff)) {
-					break;
-				}
-				i_4_ = 0;
-			}
-			if ((b & 0x20 ^ 0xffffffff) != -1) {
-				i_4_ = anIntArray2010[i_4_];
-			} else {
-				i_4_++;
-			}
-			if (((i_6_ = anIntArray2010[i_4_]) ^ 0xffffffff) > -1) {
 				bs[i_3_++] = (byte) (i_6_ ^ 0xffffffff);
 				if (i_1_ <= i_3_) {
 					break;
 				}
 				i_4_ = 0;
 			}
-			if ((0x10 & b ^ 0xffffffff) != -1) {
-				i_4_ = anIntArray2010[i_4_];
-			} else {
+			if ((b & 0x20) == 0) {
 				i_4_++;
+			} else {
+				i_4_ = anIntArray2010[i_4_];
 			}
-			if ((i_6_ = anIntArray2010[i_4_]) < 0) {
+            if ((i_6_ = anIntArray2010[i_4_]) < 0) {
+				bs[i_3_++] = (byte) (i_6_ ^ 0xffffffff);
+				if (i_1_ <= i_3_) {
+					break;
+				}
+				i_4_ = 0;
+			}
+			if ((0x10 & b) == 0) {
+				i_4_++;
+			} else {
+				i_4_ = anIntArray2010[i_4_];
+			}
+            if ((i_6_ = anIntArray2010[i_4_]) < 0) {
 				bs[i_3_++] = (byte) (i_6_ ^ 0xffffffff);
 				if (i_1_ <= i_3_) {
 					break;
@@ -108,19 +108,19 @@ public class Class163
 				}
 				i_4_ = 0;
 			}
-			if ((b & 0x4 ^ 0xffffffff) != -1) {
-				i_4_ = anIntArray2010[i_4_];
-			} else {
+			if ((b & 0x4) == 0) {
 				i_4_++;
+			} else {
+				i_4_ = anIntArray2010[i_4_];
 			}
-			if (((i_6_ = anIntArray2010[i_4_]) ^ 0xffffffff) > -1) {
+            if ((i_6_ = anIntArray2010[i_4_]) < 0) {
 				bs[i_3_++] = (byte) (i_6_ ^ 0xffffffff);
 				if (i_3_ >= i_1_) {
 					break;
 				}
 				i_4_ = 0;
 			}
-			if ((0x2 & b ^ 0xffffffff) == -1) {
+			if ((0x2 & b) == 0) {
 				i_4_++;
 			} else {
 				i_4_ = anIntArray2010[i_4_];
@@ -269,22 +269,22 @@ public class Class163
 		anIntArray2010 = new int[8];
 		int[] is = new int[33];
 		int i_27_ = 0;
-		for (int i_28_ = 0; (i_28_ ^ 0xffffffff) > (i ^ 0xffffffff); i_28_++) {
+		for (int i_28_ = 0; i > i_28_; i_28_++) {
 			int i_29_ = bs[i_28_];
-			if ((i_29_ ^ 0xffffffff) != -1) {
+			if (i_29_ != 0) {
 				int i_30_ = 1 << 32 + -i_29_;
 				int i_31_ = is[i_29_];
 				anIntArray2017[i_28_] = i_31_;
 				int i_32_;
-				if ((i_30_ & i_31_ ^ 0xffffffff) == -1) {
+				if ((i_30_ & i_31_) == 0) {
 					i_32_ = i_30_ | i_31_;
-					for (int i_33_ = -1 + i_29_; (i_33_ ^ 0xffffffff) <= -2; i_33_--) {
+					for (int i_33_ = -1 + i_29_; i_33_ >= 1; i_33_--) {
 						int i_34_ = is[i_33_];
-						if ((i_31_ ^ 0xffffffff) != (i_34_ ^ 0xffffffff)) {
+						if (i_34_ != i_31_) {
 							break;
 						}
 						int i_35_ = 1 << -i_33_ + 32;
-						if ((i_34_ & i_35_ ^ 0xffffffff) != -1) {
+						if ((i_34_ & i_35_) != 0) {
 							is[i_33_] = is[-1 + i_33_];
 							break;
 						}
@@ -295,23 +295,23 @@ public class Class163
 				}
 				is[i_29_] = i_32_;
 				for (int i_36_ = 1 + i_29_; i_36_ <= 32; i_36_++) {
-					if ((is[i_36_] ^ 0xffffffff) == (i_31_ ^ 0xffffffff)) {
+					if (i_31_ == is[i_36_]) {
 						is[i_36_] = i_32_;
 					}
 				}
 				int i_37_ = 0;
-				for (int i_38_ = 0; (i_29_ ^ 0xffffffff) < (i_38_ ^ 0xffffffff); i_38_++) {
+				for (int i_38_ = 0; i_38_ < i_29_; i_38_++) {
 					int i_39_ = -2147483648 >>> i_38_;
-					if ((i_39_ & i_31_) != 0) {
+					if ((i_39_ & i_31_) == 0) {
+						i_37_++;
+					} else {
 						if (anIntArray2010[i_37_] == 0) {
 							anIntArray2010[i_37_] = i_27_;
 						}
 						i_37_ = anIntArray2010[i_37_];
-					} else {
-						i_37_++;
 					}
-					i_39_ >>>= 1;
-					if ((anIntArray2010.length ^ 0xffffffff) >= (i_37_ ^ 0xffffffff)) {
+                    i_39_ >>>= 1;
+					if (i_37_ >= anIntArray2010.length) {
 						int[] is_40_ = new int[anIntArray2010.length * 2];
 						for (int i_41_ = 0; i_41_ < anIntArray2010.length; i_41_++)
 							is_40_[i_41_] = anIntArray2010[i_41_];
@@ -333,7 +333,7 @@ public class Class163
 		}
 		for (int i_42_ = 0; CacheNode_Sub11.aByteArrayArrayArray9550.length > i_42_; i_42_++) {
 			for (int i_43_ = 0; CacheNode_Sub11.aByteArrayArrayArray9550[0].length > i_43_; i_43_++) {
-				for (int i_44_ = 0; (CacheNode_Sub11.aByteArrayArrayArray9550[0][0].length ^ 0xffffffff) < (i_44_ ^ 0xffffffff); i_44_++)
+				for (int i_44_ = 0; i_44_ < CacheNode_Sub11.aByteArrayArrayArray9550[0][0].length; i_44_++)
 					CacheNode_Sub11.aByteArrayArrayArray9550[i_42_][i_43_][i_44_] = (byte) 0;
 			}
 		}

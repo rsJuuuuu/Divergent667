@@ -58,13 +58,13 @@ abstract class CacheNode_Sub20 extends CacheNode
 	static {
 		for (int i = 0; i < 256; i++) {
 			long l = (long) i;
-			for (int i_0_ = 0; (i_0_ ^ 0xffffffff) > -9; i_0_++) {
-				if ((0x1L & l ^ 0xffffffffffffffffL) != -2L) {
-					l >>>= 1;
-				} else {
+			for (int i_0_ = 0; i_0_ < 8; i_0_++) {
+				if ((0x1L & l) == 1) {
 					l = l >>> 1 ^ ~0x3693a86a2878f0bdL;
+				} else {
+					l >>>= 1;
 				}
-			}
+            }
 			aLongArray9626[i] = l;
 		}
 	}

@@ -12,7 +12,7 @@ public class Class256
 	
 	final void method3119(int i) {
 		anInt3241++;
-		if ((RuntimeException_Sub1.anInt4922 ^ 0xffffffff) > -501) {
+		if (RuntimeException_Sub1.anInt4922 < 500) {
 			aClass256_3238 = Class329.aClass256_4122;
 			aMobile3239 = null;
 			if (i != -20952) {

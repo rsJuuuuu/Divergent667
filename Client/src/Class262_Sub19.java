@@ -16,7 +16,7 @@ public class Class262_Sub19 extends Class262
 		anInt7857++;
 		Node_Sub19 node_sub19 = null;
 		for (Node_Sub19 node_sub19_6_ = (Node_Sub19) Class89.aClass312_1199.method3613(65280); node_sub19_6_ != null; node_sub19_6_ = (Node_Sub19) Class89.aClass312_1199.method3620(16776960)) {
-			if (i_3_ == node_sub19_6_.anInt7165 && node_sub19_6_.anInt7171 == i_2_ && i_5_ == node_sub19_6_.anInt7161 && (node_sub19_6_.anInt7166 ^ 0xffffffff) == (i_1_ ^ 0xffffffff)) {
+			if (i_3_ == node_sub19_6_.anInt7165 && node_sub19_6_.anInt7171 == i_2_ && i_5_ == node_sub19_6_.anInt7161 && i_1_ == node_sub19_6_.anInt7166) {
 				node_sub19 = node_sub19_6_;
 				break;
 			}
@@ -57,24 +57,24 @@ public class Class262_Sub19 extends Class262
 	final void method3148(int i) {
 		anInt7856++;
 		Node_Sub32 node_sub32 = (Node_Sub32) Class18.aHashTable308.method1518(3512, hash);
-		if (node_sub32 != null) {
-			node_sub32.anInt7381 = value;
-		} else {
+		if (node_sub32 == null) {
 			if (i > -102) {
 				aShortArray7852 = null;
 			}
 			Class18.aHashTable308.method1515(hash, new Node_Sub32(value), -126);
+		} else {
+			node_sub32.anInt7381 = value;
 		}
-	}
+    }
 	
 	Class262_Sub19(BufferedStream buffer, boolean bool) {
 		super(buffer);
 		int i = buffer.readUnsignedShort();
-		if (!bool) {
-			hash = (long) i;
-		} else {
+		if (bool) {
 			hash = 0x100000000L | (long) i;
+		} else {
+			hash = (long) i;
 		}
-		value = buffer.readInt();
+        value = buffer.readInt();
 	}
 }

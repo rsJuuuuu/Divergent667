@@ -9,7 +9,7 @@ import jaclib.peer.ti;
 public class PixelBuffer extends os implements Buffer
 {
 	public final void b(int[] is, int i, int i_0_, int i_1_) {
-		if ((is.length ^ 0xffffffff) > (i - -i_1_ ^ 0xffffffff) | (-1 < (i ^ 0xffffffff) | is == null) | i_0_ < 0 || getSize() < i_1_ * 4 + i_0_) {
+		if (i - -i_1_ > is.length | (i < 0 | is == null) | i_0_ < 0 || getSize() < i_1_ * 4 + i_0_) {
 			throw new sja();
 		}
 		puti(is, i, i_0_, i_1_);
@@ -27,7 +27,7 @@ public class PixelBuffer extends os implements Buffer
 	private final native void geti(int[] is, int i, int i_4_, int i_5_);
 	
 	public final void a(int[] is, int i, int i_6_, int i_7_) {
-		if ((i ^ 0xffffffff) > -1 | is == null | is.length < i_7_ + i | i_6_ < 0 || getSize() < 4 * i_7_ + i_6_) {
+		if (i < 0 | is == null | is.length < i_7_ + i | i_6_ < 0 || getSize() < 4 * i_7_ + i_6_) {
 			throw new sja();
 		}
 		geti(is, i, i_6_, i_7_);
@@ -42,7 +42,7 @@ public class PixelBuffer extends os implements Buffer
 	private final native void puti(int[] is, int i, int i_10_, int i_11_);
 	
 	public final void a(byte[] bs, int i, int i_12_, int i_13_) {
-		if ((i_12_ ^ 0xffffffff) > -1 | (i_13_ + i > bs.length | (null == bs | (i ^ 0xffffffff) > -1)) || (i_13_ + i_12_ ^ 0xffffffff) < (getSize() ^ 0xffffffff)) {
+		if (i_12_ < 0 | (i_13_ + i > bs.length | (null == bs | i < 0)) || getSize() < i_13_ + i_12_) {
 			throw new sja();
 		}
 		putub(bs, i, i_12_, i_13_);

@@ -25,7 +25,7 @@ public class Class167
 			aClass318_2034 = null;
 		}
 		int i_2_;
-		for (/**/; (i ^ 0xffffffff) != -1; i = i_2_) {
+		for (/**/; i != 0; i = i_2_) {
 			i_2_ = i_0_ % i;
 			i_0_ = i;
 		}

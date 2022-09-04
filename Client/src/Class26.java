@@ -15,7 +15,7 @@ public class Class26
 			method312('\uffdc', (byte) 89);
 		}
 		anInt454++;
-        return !((i ^ 0xffffffff) != -4 && (i ^ 0xffffffff) != -5 && (i ^ 0xffffffff) != -6 && i != 6);
+        return !(i != 3 && i != 4 && i != 5 && i != 6);
     }
 	
 	public final String toString() {
@@ -26,87 +26,63 @@ public class Class26
 	static final byte method312(char c, byte b) {
 		anInt456++;
 		byte b_1_;
-		if (((c ^ 0xffffffff) >= -1 || (c ^ 0xffffffff) <= -129) && ((c ^ 0xffffffff) > -161 || (c ^ 0xffffffff) < -256)) {
+		if ((c <= 0 || c >= 128) && (c < 160 || c > 255)) {
 			if (c == 8364) {
 				b_1_ = (byte) -128;
-			} else if ((c ^ 0xffffffff) != -8219) {
-				if ((c ^ 0xffffffff) == -403) {
-					b_1_ = (byte) -125;
-				} else if (c != 8222) {
-					if (c != 8230) {
-						if ((c ^ 0xffffffff) == -8225) {
-							b_1_ = (byte) -122;
-						} else if ((c ^ 0xffffffff) == -8226) {
-							b_1_ = (byte) -121;
-						} else if ((c ^ 0xffffffff) != -711) {
-							if ((c ^ 0xffffffff) != -8241) {
-								if (c == 352) {
-									b_1_ = (byte) -118;
-								} else if (c != 8249) {
-									if ((c ^ 0xffffffff) == -339) {
-										b_1_ = (byte) -116;
-									} else if ((c ^ 0xffffffff) != -382) {
-										if ((c ^ 0xffffffff) == -8217) {
-											b_1_ = (byte) -111;
-										} else if (c != 8217) {
-											if ((c ^ 0xffffffff) != -8221) {
-												if (c == 8221) {
-													b_1_ = (byte) -108;
-												} else if (c == 8226) {
-													b_1_ = (byte) -107;
-												} else if (c != 8211) {
-													if ((c ^ 0xffffffff) == -8213) {
-														b_1_ = (byte) -105;
-													} else if (c == 732) {
-														b_1_ = (byte) -104;
-													} else if (c == 8482) {
-														b_1_ = (byte) -103;
-													} else if ((c ^ 0xffffffff) != -354) {
-														if ((c ^ 0xffffffff) == -8251) {
-															b_1_ = (byte) -101;
-														} else if (c != 339) {
-															if ((c ^ 0xffffffff) == -383) {
-																b_1_ = (byte) -98;
-															} else if ((c ^ 0xffffffff) == -377) {
-																b_1_ = (byte) -97;
-															} else {
-																b_1_ = (byte) 63;
-															}
-														} else {
-															b_1_ = (byte) -100;
-														}
-													} else {
-														b_1_ = (byte) -102;
-													}
-												} else {
-													b_1_ = (byte) -106;
-												}
-											} else {
-												b_1_ = (byte) -109;
-											}
-										} else {
-											b_1_ = (byte) -110;
-										}
-									} else {
-										b_1_ = (byte) -114;
-									}
-								} else {
-									b_1_ = (byte) -117;
-								}
-							} else {
-								b_1_ = (byte) -119;
-							}
-						} else {
-							b_1_ = (byte) -120;
-						}
-					} else {
-						b_1_ = (byte) -123;
-					}
-				} else {
-					b_1_ = (byte) -124;
-				}
-			} else {
+			} else if (c == 8218) {
 				b_1_ = (byte) -126;
+			} else if (c == 402) {
+				b_1_ = (byte) -125;
+			} else if (c == 8222) {
+				b_1_ = (byte) -124;
+			} else if (c == 8230) {
+				b_1_ = (byte) -123;
+			} else if (c == 8224) {
+				b_1_ = (byte) -122;
+			} else if (c == 8225) {
+				b_1_ = (byte) -121;
+			} else if (c == 710) {
+				b_1_ = (byte) -120;
+			} else if (c == 8240) {
+				b_1_ = (byte) -119;
+			} else if (c == 352) {
+				b_1_ = (byte) -118;
+			} else if (c == 8249) {
+				b_1_ = (byte) -117;
+			} else if (c == 338) {
+				b_1_ = (byte) -116;
+			} else if (c == 381) {
+				b_1_ = (byte) -114;
+			} else if (c == 8216) {
+				b_1_ = (byte) -111;
+			} else if (c == 8217) {
+				b_1_ = (byte) -110;
+			} else if (c == 8220) {
+				b_1_ = (byte) -109;
+			} else if (c == 8221) {
+				b_1_ = (byte) -108;
+			} else if (c == 8226) {
+				b_1_ = (byte) -107;
+			} else if (c == 8211) {
+				b_1_ = (byte) -106;
+			} else if (c == 8212) {
+				b_1_ = (byte) -105;
+			} else if (c == 732) {
+				b_1_ = (byte) -104;
+			} else if (c == 8482) {
+				b_1_ = (byte) -103;
+			} else if (c == 353) {
+				b_1_ = (byte) -102;
+			} else if (c == 8250) {
+				b_1_ = (byte) -101;
+			} else if (c == 339) {
+				b_1_ = (byte) -100;
+			} else if (c == 382) {
+				b_1_ = (byte) -98;
+			} else if (c == 376) {
+				b_1_ = (byte) -97;
+			} else {
+				b_1_ = (byte) 63;
 			}
 		} else {
 			b_1_ = (byte) c;

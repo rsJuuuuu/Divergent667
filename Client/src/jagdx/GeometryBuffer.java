@@ -13,7 +13,7 @@ public class GeometryBuffer extends os implements Buffer
 	private final native void getub(byte[] bs, int i, int i_2_, int i_3_);
 	
 	public final void a(byte[] bs, int i, int i_4_, int i_5_) {
-		if (bs.length < i + i_5_ | (i < 0 | null == bs) | -1 < (i_4_ ^ 0xffffffff) || (i_5_ + i_4_ ^ 0xffffffff) < (getSize() ^ 0xffffffff)) {
+		if (bs.length < i + i_5_ | (i < 0 | null == bs) | i_4_ < 0 || getSize() < i_5_ + i_4_) {
 			throw new sja();
 		}
 		putub(bs, i, i_4_, i_5_);

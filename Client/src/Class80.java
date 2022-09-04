@@ -26,7 +26,7 @@ public class Class80 implements Interface15_Impl2
 	public final boolean method37(int i, int i_1_, int i_2_) {
 		aByte9079 = (byte) i;
 		anInt9076 = i_1_;
-		if ((anInt9077 ^ 0xffffffff) > (anInt9076 ^ 0xffffffff)) {
+		if (anInt9076 > anInt9077) {
 			int i_3_ = 8;
 			int i_4_;
 			if (aBoolean9078) {

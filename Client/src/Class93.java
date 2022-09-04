@@ -97,7 +97,7 @@ abstract class Class93
 		if (!bool) {
 			ClientScriptsExecutor.parseIComponentScript(i_9_);
 		}
-		if (!bool && (Class320_Sub15.WINDOWS_PANE_ID ^ 0xffffffff) != 0) {
+		if (!bool && Class320_Sub15.WINDOWS_PANE_ID != -1) {
 			Class76.method770(i_11_ + 115, 1, Class320_Sub15.WINDOWS_PANE_ID);
 		}
 		return node_sub2;

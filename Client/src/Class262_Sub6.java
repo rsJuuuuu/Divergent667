@@ -34,7 +34,7 @@ public class Class262_Sub6 extends Class262
 			int i_0_ = 0;
 			@SuppressWarnings("unused")
 			int i_1_ = -16 / ((b - -58) / 52);
-			for (/**/; (i_0_ ^ 0xffffffff) > (node_sub16.anIntArray7137.length ^ 0xffffffff); i_0_++) {
+			for (/**/; node_sub16.anIntArray7137.length > i_0_; i_0_++) {
 				node_sub16.anIntArray7137[i_0_] = -1;
 				node_sub16.anIntArray7138[i_0_] = 0;
 			}
@@ -55,7 +55,7 @@ public class Class262_Sub6 extends Class262
 			aClass192_7748 = null;
 		}
 		for (TileMessage entitynode_sub2 = (TileMessage) Class226.aClass103_2684.method1113((byte) 122); entitynode_sub2 != null; entitynode_sub2 = (TileMessage) Class226.aClass103_2684.method1108(88)) {
-			if ((entitynode_sub2.completeCycle ^ 0xffffffff) >= (Class174.clientCycle ^ 0xffffffff)) {
+			if (Class174.clientCycle >= entitynode_sub2.completeCycle) {
 				entitynode_sub2.method803(false);
 			} else {
 				Animable_Sub1.method826(2 * entitynode_sub2.height, -1, (entitynode_sub2.x << 9) + 256, i_4_, i >> 1, i_2_, (entitynode_sub2.y << 9) - -256, entitynode_sub2.plane, i_3_ >> 1);

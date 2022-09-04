@@ -76,7 +76,7 @@ public class Class12
 		if (Node_Sub40.aClass233_7514 != null) {
 			for (CacheNode_Sub14 cachenode_sub14 = (CacheNode_Sub14) aClass158_188.method1723(13); cachenode_sub14 != null; cachenode_sub14 = (CacheNode_Sub14) aClass158_188.method1721(0)) {
 				if (!cachenode_sub14.method2350((byte) -38)) {
-					if ((++cachenode_sub14.aLong7037 ^ 0xffffffffffffffffL) < ((long) i ^ 0xffffffffffffffffL)) {
+					if ((long) i < ++cachenode_sub14.aLong7037) {
 						CacheNode_Sub14 cachenode_sub14_0_ = Node_Sub40.aClass233_7514.method2143(cachenode_sub14, 16460);
 						aHashTable190.method1515(cachenode_sub14.aLong2797, cachenode_sub14_0_, -125);
 						Node_Sub38_Sub19.method2847(255, cachenode_sub14, cachenode_sub14_0_);
@@ -127,7 +127,7 @@ public class Class12
 		if (bool == false) {
 			method195(0, interface18);
 			anInt192 -= i;
-			while ((anInt192 ^ 0xffffffff) > -1) {
+			while (anInt192 < 0) {
 				CacheNode_Sub14 cachenode_sub14 = (CacheNode_Sub14) aClass158_188.method1717(-107);
 				method198(false, cachenode_sub14);
 			}
@@ -152,18 +152,18 @@ public class Class12
 					cachenode_sub14.method2275(-56);
 					anInt192 += cachenode_sub14.anInt9574;
 				} else {
-					if (!cachenode_sub14.method2350((byte) -38)) {
-						aClass158_188.method1719(true, cachenode_sub14);
-						cachenode_sub14.aLong7037 = 0L;
-					} else {
+					if (cachenode_sub14.method2350((byte) -38)) {
 						CacheNode_Sub14_Sub2 cachenode_sub14_sub2 = new CacheNode_Sub14_Sub2(interface18, object, cachenode_sub14.anInt9574);
 						aHashTable190.method1515(cachenode_sub14.aLong2797, cachenode_sub14_sub2, -124);
 						aClass158_188.method1719(true, cachenode_sub14_sub2);
 						cachenode_sub14_sub2.aLong7037 = 0L;
 						cachenode_sub14.method2160((byte) 88);
 						cachenode_sub14.method2275(-89);
+					} else {
+						aClass158_188.method1719(true, cachenode_sub14);
+						cachenode_sub14.aLong7037 = 0L;
 					}
-					return object;
+                    return object;
 				}
 			}
 		}

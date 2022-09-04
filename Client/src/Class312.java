@@ -130,9 +130,9 @@ public class Class312
 	static final void method3618(int i) {
 		anInt3971++;
 		if (Node_Sub38_Sub5.aBoolean10125 && i == 16711680) {
-			while ((Class180.aClass377_Sub1Array2143.length ^ 0xffffffff) < (EntityNode_Sub3_Sub1.anInt9163 ^ 0xffffffff)) {
+			while (EntityNode_Sub3_Sub1.anInt9163 < Class180.aClass377_Sub1Array2143.length) {
 				Class377_Sub1 class377_sub1 = Class180.aClass377_Sub1Array2143[EntityNode_Sub3_Sub1.anInt9163];
-				if (class377_sub1 == null || (class377_sub1.anInt8779 ^ 0xffffffff) != 0) {
+				if (class377_sub1 == null || class377_sub1.anInt8779 != -1) {
 					EntityNode_Sub3_Sub1.anInt9163++;
 				} else {
 					if (GLToolkit.aNode_Sub7_6558 == null) {
@@ -226,10 +226,10 @@ public class Class312
 		while_228_:
 			for (int i_10_ = 0; i_10_ < class244s.length; i_10_++) {
 				Class244 class244 = class244s[i_10_];
-				if (((class244.anInt3079 ^ 0xffffffff) >= -1 || (class244.anInt3079 ^ 0xffffffff) <= -25) && (class244.anInt3084 ^ 0xffffffff) <= -801 && (class244.anInt3078 ^ 0xffffffff) <= -601 && (i_9_ != 2 || (class244.anInt3084 ^ 0xffffffff) >= -801 && (class244.anInt3078 ^ 0xffffffff) >= -601) && (i_9_ != 1 || (class244.anInt3084 ^ 0xffffffff) >= -1025 && class244.anInt3078 <= 768)) {
+				if ((class244.anInt3079 <= 0 || class244.anInt3079 >= 24) && class244.anInt3084 >= 800 && class244.anInt3078 >= 600 && (i_9_ != 2 || class244.anInt3084 <= 800 && class244.anInt3078 <= 600) && (i_9_ != 1 || class244.anInt3084 <= 1024 && class244.anInt3078 <= 768)) {
 					for (int i_11_ = 0; i_11_ < i_8_; i_11_++) {
 						Class244 class244_12_ = class244s_7_[i_11_];
-						if ((class244.anInt3084 ^ 0xffffffff) == (class244_12_.anInt3084 ^ 0xffffffff) && class244.anInt3078 == class244_12_.anInt3078) {
+						if (class244_12_.anInt3084 == class244.anInt3084 && class244.anInt3078 == class244_12_.anInt3078) {
 							if (class244_12_.anInt3079 < class244.anInt3079) {
 								class244s_7_[i_11_] = class244;
 							}

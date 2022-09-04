@@ -252,30 +252,28 @@ public class Mobile_Sub2 extends Mobile implements Interface19
 		Class336 class336 = graphicstoolkit.A();
 		class336.method3854(anInt5934, anInt5937, anInt5940);
 		EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10721, (byte) 95, 1);
-		if (!Node_Sub15_Sub10.aBoolean9850) {
-			aDrawableModel10724.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], 0);
-		} else {
+		if (Node_Sub15_Sub10.aBoolean9850) {
 			aDrawableModel10724.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
+		} else {
+			aDrawableModel10724.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], 0);
 		}
-		return entitynode_sub6;
+        return entitynode_sub6;
 	}
 	
 	final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_16_, byte b, int i_17_, Animable animable) {
 		anInt10717++;
-		if (!(animable instanceof Animable_Sub2_Sub2)) {
-			if (animable instanceof Mobile_Sub2) {
-				Mobile_Sub2 mobile_sub2_18_ = (Mobile_Sub2) animable;
-				if (aDrawableModel10724 != null && mobile_sub2_18_.aDrawableModel10724 != null) {
-					aDrawableModel10724.method619(mobile_sub2_18_.aDrawableModel10724, i_17_, i, i_16_, bool);
-				}
-			}
-		} else {
+		if (animable instanceof Animable_Sub2_Sub2) {
 			Animable_Sub2_Sub2 animable_sub2_sub2 = (Animable_Sub2_Sub2) animable;
 			if (aDrawableModel10724 != null && animable_sub2_sub2.aDrawableModel10756 != null) {
 				aDrawableModel10724.method619(animable_sub2_sub2.aDrawableModel10756, i_17_, i, i_16_, bool);
 			}
+		} else if (animable instanceof Mobile_Sub2) {
+			Mobile_Sub2 mobile_sub2_18_ = (Mobile_Sub2) animable;
+			if (aDrawableModel10724 != null && mobile_sub2_18_.aDrawableModel10724 != null) {
+				aDrawableModel10724.method619(mobile_sub2_18_.aDrawableModel10724, i_17_, i, i_16_, bool);
+			}
 		}
-		if (b <= 101) {
+        if (b <= 101) {
 			method809(null, -1);
 		}
 	}
@@ -288,18 +286,18 @@ public class Mobile_Sub2 extends Mobile implements Interface19
 		}
 		Plane plane;
 		Plane plane_19_;
-		if (!aBoolean10719) {
+		if (aBoolean10719) {
+			plane = Class368.aPlaneArray4548[aByte5931];
+			plane_19_ = Node_Sub38_Sub37.aPlaneArray10466[0];
+		} else {
 			plane = Node_Sub38_Sub37.aPlaneArray10466[aByte5931];
 			if (aByte5931 >= 3) {
 				plane_19_ = null;
 			} else {
 				plane_19_ = Node_Sub38_Sub37.aPlaneArray10466[1 + aByte5931];
 			}
-		} else {
-			plane = Class368.aPlaneArray4548[aByte5931];
-			plane_19_ = Node_Sub38_Sub37.aPlaneArray10466[0];
 		}
-		return objectdefinition.method3046(aByte10731 == 11 ? aByte10725 + 4 : aByte10725, anInt5940, anInt5934, plane, bool, (byte) 0, anInt5937, (aByte10731 ^ 0xffffffff) != -12 ? aByte10731 : 10, graphicstoolkit, null, i, plane_19_);
+        return objectdefinition.method3046(aByte10731 == 11 ? aByte10725 + 4 : aByte10725, anInt5940, anInt5934, plane, bool, (byte) 0, anInt5937, aByte10731 != 11 ? aByte10731 : 10, graphicstoolkit, null, i, plane_19_);
 	}
 	
 	public final int method68(int i) {

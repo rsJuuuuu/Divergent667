@@ -22,7 +22,7 @@ public class Class348
 		if (bool != true) {
 			method3980(true);
 		}
-		for (int i = 0; (anInt4289 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
+		for (int i = 0; i < anInt4289; i++) {
 			anIntArrayArrayArray4293[i][0] = null;
 			anIntArrayArrayArray4293[i][1] = null;
 			anIntArrayArrayArray4293[i][2] = null;
@@ -44,8 +44,8 @@ public class Class348
 			aNode_Sub21Array4295[i] = Class279.aNode_Sub21_3555;
 			return anIntArrayArrayArray4293[i];
 		}
-		if ((anInt4289 ^ 0xffffffff) == -2) {
-			aBoolean4300 = (anInt4292 ^ 0xffffffff) != (i ^ 0xffffffff);
+		if (anInt4289 == 1) {
+			aBoolean4300 = i != anInt4292;
 			anInt4292 = i;
 			return anIntArrayArrayArray4293[0];
 		}
@@ -74,7 +74,7 @@ public class Class348
 		if (anInt4291 != anInt4289) {
 			throw new RuntimeException("Can only retrieve a full image cache");
 		}
-		for (int i_2_ = i; (i_2_ ^ 0xffffffff) > (anInt4289 ^ 0xffffffff); i_2_++)
+		for (int i_2_ = i; anInt4289 > i_2_; i_2_++)
 			aNode_Sub21Array4295[i_2_] = Class279.aNode_Sub21_3555;
 		return anIntArrayArrayArray4293;
 	}

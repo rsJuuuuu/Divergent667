@@ -86,7 +86,7 @@ public class Class41_Sub2 extends Class41
 			if (string_6_.startsWith("HTTP/1.0 407") || string_6_.startsWith("HTTP/1.1 407")) {
 				int i_7_ = 0;
 				String string_8_ = "proxy-authenticate: ";
-				for (string_6_ = bufferedreader.readLine(); string_6_ != null && (i_7_ ^ 0xffffffff) > -51; string_6_ = bufferedreader.readLine()) {
+				for (string_6_ = bufferedreader.readLine(); string_6_ != null && i_7_ < 50; string_6_ = bufferedreader.readLine()) {
 					if (string_6_.toLowerCase().startsWith(string_8_)) {
 						string_6_ = string_6_.substring(string_8_.length()).trim();
 						int i_9_ = string_6_.indexOf(' ');
@@ -127,7 +127,7 @@ public class Class41_Sub2 extends Class41
 		Object[] objects = list.toArray();
 		IOException_Sub1 ioexception_sub1 = null;
 		Object[] objects_12_ = objects;
-		for (int i_13_ = 0; (i_13_ ^ 0xffffffff) > (objects_12_.length ^ 0xffffffff); i_13_++) {
+		for (int i_13_ = 0; objects_12_.length > i_13_; i_13_++) {
 			Object object = objects_12_[i_13_];
 			Proxy proxy = (Proxy) object;
 			Socket socket;

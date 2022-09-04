@@ -53,13 +53,13 @@ public class Class11 implements IEnumModesCallback
 	}
 	
 	public final void method194(DDSurfaceDesc ddsurfacedesc, IUnknown iunknown) {
-		if (anIntArray179 != null) {
+		if (anIntArray179 == null) {
+			anInt177 += 4;
+		} else {
 			anIntArray179[anInt177++] = ddsurfacedesc.width;
 			anIntArray179[anInt177++] = ddsurfacedesc.height;
 			anIntArray179[anInt177++] = ddsurfacedesc.rgbBitCount;
 			anIntArray179[anInt177++] = ddsurfacedesc.refreshRate;
-		} else {
-			anInt177 += 4;
 		}
-	}
+    }
 }

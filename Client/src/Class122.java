@@ -27,7 +27,7 @@ public class Class122
 			return cachenode_sub3;
 		}
 		byte[] bs;
-		if ((i ^ 0xffffffff) > -32769) {
+		if (i < 32768) {
 			bs = aClass302_1550.method3524(false, i, 0);
 		} else {
 			bs = aClass302_1553.method3524(false, i & 0x7fff, 0);
@@ -38,7 +38,7 @@ public class Class122
 		if (bs != null) {
 			cachenode_sub3.method2293(new BufferedStream(bs), false);
 		}
-		if ((i ^ 0xffffffff) <= -32769) {
+		if (i >= 32768) {
 			cachenode_sub3.method2299((byte) -18);
 		}
 		aClass61_1554.method601(cachenode_sub3, 25566, (long) i);

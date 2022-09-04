@@ -31,22 +31,22 @@ abstract class Class169 implements Interface2
 	static final char method1755(int i, int i_0_, char c) {
 		anInt4959++;
 		if (c >= 192 && c <= 255) {
-			if ((c ^ 0xffffffff) <= -193 && c <= 198) {
+			if (c >= 192 && c <= 198) {
 				return 'A';
 			}
 			if (c == 199) {
 				return 'C';
 			}
-			if ((c ^ 0xffffffff) <= -201 && c <= 203) {
+			if (c >= 200 && c <= 203) {
 				return 'E';
 			}
-			if ((c ^ 0xffffffff) <= -205 && c <= 207) {
+			if (c >= 204 && c <= 207) {
 				return 'I';
 			}
 			if (c >= 210 && c <= 214) {
 				return 'O';
 			}
-			if (c >= 217 && (c ^ 0xffffffff) >= -221) {
+			if (c >= 217 && c <= 220) {
 				return 'U';
 			}
 			if (c == 221) {
@@ -55,22 +55,22 @@ abstract class Class169 implements Interface2
 			if (c == 223) {
 				return 's';
 			}
-			if (c >= 224 && (c ^ 0xffffffff) >= -231) {
+			if (c >= 224 && c <= 230) {
 				return 'a';
 			}
-			if ((c ^ 0xffffffff) == -232) {
+			if (c == 231) {
 				return 'c';
 			}
 			if (c >= 232 && c <= 235) {
 				return 'e';
 			}
-			if ((c ^ 0xffffffff) <= -237 && (c ^ 0xffffffff) >= -240) {
+			if (c >= 236 && c <= 239) {
 				return 'i';
 			}
-			if ((c ^ 0xffffffff) <= -243 && (c ^ 0xffffffff) >= -247) {
+			if (c >= 242 && c <= 246) {
 				return 'o';
 			}
-			if ((c ^ 0xffffffff) <= -250 && c <= 252) {
+			if (c >= 249 && c <= 252) {
 				return 'u';
 			}
 			if (c == 253 || c == 255) {
@@ -80,13 +80,13 @@ abstract class Class169 implements Interface2
 		if (i != 6272) {
 			return 'e';
 		}
-		if ((c ^ 0xffffffff) == -339) {
+		if (c == 338) {
 			return 'O';
 		}
-		if ((c ^ 0xffffffff) == -340) {
+		if (c == 339) {
 			return 'o';
 		}
-		if ((c ^ 0xffffffff) == -377) {
+		if (c == 376) {
 			return 'Y';
 		}
 		return c;
@@ -114,14 +114,14 @@ abstract class Class169 implements Interface2
 	private final void method1758(boolean bool) {
 		anInt4956++;
 		aGLToolkit4947.method1444(-2, this);
-		if (!aBoolean4948) {
-			OpenGL.glTexParameteri(anInt4951, 10241, aBoolean4945 ? 9984 : 9728);
-			OpenGL.glTexParameteri(anInt4951, 10240, 9728);
-		} else {
+		if (aBoolean4948) {
 			OpenGL.glTexParameteri(anInt4951, 10241, aBoolean4945 ? 9987 : 9729);
 			OpenGL.glTexParameteri(anInt4951, 10240, 9729);
+		} else {
+			OpenGL.glTexParameteri(anInt4951, 10241, aBoolean4945 ? 9984 : 9728);
+			OpenGL.glTexParameteri(anInt4951, 10240, 9728);
 		}
-		if (bool != false) {
+        if (bool != false) {
 			method1764(-112);
 		}
 	}

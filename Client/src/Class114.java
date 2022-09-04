@@ -51,7 +51,7 @@ public class Class114
 		anInt1456++;
 		CacheNode cachenode = aCacheNodeArray1463[(int) (l & (long) (anInt1453 - i))];
 		for (aCacheNode1454 = cachenode.aCacheNode7035; cachenode != aCacheNode1454; aCacheNode1454 = aCacheNode1454.aCacheNode7035) {
-			if ((l ^ 0xffffffffffffffffL) == (aCacheNode1454.aLong7037 ^ 0xffffffffffffffffL)) {
+			if (aCacheNode1454.aLong7037 == l) {
 				CacheNode cachenode_2_ = aCacheNode1454;
 				aCacheNode1454 = aCacheNode1454.aCacheNode7035;
 				return cachenode_2_;
@@ -80,7 +80,7 @@ public class Class114
 	Class114(int i) {
 		aCacheNodeArray1463 = new CacheNode[i];
 		anInt1453 = i;
-		for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (i ^ 0xffffffff); i_4_++) {
+		for (int i_4_ = 0; i > i_4_; i_4_++) {
 			CacheNode cachenode = aCacheNodeArray1463[i_4_] = new CacheNode();
 			cachenode.aCacheNode7036 = cachenode;
 			cachenode.aCacheNode7035 = cachenode;

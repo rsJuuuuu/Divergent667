@@ -105,12 +105,12 @@ public class i extends DrawableModel implements Interface3
 				if (class218.aClass218_2561 != null) {
 					class218_28_ = class218.aClass218_2561;
 				}
-				if (class218.aClass336_2562 != null) {
-					class218.aClass336_2562.method3857(class336);
-				} else {
+				if (class218.aClass336_2562 == null) {
 					class218.aClass336_2562 = class336.method3858();
+				} else {
+					class218.aClass336_2562.method3857(class336);
 				}
-				class218_28_.anInt2559 = oa.anIntArray4994[i++];
+                class218_28_.anInt2559 = oa.anIntArray4994[i++];
 				class218_28_.anInt2557 = oa.anIntArray4994[i++];
 				class218_28_.anInt2556 = oa.anIntArray4994[i++];
 			}

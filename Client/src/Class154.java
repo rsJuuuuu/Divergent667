@@ -18,10 +18,10 @@ public class Class154
 	
 	static final String method1699(long l, int i) {
 		anInt1949++;
-		if (l <= 0L || (l ^ 0xffffffffffffffffL) <= -6582952005840035282L) {
+		if (l <= 0L || l >= 6582952005840035281L) {
 			return null;
 		}
-		if ((l % 37L ^ 0xffffffffffffffffL) == -1L) {
+		if (l % 37L == 0) {
 			return null;
 		}
 		if (i != 25589) {

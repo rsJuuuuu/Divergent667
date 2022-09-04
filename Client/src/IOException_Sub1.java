@@ -17,10 +17,10 @@ public class IOException_Sub1 extends IOException
 		}
 		anInt86++;
 		int i = b & 0xff;
-		if ((i ^ 0xffffffff) == -1) {
+		if (i == 0) {
 			return false;
 		}
-        return !(i >= 128 && (i ^ 0xffffffff) > -161 && Class204.aCharArray2455[-128 + i] == 0);
+        return !(i >= 128 && i < 160 && Class204.aCharArray2455[-128 + i] == 0);
     }
 	
 	IOException_Sub1(String string) {
@@ -40,30 +40,24 @@ public class IOException_Sub1 extends IOException
 		Class117_Sub1.aString4931 = "";
 		Animable_Sub1_Sub1.aSignLink10616 = signlink;
 		if (i == 255) {
-			if (!Class223.aString2660.startsWith("win")) {
-				if (!Class223.aString2660.startsWith("linux")) {
-					if (Class223.aString2660.startsWith("mac")) {
-						Class117_Sub1.aString4931 += "macos/";
-					}
-				} else {
-					Class117_Sub1.aString4931 += "linux/";
-				}
-			} else {
+			if (Class223.aString2660.startsWith("win")) {
 				Class117_Sub1.aString4931 += "windows/";
-			}
-			if (!Animable_Sub1_Sub1.aSignLink10616.aBoolean3985) {
-				if (Class223.aString2656.startsWith("amd64") || Class223.aString2656.startsWith("x86_64")) {
-					Class117_Sub1.aString4931 += "x86_64/";
-				} else if (Class223.aString2656.startsWith("i386") || Class223.aString2656.startsWith("i486") || Class223.aString2656.startsWith("i586") || Class223.aString2656.startsWith("x86")) {
-					Class117_Sub1.aString4931 += "x86/";
-				} else if (Class223.aString2656.startsWith("ppc")) {
-					Class117_Sub1.aString4931 += "ppc/";
-				} else {
-					Class117_Sub1.aString4931 += "universal/";
-				}
-			} else {
-				Class117_Sub1.aString4931 += "msjava/";
-			}
-		}
+			} else if (Class223.aString2660.startsWith("linux")) {
+                Class117_Sub1.aString4931 += "linux/";
+            } else if (Class223.aString2660.startsWith("mac")) {
+                Class117_Sub1.aString4931 += "macos/";
+            }
+            if (Animable_Sub1_Sub1.aSignLink10616.aBoolean3985) {
+                Class117_Sub1.aString4931 += "msjava/";
+            } else if (Class223.aString2656.startsWith("amd64") || Class223.aString2656.startsWith("x86_64")) {
+                Class117_Sub1.aString4931 += "x86_64/";
+            } else if (Class223.aString2656.startsWith("i386") || Class223.aString2656.startsWith("i486") || Class223.aString2656.startsWith("i586") || Class223.aString2656.startsWith("x86")) {
+                Class117_Sub1.aString4931 += "x86/";
+            } else if (Class223.aString2656.startsWith("ppc")) {
+                Class117_Sub1.aString4931 += "ppc/";
+            } else {
+                Class117_Sub1.aString4931 += "universal/";
+            }
+        }
 	}
 }

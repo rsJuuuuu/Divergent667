@@ -52,7 +52,7 @@ public class Class300
 		anInt3772++;
 		Node_Sub5_Sub2.aClass49Array9413 = new Class49[Class291.anIntArray3665.length];
 		if (b == 107) {
-			for (int i = 0; (i ^ 0xffffffff) > (Class291.anIntArray3665.length ^ 0xffffffff); i++) {
+			for (int i = 0; Class291.anIntArray3665.length > i; i++) {
 				int i_1_ = Class291.anIntArray3665[i];
 				Class357 class357 = Class129.method1553(-1, i_1_, Class188_Sub1.aClass302_6849);
 				Class52 class52 = graphicstoolkit.a(class357, Class383.method4199(Class294.aClass302_3690, i_1_), true);
@@ -85,13 +85,13 @@ public class Class300
 		return i & 0xff;
 	}
 	
-	static final BufferedStream getBufferWithIsaacKeys(int i) {
+	static final BufferedStream getBufferWithIsaacKeys() {
 		anInt3760++;
 		BufferedStream buffer = new BufferedStream(518);
 		Class121.isaacKeys = new int[4];
 		Class121.isaacKeys[2] = (int) (Math.random() * 9.9999999E7);
 		Class121.isaacKeys[0] = (int) (Math.random() * 9.9999999E7);
-		Class121.isaacKeys[i] = (int) (Math.random() * 9.9999999E7);
+		Class121.isaacKeys[3] = (int) (Math.random() * 9.9999999E7);
 		Class121.isaacKeys[1] = (int) (Math.random() * 9.9999999E7);
 		buffer.writeByte(10);
 		buffer.writeInt(Class121.isaacKeys[0]);

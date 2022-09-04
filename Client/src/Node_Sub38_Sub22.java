@@ -18,7 +18,7 @@ public class Node_Sub38_Sub22 extends Node_Sub38
 		if (bool != false) {
 			method2780(true, null, 2);
 		}
-		if ((i ^ 0xffffffff) == -1) {
+		if (i == 0) {
 			anInt10321 = buffer.readUnsignedShort();
 		}
 		anInt10324++;
@@ -34,7 +34,7 @@ public class Node_Sub38_Sub22 extends Node_Sub38
 			int[] is_1_ = this.method2786(r_Sub2.anInt11054 & -1 + i_0_, 0, 0);
 			int[] is_2_ = this.method2786(i_0_, 0, 0);
 			int[] is_3_ = this.method2786(i_0_ + 1 & r_Sub2.anInt11054, 0, 0);
-			for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_4_++) {
+			for (int i_4_ = 0; Class339_Sub7.anInt8728 > i_4_; i_4_++) {
 				int i_5_ = (is_3_[i_4_] - is_1_[i_4_]) * anInt10321;
 				int i_6_ = (is_2_[i_4_ + 1 & Class303.anInt3824] + -is_2_[Class303.anInt3824 & i_4_ - 1]) * anInt10321;
 				int i_7_ = i_6_ >> 12;
@@ -42,7 +42,7 @@ public class Node_Sub38_Sub22 extends Node_Sub38
 				int i_9_ = i_7_ * i_7_ >> 12;
 				int i_10_ = i_8_ * i_8_ >> 12;
 				int i_11_ = (int) (Math.sqrt((double) ((float) (4096 + i_9_ - -i_10_) / 4096.0F)) * 4096.0);
-				int i_12_ = (i_11_ ^ 0xffffffff) != -1 ? 16777216 / i_11_ : 0;
+				int i_12_ = i_11_ != 0 ? 16777216 / i_11_ : 0;
 				is[i_4_] = 4096 + -i_12_;
 			}
 		}

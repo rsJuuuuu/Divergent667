@@ -17,33 +17,33 @@ public class Class169_Sub2_Sub1 extends Class169_Sub2
 		super(gltoolkit, i, i_0_, i_1_, i_2_, bool, bs, i_3_, true);
 		anInt10566 = i_1_;
 		anInt10564 = i_2_;
-		if ((anInt4951 ^ 0xffffffff) != -34038) {
-			aFloat10567 = aFloat10568 = 1.0F;
-			aBoolean10562 = true;
-		} else {
+		if (anInt4951 == 34037) {
 			aFloat10568 = (float) i_2_;
 			aFloat10567 = (float) i_1_;
 			aBoolean10562 = false;
+		} else {
+			aFloat10567 = aFloat10568 = 1.0F;
+			aBoolean10562 = true;
 		}
-	}
+    }
 	
 	Class169_Sub2_Sub1(GLToolkit gltoolkit, int i, int i_4_, int i_5_, int i_6_) {
 		super(gltoolkit, i, i_4_, i_5_, i_6_);
 		anInt10564 = i_6_;
-		if (anInt4951 != 34037) {
-			aFloat10567 = aFloat10568 = 1.0F;
-			aBoolean10562 = true;
-		} else {
+		if (anInt4951 == 34037) {
 			aFloat10568 = (float) i_6_;
 			aFloat10567 = (float) i_5_;
 			aBoolean10562 = false;
+		} else {
+			aFloat10567 = aFloat10568 = 1.0F;
+			aBoolean10562 = true;
 		}
-		anInt10566 = i_5_;
+        anInt10566 = i_5_;
 	}
 	
 	Class169_Sub2_Sub1(GLToolkit gltoolkit, int i, int i_7_, int i_8_, int i_9_, int i_10_, boolean bool) {
 		super(gltoolkit, i, i_7_, i_8_, i_9_, i_10_);
-		if ((anInt4951 ^ 0xffffffff) == -34038) {
+		if (anInt4951 == 34037) {
 			aFloat10568 = (float) i_10_;
 			aBoolean10562 = false;
 			aFloat10567 = (float) i_9_;
@@ -98,15 +98,15 @@ public class Class169_Sub2_Sub1 extends Class169_Sub2
 		super(gltoolkit, i, 6408, i_25_, i_26_, bool, is, i_27_, i_28_, true);
 		anInt10564 = i_26_;
 		anInt10566 = i_25_;
-		if (anInt4951 != 34037) {
-			aBoolean10562 = true;
-			aFloat10567 = aFloat10568 = 1.0F;
-		} else {
+		if (anInt4951 == 34037) {
 			aFloat10567 = (float) i_25_;
 			aBoolean10562 = false;
 			aFloat10568 = (float) i_26_;
+		} else {
+			aBoolean10562 = true;
+			aFloat10567 = aFloat10568 = 1.0F;
 		}
-	}
+    }
 	
 	Class169_Sub2_Sub1(GLToolkit gltoolkit, int i, int i_29_, int i_30_, int i_31_, int[] is) {
 		super(gltoolkit, 3553, 6408, i_30_, i_31_);

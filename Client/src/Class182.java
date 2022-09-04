@@ -227,7 +227,12 @@ public class Class182
 		int i_58_;
 		int i_59_;
 		int i_60_;
-		if (!aBoolean2173) {
+		if (aBoolean2173) {
+			anInt2166 = 1073741823;
+			i_58_ = anInt2172;
+			i_59_ = anInt2161;
+			i_60_ = anInt2165;
+		} else {
 			i_58_ = anInt2172 - i;
 			i_59_ = anInt2161 - i_55_;
 			i_60_ = anInt2165 - i_56_;
@@ -238,13 +243,8 @@ public class Class182
 			i_58_ = (i_58_ << 8) / anInt2166;
 			i_59_ = (i_59_ << 8) / anInt2166;
 			i_60_ = (i_60_ << 8) / anInt2166;
-		} else {
-			anInt2166 = 1073741823;
-			i_58_ = anInt2172;
-			i_59_ = anInt2161;
-			i_60_ = anInt2165;
 		}
-		int i_61_ = (int) (Math.sqrt((double) (i_58_ * i_58_ + i_59_ * i_59_ + i_60_ * i_60_)) * 256.0);
+        int i_61_ = (int) (Math.sqrt((double) (i_58_ * i_58_ + i_59_ * i_59_ + i_60_ * i_60_)) * 256.0);
 		if (i_61_ > 128) {
 			i_58_ = (i_58_ << 16) / i_61_;
 			i_59_ = (i_59_ << 16) / i_61_;

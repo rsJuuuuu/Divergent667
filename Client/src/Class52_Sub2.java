@@ -121,7 +121,19 @@ public class Class52_Sub2 extends Class52
 				int i_28_ = i_22_ / 16 * i;
 				int i_29_ = i_28_ * i_8_ + i_27_;
 				int i_30_ = 0;
-				if (bs != null) {
+				if (bs == null) {
+					for (int i_33_ = 0; i_33_ < i_25_; i_33_++) {
+						for (int i_34_ = 0; i_34_ < i_26_; i_34_++) {
+							int i_35_;
+							if ((i_35_ = bs_24_[i_30_++]) == 0) {
+								i_29_++;
+							} else {
+								is[i_29_++] = ~0xffffff | is_23_[i_35_ & 0xff];
+							}
+                        }
+						i_29_ += i_8_ - i_26_;
+					}
+				} else {
 					for (int i_31_ = 0; i_31_ < i_25_; i_31_++) {
 						for (int i_32_ = 0; i_32_ < i_26_; i_32_++) {
 							is[i_29_++] = bs[i_30_] << 24 | is_23_[bs_24_[i_30_] & 0xff];
@@ -129,20 +141,8 @@ public class Class52_Sub2 extends Class52
 						}
 						i_29_ += i_8_ - i_26_;
 					}
-				} else {
-					for (int i_33_ = 0; i_33_ < i_25_; i_33_++) {
-						for (int i_34_ = 0; i_34_ < i_26_; i_34_++) {
-							int i_35_;
-							if ((i_35_ = bs_24_[i_30_++]) != 0) {
-								is[i_29_++] = ~0xffffff | is_23_[i_35_ & 0xff];
-							} else {
-								i_29_++;
-							}
-						}
-						i_29_ += i_8_ - i_26_;
-					}
 				}
-			}
+            }
 			aClass169_Sub2_Sub1_5565 = CacheNode_Sub5.method2308(gltoolkit, 25448, i_8_, false, 0, is, i_8_, 0);
 			aBoolean5564 = false;
 		}

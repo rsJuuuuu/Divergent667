@@ -17,14 +17,14 @@ public class Node_Sub38_Sub33 extends Node_Sub38
 		if (i_6_ != 0) {
 			aBufferedConnection10440 = null;
 		}
-		for (int i_8_ = -i_4_; (i_8_ ^ 0xffffffff) > -1; i_8_++) {
-			for (int i_9_ = i_7_; (i_9_ ^ 0xffffffff) > -1; i_9_++) {
+		for (int i_8_ = -i_4_; i_8_ < 0; i_8_++) {
+			for (int i_9_ = i_7_; i_9_ < 0; i_9_++) {
 				bs[i_1_++] += -bs_3_[i_2_++];
 				bs[i_1_++] += -bs_3_[i_2_++];
 				bs[i_1_++] += -bs_3_[i_2_++];
 				bs[i_1_++] += -bs_3_[i_2_++];
 			}
-			for (int i_10_ = i_5_; (i_10_ ^ 0xffffffff) > -1; i_10_++)
+			for (int i_10_ = i_5_; i_10_ < 0; i_10_++)
 				bs[i_1_++] += -bs_3_[i_2_++];
 			i_1_ += i_0_;
 			i_2_ += i;

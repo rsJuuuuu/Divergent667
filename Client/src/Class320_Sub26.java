@@ -107,7 +107,7 @@ public class Class320_Sub26 extends Class320
 		if (aNode_Sub27_4063.method2697(-101)) {
 			return 3;
 		}
-		if (i == 0 || (aNode_Sub27_4063.aClass320_Sub23_7290.method3770(false) ^ 0xffffffff) == -2) {
+		if (i == 0 || aNode_Sub27_4063.aClass320_Sub23_7290.method3770(false) == 1) {
 			return 1;
 		}
 		if (b != 54) {

@@ -36,6 +36,6 @@ public class Class147
 		if (i >= -87) {
 			return false;
 		}
-        return !((i_2_ & 0x800 ^ 0xffffffff) == -1 || (0x37 & i_1_ ^ 0xffffffff) == -1);
+        return !((i_2_ & 0x800) == 0 || (0x37 & i_1_) == 0);
     }
 }

@@ -45,9 +45,9 @@ public class Class331
 			aBoolean4129 = false;
 		}
 		Class129[] class129s = Node_Sub15_Sub13.method2586(-11746);
-		for (int i_3_ = 0; (class129s.length ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+		for (int i_3_ = 0; i_3_ < class129s.length; i_3_++) {
 			Class129 class129 = class129s[i_3_];
-			if ((class129.anInt1662 ^ 0xffffffff) == (i_2_ ^ 0xffffffff)) {
+			if (i_2_ == class129.anInt1662) {
 				return class129;
 			}
 		}
@@ -59,7 +59,7 @@ public class Class331
 		if (b != -54) {
 			aBoolean4129 = true;
 		}
-		if ((Class262_Sub4.anInt7722 ^ 0xffffffff) < (i_4_ ^ 0xffffffff) || (za_Sub2.anInt10513 ^ 0xffffffff) > (i ^ 0xffffffff) || i_7_ < Class384.anInt4906 || (Node_Sub25_Sub1.anInt9936 ^ 0xffffffff) > (i_6_ ^ 0xffffffff)) {
+		if (i_4_ < Class262_Sub4.anInt7722 || i > za_Sub2.anInt10513 || i_7_ < Class384.anInt4906 || i_6_ > Node_Sub25_Sub1.anInt9936) {
 			Class125.method1527(0, i_4_, i, i_5_, i_7_, i_6_);
 		} else {
 			Class296.method3477(i_7_, i_5_, i_4_, i_6_, i, 106);

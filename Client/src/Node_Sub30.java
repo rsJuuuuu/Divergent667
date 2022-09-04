@@ -19,7 +19,7 @@ public class Node_Sub30 extends Node
 	
 	static final int method2720(int i, int i_0_, int i_1_) {
 		anInt7359++;
-		if ((i_0_ ^ 0xffffffff) == -2 || (i_0_ ^ 0xffffffff) == -4) {
+		if (i_0_ == 1 || i_0_ == 3) {
 			return Node_Sub38_Sub5.anIntArray10131[i & 0x3];
 		}
 		return Node_Sub29.anIntArray7345[i & 0x3];

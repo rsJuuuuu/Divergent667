@@ -92,8 +92,8 @@ public class Class320_Sub6 extends Class320
 	}
 	
 	static final void method3703(int i, byte b, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
-		if ((i ^ 0xffffffff) == -9 || (i ^ 0xffffffff) == -17) {
-			if ((i ^ 0xffffffff) == -9) {
+		if (i == 8 || i == 16) {
+			if (i == 8) {
 				int i_5_ = i_2_ << Class36.anInt549;
 				int i_6_ = Class179.anInt2129 + i_5_;
 				int i_7_ = i_1_ << Class36.anInt549;
@@ -115,14 +115,12 @@ public class Class320_Sub6 extends Class320
 			if (class261 == null) {
 				class261 = new Class261(i_3_);
 			}
-			if (i != 1) {
-				if ((i ^ 0xffffffff) == -3) {
-					class261.aShort3313 = (short) i_4_;
-					class261.aShort3320 = (short) i_0_;
-				}
-			} else {
+			if (i == 1) {
 				class261.aShort3322 = (short) i_0_;
 				class261.aShort3318 = (short) i_4_;
+			} else if (i == 2) {
+				class261.aShort3313 = (short) i_4_;
+				class261.aShort3320 = (short) i_0_;
 			}
 			if (Class239.aBoolean2930) {
 				Node_Sub32.method2729(true);

@@ -48,7 +48,7 @@ public class HashTable
 	
 	final void method1517(boolean bool) {
 		if (bool == false) {
-			for (int i = 0; (i ^ 0xffffffff) > (anInt1592 ^ 0xffffffff); i++) {
+			for (int i = 0; anInt1592 > i; i++) {
 				Node node = aNodeArray1597[i];
 				for (;;) {
 					Node node_1_ = node.aNode2800;
@@ -72,7 +72,7 @@ public class HashTable
 		}
 		Node node = aNodeArray1597[(int) (l & (long) (-1 + anInt1592))];
 		for (aNode1589 = node.aNode2800; aNode1589 != node; aNode1589 = aNode1589.aNode2800) {
-			if ((l ^ 0xffffffffffffffffL) == (aNode1589.aLong2797 ^ 0xffffffffffffffffL)) {
+			if (aNode1589.aLong2797 == l) {
 				Node node_2_ = aNode1589;
 				aNode1589 = aNode1589.aNode2800;
 				return node_2_;
@@ -104,7 +104,7 @@ public class HashTable
 			anInt1592 = -77;
 		}
 		anInt1590++;
-		if ((anInt1599 ^ 0xffffffff) < -1 && aNode1598 != aNodeArray1597[anInt1599 - 1]) {
+		if (anInt1599 > 0 && aNode1598 != aNodeArray1597[anInt1599 - 1]) {
 			Node node = aNode1598;
 			aNode1598 = node.aNode2800;
 			return node;
@@ -141,7 +141,7 @@ public class HashTable
 		if (b > -82) {
 			method1522(true);
 		}
-		for (int i_5_ = 0; (anInt1592 ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++) {
+		for (int i_5_ = 0; i_5_ < anInt1592; i_5_++) {
 			Node node = aNodeArray1597[i_5_];
 			for (Node node_6_ = node.aNode2800; node != node_6_; node_6_ = node_6_.aNode2800)
 				nodes[i++] = node_6_;
@@ -158,7 +158,7 @@ public class HashTable
 			return null;
 		}
 		for (Node node = aNodeArray1597[(int) ((long) (anInt1592 + -1) & aLong1595)]; aNode1589 != node; aNode1589 = aNode1589.aNode2800) {
-			if ((aNode1589.aLong2797 ^ 0xffffffffffffffffL) == (aLong1595 ^ 0xffffffffffffffffL)) {
+			if (aLong1595 == aNode1589.aLong2797) {
 				Node node_7_ = aNode1589;
 				aNode1589 = aNode1589.aNode2800;
 				return node_7_;

@@ -83,12 +83,12 @@ public class Mobile_Sub3 extends Mobile implements Interface19
 			}
 		}
 		aBoolean10786 = drawablemodel.F() || aClass310_10777.anEntityNode_Sub4_3931 != null;
-		if (aClass171_10774 != null) {
-			Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10774, -107);
-		} else {
+		if (aClass171_10774 == null) {
 			aClass171_10774 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+		} else {
+			Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10774, -107);
 		}
-		return entitynode_sub6;
+        return entitynode_sub6;
 	}
 	
 	final boolean method813(int i) {
@@ -193,7 +193,7 @@ public class Mobile_Sub3 extends Mobile implements Interface19
 	Mobile_Sub3(GraphicsToolkit graphicstoolkit, ObjectDefinition objectdefinition, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_) {
 		super(i, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_, i_12_, i_13_, objectdefinition.anInt2970 == 1, PlayerUpdateReference.method3810(i_14_, false, i_15_));
 		aClass310_10777 = new Class310(graphicstoolkit, objectdefinition, i_14_, i_15_, plane, i_6_, this, bool, i_16_);
-		aBoolean10780 = (objectdefinition.anInt3057 ^ 0xffffffff) != -1 && !bool;
+		aBoolean10780 = objectdefinition.anInt3057 != 0 && !bool;
 	}
 	
 	public final void method74(GraphicsToolkit graphicstoolkit, int i) {

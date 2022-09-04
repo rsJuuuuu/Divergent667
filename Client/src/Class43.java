@@ -12,9 +12,9 @@ public class Class43
 		anInt664++;
 		StringBuffer stringbuffer = new StringBuffer();
 		int i_0_ = Class173.anInt2087;
-		for (int i_1_ = 0; (is.length ^ 0xffffffff) < (i_1_ ^ 0xffffffff); i_1_++) {
+		for (int i_1_ = 0; i_1_ < is.length; i_1_++) {
 			Class184 class184 = Class146.aClass32_1812.method353(is[i_1_], (byte) 84);
-			if ((class184.anInt2188 ^ 0xffffffff) != 0) {
+			if (class184.anInt2188 != -1) {
 				GLSprite glsprite = (GLSprite) CacheNode_Sub12.aClass61_9556.method607((long) class184.anInt2188, i + -4923);
 				if (glsprite == null) {
 					Class383 class383 = Class383.method4194(Node_Sub38_Sub39.aClass302_10500, class184.anInt2188, 0);

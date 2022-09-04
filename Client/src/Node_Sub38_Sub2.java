@@ -39,25 +39,23 @@ public class Node_Sub38_Sub2 extends Node_Sub38
 			int[] is_9_ = is_2_[0];
 			int[] is_10_ = is_2_[1];
 			int[] is_11_ = is_2_[2];
-			for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_12_++) {
+			for (int i_12_ = 0; Class339_Sub7.anInt8728 > i_12_; i_12_++) {
 				int i_13_ = is_0_[i_12_];
-				if ((i_13_ ^ 0xffffffff) != -4097) {
-					if (i_13_ != 0) {
-						int i_14_ = -i_13_ + 4096;
-						is_3_[i_12_] = i_14_ * is_9_[i_12_] + is_6_[i_12_] * i_13_ >> 12;
-						is_4_[i_12_] = is_10_[i_12_] * i_14_ + i_13_ * is_7_[i_12_] >> 12;
-						is_5_[i_12_] = is_11_[i_12_] * i_14_ + i_13_ * is_8_[i_12_] >> 12;
-					} else {
-						is_3_[i_12_] = is_9_[i_12_];
-						is_4_[i_12_] = is_10_[i_12_];
-						is_5_[i_12_] = is_11_[i_12_];
-					}
-				} else {
+				if (i_13_ == 4096) {
 					is_3_[i_12_] = is_6_[i_12_];
 					is_4_[i_12_] = is_7_[i_12_];
 					is_5_[i_12_] = is_8_[i_12_];
+				} else if (i_13_ == 0) {
+					is_3_[i_12_] = is_9_[i_12_];
+					is_4_[i_12_] = is_10_[i_12_];
+					is_5_[i_12_] = is_11_[i_12_];
+				} else {
+					int i_14_ = -i_13_ + 4096;
+					is_3_[i_12_] = i_14_ * is_9_[i_12_] + is_6_[i_12_] * i_13_ >> 12;
+					is_4_[i_12_] = is_10_[i_12_] * i_14_ + i_13_ * is_7_[i_12_] >> 12;
+					is_5_[i_12_] = is_11_[i_12_] * i_14_ + i_13_ * is_8_[i_12_] >> 12;
 				}
-			}
+            }
 		}
 		return is;
 	}
@@ -71,16 +69,14 @@ public class Node_Sub38_Sub2 extends Node_Sub38
 			int[] is_18_ = this.method2786(i_15_, 0, 2);
 			for (int i_19_ = 0; i_19_ < Class339_Sub7.anInt8728; i_19_++) {
 				int i_20_ = is_18_[i_19_];
-				if ((i_20_ ^ 0xffffffff) != -4097) {
-					if ((i_20_ ^ 0xffffffff) == -1) {
-						is[i_19_] = is_17_[i_19_];
-					} else {
-						is[i_19_] = i_20_ * is_16_[i_19_] - -((-i_20_ + 4096) * is_17_[i_19_]) >> 12;
-					}
-				} else {
+				if (i_20_ == 4096) {
 					is[i_19_] = is_16_[i_19_];
+				} else if (i_20_ == 0) {
+					is[i_19_] = is_17_[i_19_];
+				} else {
+					is[i_19_] = i_20_ * is_16_[i_19_] - -((-i_20_ + 4096) * is_17_[i_19_]) >> 12;
 				}
-			}
+            }
 		}
 		if (i <= 107) {
 			anIntArray10096 = null;

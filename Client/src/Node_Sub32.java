@@ -17,7 +17,7 @@ public class Node_Sub32 extends Node
 	
 	static final void method2729(boolean bool) {
 		anInt7384++;
-		for (int i = 0; (NpcDefinition.anInt2885 ^ 0xffffffff) < (i ^ 0xffffffff); i++)
+		for (int i = 0; i < NpcDefinition.anInt2885; i++)
 			GLXToolkit.aClass54Array9292[i] = null;
 		NpcDefinition.anInt2885 = 0;
 		for (int i = 0; i < Class159.anInt1995; i++) {
@@ -28,7 +28,7 @@ public class Node_Sub32 extends Node
 						if (class261.aShort3313 > 0) {
 							class261.aShort3313 *= -1;
 						}
-						if ((class261.aShort3318 ^ 0xffffffff) < -1) {
+						if (class261.aShort3318 > 0) {
 							class261.aShort3318 *= -1;
 						}
 					}
@@ -37,19 +37,19 @@ public class Node_Sub32 extends Node
 		}
 		for (int i = 0; Class159.anInt1995 > i; i++) {
 			for (int i_2_ = 0; Class328.anInt4115 > i_2_; i_2_++) {
-				for (int i_3_ = 0; (Node_Sub50.anInt7623 ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+				for (int i_3_ = 0; i_3_ < Node_Sub50.anInt7623; i_3_++) {
 					Class261 class261 = Class175.aClass261ArrayArrayArray2099[i][i_3_][i_2_];
 					if (class261 != null) {
 						boolean bool_4_ = Class175.aClass261ArrayArrayArray2099[0][i_3_][i_2_] != null && Class175.aClass261ArrayArrayArray2099[0][i_3_][i_2_].aClass261_3310 != null;
-						if ((class261.aShort3318 ^ 0xffffffff) > -1) {
+						if (class261.aShort3318 < 0) {
 							int i_5_ = i_2_;
 							int i_6_ = i_2_;
 							int i_7_ = i;
 							int i_8_ = i;
 							Class261 class261_9_ = Class175.aClass261ArrayArrayArray2099[i][i_3_][i_5_ - 1];
 							int i_10_ = Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, i_3_, (byte) -118);
-							for (/**/; (i_5_ ^ 0xffffffff) < -1 && class261_9_ != null && class261_9_.aShort3318 < 0 && class261.aShort3318 == class261_9_.aShort3318 && (class261.aShort3322 ^ 0xffffffff) == (class261_9_.aShort3322 ^ 0xffffffff); class261_9_ = Class175.aClass261ArrayArrayArray2099[i][i_3_][-1 + i_5_]) {
-								if ((Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_5_ - 1, i_3_, (byte) -118) ^ 0xffffffff) != (i_10_ ^ 0xffffffff)) {
+							for (/**/; i_5_ > 0 && class261_9_ != null && class261_9_.aShort3318 < 0 && class261.aShort3318 == class261_9_.aShort3318 && class261_9_.aShort3322 == class261.aShort3322; class261_9_ = Class175.aClass261ArrayArrayArray2099[i][i_3_][-1 + i_5_]) {
+								if (i_10_ != Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_5_ - 1, i_3_, (byte) -118)) {
 									break;
 								}
 								if (i_5_ - 1 > 0 && i_10_ != Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_5_ + -2, i_3_, (byte) -118)) {
@@ -61,7 +61,7 @@ public class Node_Sub32 extends Node
 								if (i_10_ != Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_6_ + 1, i_3_, (byte) -118)) {
 									break;
 								}
-								if (Node_Sub50.anInt7623 > i_6_ + 1 && (i_10_ ^ 0xffffffff) != (Node_Sub38_Sub37.aPlaneArray10466[i].method3251(2 + i_6_, i_3_, (byte) -118) ^ 0xffffffff)) {
+								if (Node_Sub50.anInt7623 > i_6_ + 1 && Node_Sub38_Sub37.aPlaneArray10466[i].method3251(2 + i_6_, i_3_, (byte) -118) != i_10_) {
 									break;
 								}
 								i_6_++;
@@ -75,8 +75,8 @@ public class Node_Sub32 extends Node
 							int i_17_ = i_5_ << Class36.anInt549;
 							int i_18_ = (i_6_ << Class36.anInt549) + Class179.anInt2129;
 							GLXToolkit.aClass54Array9292[NpcDefinition.anInt2885++] = new Class54(1, i_8_, class261.aShort3322 + i_16_, i_16_ - -class261.aShort3322, class261.aShort3322 + i_16_, class261.aShort3322 + i_16_, i_12_, i_14_, i_15_, i_13_, i_17_, i_18_, i_18_, i_17_);
-							for (int i_19_ = i_7_; (i_8_ ^ 0xffffffff) <= (i_19_ ^ 0xffffffff); i_19_++) {
-								for (int i_20_ = i_5_; (i_6_ ^ 0xffffffff) <= (i_20_ ^ 0xffffffff); i_20_++)
+							for (int i_19_ = i_7_; i_19_ <= i_8_; i_19_++) {
+								for (int i_20_ = i_5_; i_20_ <= i_6_; i_20_++)
 									Class175.aClass261ArrayArrayArray2099[i_19_][i_3_][i_20_].aShort3318 *= -1;
 							}
 						}
@@ -91,16 +91,16 @@ public class Node_Sub32 extends Node
 								if (i_26_ != Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, -1 + i_21_, (byte) -118)) {
 									break;
 								}
-								if (-1 + i_21_ > 0 && (i_26_ ^ 0xffffffff) != (Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, i_21_ + -2, (byte) -118) ^ 0xffffffff)) {
+								if (-1 + i_21_ > 0 && Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, i_21_ + -2, (byte) -118) != i_26_) {
 									break;
 								}
 								i_21_--;
 							}
-							for (class261_25_ = Class175.aClass261ArrayArrayArray2099[i][1 + i_22_][i_2_]; i_22_ < Class328.anInt4115 && class261_25_ != null && class261_25_.aShort3313 < 0 && (class261.aShort3313 ^ 0xffffffff) == (class261_25_.aShort3313 ^ 0xffffffff) && class261.aShort3320 == class261_25_.aShort3320; class261_25_ = Class175.aClass261ArrayArrayArray2099[i][1 + i_22_][i_2_]) {
-								if ((Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, 1 + i_22_, (byte) -118) ^ 0xffffffff) != (i_26_ ^ 0xffffffff)) {
+							for (class261_25_ = Class175.aClass261ArrayArrayArray2099[i][1 + i_22_][i_2_]; i_22_ < Class328.anInt4115 && class261_25_ != null && class261_25_.aShort3313 < 0 && class261_25_.aShort3313 == class261.aShort3313 && class261.aShort3320 == class261_25_.aShort3320; class261_25_ = Class175.aClass261ArrayArrayArray2099[i][1 + i_22_][i_2_]) {
+								if (i_26_ != Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, 1 + i_22_, (byte) -118)) {
 									break;
 								}
-								if (1 + i_22_ < Class328.anInt4115 && (i_26_ ^ 0xffffffff) != (Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, i_22_ + 2, (byte) -118) ^ 0xffffffff)) {
+								if (1 + i_22_ < Class328.anInt4115 && Node_Sub38_Sub37.aPlaneArray10466[i].method3251(i_2_, i_22_ + 2, (byte) -118) != i_26_) {
 									break;
 								}
 								i_22_++;
@@ -114,7 +114,7 @@ public class Node_Sub32 extends Node
 							int i_33_ = Class179.anInt2129 + (i_22_ << Class36.anInt549);
 							int i_34_ = i_2_ << Class36.anInt549;
 							GLXToolkit.aClass54Array9292[NpcDefinition.anInt2885++] = new Class54(2, i_24_, i_32_, i_33_, i_33_, i_32_, i_28_, i_30_, i_31_, i_29_, i_34_ + class261.aShort3320, class261.aShort3320 + i_34_, class261.aShort3320 + i_34_, class261.aShort3320 + i_34_);
-							for (int i_35_ = i_23_; (i_24_ ^ 0xffffffff) <= (i_35_ ^ 0xffffffff); i_35_++) {
+							for (int i_35_ = i_23_; i_35_ <= i_24_; i_35_++) {
 								for (int i_36_ = i_21_; i_22_ >= i_36_; i_36_++)
 									Class175.aClass261ArrayArrayArray2099[i_35_][i_36_][i_2_].aShort3313 *= -1;
 							}

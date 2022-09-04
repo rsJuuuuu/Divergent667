@@ -62,7 +62,7 @@ public class Class310
 	static final void method3589(int i, int i_0_, byte b, int i_1_, int i_2_) {
 		for (int i_3_ = 0; Node_Sub11.anInt7105 > i_3_; i_3_++) {
 			Rectangle rectangle = Node_Sub38_Sub28.aRectangleArray10404[i_3_];
-			if ((i_0_ ^ 0xffffffff) > (rectangle.x + rectangle.width ^ 0xffffffff) && (i_0_ - -i ^ 0xffffffff) < (rectangle.x ^ 0xffffffff) && (rectangle.height + rectangle.y ^ 0xffffffff) < (i_2_ ^ 0xffffffff) && rectangle.y < i_1_ + i_2_) {
+			if (rectangle.x + rectangle.width > i_0_ && rectangle.x < i_0_ - -i && i_2_ < rectangle.height + rectangle.y && rectangle.y < i_1_ + i_2_) {
 				Class195.aBooleanArray2387[i_3_] = true;
 			}
 		}
@@ -125,7 +125,7 @@ public class Class310
 				ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(anInt3933, 74);
 				ObjectDefinition objectdefinition_10_ = objectdefinition;
 				if (objectdefinition.anIntArray2984 != null) {
-					objectdefinition = objectdefinition.method3038(13, (aa.anInt101 ^ 0xffffffff) != -4 ? Class24.aClass275_442 : ProducingGraphicsBuffer.anInterface17_9901);
+					objectdefinition = objectdefinition.method3038(13, aa.anInt101 != 3 ? Class24.aClass275_442 : ProducingGraphicsBuffer.anInterface17_9901);
 				}
 				if (objectdefinition == null) {
 					return;
@@ -133,37 +133,35 @@ public class Class310
 				if (objectdefinition_10_ == objectdefinition) {
 					objectdefinition_10_ = null;
 				}
-				if (!objectdefinition.method3037(0)) {
-					if (objectdefinition_10_ != null && objectdefinition_10_.method3037(0)) {
-						if (bool && anAnimator3918.method245(-126) && objectdefinition_10_.method3035(anAnimator3918.method250((byte) -69), -166)) {
-							return;
-						}
-						if (anInt3928 != objectdefinition.objectId) {
-							bool_9_ = objectdefinition_10_.aBoolean3000;
-						}
-						i_8_ = objectdefinition_10_.method3044(-16828);
-						if (!objectdefinition_10_.method3032((byte) 26)) {
-							i = 1;
-						} else {
-							i = 0;
-						}
-					}
-				} else {
+				if (objectdefinition.method3037(0)) {
 					if (bool && anAnimator3918.method245(-127) && objectdefinition.method3035(anAnimator3918.method250((byte) 95), -166)) {
 						return;
 					}
-					if ((anInt3928 ^ 0xffffffff) != (objectdefinition.objectId ^ 0xffffffff)) {
+					if (objectdefinition.objectId != anInt3928) {
 						bool_9_ = objectdefinition.aBoolean3000;
 					}
 					i_8_ = objectdefinition.method3044(-16828);
-					if (!objectdefinition.method3032((byte) -77)) {
-						i = 1;
-					} else {
+					if (objectdefinition.method3032((byte) -77)) {
 						i = 0;
+					} else {
+						i = 1;
+					}
+                } else if (objectdefinition_10_ != null && objectdefinition_10_.method3037(0)) {
+					if (bool && anAnimator3918.method245(-126) && objectdefinition_10_.method3035(anAnimator3918.method250((byte) -69), -166)) {
+						return;
+					}
+					if (anInt3928 != objectdefinition.objectId) {
+						bool_9_ = objectdefinition_10_.aBoolean3000;
+					}
+					i_8_ = objectdefinition_10_.method3044(-16828);
+					if (objectdefinition_10_.method3032((byte) 26)) {
+						i = 0;
+					} else {
+						i = 1;
 					}
 				}
-			}
-			if ((i_8_ ^ 0xffffffff) == 0) {
+            }
+			if (i_8_ == -1) {
 				anAnimator3918.method240(false, -1, 838828768);
 			} else {
 				anAnimator3918.method228(i_8_, 0, (byte) 121, i, bool_9_);
@@ -186,21 +184,21 @@ public class Class310
 		anInt3924++;
 		ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(anInt3933, 119);
 		if (objectdefinition.anIntArray2984 != null) {
-			objectdefinition = objectdefinition.method3038(13, (aa.anInt101 ^ 0xffffffff) != -4 ? Class24.aClass275_442 : ProducingGraphicsBuffer.anInterface17_9901);
+			objectdefinition = objectdefinition.method3038(13, aa.anInt101 != 3 ? Class24.aClass275_442 : ProducingGraphicsBuffer.anInterface17_9901);
 		}
 		if (objectdefinition == null) {
 			method3588(graphicstoolkit, (byte) 16);
 			anInt3928 = -1;
 			return null;
 		}
-		if (!aBoolean3919 && (anInt3928 ^ 0xffffffff) != (objectdefinition.objectId ^ 0xffffffff)) {
+		if (!aBoolean3919 && objectdefinition.objectId != anInt3928) {
 			method3595(0, -1, (byte) -110, true);
 			aDrawableModel3939 = null;
 			aBoolean3949 = false;
 		}
 		method3599(anAnimable3920, bool_11_);
 		if (bool_12_) {
-			bool_12_ = bool_12_ & (aBoolean3932 & !aBoolean3949 & (Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730(false) ^ 0xffffffff) != -1);
+			bool_12_ = bool_12_ & (aBoolean3932 & !aBoolean3949 & Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730(false) != 0);
 		}
 		if (bool && !bool_12_) {
 			anInt3928 = objectdefinition.objectId;
@@ -212,17 +210,17 @@ public class Class310
 		}
 		Plane plane = Class320_Sub10.aPlaneArray8300[aByte3944];
 		Plane plane_13_;
-		if (!aBoolean3921) {
-			plane_13_ = (aByte3944 ^ 0xffffffff) <= -4 ? null : Class320_Sub10.aPlaneArray8300[1 + aByte3944];
-		} else {
+		if (aBoolean3921) {
 			plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[0];
+		} else {
+			plane_13_ = aByte3944 >= 3 ? null : Class320_Sub10.aPlaneArray8300[1 + aByte3944];
 		}
-		DrawableModel drawablemodel = null;
+        DrawableModel drawablemodel = null;
 		if (anAnimator3918.method245(-125)) {
 			if (bool_12_) {
 				i |= 0x40000;
 			}
-			drawablemodel = objectdefinition.method3048(anInt3926 != 11 ? anInt3951 : 4 + anInt3951, anAnimable3920.anInt5940, (anInt3926 ^ 0xffffffff) != -12 ? anInt3926 : 10, anAnimable3920.anInt5934, plane_13_, anAnimator3918, 1521375267, graphicstoolkit, plane, aClass121_3930, i, plane.method3260(anAnimable3920.anInt5940, -127, anAnimable3920.anInt5934));
+			drawablemodel = objectdefinition.method3048(anInt3926 != 11 ? anInt3951 : 4 + anInt3951, anAnimable3920.anInt5940, anInt3926 != 11 ? anInt3926 : 10, anAnimable3920.anInt5934, plane_13_, anAnimator3918, 1521375267, graphicstoolkit, plane, aClass121_3930, i, plane.method3260(anAnimable3920.anInt5940, -127, anAnimable3920.anInt5934));
 			if (drawablemodel == null) {
 				aBooleanArray3953 = null;
 				aR3942 = null;
@@ -241,14 +239,20 @@ public class Class310
 				anInt3936 = drawablemodel.ma();
 			}
 			aDrawableModel3939 = null;
-		} else if (aDrawableModel3939 != null && (i & aDrawableModel3939.ua()) == i && (objectdefinition.objectId ^ 0xffffffff) == (anInt3928 ^ 0xffffffff)) {
+		} else if (aDrawableModel3939 != null && (i & aDrawableModel3939.ua()) == i && anInt3928 == objectdefinition.objectId) {
 			drawablemodel = aDrawableModel3939;
 		} else {
 			if (aDrawableModel3939 != null) {
 				i |= aDrawableModel3939.ua();
 			}
-			Class243 class243 = objectdefinition.method3046((anInt3926 ^ 0xffffffff) != -12 ? anInt3951 : anInt3951 + 4, anAnimable3920.anInt5940, anAnimable3920.anInt5934, plane, bool_12_, (byte) 0, plane.method3260(anAnimable3920.anInt5940, -124, anAnimable3920.anInt5934), (anInt3926 ^ 0xffffffff) == -12 ? 10 : anInt3926, graphicstoolkit, aClass121_3930, i, plane_13_);
-			if (class243 != null) {
+			Class243 class243 = objectdefinition.method3046(anInt3926 != 11 ? anInt3951 : anInt3951 + 4, anAnimable3920.anInt5940, anAnimable3920.anInt5934, plane, bool_12_, (byte) 0, plane.method3260(anAnimable3920.anInt5940, -124, anAnimable3920.anInt5934), anInt3926 == 11 ? 10 : anInt3926, graphicstoolkit, aClass121_3930, i, plane_13_);
+			if (class243 == null) {
+				anInt3936 = 0;
+				aBooleanArray3953 = null;
+				anInt3947 = 0;
+				aR3942 = null;
+				aDrawableModel3939 = null;
+			} else {
 				aDrawableModel3939 = drawablemodel = class243.aDrawableModel3064;
 				if (bool_12_) {
 					aR3942 = class243.aR3072;
@@ -258,14 +262,8 @@ public class Class310
 				}
 				anInt3947 = drawablemodel.fa();
 				anInt3936 = drawablemodel.ma();
-			} else {
-				anInt3936 = 0;
-				aBooleanArray3953 = null;
-				anInt3947 = 0;
-				aR3942 = null;
-				aDrawableModel3939 = null;
 			}
-		}
+        }
 		anInt3928 = objectdefinition.objectId;
 		return drawablemodel;
 	}
@@ -313,7 +311,7 @@ public class Class310
 			if ((anEntityNode_Sub4_3931 == null || anEntityNode_Sub4_3931.aBoolean5972) && (class300s != null || class218s != null)) {
 				ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(anInt3933, 115);
 				if (objectdefinition.anIntArray2984 != null) {
-					objectdefinition = objectdefinition.method3038(i_14_ + 9840, (aa.anInt101 ^ 0xffffffff) == -4 ? ProducingGraphicsBuffer.anInterface17_9901 : Class24.aClass275_442);
+					objectdefinition = objectdefinition.method3038(i_14_ + 9840, aa.anInt101 == 3 ? ProducingGraphicsBuffer.anInterface17_9901 : Class24.aClass275_442);
 				}
 				if (objectdefinition != null) {
 					anEntityNode_Sub4_3931 = EntityNode_Sub4.method963(Class174.clientCycle, true);
@@ -321,12 +319,12 @@ public class Class310
 			}
 			if (anEntityNode_Sub4_3931 != null) {
 				drawablemodel.method614(class336);
-				if (!bool) {
-					anEntityNode_Sub4_3931.method958((long) Class174.clientCycle);
-				} else {
+				if (bool) {
 					anEntityNode_Sub4_3931.method952(graphicstoolkit, (long) Class174.clientCycle, class300s, class218s, false);
+				} else {
+					anEntityNode_Sub4_3931.method958((long) Class174.clientCycle);
 				}
-				anEntityNode_Sub4_3931.method967(aByte3925, i_16_, i_15_, i_17_, i);
+                anEntityNode_Sub4_3931.method967(aByte3925, i_16_, i_15_, i_17_, i);
 			}
 		}
 	}

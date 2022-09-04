@@ -130,15 +130,15 @@ public class oa extends GraphicsToolkit implements Interface3
 	}
 	
 	final void a(java.awt.Canvas canvas) {
-		if (canvas != null) {
+		if (canvas == null) {
+			aP5009 = null;
+			t(null);
+		} else {
 			p var_p = (p) aHashTable5007.method1518(3512, (long) canvas.hashCode());
 			aP5009 = var_p;
 			t(var_p);
-		} else {
-			aP5009 = null;
-			t(null);
 		}
-	}
+    }
 	
 	final native int E();
 	
@@ -455,12 +455,12 @@ public class oa extends GraphicsToolkit implements Interface3
 				return false;
 			}
 			int[] is;
-			if (class91.anInt1226 != 2) {
-				is = aD1543.method11(128, true, 128, s, (byte) 0, 0.7F);
-			} else {
+			if (class91.anInt1226 == 2) {
 				is = aD1543.method8(0.7F, s, 128, false, true, 128);
+			} else {
+				is = aD1543.method11(128, true, 128, s, (byte) 0, 0.7F);
 			}
-			CA(s, is, class91.aShort1221, class91.anInt1226, class91.aByte1214, class91.aByte1213, class91.anInt1206, class91.aBoolean1204, class91.aByte1225, class91.aByte1217, class91.aByte1211, class91.aByte1203, class91.aBoolean1223, class91.aBoolean1205, class91.aBoolean1222, class91.aBoolean1212, class91.aBoolean1210, class91.aByte1207, class91.aBoolean1215, class91.aBoolean1216, class91.anInt1202);
+            CA(s, is, class91.aShort1221, class91.anInt1226, class91.aByte1214, class91.aByte1213, class91.anInt1206, class91.aBoolean1204, class91.aByte1225, class91.aByte1217, class91.aByte1211, class91.aByte1203, class91.aBoolean1223, class91.aBoolean1205, class91.aBoolean1222, class91.aBoolean1212, class91.aBoolean1210, class91.aByte1207, class91.aBoolean1215, class91.aBoolean1216, class91.anInt1202);
 		}
 		return true;
 	}

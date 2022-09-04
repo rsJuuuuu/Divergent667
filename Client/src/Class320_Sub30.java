@@ -38,7 +38,7 @@ public class Class320_Sub30 extends Class320
 			anInt4064 = 0;
 		}
 		anInt8498++;
-		if ((anInt4064 ^ 0xffffffff) != -1 && (anInt4064 ^ 0xffffffff) != -2) {
+		if (anInt4064 != 0 && anInt4064 != 1) {
 			anInt4064 = method3677(0);
 		}
 	}
@@ -80,7 +80,7 @@ public class Class320_Sub30 extends Class320
 	
 	static final void method3798(int i) {
 		anInt8493++;
-		if ((Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) ^ 0xffffffff) == -1 && (Class94.anInt1249 ^ 0xffffffff) != (CacheNode_Sub20_Sub1.myPlayerPlane ^ 0xffffffff)) {
+		if (Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) == 0 && CacheNode_Sub20_Sub1.myPlayerPlane != Class94.anInt1249) {
 			Class364.method4057(false, Player.anInt11178, 12, Class277.anInt3527, (byte) -36);
 		} else {
 			Class56.method563(i ^ 0x2e92, Class93.aGraphicsToolkit1241);

@@ -76,17 +76,17 @@ public class Node_Sub38_Sub26 extends Node_Sub38
 		}
 		if (i != 0) {
 			int i_8_ = buffer.readInt();
-			if (i_8_ > 10000000 || i_8_ < 0 || (Class59.anInt866 ^ 0xffffffff) != -1 && i_8_ > Class59.anInt866) {
+			if (i_8_ > 10000000 || i_8_ < 0 || Class59.anInt866 != 0 && i_8_ > Class59.anInt866) {
 				return new byte[100]; //gzip decrypt
 				//throw new RuntimeException();
 			}
 			byte[] bs_9_ = new byte[i_8_];
-			if ((i ^ 0xffffffff) != -2) {
+			if (i == 1) {
+				Class90.method1023(bs_9_, i_8_, bs, i_7_, 9);
+			} else {
 				synchronized (Class262_Sub11.aClass271_7779) {
 					Class262_Sub11.aClass271_7779.method3311(10, buffer, bs_9_);
 				}
-			} else {
-				Class90.method1023(bs_9_, i_8_, bs, i_7_, 9);
 			}
 			return bs_9_;
 		}
@@ -127,6 +127,6 @@ public class Node_Sub38_Sub26 extends Node_Sub38
 		if (i_18_ < 82) {
 			aClass192_10368 = null;
 		}
-        return (i_17_ & 0x22 ^ 0xffffffff) != -1;
+        return (i_17_ & 0x22) != 0;
     }
 }

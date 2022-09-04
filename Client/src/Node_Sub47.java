@@ -59,20 +59,20 @@ public class Node_Sub47 extends Node
 						if (npcdefinition.anIntArray2827 != null) {
 							npcdefinition = npcdefinition.method2999(65535, Class24.aClass275_442);
 						}
-						if (npcdefinition != null) {
+						if (npcdefinition == null) {
+							aBoolean7580 = aNpc7583.aNpcDefinition11122.aBoolean2883;
+							anInt7571 = 256;
+							anInt7572 = 256;
+							anInt7570 = anInt7567 = anInt7566 = 0;
+						} else {
 							anInt7572 = npcdefinition.anInt2852;
 							anInt7570 = npcdefinition.anInt2828;
 							anInt7567 = npcdefinition.anInt2864 << 9;
 							anInt7571 = npcdefinition.anInt2844;
 							aBoolean7580 = npcdefinition.aBoolean2883;
 							anInt7566 = npcdefinition.anInt2862 << 9;
-						} else {
-							aBoolean7580 = aNpc7583.aNpcDefinition11122.aBoolean2883;
-							anInt7571 = 256;
-							anInt7572 = 256;
-							anInt7570 = anInt7567 = anInt7566 = 0;
 						}
-					}
+                    }
 				} else if (aPlayer7573 != null) {
 					anInt7564 = Class172.method1797(-1, aPlayer7573);
 					anInt7570 = aPlayer7573.anInt11173;
@@ -84,18 +84,7 @@ public class Node_Sub47 extends Node
 				}
 			} else {
 				ObjectDefinition objectdefinition = anObjectDefinition7562.method3038(13, aa.anInt101 != 3 ? Class24.aClass275_442 : ProducingGraphicsBuffer.anInterface17_9901);
-				if (objectdefinition != null) {
-					aBoolean7580 = objectdefinition.aBoolean2961;
-					anInt7572 = objectdefinition.anInt3020;
-					anInt7571 = objectdefinition.anInt3050;
-					anInt7567 = objectdefinition.anInt3012 << 9;
-					anInt7570 = objectdefinition.anInt3024;
-					anInt7565 = objectdefinition.anInt2971;
-					anInt7564 = objectdefinition.anInt3015;
-					anIntArray7579 = objectdefinition.anIntArray3036;
-					aBoolean7584 = objectdefinition.aBoolean2993;
-					anInt7587 = objectdefinition.anInt2989;
-				} else {
+				if (objectdefinition == null) {
 					anIntArray7579 = null;
 					anInt7564 = -1;
 					aBoolean7580 = false;
@@ -107,9 +96,20 @@ public class Node_Sub47 extends Node
 					anInt7572 = 256;
 					anInt7587 = 0;
 					anInt7567 = 0;
+				} else {
+					aBoolean7580 = objectdefinition.aBoolean2961;
+					anInt7572 = objectdefinition.anInt3020;
+					anInt7571 = objectdefinition.anInt3050;
+					anInt7567 = objectdefinition.anInt3012 << 9;
+					anInt7570 = objectdefinition.anInt3024;
+					anInt7565 = objectdefinition.anInt2971;
+					anInt7564 = objectdefinition.anInt3015;
+					anIntArray7579 = objectdefinition.anIntArray3036;
+					aBoolean7584 = objectdefinition.aBoolean2993;
+					anInt7587 = objectdefinition.anInt2989;
 				}
-			}
-			if (((anInt7564 ^ 0xffffffff) != (i_0_ ^ 0xffffffff) || !aBoolean7580 == bool) && aNode_Sub9_Sub2_7568 != null) {
+            }
+			if ((i_0_ != anInt7564 || !aBoolean7580 == bool) && aNode_Sub9_Sub2_7568 != null) {
 				Class176.aNode_Sub9_Sub3_2106.method2514(aNode_Sub9_Sub2_7568);
 				aNode_Sub9_Sub2_7568 = null;
 				aNode_Sub45_Sub1_7576 = null;
@@ -128,10 +128,10 @@ public class Node_Sub47 extends Node
 	
 	static final void method2953(int i, int i_2_, boolean bool, int i_3_, int i_4_, float[] fs, int i_5_) {
 		anInt7557++;
-		if ((i_3_ ^ 0xffffffff) < -1 && !Class371.method4094(i_3_, false)) {
+		if (i_3_ > 0 && !Class371.method4094(i_3_, false)) {
 			throw new IllegalArgumentException("");
 		}
-		if ((i_2_ ^ 0xffffffff) < -1 && !Class371.method4094(i_2_, false)) {
+		if (i_2_ > 0 && !Class371.method4094(i_2_, false)) {
 			throw new IllegalArgumentException("");
 		}
 		int i_6_ = Class349.method3989(i, (byte) -71);
@@ -144,7 +144,7 @@ public class Node_Sub47 extends Node
 			float[] fs_12_ = new float[i_6_ * (i_10_ * i_9_)];
 			for (;;) {
 				OpenGL.glTexImage2Df(i_4_, i_7_, i_5_, i_3_, i_2_, 0, i, 5126, fs_11_, 0);
-				if ((i_8_ ^ 0xffffffff) >= -2) {
+				if (i_8_ <= 1) {
 					break;
 				}
 				int i_13_ = i_3_ * i_6_;

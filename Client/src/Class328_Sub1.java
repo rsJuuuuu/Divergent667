@@ -67,7 +67,7 @@ public class Class328_Sub1 extends Class328
 			int i_27_ = anIntArray8502[i_17_ + i_22_];
 			int i_28_ = anIntArray8502[i_21_ - -i_18_];
 			int i_29_ = anIntArray8502[i_22_ - -i_18_];
-			for (int i_30_ = 0; (i ^ 0xffffffff) < (i_30_ ^ 0xffffffff); i_30_++) {
+			for (int i_30_ = 0; i_30_ < i; i_30_++) {
 				float f_31_ = (float) i_30_ * f_4_;
 				int i_32_ = (int) f_31_;
 				int i_33_ = i_32_ - -1;
@@ -83,9 +83,9 @@ public class Class328_Sub1 extends Class328
 	
 	Class328_Sub1(int i) {
 		Random random = new Random((long) i);
-		for (int i_37_ = 0; (i_37_ ^ 0xffffffff) > -257; i_37_++)
+		for (int i_37_ = 0; i_37_ < 256; i_37_++)
 			anIntArray8502[i_37_] = anIntArray8502[256 + i_37_] = i_37_;
-		for (int i_38_ = 0; (i_38_ ^ 0xffffffff) > -257; i_38_++) {
+		for (int i_38_ = 0; i_38_ < 256; i_38_++) {
 			int i_39_ = 0xff & random.nextInt();
 			int i_40_ = anIntArray8502[i_39_];
 			anIntArray8502[i_39_] = anIntArray8502[256 + i_39_] = anIntArray8502[i_38_];

@@ -66,7 +66,7 @@ public class Class86
 		if (i_2_ > 1 && itemdefinition.anIntArray1918 != null) {
 			int i_7_ = -1;
 			for (int i_8_ = 0; i_8_ < 10; i_8_++) {
-				if ((itemdefinition.anIntArray1872[i_8_] ^ 0xffffffff) >= (i_2_ ^ 0xffffffff) && itemdefinition.anIntArray1872[i_8_] != 0) {
+				if (i_2_ >= itemdefinition.anIntArray1872[i_8_] && itemdefinition.anIntArray1872[i_8_] != 0) {
 					i_7_ = itemdefinition.anIntArray1918[i_8_];
 				}
 			}
@@ -79,12 +79,12 @@ public class Class86
 			return null;
 		}
 		GLSprite glsprite_9_;
-		if (!bool) {
-			glsprite_9_ = graphicstoolkit_0_.method1235(36, 36, 32, is, 0, i_6_ ^ ~0x2226);
-		} else {
+		if (bool) {
 			glsprite_9_ = graphicstoolkit.method1235(36, 36, 32, is, 0, 7468);
+		} else {
+			glsprite_9_ = graphicstoolkit_0_.method1235(36, 36, 32, is, 0, i_6_ ^ ~0x2226);
 		}
-		if (!bool) {
+        if (!bool) {
 			Class296 class296 = new Class296();
 			class296.anInt5434 = i_4_;
 			class296.aBoolean5440 = playerdefinition != null;
@@ -223,10 +223,10 @@ public class Class86
 		if (itemdefinition.anInt1857 != -1) {
 			itemdefinition.method1677(method1010(itemdefinition.anInt1857, 14434), 45, method1010(itemdefinition.anInt1887, 14434));
 		}
-		if ((itemdefinition.anInt1852 ^ 0xffffffff) != 0) {
+		if (itemdefinition.anInt1852 != -1) {
 			itemdefinition.method1676((byte) 103, method1010(itemdefinition.anInt1927, 14434), method1010(itemdefinition.anInt1852, 14434));
 		}
-		if ((itemdefinition.anInt1928 ^ 0xffffffff) != 0) {
+		if (itemdefinition.anInt1928 != -1) {
 			itemdefinition.method1693(method1010(itemdefinition.anInt1928, i_16_), (byte) -121, method1010(itemdefinition.anInt1891, i_16_));
 		}
 		if (!aBoolean1162 && itemdefinition.aBoolean1871) {
@@ -265,17 +265,17 @@ public class Class86
 		index19 = class302;
 		this.index37 = index37;
 		aBoolean1162 = bool;
-		if (index19 != null) {
+		if (index19 == null) {
+			anInt1175 = 0;
+		} else {
 			int i_18_ = index19.method3526(-20871) - 1;
 			anInt1175 = index19.method3537(-2, i_18_) + i_18_ * 256;
-		} else {
-			anInt1175 = 0;
 		}
-		if (aClass353_1164 != Node_Sub38_Sub34.aClass353_10443) {
-			aStringArray1184 = new String[] { null, null, Class22.aClass22_371.method297(anInt1161), null, null, null };
-		} else {
-			aStringArray1184 = new String[] { null, null, Class22.aClass22_371.method297(anInt1161), null, null, Class22.aClass22_385.method297(anInt1161) };
-		}
-		aStringArray1183 = new String[] { null, null, null, null, Class22.aClass22_372.method297(anInt1161) };
+        if (aClass353_1164 == Node_Sub38_Sub34.aClass353_10443) {
+            aStringArray1184 = new String[] { null, null, Class22.aClass22_371.method297(anInt1161), null, null, Class22.aClass22_385.method297(anInt1161) };
+        } else {
+            aStringArray1184 = new String[] { null, null, Class22.aClass22_371.method297(anInt1161), null, null, null };
+        }
+        aStringArray1183 = new String[] { null, null, null, null, Class22.aClass22_372.method297(anInt1161) };
 	}
 }

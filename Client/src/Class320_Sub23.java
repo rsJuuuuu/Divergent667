@@ -21,14 +21,14 @@ public class Class320_Sub23 extends Class320
 			return 3;
 		}
 		if (aNode_Sub27_4063.method2691(b + -51) == Node_Sub38_Sub34.aClass353_10443) {
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				if (aNode_Sub27_4063.aClass320_Sub16_7316.method3744(false) == 1) {
 					return 2;
 				}
-				if ((aNode_Sub27_4063.aClass320_Sub30_7275.method3796(false) ^ 0xffffffff) == -2) {
+				if (aNode_Sub27_4063.aClass320_Sub30_7275.method3796(false) == 1) {
 					return 2;
 				}
-				if ((aNode_Sub27_4063.aClass320_Sub26_7269.method3779(false) ^ 0xffffffff) < -1) {
+				if (aNode_Sub27_4063.aClass320_Sub26_7269.method3779(false) > 0) {
 					return 2;
 				}
 			}
@@ -49,7 +49,7 @@ public class Class320_Sub23 extends Class320
 		} else {
 			anInt4064 = 1;
 		}
-		if (anInt4064 != 0 && (anInt4064 ^ 0xffffffff) != -2) {
+		if (anInt4064 != 0 && anInt4064 != 1) {
 			anInt4064 = method3677(0);
 		}
 		if (b >= -35) {

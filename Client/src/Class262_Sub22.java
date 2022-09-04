@@ -15,7 +15,7 @@ public class Class262_Sub22 extends Class262
 	static final void method3206(int i) {
 		anInt7874++;
 		synchronized (Class30.aClass103Array494) {
-			for (int i_0_ = i; (i_0_ ^ 0xffffffff) > (Class30.aClass103Array494.length ^ 0xffffffff); i_0_++) {
+			for (int i_0_ = i; Class30.aClass103Array494.length > i_0_; i_0_++) {
 				Class30.aClass103Array494[i_0_] = new Class103();
 				Class89.anIntArray1195[i_0_] = 0;
 			}
@@ -27,10 +27,10 @@ public class Class262_Sub22 extends Class262
 		if (Class365.anInt4523 == 0) {
 			throw new IllegalStateException();
 		}
-		if ((i ^ 0xffffffff) > -1 || (i ^ 0xffffffff) <= -3) {
+		if (i < 0 || i >= 2) {
 			throw new IllegalArgumentException();
 		}
-		if ((i_1_ ^ 0xffffffff) > -257) {
+		if (i_1_ < 256) {
 			i_1_ = 256;
 		}
 		try {
@@ -42,7 +42,7 @@ public class Class262_Sub22 extends Class262
 				method3207(null, (byte) 120, 39, -124, null);
 			}
 			class42.anInt651 = (~0x3ff & i_1_) - -1024;
-			if ((class42.anInt651 ^ 0xffffffff) < -16385) {
+			if (class42.anInt651 > 16384) {
 				class42.anInt651 = 16384;
 			}
 			class42.method447(class42.anInt651);
@@ -66,7 +66,7 @@ public class Class262_Sub22 extends Class262
 				class42_sub2.method452(component);
 				class42_sub2.anInt651 = 16384;
 				class42_sub2.method447(class42_sub2.anInt651);
-				if ((Class87.anInt1193 ^ 0xffffffff) < -1 && IComponentDefinitions.aClass92_4845 == null) {
+				if (Class87.anInt1193 > 0 && IComponentDefinitions.aClass92_4845 == null) {
 					IComponentDefinitions.aClass92_4845 = new Class92();
 					IComponentDefinitions.aClass92_4845.aSignLink1237 = signlink;
 					signlink.method3641((byte) 50, IComponentDefinitions.aClass92_4845, Class87.anInt1193);
@@ -86,14 +86,14 @@ public class Class262_Sub22 extends Class262
 	
 	static final void method3208(long l, boolean bool) {
 		anInt7870++;
-		if ((l ^ 0xffffffffffffffffL) < -1L && bool == false) {
-			if ((l % 10L ^ 0xffffffffffffffffL) != -1L) {
-				Class262_Sub11.method3179(l, (byte) 123);
-			} else {
+		if (l > 0 && bool == false) {
+			if (l % 10L == 0) {
 				Class262_Sub11.method3179(-1L + l, (byte) 127);
 				Class262_Sub11.method3179(1L, (byte) 117);
+			} else {
+				Class262_Sub11.method3179(l, (byte) 123);
 			}
-		}
+        }
 	}
 	
 	final void method3148(int i) {

@@ -35,7 +35,7 @@ public class Class262_Sub4 extends Class262
 	
 	static final void method3159(int i, int i_0_) {
 		anInt7728++;
-		if (Class29.aNode_Sub43_477 != null && ((i_0_ ^ 0xffffffff) <= -1 && (i_0_ ^ 0xffffffff) > (Class29.aNode_Sub43_477.anInt7531 ^ 0xffffffff))) {
+		if (Class29.aNode_Sub43_477 != null && (i_0_ >= 0 && Class29.aNode_Sub43_477.anInt7531 > i_0_)) {
 			Class24 class24 = Class29.aNode_Sub43_477.aClass24Array7533[i_0_];
 			if (class24.aByte438 == -1) {
 				if (i != 7) {
@@ -56,9 +56,9 @@ public class Class262_Sub4 extends Class262
 			aClass379_7731 = null;
 		}
 		anInt7725++;
-		if ((i ^ 0xffffffff) == (i_3_ ^ 0xffffffff)) {
+		if (i_3_ == i) {
 			Class75.method763(i_2_, i_1_, i_4_, -1, i_3_);
-		} else if (i_4_ + -i_3_ < anInt7722 || i_3_ + i_4_ > za_Sub2.anInt10513 || Class384.anInt4906 > i_2_ - i || (Node_Sub25_Sub1.anInt9936 ^ 0xffffffff) > (i_2_ - -i ^ 0xffffffff)) {
+		} else if (i_4_ + -i_3_ < anInt7722 || i_3_ + i_4_ > za_Sub2.anInt10513 || Class384.anInt4906 > i_2_ - i || i_2_ - -i > Node_Sub25_Sub1.anInt9936) {
 			Class328.method3825(i_2_, i_3_, i, 68, i_4_, i_1_);
 		} else {
 			Class117.method1168(i_2_, i, b + 20, i_3_, i_1_, i_4_);

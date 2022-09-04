@@ -51,7 +51,7 @@ public class Class188_Sub1_Sub2 extends Class188_Sub1
 				Class181.aClass197_2155.firstPort = Settings.PORT_ID;//40000 + Class181.aClass197_2155.npcId;
 				Class181.aClass197_2155.secondPort = 50000 - -Class181.aClass197_2155.id;
 			}
-			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (Class180.aClass377_Sub1Array2143.length ^ 0xffffffff); i_3_++) {
+			for (int i_3_ = 0; Class180.aClass377_Sub1Array2143.length > i_3_; i_3_++) {
 				if (Class180.aClass377_Sub1Array2143[i_3_].anInt8777 == i) {
 					Class380.anInt4877 = Class180.aClass377_Sub1Array2143[i_3_].anInt4673;
 				}

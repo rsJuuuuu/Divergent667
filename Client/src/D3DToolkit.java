@@ -87,7 +87,7 @@ public class D3DToolkit extends AbstractToolkit
 	final void method1265(java.awt.Canvas canvas, Object object, int i) {
 		if (canvas == aCanvas6251) {
 			Dimension dimension = canvas.getSize();
-			if (-1 > (dimension.width ^ 0xffffffff) && dimension.height > 0) {
+			if (dimension.width > 0 && dimension.height > 0) {
 				anIDirect3DDevice9199.EndScene();
 				method1389((byte) -12);
 				anIDirect3DDevice9199.BeginScene();
@@ -96,25 +96,21 @@ public class D3DToolkit extends AbstractToolkit
 	}
 
 	private static final int method1385(Class94 class94, boolean bool) {
-		if (class94 != Class117_Sub1.aClass94_4924) {
+		if (class94 == Class117_Sub1.aClass94_4924) {
+			return 2;
+		} else {
 			if (class94 == Class116.aClass94_5075) {
 				return 4;
 			}
-			if (Class385.aClass94_4911 != class94) {
-				if (class94 != Class236.aClass94_2898) {
-					if (GameStub.aClass94_11 == class94) {
-						return 10;
-					}
-				} else {
-					return 7;
-				}
-			} else {
+			if (Class385.aClass94_4911 == class94) {
 				return 26;
-			}
-		} else {
-			return 2;
-		}
-		if (bool) {
+			} else if (class94 == Class236.aClass94_2898) {
+                return 7;
+            } else if (GameStub.aClass94_11 == class94) {
+                return 10;
+            }
+        }
+        if (bool) {
 			anIntArray9198 = null;
 		}
 		throw new IllegalArgumentException();
@@ -168,13 +164,13 @@ public class D3DToolkit extends AbstractToolkit
 			aGeometryBuffer9184 = new GeometryBuffer(aTi9201);
 			new GeometryBuffer(aTi9201);
 			anInt6370 = aD3DCAPS9188.MaxSimultaneousTextures;
-			aBoolean9186 = -1 != (0x10000 & aD3DCAPS9188.TextureCaps ^ 0xffffffff);
+			aBoolean9186 = (0x10000 & aD3DCAPS9188.TextureCaps) != 0;
 			aBoolean9200 = 0 != (0x4000 & aD3DCAPS9188.TextureCaps);
 			anInt6367 = aD3DCAPS9188.MaxActiveLights > 0 ? aD3DCAPS9188.MaxActiveLights : 8;
-			aBoolean6310 = (aD3DCAPS9188.TextureCaps & 0x800 ^ 0xffffffff) != -1;
-			aBoolean6366 = -1 != (aD3DCAPS9188.TextureCaps & 0x2000 ^ 0xffffffff);
+			aBoolean6310 = (aD3DCAPS9188.TextureCaps & 0x800) != 0;
+			aBoolean6366 = (aD3DCAPS9188.TextureCaps & 0x2000) != 0;
 			aBoolean9196 = (0x2 & aD3DCAPS9188.TextureCaps) == 0;
-			aBoolean6342 = 0 < anInt6319 || -1 == (anIDirect3D9204.CheckDeviceMultiSampleType(anInt9194, anInt9182, aD3DPRESENT_PARAMETERS9178.BackBufferFormat, true, 2) ^ 0xffffffff);
+			aBoolean6342 = 0 < anInt6319 || anIDirect3D9204.CheckDeviceMultiSampleType(anInt9194, anInt9182, aD3DPRESENT_PARAMETERS9178.BackBufferFormat, true, 2) == 0;
 			anIntArray9179 = new int[anInt6370];
 			aBooleanArray9180 = new boolean[anInt6370];
 			aBooleanArray9190 = new boolean[anInt6370];
@@ -217,15 +213,13 @@ public class D3DToolkit extends AbstractToolkit
 		while_22_:
 			do {
 				do {
-					if (i_15_ != 1) {
-						if ((i_15_ ^ 0xffffffff) != -3) {
-							break;
-						}
-					} else {
+					if (i_15_ == 1) {
 						i_16_ = 6;
 						break while_22_;
-					}
-					i_16_ = 27;
+					} else if (i_15_ != 2) {
+                        break;
+                    }
+                    i_16_ = 27;
 					break while_22_;
 				} while (false);
 				i_16_ = 5;
@@ -240,7 +234,7 @@ public class D3DToolkit extends AbstractToolkit
 	}
 
 	final void method1308(byte b) {
-		anIDirect3DDevice9199.a(28, aBoolean6338 && aBoolean6299 && -1 >= (anInt6355 ^ 0xffffffff));
+		anIDirect3DDevice9199.a(28, aBoolean6338 && aBoolean6299 && anInt6355 >= 0);
 		if (b < 74) {
 			method1365(true, (byte) -67);
 		}
@@ -283,22 +277,22 @@ public class D3DToolkit extends AbstractToolkit
 				return false;
 			}
 			label0:
-				for(; ~l <= -1; l--) {
+				for(; l >= 0; l--) {
 					if(1 == l) {
 						continue;
 					}
 					l1 = 0 - -l;
 					label1:
-						for(int i2 = 0; ~i2 > ~anIntArray9198.length; i2++) {
-							if(-1 != ~idirect3d.CheckDeviceType(i, k, d3ddisplaymode.Format, anIntArray9198[i2], true) || -1 != ~idirect3d.CheckDeviceFormat(i, k, d3ddisplaymode.Format, 1, 1, anIntArray9198[i2]) || -1 != ~l && -1 != ~idirect3d.CheckDeviceMultiSampleType(i, k, anIntArray9198[i2], true, l1)) {
+						for(int i2 = 0; anIntArray9198.length > i2; i2++) {
+							if(idirect3d.CheckDeviceType(i, k, d3ddisplaymode.Format, anIntArray9198[i2], true) != 0 || idirect3d.CheckDeviceFormat(i, k, d3ddisplaymode.Format, 1, 1, anIntArray9198[i2]) != 0 || l != 0 && idirect3d.CheckDeviceMultiSampleType(i, k, anIntArray9198[i2], true, l1) != 0) {
 								continue;
 							}
 							int j2 = 0;
 							do {
-								if(~anIntArray9192.length >= ~j2) {
+								if(j2 >= anIntArray9192.length) {
 									continue label1;
 								}
-								if(idirect3d.CheckDeviceFormat(i, k, d3ddisplaymode.Format, 2, 1, anIntArray9192[j2]) == 0 && idirect3d.CheckDepthStencilMatch(i, k, d3ddisplaymode.Format, anIntArray9198[i2], anIntArray9192[j2]) == 0 && (0 == l || ~idirect3d.CheckDeviceMultiSampleType(i, k, anIntArray9192[i2], true, l1) == -1)) {
+								if(idirect3d.CheckDeviceFormat(i, k, d3ddisplaymode.Format, 2, 1, anIntArray9192[j2]) == 0 && idirect3d.CheckDepthStencilMatch(i, k, d3ddisplaymode.Format, anIntArray9198[i2], anIntArray9192[j2]) == 0 && (0 == l || idirect3d.CheckDeviceMultiSampleType(i, k, anIntArray9192[i2], true, l1) == 0)) {
 									k1 = anIntArray9198[i2];
 									j1 = anIntArray9192[j2];
 									break label0;
@@ -309,7 +303,7 @@ public class D3DToolkit extends AbstractToolkit
 
 				}
 
-			if(l < 0 || ~k1 == -1 || -1 == ~j1) {
+			if(l < 0 || k1 == 0 || j1 == 0) {
 				return false;
 			}
 			d3dpresent_parameters.MultiSampleType = l1;
@@ -339,14 +333,12 @@ public class D3DToolkit extends AbstractToolkit
 	}
 
 	private static final int method1388(int i, Class228 class228) {
-		if (class228 != Node_Sub38_Sub5.aClass228_10123) {
-			if (class228 == Class194.aClass228_2377) {
-				return 1;
-			}
-		} else {
+		if (class228 == Node_Sub38_Sub5.aClass228_10123) {
 			return 2;
-		}
-		if (i <= 95) {
+		} else if (class228 == Class194.aClass228_2377) {
+            return 1;
+        }
+        if (i <= 95) {
 			aFloatArray9195 = null;
 		}
 		throw new IllegalArgumentException();
@@ -360,17 +352,15 @@ public class D3DToolkit extends AbstractToolkit
 		while_25_:
 			do {
 				do {
-					if (-4 != (i_37_ ^ 0xffffffff)) {
-						if ((i_37_ ^ 0xffffffff) != -5) {
-							if ((i_37_ ^ 0xffffffff) == -9) {
-								break;
-							}
-							break while_25_;
-						}
-					} else {
+					if (i_37_ == 3) {
 						return new Class290_Sub8(this, aClass302_6167);
-					}
-					return new Class290_Sub9(this, aClass302_6167, aClass5_6247);
+					} else if (i_37_ != 4) {
+                        if (i_37_ == 8) {
+                            break;
+                        }
+                        break while_25_;
+                    }
+                    return new Class290_Sub9(this, aClass302_6167, aClass5_6247);
 				} while (false);
 				return new Class290_Sub10(this, aClass302_6167, aClass5_6247);
 			} while (false);
@@ -382,7 +372,7 @@ public class D3DToolkit extends AbstractToolkit
 		if (b != -12) {
 			aD3DCAPS9188 = null;
 		}
-		if ((i ^ 0xffffffff) == -1 || i == -2005530519) {
+		if (i == 0 || i == -2005530519) {
 			Class322 class322 = (Class322) anObject6119;
 			method1285(0);
 			class322.method3803(-111);
@@ -427,16 +417,16 @@ public class D3DToolkit extends AbstractToolkit
 			if ((0x1000000 & d3dcaps.RasterCaps) == 0) {
 				throw new RuntimeException("");
 			}
-			if ((d3dcaps.MaxSimultaneousTextures ^ 0xffffffff) > -3) {
+			if (d3dcaps.MaxSimultaneousTextures < 2) {
 				throw new RuntimeException("");
 			}
-			if (-1 == (d3dcaps.TextureOpCaps & 0x2 ^ 0xffffffff)) {
+			if ((d3dcaps.TextureOpCaps & 0x2) == 0) {
 				throw new RuntimeException("");
 			}
 			if ((0x8 & d3dcaps.TextureOpCaps) == 0) {
 				throw new RuntimeException("");
 			}
-			if (-1 == (d3dcaps.TextureOpCaps & 0x40 ^ 0xffffffff)) {
+			if ((d3dcaps.TextureOpCaps & 0x40) == 0) {
 				throw new RuntimeException("");
 			}
 			if ((0x200 & d3dcaps.TextureOpCaps) == 0) {
@@ -454,10 +444,10 @@ public class D3DToolkit extends AbstractToolkit
 			if ((0x2 & (d3dcaps.DestBlendCaps & d3dcaps.SrcBlendCaps)) == 0) {
 				throw new RuntimeException("");
 			}
-			if (-1 > (d3dcaps.MaxActiveLights ^ 0xffffffff) && 2 > d3dcaps.MaxActiveLights) {
+			if (d3dcaps.MaxActiveLights > 0 && 2 > d3dcaps.MaxActiveLights) {
 				throw new RuntimeException("");
 			}
-			if ((d3dcaps.MaxStreams ^ 0xffffffff) > -6) {
+			if (d3dcaps.MaxStreams < 5) {
 				throw new RuntimeException("");
 			}
 			D3DPRESENT_PARAMETERS d3dpresent_parameters = new D3DPRESENT_PARAMETERS(canvas);
@@ -468,7 +458,7 @@ public class D3DToolkit extends AbstractToolkit
 			d3dpresent_parameters.Windowed = true;
 			d3dpresent_parameters.PresentationInterval = -2147483648;
 			int i_41_ = 2;
-			if ((0x100000 & d3dcaps.DevCaps ^ 0xffffffff) != -1) {
+			if ((0x100000 & d3dcaps.DevCaps) != 0) {
 				i_41_ |= 0x10;
 			}
 			IDirect3DDevice idirect3ddevice;
@@ -497,16 +487,14 @@ public class D3DToolkit extends AbstractToolkit
 		if (Class47.aClass26_688 == aClass26_6301) {
 			anIDirect3DDevice9199.SetRenderState(19, 5);
 			anIDirect3DDevice9199.SetRenderState(20, 6);
-		} else if (aClass26_6301 != Class339_Sub3.aClass26_8664) {
-			if (aClass26_6301 == Node_Sub15_Sub7.aClass26_9827) {
-				anIDirect3DDevice9199.SetRenderState(19, 9);
-				anIDirect3DDevice9199.SetRenderState(20, 2);
-			}
-		} else {
+		} else if (aClass26_6301 == Class339_Sub3.aClass26_8664) {
 			anIDirect3DDevice9199.SetRenderState(19, 2);
 			anIDirect3DDevice9199.SetRenderState(20, 2);
-		}
-	}
+		} else if (aClass26_6301 == Node_Sub15_Sub7.aClass26_9827) {
+            anIDirect3DDevice9199.SetRenderState(19, 9);
+            anIDirect3DDevice9199.SetRenderState(20, 2);
+        }
+    }
 
 	final void method1263(boolean bool) {
 		if (bool) {
@@ -565,17 +553,17 @@ public class D3DToolkit extends AbstractToolkit
 		if (BufferedConnection.aClass346_615 == class346) {
 			return 2;
 		}
-		if (Class55.aClass346_829 != class346) {
+		if (Class55.aClass346_829 == class346) {
+			return 3;
+		} else {
 			if (Class262_Sub16.aClass346_7824 == class346) {
 				return 4;
 			}
 			if (class346 == Node_Sub15_Sub9.aClass346_9842) {
 				return 256;
 			}
-		} else {
-			return 3;
 		}
-		if (i != 0) {
+        if (i != 0) {
 			anIntArray9192 = null;
 		}
 		return 0;
@@ -595,7 +583,7 @@ public class D3DToolkit extends AbstractToolkit
 			if (i_47_ == 4 * i_44_) {
 				aPixelBuffer9187.a(is, 0, 0, i_45_ * i_44_);
 			} else {
-				for (int i_48_ = 0; (i_45_ ^ 0xffffffff) < (i_48_ ^ 0xffffffff); i_48_++)
+				for (int i_48_ = 0; i_48_ < i_45_; i_48_++)
 					aPixelBuffer9187.a(is, i_44_ * i_48_, i_48_ * i_47_, i_44_);
 			}
 			idirect3dsurface_46_.UnlockRect();
@@ -613,7 +601,7 @@ public class D3DToolkit extends AbstractToolkit
 	}
 
 	final void method1326(boolean bool) {
-		for (int i = 0; (anInt6370 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
+		for (int i = 0; i < anInt6370; i++) {
 			anIDirect3DDevice9199.SetSamplerState(i, 7, 0);
 			anIDirect3DDevice9199.SetSamplerState(i, 6, 2);
 			anIDirect3DDevice9199.SetSamplerState(i, 5, 2);
@@ -729,13 +717,13 @@ public class D3DToolkit extends AbstractToolkit
 
 	final void method1310(byte b) {
 		if (null == anIDirect3DVertexShader9197 && Class119.aClass346_1515 != aClass346Array6343[anInt6284]) {
-			if (aClass346Array6343[anInt6284] != BufferedConnection.aClass346_615) {
-				anIDirect3DDevice9199.SetTransform(16 + anInt6284, aClass336_Sub1Array6327[anInt6284].method3884(true, aFloatArray9195));
-			} else {
+			if (aClass346Array6343[anInt6284] == BufferedConnection.aClass346_615) {
 				anIDirect3DDevice9199.SetTransform(16 + anInt6284, aClass336_Sub1Array6327[anInt6284].method3874(5, aFloatArray9195));
+			} else {
+				anIDirect3DDevice9199.SetTransform(16 + anInt6284, aClass336_Sub1Array6327[anInt6284].method3884(true, aFloatArray9195));
 			}
-			int i = method1391(0, aClass346Array6343[anInt6284]);
-			if ((i ^ 0xffffffff) != (anIntArray9179[anInt6284] ^ 0xffffffff)) {
+            int i = method1391(0, aClass346Array6343[anInt6284]);
+			if (anIntArray9179[anInt6284] != i) {
 				anIDirect3DDevice9199.SetTextureStageState(anInt6284, 24, i);
 				anIntArray9179[anInt6284] = i;
 			}
@@ -784,18 +772,18 @@ public class D3DToolkit extends AbstractToolkit
 
 	final void e(int i, int i_61_) throws Exception_Sub1 {
 		anIDirect3DDevice9199.EndScene();
-		if (!aClass322_9203.method3806(0)) {
-			if (++anInt9205 > 50) {
-				throw new Exception_Sub1();
-			}
-			method1389((byte) -12);
-		} else {
+		if (aClass322_9203.method3806(0)) {
 			anInt9205 = 0;
 			if (lh.a(aClass322_9203.method3804(0, (byte) 21), true)) {
 				method1389((byte) -12);
 			}
+		} else {
+			if (++anInt9205 > 50) {
+				throw new Exception_Sub1();
+			}
+			method1389((byte) -12);
 		}
-		anIDirect3DDevice9199.BeginScene();
+        anIDirect3DDevice9199.BeginScene();
 	}
 
 	final void method1392(int i, Class265_Sub3 class265_sub3) {
@@ -875,7 +863,7 @@ public class D3DToolkit extends AbstractToolkit
 		if (i > -20) {
 			m();
 		}
-		for (/**/; (anInt6356 ^ 0xffffffff) < (i_64_ ^ 0xffffffff); i_64_++)
+		for (/**/; i_64_ < anInt6356; i_64_++)
 			anIDirect3DDevice9199.LightEnable(2 + i_64_, false);
 		super.method1273(-69);
 	}
@@ -904,16 +892,14 @@ public class D3DToolkit extends AbstractToolkit
 
 	final void method1321(byte b, Class139 class139) {
 		int i = 0;
-		if (Class191.aClass139_2349 != class139) {
-			if (class139 == IsaacCipher.aClass139_1829) {
-				i = 131072;
-			} else if (class139 == Class168.aClass139_2042) {
-				i = 196608;
-			}
-		} else {
+		if (Class191.aClass139_2349 == class139) {
 			i = 65536;
-		}
-		if (b == 102) {
+		} else if (class139 == IsaacCipher.aClass139_1829) {
+            i = 131072;
+        } else if (class139 == Class168.aClass139_2042) {
+            i = 196608;
+        }
+        if (b == 102) {
 			anIDirect3DDevice9199.SetTextureStageState(anInt6284, 11, anInt6284 | i);
 		}
 	}
@@ -949,7 +935,9 @@ public class D3DToolkit extends AbstractToolkit
 		if (StandardSprite.aClass104_8926 == class104) {
 			return 2;
 		}
-		if (Class263.aClass104_3337 != class104) {
+		if (Class263.aClass104_3337 == class104) {
+			return 3;
+		} else {
 			if (class104 == Mobile_Sub1.aClass104_10947) {
 				return 1;
 			}
@@ -962,10 +950,8 @@ public class D3DToolkit extends AbstractToolkit
 			if (Node_Sub15_Sub2.aClass104_9779 == class104) {
 				return 5;
 			}
-		} else {
-			return 3;
 		}
-		throw new IllegalArgumentException("");
+        throw new IllegalArgumentException("");
 	}
 
 	final void method1333(boolean bool) {
@@ -1088,15 +1074,13 @@ public class D3DToolkit extends AbstractToolkit
 		while_26_:
 			do {
 				do {
-					if (i_79_ != 1) {
-						if ((i_79_ ^ 0xffffffff) != -3) {
-							break;
-						}
-					} else {
+					if (i_79_ == 1) {
 						i_80_ = 3;
 						break while_26_;
-					}
-					i_80_ = 26;
+					} else if (i_79_ != 2) {
+                        break;
+                    }
+                    i_80_ = 26;
 					break while_26_;
 				} while (false);
 				i_80_ = 2;
@@ -1131,30 +1115,20 @@ public class D3DToolkit extends AbstractToolkit
 			return 83;
 		}
 		if (Class372.aClass372_4594 == class372) {
-			if (CacheNode_Sub19.aClass68_9621 != class68) {
-				if (class68 != Class99.aClass68_1290) {
-					if (class68 != Node_Sub52.aClass68_7639) {
-						if (class68 != Class188_Sub2.aClass68_6875) {
-							if (class68 != Class259.aClass68_3268) {
-								if (Class262_Sub15_Sub1.aClass68_10521 == class68) {
-									return 77;
-								}
-							} else {
-								return 51;
-							}
-						} else {
-							return 50;
-						}
-					} else {
-						return 28;
-					}
-				} else {
-					return 21;
-				}
-			} else {
+			if (CacheNode_Sub19.aClass68_9621 == class68) {
 				return 22;
-			}
-		}
+			} else if (class68 == Class99.aClass68_1290) {
+                return 21;
+            } else if (class68 == Node_Sub52.aClass68_7639) {
+                return 28;
+            } else if (class68 == Class188_Sub2.aClass68_6875) {
+                return 50;
+            } else if (class68 == Class259.aClass68_3268) {
+                return 51;
+            } else if (Class262_Sub15_Sub1.aClass68_10521 == class68) {
+                return 77;
+            }
+        }
 		throw new IllegalArgumentException("");
 	}
 }

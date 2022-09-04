@@ -49,14 +49,14 @@ public class Class232
 		byte[] bs = new byte[buffer.buffer.length - buffer.offset];
 		buffer.readBytes(bs, 0, bs.length);
 		byte[] data;
-		if (exponent != null && modulus != null) {
+		if (exponent == null || modulus == null) {
+			data = bs;
+		} else {
 			BigInteger biginteger = new BigInteger(bs);
 			BigInteger biginteger_2_ = biginteger.modPow(exponent, modulus);
 			data = biginteger_2_.toByteArray();
-		} else {
-			data = bs;
 		}
-		if (data.length != 65) {
+        if (data.length != 65) {
 			throw new RuntimeException();
 		}
 		byte[] whirpoolHash = GLXToolkit.generateWhirpoolHash((byte) 125, buffer.buffer, -bs.length + buffer.offset - 5, 5);
@@ -86,7 +86,7 @@ public class Class232
 		if (aBuffer2775 == null) {
 			throw new RuntimeException();
 		}
-		if ((i ^ 0xffffffff) > -1 || i >= aClass34_Sub1Array2777.length) {
+		if (i < 0 || i >= aClass34_Sub1Array2777.length) {
 			throw new RuntimeException();
 		}
 		if (aClass34_Sub1Array2777[i] != null) {
@@ -113,12 +113,12 @@ public class Class232
 	final void method2140(int i) {
 		anInt2776++;
 		if (aClass34_Sub1Array2777 != null) {
-			for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > (aClass34_Sub1Array2777.length ^ 0xffffffff); i_10_++) {
+			for (int i_10_ = 0; aClass34_Sub1Array2777.length > i_10_; i_10_++) {
 				if (aClass34_Sub1Array2777[i_10_] != null) {
 					aClass34_Sub1Array2777[i_10_].method385(false);
 				}
 			}
-			for (int i_11_ = i; (aClass34_Sub1Array2777.length ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++) {
+			for (int i_11_ = i; i_11_ < aClass34_Sub1Array2777.length; i_11_++) {
 				if (aClass34_Sub1Array2777[i_11_] != null) {
 					aClass34_Sub1Array2777[i_11_].method380(0);
 				}

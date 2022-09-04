@@ -61,7 +61,9 @@ public class Class196
 		int i = buffer.readUnsignedByte();
 		anIntArray2409[0] = i >> 4;
 		anIntArray2409[1] = i & 0xf;
-		if (i != 0) {
+		if (i == 0) {
+			anIntArray2405[0] = anIntArray2405[1] = 0;
+		} else {
 			anIntArray2405[0] = buffer.readUnsignedShort();
 			anIntArray2405[1] = buffer.readUnsignedShort();
 			int i_10_ = buffer.readUnsignedByte();
@@ -73,22 +75,20 @@ public class Class196
 			}
 			for (int i_13_ = 0; i_13_ < 2; i_13_++) {
 				for (int i_14_ = 0; i_14_ < anIntArray2409[i_13_]; i_14_++) {
-					if ((i_10_ & 1 << i_13_ * 4 << i_14_) != 0) {
-						anIntArrayArrayArray2410[i_13_][1][i_14_] = buffer.readUnsignedShort();
-						anIntArrayArrayArray2408[i_13_][1][i_14_] = buffer.readUnsignedShort();
-					} else {
+					if ((i_10_ & 1 << i_13_ * 4 << i_14_) == 0) {
 						anIntArrayArrayArray2410[i_13_][1][i_14_] = anIntArrayArrayArray2410[i_13_][0][i_14_];
 						anIntArrayArrayArray2408[i_13_][1][i_14_] = anIntArrayArrayArray2408[i_13_][0][i_14_];
+					} else {
+						anIntArrayArrayArray2410[i_13_][1][i_14_] = buffer.readUnsignedShort();
+						anIntArrayArrayArray2408[i_13_][1][i_14_] = buffer.readUnsignedShort();
 					}
-				}
+                }
 			}
 			if (i_10_ != 0 || anIntArray2405[1] != anIntArray2405[0]) {
 				class177.method1807(buffer);
 			}
-		} else {
-			anIntArray2405[0] = anIntArray2405[1] = 0;
 		}
-	}
+    }
 	
 	private final float method1995(int i, int i_15_, float f) {
 		float f_16_ = (float) anIntArrayArrayArray2410[i][0][i_15_] + f * (float) (anIntArrayArrayArray2410[i][1][i_15_] - anIntArrayArrayArray2410[i][0][i_15_]);

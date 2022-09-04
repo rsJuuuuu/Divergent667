@@ -208,13 +208,13 @@ abstract class GraphicsToolkit
 		if (i >= -68) {
 			aClass34_Sub1Array1547 = null;
 		}
-		if ((i_114_ ^ 0xffffffff) == -2) {
+		if (i_114_ == 1) {
 			return Class114.method1155(var_d, canvas, i_113_, -58);
 		}
-		if ((i_114_ ^ 0xffffffff) == -6) {
+		if (i_114_ == 5) {
 			return Node_Sub20.method2613(i_113_, 1, class302, var_d, canvas);
 		}
-		if ((i_114_ ^ 0xffffffff) == -4) {
+		if (i_114_ == 3) {
 			return Class306.method3566(class302, i_113_, 89, var_d, canvas);
 		}
 		throw new IllegalArgumentException("UM");
@@ -328,7 +328,7 @@ abstract class GraphicsToolkit
 	GraphicsToolkit(d var_d) {
 		aD1543 = var_d;
 		int i = -1;
-		for (int i_173_ = 0; (i_173_ ^ 0xffffffff) > -9; i_173_++) {
+		for (int i_173_ = 0; i_173_ < 8; i_173_++) {
 			if (!Class140.aBooleanArray1739[i_173_]) {
 				Class140.aBooleanArray1739[i_173_] = true;
 				i = i_173_;

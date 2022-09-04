@@ -34,17 +34,17 @@ public class Node_Sub15_Sub11 extends Node_Sub15
 			Class20.anInt328 = (int) Class20.aFloat327 >> 1;
 			Class20.aByteArrayArrayArray332 = Node_Sub29_Sub3.method2719(-7499, Class20.anInt328);
 		}
-		if ((Class262_Sub4.anInt7730 ^ 0xffffffff) != 0 && (Class150_Sub3.anInt8963 ^ 0xffffffff) != 0) {
+		if (Class262_Sub4.anInt7730 != -1 && Class150_Sub3.anInt8963 != -1) {
 			int i_1_ = -Class94.anInt1250 + Class262_Sub4.anInt7730;
-			if ((i_1_ ^ 0xffffffff) > -3 || i_1_ > 2) {
+			if (i_1_ < 2 || i_1_ > 2) {
 				i_1_ /= 8;
 			}
 			int i_2_ = -Class327.anInt5360 + Class150_Sub3.anInt8963;
 			Class94.anInt1250 = i_1_ + Class94.anInt1250;
-			if (i_2_ < 2 || (i_2_ ^ 0xffffffff) < -3) {
+			if (i_2_ < 2 || i_2_ > 2) {
 				i_2_ /= 8;
 			}
-			if ((i_1_ ^ 0xffffffff) == -1 && i_2_ == 0) {
+			if (i_1_ == 0 && i_2_ == 0) {
 				Class150_Sub3.anInt8963 = -1;
 				Class262_Sub4.anInt7730 = -1;
 			}

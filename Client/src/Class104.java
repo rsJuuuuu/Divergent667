@@ -41,7 +41,7 @@ public class Class104
 				int i_10_ = actor_7_.anInt5940 - i_8_ >> 9;
 				int i_11_ = actor_7_.anInt5934 - -i_8_ >> 9;
 				int i_12_ = actor_7_.anInt5940 - -i_8_ >> 9;
-				if ((i_9_ ^ 0xffffffff) >= (i ^ 0xffffffff) && (i_3_ ^ 0xffffffff) <= (i_10_ ^ 0xffffffff) && i <= i_11_ && i_3_ <= i_12_) {
+				if (i >= i_9_ && i_10_ <= i_3_ && i <= i_11_ && i_3_ <= i_12_) {
 					int i_13_ = (i_11_ + 1 - i) * (i_12_ + (1 - i_3_));
 					if (i_13_ > i_6_) {
 						actor = actor_7_;

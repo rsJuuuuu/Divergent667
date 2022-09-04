@@ -49,9 +49,9 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 				i = itemdefinition_0_.anInt1919;
 			}
 		}
-		if ((anInt11007 ^ 0xffffffff) != 0) {
+		if (anInt11007 != -1) {
 			ItemDefinitions itemdefinition_2_ = EntityNode_Sub3_Sub1.aClass86_9166.method1010(anInt11007, 14434);
-			if ((itemdefinition_2_.anInt1919 ^ 0xffffffff) < (i ^ 0xffffffff)) {
+			if (i < itemdefinition_2_.anInt1919) {
 				i = itemdefinition_2_.anInt1919;
 			}
 		}
@@ -122,14 +122,14 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 		if (drawablemodel != null && (!Node_Sub15_Sub10.aBoolean9850 ? drawablemodel.method624(i_3_, i, class336, true, itemdefinition.anInt1919) : drawablemodel.method621(i_3_, i, class336, true, itemdefinition.anInt1919, Class308.anInt3912))) {
 			return true;
 		}
-		if ((anInt11010 ^ 0xffffffff) != 0) {
+		if (anInt11010 != -1) {
 			ItemDefinitions itemdefinition_4_ = EntityNode_Sub3_Sub1.aClass86_9166.method1010(anInt11010, 14434);
 			drawablemodel = itemdefinition_4_.method1689(null, 131072, null, anInt11005, graphicstoolkit, 116);
 			if (drawablemodel != null && (Node_Sub15_Sub10.aBoolean9850 ? drawablemodel.method621(i_3_, i, class336, true, itemdefinition_4_.anInt1919, Class308.anInt3912) : drawablemodel.method624(i_3_, i, class336, true, itemdefinition_4_.anInt1919))) {
 				return true;
 			}
 		}
-		if ((anInt11007 ^ 0xffffffff) != 0) {
+		if (anInt11007 != -1) {
 			ItemDefinitions itemdefinition_5_ = EntityNode_Sub3_Sub1.aClass86_9166.method1010(anInt11007, 14434);
 			drawablemodel = itemdefinition_5_.method1689(null, 131072, null, anInt11001, graphicstoolkit, 118);
 			if (drawablemodel != null && (!Node_Sub15_Sub10.aBoolean9850 ? drawablemodel.method624(i_3_, i, class336, true, itemdefinition_5_.anInt1919) : drawablemodel.method621(i_3_, i, class336, true, itemdefinition_5_.anInt1919, Class308.anInt3912))) {
@@ -160,7 +160,7 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 		if (class256 != null && class256.aMobile3239.aBoolean9121) {
 			i_10_ = class256.aMobile3239.method817(2);
 		}
-		if (animable_sub1 != null && (-i_10_ ^ 0xffffffff) > (animable_sub1.aShort9102 ^ 0xffffffff)) {
+		if (animable_sub1 != null && animable_sub1.aShort9102 > -i_10_) {
 			i_10_ = -animable_sub1.aShort9102;
 		}
 		if (i_10_ != anInt11019) {
@@ -186,13 +186,13 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 			int i_25_ = i_14_ / 2;
 			int i_26_ = i_15_ / 2;
 			int i_27_ = plane.method3260(anInt5940 - -i_26_, -123, i_25_ + anInt5934);
-			int i_28_ = (i_21_ ^ 0xffffffff) < (i_18_ ^ 0xffffffff) ? i_18_ : i_21_;
+			int i_28_ = i_18_ < i_21_ ? i_18_ : i_21_;
 			int i_29_ = i_27_ > i_24_ ? i_24_ : i_27_;
-			int i_30_ = (i_21_ ^ 0xffffffff) > (i_27_ ^ 0xffffffff) ? i_21_ : i_27_;
+			int i_30_ = i_27_ > i_21_ ? i_21_ : i_27_;
 			int i_31_ = i_18_ >= i_24_ ? i_24_ : i_18_;
 			if (i_15_ != 0) {
 				int i_32_ = 0x3fff & (int) (2607.5945876176133 * Math.atan2((double) (-i_29_ + i_28_), (double) i_15_));
-				if ((i_32_ ^ 0xffffffff) != -1) {
+				if (i_32_ != 0) {
 					class336.method3859(i_32_);
 				}
 			}
@@ -203,11 +203,11 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 				}
 			}
 			int i_34_ = i_27_ + i_18_;
-			if ((i_24_ + i_21_ ^ 0xffffffff) > (i_34_ ^ 0xffffffff)) {
+			if (i_34_ > i_24_ + i_21_) {
 				i_34_ = i_21_ + i_24_;
 			}
 			i_34_ = (i_34_ >> 1) + -anInt5937;
-			if ((i_34_ ^ 0xffffffff) != -1) {
+			if (i_34_ != 0) {
 				class336.method3863(0, i_34_, 0);
 			}
 		}
@@ -218,22 +218,22 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 		if (anInt11007 != -1) {
 			DrawableModel drawablemodel = EntityNode_Sub3_Sub1.aClass86_9166.method1010(anInt11007, 14434).method1689(null, 2048, null, anInt11001, graphicstoolkit, 83);
 			if (drawablemodel != null) {
-				if (!Node_Sub15_Sub10.aBoolean9850) {
-					drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[2], 0);
-				} else {
+				if (Node_Sub15_Sub10.aBoolean9850) {
 					drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[2], Class308.anInt3912, 0);
+				} else {
+					drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[2], 0);
 				}
 				aBoolean11002 |= drawablemodel.F();
 				anInt11011 = drawablemodel.ma();
 			}
 		}
-		if ((anInt11010 ^ 0xffffffff) != 0) {
+		if (anInt11010 != -1) {
 			DrawableModel drawablemodel = EntityNode_Sub3_Sub1.aClass86_9166.method1010(anInt11010, 14434).method1689(null, 2048, null, anInt11005, graphicstoolkit, 68);
 			if (drawablemodel != null) {
-				if (!Node_Sub15_Sub10.aBoolean9850) {
-					drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[1], 0);
-				} else {
+				if (Node_Sub15_Sub10.aBoolean9850) {
 					drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[1], Class308.anInt3912, 0);
+				} else {
+					drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[1], 0);
 				}
 				aBoolean11002 |= drawablemodel.F();
 				if (drawablemodel.ma() > anInt11011) {
@@ -243,13 +243,13 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3
 		}
 		DrawableModel drawablemodel = EntityNode_Sub3_Sub1.aClass86_9166.method1010(anInt10996, 14434).method1689(null, 2048, null, anInt11003, graphicstoolkit, 127);
 		if (drawablemodel != null) {
-			if (!Node_Sub15_Sub10.aBoolean9850) {
-				drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], 0);
-			} else {
+			if (Node_Sub15_Sub10.aBoolean9850) {
 				drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
+			} else {
+				drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], 0);
 			}
 			aBoolean11002 |= drawablemodel.F();
-			if ((drawablemodel.ma() ^ 0xffffffff) < (anInt11011 ^ 0xffffffff)) {
+			if (anInt11011 < drawablemodel.ma()) {
 				anInt11011 = drawablemodel.ma();
 			}
 		}

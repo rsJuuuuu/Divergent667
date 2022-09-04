@@ -62,10 +62,10 @@ public class Display
 			int i_4_ = aDisplayMode863.getRefreshRate();
 			DisplayMode[] displaymodes = aGraphicsDevice864.getDisplayModes();
 			boolean bool = false;
-			for (int i_5_ = 0; (displaymodes.length ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++) {
+			for (int i_5_ = 0; i_5_ < displaymodes.length; i_5_++) {
 				if (i == displaymodes[i_5_].getWidth() && displaymodes[i_5_].getHeight() == i_1_ && displaymodes[i_5_].getBitDepth() == i_2_) {
 					int i_6_ = displaymodes[i_5_].getRefreshRate();
-					if (!bool || (Math.abs(-i_4_ + i_6_) ^ 0xffffffff) > (Math.abs(i_3_ - i_4_) ^ 0xffffffff)) {
+					if (!bool || Math.abs(i_3_ - i_4_) > Math.abs(-i_4_ + i_6_)) {
 						i_3_ = i_6_;
 						bool = true;
 					}
@@ -81,7 +81,7 @@ public class Display
 	public final int[] listmodes() {
 		DisplayMode[] displaymodes = aGraphicsDevice864.getDisplayModes();
 		int[] is = new int[displaymodes.length << 2];
-		for (int i = 0; (i ^ 0xffffffff) > (displaymodes.length ^ 0xffffffff); i++) {
+		for (int i = 0; displaymodes.length > i; i++) {
 			is[i << 2] = displaymodes[i].getWidth();
 			is[(i << 2) + 1] = displaymodes[i].getHeight();
 			is[(i << 2) + 2] = displaymodes[i].getBitDepth();
@@ -107,7 +107,7 @@ public class Display
 		if (!aGraphicsDevice864.isFullScreenSupported()) {
 			GraphicsDevice[] graphicsdevices = graphicsenvironment.getScreenDevices();
 			GraphicsDevice[] graphicsdevices_7_ = graphicsdevices;
-			for (int i = 0; (i ^ 0xffffffff) > (graphicsdevices_7_.length ^ 0xffffffff); i++) {
+			for (int i = 0; graphicsdevices_7_.length > i; i++) {
 				GraphicsDevice graphicsdevice = graphicsdevices_7_[i];
 				if (null != graphicsdevice && graphicsdevice.isFullScreenSupported()) {
 					aGraphicsDevice864 = graphicsdevice;

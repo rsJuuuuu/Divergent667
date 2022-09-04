@@ -87,10 +87,10 @@ class Class169_Sub2 extends Class169
 		anInt8796++;
 		if (bool) {
 			int[] is_23_ = new int[i_18_ * i_19_];
-			for (int i_24_ = 0; (i_24_ ^ 0xffffffff) > (i_18_ ^ 0xffffffff); i_24_++) {
+			for (int i_24_ = 0; i_18_ > i_24_; i_24_++) {
 				int i_25_ = i_19_ * i_24_;
 				int i_26_ = i_21_ * (i_18_ + -i_24_ + -1) - -i_22_;
-				for (int i_27_ = 0; (i_19_ ^ 0xffffffff) < (i_27_ ^ 0xffffffff); i_27_++)
+				for (int i_27_ = 0; i_27_ < i_19_; i_27_++)
 					is_23_[i_25_++] = is[i_26_++];
 			}
 			is = is_23_;
@@ -99,11 +99,11 @@ class Class169_Sub2 extends Class169
 			anInt8803 = -15;
 		}
 		aGLToolkit4947.method1444(b + 26, this);
-		if ((i_21_ ^ 0xffffffff) != (i_19_ ^ 0xffffffff)) {
+		if (i_19_ != i_21_) {
 			OpenGL.glPixelStorei(3314, i_21_);
 		}
 		OpenGL.glTexSubImage2Di(anInt4951, 0, i, -i_18_ + -i_20_ + anInt8803, i_19_, i_18_, 32993, aGLToolkit4947.anInt6740, is, i_22_);
-		if ((i_19_ ^ 0xffffffff) != (i_21_ ^ 0xffffffff)) {
+		if (i_21_ != i_19_) {
 			OpenGL.glPixelStorei(3314, 0);
 		}
 	}
@@ -114,16 +114,16 @@ class Class169_Sub2 extends Class169
 		anInt8795 = i_29_;
 		if (bool_33_) {
 			int[] is_34_ = new int[is.length];
-			for (int i_35_ = 0; (i_35_ ^ 0xffffffff) > (i_30_ ^ 0xffffffff); i_35_++) {
+			for (int i_35_ = 0; i_30_ > i_35_; i_35_++) {
 				int i_36_ = i_35_ * i_29_;
 				int i_37_ = i_29_ * (-i_35_ + (i_30_ + -1));
-				for (int i_38_ = 0; (i_29_ ^ 0xffffffff) < (i_38_ ^ 0xffffffff); i_38_++)
+				for (int i_38_ = 0; i_38_ < i_29_; i_38_++)
 					is_34_[i_36_++] = is[i_37_++];
 			}
 			is = is_34_;
 		}
 		aGLToolkit4947.method1444(-2, this);
-		if ((anInt4951 ^ 0xffffffff) != -34038 && bool && i_31_ == 0 && (i_32_ ^ 0xffffffff) == -1) {
+		if (anInt4951 != 34037 && bool && i_31_ == 0 && i_32_ == 0) {
 			Class258.method3124(anInt8795, anInt4951, is, 32993, anInt4950, anInt8803, 1, aGLToolkit4947.anInt6740);
 			this.method1766((byte) 126, true);
 		} else {
@@ -150,7 +150,7 @@ class Class169_Sub2 extends Class169
 		anInt8795 = i_46_;
 		anInt8803 = i_47_;
 		aGLToolkit4947.method1444(-2, this);
-		if (!bool || (anInt4951 ^ 0xffffffff) == -34038) {
+		if (!bool || anInt4951 == 34037) {
 			OpenGL.glTexImage2Df(anInt4951, 0, anInt4950, anInt8795, anInt8803, 0, i_48_, 5126, fs, 0);
 			this.method1766((byte) 100, false);
 		} else {
@@ -171,7 +171,7 @@ class Class169_Sub2 extends Class169
 	}
 	
 	final void method1775(int i, byte b, int i_52_, int i_53_, int i_54_, byte[] bs, boolean bool, int i_55_, int i_56_, int i_57_) {
-		if ((i_55_ ^ 0xffffffff) == -1) {
+		if (i_55_ == 0) {
 			i_55_ = i_54_;
 		}
 		anInt8794++;
@@ -204,7 +204,7 @@ class Class169_Sub2 extends Class169
 	}
 	
 	final void method1776(boolean bool, int i, boolean bool_66_) {
-		if ((anInt4951 ^ 0xffffffff) == -3554) {
+		if (anInt4951 == 3553) {
 			aGLToolkit4947.method1444(-2, this);
 			OpenGL.glTexParameteri(anInt4951, 10242, bool ? 10497 : 33071);
 			OpenGL.glTexParameteri(anInt4951, 10243, !bool_66_ ? 33071 : 10497);

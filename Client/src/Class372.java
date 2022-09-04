@@ -61,10 +61,10 @@ public class Class372
 		boolean bool_4_ = false;
 		int i_5_ = i;
 		int i_6_ = string.length();
-		for (int i_7_ = 0; (i_6_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++) {
+		for (int i_7_ = 0; i_7_ < i_6_; i_7_++) {
 			int i_8_ = string.charAt(i_7_);
 			if (i_7_ == 0) {
-				if ((i_8_ ^ 0xffffffff) == -46) {
+				if (i_8_ == 45) {
 					bool_3_ = true;
 					continue;
 				}
@@ -72,16 +72,16 @@ public class Class372
 					continue;
 				}
 			}
-			if (i_8_ >= 48 && (i_8_ ^ 0xffffffff) >= -58) {
+			if (i_8_ >= 48 && i_8_ <= 57) {
 				i_8_ -= 48;
-			} else if (i_8_ >= 65 && (i_8_ ^ 0xffffffff) >= -91) {
+			} else if (i_8_ >= 65 && i_8_ <= 90) {
 				i_8_ -= 55;
-			} else if ((i_8_ ^ 0xffffffff) <= -98 && i_8_ <= 122) {
+			} else if (i_8_ >= 97 && i_8_ <= 122) {
 				i_8_ -= 87;
 			} else {
 				return false;
 			}
-			if ((i_8_ ^ 0xffffffff) <= (i_2_ ^ 0xffffffff)) {
+			if (i_2_ <= i_8_) {
 				return false;
 			}
 			if (bool_3_) {

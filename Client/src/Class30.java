@@ -23,7 +23,7 @@ public class Class30
 		if (b != 88) {
 			anInt491 = 95;
 		}
-		for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > (node_sub16.anIntArray7137.length ^ 0xffffffff); i_1_++) {
+		for (int i_1_ = 0; node_sub16.anIntArray7137.length > i_1_; i_1_++) {
 			if (node_sub16.anIntArray7137[i_1_] == -1) {
 				i_0_++;
 			}

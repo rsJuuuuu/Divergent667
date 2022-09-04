@@ -28,7 +28,7 @@ public class Class4
 			}
 			int i_4_ = Math.max(widget.anInt4809 / 2, widget.anInt4695 / 2) + 10;
 			int i_5_ = i_0_ * i_0_ + i_1_ * i_1_;
-			if ((i_4_ * i_4_ ^ 0xffffffff) <= (i_5_ ^ 0xffffffff)) {
+			if (i_5_ <= i_4_ * i_4_) {
 				int i_6_ = Class335.anIntArray4167[i_3_];
 				int i_7_ = Class335.anIntArray4165[i_3_];
 				if (Class320_Sub22.anInt8415 != 4) {

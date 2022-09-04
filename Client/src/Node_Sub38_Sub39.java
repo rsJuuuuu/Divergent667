@@ -17,18 +17,16 @@ public class Node_Sub38_Sub39 extends Node_Sub38
 	while_269_:
 		do {
 			do {
-				if (i_0_ != 0) {
-					if ((i_0_ ^ 0xffffffff) != -2) {
-						if ((i_0_ ^ 0xffffffff) == -3) {
-							break;
-						}
-						break while_269_;
-					}
-				} else {
+				if (i_0_ == 0) {
 					anInt10498 = buffer.readUnsignedByte();
 					break while_269_;
-				}
-				anInt10495 = buffer.readUnsignedByte();
+				} else if (i_0_ != 1) {
+                    if (i_0_ == 2) {
+                        break;
+                    }
+                    break while_269_;
+                }
+                anInt10495 = buffer.readUnsignedByte();
 				break while_269_;
 			} while (false);
 			anInt10496 = buffer.readUnsignedShort();
@@ -56,15 +54,15 @@ public class Node_Sub38_Sub39 extends Node_Sub38
 		int[] is = aClass146_7460.method1645(27356, i_1_);
 		if (aClass146_7460.aBoolean1819) {
 			int i_2_ = 0;
-			for (/**/; (i_2_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_2_++) {
+			for (/**/; Class339_Sub7.anInt8728 > i_2_; i_2_++) {
 				int i_3_ = CacheNode_Sub3.anIntArray9442[i_2_];
 				int i_4_ = Node_Sub25_Sub1.anIntArray9941[i_1_];
 				int i_5_ = i_3_ * anInt10498 >> 12;
 				int i_6_ = i_4_ * anInt10495 >> 12;
 				int i_7_ = i_3_ % (4096 / anInt10498) * anInt10498;
 				int i_8_ = anInt10495 * (i_4_ % (4096 / anInt10495));
-				if ((i_8_ ^ 0xffffffff) > (anInt10496 ^ 0xffffffff)) {
-					for (i_5_ -= i_6_; (i_5_ ^ 0xffffffff) > -1; i_5_ += 4) {
+				if (anInt10496 > i_8_) {
+					for (i_5_ -= i_6_; i_5_ < 0; i_5_ += 4) {
 						/* empty */
 					}
 					for (/**/; i_5_ > 3; i_5_ -= 4) {
@@ -79,11 +77,11 @@ public class Node_Sub38_Sub39 extends Node_Sub38
 						continue;
 					}
 				}
-				if ((i_7_ ^ 0xffffffff) > (anInt10496 ^ 0xffffffff)) {
+				if (anInt10496 > i_7_) {
 					for (i_5_ -= i_6_; i_5_ < 0; i_5_ += 4) {
 						/* empty */
 					}
-					for (/**/; (i_5_ ^ 0xffffffff) < -4; i_5_ -= 4) {
+					for (/**/; i_5_ > 3; i_5_ -= 4) {
 						/* empty */
 					}
 					if (i_5_ > 0) {

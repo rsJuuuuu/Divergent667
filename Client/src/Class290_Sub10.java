@@ -119,7 +119,7 @@ public class Class290_Sub10 extends Class290
 	final void method3416(byte b) {
 		if (aBoolean8155) {
 			IDirect3DDevice idirect3ddevice = aD3DToolkit8158.anIDirect3DDevice9199;
-			if ((anAbstractToolkit3654.anInt6355 ^ 0xffffffff) < -1) {
+			if (anAbstractToolkit3654.anInt6355 > 0) {
 				float f = anAbstractToolkit3654.aFloat6328;
 				float f_7_ = anAbstractToolkit3654.aFloat6311;
 				idirect3ddevice.a(16, f, 1.0F / (-f_7_ + f), 0.0F, 0.0F);
@@ -137,7 +137,7 @@ public class Class290_Sub10 extends Class290
 		super(d3dtoolkit);
 		aD3DToolkit8158 = d3dtoolkit;
 		aClass5_8156 = class5;
-		if (class302 != null && anAbstractToolkit3654.aBoolean6310 && anAbstractToolkit3654.aBoolean6366 && -258 >= (0xffff & aD3DToolkit8158.aD3DCAPS9188.VertexShaderVersion ^ 0xffffffff)) {
+		if (class302 != null && anAbstractToolkit3654.aBoolean6310 && anAbstractToolkit3654.aBoolean6366 && (0xffff & aD3DToolkit8158.aD3DCAPS9188.VertexShaderVersion) >= 257) {
 			anIDirect3DVertexShader8157 = aD3DToolkit8158.anIDirect3DDevice9199.b(class302.method3529("dx", "environment_mapped_water_v", 1));
 			anIDirect3DPixelShader8154 = aD3DToolkit8158.anIDirect3DDevice9199.a(class302.method3529("dx", "environment_mapped_water_f", 1));
 			aBoolean8153 = anIDirect3DVertexShader8157 != null && null != anIDirect3DPixelShader8154 && aClass5_8156.method172(10103);

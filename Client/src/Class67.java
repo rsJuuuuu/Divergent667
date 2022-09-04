@@ -13,7 +13,7 @@ public class Class67
 		anInt928++;
 		int i = string.length();
 		int i_0_ = 0;
-		for (int i_1_ = 0; (i ^ 0xffffffff) < (i_1_ ^ 0xffffffff); i_1_++) {
+		for (int i_1_ = 0; i_1_ < i; i_1_++) {
 			char c = string.charAt(i_1_);
 			if (c == '<' || c == '>') {
 				i_0_ += 3;
@@ -22,16 +22,14 @@ public class Class67
 		StringBuffer stringbuffer = new StringBuffer(i - -i_0_);
 		for (int i_2_ = 0; i > i_2_; i_2_++) {
 			char c = string.charAt(i_2_);
-			if (c != 60) {
-				if ((c ^ 0xffffffff) != -63) {
-					stringbuffer.append(c);
-				} else {
-					stringbuffer.append("<gt>");
-				}
-			} else {
+			if (c == 60) {
 				stringbuffer.append("<lt>");
-			}
-		}
+			} else if (c == 62) {
+                stringbuffer.append("<gt>");
+            } else {
+                stringbuffer.append(c);
+            }
+        }
 		if (bool != false) {
 			aClass77_930 = null;
 		}
@@ -46,7 +44,7 @@ public class Class67
 		if (b != 115) {
 			return null;
 		}
-		if ((Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9558 == null || (Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9558.length() ^ 0xffffffff) == -1) && Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9565 != null && (Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9565.length() ^ 0xffffffff) < -1) {
+		if ((Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9558 == null || Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9558.length() == 0) && Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9565 != null && Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9565.length() > 0) {
 			return Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9565;
 		}
 		return Node_Sub38_Sub23.aCacheNode_Sub13_10343.aString9558;

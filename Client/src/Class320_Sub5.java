@@ -61,7 +61,7 @@ public class Class320_Sub5 extends Class320
 		if (b <= 63) {
 			return false;
 		}
-        return (i ^ 0xffffffff) <= -97;
+        return i >= 96;
     }
 	
 	final void method3673(byte b) {
@@ -73,10 +73,10 @@ public class Class320_Sub5 extends Class320
 		if (i < 96) {
 			anInt4064 = 0;
 		}
-		if ((anInt4064 ^ 0xffffffff) < -2 && (i ^ 0xffffffff) > -129) {
+		if (anInt4064 > 1 && i < 128) {
 			anInt4064 = 1;
 		}
-		if ((anInt4064 ^ 0xffffffff) < -3 && i < 192) {
+		if (anInt4064 > 2 && i < 192) {
 			anInt4064 = 2;
 		}
 		if (anInt4064 < 0 || anInt4064 > 3) {
@@ -109,13 +109,13 @@ public class Class320_Sub5 extends Class320
 		if (b != 54) {
 			anIntArray8255 = null;
 		}
-		if ((i_0_ ^ 0xffffffff) > -97) {
+		if (i_0_ < 96) {
 			return 3;
 		}
-		if ((i ^ 0xffffffff) < -2 && i_0_ < 128) {
+		if (i > 1 && i_0_ < 128) {
 			return 3;
 		}
-		if (i > 3 && (i_0_ ^ 0xffffffff) > -193) {
+		if (i > 3 && i_0_ < 192) {
 			return 3;
 		}
 		return 1;
@@ -126,6 +126,6 @@ public class Class320_Sub5 extends Class320
 		if (b <= 122) {
 			method3700(-11, (byte) -127, 7);
 		}
-        return (0x21 & i_1_ ^ 0xffffffff) != -1;
+        return (0x21 & i_1_) != 0;
     }
 }

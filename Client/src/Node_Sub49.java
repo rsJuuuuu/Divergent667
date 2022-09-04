@@ -383,18 +383,18 @@ public class Node_Sub49 extends Node
 			int i_97_ = Node_Sub38_Sub20.method2855(i_91_ - 1, (byte) -102);
 			for (int i_98_ = 0; i_98_ < i_91_; i_98_++)
 				is[i_98_] = Node_Sub13.method2546(i_97_, -1, i_98_);
-			if (i != 0) {
-				aFloatArray7599 = fs;
-				aFloatArray7612 = fs_93_;
-				aFloatArray7589 = fs_95_;
-				anIntArray7598 = is;
-			} else {
+			if (i == 0) {
 				aFloatArray7603 = fs;
 				aFloatArray7618 = fs_93_;
 				aFloatArray7606 = fs_95_;
 				anIntArray7609 = is;
+			} else {
+				aFloatArray7599 = fs;
+				aFloatArray7612 = fs_93_;
+				aFloatArray7589 = fs_95_;
+				anIntArray7598 = is;
 			}
-		}
+        }
 		int i = method2956(8) + 1;
 		aClass242Array7611 = new Class242[i];
 		for (int i_99_ = 0; i_99_ < i; i_99_++)

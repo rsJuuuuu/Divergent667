@@ -32,7 +32,7 @@ public class Stream
 	}
 	
 	public final void b(int i) {
-		if ((c.length ^ 0xffffffff) >= (b + 1 ^ 0xffffffff)) {
+		if (b + 1 >= c.length) {
 			c();
 		}
 		c[b++] = (byte) (i >> 8);
@@ -60,7 +60,7 @@ public class Stream
 	public static final native int floatToRawIntBits(float f);
 	
 	public final void a(int i, int i_0_, int i_1_, int i_2_) {
-		if ((3 + b ^ 0xffffffff) <= (c.length ^ 0xffffffff)) {
+		if (c.length <= 3 + b) {
 			c();
 		}
 		c[b++] = (byte) i_1_;
@@ -70,7 +70,7 @@ public class Stream
 	}
 	
 	public final void a(int i) {
-		if ((c.length ^ 0xffffffff) >= (b + 3 ^ 0xffffffff)) {
+		if (b + 3 >= c.length) {
 			c();
 		}
 		c[b++] = (byte) i;
@@ -90,7 +90,7 @@ public class Stream
 	}
 	
 	public final void e(int i) {
-		if ((3 + b ^ 0xffffffff) <= (c.length ^ 0xffffffff)) {
+		if (c.length <= 3 + b) {
 			c();
 		}
 		c[b++] = (byte) (i >> 16);
@@ -100,14 +100,14 @@ public class Stream
 	}
 	
 	public final void d(int i) {
-		if ((b ^ 0xffffffff) <= (c.length ^ 0xffffffff)) {
+		if (c.length <= b) {
 			c();
 		}
 		c[b++] = (byte) i;
 	}
 	
 	public final void b(int i, int i_4_, int i_5_, int i_6_) {
-		if ((c.length ^ 0xffffffff) >= (b - -3 ^ 0xffffffff)) {
+		if (b - -3 >= c.length) {
 			c();
 		}
 		c[b++] = (byte) i;
@@ -117,11 +117,11 @@ public class Stream
 	}
 	
 	public static final boolean b() {
-        return (getLSB(-65536) ^ 0xffffffff) == 0;
+        return getLSB(-65536) == -1;
     }
 	
 	public Stream(Buffer buffer, int i, int i_7_) {
-		this((buffer.getSize() ^ 0xffffffff) <= -4097 ? 4096 : buffer.getSize());
+		this(buffer.getSize() >= 4096 ? 4096 : buffer.getSize());
 		a(buffer, i, i_7_);
 	}
 	
@@ -134,7 +134,7 @@ public class Stream
 	}
 	
 	public final void b(float f) {
-		if ((3 + b ^ 0xffffffff) <= (c.length ^ 0xffffffff)) {
+		if (c.length <= 3 + b) {
 			c();
 		}
 		int i = floatToRawIntBits(f);
@@ -146,7 +146,7 @@ public class Stream
 	
 	public final void c() {
 		if (b > 0) {
-			if ((d + b ^ 0xffffffff) < (e ^ 0xffffffff)) {
+			if (e < d + b) {
 				throw new RuntimeException();
 			}
 			a.a(c, 0, d, b);

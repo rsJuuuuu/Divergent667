@@ -21,18 +21,18 @@ public class Class379
 		Class343.anInt4252 = is[1];
 		Class99.anInt1280 = is[2];
 		Class320_Sub30.anInt8495 = is[i];
-		if (!bool) {
-			Class44.aGraphicsToolkit668.DA(Class186.anInt2250, Class320_Sub16.anInt8361, Node_Sub38_Sub20.anInt10298, Class349.anInt4305);
-			Node_Sub38_Sub11.method2826(true, Class320_Sub10.aDouble8299);
-		} else {
+		if (bool) {
 			Class44.aGraphicsToolkit668.DA(Class118.anInt5404, Class320_Sub23.anInt8433, Class30.anInt491, Class320_Sub10.anInt8303);
 			Node_Sub38_Sub11.method2826(true, Class157.aDouble1981);
+		} else {
+			Class44.aGraphicsToolkit668.DA(Class186.anInt2250, Class320_Sub16.anInt8361, Node_Sub38_Sub20.anInt10298, Class349.anInt4305);
+			Node_Sub38_Sub11.method2826(true, Class320_Sub10.aDouble8299);
 		}
-	}
+    }
 	
 	final int method4160(int i, int i_0_, int i_1_) {
 		anInt4870++;
-		int i_2_ = (Class360.screenWidth ^ 0xffffffff) < (i_0_ ^ 0xffffffff) ? Class360.screenWidth : i_0_;
+		int i_2_ = i_0_ < Class360.screenWidth ? Class360.screenWidth : i_0_;
 		if (Class294.aClass379_3689 == this) {
 			return 0;
 		}
@@ -64,44 +64,40 @@ public class Class379
 		for (/**/; i > i_3_; i_3_++) {
 			char c = string.charAt(i_3_);
 			if (c != '%' || i <= i_3_ - -2) {
-				if (c != '+') {
-					stringbuffer.append(c);
-				} else {
+				if (c == '+') {
 					stringbuffer.append(' ');
+				} else {
+					stringbuffer.append(c);
 				}
-			} else {
+            } else {
 				int i_4_ = string.charAt(1 + i_3_);
 				boolean bool = false;
 				int i_5_;
-				if ((i_4_ ^ 0xffffffff) <= -49 && (i_4_ ^ 0xffffffff) >= -58) {
+				if (i_4_ >= 48 && i_4_ <= 57) {
 					i_5_ = i_4_ - 48;
-				} else if (i_4_ < 97 || (i_4_ ^ 0xffffffff) < -103) {
-					if ((i_4_ ^ 0xffffffff) > -66 || (i_4_ ^ 0xffffffff) < -71) {
+				} else if (i_4_ >= 97 && i_4_ <= 102) {
+					i_5_ = 10 - -i_4_ - 97;
+				} else {
+					if (i_4_ < 65 || i_4_ > 70) {
 						stringbuffer.append('%');
 						continue;
 					}
 					i_5_ = 10 + (i_4_ - 65);
-				} else {
-					i_5_ = 10 - -i_4_ - 97;
 				}
-				i_4_ = string.charAt(i_3_ - -2);
+                i_4_ = string.charAt(i_3_ - -2);
 				i_5_ *= 16;
-				if ((i_4_ ^ 0xffffffff) > -49 || i_4_ > 57) {
-					if (i_4_ < 97 || i_4_ > 102) {
-						if ((i_4_ ^ 0xffffffff) <= -66 && i_4_ <= 70) {
-							i_5_ += 10 - (-i_4_ - -65);
-						} else {
-							stringbuffer.append('%');
-							continue;
-						}
-					} else {
-						i_5_ += 10 + (i_4_ + -97);
-					}
-				} else {
+				if (i_4_ >= 48 && i_4_ <= 57) {
 					i_5_ += -48 + i_4_;
+				} else if (i_4_ >= 97 && i_4_ <= 102) {
+					i_5_ += 10 + (i_4_ + -97);
+				} else if (i_4_ >= 65 && i_4_ <= 70) {
+					i_5_ += 10 - (-i_4_ - -65);
+				} else {
+					stringbuffer.append('%');
+					continue;
 				}
-				i_3_ += 2;
-				if ((i_5_ ^ 0xffffffff) != -1 && IOException_Sub1.method131(true, (byte) i_5_)) {
+                i_3_ += 2;
+				if (i_5_ != 0 && IOException_Sub1.method131(true, (byte) i_5_)) {
 					stringbuffer.append(Class20_Sub1.method294((byte) i_5_, (byte) 119));
 				}
 			}

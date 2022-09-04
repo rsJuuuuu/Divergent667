@@ -24,7 +24,7 @@ public class Node_Sub38_Sub10 extends Node_Sub38
 			int[] is_2_ = is[0];
 			int[] is_3_ = is[1];
 			int[] is_4_ = is[2];
-			for (int i_5_ = 0; (i_5_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_5_++) {
+			for (int i_5_ = 0; Class339_Sub7.anInt8728 > i_5_; i_5_++) {
 				int i_6_ = (255 * is_0_[i_5_] & 0xff1df) >> 12;
 				int i_7_ = is_1_[i_5_] * anInt10195 >> 12;
 				int i_8_ = Class17.anIntArray277[i_6_] * i_7_ >> 12;
@@ -53,15 +53,13 @@ public class Node_Sub38_Sub10 extends Node_Sub38
 	final void method2780(boolean bool, BufferedStream buffer, int i) {
 		int i_15_ = i;
 		do {
-			if ((i_15_ ^ 0xffffffff) != -1) {
-				if ((i_15_ ^ 0xffffffff) != -2) {
-					break;
-				}
-			} else {
+			if (i_15_ == 0) {
 				anInt10195 = buffer.readUnsignedShort() << 4;
 				break;
+			} else if (i_15_ != 1) {
+				break;
 			}
-			aBoolean7463 = buffer.readUnsignedByte() == 1;
+            aBoolean7463 = buffer.readUnsignedByte() == 1;
 		} while (false);
 		if (bool != false) {
 			aClass302_10197 = null;
@@ -82,7 +80,7 @@ public class Node_Sub38_Sub10 extends Node_Sub38
 		if (aClass146_7460.aBoolean1819) {
 			int[] is_17_ = this.method2786(i_16_, 0, 1);
 			int[] is_18_ = this.method2786(i_16_, 0, 2);
-			for (int i_19_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_19_ ^ 0xffffffff); i_19_++) {
+			for (int i_19_ = 0; i_19_ < Class339_Sub7.anInt8728; i_19_++) {
 				int i_20_ = is_17_[i_19_] >> 4 & 0xff;
 				int i_21_ = anInt10195 * is_18_[i_19_] >> 12;
 				int i_22_ = Class17.anIntArray277[i_20_] * i_21_ >> 12;

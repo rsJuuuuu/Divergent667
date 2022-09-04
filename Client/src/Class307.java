@@ -40,7 +40,7 @@ public class Class307
 		Interface13_Impl1 interface13_impl1;
 		if (!class91.aBoolean1215 || !anAbstractToolkit3903.w()) {
 			int[] is;
-			if ((class91.anInt1226 ^ 0xffffffff) != -3 && Class377_Sub1.method4129((byte) 83, class91.aByte1214)) {
+			if (class91.anInt1226 != 2 && Class377_Sub1.method4129((byte) 83, class91.aByte1214)) {
 				is = aD3897.method11(i_1_, true, i_1_, i, (byte) 0, 0.7F);
 			} else {
 				is = aD3897.method8(0.7F, i, i_1_, false, false, i_1_);
@@ -48,7 +48,7 @@ public class Class307
 			interface13_impl1 = anAbstractToolkit3903.method1258(class91.aByte1207 != 0, i_1_, true, i_1_, is);
 		} else {
 			float[] fs = aD3897.method9(i_1_, i, 0.7F, (byte) -114, i_1_, false);
-			interface13_impl1 = anAbstractToolkit3903.method1345(i_1_, fs, Class99.aClass68_1290, false, (class91.aByte1207 ^ 0xffffffff) != -1, i_1_);
+			interface13_impl1 = anAbstractToolkit3903.method1345(i_1_, fs, Class99.aClass68_1290, false, class91.aByte1207 != 0, i_1_);
 		}
 		interface13_impl1.method51(class91.aBoolean1212, class91.aBoolean1210, false);
 		aClass61_3899.method601(interface13_impl1, 25566, (long) i);

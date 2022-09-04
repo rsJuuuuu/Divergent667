@@ -97,61 +97,47 @@ public class Class255
 			Class383 class383 = Class383.method4191(class302, anInt3219);
 			aClass186_3217.aClass61_2258.method601(graphicstoolkit.a(class383, true), 25566, (long) anInt3219);
 		}
-		if ((anInt3216 ^ 0xffffffff) <= -1 && aClass186_3217.aClass61_2258.method607((long) anInt3216, 0) == null && class302.method3510(anInt3216, (byte) 63)) {
+		if (anInt3216 >= 0 && aClass186_3217.aClass61_2258.method607((long) anInt3216, 0) == null && class302.method3510(anInt3216, (byte) 63)) {
 			Class383 class383 = Class383.method4191(class302, anInt3216);
 			aClass186_3217.aClass61_2258.method601(graphicstoolkit.a(class383, true), 25566, (long) anInt3216);
 		}
-		if ((anInt3226 ^ 0xffffffff) <= -1 && aClass186_3217.aClass61_2258.method607((long) anInt3226, 0) == null && class302.method3510(anInt3226, (byte) 63)) {
+		if (anInt3226 >= 0 && aClass186_3217.aClass61_2258.method607((long) anInt3226, 0) == null && class302.method3510(anInt3226, (byte) 63)) {
 			Class383 class383 = Class383.method4191(class302, anInt3226);
 			aClass186_3217.aClass61_2258.method601(graphicstoolkit.a(class383, true), i + 25567, (long) anInt3226);
 		}
 	}
 	
 	private final void method3116(BufferedStream buffer, byte b, int i) {
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			anInt3235 = buffer.readUnsignedShort();
 		} else if (i == 2) {
 			anInt3229 = buffer.read24BitInteger();
-		} else if ((i ^ 0xffffffff) != -4) {
-			if ((i ^ 0xffffffff) != -5) {
-				if (i == 5) {
-					anInt3219 = buffer.readUnsignedShort();
-				} else if ((i ^ 0xffffffff) != -7) {
-					if (i != 7) {
-						if (i == 8) {
-							aString3222 = buffer.method2180((byte) 101);
-						} else if ((i ^ 0xffffffff) != -10) {
-							if (i != 10) {
-								if ((i ^ 0xffffffff) == -12) {
-									anInt3215 = 0;
-								} else if (i == 12) {
-									anInt3234 = buffer.readUnsignedByte();
-								} else if (i != 13) {
-									if ((i ^ 0xffffffff) == -15) {
-										anInt3215 = buffer.readUnsignedShort();
-									}
-								} else {
-									anInt3214 = buffer.readShort();
-								}
-							} else {
-								anInt3230 = buffer.readShort();
-							}
-						} else {
-							anInt3231 = buffer.readUnsignedShort();
-						}
-					} else {
-						anInt3223 = buffer.readShort();
-					}
-				} else {
-					anInt3226 = buffer.readUnsignedShort();
-				}
-			} else {
-				anInt3216 = buffer.readUnsignedShort();
-			}
-		} else {
+		} else if (i == 3) {
 			anInt3221 = buffer.readUnsignedShort();
+		} else if (i == 4) {
+			anInt3216 = buffer.readUnsignedShort();
+		} else if (i == 5) {
+			anInt3219 = buffer.readUnsignedShort();
+		} else if (i == 6) {
+			anInt3226 = buffer.readUnsignedShort();
+		} else if (i == 7) {
+			anInt3223 = buffer.readShort();
+		} else if (i == 8) {
+			aString3222 = buffer.method2180((byte) 101);
+		} else if (i == 9) {
+			anInt3231 = buffer.readUnsignedShort();
+		} else if (i == 10) {
+			anInt3230 = buffer.readShort();
+		} else if (i == 11) {
+			anInt3215 = 0;
+		} else if (i == 12) {
+			anInt3234 = buffer.readUnsignedByte();
+		} else if (i == 13) {
+			anInt3214 = buffer.readShort();
+		} else if (i == 14) {
+			anInt3215 = buffer.readUnsignedShort();
 		}
-		anInt3228++;
+        anInt3228++;
 		if (b >= -12) {
 			method3115(-43, null);
 		}
@@ -162,7 +148,7 @@ public class Class255
 		String string = aString3222;
 		for (;;) {
 			int i_0_ = string.indexOf("%1");
-			if ((i_0_ ^ 0xffffffff) > -1) {
+			if (i_0_ < 0) {
 				break;
 			}
 			string = string.substring(0, i_0_) + Node_Sub29_Sub2.method2715((byte) 9, false, i) + string.substring(2 + i_0_);

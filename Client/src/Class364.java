@@ -22,7 +22,7 @@ public class Class364
 			Class200_Sub2.anInt4935 = -1;
 		}
 		anInt4521++;
-		if (bool || (Player.anInt11178 ^ 0xffffffff) != (i ^ 0xffffffff) || Class277.anInt3527 != i_1_ || Class94.anInt1249 != CacheNode_Sub20_Sub1.myPlayerPlane && Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) != 1) {
+		if (bool || i != Player.anInt11178 || Class277.anInt3527 != i_1_ || Class94.anInt1249 != CacheNode_Sub20_Sub1.myPlayerPlane && Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) != 1) {
 			Class277.anInt3527 = i_1_;
 			Player.anInt11178 = i;
 			Class94.anInt1249 = CacheNode_Sub20_Sub1.myPlayerPlane;
@@ -39,34 +39,47 @@ public class Class364
 			Class262_Sub15_Sub1.aClass224_10520 = null;
 			int i_4_ = Node_Sub53.gameSceneBaseX + -i_2_;
 			int i_5_ = Class320_Sub4.gameSceneBaseY - i_3_;
-			if ((i_0_ ^ 0xffffffff) != -13) {
+			if (i_0_ == 12) {
+				for (int i_12_ = 0; Node_Sub32.cachedNPCcsCount > i_12_; i_12_++) {
+					Node_Sub41 node_sub41 = Class314.LocalNPCs[i_12_];
+					if (node_sub41 != null) {
+						Npc npc = node_sub41.aNpc7518;
+						for (int i_13_ = 0; i_13_ < npc.scenePositionXQueue.length; i_13_++) {
+							npc.scenePositionXQueue[i_13_] -= i_4_;
+							npc.scenePositionYQueue[i_13_] -= i_5_;
+						}
+						npc.anInt5934 -= 512 * i_4_;
+						npc.anInt5940 -= i_5_ * 512;
+					}
+				}
+			} else {
 				boolean bool_6_ = false;
 				Node_Sub25_Sub3.localNPCsCount = 0;
 				int i_7_ = (-1 + Node_Sub54.GAME_SCENE_WDITH) * 512;
 				int i_8_ = Class377_Sub1.GAME_SCENE_HEIGHT * 512 + -512;
-				for (int i_9_ = 0; (Node_Sub32.cachedNPCcsCount ^ 0xffffffff) < (i_9_ ^ 0xffffffff); i_9_++) {
+				for (int i_9_ = 0; i_9_ < Node_Sub32.cachedNPCcsCount; i_9_++) {
 					Node_Sub41 node_sub41 = Class314.LocalNPCs[i_9_];
 					if (node_sub41 != null) {
 						Npc npc = node_sub41.aNpc7518;
 						npc.anInt5940 -= i_5_ * 512;
 						npc.anInt5934 -= 512 * i_4_;
-						if ((npc.anInt5934 ^ 0xffffffff) <= -1 && (i_7_ ^ 0xffffffff) <= (npc.anInt5934 ^ 0xffffffff) && npc.anInt5940 >= 0 && i_8_ >= npc.anInt5940) {
+						if (npc.anInt5934 >= 0 && npc.anInt5934 <= i_7_ && npc.anInt5940 >= 0 && i_8_ >= npc.anInt5940) {
 							boolean bool_10_ = true;
-							for (int i_11_ = 0; (npc.scenePositionXQueue.length ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++) {
+							for (int i_11_ = 0; i_11_ < npc.scenePositionXQueue.length; i_11_++) {
 								npc.scenePositionXQueue[i_11_] -= i_4_;
 								npc.scenePositionYQueue[i_11_] -= i_5_;
 								if (npc.scenePositionXQueue[i_11_] < 0 || npc.scenePositionXQueue[i_11_] >= Node_Sub54.GAME_SCENE_WDITH || npc.scenePositionYQueue[i_11_] < 0 || Class377_Sub1.GAME_SCENE_HEIGHT <= npc.scenePositionYQueue[i_11_]) {
 									bool_10_ = false;
 								}
 							}
-							if (!bool_10_) {
+							if (bool_10_) {
+								Class54.LocalNPCsIndexes[Node_Sub25_Sub3.localNPCsCount++] = npc.index;
+							} else {
 								npc.method879(null, true);
 								bool_6_ = true;
 								node_sub41.method2160((byte) 29);
-							} else {
-								Class54.LocalNPCsIndexes[Node_Sub25_Sub3.localNPCsCount++] = npc.index;
 							}
-						} else {
+                        } else {
 							npc.method879(null, true);
 							bool_6_ = true;
 							node_sub41.method2160((byte) 29);
@@ -77,27 +90,14 @@ public class Class364
 					Node_Sub32.cachedNPCcsCount = Class12.aHashTable187.method1519((byte) -90);
 					Class12.aHashTable187.method1523((byte) -125, Class314.LocalNPCs);
 				}
-			} else {
-				for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (Node_Sub32.cachedNPCcsCount ^ 0xffffffff); i_12_++) {
-					Node_Sub41 node_sub41 = Class314.LocalNPCs[i_12_];
-					if (node_sub41 != null) {
-						Npc npc = node_sub41.aNpc7518;
-						for (int i_13_ = 0; (npc.scenePositionXQueue.length ^ 0xffffffff) < (i_13_ ^ 0xffffffff); i_13_++) {
-							npc.scenePositionXQueue[i_13_] -= i_4_;
-							npc.scenePositionYQueue[i_13_] -= i_5_;
-						}
-						npc.anInt5934 -= 512 * i_4_;
-						npc.anInt5940 -= i_5_ * 512;
-					}
-				}
 			}
-			if (b != -36) {
+            if (b != -36) {
 				method4058(-108);
 			}
-			for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > -2049; i_14_++) {
+			for (int i_14_ = 0; i_14_ < 2048; i_14_++) {
 				Player player = Class270_Sub2.LOCAL_PLAYERS[i_14_];
 				if (player != null) {
-					for (int i_15_ = 0; (i_15_ ^ 0xffffffff) > (player.scenePositionXQueue.length ^ 0xffffffff); i_15_++) {
+					for (int i_15_ = 0; player.scenePositionXQueue.length > i_15_; i_15_++) {
 						player.scenePositionXQueue[i_15_] -= i_4_;
 						player.scenePositionYQueue[i_15_] -= i_5_;
 					}
@@ -116,7 +116,7 @@ public class Class364
 			for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(b + 65316); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620(b ^ ~0xffff23)) {
 				node_sub19.anInt7171 -= i_4_;
 				node_sub19.anInt7161 -= i_5_;
-				if (Class61.anInt898 != 4 && (node_sub19.anInt7171 < 0 || node_sub19.anInt7161 < 0 || (node_sub19.anInt7171 ^ 0xffffffff) <= (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) || node_sub19.anInt7161 >= Class377_Sub1.GAME_SCENE_HEIGHT)) {
+				if (Class61.anInt898 != 4 && (node_sub19.anInt7171 < 0 || node_sub19.anInt7161 < 0 || Node_Sub54.GAME_SCENE_WDITH <= node_sub19.anInt7171 || node_sub19.anInt7161 >= Class377_Sub1.GAME_SCENE_HEIGHT)) {
 					node_sub19.method2160((byte) 60);
 				}
 			}
@@ -133,7 +133,7 @@ public class Class364
 					int i_18_ = i_17_ - Node_Sub53.gameSceneBaseX;
 					int i_19_ = (int) (node_sub11.aLong2797 >> 14 & 0x3fffL);
 					int i_20_ = i_19_ + -Class320_Sub4.gameSceneBaseY;
-					if (i_18_ < 0 || (i_20_ ^ 0xffffffff) > -1 || i_18_ >= Node_Sub54.GAME_SCENE_WDITH || (i_20_ ^ 0xffffffff) <= (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff)) {
+					if (i_18_ < 0 || i_20_ < 0 || i_18_ >= Node_Sub54.GAME_SCENE_WDITH || Class377_Sub1.GAME_SCENE_HEIGHT <= i_20_) {
 						node_sub11.method2160((byte) 66);
 					}
 				}
@@ -143,24 +143,24 @@ public class Class364
 				Class359.anInt4467 -= i_4_;
 			}
 			Class199.method2010((byte) 120);
-			if ((i_0_ ^ 0xffffffff) == -13) {
-				if ((Class320_Sub22.anInt8415 ^ 0xffffffff) != -5) {
-					Class367.anInt4541 = Class368.anInt4551 = -1;
-					Class320_Sub22.anInt8415 = 1;
-				} else {
+			if (i_0_ == 12) {
+				if (Class320_Sub22.anInt8415 == 4) {
 					Class234.anInt2792 -= i_4_ * 512;
 					Class25.anInt444 -= i_5_ * 512;
 					Node_Sub19.anInt7173 -= i_5_ * 512;
 					Mobile_Sub4.anInt10987 -= 512 * i_4_;
+				} else {
+					Class367.anInt4541 = Class368.anInt4551 = -1;
+					Class320_Sub22.anInt8415 = 1;
 				}
-			} else {
+            } else {
 				Class238.anInt2911 -= i_4_;
 				Renderer.anInt3663 -= i_4_;
 				Node_Sub38_Sub38.anInt10490 -= i_5_;
 				Node_Sub10.anInt7079 -= i_5_ * 512;
 				Class98.anInt5061 -= i_4_ * 512;
 				Class10.anInt174 -= i_5_;
-				if (Math.abs(i_4_) > Node_Sub54.GAME_SCENE_WDITH || (Math.abs(i_5_) ^ 0xffffffff) < (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff)) {
+				if (Math.abs(i_4_) > Node_Sub54.GAME_SCENE_WDITH || Class377_Sub1.GAME_SCENE_HEIGHT < Math.abs(i_5_)) {
 					Class120.method1228(-97);
 				}
 			}
@@ -182,15 +182,13 @@ public class Class364
 		if (i < 45) {
 			anInt4511 = 118;
 		}
-		if ((i_22_ ^ 0xffffffff) != -2) {
-			if ((i_22_ ^ 0xffffffff) == -3) {
-				anInt4511 = buffer.readUnsignedByte();
-				anInt4519 = buffer.readUnsignedByte();
-			}
-		} else {
+		if (i_22_ == 1) {
 			anInt4515 = buffer.readUnsignedShort();
-		}
-		anInt4518++;
+		} else if (i_22_ == 2) {
+            anInt4511 = buffer.readUnsignedByte();
+            anInt4519 = buffer.readUnsignedByte();
+        }
+        anInt4518++;
 	}
 	
 	final synchronized Class383 method4060(byte b) {

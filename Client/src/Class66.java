@@ -47,17 +47,17 @@ abstract class Class66 implements Interface10
 		anInt5172++;
 		int i_4_ = Class243.aClass340_3069.method3958((byte) 84);
 		int i_5_ = i_4_ * i;
-		if ((i_4_ ^ 0xffffffff) != (anInt5174 ^ 0xffffffff) || i_4_ == 0) {
+		if (anInt5174 != i_4_ || i_4_ == 0) {
 			anInt5174 = i_4_;
 			aLong5164 = Class313.method3650(false);
 		} else {
 			int i_6_ = Class243.aClass340_3069.method3955(7398);
-			if ((i_4_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff)) {
+			if (i_6_ > i_4_) {
 				long l = aLong5164 + -Class243.aClass340_3069.method3950((byte) 121);
 				if (l > 0L) {
 					long l_7_ = (long) (i_6_ + -i_4_) * (l * 10000L / (long) i_4_);
 					long l_8_ = (-aLong5164 + Class313.method3650(false)) * 10000L;
-					if ((l_8_ ^ 0xffffffffffffffffL) > (l_7_ ^ 0xffffffffffffffffL)) {
+					if (l_7_ > l_8_) {
 						i_5_ = (int) ((long) (i_6_ + -i_4_) * l_8_ * 100L / l_7_ + (long) (i_4_ * 100));
 					} else {
 						i_5_ = i_6_ * 100;

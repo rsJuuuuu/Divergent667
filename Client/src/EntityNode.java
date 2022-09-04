@@ -12,7 +12,7 @@ class EntityNode
 	
 	static final void method802(int i) {
 		anInt1125++;
-		if (Class240.aSignLink2946.aBoolean4005 && (Class262_Sub23.aClass197_7884.id ^ 0xffffffff) != 0) {
+		if (Class240.aSignLink2946.aBoolean4005 && Class262_Sub23.aClass197_7884.id != -1) {
 			Class188_Sub1_Sub2.method1899(Class262_Sub23.aClass197_7884.id, (byte) 27, Class262_Sub23.aClass197_7884.ipadress);
 		}
 		if (i != 2126) {

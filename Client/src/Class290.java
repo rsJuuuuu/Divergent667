@@ -58,12 +58,12 @@ abstract class Class290
 					Class256 class256_4_ = null;
 					for (/**/; class256 != null; class256 = class256.aClass256_3238) {
 						if (class256.aMobile3239 == mobile) {
-							if (class256_4_ != null) {
-								class256_4_.aClass256_3238 = class256.aClass256_3238;
-							} else {
+							if (class256_4_ == null) {
 								class261.aClass256_3312 = class256.aClass256_3238;
+							} else {
+								class256_4_.aClass256_3238 = class256.aClass256_3238;
 							}
-							class256.method3119(-20952);
+                            class256.method3119(-20952);
 							break;
 						}
 						class256_4_ = class256;

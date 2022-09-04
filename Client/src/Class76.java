@@ -63,35 +63,33 @@ public class Class76
 					bool_2_ = false;
 					int i_6_;
 					int i_7_;
-					if ((i_3_ & ~0x3fffffff) != -1073741824) {
-						if ((0x8000 & i_3_ ^ 0xffffffff) != -1) {
-							int i_8_ = i_3_ & 0x7fff;
-							Player player = Class270_Sub2.LOCAL_PLAYERS[i_8_];
-							if (player == null) {
-								actor.method858(256, i, -1);
-								continue;
-							}
-							i_7_ = -player.anInt5940 + actor.anInt5940;
-							i_6_ = actor.anInt5934 + -player.anInt5934;
-						} else {
-							Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) i_3_);
-							if (node_sub41 != null) {
-								Npc npc = node_sub41.aNpc7518;
-								i_7_ = actor.anInt5940 - npc.anInt5940;
-								i_6_ = actor.anInt5934 - npc.anInt5934;
-							} else {
-								actor.method858(256, i, -1);
-								continue;
-							}
-						}
-					} else {
+					if ((i_3_ & ~0x3fffffff) == -1073741824) {
 						int i_9_ = 0xfffffff & i_3_;
 						int i_10_ = i_9_ >> 14;
 						i_6_ = actor.anInt5934 - (256 + 512 * (-Node_Sub53.gameSceneBaseX + i_10_));
 						int i_11_ = i_9_ & 0x3fff;
 						i_7_ = -256 + (-(512 * (i_11_ - Class320_Sub4.gameSceneBaseY)) + actor.anInt5940);
+					} else if ((0x8000 & i_3_) == 0) {
+						Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) i_3_);
+						if (node_sub41 == null) {
+							actor.method858(256, i, -1);
+							continue;
+						} else {
+							Npc npc = node_sub41.aNpc7518;
+							i_7_ = actor.anInt5940 - npc.anInt5940;
+							i_6_ = actor.anInt5934 - npc.anInt5934;
+						}
+					} else {
+						int i_8_ = i_3_ & 0x7fff;
+						Player player = Class270_Sub2.LOCAL_PLAYERS[i_8_];
+						if (player == null) {
+							actor.method858(256, i, -1);
+							continue;
+						}
+						i_7_ = -player.anInt5940 + actor.anInt5940;
+						i_6_ = actor.anInt5934 + -player.anInt5934;
 					}
-					if ((i_6_ ^ 0xffffffff) != -1 || (i_7_ ^ 0xffffffff) != -1) {
+                    if (i_6_ != 0 || i_7_ != 0) {
 						actor.method858(256, i, 0x3fff & (int) (Math.atan2((double) i_6_, (double) i_7_) * 2607.5945876176133));
 					}
 				}

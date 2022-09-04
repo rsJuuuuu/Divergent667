@@ -16,7 +16,7 @@ public class Class234_Sub1 extends Class234
 		if (i != -4756) {
 			aLong6915 = 33L;
 		}
-		if ((aLong6917 ^ 0xffffffffffffffffL) < (aLong6915 ^ 0xffffffffffffffffL)) {
+		if (aLong6915 < aLong6917) {
 			aLong6915 += aLong6917 - aLong6915;
 		}
 	}
@@ -53,7 +53,7 @@ public class Class234_Sub1 extends Class234
 		do {
 			i++;
 			aLong6917 += l;
-		} while ((i ^ 0xffffffff) > -11 && (aLong6915 ^ 0xffffffffffffffffL) < (aLong6917 ^ 0xffffffffffffffffL));
+		} while (i < 10 && aLong6917 < aLong6915);
 		if (aLong6915 > aLong6917) {
 			aLong6917 = aLong6915;
 		}
@@ -67,7 +67,7 @@ public class Class234_Sub1 extends Class234
 		long l = 1000000L * Class313.method3650(false);
 		long l_0_ = -aLong6918 + l;
 		aLong6918 = l;
-		if ((l_0_ ^ 0xffffffffffffffffL) < 4999999999L && l_0_ < 5000000000L) {
+		if (l_0_ > -5000000000L && l_0_ < 5000000000L) {
 			aLongArray6914[anInt6916] = l_0_;
 			anInt6916 = (anInt6916 + 1) % 10;
 			if (anInt6913 < 10) {
@@ -75,7 +75,7 @@ public class Class234_Sub1 extends Class234
 			}
 		}
 		long l_1_ = 0L;
-		for (int i = 1; (anInt6913 ^ 0xffffffff) <= (i ^ 0xffffffff); i++)
+		for (int i = 1; i <= anInt6913; i++)
 			l_1_ += aLongArray6914[(anInt6916 - i - -10) % 10];
 		return l_1_ / (long) anInt6913;
 	}

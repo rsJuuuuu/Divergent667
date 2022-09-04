@@ -33,19 +33,19 @@ public class Class320_Sub16 extends Class320
 	
 	static final int method3742(int i, int i_0_) {
 		anInt8357++;
-		if ((i_0_ ^ 0xffffffff) == -6408 || i_0_ == 34843 || (i_0_ ^ 0xffffffff) == -34838) {
+		if (i_0_ == 6407 || i_0_ == 34843 || i_0_ == 34837) {
 			return 6407;
 		}
-		if (i_0_ == 6408 || (i_0_ ^ 0xffffffff) == -34843 || i_0_ == 34836) {
+		if (i_0_ == 6408 || i_0_ == 34842 || i_0_ == 34836) {
 			return 6408;
 		}
-		if ((i_0_ ^ 0xffffffff) == -6407 || (i_0_ ^ 0xffffffff) == -34845) {
+		if (i_0_ == 6406 || i_0_ == 34844) {
 			return 6406;
 		}
 		if (i_0_ == 6409 || i_0_ == 34846) {
 			return 6409;
 		}
-		if (i_0_ == 6410 || (i_0_ ^ 0xffffffff) == -34848) {
+		if (i_0_ == 6410 || i_0_ == 34847) {
 			return 6410;
 		}
 		if (i != 6406) {
@@ -80,7 +80,7 @@ public class Class320_Sub16 extends Class320
 	
 	final int method3675(int i, byte b) {
 		anInt8365++;
-		if ((i ^ 0xffffffff) == -1 || (aNode_Sub27_4063.aClass320_Sub23_7290.method3770(false) ^ 0xffffffff) == -2) {
+		if (i == 0 || aNode_Sub27_4063.aClass320_Sub23_7290.method3770(false) == 1) {
 			return 1;
 		}
 		if (b != 54) {
@@ -102,7 +102,7 @@ public class Class320_Sub16 extends Class320
 			anInt4064 = 0;
 		}
 		anInt8359++;
-		if (anInt4064 < 0 || (anInt4064 ^ 0xffffffff) < -2) {
+		if (anInt4064 < 0 || anInt4064 > 1) {
 			anInt4064 = method3677(0);
 		}
 		if (b >= -35) {

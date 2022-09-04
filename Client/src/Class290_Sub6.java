@@ -67,7 +67,7 @@ public class Class290_Sub6 extends Class290
 	
 	static final int method3438(int i) {
 		anInt8121++;
-		if ((Class118.anInt5405 ^ 0xffffffff) == -1) {
+		if (Class118.anInt5405 == 0) {
 			Class298.aClass298_3714.method3484(new Class45("jaclib"), 1000);
 			if (Class298.aClass298_3714.method3483((byte) -110).method35(-58) != 100) {
 				return 1;
@@ -112,7 +112,7 @@ public class Class290_Sub6 extends Class290
 			}
 			int i_3_ = 0;
 			Class298[] class298s = GLToolkit.aClass298Array6403;
-			for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (class298s.length ^ 0xffffffff); i_4_++) {
+			for (int i_4_ = 0; class298s.length > i_4_; i_4_++) {
 				Class298 class298 = class298s[i_4_];
 				int i_5_ = class298.method3485(1);
 				int i_6_ = class298.method3483((byte) -127).method35(-34);
@@ -128,12 +128,12 @@ public class Class290_Sub6 extends Class290
 		int i_8_ = 0;
 		boolean bool = true;
 		Class298[] class298s = GLToolkit.aClass298Array6403;
-		for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > (class298s.length ^ 0xffffffff); i_9_++) {
+		for (int i_9_ = 0; class298s.length > i_9_; i_9_++) {
 			Class298 class298 = class298s[i_9_];
 			int i_10_ = class298.method3485(1);
 			int i_11_ = class298.method3483((byte) -106).method35(i ^ ~0x392f);
 			i_8_ += i_10_ * i_11_ / 100;
-			if ((i_11_ ^ 0xffffffff) > -101) {
+			if (i_11_ < 100) {
 				bool = false;
 			}
 			i_7_ += i_10_;

@@ -35,19 +35,19 @@ public class Class191
 			BufferedStream buffer = new BufferedStream(bs);
 			Class10.method189(buffer, 101);
 			int i_2_ = buffer.readUnsignedByte();
-			for (int i_3_ = 0; (i_2_ ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++)
+			for (int i_3_ = 0; i_3_ < i_2_; i_3_++)
 				Class320_Sub16.aClass312_8358.method3625((byte) -54, new Node_Sub28(buffer));
 			int i_4_ = buffer.readSmart();
 			Class194_Sub1.aClass331Array6894 = new Class331[i_4_];
-			for (int i_5_ = 0; (i_5_ ^ 0xffffffff) > (i_4_ ^ 0xffffffff); i_5_++)
+			for (int i_5_ = 0; i_4_ > i_5_; i_5_++)
 				Class194_Sub1.aClass331Array6894[i_5_] = new Class331(buffer);
 			int i_6_ = buffer.readSmart();
 			Class121.aClass206Array1529 = new Class206[i_6_];
-			for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff); i_7_++)
+			for (int i_7_ = 0; i_6_ > i_7_; i_7_++)
 				Class121.aClass206Array1529[i_7_] = new Class206(buffer, i_7_);
 			int i_8_ = buffer.readSmart();
 			Node_Sub39.aClass369Array7497 = new Class369[i_8_];
-			for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > (i_8_ ^ 0xffffffff); i_9_++)
+			for (int i_9_ = 0; i_8_ > i_9_; i_9_++)
 				Node_Sub39.aClass369Array7497[i_9_] = new Class369(buffer);
 			int i_10_ = buffer.readSmart();
 			Class262_Sub5.aClass199Array7732 = new Class199[i_10_];
@@ -62,7 +62,7 @@ public class Class191
 		if (ClientScript.aClass216_9498 == Class216.aClass216_2547) {
 			boolean bool = true;
 			Class262[] class262s = Class214.aClass262Array2528;
-			for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > (class262s.length ^ 0xffffffff); i_14_++) {
+			for (int i_14_ = 0; class262s.length > i_14_; i_14_++) {
 				Class262 class262 = class262s[i_14_];
 				if (!class262.method3145(true)) {
 					bool = false;
@@ -91,10 +91,10 @@ public class Class191
 		anInt2341++;
 		int i_17_ = player.scenePositionXQueue[0];
 		int i_18_ = player.scenePositionYQueue[0];
-		if (i_17_ >= 0 && i_17_ < Node_Sub54.GAME_SCENE_WDITH && i_18_ >= 0 && Class377_Sub1.GAME_SCENE_HEIGHT > i_18_ && (i >= 0 && i < Node_Sub54.GAME_SCENE_WDITH && (i_16_ ^ 0xffffffff) <= -1 && Class377_Sub1.GAME_SCENE_HEIGHT > i_16_)) {
+		if (i_17_ >= 0 && i_17_ < Node_Sub54.GAME_SCENE_WDITH && i_18_ >= 0 && Class377_Sub1.GAME_SCENE_HEIGHT > i_18_ && (i >= 0 && i < Node_Sub54.GAME_SCENE_WDITH && i_16_ >= 0 && Class377_Sub1.GAME_SCENE_HEIGHT > i_16_)) {
 			int i_19_ = Class275.calculateRoute(i_17_, i_18_, i, i_16_, player.getSize((byte) 65), -4, bool, 0, 0, 0, 0, Class304.SCENE_CLIP_DATA_PLANES[player.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
-			if ((i_19_ ^ 0xffffffff) <= -2 && (i_19_ ^ 0xffffffff) >= -4) {
-				for (int i_20_ = 0; (i_19_ + -1 ^ 0xffffffff) < (i_20_ ^ 0xffffffff); i_20_++)
+			if (i_19_ >= 1 && i_19_ <= 3) {
+				for (int i_20_ = 0; i_20_ < i_19_ + -1; i_20_++)
 					player.method887(-24527, Class258.calculatedScenePositionYs[i_20_], Class328_Sub1.calculatedScenePositionXs[i_20_], b);
 			}
 		}
@@ -103,9 +103,9 @@ public class Class191
 	static final String method1947(int i, int i_21_) {
 		anInt2347++;
 		String string = Integer.toString(i_21_);
-		for (int i_22_ = string.length() - i; (i_22_ ^ 0xffffffff) < -1; i_22_ -= 3)
+		for (int i_22_ = string.length() - i; i_22_ > 0; i_22_ -= 3)
 			string = string.substring(0, i_22_) + "," + string.substring(i_22_);
-		if ((string.length() ^ 0xffffffff) < -10) {
+		if (string.length() > 9) {
 			return " <col=00ff80>" + string.substring(0, -8 + string.length()) + Class22.aClass22_396.method297(Class35.language) + " (" + string + ")</col>";
 		}
 		if (string.length() > 6) {
@@ -134,7 +134,7 @@ public class Class191
 			for (int i_27_ = 0; i_27_ < bs.length; i_27_++) {
 				int i_28_ = bs[i_27_];
 				int[] is_29_ = anIntArrayArray2348[i_26_];
-				for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > -15; i_30_++)
+				for (int i_30_ = 0; i_30_ < 14; i_30_++)
 					is[i_25_ + i_30_] += is_29_[i_30_] * i_28_;
 				i_26_ += anInt2352;
 				int i_31_ = i_26_ / anInt2342;
@@ -145,7 +145,7 @@ public class Class191
 			for (int i_32_ = 0; i_32_ < i_24_; i_32_++) {
 				int i_33_ = is[i_32_] - -32768 >> 16;
 				if (i_33_ >= -128) {
-					if ((i_33_ ^ 0xffffffff) < -128) {
+					if (i_33_ > 127) {
 						bs[i_32_] = (byte) 127;
 					} else {
 						bs[i_32_] = (byte) i_33_;
@@ -180,7 +180,7 @@ public class Class191
 			for (int i_37_ = 0; i_37_ < ses.length; i_37_++) {
 				int i_38_ = ses[i_37_];
 				int[] is_39_ = anIntArrayArray2348[i_36_];
-				for (int i_40_ = 0; (i_40_ ^ 0xffffffff) > -15; i_40_++)
+				for (int i_40_ = 0; i_40_ < 14; i_40_++)
 					is[i_35_ + i_40_] += is_39_[i_40_] * i_38_ >> 2;
 				i_36_ += anInt2352;
 				int i_41_ = i_36_ / anInt2342;
@@ -188,7 +188,7 @@ public class Class191
 				i_36_ -= anInt2342 * i_41_;
 			}
 			ses = new short[i_34_];
-			for (int i_42_ = 0; (i_34_ ^ 0xffffffff) < (i_42_ ^ 0xffffffff); i_42_++) {
+			for (int i_42_ = 0; i_42_ < i_34_; i_42_++) {
 				int i_43_ = is[i_42_] - -8192 >> 14;
 				if (i_43_ >= -32768) {
 					if (i_43_ > 32767) {
@@ -208,7 +208,7 @@ public class Class191
 	}
 	
 	Class191(int i, int i_44_) {
-		if ((i_44_ ^ 0xffffffff) != (i ^ 0xffffffff)) {
+		if (i != i_44_) {
 			int i_45_ = Class167.method1748(i_44_, (byte) -21, i);
 			i /= i_45_;
 			i_44_ /= i_45_;

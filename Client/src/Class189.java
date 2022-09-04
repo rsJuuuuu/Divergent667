@@ -96,12 +96,12 @@ abstract class Class189
 					stringbuffer.append((char) bs[i_0_]);
 				}
 				String string = stringbuffer.toString();
-				if (!string.equals("kate")) {
-					node_sub25 = new Node_Sub25_Sub2(oggstreamstate);
-				} else {
+				if (string.equals("kate")) {
 					node_sub25 = new Node_Sub25_Sub4(oggstreamstate);
+				} else {
+					node_sub25 = new Node_Sub25_Sub2(oggstreamstate);
 				}
-			} else {
+            } else {
 				aNode_Sub25_Sub1_2310 = new Node_Sub25_Sub1(oggstreamstate);
 				node_sub25 = aNode_Sub25_Sub1_2310;
 			}
@@ -138,17 +138,15 @@ abstract class Class189
 		anInt2314++;
 		while (aNode_Sub25_Sub3_2316.anOggStreamState7235.packetOut(anOggPacket2324) != 1) {
 			Node_Sub25 node_sub25 = method1915((byte) 90);
-			if (node_sub25 != null) {
-				if (node_sub25 == aNode_Sub25_Sub4_2297) {
-					method1923((byte) -97);
-				}
-			} else {
+			if (node_sub25 == null) {
 				if (aBoolean2292) {
 					method1931((byte) 82);
 				}
 				return;
-			}
-		}
+			} else if (node_sub25 == aNode_Sub25_Sub4_2297) {
+                method1923((byte) -97);
+            }
+        }
 		aNode_Sub25_Sub3_2316.method2652(i + 17622, anOggPacket2324);
 		if (i != -17507) {
 			method1925();
@@ -194,7 +192,9 @@ abstract class Class189
 		if (!aBoolean2304) {
 			while (!aBoolean2299) {
 				Node_Sub25 node_sub25;
-				if (!aBoolean2301) {
+				if (aBoolean2301) {
+					node_sub25 = (Node_Sub25) aHashTable2298.method1518(3512, (long) anOggPage2294.getSerialNumber());
+				} else {
 					node_sub25 = method1915((byte) 109);
 					if (node_sub25 == null) {
 						if (aBoolean2292) {
@@ -203,60 +203,54 @@ abstract class Class189
 						break;
 					}
 					aBoolean2301 = true;
-				} else {
-					node_sub25 = (Node_Sub25) aHashTable2298.method1518(3512, (long) anOggPage2294.getSerialNumber());
 				}
-				if (node_sub25 != aNode_Sub25_Sub1_2310) {
-					if (!(node_sub25 instanceof Node_Sub25_Sub4)) {
-						if (aNode_Sub25_Sub3_2316 == node_sub25) {
-							if (aNode_Sub25_Sub1_2310 == null && !aBoolean2304) {
-								for (int i = 0; (i ^ 0xffffffff) > -11 && method1919(126); i++) {
-									method1918(-17507);
-									if (aBoolean2299) {
-										break;
-									}
-								}
-								break;
-							}
-						} else {
-							while ((node_sub25.anOggStreamState7235.packetOut(anOggPacket2324) ^ 0xffffffff) == -2) {
-								if ((node_sub25.anInt7234 ^ 0xffffffff) == -2 && node_sub25 instanceof Node_Sub25_Sub4) {
-									method1926(119, aString2321);
-								}
-								node_sub25.method2652(-4, anOggPacket2324);
-							}
-						}
-					} else {
-						method1923((byte) -106);
-					}
-				} else {
-					if (aNode_Sub25_Sub1_2310.method2663(-118) >= 50) {
-						break;
-					}
-					while (aNode_Sub25_Sub1_2310.anOggStreamState7235.packetOut(anOggPacket2324) == 1) {
-						aNode_Sub25_Sub1_2310.method2652(-17, anOggPacket2324);
-						method1923((byte) -94);
-						if (aNode_Sub25_Sub3_2316 != null) {
-							double d = aNode_Sub25_Sub3_2316.method2676(-107);
-							for (int i = 0; i < 10; i++) {
-								if (!method1919(126)) {
-									break;
-								}
-								method1918(-17507);
-								if (aBoolean2299) {
-									return;
-								}
-							}
-							if (aNode_Sub25_Sub3_2316.method2676(102) > d) {
-								return;
-							}
-						}
-						if ((aNode_Sub25_Sub1_2310.method2663(-103) ^ 0xffffffff) <= -51) {
-							return;
-						}
-					}
-				}
-				aBoolean2301 = false;
+                if (node_sub25 == aNode_Sub25_Sub1_2310) {
+                    if (aNode_Sub25_Sub1_2310.method2663(-118) >= 50) {
+                        break;
+                    }
+                    while (aNode_Sub25_Sub1_2310.anOggStreamState7235.packetOut(anOggPacket2324) == 1) {
+                        aNode_Sub25_Sub1_2310.method2652(-17, anOggPacket2324);
+                        method1923((byte) -94);
+                        if (aNode_Sub25_Sub3_2316 != null) {
+                            double d = aNode_Sub25_Sub3_2316.method2676(-107);
+                            for (int i = 0; i < 10; i++) {
+                                if (!method1919(126)) {
+                                    break;
+                                }
+                                method1918(-17507);
+                                if (aBoolean2299) {
+                                    return;
+                                }
+                            }
+                            if (aNode_Sub25_Sub3_2316.method2676(102) > d) {
+                                return;
+                            }
+                        }
+                        if (aNode_Sub25_Sub1_2310.method2663(-103) >= 50) {
+                            return;
+                        }
+                    }
+                } else if (node_sub25 instanceof Node_Sub25_Sub4) {
+                    method1923((byte) -106);
+                } else if (aNode_Sub25_Sub3_2316 == node_sub25) {
+                    if (aNode_Sub25_Sub1_2310 == null && !aBoolean2304) {
+                        for (int i = 0; i < 10 && method1919(126); i++) {
+                            method1918(-17507);
+                            if (aBoolean2299) {
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                } else {
+                    while (node_sub25.anOggStreamState7235.packetOut(anOggPacket2324) == 1) {
+                        if (node_sub25.anInt7234 == 1 && node_sub25 instanceof Node_Sub25_Sub4) {
+                            method1926(119, aString2321);
+                        }
+                        node_sub25.method2652(-4, anOggPacket2324);
+                    }
+                }
+                aBoolean2301 = false;
 			}
 		}
 	}

@@ -46,47 +46,39 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 			method2864(22);
 		}
 		anInt10336++;
-		if (widget.aByte4851 != 0) {
-			if (widget.aByte4851 != 1) {
-				if (widget.aByte4851 == 2) {
-					widget.anInt4762 = -widget.anInt4695 + (i_0_ + -widget.anInt4816);
-				} else if ((widget.aByte4851 ^ 0xffffffff) != -4) {
-					if ((widget.aByte4851 ^ 0xffffffff) == -5) {
-						widget.anInt4762 = (i_0_ - widget.anInt4695) / 2 + (i_0_ * widget.anInt4816 >> 14);
-					} else {
-						widget.anInt4762 = -(widget.anInt4816 * i_0_ >> 14) + -widget.anInt4695 + i_0_;
-					}
-				} else {
-					widget.anInt4762 = widget.anInt4816 * i_0_ >> 14;
-				}
-			} else {
-				widget.anInt4762 = widget.anInt4816 + (-widget.anInt4695 + i_0_) / 2;
-			}
-		} else {
+		if (widget.aByte4851 == 0) {
 			widget.anInt4762 = widget.anInt4816;
+		} else if (widget.aByte4851 == 1) {
+			widget.anInt4762 = widget.anInt4816 + (-widget.anInt4695 + i_0_) / 2;
+		} else if (widget.aByte4851 == 2) {
+			widget.anInt4762 = -widget.anInt4695 + (i_0_ + -widget.anInt4816);
+		} else if (widget.aByte4851 == 3) {
+			widget.anInt4762 = widget.anInt4816 * i_0_ >> 14;
+		} else if (widget.aByte4851 == 4) {
+			widget.anInt4762 = (i_0_ - widget.anInt4695) / 2 + (i_0_ * widget.anInt4816 >> 14);
+		} else {
+			widget.anInt4762 = -(widget.anInt4816 * i_0_ >> 14) + -widget.anInt4695 + i_0_;
 		}
-		if ((widget.aByte4720 ^ 0xffffffff) == -1) {
+        if (widget.aByte4720 == 0) {
 			widget.anInt4679 = widget.anInt4850;
 		} else if (widget.aByte4720 == 1) {
 			widget.anInt4679 = widget.anInt4850 + (i - widget.anInt4809) / 2;
-		} else if (widget.aByte4720 != 2) {
-			if ((widget.aByte4720 ^ 0xffffffff) == -4) {
-				widget.anInt4679 = widget.anInt4850 * i >> 14;
-			} else if (widget.aByte4720 == 4) {
-				widget.anInt4679 = (-widget.anInt4809 + i) / 2 + (i * widget.anInt4850 >> 14);
-			} else {
-				widget.anInt4679 = -(i * widget.anInt4850 >> 14) + i - widget.anInt4809;
-			}
-		} else {
+		} else if (widget.aByte4720 == 2) {
 			widget.anInt4679 = -widget.anInt4809 + (i + -widget.anInt4850);
+		} else if (widget.aByte4720 == 3) {
+			widget.anInt4679 = widget.anInt4850 * i >> 14;
+		} else if (widget.aByte4720 == 4) {
+			widget.anInt4679 = (-widget.anInt4809 + i) / 2 + (i * widget.anInt4850 >> 14);
+		} else {
+			widget.anInt4679 = -(i * widget.anInt4850 >> 14) + i - widget.anInt4809;
 		}
-		if (Class54.aBoolean817 && (Client.method113(widget).settingsHash != 0 || widget.type == 0)) {
+        if (Class54.aBoolean817 && (Client.method113(widget).settingsHash != 0 || widget.type == 0)) {
 			if (widget.anInt4679 < 0) {
 				widget.anInt4679 = 0;
 			} else if (i < widget.anInt4809 + widget.anInt4679) {
 				widget.anInt4679 = i + -widget.anInt4809;
 			}
-			if ((widget.anInt4762 ^ 0xffffffff) > -1) {
+			if (widget.anInt4762 < 0) {
 				widget.anInt4762 = 0;
 			} else if (widget.anInt4762 - -widget.anInt4695 > i_0_) {
 				widget.anInt4762 = i_0_ + -widget.anInt4695;
@@ -117,32 +109,26 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 						while_205_:
 							do {
 								do {
-									if ((i_2_ ^ 0xffffffff) != -1) {
-										if ((i_2_ ^ 0xffffffff) != -2) {
-											if (i_2_ != 2) {
-												if ((i_2_ ^ 0xffffffff) != -4) {
-													if (i_2_ != 4) {
-														if ((i_2_ ^ 0xffffffff) != -6) {
-															if ((i_2_ ^ 0xffffffff) == -7) {
-																break while_208_;
-															}
-															break while_209_;
-														}
-													} else {
-														break while_206_;
-													}
-													break while_207_;
-												}
-											} else {
-												break;
-											}
-											break while_205_;
-										}
-									} else {
+									if (i_2_ == 0) {
 										anInt10334 = anInt10340 = buffer.readUnsignedByte();
 										return;
+									} else if (i_2_ != 1) {
+										if (i_2_ == 2) {
+											break;
+										} else if (i_2_ != 3) {
+											if (i_2_ == 4) {
+												break while_206_;
+											} else if (i_2_ != 5) {
+												if (i_2_ == 6) {
+													break while_208_;
+												}
+												break while_209_;
+											}
+											break while_207_;
+										}
+										break while_205_;
 									}
-									anInt10335 = buffer.readUnsignedByte();
+                                    anInt10335 = buffer.readUnsignedByte();
 									return;
 								} while (false);
 								anInt10327 = buffer.readUnsignedShort();
@@ -205,15 +191,15 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 			int i_6_ = i_5_ - -1;
 			int i_7_ = 0;
 		while_217_:
-			for (/**/; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++) {
+			for (/**/; i_7_ < Class339_Sub7.anInt8728; i_7_++) {
 				Animable_Sub1.anInt9098 = Class134_Sub2.anInt9024 = Class58.anInt862 = Class92.anInt1229 = 2147483647;
 				int i_8_ = 2048 + anInt10334 * CacheNode_Sub3.anIntArray9442[i_7_];
 				int i_9_ = i_8_ >> 12;
 				int i_10_ = 1 + i_9_;
-				for (int i_11_ = -1 + i_5_; (i_11_ ^ 0xffffffff) >= (i_6_ ^ 0xffffffff); i_11_++) {
+				for (int i_11_ = -1 + i_5_; i_6_ >= i_11_; i_11_++) {
 					int i_12_ = 0xff & aByteArray10341[0xff & (anInt10340 > i_11_ ? i_11_ : -anInt10340 + i_11_)];
-					for (int i_13_ = -1 + i_9_; (i_10_ ^ 0xffffffff) <= (i_13_ ^ 0xffffffff); i_13_++) {
-						int i_14_ = 2 * (0xff & aByteArray10341[i_12_ + ((i_13_ ^ 0xffffffff) <= (anInt10334 ^ 0xffffffff) ? -anInt10334 + i_13_ : i_13_) & 0xff]);
+					for (int i_13_ = -1 + i_9_; i_13_ <= i_10_; i_13_++) {
+						int i_14_ = 2 * (0xff & aByteArray10341[i_12_ + (anInt10334 <= i_13_ ? -anInt10334 + i_13_ : i_13_) & 0xff]);
 						int i_15_ = -(i_13_ << 12) - (aShortArray10337[i_14_++] - i_8_);
 						int i_16_ = -(i_11_ << 12) - (aShortArray10337[i_14_] - i_4_);
 						int i_17_ = anInt10332;
@@ -227,30 +213,26 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 								while_210_:
 									do {
 										do {
-											if ((i_17_ ^ 0xffffffff) != -2) {
-												if (i_17_ != 3) {
-													if (i_17_ != 4) {
-														if ((i_17_ ^ 0xffffffff) != -6) {
-															if ((i_17_ ^ 0xffffffff) == -3) {
-																break while_211_;
-															}
-															break while_212_;
-														}
-													} else {
-														break;
-													}
-													break while_210_;
-												}
-											} else {
+											if (i_17_ == 1) {
 												i_18_ = i_15_ * i_15_ + i_16_ * i_16_ >> 12;
 												break while_213_;
+											} else if (i_17_ != 3) {
+												if (i_17_ == 4) {
+													break;
+												} else if (i_17_ != 5) {
+													if (i_17_ == 2) {
+														break while_211_;
+													}
+													break while_212_;
+												}
+												break while_210_;
 											}
-											i_15_ = i_15_ >= 0 ? i_15_ : -i_15_;
-											i_16_ = (i_16_ ^ 0xffffffff) <= -1 ? i_16_ : -i_16_;
-											i_18_ = (i_15_ ^ 0xffffffff) >= (i_16_ ^ 0xffffffff) ? i_16_ : i_15_;
+                                            i_15_ = i_15_ >= 0 ? i_15_ : -i_15_;
+											i_16_ = i_16_ >= 0 ? i_16_ : -i_16_;
+											i_18_ = i_16_ >= i_15_ ? i_16_ : i_15_;
 											break while_213_;
 										} while (false);
-										i_15_ = (int) (4096.0 * Math.sqrt((double) ((float) ((i_15_ ^ 0xffffffff) > -1 ? -i_15_ : i_15_) / 4096.0F)));
+										i_15_ = (int) (4096.0 * Math.sqrt((double) ((float) (i_15_ < 0 ? -i_15_ : i_15_) / 4096.0F)));
 										i_16_ = (int) (4096.0 * Math.sqrt((double) ((float) (i_16_ < 0 ? -i_16_ : i_16_) / 4096.0F)));
 										i_18_ = i_16_ + i_15_;
 										i_18_ = i_18_ * i_18_ >> 12;
@@ -261,7 +243,7 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 									i_18_ = (int) (Math.sqrt(Math.sqrt((double) ((float) (i_16_ + i_15_) / 1.6777216E7F))) * 4096.0);
 									break while_213_;
 								} while (false);
-								i_18_ = (i_15_ >= 0 ? i_15_ : -i_15_) + ((i_16_ ^ 0xffffffff) > -1 ? -i_16_ : i_16_);
+								i_18_ = (i_15_ >= 0 ? i_15_ : -i_15_) + (i_16_ < 0 ? -i_16_ : i_16_);
 								break while_213_;
 							} while (false);
 							i_18_ = (int) (Math.sqrt((double) ((float) (i_16_ * i_16_ + i_15_ * i_15_) / 1.6777216E7F)) * 4096.0);
@@ -271,9 +253,9 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 							Class58.anInt862 = Class134_Sub2.anInt9024;
 							Class134_Sub2.anInt9024 = Animable_Sub1.anInt9098;
 							Animable_Sub1.anInt9098 = i_18_;
-						} else if ((i_18_ ^ 0xffffffff) <= (Class134_Sub2.anInt9024 ^ 0xffffffff)) {
+						} else if (Class134_Sub2.anInt9024 <= i_18_) {
 							if (i_18_ >= Class58.anInt862) {
-								if ((i_18_ ^ 0xffffffff) > (Class92.anInt1229 ^ 0xffffffff)) {
+								if (Class92.anInt1229 > i_18_) {
 									Class92.anInt1229 = i_18_;
 								}
 							} else {
@@ -293,25 +275,21 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 				while_214_:
 					do {
 						do {
-							if ((i_19_ ^ 0xffffffff) != -1) {
-								if (i_19_ != 1) {
-									if (i_19_ != 3) {
-										if (i_19_ != 4) {
-											if ((i_19_ ^ 0xffffffff) == -3) {
-												break while_215_;
-											}
-											continue while_217_;
-										}
-									} else {
-										break;
-									}
-									break while_214_;
-								}
-							} else {
+							if (i_19_ == 0) {
 								is[i_7_] = Animable_Sub1.anInt9098;
 								continue while_217_;
+							} else if (i_19_ != 1) {
+								if (i_19_ == 3) {
+									break;
+								} else if (i_19_ != 4) {
+									if (i_19_ == 2) {
+										break while_215_;
+									}
+									continue while_217_;
+								}
+								break while_214_;
 							}
-							is[i_7_] = Class134_Sub2.anInt9024;
+                            is[i_7_] = Class134_Sub2.anInt9024;
 							continue while_217_;
 						} while (false);
 						is[i_7_] = Class58.anInt862;
@@ -348,10 +326,10 @@ public class Node_Sub38_Sub23 extends Node_Sub38
 	
 	static final boolean method2866(boolean bool) {
 		anInt10331++;
-		if ((Class151.anInt1843 ^ 0xffffffff) != -4) {
+		if (Class151.anInt1843 != 3) {
 			return false;
 		}
-		if (Node_Sub38_Sub8.anInt10163 != 0 || (Class4.anInt124 ^ 0xffffffff) != -1) {
+		if (Node_Sub38_Sub8.anInt10163 != 0 || Class4.anInt124 != 0) {
 			return false;
 		}
 		if (bool != false) {

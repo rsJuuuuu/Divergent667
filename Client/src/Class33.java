@@ -37,7 +37,17 @@ public class Class33 implements Runnable
 			if (!aBoolean523) {
 				break;
 			}
-			if (aClass273_521 != null && !aClass273_521.method3319(-10968)) {
+			if (aClass273_521 == null || aClass273_521.method3319(-10968)) {
+				aBoolean527 = false;
+				aLong520 = Class146.aClass10_1815.method186(-107);
+				synchronized (this) {
+					try {
+						this.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+				}
+			} else {
 				aBoolean527 = true;
 				EntityNode entitynode = aClass273_521.method3316(true);
 				if (entitynode instanceof Animable) {
@@ -70,18 +80,8 @@ public class Class33 implements Runnable
 						}
 					}
 				}
-			} else {
-				aBoolean527 = false;
-				aLong520 = Class146.aClass10_1815.method186(-107);
-				synchronized (this) {
-					try {
-						this.wait();
-					} catch (InterruptedException interruptedexception) {
-						/* empty */
-					}
-				}
 			}
-		}
+        }
 		aGraphicsToolkit522.c(anInt519);
 		while (aBoolean525 && aBoolean523) {
 			synchronized (this) {

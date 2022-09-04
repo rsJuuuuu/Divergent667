@@ -22,7 +22,7 @@ public class Class13
 			method208(21, 86, -113);
 		}
 		anInt200++;
-        return !((c ^ 0xffffffff) != -161 && (c ^ 0xffffffff) != -33 && c != 95 && (c ^ 0xffffffff) != -46);
+        return !(c != 160 && c != 32 && c != 95 && c != 45);
     }
 	
 	final Class314 method207(int i, int i_0_) {
@@ -94,12 +94,12 @@ public class Class13
 	final void method213(byte b) {
 		anInt201++;
 		synchronized (aClass61_207) {
-			if (b != -72) {
-				/* empty */
-			} else {
+			if (b == -72) {
 				aClass61_207.method608(false);
+			} else {
+				/* empty */
 			}
-		}
+        }
 	}
 	
 	Class13(Class353 class353, int i, Index class302) {

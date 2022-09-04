@@ -22,12 +22,12 @@ public class Class371
 	static OutcommingPacket aClass318_4586 = new OutcommingPacket(10, 8);
 	
 	static final void method4092(int i, int i_0_, Rectangle[] rectangles) throws Exception_Sub1 {
-		if (Class320_Sub20.anInt8397 != 1) {
-			Class44.aGraphicsToolkit668.a(rectangles, i_0_, 0, 0);
-		} else {
+		if (Class320_Sub20.anInt8397 == 1) {
 			Class44.aGraphicsToolkit668.a(rectangles, i_0_, Node_Sub38_Sub1.anInt10075, Class166.anInt5100);
+		} else {
+			Class44.aGraphicsToolkit668.a(rectangles, i_0_, 0, 0);
 		}
-		anInt4583++;
+        anInt4583++;
 		if (i != 16600) {
 			aClass318_4586 = null;
 		}
@@ -54,7 +54,7 @@ public class Class371
 		StringBuffer stringbuffer = new StringBuffer();
 		stringbuffer.append("[");
 		for (int i = 0; anInt4576 > i; i++) {
-			if ((i ^ 0xffffffff) != -1) {
+			if (i != 0) {
 				stringbuffer.append(", ");
 			}
 			stringbuffer.append(aStringArray4579[i]);
@@ -77,7 +77,7 @@ public class Class371
 		int i = -87 % ((-56 - b) / 40);
 		Class320_Sub26.method3777();
 		anInt4581++;
-		for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > -5; i_1_++)
+		for (int i_1_ = 0; i_1_ < 4; i_1_++)
 			Class304.SCENE_CLIP_DATA_PLANES[i_1_].method991(-120);
 		Node_Sub18.method2606(126);
 		Node_Sub36_Sub2.method2761((byte) 125);
@@ -103,12 +103,12 @@ public class Class371
 		while (i_6_ <= i) {
 			if (!aBoolean4572) {
 				i_6_ += anInt4574;
-			} else if (i_6_ != 0) {
-				i_6_ *= anInt4574;
-			} else {
+			} else if (i_6_ == 0) {
 				i_6_ = 1;
+			} else {
+				i_6_ *= anInt4574;
 			}
-		}
+        }
 		return i_6_;
 	}
 	
@@ -130,7 +130,7 @@ public class Class371
 	private final void method4101(byte b, int i, String string) {
 		anInt4578++;
 		int i_7_ = 1 / ((-32 - b) / 50);
-		if ((anInt4576 ^ 0xffffffff) > (i ^ 0xffffffff)) {
+		if (i > anInt4576) {
 			anInt4576 = i;
 		}
 		if (i >= aStringArray4579.length) {

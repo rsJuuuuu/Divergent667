@@ -45,7 +45,7 @@ public class Class169_Sub1 extends Class169
 	static final void method1769(int i, int i_4_, int i_5_) {
 		if (Class339_Sub7.anInt8728 != i_5_) {
 			CacheNode_Sub3.anIntArray9442 = new int[i_5_];
-			for (int i_6_ = 0; (i_6_ ^ 0xffffffff) > (i_5_ ^ 0xffffffff); i_6_++)
+			for (int i_6_ = 0; i_5_ > i_6_; i_6_++)
 				CacheNode_Sub3.anIntArray9442[i_6_] = (i_6_ << 12) / i_5_;
 			Class303.anInt3824 = i_5_ + -1;
 			Class339_Sub7.anInt8728 = i_5_;
@@ -55,12 +55,12 @@ public class Class169_Sub1 extends Class169
 			anInt8787 = -98;
 		}
 		anInt8784++;
-		if ((i_4_ ^ 0xffffffff) != (Node_Sub38_Sub1.anInt10083 ^ 0xffffffff)) {
-			if ((Class339_Sub7.anInt8728 ^ 0xffffffff) == (i_4_ ^ 0xffffffff)) {
+		if (Node_Sub38_Sub1.anInt10083 != i_4_) {
+			if (i_4_ == Class339_Sub7.anInt8728) {
 				Node_Sub25_Sub1.anIntArray9941 = CacheNode_Sub3.anIntArray9442;
 			} else {
 				Node_Sub25_Sub1.anIntArray9941 = new int[i_4_];
-				for (int i_7_ = 0; (i_4_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++)
+				for (int i_7_ = 0; i_7_ < i_4_; i_7_++)
 					Node_Sub25_Sub1.anIntArray9941[i_7_] = (i_7_ << 12) / i_4_;
 			}
 			r_Sub2.anInt11054 = i_4_ + -1;
@@ -72,7 +72,7 @@ public class Class169_Sub1 extends Class169
 		super(gltoolkit, 34067, i, 6 * i_8_ * i_8_, bool);
 		anInt8793 = i_8_;
 		aGLToolkit4947.method1444(-2, this);
-		for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > -7; i_10_++)
+		for (int i_10_ = 0; i_10_ < 6; i_10_++)
 			OpenGL.glTexImage2Dub(i_10_ + 34069, 0, anInt4950, i_8_, i_8_, 0, i_9_, 5121, bs[i_10_], 0);
 		this.method1757(false, true);
 	}
@@ -97,14 +97,14 @@ public class Class169_Sub1 extends Class169
 		super(gltoolkit, 34067, i, i_13_ * i_13_ * 6, bool);
 		anInt8793 = i_13_;
 		aGLToolkit4947.method1444(-2, this);
-		if (!bool) {
-			for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > -7; i_14_++)
-				OpenGL.glTexImage2Di(34069 - -i_14_, 0, anInt4950, i_13_, i_13_, 0, 32993, aGLToolkit4947.anInt6740, is[i_14_], 0);
-		} else {
-			for (int i_15_ = 0; (i_15_ ^ 0xffffffff) > -7; i_15_++)
+		if (bool) {
+			for (int i_15_ = 0; i_15_ < 6; i_15_++)
 				Class258.method3124(i_13_, i_15_ + 34069, is[i_15_], 32993, anInt4950, i_13_, 1, aGLToolkit4947.anInt6740);
+		} else {
+			for (int i_14_ = 0; i_14_ < 6; i_14_++)
+				OpenGL.glTexImage2Di(34069 - -i_14_, 0, anInt4950, i_13_, i_13_, 0, 32993, aGLToolkit4947.anInt6740, is[i_14_], 0);
 		}
-		this.method1757(false, true);
+        this.method1757(false, true);
 	}
 	
 	public static void method1770(byte b) {

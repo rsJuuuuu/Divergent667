@@ -35,10 +35,10 @@ public class Class320_Sub4 extends Class320
 	
 	final void method3673(byte b) {
 		anInt8242++;
-		if (aNode_Sub27_4063.aClass320_Sub3_7298.method3689((byte) 121) && (anInt4064 ^ 0xffffffff) == -3) {
+		if (aNode_Sub27_4063.aClass320_Sub3_7298.method3689((byte) 121) && anInt4064 == 2) {
 			anInt4064 = 1;
 		}
-		if ((anInt4064 ^ 0xffffffff) > -1 || (anInt4064 ^ 0xffffffff) < -3) {
+		if (anInt4064 < 0 || anInt4064 > 2) {
 			anInt4064 = method3677(0);
 		}
 		if (b > -35) {

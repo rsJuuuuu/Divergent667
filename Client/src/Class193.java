@@ -24,7 +24,7 @@ public class Class193 implements Runnable
 		if (string == null) {
 			return false;
 		}
-		for (int i_0_ = i; (Node_Sub38_Sub14.anInt10242 ^ 0xffffffff) < (i_0_ ^ 0xffffffff); i_0_++) {
+		for (int i_0_ = i; i_0_ < Node_Sub38_Sub14.anInt10242; i_0_++) {
 			if (string.equalsIgnoreCase(Class262_Sub12.aStringArray7793[i_0_])) {
 				return true;
 			}

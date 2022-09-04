@@ -47,7 +47,7 @@ public class Class137
 			method1600(-78);
 		}
 		int i_6_ = -i_5_ + anInt1706;
-		if ((i_1_ ^ 0xffffffff) >= -1) {
+		if (i_1_ <= 0) {
 			int i_7_ = -i_1_ + 1;
 			i_1_ = 1;
 			i_2_ += i_7_ * anInt1706;
@@ -74,7 +74,7 @@ public class Class137
 			i_8_ += i_11_;
 			i_5_ -= i_11_;
 		}
-		if (i_5_ > 0 && (i_4_ ^ 0xffffffff) < -1) {
+		if (i_5_ > 0 && i_4_ > 0) {
 			GLXToolkit.method1405(aByteArray1704, i_8_, i_2_, i_5_, i_4_, i_6_, -59, var_r_Sub2.aByteArray11058, i_3_);
 			method1599(-1, i_1_, i_4_, i_5_, i);
 		}
@@ -92,17 +92,17 @@ public class Class137
 		aGLToolkit1714.method1460(1, 3);
 		float f = 1.0F / (float) (aGLToolkit1714.anInt6606 * 128);
 		if (bool) {
-			for (int i_15_ = 0; (anInt1708 ^ 0xffffffff) < (i_15_ ^ 0xffffffff); i_15_++) {
+			for (int i_15_ = 0; i_15_ < anInt1708; i_15_++) {
 				int i_16_ = i_15_ << anInt1711;
 				int i_17_ = i_15_ + 1 << anInt1711;
 				for (int i_18_ = 0; i_18_ < anInt1702; i_18_++) {
 					int i_19_ = i_18_ << anInt1711;
 					int i_20_ = i_18_ + 1 << anInt1711;
 				while_136_:
-					for (int i_21_ = i_19_; (i_20_ ^ 0xffffffff) < (i_21_ ^ 0xffffffff); i_21_++) {
+					for (int i_21_ = i_19_; i_21_ < i_20_; i_21_++) {
 						if (-i_14_ <= -i + i_21_ && -i + i_21_ <= i_14_) {
 							for (int i_22_ = i_16_; i_17_ > i_22_; i_22_++) {
-								if (-i_14_ <= -i_13_ + i_22_ && (i_14_ ^ 0xffffffff) <= (i_22_ - i_13_ ^ 0xffffffff) && bools[i_14_ + -i + i_21_][i_14_ + i_22_ + -i_13_]) {
+								if (-i_14_ <= -i_13_ + i_22_ && i_22_ - i_13_ <= i_14_ && bools[i_14_ + -i + i_21_][i_14_ + i_22_ + -i_13_]) {
 									OpenGL.glMatrixMode(5890);
 									OpenGL.glLoadIdentity();
 									OpenGL.glScalef(f, f, 1.0F);
@@ -117,40 +117,40 @@ public class Class137
 				}
 			}
 		} else {
-			for (int i_23_ = 0; (anInt1708 ^ 0xffffffff) < (i_23_ ^ 0xffffffff); i_23_++) {
+			for (int i_23_ = 0; i_23_ < anInt1708; i_23_++) {
 				int i_24_ = i_23_ << anInt1711;
 				int i_25_ = 1 + i_23_ << anInt1711;
-				for (int i_26_ = 0; (i_26_ ^ 0xffffffff) > (anInt1702 ^ 0xffffffff); i_26_++) {
+				for (int i_26_ = 0; anInt1702 > i_26_; i_26_++) {
 					int i_27_ = 0;
 					int i_28_ = i_26_ << anInt1711;
 					int i_29_ = i_26_ - -1 << anInt1711;
 					FloatBuffer floatbuffer = aGLToolkit1714.aFloatBuffer6661;
 					floatbuffer.offset = 0;
 					for (int i_30_ = i_24_; i_30_ < i_25_; i_30_++) {
-						if (-i_14_ <= i_30_ + -i_13_ && (-i_13_ + i_30_ ^ 0xffffffff) >= (i_14_ ^ 0xffffffff)) {
+						if (-i_14_ <= i_30_ + -i_13_ && i_14_ >= -i_13_ + i_30_) {
 							int i_31_ = i_28_ + i_30_ * aGLPlane1707.anInt3408;
 							for (int i_32_ = i_28_; i_29_ > i_32_; i_32_++) {
-								if ((-i + i_32_ ^ 0xffffffff) <= (-i_14_ ^ 0xffffffff) && (-i + i_32_ ^ 0xffffffff) >= (i_14_ ^ 0xffffffff) && bools[i_14_ + (i_32_ - i)][-i_13_ + i_30_ + i_14_]) {
+								if (-i_14_ <= -i + i_32_ && i_14_ >= -i + i_32_ && bools[i_14_ + (i_32_ - i)][-i_13_ + i_30_ + i_14_]) {
 									short[] ses = aGLPlane1707.aShortArrayArray7925[i_31_];
 									if (ses != null) {
-										if (!aGLToolkit1714.aBoolean6736) {
-											for (int i_33_ = 0; (ses.length ^ 0xffffffff) < (i_33_ ^ 0xffffffff); i_33_++) {
-												floatbuffer.method2191(-116, 0xffff & ses[i_33_]);
-												i_27_++;
-											}
-										} else {
-											for (int i_34_ = 0; (ses.length ^ 0xffffffff) < (i_34_ ^ 0xffffffff); i_34_++) {
+										if (aGLToolkit1714.aBoolean6736) {
+											for (int i_34_ = 0; i_34_ < ses.length; i_34_++) {
 												i_27_++;
 												floatbuffer.writeShort(ses[i_34_] & 0xffff);
 											}
+										} else {
+											for (int i_33_ = 0; i_33_ < ses.length; i_33_++) {
+												floatbuffer.method2191(-116, 0xffff & ses[i_33_]);
+												i_27_++;
+											}
 										}
-									}
+                                    }
 								}
 								i_31_++;
 							}
 						}
 					}
-					if ((i_27_ ^ 0xffffffff) < -1) {
+					if (i_27_ > 0) {
 						OpenGL.glMatrixMode(5890);
 						OpenGL.glLoadIdentity();
 						OpenGL.glScalef(f, f, 1.0F);
@@ -175,17 +175,17 @@ public class Class137
 		int i_38_ = var_r_Sub2.anInt11055;
 		int i_39_ = var_r_Sub2.anInt11057;
 		int i_40_ = -i_39_ + anInt1706;
-		if ((i_36_ ^ 0xffffffff) >= -1) {
+		if (i_36_ <= 0) {
 			int i_41_ = 1 - i_36_;
 			i_36_ = 1;
 			i_38_ -= i_41_;
 			i_37_ += anInt1706 * i_41_;
 		}
-		if ((i_38_ + i_36_ ^ 0xffffffff) <= (anInt1712 ^ 0xffffffff)) {
+		if (anInt1712 <= i_38_ + i_36_) {
 			int i_42_ = -anInt1712 + i_38_ + i_36_ + 1;
 			i_38_ -= i_42_;
 		}
-		if ((i_35_ ^ 0xffffffff) >= -1) {
+		if (i_35_ <= 0) {
 			int i_43_ = -i_35_ + 1;
 			i_35_ = 1;
 			i_39_ -= i_43_;
@@ -197,7 +197,7 @@ public class Class137
 			i_39_ -= i_44_;
 			i_40_ += i_44_;
 		}
-		if ((i_39_ ^ 0xffffffff) >= -1 || (i_38_ ^ 0xffffffff) >= -1) {
+		if (i_39_ <= 0 || i_38_ <= 0) {
 			return false;
 		}
 		int i_45_ = 8;
@@ -219,7 +219,7 @@ public class Class137
 		int i_50_ = var_r_Sub2.anInt11057;
 		int i_51_ = -i_50_ + anInt1706;
 		int i_52_ = 0;
-		if ((i ^ 0xffffffff) >= -1) {
+		if (i <= 0) {
 			int i_53_ = -i + 1;
 			i_49_ -= i_53_;
 			i = 1;
@@ -230,7 +230,7 @@ public class Class137
 			int i_54_ = -anInt1712 + (1 + i_49_) + i;
 			i_49_ -= i_54_;
 		}
-		if ((i_46_ ^ 0xffffffff) >= -1) {
+		if (i_46_ <= 0) {
 			int i_55_ = -i_46_ + 1;
 			i_50_ -= i_55_;
 			i_48_ += i_55_;
@@ -245,7 +245,7 @@ public class Class137
 			i_52_ += i_56_;
 			i_50_ -= i_56_;
 		}
-		if ((i_50_ ^ 0xffffffff) < -1 && (i_49_ ^ 0xffffffff) < -1) {
+		if (i_50_ > 0 && i_49_ > 0) {
 			Node_Sub38_Sub33.method2898(i_52_, i_51_, i_47_, aByteArray1704, i_48_, var_r_Sub2.aByteArray11058, i_49_, i_50_, 0);
 			method1599(-1, i, i_49_, i_50_, i_46_);
 		}
@@ -258,9 +258,9 @@ public class Class137
 			int i_62_ = i + (-1 + i_60_ + i_59_) >> 7;
 			int i_63_ = -1 + i_57_ >> 7;
 			int i_64_ = -1 + (-1 + (i_57_ + i_58_)) >> 7;
-			for (int i_65_ = i_61_; (i_62_ ^ 0xffffffff) <= (i_65_ ^ 0xffffffff); i_65_++) {
+			for (int i_65_ = i_61_; i_65_ <= i_62_; i_65_++) {
 				Class349[] class349s = aClass349ArrayArray1703[i_65_];
-				for (int i_66_ = i_63_; (i_64_ ^ 0xffffffff) <= (i_66_ ^ 0xffffffff); i_66_++)
+				for (int i_66_ = i_63_; i_66_ <= i_64_; i_66_++)
 					class349s[i_66_].aBoolean4307 = true;
 			}
 		}

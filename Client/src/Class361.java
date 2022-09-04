@@ -21,7 +21,7 @@ public class Class361
 		if (i_0_ != i) {
 			return false;
 		}
-		boolean bool = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
+		boolean bool = buffer.readUnsignedByte() == 1;
 		if (bool) {
 			Class160.method1729(0, buffer);
 		}

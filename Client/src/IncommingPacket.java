@@ -34,8 +34,8 @@ public class IncommingPacket
 	static final void method1954(byte b) {
 		anInt2358++;
 		int i = 0;
-		for (int i_2_ = 0; (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) < (i_2_ ^ 0xffffffff); i_2_++) {
-			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff); i_3_++) {
+		for (int i_2_ = 0; i_2_ < Node_Sub54.GAME_SCENE_WDITH; i_2_++) {
+			for (int i_3_ = 0; Class377_Sub1.GAME_SCENE_HEIGHT > i_3_; i_3_++) {
 				if (Node_Sub38_Sub19.method2849(-47, i_3_, Class175.aClass261ArrayArrayArray2099, i, i_2_, true)) {
 					i++;
 				}

@@ -19,7 +19,7 @@ public class Node_Sub38_Sub8_Sub1 extends Node_Sub38_Sub8
 			int[] is_1_ = is[1];
 			int[] is_2_ = is[2];
 			int i_3_ = anInt10172 * (i % anInt10172);
-			for (int i_4_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_4_ ^ 0xffffffff); i_4_++) {
+			for (int i_4_ = 0; i_4_ < Class339_Sub7.anInt8728; i_4_++) {
 				int i_5_ = anIntArray10165[i_4_ % anInt10169 + i_3_];
 				is_2_[i_4_] = Node_Sub30.method2723(255, i_5_) << 4;
 				is_1_[i_4_] = Node_Sub30.method2723(4080, i_5_ >> 4);
@@ -41,7 +41,7 @@ public class Node_Sub38_Sub8_Sub1 extends Node_Sub38_Sub8
 			CacheNode_Sub1.anIntArray9427 = is;
 			Class132.anIntArray1682 = new int[is.length];
 			Class113.aByteArrayArrayArray1447 = new byte[is.length][][];
-			for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > (CacheNode_Sub1.anIntArray9427.length ^ 0xffffffff); i_7_++)
+			for (int i_7_ = 0; CacheNode_Sub1.anIntArray9427.length > i_7_; i_7_++)
 				Class113.aByteArrayArrayArray1447[i_7_] = new byte[is_6_[i_7_]][];
 		}
 	}
@@ -56,7 +56,7 @@ public class Node_Sub38_Sub8_Sub1 extends Node_Sub38_Sub8
 					String string_11_ = Node_Sub25_Sub3.method2671(-13472, string_10_);
 					if (Class310.method3601(string, string_11_, 30195, string_10_, string_8_)) {
 						Node_Sub38_Sub14.anInt10242--;
-						for (int i_12_ = i_9_; (Node_Sub38_Sub14.anInt10242 ^ 0xffffffff) < (i_12_ ^ 0xffffffff); i_12_++) {
+						for (int i_12_ = i_9_; i_12_ < Node_Sub38_Sub14.anInt10242; i_12_++) {
 							Class262_Sub12.aStringArray7793[i_12_] = Class262_Sub12.aStringArray7793[i_12_ - -1];
 							Plane.aStringArray3403[i_12_] = Plane.aStringArray3403[1 + i_12_];
 							Class202.anIntArray2448[i_12_] = Class202.anIntArray2448[1 + i_12_];

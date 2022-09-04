@@ -181,12 +181,12 @@ class Class20
 							i_33_ = i_35_ * i_29_;
 						}
 						if (i_32_ != 0 && i_33_ != 0) {
-							if (class140.anInt1737 != 0) {
-								glsprite.method1199(i, i_27_ - i_33_ + i_29_, i_32_, i_33_, 0, ~0xffffff | class140.anInt1737, 1);
-							} else {
+							if (class140.anInt1737 == 0) {
 								glsprite.method1200(i, i_27_ - i_33_ + i_29_, i_32_, i_33_);
+							} else {
+								glsprite.method1199(i, i_27_ - i_33_ + i_29_, i_32_, i_33_, 0, ~0xffffff | class140.anInt1737, 1);
 							}
-						}
+                        }
 					}
 				}
 			}
@@ -309,25 +309,7 @@ class Class20
 			int i_72_ = i_71_ - i_70_;
 			if (i_72_ > 0) {
 				int i_73_ = anInt349 + i_69_;
-				if (i_73_ < 0 || i_73_ >= anInt345) {
-					for (int i_74_ = 0; i_74_ < i_68_; i_74_++) {
-						int i_75_ = anInt339 - (i_66_ + i_64_ * (i_74_ + 1) >> 16);
-						int i_76_ = anInt339 - (i_66_ + i_64_ * i_74_ >> 16);
-						int i_77_ = i_76_ - i_75_;
-						int i_78_;
-						if (aCacheNode_Sub11_318.anInt9542 != -1) {
-							i_78_ = ~0xffffff | aCacheNode_Sub11_318.anInt9542;
-						} else if ((i_69_ + anInt349 & 0x4) != (i_74_ + anInt337 & 0x4)) {
-							i_78_ = -11840664;
-						} else {
-							i_78_ = anIntArray342[aClass71_320.anInt961 + 1];
-						}
-						if (i_78_ == 0) {
-							i_78_ = -16777216;
-						}
-						graphicstoolkit.aa(i_70_, i_75_, i_72_, i_77_, i_78_, 0);
-					}
-				} else {
+				if (i_73_ >= 0 && i_73_ < anInt345) {
 					for (int i_79_ = 0; i_79_ < i_68_; i_79_++) {
 						int i_80_ = anInt339 - (i_66_ + i_64_ * (i_79_ + 1) >> 16);
 						int i_81_ = anInt339 - (i_66_ + i_64_ * i_79_ >> 16);
@@ -349,12 +331,12 @@ class Class20
 							if (i_85_ == 0 && i_86_ == 0 && i_87_ == 0) {
 								if (aCacheNode_Sub11_318.anInt9542 != -1) {
 									i_85_ = ~0xffffff | aCacheNode_Sub11_318.anInt9542;
-								} else if ((i_69_ + anInt349 & 0x4) != (i_79_ + anInt337 & 0x4)) {
-									i_85_ = -11840664;
-								} else {
+								} else if ((i_69_ + anInt349 & 0x4) == (i_79_ + anInt337 & 0x4)) {
 									i_85_ = anIntArray342[aClass71_320.anInt961 + 1];
+								} else {
+									i_85_ = -11840664;
 								}
-								if (i_85_ == 0) {
+                                if (i_85_ == 0) {
 									i_85_ = -16777216;
 								}
 								graphicstoolkit.aa(i_70_, i_80_, i_72_, i_82_, i_85_, 0);
@@ -374,8 +356,26 @@ class Class20
 							}
 						}
 					}
+				} else {
+					for (int i_74_ = 0; i_74_ < i_68_; i_74_++) {
+						int i_75_ = anInt339 - (i_66_ + i_64_ * (i_74_ + 1) >> 16);
+						int i_76_ = anInt339 - (i_66_ + i_64_ * i_74_ >> 16);
+						int i_77_ = i_76_ - i_75_;
+						int i_78_;
+						if (aCacheNode_Sub11_318.anInt9542 != -1) {
+							i_78_ = ~0xffffff | aCacheNode_Sub11_318.anInt9542;
+						} else if ((i_69_ + anInt349 & 0x4) == (i_74_ + anInt337 & 0x4)) {
+							i_78_ = anIntArray342[aClass71_320.anInt961 + 1];
+						} else {
+							i_78_ = -11840664;
+						}
+                        if (i_78_ == 0) {
+							i_78_ = -16777216;
+						}
+						graphicstoolkit.aa(i_70_, i_75_, i_72_, i_77_, i_78_, 0);
+					}
 				}
-			}
+            }
 		}
 		for (int i_88_ = -16; i_88_ < i_67_ + 16; i_88_++) {
 			int i_89_ = (i_65_ + i * i_88_ >> 16) + anInt344;

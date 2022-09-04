@@ -62,24 +62,24 @@ public class Class185
 			float f_20_ = (float) ((i_8_ & 0xff) - (i & 0xff));
 			float f_21_ = (float) ((i_9_ & 0xff) - (i & 0xff));
 			float f_22_;
-			if (f_1_ != f_0_) {
-				f_22_ = (f_4_ - f_3_) / (f_1_ - f_0_);
-			} else {
+			if (f_1_ == f_0_) {
 				f_22_ = 0.0F;
-			}
-			float f_23_;
-			if (f_0_ != f) {
-				f_23_ = f_10_ / f_11_;
 			} else {
+				f_22_ = (f_4_ - f_3_) / (f_1_ - f_0_);
+			}
+            float f_23_;
+			if (f_0_ == f) {
 				f_23_ = 0.0F;
-			}
-			float f_24_;
-			if (f_1_ != f) {
-				f_24_ = f_12_ / f_13_;
 			} else {
-				f_24_ = 0.0F;
+				f_23_ = f_10_ / f_11_;
 			}
-			float f_25_ = f_10_ * f_13_ - f_12_ * f_11_;
+            float f_24_;
+			if (f_1_ == f) {
+				f_24_ = 0.0F;
+			} else {
+				f_24_ = f_12_ / f_13_;
+			}
+            float f_25_ = f_10_ * f_13_ - f_12_ * f_11_;
 			if (f_25_ != 0.0F) {
 				float f_26_ = (f_14_ * f_13_ - f_15_ * f_11_) / f_25_;
 				float f_27_ = (f_15_ * f_10_ - f_14_ * f_12_) / f_25_;
@@ -541,24 +541,24 @@ public class Class185
 			float f_63_ = (float) ((i_51_ & 0xff) - (i & 0xff));
 			float f_64_ = (float) ((i_52_ & 0xff) - (i & 0xff));
 			float f_65_;
-			if (f_44_ != f_43_) {
-				f_65_ = (f_47_ - f_46_) / (f_44_ - f_43_);
-			} else {
+			if (f_44_ == f_43_) {
 				f_65_ = 0.0F;
-			}
-			float f_66_;
-			if (f_43_ != f) {
-				f_66_ = f_53_ / f_54_;
 			} else {
+				f_65_ = (f_47_ - f_46_) / (f_44_ - f_43_);
+			}
+            float f_66_;
+			if (f_43_ == f) {
 				f_66_ = 0.0F;
-			}
-			float f_67_;
-			if (f_44_ != f) {
-				f_67_ = f_55_ / f_56_;
 			} else {
-				f_67_ = 0.0F;
+				f_66_ = f_53_ / f_54_;
 			}
-			float f_68_ = f_53_ * f_56_ - f_55_ * f_54_;
+            float f_67_;
+			if (f_44_ == f) {
+				f_67_ = 0.0F;
+			} else {
+				f_67_ = f_55_ / f_56_;
+			}
+            float f_68_ = f_53_ * f_56_ - f_55_ * f_54_;
 			if (f_68_ != 0.0F) {
 				float f_69_ = (f_57_ * f_56_ - f_58_ * f_54_) / f_68_;
 				float f_70_ = (f_58_ * f_53_ - f_57_ * f_55_) / f_68_;
@@ -1414,7 +1414,16 @@ public class Class185
 						i_138_ = (int) f_116_;
 					}
 					if (i_138_ != 0) {
-						if (i_138_ != 255) {
+						if (i_138_ == 255) {
+							int i_144_ = ~0xffffff | (int) (f_118_ * (float) (i_137_ >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_120_ * (float) (i_137_ >> 8 & 0xff)) & 0xff00 | (int) (f_122_ * (float) (i_137_ & 0xff)) >> 8;
+							if (f_114_ != 0.0F) {
+								int i_145_ = (int) (255.0F - f_114_);
+								int i_146_ = ((anInt2230 & 0xff00ff) * (int) f_114_ & ~0xff00ff | (anInt2230 & 0xff00) * (int) f_114_ & 0xff0000) >>> 8;
+								i_144_ = (((i_144_ & 0xff00ff) * i_145_ & ~0xff00ff | (i_144_ & 0xff00) * i_145_ & 0xff0000) >>> 8) + i_146_;
+							}
+							is[i] = i_144_;
+							aFloatArray2214[i] = f_134_;
+						} else {
 							int i_139_ = ~0xffffff | (int) (f_118_ * (float) (i_137_ >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_120_ * (float) (i_137_ >> 8 & 0xff)) & 0xff00 | (int) (f_122_ * (float) (i_137_ & 0xff)) >> 8;
 							if (f_114_ != 0.0F) {
 								int i_140_ = (int) (255.0F - f_114_);
@@ -1426,17 +1435,8 @@ public class Class185
 							i_139_ = ((i_142_ & 0xff00ff) * i_143_ + (i_139_ & 0xff00ff) * i_138_ & ~0xff00ff) + ((i_142_ & 0xff00) * i_143_ + (i_139_ & 0xff00) * i_138_ & 0xff0000) >> 8;
 							is[i] = i_139_;
 							aFloatArray2214[i] = f_134_;
-						} else {
-							int i_144_ = ~0xffffff | (int) (f_118_ * (float) (i_137_ >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_120_ * (float) (i_137_ >> 8 & 0xff)) & 0xff00 | (int) (f_122_ * (float) (i_137_ & 0xff)) >> 8;
-							if (f_114_ != 0.0F) {
-								int i_145_ = (int) (255.0F - f_114_);
-								int i_146_ = ((anInt2230 & 0xff00ff) * (int) f_114_ & ~0xff00ff | (anInt2230 & 0xff00) * (int) f_114_ & 0xff0000) >>> 8;
-								i_144_ = (((i_144_ & 0xff00ff) * i_145_ & ~0xff00ff | (i_144_ & 0xff00) * i_145_ & 0xff0000) >>> 8) + i_146_;
-							}
-							is[i] = i_144_;
-							aFloatArray2214[i] = f_134_;
 						}
-					}
+                    }
 				}
 				i++;
 				f += f_126_;
@@ -1491,36 +1491,7 @@ public class Class185
 								is[i++] = i_147_;
 							while (--i_148_ > 0);
 						}
-					} else if (!aBoolean2212) {
-						int i_158_ = anInt2220;
-						int i_159_ = 256 - anInt2220;
-						if (i_148_ > 0) {
-							do {
-								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-								f_152_ += f_153_;
-								f_154_ += f_155_;
-								f_156_ += f_157_;
-								i_147_ = ((i_147_ & 0xff00ff) * i_159_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_159_ >> 8 & 0xff00);
-								int i_160_ = is[i];
-								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
-								i_160_ = is[i];
-								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
-								i_160_ = is[i];
-								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
-								i_160_ = is[i];
-								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
-							} while (--i_148_ > 0);
-						}
-						i_148_ = i_150_ - i_149_ & 0x3;
-						if (i_148_ > 0) {
-							i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-							i_147_ = ((i_147_ & 0xff00ff) * i_159_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_159_ >> 8 & 0xff00);
-							do {
-								int i_161_ = is[i];
-								is[i++] = (i_159_ | i_161_ >> 24) << 24 | i_147_ + ((i_161_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_161_ & 0xff00) * i_158_ >> 8 & 0xff00);
-							} while (--i_148_ > 0);
-						}
-					} else {
+					} else if (aBoolean2212) {
 						if (i_148_ > 0) {
 							do {
 								i_147_ = (int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff;
@@ -1575,8 +1546,37 @@ public class Class185
 								is_186_[i_187_] = ~0xffffff | i_190_ - i_189_ | i_189_ - (i_189_ >>> 8);
 							} while (--i_148_ > 0);
 						}
+					} else {
+						int i_158_ = anInt2220;
+						int i_159_ = 256 - anInt2220;
+						if (i_148_ > 0) {
+							do {
+								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+								f_152_ += f_153_;
+								f_154_ += f_155_;
+								f_156_ += f_157_;
+								i_147_ = ((i_147_ & 0xff00ff) * i_159_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_159_ >> 8 & 0xff00);
+								int i_160_ = is[i];
+								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
+								i_160_ = is[i];
+								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
+								i_160_ = is[i];
+								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
+								i_160_ = is[i];
+								is[i++] = (i_159_ | i_160_ >> 24) << 24 | i_147_ + ((i_160_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_160_ & 0xff00) * i_158_ >> 8 & 0xff00);
+							} while (--i_148_ > 0);
+						}
+						i_148_ = i_150_ - i_149_ & 0x3;
+						if (i_148_ > 0) {
+							i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+							i_147_ = ((i_147_ & 0xff00ff) * i_159_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_159_ >> 8 & 0xff00);
+							do {
+								int i_161_ = is[i];
+								is[i++] = (i_159_ | i_161_ >> 24) << 24 | i_147_ + ((i_161_ & 0xff00ff) * i_158_ >> 8 & 0xff00ff) + ((i_161_ & 0xff00) * i_158_ >> 8 & 0xff00);
+							} while (--i_148_ > 0);
+						}
 					}
-				} else {
+                } else {
 					i_148_ = i_150_ - i_149_;
 					if (anInt2220 == 0) {
 						do {
@@ -1585,19 +1585,7 @@ public class Class185
 							f_154_ += f_155_;
 							f_156_ += f_157_;
 						} while (--i_148_ > 0);
-					} else if (!aBoolean2212) {
-						int i_192_ = anInt2220;
-						int i_193_ = 256 - anInt2220;
-						do {
-							i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-							f_152_ += f_153_;
-							f_154_ += f_155_;
-							f_156_ += f_157_;
-							i_147_ = ((i_147_ & 0xff00ff) * i_193_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_193_ >> 8 & 0xff00);
-							int i_194_ = is[i];
-							is[i++] = (i_193_ | i_194_ >> 24) << 24 | i_147_ + ((i_194_ & 0xff00ff) * i_192_ >> 8 & 0xff00ff) + ((i_194_ & 0xff00) * i_192_ >> 8 & 0xff00);
-						} while (--i_148_ > 0);
-					} else {
+					} else if (aBoolean2212) {
 						do {
 							int[] is_195_ = is;
 							int i_196_ = i++;
@@ -1611,8 +1599,20 @@ public class Class185
 							f_154_ += f_155_;
 							f_156_ += f_157_;
 						} while (--i_148_ > 0);
+					} else {
+						int i_192_ = anInt2220;
+						int i_193_ = 256 - anInt2220;
+						do {
+							i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+							f_152_ += f_153_;
+							f_154_ += f_155_;
+							f_156_ += f_157_;
+							i_147_ = ((i_147_ & 0xff00ff) * i_193_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_193_ >> 8 & 0xff00);
+							int i_194_ = is[i];
+							is[i++] = (i_193_ | i_194_ >> 24) << 24 | i_147_ + ((i_194_ & 0xff00ff) * i_192_ >> 8 & 0xff00ff) + ((i_194_ & 0xff00) * i_192_ >> 8 & 0xff00);
+						} while (--i_148_ > 0);
 					}
-				}
+                }
 			} else {
 				i += i_149_ - 1;
 				f += f_151_ * (float) i_149_;
@@ -1665,56 +1665,7 @@ public class Class185
 									f += f_151_;
 								} while (--i_148_ > 0);
 							}
-						} else if (!aBoolean2212) {
-							int i_201_ = anInt2220;
-							int i_202_ = 256 - anInt2220;
-							if (i_148_ > 0) {
-								do {
-									i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-									f_152_ += f_153_;
-									f_154_ += f_155_;
-									f_156_ += f_157_;
-									i_147_ = ((i_147_ & 0xff00ff) * i_202_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_202_ >> 8 & 0xff00);
-									if (f < fs[++i]) {
-										int i_203_ = is[i];
-										is[i] = (i_202_ | i_203_ >> 24) << 24 | i_147_ + ((i_203_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_203_ & 0xff00) * i_201_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_151_;
-									if (f < fs[++i]) {
-										int i_204_ = is[i];
-										is[i] = (i_202_ | i_204_ >> 24) << 24 | i_147_ + ((i_204_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_204_ & 0xff00) * i_201_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_151_;
-									if (f < fs[++i]) {
-										int i_205_ = is[i];
-										is[i] = (i_202_ | i_205_ >> 24) << 24 | i_147_ + ((i_205_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_205_ & 0xff00) * i_201_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_151_;
-									if (f < fs[++i]) {
-										int i_206_ = is[i];
-										is[i] = (i_202_ | i_206_ >> 24) << 24 | i_147_ + ((i_206_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_206_ & 0xff00) * i_201_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_151_;
-								} while (--i_148_ > 0);
-							}
-							i_148_ = i_150_ - i_149_ & 0x3;
-							if (i_148_ > 0) {
-								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-								i_147_ = ((i_147_ & 0xff00ff) * i_202_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_202_ >> 8 & 0xff00);
-								do {
-									if (f < fs[++i]) {
-										int i_207_ = is[i];
-										is[i] = (i_202_ | i_207_ >> 24) << 24 | i_147_ + ((i_207_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_207_ & 0xff00) * i_201_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_151_;
-								} while (--i_148_ > 0);
-							}
-						} else {
+						} else if (aBoolean2212) {
 							if (i_148_ > 0) {
 								do {
 									i_147_ = (int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff;
@@ -1789,8 +1740,57 @@ public class Class185
 									f += f_151_;
 								} while (--i_148_ > 0);
 							}
+						} else {
+							int i_201_ = anInt2220;
+							int i_202_ = 256 - anInt2220;
+							if (i_148_ > 0) {
+								do {
+									i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+									f_152_ += f_153_;
+									f_154_ += f_155_;
+									f_156_ += f_157_;
+									i_147_ = ((i_147_ & 0xff00ff) * i_202_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_202_ >> 8 & 0xff00);
+									if (f < fs[++i]) {
+										int i_203_ = is[i];
+										is[i] = (i_202_ | i_203_ >> 24) << 24 | i_147_ + ((i_203_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_203_ & 0xff00) * i_201_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_151_;
+									if (f < fs[++i]) {
+										int i_204_ = is[i];
+										is[i] = (i_202_ | i_204_ >> 24) << 24 | i_147_ + ((i_204_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_204_ & 0xff00) * i_201_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_151_;
+									if (f < fs[++i]) {
+										int i_205_ = is[i];
+										is[i] = (i_202_ | i_205_ >> 24) << 24 | i_147_ + ((i_205_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_205_ & 0xff00) * i_201_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_151_;
+									if (f < fs[++i]) {
+										int i_206_ = is[i];
+										is[i] = (i_202_ | i_206_ >> 24) << 24 | i_147_ + ((i_206_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_206_ & 0xff00) * i_201_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_151_;
+								} while (--i_148_ > 0);
+							}
+							i_148_ = i_150_ - i_149_ & 0x3;
+							if (i_148_ > 0) {
+								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+								i_147_ = ((i_147_ & 0xff00ff) * i_202_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_202_ >> 8 & 0xff00);
+								do {
+									if (f < fs[++i]) {
+										int i_207_ = is[i];
+										is[i] = (i_202_ | i_207_ >> 24) << 24 | i_147_ + ((i_207_ & 0xff00ff) * i_201_ >> 8 & 0xff00ff) + ((i_207_ & 0xff00) * i_201_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_151_;
+								} while (--i_148_ > 0);
+							}
 						}
-					} else {
+                    } else {
 						i_148_ = i_150_ - i_149_;
 						if (anInt2220 == 0) {
 							do {
@@ -1803,23 +1803,7 @@ public class Class185
 								f_154_ += f_155_;
 								f_156_ += f_157_;
 							} while (--i_148_ > 0);
-						} else if (!aBoolean2212) {
-							int i_238_ = anInt2220;
-							int i_239_ = 256 - anInt2220;
-							do {
-								if (f < fs[++i]) {
-									i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-									i_147_ = ((i_147_ & 0xff00ff) * i_239_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_239_ >> 8 & 0xff00);
-									int i_240_ = is[i];
-									is[i] = (i_239_ | i_240_ >> 24) << 24 | i_147_ + ((i_240_ & 0xff00ff) * i_238_ >> 8 & 0xff00ff) + ((i_240_ & 0xff00) * i_238_ >> 8 & 0xff00);
-									fs[i] = f;
-								}
-								f += f_151_;
-								f_152_ += f_153_;
-								f_154_ += f_155_;
-								f_156_ += f_157_;
-							} while (--i_148_ > 0);
-						} else {
+						} else if (aBoolean2212) {
 							do {
 								if (f < fs[++i]) {
 									int[] is_241_ = is;
@@ -1837,8 +1821,24 @@ public class Class185
 								f_154_ += f_155_;
 								f_156_ += f_157_;
 							} while (--i_148_ > 0);
+						} else {
+							int i_238_ = anInt2220;
+							int i_239_ = 256 - anInt2220;
+							do {
+								if (f < fs[++i]) {
+									i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+									i_147_ = ((i_147_ & 0xff00ff) * i_239_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_239_ >> 8 & 0xff00);
+									int i_240_ = is[i];
+									is[i] = (i_239_ | i_240_ >> 24) << 24 | i_147_ + ((i_240_ & 0xff00ff) * i_238_ >> 8 & 0xff00ff) + ((i_240_ & 0xff00) * i_238_ >> 8 & 0xff00);
+									fs[i] = f;
+								}
+								f += f_151_;
+								f_152_ += f_153_;
+								f_154_ += f_155_;
+								f_156_ += f_157_;
+							} while (--i_148_ > 0);
 						}
-					}
+                    }
 				} else if (aBoolean2226) {
 					i_148_ = i_150_ - i_149_ >> 2;
 					f_153_ *= 4.0F;
@@ -1879,51 +1879,7 @@ public class Class185
 								f += f_151_;
 							} while (--i_148_ > 0);
 						}
-					} else if (!aBoolean2212) {
-						int i_247_ = anInt2220;
-						int i_248_ = 256 - anInt2220;
-						if (i_148_ > 0) {
-							do {
-								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-								f_152_ += f_153_;
-								f_154_ += f_155_;
-								f_156_ += f_157_;
-								i_147_ = ((i_147_ & 0xff00ff) * i_248_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_248_ >> 8 & 0xff00);
-								if (f < fs[++i]) {
-									int i_249_ = is[i];
-									is[i] = (i_248_ | i_249_ >> 24) << 24 | i_147_ + ((i_249_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_249_ & 0xff00) * i_247_ >> 8 & 0xff00);
-								}
-								f += f_151_;
-								if (f < fs[++i]) {
-									int i_250_ = is[i];
-									is[i] = (i_248_ | i_250_ >> 24) << 24 | i_147_ + ((i_250_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_250_ & 0xff00) * i_247_ >> 8 & 0xff00);
-								}
-								f += f_151_;
-								if (f < fs[++i]) {
-									int i_251_ = is[i];
-									is[i] = (i_248_ | i_251_ >> 24) << 24 | i_147_ + ((i_251_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_251_ & 0xff00) * i_247_ >> 8 & 0xff00);
-								}
-								f += f_151_;
-								if (f < fs[++i]) {
-									int i_252_ = is[i];
-									is[i] = (i_248_ | i_252_ >> 24) << 24 | i_147_ + ((i_252_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_252_ & 0xff00) * i_247_ >> 8 & 0xff00);
-								}
-								f += f_151_;
-							} while (--i_148_ > 0);
-						}
-						i_148_ = i_150_ - i_149_ & 0x3;
-						if (i_148_ > 0) {
-							i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-							i_147_ = ((i_147_ & 0xff00ff) * i_248_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_248_ >> 8 & 0xff00);
-							do {
-								if (f < fs[++i]) {
-									int i_253_ = is[i];
-									is[i] = (i_248_ | i_253_ >> 24) << 24 | i_147_ + ((i_253_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_253_ & 0xff00) * i_247_ >> 8 & 0xff00);
-								}
-								f += f_151_;
-							} while (--i_148_ > 0);
-						}
-					} else {
+					} else if (aBoolean2212) {
 						if (i_148_ > 0) {
 							do {
 								i_147_ = (int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff;
@@ -1993,8 +1949,52 @@ public class Class185
 								f += f_151_;
 							} while (--i_148_ > 0);
 						}
+					} else {
+						int i_247_ = anInt2220;
+						int i_248_ = 256 - anInt2220;
+						if (i_148_ > 0) {
+							do {
+								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+								f_152_ += f_153_;
+								f_154_ += f_155_;
+								f_156_ += f_157_;
+								i_147_ = ((i_147_ & 0xff00ff) * i_248_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_248_ >> 8 & 0xff00);
+								if (f < fs[++i]) {
+									int i_249_ = is[i];
+									is[i] = (i_248_ | i_249_ >> 24) << 24 | i_147_ + ((i_249_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_249_ & 0xff00) * i_247_ >> 8 & 0xff00);
+								}
+								f += f_151_;
+								if (f < fs[++i]) {
+									int i_250_ = is[i];
+									is[i] = (i_248_ | i_250_ >> 24) << 24 | i_147_ + ((i_250_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_250_ & 0xff00) * i_247_ >> 8 & 0xff00);
+								}
+								f += f_151_;
+								if (f < fs[++i]) {
+									int i_251_ = is[i];
+									is[i] = (i_248_ | i_251_ >> 24) << 24 | i_147_ + ((i_251_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_251_ & 0xff00) * i_247_ >> 8 & 0xff00);
+								}
+								f += f_151_;
+								if (f < fs[++i]) {
+									int i_252_ = is[i];
+									is[i] = (i_248_ | i_252_ >> 24) << 24 | i_147_ + ((i_252_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_252_ & 0xff00) * i_247_ >> 8 & 0xff00);
+								}
+								f += f_151_;
+							} while (--i_148_ > 0);
+						}
+						i_148_ = i_150_ - i_149_ & 0x3;
+						if (i_148_ > 0) {
+							i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+							i_147_ = ((i_147_ & 0xff00ff) * i_248_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_248_ >> 8 & 0xff00);
+							do {
+								if (f < fs[++i]) {
+									int i_253_ = is[i];
+									is[i] = (i_248_ | i_253_ >> 24) << 24 | i_147_ + ((i_253_ & 0xff00ff) * i_247_ >> 8 & 0xff00ff) + ((i_253_ & 0xff00) * i_247_ >> 8 & 0xff00);
+								}
+								f += f_151_;
+							} while (--i_148_ > 0);
+						}
 					}
-				} else {
+                } else {
 					i_148_ = i_150_ - i_149_;
 					if (anInt2220 == 0) {
 						do {
@@ -2006,22 +2006,7 @@ public class Class185
 							f_154_ += f_155_;
 							f_156_ += f_157_;
 						} while (--i_148_ > 0);
-					} else if (!aBoolean2212) {
-						int i_284_ = anInt2220;
-						int i_285_ = 256 - anInt2220;
-						do {
-							if (f < fs[++i]) {
-								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
-								i_147_ = ((i_147_ & 0xff00ff) * i_285_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_285_ >> 8 & 0xff00);
-								int i_286_ = is[i];
-								is[i] = (i_285_ | i_286_ >> 24) << 24 | i_147_ + ((i_286_ & 0xff00ff) * i_284_ >> 8 & 0xff00ff) + ((i_286_ & 0xff00) * i_284_ >> 8 & 0xff00);
-							}
-							f += f_151_;
-							f_152_ += f_153_;
-							f_154_ += f_155_;
-							f_156_ += f_157_;
-						} while (--i_148_ > 0);
-					} else {
+					} else if (aBoolean2212) {
 						do {
 							if (f < fs[++i]) {
 								int[] is_287_ = is;
@@ -2038,8 +2023,23 @@ public class Class185
 							f_154_ += f_155_;
 							f_156_ += f_157_;
 						} while (--i_148_ > 0);
+					} else {
+						int i_284_ = anInt2220;
+						int i_285_ = 256 - anInt2220;
+						do {
+							if (f < fs[++i]) {
+								i_147_ = ~0xffffff | ((int) f_152_ & 0xff0000 | (int) f_154_ & 0xff00 | (int) f_156_ & 0xff);
+								i_147_ = ((i_147_ & 0xff00ff) * i_285_ >> 8 & 0xff00ff) + ((i_147_ & 0xff00) * i_285_ >> 8 & 0xff00);
+								int i_286_ = is[i];
+								is[i] = (i_285_ | i_286_ >> 24) << 24 | i_147_ + ((i_286_ & 0xff00ff) * i_284_ >> 8 & 0xff00ff) + ((i_286_ & 0xff00) * i_284_ >> 8 & 0xff00);
+							}
+							f += f_151_;
+							f_152_ += f_153_;
+							f_154_ += f_155_;
+							f_156_ += f_157_;
+						} while (--i_148_ > 0);
 					}
-				}
+                }
 			}
 		}
 	}
@@ -2103,7 +2103,16 @@ public class Class185
 						i_325_ = (int) f_303_;
 					}
 					if (i_325_ != 0) {
-						if (i_325_ != 255) {
+						if (i_325_ == 255) {
+							int i_331_ = ~0xffffff | (int) (f_305_ * (float) (i_324_ >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_307_ * (float) (i_324_ >> 8 & 0xff)) & 0xff00 | (int) (f_309_ * (float) (i_324_ & 0xff)) >> 8;
+							if (f_301_ != 0.0F) {
+								int i_332_ = (int) (255.0F - f_301_);
+								int i_333_ = ((anInt2230 & 0xff00ff) * (int) f_301_ & ~0xff00ff | (anInt2230 & 0xff00) * (int) f_301_ & 0xff0000) >>> 8;
+								i_331_ = (((i_331_ & 0xff00ff) * i_332_ & ~0xff00ff | (i_331_ & 0xff00) * i_332_ & 0xff0000) >>> 8) + i_333_;
+							}
+							is[i] = i_325_ << 24 | i_331_;
+							aFloatArray2214[i] = f_321_;
+						} else {
 							int i_326_ = ~0xffffff | (int) (f_305_ * (float) (i_324_ >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_307_ * (float) (i_324_ >> 8 & 0xff)) & 0xff00 | (int) (f_309_ * (float) (i_324_ & 0xff)) >> 8;
 							if (f_301_ != 0.0F) {
 								int i_327_ = (int) (255.0F - f_301_);
@@ -2115,17 +2124,8 @@ public class Class185
 							i_326_ = ((i_329_ & 0xff00ff) * i_330_ + (i_326_ & 0xff00ff) * i_325_ & ~0xff00ff) + ((i_329_ & 0xff00) * i_330_ + (i_326_ & 0xff00) * i_325_ & 0xff0000) >> 8;
 							is[i] = (i_325_ | is[i] >> 24) << 24 | i_326_;
 							aFloatArray2214[i] = f_321_;
-						} else {
-							int i_331_ = ~0xffffff | (int) (f_305_ * (float) (i_324_ >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_307_ * (float) (i_324_ >> 8 & 0xff)) & 0xff00 | (int) (f_309_ * (float) (i_324_ & 0xff)) >> 8;
-							if (f_301_ != 0.0F) {
-								int i_332_ = (int) (255.0F - f_301_);
-								int i_333_ = ((anInt2230 & 0xff00ff) * (int) f_301_ & ~0xff00ff | (anInt2230 & 0xff00) * (int) f_301_ & 0xff0000) >>> 8;
-								i_331_ = (((i_331_ & 0xff00ff) * i_332_ & ~0xff00ff | (i_331_ & 0xff00) * i_332_ & 0xff0000) >>> 8) + i_333_;
-							}
-							is[i] = i_325_ << 24 | i_331_;
-							aFloatArray2214[i] = f_321_;
 						}
-					}
+                    }
 				}
 				i++;
 				f += f_313_;
@@ -2180,36 +2180,7 @@ public class Class185
 								is[i++] = i_334_;
 							while (--i_335_ > 0);
 						}
-					} else if (!aBoolean2212) {
-						int i_345_ = anInt2220;
-						int i_346_ = 256 - anInt2220;
-						if (i_335_ > 0) {
-							do {
-								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-								f_339_ += f_340_;
-								f_341_ += f_342_;
-								f_343_ += f_344_;
-								i_334_ = ((i_334_ & 0xff00ff) * i_346_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_346_ >> 8 & 0xff00);
-								int i_347_ = is[i];
-								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
-								i_347_ = is[i];
-								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
-								i_347_ = is[i];
-								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
-								i_347_ = is[i];
-								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
-							} while (--i_335_ > 0);
-						}
-						i_335_ = i_337_ - i_336_ & 0x3;
-						if (i_335_ > 0) {
-							i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-							i_334_ = ((i_334_ & 0xff00ff) * i_346_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_346_ >> 8 & 0xff00);
-							do {
-								int i_348_ = is[i];
-								is[i++] = i_334_ + ((i_348_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_348_ & 0xff00) * i_345_ >> 8 & 0xff00);
-							} while (--i_335_ > 0);
-						}
-					} else {
+					} else if (aBoolean2212) {
 						if (i_335_ > 0) {
 							do {
 								i_334_ = (int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff;
@@ -2264,8 +2235,37 @@ public class Class185
 								is_373_[i_374_] = ~0xffffff | i_377_ - i_376_ | i_376_ - (i_376_ >>> 8);
 							} while (--i_335_ > 0);
 						}
+					} else {
+						int i_345_ = anInt2220;
+						int i_346_ = 256 - anInt2220;
+						if (i_335_ > 0) {
+							do {
+								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+								f_339_ += f_340_;
+								f_341_ += f_342_;
+								f_343_ += f_344_;
+								i_334_ = ((i_334_ & 0xff00ff) * i_346_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_346_ >> 8 & 0xff00);
+								int i_347_ = is[i];
+								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
+								i_347_ = is[i];
+								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
+								i_347_ = is[i];
+								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
+								i_347_ = is[i];
+								is[i++] = i_334_ + ((i_347_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_347_ & 0xff00) * i_345_ >> 8 & 0xff00);
+							} while (--i_335_ > 0);
+						}
+						i_335_ = i_337_ - i_336_ & 0x3;
+						if (i_335_ > 0) {
+							i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+							i_334_ = ((i_334_ & 0xff00ff) * i_346_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_346_ >> 8 & 0xff00);
+							do {
+								int i_348_ = is[i];
+								is[i++] = i_334_ + ((i_348_ & 0xff00ff) * i_345_ >> 8 & 0xff00ff) + ((i_348_ & 0xff00) * i_345_ >> 8 & 0xff00);
+							} while (--i_335_ > 0);
+						}
 					}
-				} else {
+                } else {
 					i_335_ = i_337_ - i_336_;
 					if (anInt2220 == 0) {
 						do {
@@ -2274,19 +2274,7 @@ public class Class185
 							f_341_ += f_342_;
 							f_343_ += f_344_;
 						} while (--i_335_ > 0);
-					} else if (!aBoolean2212) {
-						int i_379_ = anInt2220;
-						int i_380_ = 256 - anInt2220;
-						do {
-							i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-							f_339_ += f_340_;
-							f_341_ += f_342_;
-							f_343_ += f_344_;
-							i_334_ = ((i_334_ & 0xff00ff) * i_380_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_380_ >> 8 & 0xff00);
-							int i_381_ = is[i];
-							is[i++] = i_334_ + ((i_381_ & 0xff00ff) * i_379_ >> 8 & 0xff00ff) + ((i_381_ & 0xff00) * i_379_ >> 8 & 0xff00);
-						} while (--i_335_ > 0);
-					} else {
+					} else if (aBoolean2212) {
 						do {
 							int[] is_382_ = is;
 							int i_383_ = i++;
@@ -2300,8 +2288,20 @@ public class Class185
 							f_341_ += f_342_;
 							f_343_ += f_344_;
 						} while (--i_335_ > 0);
+					} else {
+						int i_379_ = anInt2220;
+						int i_380_ = 256 - anInt2220;
+						do {
+							i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+							f_339_ += f_340_;
+							f_341_ += f_342_;
+							f_343_ += f_344_;
+							i_334_ = ((i_334_ & 0xff00ff) * i_380_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_380_ >> 8 & 0xff00);
+							int i_381_ = is[i];
+							is[i++] = i_334_ + ((i_381_ & 0xff00ff) * i_379_ >> 8 & 0xff00ff) + ((i_381_ & 0xff00) * i_379_ >> 8 & 0xff00);
+						} while (--i_335_ > 0);
 					}
-				}
+                }
 			} else {
 				i += i_336_ - 1;
 				f += f_338_ * (float) i_336_;
@@ -2354,56 +2354,7 @@ public class Class185
 									f += f_338_;
 								} while (--i_335_ > 0);
 							}
-						} else if (!aBoolean2212) {
-							int i_388_ = anInt2220;
-							int i_389_ = 256 - anInt2220;
-							if (i_335_ > 0) {
-								do {
-									i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-									f_339_ += f_340_;
-									f_341_ += f_342_;
-									f_343_ += f_344_;
-									i_334_ = ((i_334_ & 0xff00ff) * i_389_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_389_ >> 8 & 0xff00);
-									if (f < fs[++i]) {
-										int i_390_ = is[i];
-										is[i] = i_334_ + ((i_390_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_390_ & 0xff00) * i_388_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_338_;
-									if (f < fs[++i]) {
-										int i_391_ = is[i];
-										is[i] = i_334_ + ((i_391_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_391_ & 0xff00) * i_388_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_338_;
-									if (f < fs[++i]) {
-										int i_392_ = is[i];
-										is[i] = i_334_ + ((i_392_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_392_ & 0xff00) * i_388_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_338_;
-									if (f < fs[++i]) {
-										int i_393_ = is[i];
-										is[i] = i_334_ + ((i_393_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_393_ & 0xff00) * i_388_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_338_;
-								} while (--i_335_ > 0);
-							}
-							i_335_ = i_337_ - i_336_ & 0x3;
-							if (i_335_ > 0) {
-								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-								i_334_ = ((i_334_ & 0xff00ff) * i_389_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_389_ >> 8 & 0xff00);
-								do {
-									if (f < fs[++i]) {
-										int i_394_ = is[i];
-										is[i] = i_334_ + ((i_394_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_394_ & 0xff00) * i_388_ >> 8 & 0xff00);
-										fs[i] = f;
-									}
-									f += f_338_;
-								} while (--i_335_ > 0);
-							}
-						} else {
+						} else if (aBoolean2212) {
 							if (i_335_ > 0) {
 								do {
 									i_334_ = (int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff;
@@ -2478,8 +2429,57 @@ public class Class185
 									f += f_338_;
 								} while (--i_335_ > 0);
 							}
+						} else {
+							int i_388_ = anInt2220;
+							int i_389_ = 256 - anInt2220;
+							if (i_335_ > 0) {
+								do {
+									i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+									f_339_ += f_340_;
+									f_341_ += f_342_;
+									f_343_ += f_344_;
+									i_334_ = ((i_334_ & 0xff00ff) * i_389_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_389_ >> 8 & 0xff00);
+									if (f < fs[++i]) {
+										int i_390_ = is[i];
+										is[i] = i_334_ + ((i_390_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_390_ & 0xff00) * i_388_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_338_;
+									if (f < fs[++i]) {
+										int i_391_ = is[i];
+										is[i] = i_334_ + ((i_391_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_391_ & 0xff00) * i_388_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_338_;
+									if (f < fs[++i]) {
+										int i_392_ = is[i];
+										is[i] = i_334_ + ((i_392_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_392_ & 0xff00) * i_388_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_338_;
+									if (f < fs[++i]) {
+										int i_393_ = is[i];
+										is[i] = i_334_ + ((i_393_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_393_ & 0xff00) * i_388_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_338_;
+								} while (--i_335_ > 0);
+							}
+							i_335_ = i_337_ - i_336_ & 0x3;
+							if (i_335_ > 0) {
+								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+								i_334_ = ((i_334_ & 0xff00ff) * i_389_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_389_ >> 8 & 0xff00);
+								do {
+									if (f < fs[++i]) {
+										int i_394_ = is[i];
+										is[i] = i_334_ + ((i_394_ & 0xff00ff) * i_388_ >> 8 & 0xff00ff) + ((i_394_ & 0xff00) * i_388_ >> 8 & 0xff00);
+										fs[i] = f;
+									}
+									f += f_338_;
+								} while (--i_335_ > 0);
+							}
 						}
-					} else {
+                    } else {
 						i_335_ = i_337_ - i_336_;
 						if (anInt2220 == 0) {
 							do {
@@ -2492,23 +2492,7 @@ public class Class185
 								f_341_ += f_342_;
 								f_343_ += f_344_;
 							} while (--i_335_ > 0);
-						} else if (!aBoolean2212) {
-							int i_425_ = anInt2220;
-							int i_426_ = 256 - anInt2220;
-							do {
-								if (f < fs[++i]) {
-									i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-									i_334_ = ((i_334_ & 0xff00ff) * i_426_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_426_ >> 8 & 0xff00);
-									int i_427_ = is[i];
-									is[i] = i_334_ + ((i_427_ & 0xff00ff) * i_425_ >> 8 & 0xff00ff) + ((i_427_ & 0xff00) * i_425_ >> 8 & 0xff00);
-									fs[i] = f;
-								}
-								f += f_338_;
-								f_339_ += f_340_;
-								f_341_ += f_342_;
-								f_343_ += f_344_;
-							} while (--i_335_ > 0);
-						} else {
+						} else if (aBoolean2212) {
 							do {
 								if (f < fs[++i]) {
 									int[] is_428_ = is;
@@ -2526,8 +2510,24 @@ public class Class185
 								f_341_ += f_342_;
 								f_343_ += f_344_;
 							} while (--i_335_ > 0);
+						} else {
+							int i_425_ = anInt2220;
+							int i_426_ = 256 - anInt2220;
+							do {
+								if (f < fs[++i]) {
+									i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+									i_334_ = ((i_334_ & 0xff00ff) * i_426_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_426_ >> 8 & 0xff00);
+									int i_427_ = is[i];
+									is[i] = i_334_ + ((i_427_ & 0xff00ff) * i_425_ >> 8 & 0xff00ff) + ((i_427_ & 0xff00) * i_425_ >> 8 & 0xff00);
+									fs[i] = f;
+								}
+								f += f_338_;
+								f_339_ += f_340_;
+								f_341_ += f_342_;
+								f_343_ += f_344_;
+							} while (--i_335_ > 0);
 						}
-					}
+                    }
 				} else if (aBoolean2226) {
 					i_335_ = i_337_ - i_336_ >> 2;
 					f_340_ *= 4.0F;
@@ -2568,51 +2568,7 @@ public class Class185
 								f += f_338_;
 							} while (--i_335_ > 0);
 						}
-					} else if (!aBoolean2212) {
-						int i_434_ = anInt2220;
-						int i_435_ = 256 - anInt2220;
-						if (i_335_ > 0) {
-							do {
-								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-								f_339_ += f_340_;
-								f_341_ += f_342_;
-								f_343_ += f_344_;
-								i_334_ = ((i_334_ & 0xff00ff) * i_435_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_435_ >> 8 & 0xff00);
-								if (f < fs[++i]) {
-									int i_436_ = is[i];
-									is[i] = i_334_ + ((i_436_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_436_ & 0xff00) * i_434_ >> 8 & 0xff00);
-								}
-								f += f_338_;
-								if (f < fs[++i]) {
-									int i_437_ = is[i];
-									is[i] = i_334_ + ((i_437_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_437_ & 0xff00) * i_434_ >> 8 & 0xff00);
-								}
-								f += f_338_;
-								if (f < fs[++i]) {
-									int i_438_ = is[i];
-									is[i] = i_334_ + ((i_438_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_438_ & 0xff00) * i_434_ >> 8 & 0xff00);
-								}
-								f += f_338_;
-								if (f < fs[++i]) {
-									int i_439_ = is[i];
-									is[i] = i_334_ + ((i_439_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_439_ & 0xff00) * i_434_ >> 8 & 0xff00);
-								}
-								f += f_338_;
-							} while (--i_335_ > 0);
-						}
-						i_335_ = i_337_ - i_336_ & 0x3;
-						if (i_335_ > 0) {
-							i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-							i_334_ = ((i_334_ & 0xff00ff) * i_435_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_435_ >> 8 & 0xff00);
-							do {
-								if (f < fs[++i]) {
-									int i_440_ = is[i];
-									is[i] = i_334_ + ((i_440_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_440_ & 0xff00) * i_434_ >> 8 & 0xff00);
-								}
-								f += f_338_;
-							} while (--i_335_ > 0);
-						}
-					} else {
+					} else if (aBoolean2212) {
 						if (i_335_ > 0) {
 							do {
 								i_334_ = (int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff;
@@ -2682,8 +2638,52 @@ public class Class185
 								f += f_338_;
 							} while (--i_335_ > 0);
 						}
+					} else {
+						int i_434_ = anInt2220;
+						int i_435_ = 256 - anInt2220;
+						if (i_335_ > 0) {
+							do {
+								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+								f_339_ += f_340_;
+								f_341_ += f_342_;
+								f_343_ += f_344_;
+								i_334_ = ((i_334_ & 0xff00ff) * i_435_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_435_ >> 8 & 0xff00);
+								if (f < fs[++i]) {
+									int i_436_ = is[i];
+									is[i] = i_334_ + ((i_436_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_436_ & 0xff00) * i_434_ >> 8 & 0xff00);
+								}
+								f += f_338_;
+								if (f < fs[++i]) {
+									int i_437_ = is[i];
+									is[i] = i_334_ + ((i_437_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_437_ & 0xff00) * i_434_ >> 8 & 0xff00);
+								}
+								f += f_338_;
+								if (f < fs[++i]) {
+									int i_438_ = is[i];
+									is[i] = i_334_ + ((i_438_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_438_ & 0xff00) * i_434_ >> 8 & 0xff00);
+								}
+								f += f_338_;
+								if (f < fs[++i]) {
+									int i_439_ = is[i];
+									is[i] = i_334_ + ((i_439_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_439_ & 0xff00) * i_434_ >> 8 & 0xff00);
+								}
+								f += f_338_;
+							} while (--i_335_ > 0);
+						}
+						i_335_ = i_337_ - i_336_ & 0x3;
+						if (i_335_ > 0) {
+							i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+							i_334_ = ((i_334_ & 0xff00ff) * i_435_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_435_ >> 8 & 0xff00);
+							do {
+								if (f < fs[++i]) {
+									int i_440_ = is[i];
+									is[i] = i_334_ + ((i_440_ & 0xff00ff) * i_434_ >> 8 & 0xff00ff) + ((i_440_ & 0xff00) * i_434_ >> 8 & 0xff00);
+								}
+								f += f_338_;
+							} while (--i_335_ > 0);
+						}
 					}
-				} else {
+                } else {
 					i_335_ = i_337_ - i_336_;
 					if (anInt2220 == 0) {
 						do {
@@ -2695,22 +2695,7 @@ public class Class185
 							f_341_ += f_342_;
 							f_343_ += f_344_;
 						} while (--i_335_ > 0);
-					} else if (!aBoolean2212) {
-						int i_471_ = anInt2220;
-						int i_472_ = 256 - anInt2220;
-						do {
-							if (f < fs[++i]) {
-								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
-								i_334_ = ((i_334_ & 0xff00ff) * i_472_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_472_ >> 8 & 0xff00);
-								int i_473_ = is[i];
-								is[i] = i_334_ + ((i_473_ & 0xff00ff) * i_471_ >> 8 & 0xff00ff) + ((i_473_ & 0xff00) * i_471_ >> 8 & 0xff00);
-							}
-							f += f_338_;
-							f_339_ += f_340_;
-							f_341_ += f_342_;
-							f_343_ += f_344_;
-						} while (--i_335_ > 0);
-					} else {
+					} else if (aBoolean2212) {
 						do {
 							if (f < fs[++i]) {
 								int[] is_474_ = is;
@@ -2727,8 +2712,23 @@ public class Class185
 							f_341_ += f_342_;
 							f_343_ += f_344_;
 						} while (--i_335_ > 0);
+					} else {
+						int i_471_ = anInt2220;
+						int i_472_ = 256 - anInt2220;
+						do {
+							if (f < fs[++i]) {
+								i_334_ = ~0xffffff | ((int) f_339_ & 0xff0000 | (int) f_341_ & 0xff00 | (int) f_343_ & 0xff);
+								i_334_ = ((i_334_ & 0xff00ff) * i_472_ >> 8 & 0xff00ff) + ((i_334_ & 0xff00) * i_472_ >> 8 & 0xff00);
+								int i_473_ = is[i];
+								is[i] = i_334_ + ((i_473_ & 0xff00ff) * i_471_ >> 8 & 0xff00ff) + ((i_473_ & 0xff00) * i_471_ >> 8 & 0xff00);
+							}
+							f += f_338_;
+							f_339_ += f_340_;
+							f_341_ += f_342_;
+							f_343_ += f_344_;
+						} while (--i_335_ > 0);
 					}
-				}
+                }
 			}
 		}
 	}
@@ -4237,24 +4237,24 @@ public class Class185
 			float f_652_ = f_641_ - f_640_;
 			float f_653_ = f_642_ - f_640_;
 			float f_654_;
-			if (f_636_ != f_635_) {
-				f_654_ = (f_639_ - f_638_) / (f_636_ - f_635_);
-			} else {
+			if (f_636_ == f_635_) {
 				f_654_ = 0.0F;
-			}
-			float f_655_;
-			if (f_635_ != f) {
-				f_655_ = f_646_ / f_647_;
 			} else {
+				f_654_ = (f_639_ - f_638_) / (f_636_ - f_635_);
+			}
+            float f_655_;
+			if (f_635_ == f) {
 				f_655_ = 0.0F;
-			}
-			float f_656_;
-			if (f_636_ != f) {
-				f_656_ = f_648_ / f_649_;
 			} else {
-				f_656_ = 0.0F;
+				f_655_ = f_646_ / f_647_;
 			}
-			float f_657_ = f_646_ * f_649_ - f_648_ * f_647_;
+            float f_656_;
+			if (f_636_ == f) {
+				f_656_ = 0.0F;
+			} else {
+				f_656_ = f_648_ / f_649_;
+			}
+            float f_657_ = f_646_ * f_649_ - f_648_ * f_647_;
 			if (f_657_ != 0.0F) {
 				float f_658_ = (f_650_ * f_649_ - f_651_ * f_647_) / f_657_;
 				float f_659_ = (f_651_ * f_646_ - f_650_ * f_648_) / f_657_;
@@ -6750,24 +6750,24 @@ public class Class185
 			float f_822_ = f_811_ - f_810_;
 			float f_823_ = f_812_ - f_810_;
 			float f_824_;
-			if (f_806_ != f_805_) {
-				f_824_ = (f_809_ - f_808_) / (f_806_ - f_805_);
-			} else {
+			if (f_806_ == f_805_) {
 				f_824_ = 0.0F;
-			}
-			float f_825_;
-			if (f_805_ != f) {
-				f_825_ = f_816_ / f_817_;
 			} else {
+				f_824_ = (f_809_ - f_808_) / (f_806_ - f_805_);
+			}
+            float f_825_;
+			if (f_805_ == f) {
 				f_825_ = 0.0F;
-			}
-			float f_826_;
-			if (f_806_ != f) {
-				f_826_ = f_818_ / f_819_;
 			} else {
-				f_826_ = 0.0F;
+				f_825_ = f_816_ / f_817_;
 			}
-			float f_827_ = f_816_ * f_819_ - f_818_ * f_817_;
+            float f_826_;
+			if (f_806_ == f) {
+				f_826_ = 0.0F;
+			} else {
+				f_826_ = f_818_ / f_819_;
+			}
+            float f_827_ = f_816_ * f_819_ - f_818_ * f_817_;
 			if (f_827_ != 0.0F) {
 				float f_828_ = (f_820_ * f_819_ - f_821_ * f_817_) / f_827_;
 				float f_829_ = (f_821_ * f_816_ - f_820_ * f_818_) / f_827_;

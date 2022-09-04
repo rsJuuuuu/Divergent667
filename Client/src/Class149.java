@@ -54,9 +54,9 @@ public class Class149 implements Interface5
 		if (i_4_ <= 60) {
 			method15(38, (byte) -82);
 		}
-		if ((anIntArray5032[i] ^ 0xffffffff) > (i_6_ ^ 0xffffffff)) {
+		if (i_6_ > anIntArray5032[i]) {
 			int i_7_ = i_5_ - anIntArray5025[i] & 0xffff;
-			while ((i_7_ ^ 0xffffffff) < -1) {
+			while (i_7_ > 0) {
 				i_7_ -= 256;
 				method16(i, anIntArray5029);
 			}
@@ -78,7 +78,7 @@ public class Class149 implements Interface5
 				method17(-83, false);
 			}
 			aDirectSound5030.setCooperativeLevel(component, 2);
-			for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > -3; i_8_++)
+			for (int i_8_ = 0; i_8_ < 2; i_8_++)
 				aDSBufferDescArray5024[i_8_].flags = 16384;
 			aWaveFormatEx5023.avgBytesPerSec = i * anInt5027;
 			aWaveFormatEx5023.formatTag = 1;
@@ -105,11 +105,11 @@ public class Class149 implements Interface5
 	}
 	
 	public final void method13(int i, int i_9_, int i_10_) throws Exception {
-		if ((anInt5022 ^ 0xffffffff) == -1 || aDirectSoundBufferArray5033[i_9_] != null) {
+		if (anInt5022 == 0 || aDirectSoundBufferArray5033[i_9_] != null) {
 			throw new IllegalStateException();
 		}
 		int i_11_ = anInt5027 * 65536;
-		if (aByteArrayArray5034[i_9_] == null || (aByteArrayArray5034[i_9_].length ^ 0xffffffff) != (i_11_ ^ 0xffffffff)) {
+		if (aByteArrayArray5034[i_9_] == null || i_11_ != aByteArrayArray5034[i_9_].length) {
 			aByteArrayArray5034[i_9_] = new byte[i_11_];
 			aDSBufferDescArray5024[i_9_].bufferBytes = i_11_;
 		}
@@ -143,7 +143,7 @@ public class Class149 implements Interface5
 		aByteArrayArray5034 = new byte[2][];
 		aDirectSound5030 = new DirectSound();
 		aWaveFormatEx5023 = new WaveFormatEx();
-		for (int i = 0; (i ^ 0xffffffff) > -3; i++)
+		for (int i = 0; i < 2; i++)
 			aDSBufferDescArray5024[i] = new DSBufferDesc();
 		for (int i = 0; i < 2; i++)
 			aDSCursorsArray5031[i] = new DSCursors();

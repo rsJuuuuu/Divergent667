@@ -25,7 +25,7 @@ public class Node_Sub15_Sub3 extends Node_Sub15
 		if (bool != true) {
 			anInt9787 = -100;
 		}
-		for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > (i_1_ ^ 0xffffffff); i_2_++) {
+		for (int i_2_ = 0; i_1_ > i_2_; i_2_++) {
 			if (string.charAt(i_2_) == c) {
 				i++;
 			}

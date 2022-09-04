@@ -24,7 +24,7 @@ public class Class102
 		}
 		Class369.method4086(i_2_, i_1_, i_3_, Class169_Sub4.anIntArrayArray8826[i_0_++], 0);
 		Class369.method4086(i_2_, i_1_, i_3_, Class169_Sub4.anIntArrayArray8826[i--], 0);
-		for (int i_4_ = i_0_; (i ^ 0xffffffff) <= (i_4_ ^ 0xffffffff); i_4_++) {
+		for (int i_4_ = i_0_; i_4_ <= i; i_4_++) {
 			int[] is = Class169_Sub4.anIntArrayArray8826[i_4_];
 			is[i_3_] = is[i_2_] = i_1_;
 		}

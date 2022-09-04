@@ -43,7 +43,10 @@ public class Class31
 			int i_12_ = i_6_ - i_10_;
 			int i_13_ = i_10_;
 			int i_14_ = (i_12_ < i_13_ ? i_12_ : i_13_) << 1;
-			if (i_11_ != 0) {
+			if (i_11_ == 0) {
+				aBooleanArray499[i_7_] = false;
+				anIntArray504[i_7_] = i_10_;
+			} else {
 				aBooleanArray499[i_8_] = aBooleanArray499[i_9_] = true;
 				aBooleanArray499[i_7_] = true;
 				if (i_11_ >= i_14_) {
@@ -51,11 +54,8 @@ public class Class31
 				} else {
 					anIntArray504[i_7_] = (i_11_ & 0x1) != 0 ? i_10_ - (i_11_ + 1) / 2 : i_10_ + i_11_ / 2;
 				}
-			} else {
-				aBooleanArray499[i_7_] = false;
-				anIntArray504[i_7_] = i_10_;
 			}
-		}
+        }
 		method351(0, i_5_ - 1);
 		int i_15_ = 0;
 		int i_16_ = anIntArray504[0] * anInt496;

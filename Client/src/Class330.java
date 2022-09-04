@@ -15,7 +15,7 @@ public class Class330
 		if (i != -5208) {
 			method3839((byte) 25);
 		}
-		if ((i_0_ ^ 0xffffffff) >= -1) {
+		if (i_0_ <= 0) {
 			throw new IllegalArgumentException();
 		}
 		if (Class371.method4094(i_0_, false)) {

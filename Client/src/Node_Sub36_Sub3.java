@@ -36,7 +36,7 @@ public class Node_Sub36_Sub3 extends Node_Sub36
 		anInt10055++;
 		anInt10060 = buffer.readUnsignedShort();
 		buffer.readUnsignedByte();
-		if ((buffer.readUnsignedByte() ^ 0xffffffff) != -256) {
+		if (buffer.readUnsignedByte() != 255) {
 			buffer.offset--;
 			buffer.readLong();
 		}

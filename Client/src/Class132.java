@@ -21,17 +21,17 @@ public class Class132
 		anInt1680++;
 		@SuppressWarnings("unused")
 		int i = -117 % ((-61 - b) / 41);
-		if (class139 != IsaacCipher.aClass139_1829) {
+		if (class139 == IsaacCipher.aClass139_1829) {
+			return 9216;
+		} else {
 			if (Class191.aClass139_2349 == class139) {
 				return 34065;
 			}
 			if (Class168.aClass139_2042 == class139) {
 				return 34066;
 			}
-		} else {
-			return 9216;
 		}
-		throw new IllegalArgumentException();
+        throw new IllegalArgumentException();
 	}
 	
 	static final boolean method1561(int i) {
@@ -39,7 +39,7 @@ public class Class132
 		if (i != -1) {
 			return false;
 		}
-        return (Node_Sub38_Sub8.anInt10163 ^ 0xffffffff) != -1;
+        return Node_Sub38_Sub8.anInt10163 != 0;
     }
 	
 	public static void method1562(int i) {
@@ -65,20 +65,18 @@ public class Class132
 	while_135_:
 		do {
 			do {
-				if (i_0_ != 0) {
-					if (i_0_ != 1) {
-						if ((i_0_ ^ 0xffffffff) == -3) {
-							break;
-						}
-						break while_135_;
-					}
-				} else {
+				if (i_0_ == 0) {
 					if (!bool) {
 						return Node_Sub38_Sub1.anInt10075;
 					}
 					return 0;
+				} else if (i_0_ != 1) {
+					if (i_0_ == 2) {
+						break;
+					}
+					break while_135_;
 				}
-				return Node_Sub38_Sub1.anInt10075;
+                return Node_Sub38_Sub1.anInt10075;
 			} while (false);
 			return 0;
 		} while (false);
@@ -96,28 +94,24 @@ public class Class132
 		if (i_1_ != -28537) {
 			method1561(78);
 		}
-		for (int i_3_ = 0; (i_2_ ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+		for (int i_3_ = 0; i_3_ < i_2_; i_3_++) {
 			Player player = Class270_Sub2.LOCAL_PLAYERS[is[i_3_]];
 			if (player != null && Class295.myPlayer != player && player.username != null && player.username.equalsIgnoreCase(string)) {
 				OutcommingPacket class318 = null;
 				if (i == 1) {
 					class318 = Class228.aClass318_2720;
-				} else if ((i ^ 0xffffffff) != -5) {
-					if ((i ^ 0xffffffff) == -6) {
-						class318 = Class359.aClass318_4463;
-					} else if (i == 6) {
-						class318 = Class290_Sub4.aClass318_8089;
-					} else if ((i ^ 0xffffffff) != -8) {
-						if ((i ^ 0xffffffff) == -10) {
-							class318 = CacheNode_Sub15.aClass318_9590;
-						}
-					} else {
-						class318 = Node_Sub25_Sub1.aClass318_9953;
-					}
-				} else {
+				} else if (i == 4) {
 					class318 = Class312.aClass318_3973;
+				} else if (i == 5) {
+					class318 = Class359.aClass318_4463;
+				} else if (i == 6) {
+					class318 = Class290_Sub4.aClass318_8089;
+				} else if (i == 7) {
+					class318 = Node_Sub25_Sub1.aClass318_9953;
+				} else if (i == 9) {
+					class318 = CacheNode_Sub15.aClass318_9590;
 				}
-				if (class318 != null) {
+                if (class318 != null) {
 					Class188_Sub1.anInt6852++;
 					Node_Sub13 node_sub13 = FloatBuffer.method2250(i_1_ ^ 0x6ef9, class318, Class218.aClass123_2566.anIsaacCipher1571);
 					node_sub13.aPacket7113.writeByte(0);

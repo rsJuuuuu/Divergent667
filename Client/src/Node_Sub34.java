@@ -18,7 +18,7 @@ public class Node_Sub34 extends Node
 	
 	static final void method2741(boolean bool) {
 		anInt7408++;
-		if ((Class320_Sub15.WINDOWS_PANE_ID ^ 0xffffffff) != 0) {
+		if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
 			int i = Class106.aClass93_1356.method1050((byte) -85);
 			int i_0_ = Class106.aClass93_1356.method1051(!bool);
 			Node_Sub5 node_sub5 = (Node_Sub5) GraphicsToolkit.aClass312_1545.method3613(65280);
@@ -49,7 +49,7 @@ public class Node_Sub34 extends Node
 		if (i_3_ != -27187) {
 			aClass115_7410 = null;
 		}
-		if (widget.aStringArray4686 == null || (i ^ 0xffffffff) <= (widget.aStringArray4686.length ^ 0xffffffff) || widget.aStringArray4686[i] == null || (widget.aStringArray4686[i].trim().length() ^ 0xffffffff) == -1) {
+		if (widget.aStringArray4686 == null || widget.aStringArray4686.length <= i || widget.aStringArray4686[i] == null || widget.aStringArray4686[i].trim().length() == 0) {
 			if (Class54.aBoolean817) {
 				return "Hidden-" + i;
 			}

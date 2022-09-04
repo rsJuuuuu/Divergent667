@@ -35,10 +35,10 @@ abstract class Class339
 		if (i_5_ == 0) {
 			return i;
 		}
-		if ((i_5_ ^ 0xffffffff) == -2) {
+		if (i_5_ == 1) {
 			return i_3_;
 		}
-		if ((i_5_ ^ 0xffffffff) == -3) {
+		if (i_5_ == 2) {
 			return 7 + -i;
 		}
 		return -i_3_ + 7;

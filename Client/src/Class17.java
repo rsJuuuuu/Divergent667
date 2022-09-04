@@ -24,7 +24,7 @@ public class Class17
 	static final void method260(int i) {
 		Class78.method780((long) Class174.clientCycle, i ^ i, Class93.aGraphicsToolkit1241);
 		anInt280++;
-		if ((Class320_Sub15.WINDOWS_PANE_ID ^ 0xffffffff) != 0) {
+		if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
 			Class290_Sub1.method3424(-23620, Class320_Sub15.WINDOWS_PANE_ID);
 		}
 		for (int i_1_ = 0; Node_Sub11.anInt7105 > i_1_; i_1_++) {
@@ -35,7 +35,7 @@ public class Class17
 			Class195.aBooleanArray2387[i_1_] = false;
 		}
 		Node_Sub12.anInt5453 = Class174.clientCycle;
-		if ((Class320_Sub15.WINDOWS_PANE_ID ^ 0xffffffff) != 0) {
+		if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
 			Node_Sub11.anInt7105 = 0;
 			Exception_Sub1.method141(i ^ ~0x297d);
 		}
@@ -45,7 +45,7 @@ public class Class17
 		if (i_2_ == -1) {
 			i_2_ = Class239.anInt2928;
 		}
-		if ((i_2_ ^ 0xffffffff) == 0) {
+		if (i_2_ == -1) {
 			i_2_ = Animable_Sub4_Sub1.anInt10687;
 		}
 		Class60.method594(6, i_2_);
@@ -61,10 +61,10 @@ public class Class17
 		if (i_4_ == 0) {
 			return i;
 		}
-		if ((i_4_ ^ 0xffffffff) == -2) {
+		if (i_4_ == 1) {
 			return i_3_;
 		}
-		if ((i_4_ ^ 0xffffffff) == -3) {
+		if (i_4_ == 2) {
 			return -i + 4095;
 		}
 		return -i_3_ + 4095;

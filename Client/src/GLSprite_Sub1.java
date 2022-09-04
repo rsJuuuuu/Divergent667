@@ -55,7 +55,7 @@ public class GLSprite_Sub1 extends GLSprite
 	}
 	
 	final void method1184(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
-		aClass169_Sub2_Sub1_8855.method1757(false, (i_8_ & 0x1 ^ 0xffffffff) != -1);
+		aClass169_Sub2_Sub1_8855.method1757(false, (i_8_ & 0x1) != 0);
 		anInt8858++;
 		aGLToolkit8861.method1461(34962);
 		aGLToolkit8861.method1460(i_7_, 3);
@@ -67,7 +67,20 @@ public class GLSprite_Sub1 extends GLSprite
 			float f_11_ = f_9_ * (float) anInt8865 + (float) i_2_;
 			float f_12_ = (float) aClass169_Sub2_Sub1_8855.anInt10566 * f + f_10_;
 			float f_13_ = (float) aClass169_Sub2_Sub1_8855.anInt10564 * f_9_ + f_11_;
-			if (aClass169_Sub2_Sub1_8854 != null) {
+			if (aClass169_Sub2_Sub1_8854 == null) {
+				aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
+				aGLToolkit8861.method1434((byte) 54, i_5_);
+				OpenGL.glBegin(7);
+				OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
+				OpenGL.glVertex2f(f_10_, f_11_);
+				OpenGL.glTexCoord2f(0.0F, 0.0F);
+				OpenGL.glVertex2f(f_10_, f_13_);
+				OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
+				OpenGL.glVertex2f(f_12_, f_13_);
+				OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
+				OpenGL.glVertex2f(f_12_, f_11_);
+				OpenGL.glEnd();
+			} else {
 				method1206(true, i_5_);
 				aClass169_Sub2_Sub1_8854.method1757(false, true);
 				OpenGL.glBegin(7);
@@ -85,53 +98,40 @@ public class GLSprite_Sub1 extends GLSprite
 				OpenGL.glVertex2f(f_12_, f_11_);
 				OpenGL.glEnd();
 				method1203(0);
-			} else {
-				aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-				aGLToolkit8861.method1434((byte) 54, i_5_);
-				OpenGL.glBegin(7);
-				OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
-				OpenGL.glVertex2f(f_10_, f_11_);
-				OpenGL.glTexCoord2f(0.0F, 0.0F);
-				OpenGL.glVertex2f(f_10_, f_13_);
-				OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
-				OpenGL.glVertex2f(f_12_, f_13_);
-				OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
-				OpenGL.glVertex2f(f_12_, f_11_);
-				OpenGL.glEnd();
 			}
-		} else if (aClass169_Sub2_Sub1_8854 != null) {
-			method1206(true, i_5_);
-			aClass169_Sub2_Sub1_8854.method1757(false, true);
-			OpenGL.glBegin(7);
-			OpenGL.glMultiTexCoord2f(33985, 0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glVertex2i(i, i_2_);
-			OpenGL.glMultiTexCoord2f(33985, 0.0F, 0.0F);
-			OpenGL.glTexCoord2f(0.0F, 0.0F);
-			OpenGL.glVertex2i(i, i_2_ + i_4_);
-			OpenGL.glMultiTexCoord2f(33985, aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
-			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
-			OpenGL.glVertex2i(i + i_3_, i_2_ + i_4_);
-			OpenGL.glMultiTexCoord2f(33985, aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glVertex2i(i_3_ + i, i_2_);
-			OpenGL.glEnd();
-			method1203(0);
-		} else {
-			aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-			aGLToolkit8861.method1434((byte) -88, i_5_);
-			OpenGL.glBegin(7);
-			OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glVertex2i(i, i_2_);
-			OpenGL.glTexCoord2f(0.0F, 0.0F);
-			OpenGL.glVertex2i(i, i_2_ + i_4_);
-			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
-			OpenGL.glVertex2i(i_3_ + i, i_4_ + i_2_);
-			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glVertex2i(i_3_ + i, i_2_);
-			OpenGL.glEnd();
-		}
-	}
+        } else if (aClass169_Sub2_Sub1_8854 == null) {
+            aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
+            aGLToolkit8861.method1434((byte) -88, i_5_);
+            OpenGL.glBegin(7);
+            OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
+            OpenGL.glVertex2i(i, i_2_);
+            OpenGL.glTexCoord2f(0.0F, 0.0F);
+            OpenGL.glVertex2i(i, i_2_ + i_4_);
+            OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
+            OpenGL.glVertex2i(i_3_ + i, i_4_ + i_2_);
+            OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
+            OpenGL.glVertex2i(i_3_ + i, i_2_);
+            OpenGL.glEnd();
+        } else {
+            method1206(true, i_5_);
+            aClass169_Sub2_Sub1_8854.method1757(false, true);
+            OpenGL.glBegin(7);
+            OpenGL.glMultiTexCoord2f(33985, 0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
+            OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
+            OpenGL.glVertex2i(i, i_2_);
+            OpenGL.glMultiTexCoord2f(33985, 0.0F, 0.0F);
+            OpenGL.glTexCoord2f(0.0F, 0.0F);
+            OpenGL.glVertex2i(i, i_2_ + i_4_);
+            OpenGL.glMultiTexCoord2f(33985, aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
+            OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
+            OpenGL.glVertex2i(i + i_3_, i_2_ + i_4_);
+            OpenGL.glMultiTexCoord2f(33985, aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
+            OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
+            OpenGL.glVertex2i(i_3_ + i, i_2_);
+            OpenGL.glEnd();
+            method1203(0);
+        }
+    }
 	
 	final int method1197() {
 		anInt8880++;
@@ -170,7 +170,7 @@ public class GLSprite_Sub1 extends GLSprite
 		}
 		float f_35_ = f_17_ + (-f + f_15_);
 		float f_36_ = f_18_ - f_14_ + f_16_;
-		aClass169_Sub2_Sub1_8855.method1757(false, (i & 0x1 ^ 0xffffffff) != -1);
+		aClass169_Sub2_Sub1_8855.method1757(false, (i & 0x1) != 0);
 		aGLToolkit8861.method1461(34962);
 		aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
 		aGLToolkit8861.method1434((byte) 94, 1);
@@ -204,20 +204,20 @@ public class GLSprite_Sub1 extends GLSprite
 	
 	static final void method1201(int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_) {
 		if (i_41_ == -12935) {
-			if ((i_43_ ^ 0xffffffff) >= (Node_Sub25_Sub1.anInt9936 ^ 0xffffffff) && (Class384.anInt4906 ^ 0xffffffff) >= (i ^ 0xffffffff)) {
+			if (Node_Sub25_Sub1.anInt9936 >= i_43_ && i >= Class384.anInt4906) {
 				boolean bool;
 				if (Class262_Sub4.anInt7722 > i_39_) {
 					i_39_ = Class262_Sub4.anInt7722;
 					bool = false;
-				} else if ((i_39_ ^ 0xffffffff) < (za_Sub2.anInt10513 ^ 0xffffffff)) {
+				} else if (za_Sub2.anInt10513 < i_39_) {
 					bool = false;
 					i_39_ = za_Sub2.anInt10513;
 				} else {
 					bool = true;
 				}
 				boolean bool_44_;
-				if ((i_42_ ^ 0xffffffff) <= (Class262_Sub4.anInt7722 ^ 0xffffffff)) {
-					if ((i_42_ ^ 0xffffffff) < (za_Sub2.anInt10513 ^ 0xffffffff)) {
+				if (Class262_Sub4.anInt7722 <= i_42_) {
+					if (za_Sub2.anInt10513 < i_42_) {
 						i_42_ = za_Sub2.anInt10513;
 						bool_44_ = false;
 					} else {
@@ -227,28 +227,26 @@ public class GLSprite_Sub1 extends GLSprite
 					i_42_ = Class262_Sub4.anInt7722;
 					bool_44_ = false;
 				}
-				if ((i_43_ ^ 0xffffffff) > (Class384.anInt4906 ^ 0xffffffff)) {
+				if (Class384.anInt4906 > i_43_) {
 					i_43_ = Class384.anInt4906;
 				} else {
 					Class369.method4086(i_42_, i_40_, i_39_, Class169_Sub4.anIntArrayArray8826[i_43_++], 0);
 				}
-				if ((Node_Sub25_Sub1.anInt9936 ^ 0xffffffff) > (i ^ 0xffffffff)) {
+				if (i > Node_Sub25_Sub1.anInt9936) {
 					i = Node_Sub25_Sub1.anInt9936;
 				} else {
 					Class369.method4086(i_42_, i_40_, i_39_, Class169_Sub4.anIntArrayArray8826[i--], 0);
 				}
 				if (!bool || !bool_44_) {
-					if (!bool) {
-						if (bool_44_) {
-							for (int i_45_ = i_43_; i_45_ <= i; i_45_++)
-								Class169_Sub4.anIntArrayArray8826[i_45_][i_42_] = i_40_;
-						}
-					} else {
+					if (bool) {
 						for (int i_46_ = i_43_; i_46_ <= i; i_46_++)
 							Class169_Sub4.anIntArrayArray8826[i_46_][i_39_] = i_40_;
+					} else if (bool_44_) {
+						for (int i_45_ = i_43_; i_45_ <= i; i_45_++)
+							Class169_Sub4.anIntArrayArray8826[i_45_][i_42_] = i_40_;
 					}
-				} else {
-					for (int i_47_ = i_43_; (i ^ 0xffffffff) <= (i_47_ ^ 0xffffffff); i_47_++) {
+                } else {
+					for (int i_47_ = i_43_; i_47_ <= i; i_47_++) {
 						int[] is = Class169_Sub4.anIntArrayArray8826[i_47_];
 						is[i_39_] = is[i_42_] = i_40_;
 					}
@@ -328,7 +326,7 @@ public class GLSprite_Sub1 extends GLSprite
 		anInt8879 = i;
 		anInt8875 = i_59_;
 		anInt8878 = i_60_;
-		aBoolean8852 = anInt8879 != 0 || anInt8865 != 0 || anInt8875 != 0 || (anInt8878 ^ 0xffffffff) != -1;
+		aBoolean8852 = anInt8879 != 0 || anInt8865 != 0 || anInt8875 != 0 || anInt8878 != 0;
 	}
 	
 	final int method1186() {
@@ -344,7 +342,20 @@ public class GLSprite_Sub1 extends GLSprite
 		OpenGL.glColor4ub((byte) (i_63_ >> 16), (byte) (i_63_ >> 8), (byte) i_63_, (byte) (i_63_ >> 24));
 		i += anInt8879;
 		i_61_ += anInt8865;
-		if (aClass169_Sub2_Sub1_8854 != null) {
+		if (aClass169_Sub2_Sub1_8854 == null) {
+			aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
+			aGLToolkit8861.method1434((byte) 127, i_62_);
+			OpenGL.glBegin(7);
+			OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
+			OpenGL.glVertex2i(i, i_61_);
+			OpenGL.glTexCoord2f(0.0F, 0.0F);
+			OpenGL.glVertex2i(i, i_61_ + aClass169_Sub2_Sub1_8855.anInt10564);
+			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
+			OpenGL.glVertex2i(aClass169_Sub2_Sub1_8855.anInt10566 + i, aClass169_Sub2_Sub1_8855.anInt10564 + i_61_);
+			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
+			OpenGL.glVertex2i(i + aClass169_Sub2_Sub1_8855.anInt10566, i_61_);
+			OpenGL.glEnd();
+		} else {
 			method1206(true, i_62_);
 			aClass169_Sub2_Sub1_8854.method1757(false, false);
 			OpenGL.glBegin(10);
@@ -362,21 +373,8 @@ public class GLSprite_Sub1 extends GLSprite
 			OpenGL.glVertex2i(aClass169_Sub2_Sub1_8855.anInt10566 + i, i_61_);
 			OpenGL.glEnd();
 			method1203(0);
-		} else {
-			aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-			aGLToolkit8861.method1434((byte) 127, i_62_);
-			OpenGL.glBegin(7);
-			OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glVertex2i(i, i_61_);
-			OpenGL.glTexCoord2f(0.0F, 0.0F);
-			OpenGL.glVertex2i(i, i_61_ + aClass169_Sub2_Sub1_8855.anInt10564);
-			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, 0.0F);
-			OpenGL.glVertex2i(aClass169_Sub2_Sub1_8855.anInt10566 + i, aClass169_Sub2_Sub1_8855.anInt10564 + i_61_);
-			OpenGL.glTexCoord2f(aClass169_Sub2_Sub1_8855.aFloat10567, aClass169_Sub2_Sub1_8855.aFloat10568);
-			OpenGL.glVertex2i(i + aClass169_Sub2_Sub1_8855.anInt10566, i_61_);
-			OpenGL.glEnd();
 		}
-	}
+    }
 	
 	final void method1194(float f, float f_65_, float f_66_, float f_67_, float f_68_, float f_69_, int i, int i_70_, int i_71_, int i_72_) {
 		if (aBoolean8852) {
@@ -404,7 +402,7 @@ public class GLSprite_Sub1 extends GLSprite
 		anInt8856++;
 		float f_87_ = f_68_ + (-f + f_66_);
 		float f_88_ = f_69_ - f_65_ + f_67_;
-		aClass169_Sub2_Sub1_8855.method1757(false, (0x1 & i_72_ ^ 0xffffffff) != -1);
+		aClass169_Sub2_Sub1_8855.method1757(false, (0x1 & i_72_) != 0);
 		aGLToolkit8861.method1461(34962);
 		aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
 		aGLToolkit8861.method1460(i_71_, 3);
@@ -464,10 +462,10 @@ public class GLSprite_Sub1 extends GLSprite
 			int i_100_ = aClass169_Sub2_Sub1_8855.anInt10564 + i_89_;
 			OpenGL.glBegin(7);
 			int i_101_ = i_89_;
-			while ((i_100_ ^ 0xffffffff) >= (i_96_ ^ 0xffffffff)) {
+			while (i_96_ >= i_100_) {
 				int i_102_ = i - -aClass169_Sub2_Sub1_8855.anInt10566;
 				int i_103_ = i;
-				for (/**/; (i_102_ ^ 0xffffffff) >= (i_95_ ^ 0xffffffff); i_102_ += i_98_) {
+				for (/**/; i_95_ >= i_102_; i_102_ += i_98_) {
 					OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
 					OpenGL.glVertex2i(i_103_, i_101_);
 					OpenGL.glTexCoord2f(0.0F, 0.0F);
@@ -492,7 +490,7 @@ public class GLSprite_Sub1 extends GLSprite
 				i_100_ += i_99_;
 				i_101_ += i_99_;
 			}
-			if ((i_96_ ^ 0xffffffff) < (i_101_ ^ 0xffffffff)) {
+			if (i_101_ < i_96_) {
 				float f = aClass169_Sub2_Sub1_8855.aFloat10568 * (float) (aClass169_Sub2_Sub1_8855.anInt10564 - (-i_101_ + i_96_)) / (float) aClass169_Sub2_Sub1_8855.anInt10564;
 				int i_104_ = i + aClass169_Sub2_Sub1_8855.anInt10566;
 				int i_105_ = i;
@@ -534,7 +532,7 @@ public class GLSprite_Sub1 extends GLSprite
 		if (aGLToolkit8861.aBoolean6668) {
 			int[] is = aGLToolkit8861.na(i_110_, i_111_, i_108_, i_109_);
 			if (is != null) {
-				for (int i_112_ = 0; (is.length ^ 0xffffffff) < (i_112_ ^ 0xffffffff); i_112_++)
+				for (int i_112_ = 0; i_112_ < is.length; i_112_++)
 					is[i_112_] = Node_Sub16.method2590(is[i_112_], -16777216);
 				method1204(i, i_107_, i_108_, i_109_, is, 0, i_108_);
 			}
@@ -576,20 +574,16 @@ public class GLSprite_Sub1 extends GLSprite
 			aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8854);
 			aGLToolkit8861.method1474(-90, 7681, 34479);
 			aGLToolkit8861.method1464(34166, 768, 1, (byte) -51);
-			if ((anInt8869 ^ 0xffffffff) == -1) {
+			if (anInt8869 == 0) {
 				aGLToolkit8861.method1422(0.5F, 1.0F, 0.0F, 0.5F, 13934);
-			} else if (anInt8869 != 1) {
-				if ((anInt8869 ^ 0xffffffff) != -3) {
-					if (anInt8869 == 3) {
-						aGLToolkit8861.method1422(128.5F, 128.5F, 0.0F, 128.5F, 13934);
-					}
-				} else {
-					aGLToolkit8861.method1422(1.0F, 0.5F, 0.0F, 0.5F, 13934);
-				}
-			} else {
+			} else if (anInt8869 == 1) {
 				aGLToolkit8861.method1422(0.5F, 0.5F, 0.0F, 1.0F, 13934);
+			} else if (anInt8869 == 2) {
+				aGLToolkit8861.method1422(1.0F, 0.5F, 0.0F, 0.5F, 13934);
+			} else if (anInt8869 == 3) {
+				aGLToolkit8861.method1422(128.5F, 128.5F, 0.0F, 128.5F, 13934);
 			}
-		}
+        }
 	}
 	
 	GLSprite_Sub1(GLToolkit gltoolkit, int i, int i_119_, boolean bool) {

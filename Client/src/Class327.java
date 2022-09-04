@@ -24,7 +24,7 @@ public class Class327 implements Interface16
 		if (bool != false) {
 			aBoolean5359 = false;
 		}
-        return (Class313.method3650(false) ^ 0xffffffffffffffffL) <= ((long) aClass55_5354.anInt831 + l ^ 0xffffffffffffffffL);
+        return (long) aClass55_5354.anInt831 + l <= Class313.method3650(false);
     }
 	
 	static final Class377_Sub1 method3823(int i, int i_0_) {
@@ -32,7 +32,7 @@ public class Class327 implements Interface16
 		if (i != 100) {
 			method3824(true);
 		}
-		if (!Mobile.aBoolean9118 || (Mobile_Sub4.anInt10972 ^ 0xffffffff) < (i_0_ ^ 0xffffffff) || Node_Sub9_Sub5.anInt9757 < i_0_) {
+		if (!Mobile.aBoolean9118 || i_0_ < Mobile_Sub4.anInt10972 || Node_Sub9_Sub5.anInt9757 < i_0_) {
 			return null;
 		}
 		return Class56.aClass377_Sub1Array841[-Mobile_Sub4.anInt10972 + i_0_];
@@ -62,7 +62,7 @@ public class Class327 implements Interface16
 		aGraphicsToolkit5356.GA(0);
 		if (i == 1939) {
 			Interface10[] interface10s = anInterface10Array5357;
-			for (int i_1_ = 0; (interface10s.length ^ 0xffffffff) < (i_1_ ^ 0xffffffff); i_1_++) {
+			for (int i_1_ = 0; i_1_ < interface10s.length; i_1_++) {
 				Interface10 interface10 = interface10s[i_1_];
 				if (interface10 != null) {
 					interface10.method26(i + -1840);
@@ -78,7 +78,7 @@ public class Class327 implements Interface16
 		if (i != 27285) {
 			anInterface10Array5357 = null;
 		}
-		for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (interface10s.length ^ 0xffffffff); i_3_++) {
+		for (int i_3_ = 0; interface10s.length > i_3_; i_3_++) {
 			Interface10 interface10 = interface10s[i_3_];
 			if (interface10 == null || interface10.method25(421)) {
 				i_2_++;

@@ -76,7 +76,7 @@ public class Node_Sub54 extends Node
 		anInt7682++;
 		Dimension dimension = canvas.getSize();
 		Node_Sub15_Sub8.method2575(dimension.height, dimension.width, 101);
-		if ((Class320_Sub20.anInt8397 ^ 0xffffffff) == -2) {
+		if (Class320_Sub20.anInt8397 == 1) {
 			Class44.aGraphicsToolkit668.b(canvas, CacheNode_Sub15.anInt9589, Class303.anInt3831);
 		} else {
 			Class44.aGraphicsToolkit668.b(canvas, Animable_Sub1_Sub2.anInt10668, Class148.anInt1825);
@@ -139,7 +139,34 @@ public class Node_Sub54 extends Node
 			if (b != 60) {
 				method2987(-11);
 			}
-			if (!Stream.b()) {
+			if (Stream.b()) {
+				for (int i_21_ = 0; i > i_21_; i_21_++) {
+					int i_22_ = is[i_21_];
+					short[] ses = aStandardPlane7681.aShortArrayArray7985[i_22_];
+					int i_23_ = anIntArray7677[i_22_];
+					if (i_23_ != 0 && ses != null) {
+						int i_24_ = 0;
+						int i_25_ = 0;
+						while (ses.length > i_25_) {
+							if ((i_23_ & 1 << i_24_++) == 0) {
+								i_25_ += 3;
+							} else {
+								i_11_++;
+								for (int i_26_ = 0; i_26_ < 3; i_26_++) {
+									int i_27_ = 0xffff & ses[i_25_++];
+									stream.b(i_27_);
+									if (i_13_ < i_27_) {
+										i_13_ = i_27_;
+									}
+									if (i_12_ > i_27_) {
+										i_12_ = i_27_;
+									}
+								}
+							}
+						}
+					}
+				}
+			} else {
 				for (int i_14_ = 0; i_14_ < i; i_14_++) {
 					int i_15_ = is[i_14_];
 					int i_16_ = anIntArray7677[i_15_];
@@ -148,47 +175,20 @@ public class Node_Sub54 extends Node
 						int i_17_ = 0;
 						int i_18_ = 0;
 						while (i_18_ < ses.length) {
-							if ((1 << i_17_++ & i_16_ ^ 0xffffffff) != -1) {
+							if ((1 << i_17_++ & i_16_) == 0) {
+								i_18_ += 3;
+							} else {
 								for (int i_19_ = 0; i_19_ < 3; i_19_++) {
 									int i_20_ = ses[i_18_++] & 0xffff;
-									if ((i_20_ ^ 0xffffffff) > (i_12_ ^ 0xffffffff)) {
+									if (i_12_ > i_20_) {
 										i_12_ = i_20_;
 									}
-									if ((i_13_ ^ 0xffffffff) > (i_20_ ^ 0xffffffff)) {
+									if (i_20_ > i_13_) {
 										i_13_ = i_20_;
 									}
 									stream.c(i_20_);
 								}
 								i_11_++;
-							} else {
-								i_18_ += 3;
-							}
-						}
-					}
-				}
-			} else {
-				for (int i_21_ = 0; i > i_21_; i_21_++) {
-					int i_22_ = is[i_21_];
-					short[] ses = aStandardPlane7681.aShortArrayArray7985[i_22_];
-					int i_23_ = anIntArray7677[i_22_];
-					if ((i_23_ ^ 0xffffffff) != -1 && ses != null) {
-						int i_24_ = 0;
-						int i_25_ = 0;
-						while ((i_25_ ^ 0xffffffff) > (ses.length ^ 0xffffffff)) {
-							if ((i_23_ & 1 << i_24_++ ^ 0xffffffff) != -1) {
-								i_11_++;
-								for (int i_26_ = 0; (i_26_ ^ 0xffffffff) > -4; i_26_++) {
-									int i_27_ = 0xffff & ses[i_25_++];
-									stream.b(i_27_);
-									if ((i_27_ ^ 0xffffffff) < (i_13_ ^ 0xffffffff)) {
-										i_13_ = i_27_;
-									}
-									if (i_12_ > i_27_) {
-										i_12_ = i_27_;
-									}
-								}
-							} else {
-								i_25_ += 3;
 							}
 						}
 					}
@@ -196,7 +196,7 @@ public class Node_Sub54 extends Node
 			}
 			stream.c();
 			if (interface15_impl1.method53(-3308) && i_11_ > 0) {
-				anAbstractToolkit7672.method1332(3, (0x7 & aStandardPlane7681.anInt7981 ^ 0xffffffff) != -1, anInt7689, (0x8 & aStandardPlane7681.anInt7981) != 0);
+				anAbstractToolkit7672.method1332(3, (0x7 & aStandardPlane7681.anInt7981) != 0, anInt7689, (0x8 & aStandardPlane7681.anInt7981) != 0);
 				if (anAbstractToolkit7672.aBoolean6288) {
 					anAbstractToolkit7672.EA(2147483647, anInt7680, anInt7676, anInt7686);
 				}
@@ -243,13 +243,13 @@ public class Node_Sub54 extends Node
 		if (i_32_ <= 28) {
 			anInt7686 = 93;
 		}
-		if ((anInt7689 ^ 0xffffffff) != 0) {
+		if (anInt7689 != -1) {
 			Class91 class91 = anAbstractToolkit7672.aD1543.method10(anInt7689, -8217);
 			int i_34_ = 0xff & class91.aByte1225;
-			if ((i_34_ ^ 0xffffffff) != -1 && (class91.aByte1214 ^ 0xffffffff) != -5) {
+			if (i_34_ != 0 && class91.aByte1214 != 4) {
 				int i_35_;
 				if (i_31_ >= 0) {
-					if ((i_31_ ^ 0xffffffff) < -128) {
+					if (i_31_ > 127) {
 						i_35_ = 16777215;
 					} else {
 						i_35_ = i_31_ * 131586;
@@ -257,7 +257,7 @@ public class Node_Sub54 extends Node
 				} else {
 					i_35_ = 0;
 				}
-				if ((i_34_ ^ 0xffffffff) == -257) {
+				if (i_34_ == 256) {
 					i = i_35_;
 				} else {
 					int i_36_ = i_34_;
@@ -266,18 +266,18 @@ public class Node_Sub54 extends Node
 				}
 			}
 			int i_38_ = 0xff & class91.aByte1217;
-			if ((i_38_ ^ 0xffffffff) != -1) {
+			if (i_38_ != 0) {
 				i_38_ += 256;
 				int i_39_ = (i >> 16 & 0xff) * i_38_;
 				if (i_39_ > 65535) {
 					i_39_ = 65535;
 				}
 				int i_40_ = i_38_ * ((0xff00 & i) >> 8);
-				if ((i_40_ ^ 0xffffffff) < -65536) {
+				if (i_40_ > 65535) {
 					i_40_ = 65535;
 				}
 				int i_41_ = (i & 0xff) * i_38_;
-				if ((i_41_ ^ 0xffffffff) < -65536) {
+				if (i_41_ > 65535) {
 					i_41_ = 65535;
 				}
 				i = (i_41_ >> 8) + (0xff00 & i_40_) + ((0x1600ff00 & i_39_) << 8);
@@ -289,8 +289,8 @@ public class Node_Sub54 extends Node
 			int i_43_ = (0xffa3 & i) >> 8;
 			i_42_ *= f;
 			int i_44_ = i & 0xff;
-			if ((i_42_ ^ 0xffffffff) <= -1) {
-				if ((i_42_ ^ 0xffffffff) < -256) {
+			if (i_42_ >= 0) {
+				if (i_42_ > 255) {
 					i_42_ = 255;
 				}
 			} else {
@@ -298,8 +298,8 @@ public class Node_Sub54 extends Node
 			}
 			i_43_ *= f;
 			i_44_ *= f;
-			if ((i_43_ ^ 0xffffffff) <= -1) {
-				if ((i_43_ ^ 0xffffffff) < -256) {
+			if (i_43_ >= 0) {
+				if (i_43_ > 255) {
 					i_43_ = 255;
 				}
 			} else {
@@ -314,14 +314,14 @@ public class Node_Sub54 extends Node
 			}
 			i = i_44_ | (i_43_ << 8 | i_42_ << 16);
 		}
-		if ((anAbstractToolkit7672.anInt6360 ^ 0xffffffff) != -1) {
-			aStream7687.d((byte) (i >> 16));
-			aStream7687.d((byte) (i >> 8));
+		if (anAbstractToolkit7672.anInt6360 == 0) {
 			aStream7687.d((byte) i);
+			aStream7687.d((byte) (i >> 8));
+			aStream7687.d((byte) (i >> 16));
 		} else {
-			aStream7687.d((byte) i);
-			aStream7687.d((byte) (i >> 8));
 			aStream7687.d((byte) (i >> 16));
+			aStream7687.d((byte) (i >> 8));
+			aStream7687.d((byte) i);
 		}
 	}
 	

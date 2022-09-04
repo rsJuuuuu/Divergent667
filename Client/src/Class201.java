@@ -18,20 +18,20 @@ abstract class Class201
 			for (int i_1_ = 0; i_0_ > i_1_; i_1_++) {
 				if (Class194.aByteArrayArray2373[i_1_] != null) {
 					int i_2_ = -1;
-					for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (Class262_Sub5.anInt7739 ^ 0xffffffff); i_3_++) {
+					for (int i_3_ = 0; Class262_Sub5.anInt7739 > i_3_; i_3_++) {
 						if (Class262_Sub1.MAP_REGION_HASHES[i_1_] == Class320_Sub5.anIntArray8255[i_3_]) {
 							i_2_ = i_3_;
 							break;
 						}
 					}
-					if ((i_2_ ^ 0xffffffff) == 0) {
+					if (i_2_ == -1) {
 						Class320_Sub5.anIntArray8255[Class262_Sub5.anInt7739] = Class262_Sub1.MAP_REGION_HASHES[i_1_];
 						i_2_ = Class262_Sub5.anInt7739++;
 					}
 					BufferedStream buffer = new BufferedStream(Class194.aByteArrayArray2373[i_1_]);
 					int i_4_ = 0;
 					while (Class194.aByteArrayArray2373[i_1_].length > buffer.offset) {
-						if (i_4_ >= 511 || (Node_Sub25_Sub3.localNPCsCount ^ 0xffffffff) <= -1024) {
+						if (i_4_ >= 511 || Node_Sub25_Sub3.localNPCsCount >= 1023) {
 							break;
 						}
 						int i_5_ = i_2_ | i_4_++ << 6;
@@ -43,7 +43,7 @@ abstract class Class201
 						int i_11_ = 64 * (Class262_Sub1.MAP_REGION_HASHES[i_1_] & 0xff) + -Class320_Sub4.gameSceneBaseY - -i_9_;
 						NpcDefinition npcdefinition = Class366.aClass279_4526.getNPCDefinitions(buffer.readUnsignedShort(), (byte) 107);
 						Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) i_5_);
-						if (node_sub41 == null && (0x1 & npcdefinition.aByte2816) > 0 && i_7_ == Class94.anInt1249 && i_10_ >= 0 && (npcdefinition.anInt2811 + i_10_ ^ 0xffffffff) > (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) && i_11_ >= 0 && (i_11_ + npcdefinition.anInt2811 ^ 0xffffffff) > (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff)) {
+						if (node_sub41 == null && (0x1 & npcdefinition.aByte2816) > 0 && i_7_ == Class94.anInt1249 && i_10_ >= 0 && Node_Sub54.GAME_SCENE_WDITH > npcdefinition.anInt2811 + i_10_ && i_11_ >= 0 && Class377_Sub1.GAME_SCENE_HEIGHT > i_11_ + npcdefinition.anInt2811) {
 							Npc npc = new Npc();
 							npc.index = i_5_;
 							Node_Sub41 node_sub41_12_ = new Node_Sub41(npc);
@@ -74,7 +74,7 @@ abstract class Class201
 		if (i != -22880) {
 			method2025(false);
 		}
-		if ((Class69.aClass312_940.method3615(-78) ^ 0xffffffff) != -1) {
+		if (Class69.aClass312_940.method3615(-78) != 0) {
 			if (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) == 0) {
 				for (Node_Sub30 node_sub30 = (Node_Sub30) Class69.aClass312_940.method3613(65280); node_sub30 != null; node_sub30 = (Node_Sub30) Class69.aClass312_940.method3620(16776960)) {
 					EntityNode_Sub3_Sub1.aClass86_9166.method1002(node_sub30.anInt7358, graphicstoolkit, graphicstoolkit, node_sub30.aBoolean7355 ? Class295.myPlayer.aPlayerDefinition11137 : null, false, node_sub30.anInt7356, node_sub30.anInt7352, false, node_sub30.anInt7354, CacheNode_Sub18.aClass52_9609, node_sub30.anInt7361, -16139);
@@ -99,7 +99,7 @@ abstract class Class201
 	static final void method2024(byte b) {
 		if (Class143.aByteArray1773 != null) {
 			Node_Sub23.method2633(5966);
-		} else if ((Class336_Sub2.anInt8586 ^ 0xffffffff) == 0) {
+		} else if (Class336_Sub2.anInt8586 == -1) {
 			Node_Sub38_Sub28.loginToLobby(Node_Sub5.password, Class243.username, (byte) -61);
 		} else {
 			CacheNode_Sub20.method2407(1);

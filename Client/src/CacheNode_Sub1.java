@@ -64,7 +64,7 @@ public class CacheNode_Sub1 extends CacheNode
 		anInt9426++;
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method2281(i, buffer, -119);

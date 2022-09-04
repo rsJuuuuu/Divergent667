@@ -87,7 +87,7 @@ public class Node_Sub36_Sub2 extends Node_Sub36
 		Class262_Sub2.method3152((byte) -32);
 		Node_Sub38_Sub14.method2835((byte) 89);
 		if (Node_Sub38_Sub1.aClass329_10086 != Class240.aClass329_2943) {
-			for (int i = 0; (i ^ 0xffffffff) > (Class93.aByteArrayArray1244.length ^ 0xffffffff); i++)
+			for (int i = 0; Class93.aByteArrayArray1244.length > i; i++)
 				Class93.aByteArrayArray1244[i] = null;
 			Class57.anInt849 = 0;
 		}

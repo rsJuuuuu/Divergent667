@@ -81,7 +81,7 @@ public class BufferedConnection implements Runnable
 				int i;
 				int i_11_;
 				synchronized (this) {
-					if ((anInt608 ^ 0xffffffff) == (anInt609 ^ 0xffffffff)) {
+					if (anInt609 == anInt608) {
 						if (aBoolean601) {
 							break;
 						}
@@ -98,7 +98,7 @@ public class BufferedConnection implements Runnable
 						i_11_ = -anInt608 + anInt603;
 					}
 				}
-				if ((i_11_ ^ 0xffffffff) < -1) {
+				if (i_11_ > 0) {
 					try {
 						anOutputStream612.write(aByteArray602, i, i_11_);
 					} catch (IOException ioexception) {
@@ -141,9 +141,9 @@ public class BufferedConnection implements Runnable
 		}
 		if (!aBoolean601) {
 			int i_13_;
-			for (/**/; (i ^ 0xffffffff) < -1; i -= i_13_) {
+			for (/**/; i > 0; i -= i_13_) {
 				i_13_ = anInputStream604.read(bs, i_12_, i);
-				if ((i_13_ ^ 0xffffffff) >= -1) {
+				if (i_13_ <= 0) {
 					throw new EOFException();
 				}
 				i_12_ += i_13_;
@@ -169,14 +169,14 @@ public class BufferedConnection implements Runnable
 	
 	static final void method427(Class48 class48, int i, Animable animable, byte b) {
 		anInt600++;
-		if ((Class23.anInt434 ^ 0xffffffff) > -51 && (class48 != null && class48.anIntArrayArray700 != null && (class48.anIntArrayArray700.length ^ 0xffffffff) < (i ^ 0xffffffff) && class48.anIntArrayArray700[i] != null)) {
+		if (Class23.anInt434 < 50 && (class48 != null && class48.anIntArrayArray700 != null && i < class48.anIntArrayArray700.length && class48.anIntArrayArray700[i] != null)) {
 			if (b != -63) {
 				aClass346_615 = null;
 			}
 			int i_14_ = class48.anIntArrayArray700[i][0];
 			int i_15_ = i_14_ >> 8;
 			int i_16_ = 0x7 & i_14_ >> 5;
-			if ((class48.anIntArrayArray700[i].length ^ 0xffffffff) < -2) {
+			if (class48.anIntArrayArray700[i].length > 1) {
 				int i_17_ = (int) (Math.random() * (double) class48.anIntArrayArray700[i].length);
 				if (i_17_ > 0) {
 					i_15_ = class48.anIntArrayArray700[i][i_17_];
@@ -188,15 +188,15 @@ public class BufferedConnection implements Runnable
 				i_19_ = class48.anIntArray690[i] + (int) ((double) (-class48.anIntArray690[i] + class48.anIntArray692[i]) * Math.random());
 			}
 			int i_20_ = class48.anIntArray701 == null ? 255 : class48.anIntArray701[i];
-			if ((i_18_ ^ 0xffffffff) == -1) {
+			if (i_18_ == 0) {
 				if (animable == Class295.myPlayer) {
-					if (!class48.aBoolean699) {
-						Class91.method1033(i_19_, 0, i_15_, i_16_, i_20_, 0);
-					} else {
+					if (class48.aBoolean699) {
 						Class105.method1116(i_15_, i_16_, i_19_, (byte) 97, 0, i_20_, false);
+					} else {
+						Class91.method1033(i_19_, 0, i_15_, i_16_, i_20_, 0);
 					}
-				}
-			} else if ((Class213.aNode_Sub27_2512.aClass320_Sub25_7265.method3776(false) ^ 0xffffffff) != -1) {
+                }
+			} else if (Class213.aNode_Sub27_2512.aClass320_Sub25_7265.method3776(false) != 0) {
 				int i_21_ = animable.anInt5934 + -256 >> 9;
 				int i_22_ = -256 + animable.anInt5940 >> 9;
 				int i_23_ = animable == Class295.myPlayer ? 0 : i_18_ + (i_22_ << 8) + ((i_21_ << 16) + (animable.plane << 24));
@@ -265,9 +265,9 @@ public class BufferedConnection implements Runnable
 				this.notifyAll();
 			}
 			if (aClass241_596 != null) {
-				while ((aClass241_596.anInt2953 ^ 0xffffffff) == -1)
+				while (aClass241_596.anInt2953 == 0)
 					Class262_Sub22.method3208(1L, false);
-				if ((aClass241_596.anInt2953 ^ 0xffffffff) == -2) {
+				if (aClass241_596.anInt2953 == 1) {
 					try {
 						((Thread) aClass241_596.anObject2956).join();
 					} catch (InterruptedException interruptedexception) {

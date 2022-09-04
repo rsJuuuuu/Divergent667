@@ -61,7 +61,7 @@ public class Class88 implements Interface12
 		int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_0_ + i_2_);
 		int i_9_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_0_ + i_2_);
 		Class369.method4086(i_8_, i_1_, i_9_, Class169_Sub4.anIntArrayArray8826[i], 0);
-		while ((i_4_ ^ 0xffffffff) > (i_5_ ^ 0xffffffff)) {
+		while (i_5_ > i_4_) {
 			i_7_ += 2;
 			i_6_ = i_6_ + i_7_;
 			if (i_6_ > 0) {
@@ -69,7 +69,7 @@ public class Class88 implements Interface12
 				i_6_ -= i_5_ << 1;
 				int i_10_ = -i_5_ + i;
 				int i_11_ = i_5_ + i;
-				if ((i_11_ ^ 0xffffffff) <= (Class384.anInt4906 ^ 0xffffffff) && i_10_ <= Node_Sub25_Sub1.anInt9936) {
+				if (Class384.anInt4906 <= i_11_ && i_10_ <= Node_Sub25_Sub1.anInt9936) {
 					int i_12_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_2_ - -i_4_);
 					int i_13_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_4_ + i_2_);
 					if (i_11_ <= Node_Sub25_Sub1.anInt9936) {
@@ -82,7 +82,7 @@ public class Class88 implements Interface12
 			}
 			int i_14_ = -++i_4_ + i;
 			int i_15_ = i_4_ + i;
-			if ((Class384.anInt4906 ^ 0xffffffff) >= (i_15_ ^ 0xffffffff) && (i_14_ ^ 0xffffffff) >= (Node_Sub25_Sub1.anInt9936 ^ 0xffffffff)) {
+			if (i_15_ >= Class384.anInt4906 && Node_Sub25_Sub1.anInt9936 >= i_14_) {
 				int i_16_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_2_ + i_5_);
 				int i_17_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_2_ + -i_5_);
 				if (Node_Sub25_Sub1.anInt9936 >= i_15_) {

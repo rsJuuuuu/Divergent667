@@ -88,9 +88,9 @@ public class Class181
 		if (i != -20412) {
 			aClass197_2155 = null;
 		}
-		if ((Class332.anInt4145 ^ 0xffffffff) < -1) {
+		if (Class332.anInt4145 > 0) {
 			int i_2_ = 0;
-			for (int i_3_ = 0; (Class210.aStringArray2502.length ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+			for (int i_3_ = 0; i_3_ < Class210.aStringArray2502.length; i_3_++) {
 				if (Class210.aStringArray2502[i_3_].indexOf("--> ") != -1 && Class332.anInt4145 == ++i_2_) {
 					Node_Sub10.aString7081 = Class210.aStringArray2502[i_3_].substring(2 + Class210.aStringArray2502[i_3_].indexOf(">"));
 					break;

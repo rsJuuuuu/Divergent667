@@ -11,7 +11,7 @@ public class IDirect3DVertexBuffer extends IUnknown
 	protected int b;
 	
 	public final boolean a(Source source, int i, int i_0_, int i_1_, int i_2_) {
-		if (null == source || 0 > i || (i_1_ ^ 0xffffffff) < (i - -source.getSize() ^ 0xffffffff)) {
+		if (null == source || 0 > i || i - -source.getSize() < i_1_) {
 			throw new sja("");
 		}
 		if (0 > i_0_ || b + i_0_ < i_1_) {

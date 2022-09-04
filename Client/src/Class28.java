@@ -23,14 +23,14 @@ public class Class28
 		}
 		int i_7_;
 		int i_8_;
-		if (widget_6_ != null) {
-			i_8_ = widget_6_.anInt4809;
-			i_7_ = widget_6_.anInt4695;
-		} else {
+		if (widget_6_ == null) {
 			i_7_ = Class205.screenHeight;
 			i_8_ = Class360.screenWidth;
+		} else {
+			i_8_ = widget_6_.anInt4809;
+			i_7_ = widget_6_.anInt4695;
 		}
-		Node_Sub39.method2921(false, i_7_, 18815, i_8_, widget);
+        Node_Sub39.method2921(false, i_7_, 18815, i_8_, widget);
 		Node_Sub38_Sub23.method2862(widget, i_8_, i_7_, -8525);
 	}
 	

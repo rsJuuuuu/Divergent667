@@ -41,16 +41,16 @@ public class Class8 implements Interface15_Impl1
 			anInt9088 = 0;
 		}
 		anInt9086 = i_0_ * aClass372_9085.anInt4591;
-		if ((anInt9088 ^ 0xffffffff) > (anInt9086 ^ 0xffffffff)) {
+		if (anInt9086 > anInt9088) {
 			int i_1_ = 8;
 			int i_2_;
-			if (!aBoolean9084) {
-				i_2_ = 1;
-			} else {
+			if (aBoolean9084) {
 				i_1_ |= 0x200;
 				i_2_ = 0;
+			} else {
+				i_2_ = 1;
 			}
-			if (anIDirect3DIndexBuffer9089 != null) {
+            if (anIDirect3DIndexBuffer9089 != null) {
 				anIDirect3DIndexBuffer9089.a(110);
 			}
 			anIDirect3DIndexBuffer9089 = aD3DToolkit9083.anIDirect3DDevice9199.a(anInt9086, i_1_, aClass372_9085 != Class372.aClass372_4595 ? 102 : 101, i_2_, anIDirect3DIndexBuffer9089);

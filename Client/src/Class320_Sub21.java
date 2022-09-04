@@ -93,7 +93,7 @@ public class Class320_Sub21 extends Class320
 		if (i != 0) {
 			return -123;
 		}
-		if ((aNode_Sub27_4063.method2694(i + -13725).method1881((byte) 25) ^ 0xffffffff) < -2) {
+		if (aNode_Sub27_4063.method2694(i + -13725).method1881((byte) 25) > 1) {
 			return 4;
 		}
 		return 2;
@@ -104,95 +104,67 @@ public class Class320_Sub21 extends Class320
 		int i_4_ = string.length();
 		byte[] bs = new byte[i_4_];
 		int i_5_ = 18 / ((-69 - i) / 54);
-		for (int i_6_ = 0; (i_6_ ^ 0xffffffff) > (i_4_ ^ 0xffffffff); i_6_++) {
+		for (int i_6_ = 0; i_4_ > i_6_; i_6_++) {
 			int i_7_ = string.charAt(i_6_);
-			if (((i_7_ ^ 0xffffffff) >= -1 || i_7_ >= 128) && (i_7_ < 160 || i_7_ > 255)) {
+			if ((i_7_ <= 0 || i_7_ >= 128) && (i_7_ < 160 || i_7_ > 255)) {
 				if (i_7_ == 8364) {
 					bs[i_6_] = (byte) -128;
 				} else if (i_7_ == 8218) {
 					bs[i_6_] = (byte) -126;
-				} else if (i_7_ != 402) {
-					if (i_7_ != 8222) {
-						if (i_7_ == 8230) {
-							bs[i_6_] = (byte) -123;
-						} else if ((i_7_ ^ 0xffffffff) != -8225) {
-							if (i_7_ == 8225) {
-								bs[i_6_] = (byte) -121;
-							} else if (i_7_ == 710) {
-								bs[i_6_] = (byte) -120;
-							} else if (i_7_ == 8240) {
-								bs[i_6_] = (byte) -119;
-							} else if (i_7_ != 352) {
-								if (i_7_ != 8249) {
-									if ((i_7_ ^ 0xffffffff) == -339) {
-										bs[i_6_] = (byte) -116;
-									} else if ((i_7_ ^ 0xffffffff) != -382) {
-										if (i_7_ == 8216) {
-											bs[i_6_] = (byte) -111;
-										} else if ((i_7_ ^ 0xffffffff) != -8218) {
-											if ((i_7_ ^ 0xffffffff) != -8221) {
-												if ((i_7_ ^ 0xffffffff) != -8222) {
-													if (i_7_ == 8226) {
-														bs[i_6_] = (byte) -107;
-													} else if ((i_7_ ^ 0xffffffff) == -8212) {
-														bs[i_6_] = (byte) -106;
-													} else if ((i_7_ ^ 0xffffffff) != -8213) {
-														if (i_7_ != 732) {
-															if ((i_7_ ^ 0xffffffff) != -8483) {
-																if (i_7_ != 353) {
-																	if (i_7_ == 8250) {
-																		bs[i_6_] = (byte) -101;
-																	} else if ((i_7_ ^ 0xffffffff) != -340) {
-																		if (i_7_ == 382) {
-																			bs[i_6_] = (byte) -98;
-																		} else if ((i_7_ ^ 0xffffffff) == -377) {
-																			bs[i_6_] = (byte) -97;
-																		} else {
-																			bs[i_6_] = (byte) 63;
-																		}
-																	} else {
-																		bs[i_6_] = (byte) -100;
-																	}
-																} else {
-																	bs[i_6_] = (byte) -102;
-																}
-															} else {
-																bs[i_6_] = (byte) -103;
-															}
-														} else {
-															bs[i_6_] = (byte) -104;
-														}
-													} else {
-														bs[i_6_] = (byte) -105;
-													}
-												} else {
-													bs[i_6_] = (byte) -108;
-												}
-											} else {
-												bs[i_6_] = (byte) -109;
-											}
-										} else {
-											bs[i_6_] = (byte) -110;
-										}
-									} else {
-										bs[i_6_] = (byte) -114;
-									}
-								} else {
-									bs[i_6_] = (byte) -117;
-								}
-							} else {
-								bs[i_6_] = (byte) -118;
-							}
-						} else {
-							bs[i_6_] = (byte) -122;
-						}
-					} else {
-						bs[i_6_] = (byte) -124;
-					}
-				} else {
+				} else if (i_7_ == 402) {
 					bs[i_6_] = (byte) -125;
+				} else if (i_7_ == 8222) {
+					bs[i_6_] = (byte) -124;
+				} else if (i_7_ == 8230) {
+					bs[i_6_] = (byte) -123;
+				} else if (i_7_ == 8224) {
+					bs[i_6_] = (byte) -122;
+				} else if (i_7_ == 8225) {
+					bs[i_6_] = (byte) -121;
+				} else if (i_7_ == 710) {
+					bs[i_6_] = (byte) -120;
+				} else if (i_7_ == 8240) {
+					bs[i_6_] = (byte) -119;
+				} else if (i_7_ == 352) {
+					bs[i_6_] = (byte) -118;
+				} else if (i_7_ == 8249) {
+					bs[i_6_] = (byte) -117;
+				} else if (i_7_ == 338) {
+					bs[i_6_] = (byte) -116;
+				} else if (i_7_ == 381) {
+					bs[i_6_] = (byte) -114;
+				} else if (i_7_ == 8216) {
+					bs[i_6_] = (byte) -111;
+				} else if (i_7_ == 8217) {
+					bs[i_6_] = (byte) -110;
+				} else if (i_7_ == 8220) {
+					bs[i_6_] = (byte) -109;
+				} else if (i_7_ == 8221) {
+					bs[i_6_] = (byte) -108;
+				} else if (i_7_ == 8226) {
+					bs[i_6_] = (byte) -107;
+				} else if (i_7_ == 8211) {
+					bs[i_6_] = (byte) -106;
+				} else if (i_7_ == 8212) {
+					bs[i_6_] = (byte) -105;
+				} else if (i_7_ == 732) {
+					bs[i_6_] = (byte) -104;
+				} else if (i_7_ == 8482) {
+					bs[i_6_] = (byte) -103;
+				} else if (i_7_ == 353) {
+					bs[i_6_] = (byte) -102;
+				} else if (i_7_ == 8250) {
+					bs[i_6_] = (byte) -101;
+				} else if (i_7_ == 339) {
+					bs[i_6_] = (byte) -100;
+				} else if (i_7_ == 382) {
+					bs[i_6_] = (byte) -98;
+				} else if (i_7_ == 376) {
+					bs[i_6_] = (byte) -97;
+				} else {
+					bs[i_6_] = (byte) 63;
 				}
-			} else {
+            } else {
 				bs[i_6_] = (byte) i_7_;
 			}
 		}

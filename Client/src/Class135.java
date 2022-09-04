@@ -18,12 +18,12 @@ public class Class135
 		if (i > 40) {
 			anInt1689++;
 			Node_Sub47 node_sub47 = (Node_Sub47) Class320_Sub3.aHashTable8234.method1518(3512, (long) player.index);
-			if (node_sub47 != null) {
-				node_sub47.method2951(918119625);
-			} else {
+			if (node_sub47 == null) {
 				Class262_Sub1.method3150(player.plane, player, player.scenePositionXQueue[0], player.scenePositionYQueue[0], null, null, (byte) -8, 0);
+			} else {
+				node_sub47.method2951(918119625);
 			}
-		}
+        }
 	}
 	
 	static final Object method1588(byte[] bs, int i, boolean bool) {
@@ -31,7 +31,7 @@ public class Class135
 		if (bs == null) {
 			return null;
 		}
-		if ((bs.length ^ 0xffffffff) < -137 && !Class169_Sub1.aBoolean8783) {
+		if (bs.length > 136 && !Class169_Sub1.aBoolean8783) {
 			try {
 				Class201 class201 = (Class201) Class.forName("Class201_Sub1").newInstance();
 				class201.method2021(bs, 0);

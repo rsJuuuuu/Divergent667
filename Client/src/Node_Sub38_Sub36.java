@@ -20,22 +20,18 @@ public class Node_Sub38_Sub36 extends Node_Sub38
 		while_265_:
 			do {
 				do {
-					if ((i_0_ ^ 0xffffffff) != -1) {
-						if ((i_0_ ^ 0xffffffff) != -2) {
-							if (i_0_ != 2) {
-								if ((i_0_ ^ 0xffffffff) != -4) {
-									break while_266_;
-								}
-							} else {
-								break;
-							}
-							break while_265_;
-						}
-					} else {
+					if (i_0_ == 0) {
 						anInt10458 = buffer.readUnsignedShort();
 						break while_266_;
+					} else if (i_0_ != 1) {
+						if (i_0_ == 2) {
+							break;
+						} else if (i_0_ != 3) {
+							break while_266_;
+						}
+						break while_265_;
 					}
-					anInt10457 = buffer.readUnsignedShort();
+                    anInt10457 = buffer.readUnsignedShort();
 					break while_266_;
 				} while (false);
 				anInt10459 = buffer.readUnsignedShort();
@@ -87,7 +83,7 @@ public class Node_Sub38_Sub36 extends Node_Sub38
 				int i_12_ = i_6_ * i_6_ >> 12;
 				int i_13_ = i_7_ * i_7_ >> 12;
 				int i_14_;
-				for (i_14_ = 0; i_12_ + i_13_ < 16384 && (anInt10457 ^ 0xffffffff) < (i_14_ ^ 0xffffffff); i_13_ = i_11_ * i_11_ >> 12) {
+				for (i_14_ = 0; i_12_ + i_13_ < 16384 && i_14_ < anInt10457; i_13_ = i_11_ * i_11_ >> 12) {
 					i_11_ = i_9_ + (i_11_ * i_10_ >> 12) * 2;
 					i_10_ = i_8_ + i_12_ - i_13_;
 					i_14_++;

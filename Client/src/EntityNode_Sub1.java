@@ -30,7 +30,7 @@ public class EntityNode_Sub1 extends EntityNode
 		if (i_0_ != -26296) {
 			aNode_Sub9_Sub1_5929 = null;
 		}
-		if ((i ^ 0xffffffff) > -1 || i >= 100) {
+		if (i < 0 || i >= 100) {
 			return null;
 		}
 		return r_Sub2.aClass253Array11063[i];

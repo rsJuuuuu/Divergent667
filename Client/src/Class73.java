@@ -52,7 +52,7 @@ public class Class73
 		if (i >= -72) {
 			aClass301_980 = null;
 		}
-		if (!bool && ((i_4_ ^ 0xffffffff) == -5 || i_4_ == 8 || (i_4_ ^ 0xffffffff) == -10)) {
+		if (!bool && (i_4_ == 4 || i_4_ == 8 || i_4_ == 9)) {
 			if (i_4_ == 4) {
 				i_1_ = i_3_;
 			}
@@ -61,10 +61,10 @@ public class Class73
 		if (i_4_ != 0 && bool_2_) {
 			i_4_ |= ~0x7fffffff;
 		}
-		if ((i_4_ ^ 0xffffffff) == (anInt987 ^ 0xffffffff)) {
-			if ((anInt987 ^ 0xffffffff) != -1) {
+		if (anInt987 == i_4_) {
+			if (anInt987 != 0) {
 				aClass339Array982[anInt987 & 0x7fffffff].method3920(-1, bool_2_);
-				if (anInt991 != i_3_ || (anInt989 ^ 0xffffffff) != (i_1_ ^ 0xffffffff)) {
+				if (anInt991 != i_3_ || i_1_ != anInt989) {
 					aClass339Array982[anInt987 & 0x7fffffff].method3919(-13437, i_1_, i_3_);
 					anInt989 = i_1_;
 					anInt991 = i_3_;

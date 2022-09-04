@@ -24,7 +24,7 @@ abstract class r extends CacheNode
 			return true;
 		}
 		char[] cs = Class175.aCharArray2098;
-		for (int i = 0; (i ^ 0xffffffff) > (cs.length ^ 0xffffffff); i++) {
+		for (int i = 0; cs.length > i; i++) {
 			int i_0_ = cs[i];
 			if (i_0_ == c) {
 				return true;
@@ -33,7 +33,7 @@ abstract class r extends CacheNode
 		char[] cs_1_ = Node_Sub28.aCharArray7331;
 		for (int i = 0; i < cs_1_.length; i++) {
 			int i_2_ = cs_1_[i];
-			if ((c ^ 0xffffffff) == (i_2_ ^ 0xffffffff)) {
+			if (i_2_ == c) {
 				return true;
 			}
 		}
@@ -74,24 +74,24 @@ abstract class r extends CacheNode
 				if (i_6_ <= i_8_ + -c_9_) {
 					return 1;
 				}
-				if ((c ^ 0xffffffff) != -1) {
-					c_10_ = c;
-				} else {
+				if (c == 0) {
 					c_10_ = string_4_.charAt(i_7_++);
-				}
-				if ((c_9_ ^ 0xffffffff) != -1) {
-					c_11_ = c_9_;
 				} else {
-					c_11_ = string.charAt(i_8_++);
+					c_10_ = c;
 				}
-				c = GLPlane.method3264(c_10_, true);
+                if (c_9_ == 0) {
+                    c_11_ = string.charAt(i_8_++);
+                } else {
+                    c_11_ = c_9_;
+                }
+                c = GLPlane.method3264(c_10_, true);
 				c_9_ = GLPlane.method3264(c_11_, true);
 				c_10_ = Class169.method1755(6272, i, c_10_);
 				c_11_ = Class169.method1755(b + 6276, i, c_11_);
-				if ((c_10_ ^ 0xffffffff) != (c_11_ ^ 0xffffffff) && (Character.toUpperCase(c_10_) ^ 0xffffffff) != (Character.toUpperCase(c_11_) ^ 0xffffffff)) {
+				if (c_11_ != c_10_ && Character.toUpperCase(c_11_) != Character.toUpperCase(c_10_)) {
 					c_10_ = Character.toLowerCase(c_10_);
 					c_11_ = Character.toLowerCase(c_11_);
-					if ((c_11_ ^ 0xffffffff) != (c_10_ ^ 0xffffffff)) {
+					if (c_10_ != c_11_) {
 						break;
 					}
 				}
@@ -99,19 +99,19 @@ abstract class r extends CacheNode
 			return Class320_Sub22.method3766((byte) 119, i, c_10_) + -Class320_Sub22.method3766((byte) 101, i, c_11_);
 		} while (false);
 		int i_12_ = Math.min(i_5_, i_6_);
-		for (int i_13_ = 0; (i_12_ ^ 0xffffffff) < (i_13_ ^ 0xffffffff); i_13_++) {
-			if ((i ^ 0xffffffff) != -3) {
-				i_7_ = i_8_ = i_13_;
-			} else {
+		for (int i_13_ = 0; i_13_ < i_12_; i_13_++) {
+			if (i == 2) {
 				i_7_ = -1 + (i_5_ + -i_13_);
 				i_8_ = -1 + (i_6_ + -i_13_);
+			} else {
+				i_7_ = i_8_ = i_13_;
 			}
-			char c_14_ = string_4_.charAt(i_7_);
+            char c_14_ = string_4_.charAt(i_7_);
 			char c_15_ = string.charAt(i_8_);
-			if ((c_14_ ^ 0xffffffff) != (c_15_ ^ 0xffffffff) && (Character.toUpperCase(c_14_) ^ 0xffffffff) != (Character.toUpperCase(c_15_) ^ 0xffffffff)) {
+			if (c_15_ != c_14_ && Character.toUpperCase(c_15_) != Character.toUpperCase(c_14_)) {
 				c_14_ = Character.toLowerCase(c_14_);
 				c_15_ = Character.toLowerCase(c_15_);
-				if ((c_14_ ^ 0xffffffff) != (c_15_ ^ 0xffffffff)) {
+				if (c_15_ != c_14_) {
 					return Class320_Sub22.method3766((byte) 106, i, c_14_) - Class320_Sub22.method3766((byte) 109, i, c_15_);
 				}
 			}
@@ -155,7 +155,7 @@ abstract class r extends CacheNode
 			method2361(-95, -35);
 		}
 		anInt9584++;
-        return !((i < 0 || (i ^ 0xffffffff) < -4) && (i ^ 0xffffffff) != -10);
+        return !((i < 0 || i > 3) && i != 9);
     }
 	
 	public static void method2362(int i) {

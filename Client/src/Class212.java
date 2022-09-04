@@ -29,16 +29,16 @@ public class Class212 implements Interface8
 		byte[] bs_10_ = new byte[i_4_ * i_7_ * i_8_];
 		for (;;) {
 			OpenGL.glTexImage2Dub(i_0_, i_5_, i, i_2_, i_3_, 0, i_1_, 5121, bs_9_, 0);
-			if ((i_6_ ^ 0xffffffff) >= -2) {
+			if (i_6_ <= 1) {
 				break;
 			}
 			int i_11_ = i_4_ * i_2_;
-			for (int i_12_ = 0; (i_4_ ^ 0xffffffff) < (i_12_ ^ 0xffffffff); i_12_++) {
+			for (int i_12_ = 0; i_12_ < i_4_; i_12_++) {
 				int i_13_ = i_12_;
 				int i_14_ = i_12_;
 				int i_15_ = i_11_ + i_14_;
-				for (int i_16_ = 0; (i_8_ ^ 0xffffffff) < (i_16_ ^ 0xffffffff); i_16_++) {
-					for (int i_17_ = 0; (i_7_ ^ 0xffffffff) < (i_17_ ^ 0xffffffff); i_17_++) {
+				for (int i_16_ = 0; i_16_ < i_8_; i_16_++) {
+					for (int i_17_ = 0; i_17_ < i_7_; i_17_++) {
 						int i_18_ = bs_9_[i_14_];
 						i_14_ += i_4_;
 						i_18_ += bs_9_[i_14_];
@@ -95,28 +95,26 @@ public class Class212 implements Interface8
 		}
 		float f_32_ = (float) Math.atan2((double) f_28_, (double) f_30_) / 6.2831855F + 0.5F;
 		float f_33_ = (float) Math.asin((double) (f_29_ / f_31_)) / 3.1415927F + 0.5F + f;
-		if (i_24_ != 1) {
-			if (i_24_ == 2) {
-				f_32_ = -f_32_;
-				f_33_ = -f_33_;
-			} else if ((i_24_ ^ 0xffffffff) == -4) {
-				float f_34_ = f_32_;
-				f_32_ = f_33_;
-				f_33_ = -f_34_;
-			}
-		} else {
+		if (i_24_ == 1) {
 			float f_35_ = f_32_;
 			f_32_ = -f_33_;
 			f_33_ = f_35_;
-		}
-		fs[0] = f_32_;
+		} else if (i_24_ == 2) {
+            f_32_ = -f_32_;
+            f_33_ = -f_33_;
+        } else if (i_24_ == 3) {
+            float f_34_ = f_32_;
+            f_32_ = f_33_;
+            f_33_ = -f_34_;
+        }
+        fs[0] = f_32_;
 		fs[1] = f_33_;
 	}
 	
 	static final void method2054(byte b, int i, Actor actor, int i_36_, Actor actor_37_, int i_38_, int i_39_, int i_40_, int i_41_, int i_42_) {
 		anInt5129++;
 		int i_43_ = actor_37_.method855((byte) -71);
-		if ((i_43_ ^ 0xffffffff) != 0) {
+		if (i_43_ != -1) {
 			@SuppressWarnings("unused")
 			Object object = null;
 			if (b == -124) {

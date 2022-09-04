@@ -55,12 +55,12 @@ public class Class58
 				Animable animable_1_ = null;
 				for (Animable animable_2_ = Class303.anAnimableArray3827[i]; animable_2_ != null; animable_2_ = animable_2_.anAnimable5941) {
 					if (animable_2_ == animable) {
-						if (animable_1_ != null) {
-							animable_1_.anAnimable5941 = animable_2_.anAnimable5941;
-						} else {
+						if (animable_1_ == null) {
 							Class303.anAnimableArray3827[i] = animable_2_.anAnimable5941;
+						} else {
+							animable_1_.anAnimable5941 = animable_2_.anAnimable5941;
 						}
-						Class194_Sub1.aBoolean6892 = true;
+                        Class194_Sub1.aBoolean6892 = true;
 						return;
 					}
 					animable_1_ = animable_2_;
@@ -68,12 +68,12 @@ public class Class58
 				animable_1_ = null;
 				for (Animable animable_3_ = SeekableFile.anAnimableArray3884[i]; animable_3_ != null; animable_3_ = animable_3_.anAnimable5941) {
 					if (animable_3_ == animable) {
-						if (animable_1_ != null) {
-							animable_1_.anAnimable5941 = animable_3_.anAnimable5941;
-						} else {
+						if (animable_1_ == null) {
 							SeekableFile.anAnimableArray3884[i] = animable_3_.anAnimable5941;
+						} else {
+							animable_1_.anAnimable5941 = animable_3_.anAnimable5941;
 						}
-						Class194_Sub1.aBoolean6892 = true;
+                        Class194_Sub1.aBoolean6892 = true;
 						return;
 					}
 					animable_1_ = animable_3_;
@@ -81,12 +81,12 @@ public class Class58
 				animable_1_ = null;
 				for (Animable animable_4_ = Node_Sub36.anAnimableArray7429[i]; animable_4_ != null; animable_4_ = animable_4_.anAnimable5941) {
 					if (animable_4_ == animable) {
-						if (animable_1_ != null) {
-							animable_1_.anAnimable5941 = animable_4_.anAnimable5941;
-						} else {
+						if (animable_1_ == null) {
 							Node_Sub36.anAnimableArray7429[i] = animable_4_.anAnimable5941;
+						} else {
+							animable_1_.anAnimable5941 = animable_4_.anAnimable5941;
 						}
-						Class194_Sub1.aBoolean6892 = true;
+                        Class194_Sub1.aBoolean6892 = true;
 						return;
 					}
 					animable_1_ = animable_4_;
@@ -114,7 +114,7 @@ public class Class58
 			anInt862 = 81;
 		}
 		anInt854++;
-        return !((i ^ 0xffffffff) != -12 && (i ^ 0xffffffff) != -13 && i != 13);
+        return !(i != 11 && i != 12 && i != 13);
     }
 	
 	public static void method578(boolean bool) {

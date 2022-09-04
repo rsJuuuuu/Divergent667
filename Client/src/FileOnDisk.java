@@ -120,7 +120,7 @@ public class FileOnDisk
 		aFile1330 = file;
 		aLong1328 = l;
 		int i = aRandomAccessFile1325.read();
-		if ((i ^ 0xffffffff) != 0 && !string.equals("r")) {
+		if (i != -1 && !string.equals("r")) {
 			aRandomAccessFile1325.seek(0L);
 			aRandomAccessFile1325.write(i);
 		}

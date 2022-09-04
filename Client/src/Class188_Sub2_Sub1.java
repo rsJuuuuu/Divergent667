@@ -45,7 +45,7 @@ public class Class188_Sub2_Sub1 extends Class188_Sub2
 			int i_2_ = aClass229_9354.method2123(16, i).anInt3682;
 			if (i_2_ != 0) {
 				int i_3_ = Class24.aClass275_442.CONFIG_VALUES[i];
-				if ((i_2_ ^ 0xffffffff) == -6) {
+				if (i_2_ == 5) {
 					Class121.anInt1521 = i_3_;
 				}
 				if (i_2_ == 6) {
@@ -82,10 +82,10 @@ public class Class188_Sub2_Sub1 extends Class188_Sub2
 	static final Class241 method1910(byte b, SignLink signlink, String string, String string_7_, int i) {
 		anInt9357++;
 		string = string.replace("runescape", Settings.SERVER_NAME);
-		if ((i ^ 0xffffffff) == -1) {
+		if (i == 0) {
 			return signlink.method3636(string, (byte) 95);
 		}
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			try {
 				Object object = Class2.method166((byte) -37, Class96.anApplet1270, string_7_, new Object[] { new URL(Class96.anApplet1270.getCodeBase(), string).toString() });
 				if (object == null) {

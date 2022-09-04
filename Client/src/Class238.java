@@ -21,7 +21,7 @@ public class Class238
 	
 	static final void method3019(int i, int i_0_, int[] is, Object[] objects, boolean bool) {
 		anInt2914++;
-		if ((i_0_ ^ 0xffffffff) > (i ^ 0xffffffff)) {
+		if (i > i_0_) {
 			int i_1_ = (i_0_ + i) / 2;
 			int i_2_ = i_0_;
 			int i_3_ = is[i_1_];
@@ -30,8 +30,8 @@ public class Class238
 			Object object = objects[i_1_];
 			objects[i_1_] = objects[i];
 			objects[i] = object;
-			int i_4_ = (i_3_ ^ 0xffffffff) != -2147483648 ? 1 : 0;
-			for (int i_5_ = i_0_; (i ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++) {
+			int i_4_ = i_3_ != 2147483647 ? 1 : 0;
+			for (int i_5_ = i_0_; i_5_ < i; i_5_++) {
 				if (i_3_ + (i_5_ & i_4_) > is[i_5_]) {
 					int i_6_ = is[i_5_];
 					is[i_5_] = is[i_2_];
@@ -61,13 +61,13 @@ public class Class238
 		actor.anInt5940 += (-actor.anInt5940 + i_10_) / i_8_;
 		actor.anInt5934 += (-actor.anInt5934 + i_9_) / i_8_;
 		actor.anInt10901 = i;
-		if ((actor.forceMovementDirection ^ 0xffffffff) == -1) {
+		if (actor.forceMovementDirection == 0) {
 			actor.method856((byte) -115, 8192);
 		}
 		if (actor.forceMovementDirection == 1) {
 			actor.method856((byte) -112, 12288);
 		}
-		if ((actor.forceMovementDirection ^ 0xffffffff) == -3) {
+		if (actor.forceMovementDirection == 2) {
 			actor.method856((byte) 23, 0);
 		}
 		if (actor.forceMovementDirection == 3) {
@@ -77,11 +77,11 @@ public class Class238
 	
 	static final boolean method3021(int i, int i_11_, int i_12_) {
 		anInt2916++;
-		if ((i_11_ ^ 0xffffffff) > -1 || i < 0 || i_11_ >= CacheNode_Sub11.aByteArrayArrayArray9550[1].length || (i ^ 0xffffffff) <= (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_11_].length ^ 0xffffffff)) {
+		if (i_11_ < 0 || i < 0 || i_11_ >= CacheNode_Sub11.aByteArrayArrayArray9550[1].length || CacheNode_Sub11.aByteArrayArrayArray9550[1][i_11_].length <= i) {
 			return false;
 		}
 		@SuppressWarnings("unused")
 		int i_13_ = 90 % ((i_12_ - 38) / 41);
-        return (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_11_][i] & 0x2 ^ 0xffffffff) != -1;
+        return (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_11_][i] & 0x2) != 0;
     }
 }

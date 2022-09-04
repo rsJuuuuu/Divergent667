@@ -74,7 +74,7 @@ public class Class97 {
 				int i_9_ = image.getWidth(Class158.aClient1983);
 				int i_10_ = image.getHeight(Class158.aClient1983);
 				if (mediatracker.isErrorAny() || i_9_ < 0
-						|| (i_10_ ^ 0xffffffff) > -1) {
+						|| i_10_ < 0) {
 					throw new RuntimeException("");
 				}
 				int[] is = new int[i_10_ * i_9_];
@@ -98,7 +98,7 @@ public class Class97 {
 
 	static final void method1079(byte b, int i, int i_11_, boolean bool,
 			int i_12_, boolean bool_13_, int i_14_) {
-		if ((i ^ 0xffffffff) < (i_11_ ^ 0xffffffff)) {
+		if (i_11_ < i) {
 			int i_15_ = (i_11_ - -i) / 2;
 			int i_16_ = i_11_;
 			Class377_Sub1 class377_sub1 = Class180.aClass377_Sub1Array2143[i_15_];
@@ -129,7 +129,7 @@ public class Class97 {
 			int i_21_, int i_22_, int i_23_) {
 		anInt1278++;
 		if (b >= 62) {
-			if ((Class262_Sub4.anInt7722 ^ 0xffffffff) >= (i_23_ ^ 0xffffffff)
+			if (i_23_ >= Class262_Sub4.anInt7722
 					&& za_Sub2.anInt10513 >= i_21_
 					&& Class384.anInt4906 <= i_22_
 					&& Node_Sub25_Sub1.anInt9936 >= i) {
@@ -140,12 +140,12 @@ public class Class97 {
 					Class289.method3405(i_19_, i_23_, i_21_, i, i_20_, i_22_,
 							(byte) 44);
 				}
-			} else if (i_20_ != 1) {
+			} else if (i_20_ == 1) {
+				GLSprite_Sub1.method1201(i, i_23_, i_19_, -12935, i_21_, i_22_);
+			} else {
 				Node_Sub19.method2608(i_20_, (byte) 97, i_22_, i_21_, i, i_23_,
 						i_19_);
-			} else {
-				GLSprite_Sub1.method1201(i, i_23_, i_19_, -12935, i_21_, i_22_);
 			}
-		}
+        }
 	}
 }

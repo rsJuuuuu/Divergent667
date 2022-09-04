@@ -23,7 +23,7 @@ public class Node_Sub41 extends Node
 		boolean bool_0_ = false;
 		boolean bool_1_ = false;
 		if (Class240.aSignLink2946.aBoolean4005 && !Class240.aSignLink2946.aBoolean3985) {
-            bool = !(Node_Sub23.aNode_Sub39_7201.anInt7484 < 512 && (Node_Sub23.aNode_Sub39_7201.anInt7484 ^ 0xffffffff) != -1);
+            bool = !(Node_Sub23.aNode_Sub39_7201.anInt7484 < 512 && Node_Sub23.aNode_Sub39_7201.anInt7484 != 0);
 			if (SignLink.aString3981.startsWith("win")) {
 				bool_1_ = true;
 				bool_0_ = true;
@@ -59,19 +59,17 @@ public class Node_Sub41 extends Node
 			if (bool_1_) {
 				try {
 					i_4_ = Class194.method1961(1000, 3, 13968);
-					if ((Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) ^ 0xffffffff) == -4) {
+					if (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) == 3) {
 						Renderer renderer = Class93.aGraphicsToolkit1241.c();
 						long l = renderer.aLong3661 & 0xffffffffffffL;
 						int i_5_ = renderer.anInt3656;
-						if ((i_5_ ^ 0xffffffff) != -4319) {
-							if (i_5_ != 4098) {
-								break;
-							}
-						} else {
+						if (i_5_ == 4318) {
 							bool_0_ = bool_0_ & l >= 64425238954L;
 							break;
-						}
-						bool_0_ = bool_0_ & (l ^ 0xffffffffffffffffL) <= -60129613780L;
+						} else if (i_5_ != 4098) {
+                            break;
+                        }
+                        bool_0_ = bool_0_ & l >= 60129613779L;
 					}
 				} catch (Exception exception) {
 					/* empty */
@@ -85,15 +83,15 @@ public class Node_Sub41 extends Node
 				/* empty */
 			}
 		}
-		if ((i_2_ ^ 0xffffffff) == 0 && i_3_ == -1 && (i_4_ ^ 0xffffffff) == 0) {
+		if (i_2_ == -1 && i_3_ == -1 && i_4_ == -1) {
 			return Class332.method3844(-97);
 		}
 		i_3_ *= 1.1F;
 		i_4_ *= 1.1F;
-		if ((i_2_ ^ 0xffffffff) < (i_4_ ^ 0xffffffff) && i_2_ > i_3_) {
+		if (i_4_ < i_2_ && i_2_ > i_3_) {
 			return Class339_Sub8.method3945(false, i_2_);
 		}
-		if ((i_4_ ^ 0xffffffff) < (i_3_ ^ 0xffffffff)) {
+		if (i_3_ < i_4_) {
 			return Canvas.method125(3, i_4_, (byte) -45);
 		}
 		return Canvas.method125(1, i_3_, (byte) -45);
@@ -111,9 +109,9 @@ public class Node_Sub41 extends Node
 		if (!CacheNode_Sub11.method2336(-1, i_7_, i_6_)) {
 			return false;
 		}
-		if (Class46.method470(i_7_, -77, i_6_) | (0x9000 & i_6_ ^ 0xffffffff) != -1 | Class234.method2150(i_7_, 256, i_6_)) {
+		if (Class46.method470(i_7_, -77, i_6_) | (0x9000 & i_6_) != 0 | Class234.method2150(i_7_, 256, i_6_)) {
 			return true;
 		}
-		return (0x37 & i_7_ ^ 0xffffffff) == -1 & (Class278.method3367(i_7_, i_6_, (byte) -119) | (0x2000 & i_6_ ^ 0xffffffff) != -1 | Class320_Sub9.method3713(122, i_6_, i_7_));
+		return (0x37 & i_7_) == 0 & (Class278.method3367(i_7_, i_6_, (byte) -119) | (0x2000 & i_6_) != 0 | Class320_Sub9.method3713(122, i_6_, i_7_));
 	}
 }

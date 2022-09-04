@@ -28,13 +28,13 @@ public class Class289
 		anInt3628++;
 		int i_5_ = i_2_ + -i_3_;
 		int i_6_ = i_4_ - -i_3_;
-		for (int i_7_ = i_4_; (i_6_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++)
+		for (int i_7_ = i_4_; i_7_ < i_6_; i_7_++)
 			Class369.method4086(i_1_, i, i_0_, Class169_Sub4.anIntArrayArray8826[i_7_], b + -44);
-		for (int i_8_ = i_2_; (i_5_ ^ 0xffffffff) > (i_8_ ^ 0xffffffff); i_8_--)
+		for (int i_8_ = i_2_; i_8_ > i_5_; i_8_--)
 			Class369.method4086(i_1_, i, i_0_, Class169_Sub4.anIntArrayArray8826[i_8_], 0);
 		int i_9_ = i_1_ - i_3_;
 		int i_10_ = i_0_ - -i_3_;
-		for (int i_11_ = i_6_; (i_11_ ^ 0xffffffff) >= (i_5_ ^ 0xffffffff); i_11_++) {
+		for (int i_11_ = i_6_; i_5_ >= i_11_; i_11_++) {
 			int[] is = Class169_Sub4.anIntArrayArray8826[i_11_];
 			Class369.method4086(i_10_, i, i_0_, is, b + -44);
 			Class369.method4086(i_1_, i, i_9_, is, 0);
@@ -75,45 +75,37 @@ public class Class289
 	
 	private final void method3409(byte b, BufferedStream buffer, int i) {
 		anInt3639++;
-		if ((i ^ 0xffffffff) != -2) {
-			if ((i ^ 0xffffffff) == -3) {
-				anInt3640 = buffer.readUnsignedByte();
-			} else if ((i ^ 0xffffffff) != -4) {
-				if ((i ^ 0xffffffff) == -6) {
-					aBoolean3636 = false;
-				} else if (i != 7) {
-					if (i == 8) {
-						aClass71_3635.anInt961 = anInt3637;
-					} else if (i != 9) {
-						if ((i ^ 0xffffffff) == -11) {
-							aBoolean3638 = false;
-						} else if ((i ^ 0xffffffff) == -12) {
-							anInt3633 = buffer.readUnsignedByte();
-						} else if ((i ^ 0xffffffff) == -13) {
-							aBoolean3643 = true;
-						} else if (i == 13) {
-							anInt3646 = buffer.read24BitInteger();
-						} else if (i == 14) {
-							anInt3634 = buffer.readUnsignedByte() << 2;
-						} else if (i == 16) {
-							anInt3641 = buffer.readUnsignedByte();
-						}
-					} else {
-						anInt3632 = buffer.readUnsignedShort() << 2;
-					}
-				} else {
-					anInt3629 = Node_Sub15_Sub12.method2582(buffer.read24BitInteger(), -1);
-				}
-			} else {
-				anInt3640 = buffer.readUnsignedShort();
-				if ((anInt3640 ^ 0xffffffff) == -65536) {
-					anInt3640 = -1;
-				}
-			}
-		} else {
+		if (i == 1) {
 			anInt3631 = Node_Sub15_Sub12.method2582(buffer.read24BitInteger(), -1);
-		}
-		@SuppressWarnings("unused")
+		} else if (i == 2) {
+            anInt3640 = buffer.readUnsignedByte();
+        } else if (i == 3) {
+            anInt3640 = buffer.readUnsignedShort();
+            if (anInt3640 == 65535) {
+                anInt3640 = -1;
+            }
+        } else if (i == 5) {
+            aBoolean3636 = false;
+        } else if (i == 7) {
+            anInt3629 = Node_Sub15_Sub12.method2582(buffer.read24BitInteger(), -1);
+        } else if (i == 8) {
+            aClass71_3635.anInt961 = anInt3637;
+        } else if (i == 9) {
+            anInt3632 = buffer.readUnsignedShort() << 2;
+        } else if (i == 10) {
+            aBoolean3638 = false;
+        } else if (i == 11) {
+            anInt3633 = buffer.readUnsignedByte();
+        } else if (i == 12) {
+            aBoolean3643 = true;
+        } else if (i == 13) {
+            anInt3646 = buffer.read24BitInteger();
+        } else if (i == 14) {
+            anInt3634 = buffer.readUnsignedByte() << 2;
+        } else if (i == 16) {
+            anInt3641 = buffer.readUnsignedByte();
+        }
+        @SuppressWarnings("unused")
 		int i_12_ = 6 % ((74 - b) / 49);
 	}
 	

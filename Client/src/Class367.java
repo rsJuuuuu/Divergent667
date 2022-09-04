@@ -29,20 +29,16 @@ public class Class367
 	}
 	
 	private final void method4075(int i, BufferedStream buffer, byte b) {
-		if (i != 1) {
-			if ((i ^ 0xffffffff) == -3) {
-				anInt4542 = buffer.readUnsignedShort();
-			} else if ((i ^ 0xffffffff) != -4) {
-				if (i == 4) {
-					anInt4538 = buffer.readShort();
-				}
-			} else {
-				anInt4537 = buffer.readUnsignedShort();
-			}
-		} else {
+		if (i == 1) {
 			anInt4536 = buffer.readUnsignedByte();
+		} else if (i == 2) {
+			anInt4542 = buffer.readUnsignedShort();
+		} else if (i == 3) {
+			anInt4537 = buffer.readUnsignedShort();
+		} else if (i == 4) {
+			anInt4538 = buffer.readShort();
 		}
-		int i_2_ = -79 / ((79 - b) / 38);
+        int i_2_ = -79 / ((79 - b) / 38);
 		anInt4532++;
 	}
 	

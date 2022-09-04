@@ -170,25 +170,23 @@ public class Class336_Sub3 extends Class336
 		float f_21_;
 		float f_22_;
 		float f_23_;
-		if (!(f_20_ > 0.00390625F) && !(f_20_ < -0.00390625F)) {
-			if (!(f_19_ > 0.00390625F) && !(f_19_ < -0.00390625F)) {
-				float f_24_ = -f_18_ / f;
-				f_23_ = f_24_ * aFloat8617 + aFloat8594;
-				f_21_ = aFloat8604 * f_24_ + aFloat8615;
-				f_22_ = aFloat8609 + aFloat8591 * f_24_;
-			} else {
-				float f_25_ = -f_18_ / f_19_;
-				f_22_ = aFloat8607 * f_25_ + aFloat8609;
-				f_21_ = aFloat8615 + f_25_ * aFloat8593;
-				f_23_ = aFloat8608 * f_25_ + aFloat8594;
-			}
-		} else {
+		if ((f_20_ > 0.00390625F) || (f_20_ < -0.00390625F)) {
 			float f_26_ = -f_18_ / f_20_;
 			f_21_ = f_26_ * aFloat8605 + aFloat8615;
 			f_22_ = aFloat8609 + f_26_ * aFloat8625;
 			f_23_ = aFloat8594 + aFloat8596 * f_26_;
+		} else if ((f_19_ > 0.00390625F) || (f_19_ < -0.00390625F)) {
+			float f_25_ = -f_18_ / f_19_;
+			f_22_ = aFloat8607 * f_25_ + aFloat8609;
+			f_21_ = aFloat8615 + f_25_ * aFloat8593;
+			f_23_ = aFloat8608 * f_25_ + aFloat8594;
+		} else {
+			float f_24_ = -f_18_ / f;
+			f_23_ = f_24_ * aFloat8617 + aFloat8594;
+			f_21_ = aFloat8604 * f_24_ + aFloat8615;
+			f_22_ = aFloat8609 + aFloat8591 * f_24_;
 		}
-		fs[2] = f * aFloat8604 + (aFloat8605 * f_20_ + aFloat8593 * f_19_);
+        fs[2] = f * aFloat8604 + (aFloat8605 * f_20_ + aFloat8593 * f_19_);
 		if (b != -35) {
 			method3853(-62, 94, 34, null);
 		}
@@ -220,7 +218,12 @@ public class Class336_Sub3 extends Class336
 	}
 	
 	final void method3897(byte b, int i, float f, int i_39_, int i_40_, float f_41_, float f_42_) {
-		if ((i_39_ ^ 0xffffffff) != -1) {
+		if (i_39_ == 0) {
+			aFloat8604 = 1.0F;
+			aFloat8596 = (float) i;
+			aFloat8625 = aFloat8605 = aFloat8608 = aFloat8593 = aFloat8617 = aFloat8591 = 0.0F;
+			aFloat8607 = (float) i_40_;
+		} else {
 			float f_43_ = GameStub.aFloatArray39[i_39_ & 0x3fff];
 			float f_44_ = GameStub.aFloatArray42[i_39_ & 0x3fff];
 			aFloat8607 = f_43_ * (float) i_40_;
@@ -229,13 +232,8 @@ public class Class336_Sub3 extends Class336
 			aFloat8605 = aFloat8593 = aFloat8617 = aFloat8591 = 0.0F;
 			aFloat8608 = -f_44_ * (float) i_40_;
 			aFloat8604 = 1.0F;
-		} else {
-			aFloat8604 = 1.0F;
-			aFloat8596 = (float) i;
-			aFloat8625 = aFloat8605 = aFloat8608 = aFloat8593 = aFloat8617 = aFloat8591 = 0.0F;
-			aFloat8607 = (float) i_40_;
 		}
-		if (b >= 6) {
+        if (b >= 6) {
 			anInt8618++;
 			aFloat8615 = f_41_;
 			aFloat8609 = f_42_;

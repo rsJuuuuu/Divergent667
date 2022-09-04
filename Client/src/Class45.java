@@ -26,7 +26,7 @@ public class Class45 implements Interface12
 		if (i > -4) {
 			method35(54);
 		}
-		if ((i_0_ ^ 0xffffffff) <= -1 && (i_0_ ^ 0xffffffff) >= -101) {
+		if (i_0_ >= 0 && i_0_ <= 100) {
 			return i_0_;
 		}
 		aBoolean5267 = true;
@@ -70,7 +70,7 @@ public class Class45 implements Interface12
 	
 	static final void method465(byte b) {
 		anInt5269++;
-		if ((Class4.anInt124 ^ 0xffffffff) != -1) {
+		if (Class4.anInt124 != 0) {
 			try {
 				if (++Class51_Sub2.anInt9069 > 2000) {
 					Class218.aClass123_2560.method1513(b + -28189);
@@ -89,7 +89,7 @@ public class Class45 implements Interface12
 					Class4.anInt124 = 2;
 				}
 				if (Class4.anInt124 == 2) {
-					if ((Class218.aClass123_2560.aClass241_1565.anInt2953 ^ 0xffffffff) == -3) {
+					if (Class218.aClass123_2560.aClass241_1565.anInt2953 == 2) {
 						throw new IOException();
 					}
 					if (Class218.aClass123_2560.aClass241_1565.anInt2953 != 1) {

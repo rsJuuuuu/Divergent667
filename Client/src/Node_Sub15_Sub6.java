@@ -28,7 +28,7 @@ public class Node_Sub15_Sub6 extends Node_Sub15
 	}
 	
 	final void method2554(int i, BufferedStream buffer) {
-		aBoolean9814 = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
+		aBoolean9814 = buffer.readUnsignedByte() == 1;
 		anInt9817++;
 		if (i == 29147) {
 			aByte9818 = buffer.readByte();
@@ -40,7 +40,7 @@ public class Node_Sub15_Sub6 extends Node_Sub15
 	
 	static final void method2571(int i, boolean bool) {
 		anInt9813++;
-		if ((i ^ 0xffffffff) != 0 && Class169_Sub1.aBooleanArray8788[i]) {
+		if (i != -1 && Class169_Sub1.aBooleanArray8788[i]) {
 			Node_Sub38_Sub31.aClass302_10422.method3534((byte) 73, i);
 			Class134_Sub3.aWidgetArrayArray9035[i] = null;
 			Class79.aWidgetArrayArray1082[i] = null;

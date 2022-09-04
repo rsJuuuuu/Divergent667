@@ -68,42 +68,40 @@ abstract class Animable_Sub2 extends Animable
 		int i_2_ = 0;
 		if (Class216.anInt2551 == i_0_) {
 			i_2_++;
-		} else if ((Class216.anInt2551 ^ 0xffffffff) > (i_0_ ^ 0xffffffff)) {
+		} else if (i_0_ > Class216.anInt2551) {
 			i_2_ += 2;
 		}
-		if ((i_1_ ^ 0xffffffff) != (EntityNode_Sub7.anInt6013 ^ 0xffffffff)) {
-			if ((EntityNode_Sub7.anInt6013 ^ 0xffffffff) < (i_1_ ^ 0xffffffff)) {
-				i_2_ += 6;
-			}
-		} else {
+		if (EntityNode_Sub7.anInt6013 == i_1_) {
 			i_2_ += 3;
+		} else if (i_1_ < EntityNode_Sub7.anInt6013) {
+			i_2_ += 6;
 		}
-		int i_3_ = Class1.anIntArray109[i_2_];
-		if ((aShort9110 & i_3_ ^ 0xffffffff) != -1) {
+        int i_3_ = Class1.anIntArray109[i_2_];
+		if ((aShort9110 & i_3_) != 0) {
 			return this.method808(-23024, node_sub29s, i_1_, i_0_);
 		}
-		if ((aShort9110 ^ 0xffffffff) == -2 && i_0_ > 0) {
+		if (aShort9110 == 1 && i_0_ > 0) {
 			return this.method808(-23024, node_sub29s, i_1_, -1 + i_0_);
 		}
 		if (aShort9110 == 4 && Class328.anInt4115 >= i_0_) {
 			return this.method808(-23024, node_sub29s, i_1_, i_0_ + 1);
 		}
-		if ((aShort9110 ^ 0xffffffff) == -9 && i_1_ > 0) {
+		if (aShort9110 == 8 && i_1_ > 0) {
 			return this.method808(-23024, node_sub29s, -1 + i_1_, i_0_);
 		}
-		if ((aShort9110 ^ 0xffffffff) == -3 && (Node_Sub50.anInt7623 ^ 0xffffffff) <= (i_1_ ^ 0xffffffff)) {
+		if (aShort9110 == 2 && i_1_ <= Node_Sub50.anInt7623) {
 			return this.method808(-23024, node_sub29s, 1 + i_1_, i_0_);
 		}
-		if ((aShort9110 ^ 0xffffffff) == -17 && (i_0_ ^ 0xffffffff) < -1 && i_1_ <= Node_Sub50.anInt7623) {
+		if (aShort9110 == 16 && i_0_ > 0 && i_1_ <= Node_Sub50.anInt7623) {
 			return this.method808(-23024, node_sub29s, 1 + i_1_, -1 + i_0_);
 		}
 		if (aShort9110 == 32 && i_0_ <= Class328.anInt4115 && Node_Sub50.anInt7623 >= i_1_) {
 			return this.method808(-23024, node_sub29s, i_1_ + 1, 1 + i_0_);
 		}
-		if ((aShort9110 ^ 0xffffffff) == -129 && (i_0_ ^ 0xffffffff) < -1 && i_1_ > 0) {
+		if (aShort9110 == 128 && i_0_ > 0 && i_1_ > 0) {
 			return this.method808(-23024, node_sub29s, -1 + i_1_, i_0_ + -1);
 		}
-		if ((aShort9110 ^ 0xffffffff) == -65 && Class328.anInt4115 >= i_0_ && i_1_ > 0) {
+		if (aShort9110 == 64 && Class328.anInt4115 >= i_0_ && i_1_ > 0) {
 			return this.method808(i ^ ~0x59ee, node_sub29s, -1 + i_1_, i_0_ + 1);
 		}
 		throw new RuntimeException("");
@@ -116,7 +114,7 @@ abstract class Animable_Sub2 extends Animable
 			Class330.anIntArrayArrayArray4128 = new int[4][Node_Sub54.GAME_SCENE_WDITH >> 3][Class377_Sub1.GAME_SCENE_HEIGHT >> 3];
 			Class79.anIntArrayArray1070 = new int[Node_Sub54.GAME_SCENE_WDITH][Class377_Sub1.GAME_SCENE_HEIGHT];
 			Node_Sub38_Sub16.anIntArrayArray10269 = new int[Node_Sub54.GAME_SCENE_WDITH][Class377_Sub1.GAME_SCENE_HEIGHT];
-			for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > -5; i_4_++)
+			for (int i_4_ = 0; i_4_ < 4; i_4_++)
 				Class304.SCENE_CLIP_DATA_PLANES[i_4_] = Class63.method707(Node_Sub54.GAME_SCENE_WDITH, Class377_Sub1.GAME_SCENE_HEIGHT, (byte) 42);
 			Node_Sub38_Sub15.aByteArrayArrayArray10261 = new byte[4][Node_Sub54.GAME_SCENE_WDITH][Class377_Sub1.GAME_SCENE_HEIGHT];
 			Class376.method4119(Node_Sub54.GAME_SCENE_WDITH, -128, Class377_Sub1.GAME_SCENE_HEIGHT, 4);

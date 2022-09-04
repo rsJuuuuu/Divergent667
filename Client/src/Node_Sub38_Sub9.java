@@ -29,18 +29,16 @@ public class Node_Sub38_Sub9 extends Node_Sub38
 	while_88_:
 		do {
 			do {
-				if (i_0_ != 0) {
-					if ((i_0_ ^ 0xffffffff) != -2) {
-						if (i_0_ == 2) {
-							break;
-						}
-						break while_88_;
-					}
-				} else {
+				if (i_0_ == 0) {
 					anInt10190 = buffer.readShort();
 					break while_88_;
+				} else if (i_0_ != 1) {
+					if (i_0_ == 2) {
+						break;
+					}
+					break while_88_;
 				}
-				anInt10183 = (buffer.readByte() << 12) / 100;
+                anInt10183 = (buffer.readByte() << 12) / 100;
 				break while_88_;
 			} while (false);
 			anInt10175 = (buffer.readByte() << 12) / 100;
@@ -81,31 +79,25 @@ public class Node_Sub38_Sub9 extends Node_Sub38
 						while_89_:
 							do {
 								do {
-									if ((i_12_ ^ 0xffffffff) != -1) {
-										if ((i_12_ ^ 0xffffffff) != -2) {
-											if (i_12_ != 2) {
-												if ((i_12_ ^ 0xffffffff) != -4) {
-													if (i_12_ != 4) {
-														if ((i_12_ ^ 0xffffffff) != -6) {
-															break while_92_;
-														}
-													} else {
-														break while_90_;
-													}
-													break while_91_;
-												}
-											} else {
-												break;
-											}
-											break while_89_;
-										}
-									} else {
+									if (i_12_ == 0) {
 										anInt10182 = i_4_;
 										anInt10180 = i_10_;
 										anInt10188 = i_5_;
 										return;
+									} else if (i_12_ != 1) {
+										if (i_12_ == 2) {
+											break;
+										} else if (i_12_ != 3) {
+											if (i_12_ == 4) {
+												break while_90_;
+											} else if (i_12_ != 5) {
+												break while_92_;
+											}
+											break while_91_;
+										}
+										break while_89_;
 									}
-									anInt10182 = i_11_;
+                                    anInt10182 = i_11_;
 									anInt10188 = i_5_;
 									anInt10180 = i_4_;
 									return;
@@ -193,29 +185,29 @@ public class Node_Sub38_Sub9 extends Node_Sub38
 	
 	private final void method2823(int i, byte b, int i_13_, int i_14_) {
 		anInt10178++;
-		int i_15_ = (i_14_ ^ 0xffffffff) > (i ^ 0xffffffff) ? i : i_14_;
+		int i_15_ = i > i_14_ ? i : i_14_;
 		int i_16_ = i >= i_14_ ? i_14_ : i;
 		i_15_ = i_13_ > i_15_ ? i_13_ : i_15_;
-		i_16_ = (i_13_ ^ 0xffffffff) <= (i_16_ ^ 0xffffffff) ? i_16_ : i_13_;
+		i_16_ = i_16_ <= i_13_ ? i_16_ : i_13_;
 		anInt10176 = (i_15_ + i_16_) / 2;
 		int i_17_ = i_15_ + -i_16_;
 		if (b == -2) {
-			if ((i_17_ ^ 0xffffffff) < -1) {
+			if (i_17_ > 0) {
 				int i_18_ = (i_15_ + -i << 12) / i_17_;
 				int i_19_ = (-i_14_ + i_15_ << 12) / i_17_;
 				int i_20_ = (-i_13_ + i_15_ << 12) / i_17_;
 				if (i_15_ == i) {
-					anInt10185 = (i_14_ ^ 0xffffffff) != (i_16_ ^ 0xffffffff) ? 4096 + -i_19_ : 20480 + i_20_;
+					anInt10185 = i_16_ != i_14_ ? 4096 + -i_19_ : 20480 + i_20_;
 				} else if (i_15_ == i_14_) {
 					anInt10185 = i_16_ == i_13_ ? 4096 - -i_18_ : -i_20_ + 12288;
 				} else {
-					anInt10185 = (i_16_ ^ 0xffffffff) != (i ^ 0xffffffff) ? -i_18_ + 20480 : i_19_ + 12288;
+					anInt10185 = i != i_16_ ? -i_18_ + 20480 : i_19_ + 12288;
 				}
 				anInt10185 /= 6;
 			} else {
 				anInt10185 = 0;
 			}
-			if (anInt10176 > 0 && (anInt10176 ^ 0xffffffff) > -4097) {
+			if (anInt10176 > 0 && anInt10176 < 4096) {
 				anInt10174 = (i_17_ << 12) / (anInt10176 > 2048 ? 8192 - 2 * anInt10176 : 2 * anInt10176);
 			} else {
 				anInt10174 = 0;
@@ -237,26 +229,26 @@ public class Node_Sub38_Sub9 extends Node_Sub38
 			int[] is_25_ = is[0];
 			int[] is_26_ = is[1];
 			int[] is_27_ = is[2];
-			for (int i_28_ = 0; (i_28_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_28_++) {
+			for (int i_28_ = 0; Class339_Sub7.anInt8728 > i_28_; i_28_++) {
 				method2823(is_22_[i_28_], (byte) -2, is_24_[i_28_], is_23_[i_28_]);
 				anInt10176 += anInt10175;
 				anInt10174 += anInt10183;
 				for (anInt10185 += anInt10190; anInt10185 < 0; anInt10185 += 4096) {
 					/* empty */
 				}
-				for (/**/; (anInt10185 ^ 0xffffffff) < -4097; anInt10185 -= 4096) {
+				for (/**/; anInt10185 > 4096; anInt10185 -= 4096) {
 					/* empty */
 				}
 				if (anInt10174 < 0) {
 					anInt10174 = 0;
 				}
-				if ((anInt10176 ^ 0xffffffff) > -1) {
+				if (anInt10176 < 0) {
 					anInt10176 = 0;
 				}
 				if (anInt10174 > 4096) {
 					anInt10174 = 4096;
 				}
-				if ((anInt10176 ^ 0xffffffff) < -4097) {
+				if (anInt10176 > 4096) {
 					anInt10176 = 4096;
 				}
 				method2819(anInt10185, 2, anInt10174, anInt10176);

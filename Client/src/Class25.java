@@ -18,14 +18,14 @@ public class Class25 {
 		int routeType = (0x7d32b & (int) l) >> 14;
 		int calcs = ((int) l & 0x3b48d1) >> 20;
 		int objectId = 0x7fffffff & (int) (l >>> 32);
-		if (routeType != 10 && routeType != 11 && (routeType ^ 0xffffffff) != -23) {
+		if (routeType != 10 && routeType != 11 && routeType != 22) {
 			Class78.method778(calcs, sceney, 0, true, sceneX, 0, routeType, 48, 0);
 		} else {
 			ObjectDefinition objectdefinition = Class186.aClass112_2256
 					.method1145(objectId, 63);
 			int sizeX;
 			int sizeY;
-			if ((calcs ^ 0xffffffff) == -1 || calcs == 2) {
+			if (calcs == 0 || calcs == 2) {
 				sizeX = objectdefinition.anInt3055;
 				sizeY = objectdefinition.anInt2986;
 			} else {

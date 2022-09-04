@@ -23,7 +23,7 @@ abstract class Class377
 			return true;
 		}
 		anInt4669++;
-        return (anInt4673 & 0x2 ^ 0xffffffff) != -1;
+        return (anInt4673 & 0x2) != 0;
     }
 	
 	public static void method4121(boolean bool) {
@@ -76,7 +76,7 @@ abstract class Class377
 			i_2_ = i_3_ = Class94.anInt1249;
 		}
 		if (i >= 94) {
-			if ((aa.anInt101 ^ 0xffffffff) == -4) {
+			if (aa.anInt101 == 3) {
 				for (int i_4_ = i_2_; i_4_ <= i_3_; i_4_++)
 					Client.method106(i_4_);
 				Client.method104();
@@ -98,7 +98,7 @@ abstract class Class377
 			method4123(66);
 		}
 		anInt4666++;
-        return (0x8 & anInt4673 ^ 0xffffffff) != -1;
+        return (0x8 & anInt4673) != 0;
     }
 	
 	public Class377() {

@@ -69,13 +69,13 @@ public class Class57
 		if (bool != false) {
 			return null;
 		}
-		if ((i ^ 0xffffffff) == -1) {
+		if (i == 0) {
 			return new byte[0];
 		}
 		int i_2_ = i - -3 & ~0x3;
 		int i_3_ = 3 * (i_2_ / 4);
-		if ((i_2_ + -2 ^ 0xffffffff) > (i ^ 0xffffffff) && (Node_Sub16.method2591((byte) -115, string.charAt(i_2_ + -2)) ^ 0xffffffff) != 0) {
-			if (i <= i_2_ + -1 || (Node_Sub16.method2591((byte) -115, string.charAt(-1 + i_2_)) ^ 0xffffffff) == 0) {
+		if (i > i_2_ + -2 && Node_Sub16.method2591((byte) -115, string.charAt(i_2_ + -2)) != -1) {
+			if (i <= i_2_ + -1 || Node_Sub16.method2591((byte) -115, string.charAt(-1 + i_2_)) == -1) {
 				i_3_--;
 			}
 		} else {

@@ -20,7 +20,7 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 		anInt10243++;
 	while_155_:
 		do {
-			if ((i ^ 0xffffffff) != -1) {
+			if (i != 0) {
 				int i_0_ = i;
 			while_154_:
 				do {
@@ -31,25 +31,7 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 						while_151_:
 							do {
 								do {
-									if (i_0_ != 1) {
-										if ((i_0_ ^ 0xffffffff) != -3) {
-											if (i_0_ != 3) {
-												if ((i_0_ ^ 0xffffffff) != -5) {
-													if ((i_0_ ^ 0xffffffff) != -6) {
-														if (i_0_ != 6) {
-															break while_154_;
-														}
-													} else {
-														break while_152_;
-													}
-													break while_153_;
-												}
-											} else {
-												break;
-											}
-											break while_151_;
-										}
-									} else {
+									if (i_0_ == 1) {
 										anIntArrayArray10248 = new int[2][4];
 										anIntArrayArray10248[0][1] = 0;
 										anIntArrayArray10248[0][3] = 0;
@@ -60,8 +42,20 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 										anIntArrayArray10248[1][0] = 4096;
 										anIntArrayArray10248[1][2] = 4096;
 										break while_155_;
+									} else if (i_0_ != 2) {
+										if (i_0_ == 3) {
+											break;
+										} else if (i_0_ != 4) {
+											if (i_0_ == 5) {
+												break while_152_;
+											} else if (i_0_ != 6) {
+												break while_154_;
+											}
+											break while_153_;
+										}
+										break while_151_;
 									}
-									anIntArrayArray10248 = new int[8][4];
+                                    anIntArrayArray10248 = new int[8][4];
 									anIntArrayArray10248[0][3] = 2361;
 									anIntArrayArray10248[0][1] = 2650;
 									anIntArrayArray10248[0][2] = 2602;
@@ -264,7 +258,7 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 				if (i_6_ < 0) {
 					i_6_ = 0;
 				}
-				if ((i_6_ ^ 0xffffffff) < -257) {
+				if (i_6_ > 256) {
 					i_6_ = 256;
 				}
 				i_6_ = anIntArray10241[i_6_];
@@ -311,7 +305,7 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 		anInt10247++;
 		int i = anIntArrayArray10248.length;
 		if (i > 0) {
-			for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > -258; i_7_++) {
+			for (int i_7_ = 0; i_7_ < 257; i_7_++) {
 				int i_8_ = 0;
 				int i_9_ = i_7_ << 4;
 				for (int i_10_ = 0; i_10_ < i; i_10_++) {
@@ -323,7 +317,7 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 				int i_11_;
 				int i_12_;
 				int i_13_;
-				if ((i ^ 0xffffffff) < (i_8_ ^ 0xffffffff)) {
+				if (i_8_ < i) {
 					int[] is = anIntArrayArray10248[i_8_];
 					if (i_8_ > 0) {
 						int[] is_14_ = anIntArrayArray10248[-1 + i_8_];
@@ -346,7 +340,7 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 				i_13_ >>= 4;
 				i_12_ >>= 4;
 				i_11_ >>= 4;
-				if ((i_12_ ^ 0xffffffff) <= -1) {
+				if (i_12_ >= 0) {
 					if (i_12_ > 255) {
 						i_12_ = 255;
 					}
@@ -388,9 +382,9 @@ public class Node_Sub38_Sub14 extends Node_Sub38
 	
 	final void method2780(boolean bool, BufferedStream buffer, int i) {
 		anInt10250++;
-		if ((i ^ 0xffffffff) == -1) {
+		if (i == 0) {
 			int i_17_ = buffer.readUnsignedByte();
-			if ((i_17_ ^ 0xffffffff) == -1) {
+			if (i_17_ == 0) {
 				anIntArrayArray10248 = new int[buffer.readUnsignedByte()][4];
 				for (int i_18_ = 0; anIntArrayArray10248.length > i_18_; i_18_++) {
 					anIntArrayArray10248[i_18_][0] = buffer.readUnsignedShort();

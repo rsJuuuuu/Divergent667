@@ -71,92 +71,31 @@ public class Class357
 		int i_9_ = 0;
 		int i_10_ = 49 % ((14 - i) / 43);
 		int i_11_ = string.length();
-		for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (i_11_ ^ 0xffffffff); i_12_++) {
+		for (int i_12_ = 0; i_11_ > i_12_; i_12_++) {
 			int i_13_ = 0xff & Class26.method312(string.charAt(i_12_), (byte) -28);
 			int i_14_ = 0;
-			if ((i_13_ ^ 0xffffffff) == -61) {
+			if (i_13_ == 60) {
 				i_7_ = i_12_;
 			} else {
 				int i_15_;
-				if ((i_7_ ^ 0xffffffff) != 0) {
-					if ((i_13_ ^ 0xffffffff) != -63) {
+				if (i_7_ == -1) {
+					i_14_ += method4027(i_13_, false);
+					i_15_ = i_12_;
+					if (aByteArrayArray4433 != null && i_8_ != -1) {
+						i_14_ += aByteArrayArray4433[i_8_][i_13_];
+					}
+					i_8_ = i_13_;
+				} else {
+					if (i_13_ != 62) {
 						continue;
 					}
 					i_15_ = i_7_;
 					String string_16_ = string.substring(1 + i_7_, i_12_);
 					i_7_ = -1;
-					if (!string_16_.equals("br")) {
-						if (string_16_.equals("lt")) {
-							i_14_ += method4027(60, false);
-							if (aByteArrayArray4433 != null && i_8_ != -1) {
-								i_14_ += aByteArrayArray4433[i_8_][60];
-							}
-							i_8_ = 60;
-						} else if (!string_16_.equals("gt")) {
-							if (string_16_.equals("nbsp")) {
-								i_14_ += method4027(160, false);
-								if (aByteArrayArray4433 != null && i_8_ != -1) {
-									i_14_ += aByteArrayArray4433[i_8_][160];
-								}
-								i_8_ = 160;
-							} else if (!string_16_.equals("shy")) {
-								if (!string_16_.equals("times")) {
-									if (!string_16_.equals("euro")) {
-										if (!string_16_.equals("copy")) {
-											if (string_16_.equals("reg")) {
-												i_14_ += method4027(174, false);
-												if (aByteArrayArray4433 != null && (i_8_ ^ 0xffffffff) != 0) {
-													i_14_ += aByteArrayArray4433[i_8_][174];
-												}
-												i_8_ = 174;
-											} else if (string_16_.startsWith("img=") && glsprites != null) {
-												try {
-													int i_17_ = Class350.method3998(string_16_.substring(4), -1);
-													i_14_ += glsprites[i_17_].method1197();
-													i_8_ = -1;
-												} catch (Exception exception) {
-													/* empty */
-												}
-											}
-										} else {
-											i_14_ += method4027(169, false);
-											if (aByteArrayArray4433 != null && i_8_ != -1) {
-												i_14_ += aByteArrayArray4433[i_8_][169];
-											}
-											i_8_ = 169;
-										}
-									} else {
-										i_14_ += method4027(8364, false);
-										if (aByteArrayArray4433 != null && i_8_ != -1) {
-											i_14_ += aByteArrayArray4433[i_8_][8364];
-										}
-										i_8_ = 8364;
-									}
-								} else {
-									i_14_ += method4027(215, false);
-									if (aByteArrayArray4433 != null && i_8_ != -1) {
-										i_14_ += aByteArrayArray4433[i_8_][215];
-									}
-									i_8_ = 215;
-								}
-							} else {
-								i_14_ += method4027(173, false);
-								if (aByteArrayArray4433 != null && i_8_ != -1) {
-									i_14_ += aByteArrayArray4433[i_8_][173];
-								}
-								i_8_ = 173;
-							}
-						} else {
-							i_14_ += method4027(62, false);
-							if (aByteArrayArray4433 != null && (i_8_ ^ 0xffffffff) != 0) {
-								i_14_ += aByteArrayArray4433[i_8_][62];
-							}
-							i_8_ = 62;
-						}
-					} else {
+					if (string_16_.equals("br")) {
 						strings[i_9_] = string.substring(i_3_, i_12_ - -1);
 						i_9_++;
-						if ((strings.length ^ 0xffffffff) >= (i_9_ ^ 0xffffffff)) {
+						if (i_9_ >= strings.length) {
 							return 0;
 						}
 						i_2_ = 0;
@@ -164,28 +103,77 @@ public class Class357
 						i_4_ = -1;
 						i_8_ = -1;
 						continue;
+					} else if (string_16_.equals("lt")) {
+						i_14_ += method4027(60, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][60];
+						}
+						i_8_ = 60;
+					} else if (string_16_.equals("gt")) {
+						i_14_ += method4027(62, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][62];
+						}
+						i_8_ = 62;
+					} else if (string_16_.equals("nbsp")) {
+						i_14_ += method4027(160, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][160];
+						}
+						i_8_ = 160;
+					} else if (string_16_.equals("shy")) {
+						i_14_ += method4027(173, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][173];
+						}
+						i_8_ = 173;
+					} else if (string_16_.equals("times")) {
+						i_14_ += method4027(215, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][215];
+						}
+						i_8_ = 215;
+					} else if (string_16_.equals("euro")) {
+						i_14_ += method4027(8364, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][8364];
+						}
+						i_8_ = 8364;
+					} else if (string_16_.equals("copy")) {
+						i_14_ += method4027(169, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][169];
+						}
+						i_8_ = 169;
+					} else if (string_16_.equals("reg")) {
+						i_14_ += method4027(174, false);
+						if (aByteArrayArray4433 != null && i_8_ != -1) {
+							i_14_ += aByteArrayArray4433[i_8_][174];
+						}
+						i_8_ = 174;
+					} else if (string_16_.startsWith("img=") && glsprites != null) {
+						try {
+							int i_17_ = Class350.method3998(string_16_.substring(4), -1);
+							i_14_ += glsprites[i_17_].method1197();
+							i_8_ = -1;
+						} catch (Exception exception) {
+							/* empty */
+						}
 					}
-					i_13_ = -1;
-				} else {
-					i_14_ += method4027(i_13_, false);
-					i_15_ = i_12_;
-					if (aByteArrayArray4433 != null && (i_8_ ^ 0xffffffff) != 0) {
-						i_14_ += aByteArrayArray4433[i_8_][i_13_];
-					}
-					i_8_ = i_13_;
+                    i_13_ = -1;
 				}
-				if (i_14_ > 0) {
+                if (i_14_ > 0) {
 					i_2_ += i_14_;
 					if (is != null) {
-						if ((i_13_ ^ 0xffffffff) == -33) {
+						if (i_13_ == 32) {
 							i_4_ = i_12_;
 							i_6_ = 1;
 							i_5_ = i_2_;
 						}
-						if ((is[(is.length ^ 0xffffffff) >= (i_9_ ^ 0xffffffff) ? -1 + is.length : i_9_] ^ 0xffffffff) > (i_2_ ^ 0xffffffff)) {
+						if (i_2_ > is[i_9_ >= is.length ? -1 + is.length : i_9_]) {
 							if (i_4_ < 0) {
 								strings[i_9_] = string.substring(i_3_, i_15_);
-								if ((++i_9_ ^ 0xffffffff) <= (strings.length ^ 0xffffffff)) {
+								if (strings.length <= ++i_9_) {
 									return 0;
 								}
 								i_3_ = i_15_;
@@ -204,7 +192,7 @@ public class Class357
 								i_8_ = -1;
 							}
 						}
-						if ((i_13_ ^ 0xffffffff) == -46) {
+						if (i_13_ == 45) {
 							i_5_ = i_2_;
 							i_6_ = 0;
 							i_4_ = i_12_;
@@ -226,7 +214,7 @@ public class Class357
 		int i_20_ = 0;
 		for (int i_21_ = i; i_21_ < i_19_; i_21_++) {
 			int i_22_ = method4031(119, glsprites, Class330.aStringArray4126[i_21_]);
-			if ((i_20_ ^ 0xffffffff) > (i_22_ ^ 0xffffffff)) {
+			if (i_22_ > i_20_) {
 				i_20_ = i_22_;
 			}
 		}
@@ -250,43 +238,39 @@ public class Class357
 			if (c == 60) {
 				i_23_ = i_27_;
 			} else {
-				if (c == 62 && (i_23_ ^ 0xffffffff) != 0) {
+				if (c == 62 && i_23_ != -1) {
 					String string_28_ = string.substring(i_23_ + 1, i_27_);
 					i_23_ = -1;
 					if (string_28_.equals("lt")) {
 						c = '<';
 					} else if (string_28_.equals("gt")) {
 						c = '>';
-					} else if (!string_28_.equals("nbsp")) {
-						if (!string_28_.equals("shy")) {
-							if (string_28_.equals("times")) {
-								c = '\u00d7';
-							} else if (string_28_.equals("euro")) {
-								c = '\u20ac';
-							} else if (string_28_.equals("copy")) {
-								c = '\u00a9';
-							} else if (string_28_.equals("reg")) {
-								c = '\u00ae';
-							} else {
-								if (string_28_.startsWith("img=") && glsprites != null) {
-									try {
-										int i_29_ = Class350.method3998(string_28_.substring(4), -1);
-										i_24_ = -1;
-										i_25_ += glsprites[i_29_].method1197();
-									} catch (Exception exception) {
-										/* empty */
-									}
-								}
-								continue;
-							}
-						} else {
-							c = '\u00ad';
-						}
-					} else {
+					} else if (string_28_.equals("nbsp")) {
 						c = '\u00a0';
+					} else if (string_28_.equals("shy")) {
+						c = '\u00ad';
+					} else if (string_28_.equals("times")) {
+						c = '\u00d7';
+					} else if (string_28_.equals("euro")) {
+						c = '\u20ac';
+					} else if (string_28_.equals("copy")) {
+						c = '\u00a9';
+					} else if (string_28_.equals("reg")) {
+						c = '\u00ae';
+					} else {
+						if (string_28_.startsWith("img=") && glsprites != null) {
+							try {
+								int i_29_ = Class350.method3998(string_28_.substring(4), -1);
+								i_24_ = -1;
+								i_25_ += glsprites[i_29_].method1197();
+							} catch (Exception exception) {
+								/* empty */
+							}
+						}
+						continue;
 					}
-				}
-				if ((i_23_ ^ 0xffffffff) == 0) {
+                }
+				if (i_23_ == -1) {
 					i_25_ += 0xff & aByteArray4427[0xff & Class26.method312(c, (byte) -64)];
 					if (aByteArrayArray4433 != null && i_24_ != -1) {
 						i_25_ += aByteArrayArray4433[i_24_][c];
@@ -300,7 +284,7 @@ public class Class357
 	
 	final String method4032(String string, GLSprite[] glsprites, int i, int i_30_) {
 		anInt4440++;
-		if ((i ^ 0xffffffff) <= (method4031(104, glsprites, string) ^ 0xffffffff)) {
+		if (method4031(104, glsprites, string) <= i) {
 			return string;
 		}
 		i -= method4031(103, null, "...");
@@ -309,56 +293,48 @@ public class Class357
 		int i_33_ = 0;
 		int i_34_ = string.length();
 		String string_35_ = "";
-		for (int i_36_ = 0; (i_36_ ^ 0xffffffff) > (i_34_ ^ 0xffffffff); i_36_++) {
+		for (int i_36_ = 0; i_34_ > i_36_; i_36_++) {
 			char c = string.charAt(i_36_);
 			if (c == 60) {
 				i_31_ = i_36_;
 			} else {
-				if ((c ^ 0xffffffff) == -63 && (i_31_ ^ 0xffffffff) != 0) {
+				if (c == 62 && i_31_ != -1) {
 					String string_37_ = string.substring(i_31_ - -1, i_36_);
 					i_31_ = -1;
-					if (!string_37_.equals("lt")) {
-						if (!string_37_.equals("gt")) {
-							if (!string_37_.equals("nbsp")) {
-								if (string_37_.equals("shy")) {
-									c = '\u00ad';
-								} else if (!string_37_.equals("times")) {
-									if (string_37_.equals("euro")) {
-										c = '\u20ac';
-									} else if (string_37_.equals("copy")) {
-										c = '\u00a9';
-									} else if (string_37_.equals("reg")) {
-										c = '\u00ae';
-									} else {
-										if (string_37_.startsWith("img=") && glsprites != null) {
-											try {
-												int i_38_ = Class350.method3998(string_37_.substring(4), i_30_);
-												i_33_ += glsprites[i_38_].method1197();
-												i_32_ = -1;
-												if ((i_33_ ^ 0xffffffff) < (i ^ 0xffffffff)) {
-													return string_35_ + "...";
-												}
-												string_35_ = string.substring(0, 1 + i_36_);
-											} catch (Exception exception) {
-												/* empty */
-											}
-										}
-										continue;
-									}
-								} else {
-									c = '\u00d7';
-								}
-							} else {
-								c = '\u00a0';
-							}
-						} else {
-							c = '>';
-						}
-					} else {
+					if (string_37_.equals("lt")) {
 						c = '<';
+					} else if (string_37_.equals("gt")) {
+						c = '>';
+					} else if (string_37_.equals("nbsp")) {
+						c = '\u00a0';
+					} else if (string_37_.equals("shy")) {
+						c = '\u00ad';
+					} else if (string_37_.equals("times")) {
+						c = '\u00d7';
+					} else if (string_37_.equals("euro")) {
+						c = '\u20ac';
+					} else if (string_37_.equals("copy")) {
+						c = '\u00a9';
+					} else if (string_37_.equals("reg")) {
+						c = '\u00ae';
+					} else {
+						if (string_37_.startsWith("img=") && glsprites != null) {
+							try {
+								int i_38_ = Class350.method3998(string_37_.substring(4), i_30_);
+								i_33_ += glsprites[i_38_].method1197();
+								i_32_ = -1;
+								if (i < i_33_) {
+									return string_35_ + "...";
+								}
+								string_35_ = string.substring(0, 1 + i_36_);
+							} catch (Exception exception) {
+								/* empty */
+							}
+						}
+						continue;
 					}
-				}
-				if ((i_31_ ^ 0xffffffff) == 0) {
+                }
+				if (i_31_ == -1) {
 					i_33_ += 0xff & aByteArray4427[Class26.method312(c, (byte) -42) & 0xff];
 					if (aByteArrayArray4433 != null && i_32_ != -1) {
 						i_33_ += aByteArrayArray4433[i_32_][c];
@@ -392,7 +368,7 @@ public class Class357
 		if (i != 0) {
 			throw new RuntimeException("");
 		}
-		boolean bool = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
+		boolean bool = buffer.readUnsignedByte() == 1;
 		aByteArray4427 = new byte[256];
 		buffer.readBytes(aByteArray4427, 0, 256);
 		if (bool) {
@@ -403,16 +379,16 @@ public class Class357
 			for (int i_42_ = 0; i_42_ < 256; i_42_++)
 				is_41_[i_42_] = buffer.readUnsignedByte();
 			byte[][] bs_43_ = new byte[256][];
-			for (int i_44_ = 0; (i_44_ ^ 0xffffffff) > -257; i_44_++) {
+			for (int i_44_ = 0; i_44_ < 256; i_44_++) {
 				bs_43_[i_44_] = new byte[is[i_44_]];
 				byte b = 0;
-				for (int i_45_ = 0; (i_45_ ^ 0xffffffff) > (bs_43_[i_44_].length ^ 0xffffffff); i_45_++) {
+				for (int i_45_ = 0; bs_43_[i_44_].length > i_45_; i_45_++) {
 					b += buffer.readByte();
 					bs_43_[i_44_][i_45_] = b;
 				}
 			}
 			byte[][] bs_46_ = new byte[256][];
-			for (int i_47_ = 0; (i_47_ ^ 0xffffffff) > -257; i_47_++) {
+			for (int i_47_ = 0; i_47_ < 256; i_47_++) {
 				bs_46_[i_47_] = new byte[is[i_47_]];
 				byte b = 0;
 				for (int i_48_ = 0; i_48_ < bs_46_[i_47_].length; i_48_++) {
@@ -421,10 +397,10 @@ public class Class357
 				}
 			}
 			aByteArrayArray4433 = new byte[256][256];
-			for (int i_49_ = 0; (i_49_ ^ 0xffffffff) > -257; i_49_++) {
-				if ((i_49_ ^ 0xffffffff) != -33 && (i_49_ ^ 0xffffffff) != -161) {
+			for (int i_49_ = 0; i_49_ < 256; i_49_++) {
+				if (i_49_ != 32 && i_49_ != 160) {
 					for (int i_50_ = 0; i_50_ < 256; i_50_++) {
-						if ((i_50_ ^ 0xffffffff) != -33 && (i_50_ ^ 0xffffffff) != -161) {
+						if (i_50_ != 32 && i_50_ != 160) {
 							aByteArrayArray4433[i_49_][i_50_] = (byte) Class190.method1939(is_41_, 255, i_50_, is, i_49_, bs_43_, aByteArray4427, bs_46_);
 						}
 					}
@@ -442,7 +418,7 @@ public class Class357
 	
 	final int method4034(int i, int i_51_, String string, GLSprite[] glsprites, byte b) {
 		anInt4428++;
-		if ((i_51_ ^ 0xffffffff) == -1) {
+		if (i_51_ == 0) {
 			i_51_ = anInt4430;
 		}
 		int i_52_ = method4029(Class330.aStringArray4126, new int[] { i }, -54, glsprites, string);

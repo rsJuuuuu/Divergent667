@@ -26,30 +26,26 @@ public class Class7
 		if (i_0_ >= -119) {
 			method180(-41, null, -52);
 		}
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			anInt150 = buffer.readUnsignedShort();
-		} else if ((i ^ 0xffffffff) != -3) {
-			if (i == 3) {
-				anInt152 = buffer.readShort();
-				anInt158 = buffer.readShort();
-				anInt160 = buffer.readShort();
-			} else if (i == 4) {
-				anInt156 = buffer.readUnsignedByte();
-			} else if (i == 5) {
-				anInt151 = buffer.readUnsignedShort();
-			} else if ((i ^ 0xffffffff) != -7) {
-				if (i == 7) {
-					anInt155 = buffer.readShort();
-					anInt161 = buffer.readShort();
-					anInt153 = buffer.readShort();
-				}
-			} else {
-				anInt159 = buffer.read24BitInteger();
-			}
-		} else {
+		} else if (i == 2) {
 			aBoolean162 = true;
-		}
-		anInt154++;
+		} else if (i == 3) {
+            anInt152 = buffer.readShort();
+            anInt158 = buffer.readShort();
+            anInt160 = buffer.readShort();
+        } else if (i == 4) {
+            anInt156 = buffer.readUnsignedByte();
+        } else if (i == 5) {
+            anInt151 = buffer.readUnsignedShort();
+        } else if (i == 6) {
+            anInt159 = buffer.read24BitInteger();
+        } else if (i == 7) {
+            anInt155 = buffer.readShort();
+            anInt161 = buffer.readShort();
+            anInt153 = buffer.readShort();
+        }
+        anInt154++;
 	}
 	
 	static final void method181(int i, int i_1_, int i_2_, Class var_class) {
@@ -71,7 +67,7 @@ public class Class7
 		}
 		for (;;) {
 			int i_3_ = buffer.readUnsignedByte();
-			if ((i_3_ ^ 0xffffffff) == -1) {
+			if (i_3_ == 0) {
 				break;
 			}
 			method180(i_3_, buffer, -121);

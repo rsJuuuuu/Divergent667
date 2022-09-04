@@ -36,7 +36,7 @@ abstract class Animable extends EntityNode
 		int i_3_ = 0;
 		for (/**/; l_2_ <= 48L; l_2_ += 16L) {
 			int i_4_ = (int) (l >> (int) l_2_ & 0xffffL);
-			if ((i_4_ ^ 0xffffffff) >= -1) {
+			if (i_4_ <= 0) {
 				break;
 			}
 			node_sub29s[i_3_++] = Class143.aClass326Array1771[-1 + i_4_].aNode_Sub29_4100;

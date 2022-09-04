@@ -62,8 +62,8 @@ public class Node_Sub38_Sub11 extends Node_Sub38
 				anIntArray10210[i_2_] = anIntArray10210[i_2_ + -1] - -i_3_;
 			}
 			anIntArrayArray10203[i_2_][0] = 0;
-			for (int i_5_ = 0; (anInt10222 ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++) {
-				if ((i_5_ ^ 0xffffffff) < -1) {
+			for (int i_5_ = 0; i_5_ < anInt10222; i_5_++) {
+				if (i_5_ > 0) {
 					int i_6_ = anInt10206;
 					int i_7_ = (Class330.method3838(-5208, 4096, random) + -2048) * anInt10220 >> 12;
 					i_6_ += i_0_ * i_7_ >> 12;
@@ -91,36 +91,28 @@ public class Node_Sub38_Sub11 extends Node_Sub38
 						while_143_:
 							do {
 								do {
-									if ((i_8_ ^ 0xffffffff) != -1) {
-										if ((i_8_ ^ 0xffffffff) != -2) {
-											if (i_8_ != 2) {
-												if (i_8_ != 3) {
-													if (i_8_ != 4) {
-														if (i_8_ != 5) {
-															if ((i_8_ ^ 0xffffffff) != -7) {
-																if ((i_8_ ^ 0xffffffff) != -8) {
-																	break while_148_;
-																}
-															} else {
-																break while_146_;
-															}
-															break while_147_;
-														}
-													} else {
-														break while_144_;
-													}
-													break while_145_;
-												}
-											} else {
-												break;
-											}
-											break while_143_;
-										}
-									} else {
+									if (i_8_ == 0) {
 										anInt10222 = buffer.readUnsignedByte();
 										break while_148_;
-									}
-									anInt10204 = buffer.readUnsignedByte();
+									} else if (i_8_ != 1) {
+                                        if (i_8_ == 2) {
+                                            break;
+                                        } else if (i_8_ != 3) {
+                                            if (i_8_ == 4) {
+                                                break while_144_;
+                                            } else if (i_8_ != 5) {
+                                                if (i_8_ == 6) {
+                                                    break while_146_;
+                                                } else if (i_8_ != 7) {
+                                                    break while_148_;
+                                                }
+                                                break while_147_;
+                                            }
+                                            break while_145_;
+                                        }
+                                        break while_143_;
+                                    }
+                                    anInt10204 = buffer.readUnsignedByte();
 									break while_148_;
 								} while (false);
 								anInt10220 = buffer.readUnsignedShort();
@@ -184,11 +176,11 @@ public class Node_Sub38_Sub11 extends Node_Sub38
 			for (i_12_ = anInt10208 + Node_Sub25_Sub1.anIntArray9941[i_10_]; i_12_ < 0; i_12_ += 4096) {
 				/* empty */
 			}
-			for (/**/; (i_12_ ^ 0xffffffff) < -4097; i_12_ -= 4096) {
+			for (/**/; i_12_ > 4096; i_12_ -= 4096) {
 				/* empty */
 			}
-			for (/**/; (i_11_ ^ 0xffffffff) > (anInt10204 ^ 0xffffffff); i_11_++) {
-				if ((anIntArray10210[i_11_] ^ 0xffffffff) < (i_12_ ^ 0xffffffff)) {
+			for (/**/; anInt10204 > i_11_; i_11_++) {
+				if (i_12_ < anIntArray10210[i_11_]) {
 					break;
 				}
 			}
@@ -196,26 +188,26 @@ public class Node_Sub38_Sub11 extends Node_Sub38
 			boolean bool = (0x1 & i_11_) == 0;
 			int i_14_ = anIntArray10210[i_11_];
 			int i_15_ = anIntArray10210[i_11_ - 1];
-			if ((anInt10211 + i_15_ ^ 0xffffffff) > (i_12_ ^ 0xffffffff) && i_12_ < -anInt10211 + i_14_) {
-				for (int i_16_ = 0; (i_16_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_16_++) {
+			if (i_12_ > anInt10211 + i_15_ && i_12_ < -anInt10211 + i_14_) {
+				for (int i_16_ = 0; Class339_Sub7.anInt8728 > i_16_; i_16_++) {
 					int i_17_ = 0;
 					int i_18_ = !bool ? -anInt10213 : anInt10213;
 					int i_19_;
-					for (i_19_ = CacheNode_Sub3.anIntArray9442[i_16_] + (i_18_ * anInt10206 >> 12); (i_19_ ^ 0xffffffff) > -1; i_19_ += 4096) {
+					for (i_19_ = CacheNode_Sub3.anIntArray9442[i_16_] + (i_18_ * anInt10206 >> 12); i_19_ < 0; i_19_ += 4096) {
 						/* empty */
 					}
 					for (/**/; i_19_ > 4096; i_19_ -= 4096) {
 						/* empty */
 					}
-					for (/**/; (i_17_ ^ 0xffffffff) > (anInt10222 ^ 0xffffffff); i_17_++) {
-						if ((anIntArrayArray10203[i_13_][i_17_] ^ 0xffffffff) < (i_19_ ^ 0xffffffff)) {
+					for (/**/; anInt10222 > i_17_; i_17_++) {
+						if (i_19_ < anIntArrayArray10203[i_13_][i_17_]) {
 							break;
 						}
 					}
 					int i_20_ = i_17_ - 1;
 					int i_21_ = anIntArrayArray10203[i_13_][i_17_];
 					int i_22_ = anIntArrayArray10203[i_13_][i_20_];
-					if (i_19_ > anInt10211 + i_22_ && (i_19_ ^ 0xffffffff) > (i_21_ + -anInt10211 ^ 0xffffffff)) {
+					if (i_19_ > anInt10211 + i_22_ && i_21_ + -anInt10211 > i_19_) {
 						is[i_16_] = anIntArrayArray10223[i_13_][i_20_];
 					} else {
 						is[i_16_] = 0;

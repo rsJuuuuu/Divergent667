@@ -21,7 +21,7 @@ public class Exception_Sub1 extends Exception
 			method140(true);
 		}
 		Class236.aWidgetArray2899 = null;
-		if (Class71.aBoolean967 && (Class188_Sub2_Sub1.getDisplayMode(3) ^ 0xffffffff) != -2) {
+		if (Class71.aBoolean967 && Class188_Sub2_Sub1.getDisplayMode(3) != 1) {
 			Class157.method1710(-41, 0, Class151.anInt1843 == 3 || Class151.anInt1843 == 7, Node_Sub29_Sub2.method2714(-62), Node_Sub38_Sub4.method2800((byte) 100), 0);
 		}
 		int i_0_ = 0;

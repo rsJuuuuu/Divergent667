@@ -35,25 +35,23 @@ public class Class77
 									while_72_:
 										do {
 											do {
-												if ((i_0_ ^ 0xffffffff) != -33 && (i_0_ ^ 0xffffffff) != -161 && i_0_ != 95 && i_0_ != 45) {
-													if ((i_0_ ^ 0xffffffff) != -92 && (i_0_ ^ 0xffffffff) != -94 && i_0_ != 35) {
-														if (i_0_ != 224 && i_0_ != 225 && (i_0_ ^ 0xffffffff) != -227 && (i_0_ ^ 0xffffffff) != -229 && i_0_ != 227 && (i_0_ ^ 0xffffffff) != -193 && (i_0_ ^ 0xffffffff) != -194 && i_0_ != 194 && (i_0_ ^ 0xffffffff) != -197 && (i_0_ ^ 0xffffffff) != -196) {
-															if (i_0_ != 232 && i_0_ != 233 && i_0_ != 234 && (i_0_ ^ 0xffffffff) != -236 && (i_0_ ^ 0xffffffff) != -201 && i_0_ != 201 && i_0_ != 202 && i_0_ != 203) {
-																if (i_0_ != 237 && (i_0_ ^ 0xffffffff) != -239 && (i_0_ ^ 0xffffffff) != -240 && (i_0_ ^ 0xffffffff) != -206 && i_0_ != 206 && i_0_ != 207) {
-																	if (i_0_ != 242 && (i_0_ ^ 0xffffffff) != -244 && (i_0_ ^ 0xffffffff) != -245 && i_0_ != 246 && (i_0_ ^ 0xffffffff) != -246 && i_0_ != 210 && (i_0_ ^ 0xffffffff) != -212 && i_0_ != 212 && i_0_ != 214 && (i_0_ ^ 0xffffffff) != -214) {
-																		if (i_0_ != 249 && (i_0_ ^ 0xffffffff) != -251 && (i_0_ ^ 0xffffffff) != -252 && (i_0_ ^ 0xffffffff) != -253 && (i_0_ ^ 0xffffffff) != -218 && (i_0_ ^ 0xffffffff) != -219 && i_0_ != 219 && i_0_ != 220) {
-																			if ((i_0_ ^ 0xffffffff) != -232 && (i_0_ ^ 0xffffffff) != -200) {
-																				if ((i_0_ ^ 0xffffffff) != -256 && i_0_ != 376) {
-																					if (i_0_ != 241 && i_0_ != 209) {
-																						if (i_0_ == 223) {
-																							break while_79_;
-																						}
-																						break while_80_;
-																					}
-																				} else {
+												if (i_0_ != 32 && i_0_ != 160 && i_0_ != 95 && i_0_ != 45) {
+													if (i_0_ != 91 && i_0_ != 93 && i_0_ != 35) {
+														if (i_0_ != 224 && i_0_ != 225 && i_0_ != 226 && i_0_ != 228 && i_0_ != 227 && i_0_ != 192 && i_0_ != 193 && i_0_ != 194 && i_0_ != 196 && i_0_ != 195) {
+															if (i_0_ != 232 && i_0_ != 233 && i_0_ != 234 && i_0_ != 235 && i_0_ != 200 && i_0_ != 201 && i_0_ != 202 && i_0_ != 203) {
+																if (i_0_ != 237 && i_0_ != 238 && i_0_ != 239 && i_0_ != 205 && i_0_ != 206 && i_0_ != 207) {
+																	if (i_0_ != 242 && i_0_ != 243 && i_0_ != 244 && i_0_ != 246 && i_0_ != 245 && i_0_ != 210 && i_0_ != 211 && i_0_ != 212 && i_0_ != 214 && i_0_ != 213) {
+																		if (i_0_ != 249 && i_0_ != 250 && i_0_ != 251 && i_0_ != 252 && i_0_ != 217 && i_0_ != 218 && i_0_ != 219 && i_0_ != 220) {
+																			if (i_0_ != 231 && i_0_ != 199) {
+																				if (i_0_ == 255 || i_0_ == 376) {
 																					break while_77_;
+																				} else if (i_0_ != 241 && i_0_ != 209) {
+																					if (i_0_ == 223) {
+																						break while_79_;
+																					}
+																					break while_80_;
 																				}
-																				break while_78_;
+                                                                                break while_78_;
 																			}
 																		} else {
 																			break while_75_;
@@ -125,7 +123,7 @@ public class Class77
 			method775(-98, false, 36);
 		}
 		anInt1016++;
-		int i_3_ = (Class205.screenHeight ^ 0xffffffff) < (i ^ 0xffffffff) ? Class205.screenHeight : i;
+		int i_3_ = i < Class205.screenHeight ? Class205.screenHeight : i;
 		if (Animable_Sub4_Sub2.aClass77_10805 == this) {
 			return 0;
 		}

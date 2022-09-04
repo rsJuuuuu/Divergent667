@@ -39,31 +39,29 @@ public class Class236
 	
 	private final void method3013(int i, BufferedStream buffer, int i_2_) {
 		anInt2900++;
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			anInt2893 = buffer.read24BitInteger();
 			method3015(anInt2893, 127);
-		} else if ((i ^ 0xffffffff) == -3) {
+		} else if (i == 2) {
 			anInt2891 = buffer.readUnsignedShort();
 			if (anInt2891 == 65535) {
 				anInt2891 = -1;
 			}
-		} else if ((i ^ 0xffffffff) == -4) {
+		} else if (i == 3) {
 			anInt2894 = buffer.readUnsignedShort() << 2;
-		} else if (i != 4) {
-			if (i == 5) {
-				aBoolean2892 = false;
-			}
-		} else {
+		} else if (i == 4) {
 			aBoolean2896 = false;
-		}
-		@SuppressWarnings("unused")
+		} else if (i == 5) {
+            aBoolean2892 = false;
+        }
+        @SuppressWarnings("unused")
 		int i_3_ = -113 / ((-32 - i_2_) / 58);
 	}
 	
 	final void method3014(BufferedStream buffer, int i) {
 		for (;;) {
 			int i_4_ = buffer.readUnsignedByte();
-			if ((i_4_ ^ 0xffffffff) == -1) {
+			if (i_4_ == 0) {
 				break;
 			}
 			method3013(i_4_, buffer, 108);
@@ -108,14 +106,12 @@ public class Class236
 			}
 			if (d == d_9_) {
 				d_10_ = (-d_7_ + d_6_) / (-d_8_ + d_9_);
-			} else if (d_9_ != d_6_) {
-				if (d_9_ == d_7_) {
-					d_10_ = 4.0 + (d - d_6_) / (-d_8_ + d_9_);
-				}
-			} else {
+			} else if (d_9_ == d_6_) {
 				d_10_ = (-d + d_7_) / (d_9_ - d_8_) + 2.0;
-			}
-			if (d_12_ >= 0.5) {
+			} else if (d_9_ == d_7_) {
+                d_10_ = 4.0 + (d - d_6_) / (-d_8_ + d_9_);
+            }
+            if (d_12_ >= 0.5) {
 				d_11_ = (-d_8_ + d_9_) / (2.0 - d_9_ - d_8_);
 			}
 		}
@@ -123,22 +119,22 @@ public class Class236
 		if (i_5_ >= 126) {
 			anInt2901 = (int) (d_12_ * 256.0);
 			d_10_ /= 6.0;
-			if (!(d_12_ > 0.5)) {
-				anInt2890 = (int) (512.0 * (d_12_ * d_11_));
-			} else {
+			if (d_12_ > 0.5) {
 				anInt2890 = (int) (512.0 * ((1.0 - d_12_) * d_11_));
+			} else {
+				anInt2890 = (int) (512.0 * (d_12_ * d_11_));
 			}
-			if ((anInt2901 ^ 0xffffffff) > -1) {
+            if (anInt2901 < 0) {
 				anInt2901 = 0;
-			} else if ((anInt2901 ^ 0xffffffff) < -256) {
+			} else if (anInt2901 > 255) {
 				anInt2901 = 255;
 			}
-			if ((anInt2897 ^ 0xffffffff) > -1) {
+			if (anInt2897 < 0) {
 				anInt2897 = 0;
 			} else if (anInt2897 > 255) {
 				anInt2897 = 255;
 			}
-			if ((anInt2890 ^ 0xffffffff) > -2) {
+			if (anInt2890 < 1) {
 				anInt2890 = 1;
 			}
 			anInt2888 = (int) (d_10_ * (double) anInt2890);

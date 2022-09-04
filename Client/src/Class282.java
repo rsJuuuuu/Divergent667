@@ -15,14 +15,7 @@ public class Class282
 	
 	static final void method3385(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, boolean bool, int i_6_) {
 		anInt3582++;
-		if (!CacheNode_Sub15.method2379(7015, i)) {
-			if ((i_4_ ^ 0xffffffff) == 0) {
-				for (int i_7_ = 0; i_7_ < 100; i_7_++)
-					Class195.aBooleanArray2387[i_7_] = true;
-			} else {
-				Class195.aBooleanArray2387[i_4_] = true;
-			}
-		} else {
+		if (CacheNode_Sub15.method2379(7015, i)) {
 			if (bool != true) {
 				method3385(-73, 124, 90, 10, 48, 28, -80, false, -91);
 			}
@@ -42,7 +35,7 @@ public class Class282
 			if (Class79.aWidgetArrayArray1082[i] == null) {
 				Node_Sub6.method2416(-1, i_5_, Class134_Sub3.aWidgetArrayArray9035[i], i_0_, i_2_, i_6_, i_4_, i_4_ < 0, 90, i_1_, i_3_);
 			} else {
-				Node_Sub6.method2416(-1, i_5_, Class79.aWidgetArrayArray1082[i], i_0_, i_2_, i_6_, i_4_, (i_4_ ^ 0xffffffff) > -1, 27, i_1_, i_3_);
+				Node_Sub6.method2416(-1, i_5_, Class79.aWidgetArrayArray1082[i], i_0_, i_2_, i_6_, i_4_, i_4_ < 0, 27, i_1_, i_3_);
 			}
 			if (Class71.aBoolean967) {
 				if (i_4_ >= 0 && Node_Sub53.anInt7669 == 2) {
@@ -54,6 +47,11 @@ public class Class282
 				Node_Sub53.anInt7669 = i_12_;
 				Class320_Sub28.anInt8469 = i_10_;
 			}
+		} else if (i_4_ == -1) {
+			for (int i_7_ = 0; i_7_ < 100; i_7_++)
+				Class195.aBooleanArray2387[i_7_] = true;
+		} else {
+			Class195.aBooleanArray2387[i_4_] = true;
 		}
 	}
 	

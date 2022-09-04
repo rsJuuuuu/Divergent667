@@ -29,7 +29,7 @@ public class Class134_Sub4 extends Class134 implements Interface13_Impl1
 		anInt9037 = i;
 		anInt9041 = i_0_;
 		aGLXToolkit5299.method1312((byte) -21, this);
-		if (!bool && i_2_ == 0 && (i_1_ ^ 0xffffffff) == -1) {
+		if (!bool && i_2_ == 0 && i_1_ == 0) {
 			this.method1578(fs, i, i_0_, true, anInt5296);
 		} else {
 			OpenGL.glPixelStorei(3314, i_2_);
@@ -63,7 +63,7 @@ public class Class134_Sub4 extends Class134 implements Interface13_Impl1
 		anInt9037 = i;
 		anInt9041 = i_9_;
 		aGLXToolkit5299.method1312((byte) -21, this);
-		if (!bool || (i_11_ ^ 0xffffffff) != -1 || i_10_ != 0) {
+		if (!bool || i_11_ != 0 || i_10_ != 0) {
 			OpenGL.glPixelStorei(3314, i_11_);
 			OpenGL.glTexImage2Di(anInt5296, 0, 6408, anInt9037, anInt9041, 0, 32993, aGLXToolkit5299.anInt9321, is, i_10_ * 4);
 			OpenGL.glPixelStorei(3314, 0);
@@ -151,7 +151,7 @@ public class Class134_Sub4 extends Class134 implements Interface13_Impl1
 		anInt9041 = i_31_;
 		aGLXToolkit5299.method1312((byte) -21, this);
 		OpenGL.glPixelStorei(3317, 1);
-		if (!bool || (i_33_ ^ 0xffffffff) != -1 || i_32_ != 0) {
+		if (!bool || i_33_ != 0 || i_32_ != 0) {
 			OpenGL.glPixelStorei(3314, i_33_);
 			OpenGL.glTexImage2Dub(anInt5296, 0, this.method1570(10242), i, i_31_, 0, Node_Sub36.method2753((byte) -18, aClass68_5317), 5121, bs, i_32_);
 			OpenGL.glPixelStorei(3314, 0);

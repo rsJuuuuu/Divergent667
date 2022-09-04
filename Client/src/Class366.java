@@ -12,7 +12,7 @@ public class Class366
 	static int anInt4531;
 	
 	static final void method4071(int i, int i_0_) {
-		if ((i ^ 0xffffffff) > -1 || (i ^ 0xffffffff) < -3) {
+		if (i < 0 || i > 2) {
 			i = 0;
 		}
 		anInt4530++;

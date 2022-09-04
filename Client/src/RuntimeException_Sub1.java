@@ -19,7 +19,7 @@ public class RuntimeException_Sub1 extends RuntimeException
 		if (i_0_ != 19154) {
 			aClass318_4920 = null;
 		}
-        return !(i != 0 && (i ^ 0xffffffff) != -2 && i != 2);
+        return !(i != 0 && i != 1 && i != 2);
     }
 	
 	public static void method4208(byte b) {
@@ -34,7 +34,7 @@ public class RuntimeException_Sub1 extends RuntimeException
 		if (i_3_ > -41) {
 			method4207(38, 72);
 		}
-		if ((i_8_ ^ 0xffffffff) == (i_5_ ^ 0xffffffff) && i_1_ == i && i_4_ == i_9_ && (i_7_ ^ 0xffffffff) == (i_6_ ^ 0xffffffff)) {
+		if (i_5_ == i_8_ && i_1_ == i && i_4_ == i_9_ && i_6_ == i_7_) {
 			Node_Sub38_Sub19.method2851(i_5_, i_9_, i_2_, (byte) 127, i_7_, i);
 		} else {
 			int i_10_ = i_5_;
@@ -51,7 +51,7 @@ public class RuntimeException_Sub1 extends RuntimeException
 			int i_21_ = i_13_ + (-i_15_ + -i_15_) + i_17_;
 			int i_22_ = i_14_ + -i_12_;
 			int i_23_ = -i_13_ + i_15_;
-			for (int i_24_ = 128; (i_24_ ^ 0xffffffff) >= -4097; i_24_ += 128) {
+			for (int i_24_ = 128; i_24_ <= 4096; i_24_ += 128) {
 				int i_25_ = i_24_ * i_24_ >> 12;
 				int i_26_ = i_24_ * i_25_ >> 12;
 				int i_27_ = i_26_ * i_18_;

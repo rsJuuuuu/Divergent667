@@ -52,15 +52,13 @@ public class Node_Sub38_Sub30 extends Node_Sub38
 		anInt10414++;
 		int i_13_ = i;
 		do {
-			if ((i_13_ ^ 0xffffffff) != -1) {
-				if (i_13_ != 1) {
-					break;
-				}
-			} else {
+			if (i_13_ == 0) {
 				anInt10415 = buffer.readUnsignedByte();
 				break;
+			} else if (i_13_ != 1) {
+				break;
 			}
-			anInt10411 = buffer.readUnsignedByte();
+            anInt10411 = buffer.readUnsignedByte();
 		} while (false);
 		if (bool != false) {
 			method2780(true, null, -94);
@@ -88,7 +86,7 @@ public class Node_Sub38_Sub30 extends Node_Sub38
 			} else {
 				is_17_ = this.method2786(0, 0, 0);
 			}
-			for (int i_19_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_19_ ^ 0xffffffff); i_19_++) {
+			for (int i_19_ = 0; i_19_ < Class339_Sub7.anInt8728; i_19_++) {
 				if (i_15_ > 0) {
 					int i_20_ = i_19_ % i_15_;
 					is[i_19_] = is_17_[i_20_ * Class339_Sub7.anInt8728 / i_15_];

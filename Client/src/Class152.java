@@ -36,7 +36,7 @@ public class Class152
 			int i_3_ = buffer.readInt();
 			int i_4_ = buffer.readUnsignedShort();
 			int i_5_ = buffer.readUnsignedByte();
-			if (!bool && (i_5_ ^ 0xffffffff) == -2) {
+			if (!bool && i_5_ == 1) {
 				class224.anInt2670--;
 			} else {
 				class224.anIntArray2668[i_1_] = i_3_;

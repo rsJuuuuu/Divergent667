@@ -73,7 +73,7 @@ public class Class206
 		}
 		if (b == 67) {
 			anInt2467++;
-			if ((anInt2462 ^ 0xffffffff) > -1) {
+			if (anInt2462 < 0) {
 				aPlayer2468.plane = aPlayer2468.aByte5931 = (byte) i_4_;
 				aPlayer2468.method888(i_5_, -101, i_6_);
 				aPlayer2468.method849(i, -78, true);
@@ -93,15 +93,13 @@ public class Class206
 	while_160_:
 		do {
 			do {
-				if ((i_8_ ^ 0xffffffff) != -1) {
-					if ((i_8_ ^ 0xffffffff) != -2) {
-						break;
-					}
-				} else {
+				if (i_8_ == 0) {
 					anInt2462 = buffer.method2183();
 					break while_160_;
+				} else if (i_8_ != 1) {
+					break;
 				}
-				anInt2462 = -1;
+                anInt2462 = -1;
 				break while_160_;
 			} while (false);
 			anInt2462 = -1;

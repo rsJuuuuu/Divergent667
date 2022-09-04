@@ -45,14 +45,14 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1
 		PixelBuffer pixelbuffer = aD3DToolkit3365.aPixelBuffer9187;
 		int i_3_ = anIDirect3DTexture7906.LockRect(0, 0, 0, i, i_0_, 0, pixelbuffer);
 		if (lh.a((byte) 84, i_3_)) {
-			if (-1 == (i_2_ ^ 0xffffffff)) {
+			if (i_2_ == 0) {
 				i_2_ = i;
 			}
 			int i_4_ = pixelbuffer.getRowPitch();
-			if (4 * i == i_4_ && (i_2_ ^ 0xffffffff) == (i ^ 0xffffffff)) {
+			if (4 * i == i_4_ && i == i_2_) {
 				pixelbuffer.b(is, i_1_, 0, i * i_0_);
 			} else {
-				for (int i_5_ = 0; (i_5_ ^ 0xffffffff) > (i_0_ ^ 0xffffffff); i_5_++)
+				for (int i_5_ = 0; i_0_ > i_5_; i_5_++)
 					pixelbuffer.b(is, i_1_ + i_5_ * i_2_, i_5_ * i_4_, i);
 			}
 			anIDirect3DTexture7906.UnlockRect(0);
@@ -77,8 +77,8 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1
 			i_8_ *= aClass68_3367.anInt934;
 			i_13_ *= aClass68_3367.anInt934;
 			int i_15_ = pixelbuffer.getRowPitch();
-			if ((i_13_ ^ 0xffffffff) != (i_15_ ^ 0xffffffff) || i_13_ != i_8_) {
-				for (int i_16_ = 0; (i_16_ ^ 0xffffffff) > (i_9_ ^ 0xffffffff); i_16_++)
+			if (i_15_ != i_13_ || i_13_ != i_8_) {
+				for (int i_16_ = 0; i_9_ > i_16_; i_16_++)
 					pixelbuffer.a(bs, i_16_ * i_8_ + i, i_15_ * i_16_, i_13_);
 			} else {
 				pixelbuffer.a(bs, i, 0, i_13_ * i_9_);
@@ -123,19 +123,19 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1
 	
 	Class265_Sub3(D3DToolkit d3dtoolkit, Class68 class68, int i, int i_19_, boolean bool, byte[] bs, int i_20_, int i_21_) {
 		super(d3dtoolkit, class68, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9200, i_19_ * i);
-		if (!aD3DToolkit3365.aBoolean9196) {
-			anInt7903 = Class320_Sub19.method3753(i, -729073628);
-			anInt7905 = Class320_Sub19.method3753(i_19_, -729073628);
-		} else {
+		if (aD3DToolkit3365.aBoolean9196) {
 			anInt7905 = i_19_;
 			anInt7903 = i;
-		}
-		if (!bool) {
-			anIDirect3DTexture7906 = aD3DToolkit3365.anIDirect3DDevice9199.a(anInt7903, anInt7905, 1, 0, D3DToolkit.method1396(Class372.aClass372_4594, aClass68_3367, -32), 1);
 		} else {
-			anIDirect3DTexture7906 = aD3DToolkit3365.anIDirect3DDevice9199.a(anInt7903, anInt7905, 0, 1024, D3DToolkit.method1396(Class372.aClass372_4594, aClass68_3367, -31), 1);
+			anInt7903 = Class320_Sub19.method3753(i, -729073628);
+			anInt7905 = Class320_Sub19.method3753(i_19_, -729073628);
 		}
-		PixelBuffer pixelbuffer = aD3DToolkit3365.aPixelBuffer9187;
+        if (bool) {
+            anIDirect3DTexture7906 = aD3DToolkit3365.anIDirect3DDevice9199.a(anInt7903, anInt7905, 0, 1024, D3DToolkit.method1396(Class372.aClass372_4594, aClass68_3367, -31), 1);
+        } else {
+            anIDirect3DTexture7906 = aD3DToolkit3365.anIDirect3DDevice9199.a(anInt7903, anInt7905, 1, 0, D3DToolkit.method1396(Class372.aClass372_4594, aClass68_3367, -32), 1);
+        }
+        PixelBuffer pixelbuffer = aD3DToolkit3365.aPixelBuffer9187;
 		int i_22_ = anIDirect3DTexture7906.LockRect(0, 0, 0, i, i_19_, 0, pixelbuffer);
 		if (lh.a((byte) 104, i_22_)) {
 			if (0 == i_21_) {
@@ -144,7 +144,7 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1
 			i *= aClass68_3367.anInt934;
 			i_21_ *= aClass68_3367.anInt934;
 			int i_23_ = pixelbuffer.getRowPitch();
-			if ((i ^ 0xffffffff) == (i_23_ ^ 0xffffffff) && (i ^ 0xffffffff) == (i_21_ ^ 0xffffffff)) {
+			if (i_23_ == i && i_21_ == i) {
 				pixelbuffer.a(bs, i_20_, 0, i * i_19_);
 			} else {
 				for (int i_24_ = 0; i_24_ < i_19_; i_24_++)
@@ -168,7 +168,7 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1
 			if (4 * i_27_ == i_30_) {
 				pixelbuffer.a(is, i, 0, is.length);
 			} else {
-				for (int i_31_ = 0; (i_31_ ^ 0xffffffff) > (i_28_ ^ 0xffffffff); i_31_++)
+				for (int i_31_ = 0; i_28_ > i_31_; i_31_++)
 					pixelbuffer.a(is, i - -(i_27_ * i_31_), i_31_ * i_30_, i_27_);
 			}
 			anIDirect3DTexture7906.UnlockRect(0);
@@ -193,8 +193,8 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1
 		}
 		if (lh.a((byte) 123, i_38_)) {
 			int i_39_ = pixelbuffer.getRowPitch();
-			if (i_39_ != 4 * i_35_ || (i_35_ ^ 0xffffffff) != (i_37_ ^ 0xffffffff)) {
-				for (int i_40_ = 0; (i_40_ ^ 0xffffffff) > (i_33_ ^ 0xffffffff); i_40_++)
+			if (i_39_ != 4 * i_35_ || i_37_ != i_35_) {
+				for (int i_40_ = 0; i_33_ > i_40_; i_40_++)
 					pixelbuffer.b(is, i_36_ + i_37_ * i_40_, i_40_ * i_39_, i_35_);
 			} else {
 				pixelbuffer.b(is, i_36_, 0, i_35_ * i_33_);

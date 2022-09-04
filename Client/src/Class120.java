@@ -38,7 +38,7 @@ public class Class120
 			Class241 class241 = Class240.aSignLink2946.method3631(true, "2", (byte) 126);
 			while (class241.anInt2953 == 0)
 				Class262_Sub22.method3208(1L, false);
-			if ((class241.anInt2953 ^ 0xffffffff) == -2) {
+			if (class241.anInt2953 == 1) {
 				fileondisk = (FileOnDisk) class241.anObject2956;
 				byte[] bs = new byte[(int) fileondisk.method1101(0)];
 				int i_1_;

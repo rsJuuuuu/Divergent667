@@ -23,7 +23,7 @@ public class Node_Sub40 extends Node
 	
 	static final void method2924(int i, int i_0_, int i_1_, int i_2_, int i_3_, GraphicsToolkit graphicstoolkit, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, CacheNode_Sub4 cachenode_sub4) {
 		anInt7500++;
-		if (i_7_ < i_4_ && i_4_ < i_0_ + i_7_ && (i_1_ - 13 ^ 0xffffffff) > (i ^ 0xffffffff) && (i ^ 0xffffffff) > (3 + i_1_ ^ 0xffffffff)) {
+		if (i_7_ < i_4_ && i_4_ < i_0_ + i_7_ && i > i_1_ - 13 && 3 + i_1_ > i) {
 			i_5_ = i_3_;
 		}
 		String string = Node_Sub14.method2550(cachenode_sub4, (byte) 62);
@@ -50,7 +50,7 @@ public class Node_Sub40 extends Node
 			myPlayerDisplayName = null;
 		}
 		graphicstoolkit.method1239(i, i_9_, i_11_, (byte) 116, i_10_, -16777216);
-		if ((Node_Sub25_Sub1.anInt9947 ^ 0xffffffff) <= -101) {
+		if (Node_Sub25_Sub1.anInt9947 >= 100) {
 			float f = (float) Class20.anInt333 / (float) Class20.anInt345;
 			int i_12_ = i;
 			int i_13_ = i_9_;
@@ -87,18 +87,16 @@ public class Node_Sub40 extends Node
 				for (Node_Sub14 node_sub14 = (Node_Sub14) Class20.aClass312_331.method3613(65280); node_sub14 != null; node_sub14 = (Node_Sub14) Class20.aClass312_331.method3620(16776960)) {
 					Class79 class79 = Class20.aClass215_322.method2069((byte) 115, node_sub14.anInt7128);
 					if (Class220.method2099(true, class79)) {
-						if ((Class253.anInt3201 ^ 0xffffffff) != (node_sub14.anInt7128 ^ 0xffffffff)) {
-							if ((Node_Sub38_Sub19.anInt10296 ^ 0xffffffff) != 0 && Node_Sub38_Sub19.anInt10296 == class79.anInt1067) {
-								int i_20_ = i_10_ + i_12_ * node_sub14.anInt7125 / Class20.anInt345;
-								int i_21_ = i_11_ - -((-node_sub14.anInt7120 + Class20.anInt333) * i_13_ / Class20.anInt333);
-								graphicstoolkit.method1239(4, 4, -2 + i_21_, (byte) 116, -2 + i_20_, i_19_ << 24 | 0xffff00);
-							}
-						} else {
+						if (node_sub14.anInt7128 == Class253.anInt3201) {
 							int i_22_ = i_10_ + node_sub14.anInt7125 * i_12_ / Class20.anInt345;
 							int i_23_ = i_11_ + i_13_ * (Class20.anInt333 + -node_sub14.anInt7120) / Class20.anInt333;
 							graphicstoolkit.method1239(4, 4, -2 + i_23_, (byte) 116, i_22_ - 2, 0xffff00 | i_19_ << 24);
-						}
-					}
+						} else if (Node_Sub38_Sub19.anInt10296 != -1 && Node_Sub38_Sub19.anInt10296 == class79.anInt1067) {
+                            int i_20_ = i_10_ + i_12_ * node_sub14.anInt7125 / Class20.anInt345;
+                            int i_21_ = i_11_ - -((-node_sub14.anInt7120 + Class20.anInt333) * i_13_ / Class20.anInt333);
+                            graphicstoolkit.method1239(4, 4, -2 + i_21_, (byte) 116, -2 + i_20_, i_19_ << 24 | 0xffff00);
+                        }
+                    }
 				}
 			}
 		}
@@ -146,7 +144,7 @@ public class Node_Sub40 extends Node
 		aBooleanArray7502 = new boolean[anInt7503];
 		anIntArrayArray7499 = new int[anInt7503][];
 		anIntArray7511 = new int[anInt7503];
-		for (int i_31_ = 0; (i_31_ ^ 0xffffffff) > (anInt7503 ^ 0xffffffff); i_31_++) {
+		for (int i_31_ = 0; anInt7503 > i_31_; i_31_++) {
 			anIntArray7511[i_31_] = buffer.readUnsignedByte();
 			if (anIntArray7511[i_31_] == 6) {
 				anIntArray7511[i_31_] = 2;
@@ -154,12 +152,12 @@ public class Node_Sub40 extends Node
 		}
 		for (int i_32_ = 0; i_32_ < anInt7503; i_32_++)
 			aBooleanArray7502[i_32_] = buffer.readUnsignedByte() == 1;
-		for (int i_33_ = 0; (i_33_ ^ 0xffffffff) > (anInt7503 ^ 0xffffffff); i_33_++)
+		for (int i_33_ = 0; anInt7503 > i_33_; i_33_++)
 			anIntArray7510[i_33_] = buffer.readUnsignedShort();
-		for (int i_34_ = 0; (anInt7503 ^ 0xffffffff) < (i_34_ ^ 0xffffffff); i_34_++)
+		for (int i_34_ = 0; i_34_ < anInt7503; i_34_++)
 			anIntArrayArray7499[i_34_] = new int[buffer.readUnsignedByte()];
 		for (int i_35_ = 0; i_35_ < anInt7503; i_35_++) {
-			for (int i_36_ = 0; (i_36_ ^ 0xffffffff) > (anIntArrayArray7499[i_35_].length ^ 0xffffffff); i_36_++)
+			for (int i_36_ = 0; anIntArrayArray7499[i_35_].length > i_36_; i_36_++)
 				anIntArrayArray7499[i_35_][i_36_] = buffer.readUnsignedByte();
 		}
 	}

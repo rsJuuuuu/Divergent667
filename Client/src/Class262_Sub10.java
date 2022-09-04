@@ -34,7 +34,7 @@ public class Class262_Sub10 extends Class262 {
 		if (bool != false) {
 			method3173(false);
 		}
-		if ((i ^ 0xffffffff) < (Node_Sub25_Sub3.localNPCsCount ^ 0xffffffff)) {
+		if (Node_Sub25_Sub3.localNPCsCount < i) {
 			throw new RuntimeException("gnpov1");
 		}
 		Node_Sub25_Sub3.localNPCsCount = 0;
@@ -52,7 +52,7 @@ public class Class262_Sub10 extends Class262 {
 					Class54.LocalNPCsIndexes[Node_Sub25_Sub3.localNPCsCount++] = i_2_;
 					npc.anInt10880 = Plane.anInt3423;
 					Class194_Sub1_Sub1.anIntArray9370[Node_Sub38_Sub6.anInt10132++] = i_2_;
-				} else if ((i_4_ ^ 0xffffffff) == -2) {
+				} else if (i_4_ == 1) {
 					Class54.LocalNPCsIndexes[Node_Sub25_Sub3.localNPCsCount++] = i_2_;
 					npc.anInt10880 = Plane.anInt3423;
 					int walkDir = packet.readBits(3);
@@ -64,7 +64,7 @@ public class Class262_Sub10 extends Class262 {
 				} else if (i_4_ == 2) {
 					Class54.LocalNPCsIndexes[Node_Sub25_Sub3.localNPCsCount++] = i_2_;
 					npc.anInt10880 = Plane.anInt3423;
-					if ((packet.readBits(1) ^ 0xffffffff) == -2) {
+					if (packet.readBits(1) == 1) {
 						int walkDir = packet.readBits(3);
 						npc.method876(2, walkDir, (byte) -123);
 						int runDir = packet.readBits(3);
@@ -74,10 +74,10 @@ public class Class262_Sub10 extends Class262 {
 						npc.method876(0, i_9_, (byte) -126);
 					}
 					int i_10_ = packet.readBits(1);
-					if ((i_10_ ^ 0xffffffff) == -2) {
+					if (i_10_ == 1) {
 						Class194_Sub1_Sub1.anIntArray9370[Node_Sub38_Sub6.anInt10132++] = i_2_;
 					}
-				} else if ((i_4_ ^ 0xffffffff) == -4) {
+				} else if (i_4_ == 3) {
 					FileOnDisk.anIntArray1322[Class270_Sub2_Sub1.anInt10543++] = i_2_;
 				}
 			}

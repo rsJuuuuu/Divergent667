@@ -15,7 +15,7 @@ public class Class145
 	
 	static final int method1638(int i, String string, int i_0_, boolean bool) {
 		anInt1796++;
-		if (i_0_ < 2 || (i_0_ ^ 0xffffffff) < -37) {
+		if (i_0_ < 2 || i_0_ > 36) {
 			throw new IllegalArgumentException("Invalid radix:" + i_0_);
 		}
 		boolean bool_1_ = false;
@@ -27,8 +27,8 @@ public class Class145
 		int i_4_ = string.length();
 		for (int i_5_ = 0; i_4_ > i_5_; i_5_++) {
 			int i_6_ = string.charAt(i_5_);
-			if ((i_5_ ^ 0xffffffff) == -1) {
-				if ((i_6_ ^ 0xffffffff) == -46) {
+			if (i_5_ == 0) {
+				if (i_6_ == 45) {
 					bool_1_ = true;
 					continue;
 				}
@@ -36,20 +36,16 @@ public class Class145
 					continue;
 				}
 			}
-			if (i_6_ < 48 || i_6_ > 57) {
-				if (i_6_ < 65 || i_6_ > 90) {
-					if ((i_6_ ^ 0xffffffff) <= -98 && i_6_ <= 122) {
-						i_6_ -= 87;
-					} else {
-						throw new NumberFormatException();
-					}
-				} else {
-					i_6_ -= 55;
-				}
-			} else {
+			if (i_6_ >= 48 && i_6_ <= 57) {
 				i_6_ -= 48;
+			} else if (i_6_ >= 65 && i_6_ <= 90) {
+				i_6_ -= 55;
+			} else if (i_6_ >= 97 && i_6_ <= 122) {
+				i_6_ -= 87;
+			} else {
+				throw new NumberFormatException();
 			}
-			if ((i_6_ ^ 0xffffffff) <= (i_0_ ^ 0xffffffff)) {
+            if (i_0_ <= i_6_) {
 				throw new NumberFormatException();
 			}
 			if (bool_1_) {

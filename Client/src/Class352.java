@@ -24,30 +24,26 @@ public class Class352
 	
 	private final void method4006(BufferedStream buffer, int i, byte b, int i_0_) {
 		anInt4337++;
-		if (i_0_ != 1) {
-			if ((i_0_ ^ 0xffffffff) != -3) {
-				if ((i_0_ ^ 0xffffffff) == -4) {
-					buffer.readByte();
-				} else if ((i_0_ ^ 0xffffffff) == -5) {
-					anInt4324 = buffer.readUnsignedByte();
-				} else if (i_0_ == 5) {
-					anInt4336 = buffer.readUnsignedByte();
-				} else if ((i_0_ ^ 0xffffffff) == -7) {
-					aBoolean4335 = true;
-				} else if (i_0_ == 7) {
-					aBoolean4325 = true;
-				}
-			} else {
-				anInt4334 = buffer.readUnsignedShort() + 1;
-				anInt4326 = buffer.readUnsignedShort() - -1;
-			}
-		} else {
+		if (i_0_ == 1) {
 			anInt4330 = buffer.readUnsignedShort();
 			if (anInt4330 == 65535) {
 				anInt4330 = -1;
 			}
+		} else if (i_0_ == 2) {
+			anInt4334 = buffer.readUnsignedShort() + 1;
+			anInt4326 = buffer.readUnsignedShort() - -1;
+		} else if (i_0_ == 3) {
+			buffer.readByte();
+		} else if (i_0_ == 4) {
+			anInt4324 = buffer.readUnsignedByte();
+		} else if (i_0_ == 5) {
+			anInt4336 = buffer.readUnsignedByte();
+		} else if (i_0_ == 6) {
+			aBoolean4335 = true;
+		} else if (i_0_ == 7) {
+			aBoolean4325 = true;
 		}
-		if (b != -2) {
+        if (b != -2) {
 			method4007(102, (byte) 75, null);
 		}
 	}
@@ -89,15 +85,15 @@ public class Class352
 		Animator animator = actor.anAnimator10860;
 		int i_6_ = 0x3fff & -actor.aClass99_10893.anInt1281 + actor.anInt10889;
 		if (i == -1) {
-			if ((i_6_ ^ 0xffffffff) == -1 && (actor.anInt10877 ^ 0xffffffff) >= -26) {
+			if (i_6_ == 0 && actor.anInt10877 <= 25) {
 				if (!actor.aBoolean10867 || !class259.method3130(animator.method250((byte) -58), (byte) -127)) {
 					animator.method249(true, class259.method3128(false));
 					actor.aBoolean10867 = animator.method245(-127);
 				}
-			} else if ((i_3_ ^ 0xffffffff) > -1 && class259.anInt3299 != -1) {
+			} else if (i_3_ < 0 && class259.anInt3299 != -1) {
 				animator.method249(true, class259.anInt3299);
 				actor.aBoolean10867 = false;
-			} else if ((i_3_ ^ 0xffffffff) < -1 && (class259.anInt3274 ^ 0xffffffff) != 0) {
+			} else if (i_3_ > 0 && class259.anInt3274 != -1) {
 				animator.method249(true, class259.anInt3274);
 				actor.aBoolean10867 = false;
 			} else if (!actor.aBoolean10867 || !class259.method3130(animator.method250((byte) -48), (byte) -128)) {
@@ -106,12 +102,12 @@ public class Class352
 			}
 		} else if (actor.faceEntity != -1 && (i_6_ >= 10240 || i_6_ <= 2048)) {
 			int i_7_ = 0x3fff & -actor.aClass99_10893.anInt1281 + Node_Sub38_Sub21.anIntArray10318[i_4_];
-			if ((i ^ 0xffffffff) != -3 || (class259.anInt3252 ^ 0xffffffff) == 0) {
-				if ((i ^ 0xffffffff) == -1 && class259.anInt3262 != -1) {
-					if (i_7_ <= 2048 || (i_7_ ^ 0xffffffff) < -6145 || (class259.anInt3304 ^ 0xffffffff) == 0) {
+			if (i != 2 || class259.anInt3252 == -1) {
+				if (i == 0 && class259.anInt3262 != -1) {
+					if (i_7_ <= 2048 || i_7_ > 6144 || class259.anInt3304 == -1) {
 						if (i_7_ >= 10240 && i_7_ < 14336 && class259.anInt3269 != -1) {
 							animator.method249(true, class259.anInt3269);
-						} else if (i_7_ > 6144 && i_7_ < 10240 && (class259.anInt3297 ^ 0xffffffff) != 0) {
+						} else if (i_7_ > 6144 && i_7_ < 10240 && class259.anInt3297 != -1) {
 							animator.method249(true, class259.anInt3297);
 						} else {
 							animator.method249(true, class259.anInt3262);
@@ -119,19 +115,19 @@ public class Class352
 					} else {
 						animator.method249(true, class259.anInt3304);
 					}
-				} else if ((i_7_ ^ 0xffffffff) < -2049 && (i_7_ ^ 0xffffffff) >= -6145 && class259.anInt3287 != -1) {
+				} else if (i_7_ > 2048 && i_7_ <= 6144 && class259.anInt3287 != -1) {
 					animator.method249(true, class259.anInt3287);
 				} else if (i_7_ >= 10240 && i_7_ < 14336 && class259.anInt3301 != -1) {
 					animator.method249(true, class259.anInt3301);
-				} else if ((i_7_ ^ 0xffffffff) < -6145 && i_7_ < 10240 && class259.anInt3286 != -1) {
+				} else if (i_7_ > 6144 && i_7_ < 10240 && class259.anInt3286 != -1) {
 					animator.method249(true, class259.anInt3286);
 				} else {
 					animator.method249(true, class259.anInt3277);
 				}
-			} else if (i_7_ <= 2048 || i_7_ > 6144 || (class259.anInt3293 ^ 0xffffffff) == 0) {
+			} else if (i_7_ <= 2048 || i_7_ > 6144 || class259.anInt3293 == -1) {
 				if (i_7_ >= 10240 && i_7_ < 14336 && class259.anInt3270 != -1) {
 					animator.method249(true, class259.anInt3270);
-				} else if (i_7_ <= 6144 || (i_7_ ^ 0xffffffff) <= -10241 || class259.anInt3271 == -1) {
+				} else if (i_7_ <= 6144 || i_7_ >= 10240 || class259.anInt3271 == -1) {
 					animator.method249(true, class259.anInt3252);
 				} else {
 					animator.method249(true, class259.anInt3271);
@@ -140,24 +136,24 @@ public class Class352
 				animator.method249(true, class259.anInt3293);
 			}
 			actor.aBoolean10867 = false;
-		} else if ((i_6_ ^ 0xffffffff) != -1 || (actor.anInt10877 ^ 0xffffffff) < -26) {
-			if ((i ^ 0xffffffff) == -3 && class259.anInt3252 != -1) {
-				if (i_3_ < 0 && (class259.anInt3282 ^ 0xffffffff) != 0) {
+		} else if (i_6_ != 0 || actor.anInt10877 > 25) {
+			if (i == 2 && class259.anInt3252 != -1) {
+				if (i_3_ < 0 && class259.anInt3282 != -1) {
 					animator.method249(true, class259.anInt3282);
-				} else if ((i_3_ ^ 0xffffffff) < -1 && (class259.anInt3253 ^ 0xffffffff) != 0) {
+				} else if (i_3_ > 0 && class259.anInt3253 != -1) {
 					animator.method249(true, class259.anInt3253);
 				} else {
 					animator.method249(true, class259.anInt3252);
 				}
-			} else if ((i ^ 0xffffffff) != -1 || class259.anInt3262 == -1) {
-				if ((i_3_ ^ 0xffffffff) > -1 && (class259.anInt3298 ^ 0xffffffff) != 0) {
+			} else if (i != 0 || class259.anInt3262 == -1) {
+				if (i_3_ < 0 && class259.anInt3298 != -1) {
 					animator.method249(true, class259.anInt3298);
 				} else if (i_3_ <= 0 || class259.anInt3305 == -1) {
 					animator.method249(true, class259.anInt3277);
 				} else {
 					animator.method249(true, class259.anInt3305);
 				}
-			} else if ((i_3_ ^ 0xffffffff) <= -1 || class259.anInt3275 == -1) {
+			} else if (i_3_ >= 0 || class259.anInt3275 == -1) {
 				if (i_3_ <= 0 || class259.anInt3260 == -1) {
 					animator.method249(true, class259.anInt3262);
 				} else {
@@ -169,7 +165,7 @@ public class Class352
 			actor.aBoolean10867 = false;
 		} else {
 			if (i != 2 || class259.anInt3252 == -1) {
-				if (i != 0 || (class259.anInt3262 ^ 0xffffffff) == 0) {
+				if (i != 0 || class259.anInt3262 == -1) {
 					animator.method249(true, class259.anInt3277);
 				} else {
 					animator.method249(true, class259.anInt3262);
@@ -207,7 +203,7 @@ public class Class352
 				if (i_11_ == 1) {
 					animator.method229((byte) 63, i);
 				}
-				if ((i_11_ ^ 0xffffffff) == -3) {
+				if (i_11_ == 2) {
 					animator.method251(true);
 				}
 			}
@@ -217,10 +213,10 @@ public class Class352
 			aClass299_4329 = null;
 		}
 		for (int i_13_ = 0; i_13_ < emotes.length; i_13_++) {
-			if ((emotes[i_13_] ^ 0xffffffff) != 0) {
+			if (emotes[i_13_] != -1) {
 				bool_12_ = false;
 			}
-			if (actor.anIntArray10817 == null || actor.anIntArray10817[i_13_] == -1 || (Class18.aClass37_306.method395(emotes[i_13_], (byte) -125).anInt710 ^ 0xffffffff) <= (Class18.aClass37_306.method395(actor.anIntArray10817[i_13_], (byte) -100).anInt710 ^ 0xffffffff)) {
+			if (actor.anIntArray10817 == null || actor.anIntArray10817[i_13_] == -1 || Class18.aClass37_306.method395(actor.anIntArray10817[i_13_], (byte) -100).anInt710 <= Class18.aClass37_306.method395(emotes[i_13_], (byte) -125).anInt710) {
 				actor.anIntArray10817 = emotes;
 				actor.anAnimator10876.method227(i, 119);
 				if (bool) {
@@ -248,7 +244,7 @@ public class Class352
 	
 	static final void drawNPCOptions(boolean hideOptions, Npc npc) {
 		anInt4339++;
-		if ((Class315.anInt4035 ^ 0xffffffff) > -401) {
+		if (Class315.anInt4035 < 400) {
 			NpcDefinition npcdefinition = npc.aNpcDefinition11122;
 			String name = npc.name;
 			if (npcdefinition.anIntArray2827 != null) {
@@ -265,7 +261,7 @@ public class Class352
 				}
 				if (Class87.removeWalkHere && !hideOptions) {
 					Class267 class267 = Class324.anInt4087 != -1 ? Class188_Sub2_Sub2.aClass36_9366.method394(Class324.anInt4087, -120) : null;
-					if ((0x2 & Class200_Sub2.anInt4943) != 0 && (class267 == null || (npcdefinition.method3009(86, Class324.anInt4087, class267.anInt3443) ^ 0xffffffff) != (class267.anInt3443 ^ 0xffffffff))) {
+					if ((0x2 & Class200_Sub2.anInt4943) != 0 && (class267 == null || class267.anInt3443 != npcdefinition.method3009(86, Class324.anInt4087, class267.anInt3443))) {
 						Class13.anInt205++;
 						Node_Sub32.method2731(false, -1, (long) npc.index, 0, 0, Class84.aString1148, 23, true, Class201.anInt2444, Class66.aString5177 + " -> <col=ffff00>" + name, (long) npc.index, (byte) -18, false);
 					}
@@ -276,23 +272,23 @@ public class Class352
 						strings = Class320_Sub10.method3721(0, strings);
 					}
 					if (strings != null) {
-						for (int i_16_ = strings.length - 1; (i_16_ ^ 0xffffffff) <= -1; i_16_--) {
-							if (strings[i_16_] != null && ((npcdefinition.aByte2855 ^ 0xffffffff) == -1 || !strings[i_16_].equalsIgnoreCase(Class22.aClass22_386.method297(Class35.language)) && !strings[i_16_].equalsIgnoreCase(Class22.aClass22_385.method297(Class35.language)))) {
+						for (int i_16_ = strings.length - 1; i_16_ >= 0; i_16_--) {
+							if (strings[i_16_] != null && (npcdefinition.aByte2855 == 0 || !strings[i_16_].equalsIgnoreCase(Class22.aClass22_386.method297(Class35.language)) && !strings[i_16_].equalsIgnoreCase(Class22.aClass22_385.method297(Class35.language)))) {
 								int i_17_ = 0;
 								int i_18_ = Class230_Sub1.anInt9013;
-								if ((i_16_ ^ 0xffffffff) == -1) {
+								if (i_16_ == 0) {
 									i_17_ = 49;
 								}
 								if (i_16_ == 1) {
 									i_17_ = 59;
 								}
-								if ((i_16_ ^ 0xffffffff) == -3) {
+								if (i_16_ == 2) {
 									i_17_ = 47;
 								}
-								if ((i_16_ ^ 0xffffffff) == -4) {
+								if (i_16_ == 3) {
 									i_17_ = 57;
 								}
-								if ((i_16_ ^ 0xffffffff) == -5) {
+								if (i_16_ == 4) {
 									i_17_ = 3;
 								}
 								if (i_16_ == 5) {
@@ -308,16 +304,16 @@ public class Class352
 								Class216.anInt2548++;
 							}
 						}
-						if ((npcdefinition.aByte2855 ^ 0xffffffff) == -2) {
+						if (npcdefinition.aByte2855 == 1) {
 							for (int i_19_ = 0; strings.length > i_19_; i_19_++) {
 								if (strings[i_19_] != null && (strings[i_19_].equalsIgnoreCase(Class22.aClass22_386.method297(Class35.language)) || strings[i_19_].equalsIgnoreCase(Class22.aClass22_385.method297(Class35.language)))) {
 									short s = 0;
-									if (!Settings.forceLeftClick() && (~npc.combatLevel) < (~Class295.myPlayer.combatLevel)) {
+									if (!Settings.forceLeftClick() && Class295.myPlayer.combatLevel < npc.combatLevel) {
 										s = (short) 2000;
 									}
 									short s_20_ = 0;
 									int i_21_ = Class230_Sub1.anInt9013;
-									if ((i_19_ ^ 0xffffffff) == -1) {
+									if (i_19_ == 0) {
 										s_20_ = (short) 49;
 									}
 									if (i_19_ == 1) {
@@ -329,16 +325,16 @@ public class Class352
 									if (i_19_ == 3) {
 										s_20_ = (short) 57;
 									}
-									if ((i_19_ ^ 0xffffffff) == -5) {
+									if (i_19_ == 4) {
 										s_20_ = (short) 3;
 									}
 									if (i_19_ == 5) {
 										s_20_ = (short) 1011;
 									}
-									if ((npcdefinition.anInt2815 ^ 0xffffffff) == (i_19_ ^ 0xffffffff)) {
+									if (i_19_ == npcdefinition.anInt2815) {
 										i_21_ = npcdefinition.anInt2859;
 									}
-									if ((s_20_ ^ 0xffffffff) != -1) {
+									if (s_20_ != 0) {
 										s_20_ += s;
 									}
 									if (npcdefinition.anInt2856 == i_19_) {

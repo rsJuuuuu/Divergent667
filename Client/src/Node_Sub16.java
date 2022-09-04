@@ -29,7 +29,7 @@ public class Node_Sub16 extends Node
 			l = l >>> 8 ^ ls[(int) (0xffL & ((long) is[i_2_] ^ l))];
 		}
 		if (is_0_ != null) {
-			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > -6; i_3_++)
+			for (int i_3_ = 0; i_3_ < 5; i_3_++)
 				l = l >>> 8 ^ ls[(int) (0xffL & (l ^ (long) is_0_[i_3_]))];
 		}
 		l = ls[(int) ((l ^ (long) (!bool ? 0 : 1)) & 0xffL)] ^ l >>> 8;
@@ -44,7 +44,7 @@ public class Node_Sub16 extends Node
 		DrawableModel drawablemodel = null;
 		int i_6_ = i_5_;
 		Class259 class259 = null;
-		if ((i ^ 0xffffffff) != 0) {
+		if (i != -1) {
 			class259 = InputStream_Sub2.aClass281_83.method3383((byte) 120, i);
 		}
 		int[] is = anIntArray7137;
@@ -53,9 +53,9 @@ public class Node_Sub16 extends Node
 		}
 		if (class259 != null && class259.anIntArray3276 != null) {
 			is = new int[class259.anIntArray3276.length];
-			for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > (class259.anIntArray3276.length ^ 0xffffffff); i_7_++) {
+			for (int i_7_ = 0; class259.anIntArray3276.length > i_7_; i_7_++) {
 				int i_8_ = class259.anIntArray3276[i_7_];
-				if (i_8_ >= 0 && (anIntArray7137.length ^ 0xffffffff) < (i_8_ ^ 0xffffffff)) {
+				if (i_8_ >= 0 && i_8_ < anIntArray7137.length) {
 					is[i_7_] = anIntArray7137[i_8_];
 				} else {
 					is[i_7_] = -1;
@@ -69,13 +69,13 @@ public class Node_Sub16 extends Node
 		if (Class96.aClass61_1272 != null) {
 			drawablemodel = (DrawableModel) Class96.aClass61_1272.method607(l, i_4_ ^ 0x1);
 		}
-		if (drawablemodel == null || (graphicstoolkit.b(drawablemodel.ua(), i_6_) ^ 0xffffffff) != -1) {
+		if (drawablemodel == null || graphicstoolkit.b(drawablemodel.ua(), i_6_) != 0) {
 			if (drawablemodel != null) {
 				i_6_ = graphicstoolkit.c(i_6_, drawablemodel.ua());
 			}
 			int i_9_ = i_6_;
 			boolean bool_10_ = false;
-			for (int i_11_ = 0; (i_11_ ^ 0xffffffff) > (is.length ^ 0xffffffff); i_11_++) {
+			for (int i_11_ = 0; is.length > i_11_; i_11_++) {
 				if (is[i_11_] != -1 && !EntityNode_Sub3_Sub1.aClass86_9166.method1010(is[i_11_], 14434).method1686(bool, null, i_4_ + -50)) {
 					bool_10_ = true;
 				}
@@ -85,12 +85,12 @@ public class Node_Sub16 extends Node
 			}
 			Model[] models = new Model[is.length];
 			for (int i_12_ = 0; i_12_ < is.length; i_12_++) {
-				if ((is[i_12_] ^ 0xffffffff) != 0) {
+				if (is[i_12_] != -1) {
 					models[i_12_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(is[i_12_], i_4_ + 14433).method1683(null, bool, Node_Sub19.method2612(i_4_, -52));
 				}
 			}
 			if (class259 != null && class259.anIntArrayArray3273 != null) {
-				for (int i_13_ = 0; (i_13_ ^ 0xffffffff) > (class259.anIntArrayArray3273.length ^ 0xffffffff); i_13_++) {
+				for (int i_13_ = 0; class259.anIntArrayArray3273.length > i_13_; i_13_++) {
 					if (class259.anIntArrayArray3273[i_13_] != null && models[i_13_] != null) {
 						int i_14_ = class259.anIntArrayArray3273[i_13_][0];
 						int i_15_ = class259.anIntArrayArray3273[i_13_][1];
@@ -98,10 +98,10 @@ public class Node_Sub16 extends Node
 						int i_17_ = class259.anIntArrayArray3273[i_13_][3];
 						int i_18_ = class259.anIntArrayArray3273[i_13_][4];
 						int i_19_ = class259.anIntArrayArray3273[i_13_][5];
-						if ((i_17_ ^ 0xffffffff) != -1 || i_18_ != 0 || i_19_ != 0) {
+						if (i_17_ != 0 || i_18_ != 0 || i_19_ != 0) {
 							models[i_13_].method2085(i_19_, i_17_, -89, i_18_);
 						}
-						if ((i_14_ ^ 0xffffffff) != -1 || (i_15_ ^ 0xffffffff) != -1 || (i_16_ ^ 0xffffffff) != -1) {
+						if (i_14_ != 0 || i_15_ != 0 || i_16_ != 0) {
 							models[i_13_].method2082(i_14_, i_15_, -96, i_16_);
 						}
 					}
@@ -165,7 +165,7 @@ public class Node_Sub16 extends Node
 			return -13;
 		}
 		anInt7134++;
-		if ((c ^ 0xffffffff) <= -1 && (Class346.anIntArray4275.length ^ 0xffffffff) < (c ^ 0xffffffff)) {
+		if (c >= 0 && c < Class346.anIntArray4275.length) {
 			return Class346.anIntArray4275[c];
 		}
 		return -1;
@@ -196,7 +196,7 @@ public class Node_Sub16 extends Node
 		}
 		Class339_Sub6.routeFinderYArray[i_38_++] = i_33_;
 		int[][] is = class84.clipMasks;
-		while ((i_38_ ^ 0xffffffff) != (i_39_ ^ 0xffffffff)) {
+		while (i_39_ != i_38_) {
 			i_33_ = Class339_Sub6.routeFinderYArray[i_39_];
 			i_32_ = Node_Sub39.routeFinderXArray[i_39_];
 			i_35_ = i_33_ - i_37_;
@@ -214,27 +214,23 @@ public class Node_Sub16 extends Node
 					while_97_:
 						do {
 							do {
-								if ((i_42_ ^ 0xffffffff) != 3) {
-									if ((i_42_ ^ 0xffffffff) != 2) {
-										if (i_42_ != -2) {
-											if ((i_42_ ^ 0xffffffff) != 0) {
-												if (i_42_ == 0 || (i_42_ ^ 0xffffffff) == -2 || (i_42_ ^ 0xffffffff) == -3 || (i_42_ ^ 0xffffffff) == -4 || i_42_ == 9) {
-													break while_98_;
-												}
-												break while_99_;
-											}
-										} else {
-											break;
-										}
-										break while_97_;
-									}
-								} else {
-									if ((i_26_ ^ 0xffffffff) == (i_32_ ^ 0xffffffff) && i_33_ == i_30_) {
+								if (i_42_ == -4) {
+									if (i_32_ == i_26_ && i_33_ == i_30_) {
 										Class315.anInt4033 = i_32_;
 										Class219.anInt2623 = i_33_;
 										return true;
 									}
 									break while_100_;
+								} else if (i_42_ != -3) {
+									if (i_42_ == -2) {
+										break;
+									} else if (i_42_ != -1) {
+										if (i_42_ == 0 || i_42_ == 1 || i_42_ == 2 || i_42_ == 3 || i_42_ == 9) {
+											break while_98_;
+										}
+										break while_99_;
+									}
+									break while_97_;
 								}
 								if (Class150_Sub2.method1659(i_26_, 2, i_32_, -98, i_29_, i_25_, i_33_, i_30_, 2)) {
 									Class219.anInt2623 = i_33_;
@@ -271,56 +267,56 @@ public class Node_Sub16 extends Node
 				}
 			} while (false);
 			i_42_ = Class262_Sub23.anIntArrayArray7892[i_34_][i_35_] + 1;
-			if ((i_34_ ^ 0xffffffff) < -1 && Node_Sub36_Sub2.anIntArrayArray10047[-1 + i_34_][i_35_] == 0 && (0x43a40000 & is[-1 + i_40_][i_41_]) == 0 && (is[i_40_ + -1][1 + i_41_] & 0x4e240000 ^ 0xffffffff) == -1) {
+			if (i_34_ > 0 && Node_Sub36_Sub2.anIntArrayArray10047[-1 + i_34_][i_35_] == 0 && (0x43a40000 & is[-1 + i_40_][i_41_]) == 0 && (is[i_40_ + -1][1 + i_41_] & 0x4e240000) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = -1 + i_32_;
 				Class339_Sub6.routeFinderYArray[i_38_] = i_33_;
 				i_38_ = 1 + i_38_ & 0xfff;
 				Node_Sub36_Sub2.anIntArrayArray10047[-1 + i_34_][i_35_] = 2;
 				Class262_Sub23.anIntArrayArray7892[i_34_ + -1][i_35_] = i_42_;
 			}
-			if ((i_34_ ^ 0xffffffff) > -127 && Node_Sub36_Sub2.anIntArrayArray10047[1 + i_34_][i_35_] == 0 && (0x60e40000 & is[2 + i_40_][i_41_] ^ 0xffffffff) == -1 && (0x78240000 & is[2 + i_40_][i_41_ + 1]) == 0) {
+			if (i_34_ < 126 && Node_Sub36_Sub2.anIntArrayArray10047[1 + i_34_][i_35_] == 0 && (0x60e40000 & is[2 + i_40_][i_41_]) == 0 && (0x78240000 & is[2 + i_40_][i_41_ + 1]) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = 1 + i_32_;
 				Class339_Sub6.routeFinderYArray[i_38_] = i_33_;
 				Node_Sub36_Sub2.anIntArrayArray10047[1 + i_34_][i_35_] = 8;
 				i_38_ = i_38_ - -1 & 0xfff;
 				Class262_Sub23.anIntArrayArray7892[i_34_ - -1][i_35_] = i_42_;
 			}
-			if (i_35_ > 0 && (Node_Sub36_Sub2.anIntArrayArray10047[i_34_][-1 + i_35_] ^ 0xffffffff) == -1 && (is[i_40_][-1 + i_41_] & 0x43a40000) == 0 && (0x60e40000 & is[1 + i_40_][-1 + i_41_]) == 0) {
+			if (i_35_ > 0 && Node_Sub36_Sub2.anIntArrayArray10047[i_34_][-1 + i_35_] == 0 && (is[i_40_][-1 + i_41_] & 0x43a40000) == 0 && (0x60e40000 & is[1 + i_40_][-1 + i_41_]) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = i_32_;
 				Class339_Sub6.routeFinderYArray[i_38_] = -1 + i_33_;
 				Node_Sub36_Sub2.anIntArrayArray10047[i_34_][-1 + i_35_] = 1;
 				i_38_ = 1 + i_38_ & 0xfff;
 				Class262_Sub23.anIntArrayArray7892[i_34_][i_35_ - 1] = i_42_;
 			}
-			if ((i_35_ ^ 0xffffffff) > -127 && (Node_Sub36_Sub2.anIntArrayArray10047[i_34_][i_35_ - -1] ^ 0xffffffff) == -1 && (is[i_40_][i_41_ - -2] & 0x4e240000 ^ 0xffffffff) == -1 && (is[1 + i_40_][2 + i_41_] & 0x78240000) == 0) {
+			if (i_35_ < 126 && Node_Sub36_Sub2.anIntArrayArray10047[i_34_][i_35_ - -1] == 0 && (is[i_40_][i_41_ - -2] & 0x4e240000) == 0 && (is[1 + i_40_][2 + i_41_] & 0x78240000) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = i_32_;
 				Class339_Sub6.routeFinderYArray[i_38_] = i_33_ + 1;
 				i_38_ = i_38_ - -1 & 0xfff;
 				Node_Sub36_Sub2.anIntArrayArray10047[i_34_][1 + i_35_] = 4;
 				Class262_Sub23.anIntArrayArray7892[i_34_][i_35_ + 1] = i_42_;
 			}
-			if (i_34_ > 0 && i_35_ > 0 && Node_Sub36_Sub2.anIntArrayArray10047[-1 + i_34_][-1 + i_35_] == 0 && (0x4fa40000 & is[-1 + i_40_][i_41_] ^ 0xffffffff) == -1 && (0x43a40000 & is[i_40_ - 1][i_41_ + -1]) == 0 && (is[i_40_][i_41_ - 1] & 0x63e40000) == 0) {
+			if (i_34_ > 0 && i_35_ > 0 && Node_Sub36_Sub2.anIntArrayArray10047[-1 + i_34_][-1 + i_35_] == 0 && (0x4fa40000 & is[-1 + i_40_][i_41_]) == 0 && (0x43a40000 & is[i_40_ - 1][i_41_ + -1]) == 0 && (is[i_40_][i_41_ - 1] & 0x63e40000) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = i_32_ - 1;
 				Class339_Sub6.routeFinderYArray[i_38_] = i_33_ + -1;
 				i_38_ = 0xfff & 1 + i_38_;
 				Node_Sub36_Sub2.anIntArrayArray10047[-1 + i_34_][-1 + i_35_] = 3;
 				Class262_Sub23.anIntArrayArray7892[-1 + i_34_][i_35_ - 1] = i_42_;
 			}
-			if ((i_34_ ^ 0xffffffff) > -127 && i_35_ > 0 && Node_Sub36_Sub2.anIntArrayArray10047[i_34_ - -1][i_35_ + -1] == 0 && (is[i_40_ - -1][-1 + i_41_] & 0x63e40000) == 0 && (is[2 + i_40_][i_41_ - 1] & 0x60e40000 ^ 0xffffffff) == -1 && (is[i_40_ + 2][i_41_] & 0x78e40000) == 0) {
+			if (i_34_ < 126 && i_35_ > 0 && Node_Sub36_Sub2.anIntArrayArray10047[i_34_ - -1][i_35_ + -1] == 0 && (is[i_40_ - -1][-1 + i_41_] & 0x63e40000) == 0 && (is[2 + i_40_][i_41_ - 1] & 0x60e40000) == 0 && (is[i_40_ + 2][i_41_] & 0x78e40000) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = i_32_ - -1;
 				Class339_Sub6.routeFinderYArray[i_38_] = -1 + i_33_;
 				i_38_ = 0xfff & i_38_ - -1;
 				Node_Sub36_Sub2.anIntArrayArray10047[i_34_ - -1][i_35_ - 1] = 9;
 				Class262_Sub23.anIntArrayArray7892[1 + i_34_][-1 + i_35_] = i_42_;
 			}
-			if ((i_34_ ^ 0xffffffff) < -1 && i_35_ < 126 && (Node_Sub36_Sub2.anIntArrayArray10047[i_34_ + -1][1 + i_35_] ^ 0xffffffff) == -1 && (is[-1 + i_40_][i_41_ + 1] & 0x4fa40000 ^ 0xffffffff) == -1 && (is[-1 + i_40_][i_41_ + 2] & 0x4e240000 ^ 0xffffffff) == -1 && (0x7e240000 & is[i_40_][2 + i_41_]) == 0) {
+			if (i_34_ > 0 && i_35_ < 126 && Node_Sub36_Sub2.anIntArrayArray10047[i_34_ + -1][1 + i_35_] == 0 && (is[-1 + i_40_][i_41_ + 1] & 0x4fa40000) == 0 && (is[-1 + i_40_][i_41_ + 2] & 0x4e240000) == 0 && (0x7e240000 & is[i_40_][2 + i_41_]) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = -1 + i_32_;
 				Class339_Sub6.routeFinderYArray[i_38_] = i_33_ + 1;
 				i_38_ = 0xfff & i_38_ + 1;
 				Node_Sub36_Sub2.anIntArrayArray10047[i_34_ + -1][1 + i_35_] = 6;
 				Class262_Sub23.anIntArrayArray7892[i_34_ - 1][i_35_ + 1] = i_42_;
 			}
-			if (i_34_ < 126 && i_35_ < 126 && (Node_Sub36_Sub2.anIntArrayArray10047[1 + i_34_][i_35_ - -1] ^ 0xffffffff) == -1 && (is[1 + i_40_][2 + i_41_] & 0x7e240000) == 0 && (is[i_40_ - -2][i_41_ - -2] & 0x78240000 ^ 0xffffffff) == -1 && (is[i_40_ + 2][1 + i_41_] & 0x78e40000) == 0) {
+			if (i_34_ < 126 && i_35_ < 126 && Node_Sub36_Sub2.anIntArrayArray10047[1 + i_34_][i_35_ - -1] == 0 && (is[1 + i_40_][2 + i_41_] & 0x7e240000) == 0 && (is[i_40_ - -2][i_41_ - -2] & 0x78240000) == 0 && (is[i_40_ + 2][1 + i_41_] & 0x78e40000) == 0) {
 				Node_Sub39.routeFinderXArray[i_38_] = i_32_ - -1;
 				Class339_Sub6.routeFinderYArray[i_38_] = i_33_ - -1;
 				Node_Sub36_Sub2.anIntArrayArray10047[i_34_ + 1][1 + i_35_] = 12;
@@ -338,7 +334,7 @@ public class Node_Sub16 extends Node
 		if (Class52.aCacheNode_Sub13_788 == null) {
 			return false;
 		}
-		if ((Class52.aCacheNode_Sub13_788.anInt9562 ^ 0xffffffff) <= -2001) {
+		if (Class52.aCacheNode_Sub13_788.anInt9562 >= 2000) {
 			Class52.aCacheNode_Sub13_788.anInt9562 -= 2000;
 		}
 		if (bool != true) {

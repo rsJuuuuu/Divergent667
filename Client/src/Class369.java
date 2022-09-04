@@ -59,7 +59,7 @@ public class Class369
 		if ((CacheNode_Sub11.aByteArrayArrayArray9550[i_3_][i_2_][i] & 0x10) != 0) {
 			return false;
 		}
-        return (Class374.method4113(i, -1145, i_2_, i_3_) ^ 0xffffffff) == (i_1_ ^ 0xffffffff);
+        return i_1_ == Class374.method4113(i, -1145, i_2_, i_3_);
     }
 	
 	static final void method4086(int i, int i_4_, int i_5_, int[] is, int i_6_) {
@@ -69,7 +69,7 @@ public class Class369
 			method4084((byte) 88);
 		}
 		int i_7_ = -7 + --i;
-		while ((i_7_ ^ 0xffffffff) < (i_5_ ^ 0xffffffff)) {
+		while (i_5_ < i_7_) {
 			is[++i_5_] = i_4_;
 			is[++i_5_] = i_4_;
 			is[++i_5_] = i_4_;

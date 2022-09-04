@@ -72,7 +72,7 @@ public class Class117_Sub2 extends Class117 implements Interface9
 	
 	static final void method1174(int i, byte[][][] bs, int i_3_, int i_4_, int i_5_, int i_6_, GraphicsToolkit graphicstoolkit, int i_7_, int i_8_, byte b, int i_9_, int i_10_, int i_11_) {
 		anInt5153++;
-		if ((i_11_ ^ 0xffffffff) != -1 && i_5_ != 0) {
+		if (i_11_ != 0 && i_5_ != 0) {
 			if (i_11_ == 9) {
 				i_8_ = i_8_ - -1 & 0x3;
 				i_11_ = 1;
@@ -81,7 +81,7 @@ public class Class117_Sub2 extends Class117 implements Interface9
 				i_11_ = 1;
 				i_8_ = 0x3 & 3 + i_8_;
 			}
-			if ((i_11_ ^ 0xffffffff) == -12) {
+			if (i_11_ == 11) {
 				i_8_ = 0x3 & i_8_ - -3;
 				i_11_ = 8;
 			}

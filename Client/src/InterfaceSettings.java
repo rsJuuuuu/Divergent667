@@ -44,7 +44,7 @@ public class InterfaceSettings extends Node
 			method2743(115);
 		}
 		anInt7419++;
-        return (0x1 & settingsHash ^ 0xffffffff) != -1;
+        return (0x1 & settingsHash) != 0;
     }
 	
 	final boolean method2747(int i) {

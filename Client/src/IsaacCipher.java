@@ -27,7 +27,7 @@ public class IsaacCipher
 		int i_6_;
 		int i_7_;
 		int i_0_ = i_1_ = i_2_ = i_3_ = i_4_ = i_5_ = i_6_ = i_7_ = -1640531527;
-		for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > -5; i_8_++) {
+		for (int i_8_ = 0; i_8_ < 4; i_8_++) {
 			i_0_ ^= i_1_ << 11;
 			i_1_ += i_2_;
 			i_3_ += i_0_;
@@ -56,7 +56,7 @@ public class IsaacCipher
 		if (i != 17544) {
 			aClass54Array1840 = null;
 		}
-		for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > -257; i_9_ += 8) {
+		for (int i_9_ = 0; i_9_ < 256; i_9_ += 8) {
 			i_6_ += anIntArray1832[6 + i_9_];
 			i_5_ += anIntArray1832[5 + i_9_];
 			i_0_ += anIntArray1832[i_9_];
@@ -162,18 +162,18 @@ public class IsaacCipher
 			method1666(-91);
 		}
 		anInt1830 += ++anInt1839;
-		for (int i_11_ = 0; (i_11_ ^ 0xffffffff) > -257; i_11_++) {
+		for (int i_11_ = 0; i_11_ < 256; i_11_++) {
 			int i_12_ = anIntArray1834[i_11_];
 			if ((i_11_ & 0x2) != 0) {
-				if ((0x1 & i_11_ ^ 0xffffffff) == -1) {
+				if ((0x1 & i_11_) == 0) {
 					anInt1836 ^= anInt1836 << 2;
 				} else {
 					anInt1836 ^= anInt1836 >>> 16;
 				}
-			} else if ((i_11_ & 0x1) != 0) {
-				anInt1836 ^= anInt1836 >>> 6;
-			} else {
+			} else if ((i_11_ & 0x1) == 0) {
 				anInt1836 ^= anInt1836 << 13;
+			} else {
+				anInt1836 ^= anInt1836 >>> 6;
 			}
 			anInt1836 += anIntArray1834[128 + i_11_ & 0xff];
 			int i_13_;

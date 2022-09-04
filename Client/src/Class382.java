@@ -70,15 +70,13 @@ public class Class382 implements Interface11
 			throw new RuntimeException();
 		}
 		int i_3_ = 1 << i_1_;
-		if (((i_3_ ^ 0xffffffff) & anInt5259) != 0) {
-			if (anInt5256 != class169_sub1.anInt8793 || anInt5238 != class169_sub1.anInt8793) {
-				throw new RuntimeException();
-			}
-		} else {
+		if (((i_3_ ^ 0xffffffff) & anInt5259) == 0) {
 			anInt5238 = class169_sub1.anInt8793;
 			anInt5256 = class169_sub1.anInt8793;
+		} else if (anInt5256 != class169_sub1.anInt8793 || anInt5238 != class169_sub1.anInt8793) {
+			throw new RuntimeException();
 		}
-		class169_sub1.method1767(i, (byte) -126, Node_Sub38_Sub2.anIntArray10096[i_1_], anInt5234, i_2_);
+        class169_sub1.method1767(i, (byte) -126, Node_Sub38_Sub2.anIntArray10096[i_1_], anInt5234, i_2_);
 		anInterface2Array5250[i_1_] = class169_sub1;
 		anInt5259 |= i_3_;
 	}
@@ -112,14 +110,14 @@ public class Class382 implements Interface11
 	
 	final void method4178(CacheNode_Sub17 cachenode_sub17, int i, int i_4_) {
 		anInt5248++;
-		if ((anInt5234 ^ 0xffffffff) == 0) {
+		if (anInt5234 == -1) {
 			throw new RuntimeException();
 		}
 		int i_5_ = i_4_ << i;
-		if ((anInt5259 & (i_5_ ^ 0xffffffff) ^ 0xffffffff) == -1) {
+		if ((anInt5259 & (i_5_ ^ 0xffffffff)) == 0) {
 			anInt5238 = cachenode_sub17.anInt8850;
 			anInt5256 = cachenode_sub17.anInt8837;
-		} else if ((anInt5256 ^ 0xffffffff) != (cachenode_sub17.anInt8837 ^ 0xffffffff) || (cachenode_sub17.anInt8850 ^ 0xffffffff) != (anInt5238 ^ 0xffffffff)) {
+		} else if (cachenode_sub17.anInt8837 != anInt5256 || anInt5238 != cachenode_sub17.anInt8850) {
 			throw new RuntimeException();
 		}
 		cachenode_sub17.method2396(Node_Sub38_Sub2.anIntArray10096[i], anInt5234, i_4_ ^ ~0x1d);
@@ -133,7 +131,7 @@ public class Class382 implements Interface11
 		if (class289.anInt3629 != -1) {
 			return class289.anInt3629;
 		}
-		if ((class289.anInt3640 ^ 0xffffffff) != 0) {
+		if (class289.anInt3640 != -1) {
 			Class91 class91 = graphicstoolkit.aD1543.method10(class289.anInt3640, -8217);
 			if (!class91.aBoolean1223) {
 				return class91.aShort1221;

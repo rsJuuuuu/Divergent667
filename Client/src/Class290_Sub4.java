@@ -38,7 +38,11 @@ public class Class290_Sub4 extends Class290
 			Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1306(7);
 			class336_sub1.method3865(1024);
 			anAbstractToolkit3654.method1297(-21029, Class55.aClass346_829);
-			if (!aBoolean8090) {
+			if (aBoolean8090) {
+				anAbstractToolkit3654.method1318(-30, Class117_Sub1.aClass94_4924, Class236.aClass94_2898);
+				anAbstractToolkit3654.method1349(Class106.aClass135_1354, (byte) 19, true, false, 0);
+				anAbstractToolkit3654.method1366((byte) -96, Class115.aClass135_1465, 0);
+			} else {
 				anAbstractToolkit3654.method1318(-30, Class116.aClass94_5075, Class117_Sub1.aClass94_4924);
 				anAbstractToolkit3654.method1304(0, 0, Class200_Sub1.aClass135_5139);
 				anAbstractToolkit3654.method1362(255, 2);
@@ -47,12 +51,8 @@ public class Class290_Sub4 extends Class290
 				anAbstractToolkit3654.method1349(Class200_Sub1.aClass135_5139, (byte) 19, true, false, 1);
 				anAbstractToolkit3654.method1366((byte) 110, Class115.aClass135_1465, 0);
 				anAbstractToolkit3654.method1312((byte) -21, anAbstractToolkit3654.anInterface13_6357);
-			} else {
-				anAbstractToolkit3654.method1318(-30, Class117_Sub1.aClass94_4924, Class236.aClass94_2898);
-				anAbstractToolkit3654.method1349(Class106.aClass135_1354, (byte) 19, true, false, 0);
-				anAbstractToolkit3654.method1366((byte) -96, Class115.aClass135_1465, 0);
 			}
-			anAbstractToolkit3654.method1362(255, 0);
+            anAbstractToolkit3654.method1362(255, 0);
 			aBoolean8098 = true;
 		}
 		if (i < -84) {
@@ -63,14 +63,14 @@ public class Class290_Sub4 extends Class290
 	Class290_Sub4(AbstractToolkit abstracttoolkit) {
 		super(abstracttoolkit);
 		if (abstracttoolkit.aBoolean6310) {
-			aBoolean8090 = (abstracttoolkit.anInt6370 ^ 0xffffffff) > -4;
+			aBoolean8090 = abstracttoolkit.anInt6370 < 3;
 			int i = aBoolean8090 ? 48 : 127;
 			int[][] is = new int[6][4096];
 			int[][] is_0_ = new int[6][4096];
 			int[][] is_1_ = new int[6][4096];
 			int i_2_ = 0;
 			for (int i_3_ = 0; i_3_ < 64; i_3_++) {
-				for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > -65; i_4_++) {
+				for (int i_4_ = 0; i_4_ < 64; i_4_++) {
 					float f = 2.0F * (float) i_4_ / 64.0F - 1.0F;
 					float f_5_ = (float) i_3_ * 2.0F / 64.0F - 1.0F;
 					float f_6_ = (float) (1.0 / Math.sqrt((double) (f_5_ * f_5_ + (f * f + 1.0F))));
@@ -80,22 +80,18 @@ public class Class290_Sub4 extends Class290
 						float f_8_;
 						if (i_7_ == 0) {
 							f_8_ = -f;
-						} else if ((i_7_ ^ 0xffffffff) == -2) {
+						} else if (i_7_ == 1) {
 							f_8_ = f;
-						} else if (i_7_ != 2) {
-							if ((i_7_ ^ 0xffffffff) != -4) {
-								if (i_7_ == 4) {
-									f_8_ = f_6_;
-								} else {
-									f_8_ = -f_6_;
-								}
-							} else {
-								f_8_ = -f_5_;
-							}
-						} else {
+						} else if (i_7_ == 2) {
 							f_8_ = f_5_;
+						} else if (i_7_ == 3) {
+							f_8_ = -f_5_;
+						} else if (i_7_ == 4) {
+							f_8_ = f_6_;
+						} else {
+							f_8_ = -f_6_;
 						}
-						int i_9_;
+                        int i_9_;
 						int i_10_;
 						int i_11_;
 						if (f_8_ > 0.0F) {
@@ -134,7 +130,7 @@ public class Class290_Sub4 extends Class290
 	
 	static final Class145 method3431(GLToolkit gltoolkit, int i, Class210[] class210s) {
 		anInt8099++;
-		for (int i_12_ = i; (class210s.length ^ 0xffffffff) < (i_12_ ^ 0xffffffff); i_12_++) {
+		for (int i_12_ = i; i_12_ < class210s.length; i_12_++) {
 			if (class210s[i_12_] == null || class210s[i_12_].aLong2500 <= 0L) {
 				return null;
 			}
@@ -144,7 +140,7 @@ public class Class290_Sub4 extends Class290
 			OpenGL.glAttachObjectARB(l, class210s[i_13_].aLong2500);
 		OpenGL.glLinkProgramARB(l);
 		OpenGL.glGetObjectParameterivARB(l, 35714, Class78.anIntArray1030, 0);
-		if ((Class78.anIntArray1030[0] ^ 0xffffffff) == -1) {
+		if (Class78.anIntArray1030[0] == 0) {
 			if (Class78.anIntArray1030[0] == 0) {
 				//System.out.println("Shader linking failed:");
 			}
@@ -208,14 +204,16 @@ public class Class290_Sub4 extends Class290
 	
 	final void method3411(int i) {
 		anInt8092++;
-		if (!aBoolean8098) {
-			anAbstractToolkit3654.method1366((byte) 89, Class106.aClass135_1354, 0);
-		} else {
+		if (aBoolean8098) {
 			anAbstractToolkit3654.method1362(255, 1);
 			anAbstractToolkit3654.method1312((byte) -21, null);
 			anAbstractToolkit3654.method1321((byte) 102, Class308.aClass139_3915);
 			anAbstractToolkit3654.method1255((byte) -12);
-			if (!aBoolean8090) {
+			if (aBoolean8090) {
+				anAbstractToolkit3654.method1318(-30, Class116.aClass94_5075, Class116.aClass94_5075);
+				anAbstractToolkit3654.method1304(0, i + 8668, Class106.aClass135_1354);
+				anAbstractToolkit3654.method1366((byte) -122, Class106.aClass135_1354, 0);
+			} else {
 				anAbstractToolkit3654.method1318(-30, Class116.aClass94_5075, Class116.aClass94_5075);
 				anAbstractToolkit3654.method1304(0, i ^ ~0x21db, Class106.aClass135_1354);
 				anAbstractToolkit3654.method1362(i ^ ~0x2124, 2);
@@ -224,15 +222,13 @@ public class Class290_Sub4 extends Class290
 				anAbstractToolkit3654.method1304(1, 0, Class200_Sub1.aClass135_5139);
 				anAbstractToolkit3654.method1366((byte) -89, Class106.aClass135_1354, 0);
 				anAbstractToolkit3654.method1312((byte) -21, null);
-			} else {
-				anAbstractToolkit3654.method1318(-30, Class116.aClass94_5075, Class116.aClass94_5075);
-				anAbstractToolkit3654.method1304(0, i + 8668, Class106.aClass135_1354);
-				anAbstractToolkit3654.method1366((byte) -122, Class106.aClass135_1354, 0);
 			}
-			anAbstractToolkit3654.method1362(255, 0);
+            anAbstractToolkit3654.method1362(255, 0);
 			aBoolean8098 = false;
+		} else {
+			anAbstractToolkit3654.method1366((byte) 89, Class106.aClass135_1354, 0);
 		}
-		if (i != -8668) {
+        if (i != -8668) {
 			anInt8100 = -85;
 		}
 		anAbstractToolkit3654.method1318(-30, Class116.aClass94_5075, Class116.aClass94_5075);

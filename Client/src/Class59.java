@@ -38,8 +38,8 @@ public class Class59
 		}
 		if (actor.faceEntity != -1) {
 			Actor actor_0_ = null;
-			if ((actor.faceEntity ^ 0xffffffff) <= -32769) {
-				if ((actor.faceEntity ^ 0xffffffff) <= -32769) {
+			if (actor.faceEntity >= 32768) {
+				if (actor.faceEntity >= 32768) {
 					actor_0_ = Class270_Sub2.LOCAL_PLAYERS[actor.faceEntity - 32768];
 				}
 			} else {
@@ -51,7 +51,7 @@ public class Class59
 			if (actor_0_ != null) {
 				int i_1_ = actor.anInt5934 - actor_0_.anInt5934;
 				int i_2_ = -actor_0_.anInt5940 + actor.anInt5940;
-				if ((i_1_ ^ 0xffffffff) != -1 || i_2_ != 0) {
+				if (i_1_ != 0 || i_2_ != 0) {
 					actor.method856((byte) -64, 0x3fff & (int) (2607.5945876176133 * Math.atan2((double) i_1_, (double) i_2_)));
 				}
 			}
@@ -64,10 +64,10 @@ public class Class59
 			}
 		} else if (actor instanceof Npc) {
 			Npc npc = (Npc) actor;
-			if ((npc.anInt11107 ^ 0xffffffff) != 0 && (npc.anInt10904 == 0 || npc.anInt10901 > 0)) {
+			if (npc.anInt11107 != -1 && (npc.anInt10904 == 0 || npc.anInt10901 > 0)) {
 				int i_3_ = -((-Node_Sub53.gameSceneBaseX + npc.anInt11107 - Node_Sub53.gameSceneBaseX) * 256) + npc.anInt5934;
 				int i_4_ = npc.anInt5940 - 256 * (-Class320_Sub4.gameSceneBaseY + (-Class320_Sub4.gameSceneBaseY + npc.anInt11100));
-				if (i_3_ != 0 || (i_4_ ^ 0xffffffff) != -1) {
+				if (i_3_ != 0 || i_4_ != 0) {
 					npc.method856((byte) 69, (int) (Math.atan2((double) i_3_, (double) i_4_) * 2607.5945876176133) & 0x3fff);
 				}
 				npc.anInt11107 = -1;

@@ -42,7 +42,7 @@ abstract class Animable_Sub1 extends Animable
 		}
 		if (Class235_Sub1.anInterface16Array8978 != null) {
 			Interface16[] interface16s = Class235_Sub1.anInterface16Array8978;
-			for (int i = 0; (i ^ 0xffffffff) > (interface16s.length ^ 0xffffffff); i++) {
+			for (int i = 0; interface16s.length > i; i++) {
 				Interface16 interface16 = interface16s[i];
 				interface16.method62(1939);
 			}

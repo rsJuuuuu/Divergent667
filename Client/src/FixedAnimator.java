@@ -31,7 +31,7 @@ public class FixedAnimator extends Animator
 			Player.aNode_Sub4_11140 = node_sub4;
 		}
 		Class93_Sub2.aClass302_6049 = null;
-		if ((Class89.anInt1198 ^ 0xffffffff) == -1) {
+		if (Class89.anInt1198 == 0) {
 			Node_Sub21.aClass96_7183 = new Class96(Class51.aClass302_5339, Class320_Sub12.aClass302_8326);
 			Class307.aNode_Sub9_Sub1_3902.method2450((byte) 107);
 			Class89.anInt1198 = 1;
@@ -58,7 +58,7 @@ public class FixedAnimator extends Animator
 		short[] ses = new short[16];
 		int i_3_ = -1;
 		String string_4_ = null;
-		if ((i_1_ ^ 0xffffffff) != 0) {
+		if (i_1_ != -1) {
 			Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_1_, -119);
 			if (class267 == null || !class267.method3287((byte) 112) == bool) {
 				return;
@@ -72,24 +72,24 @@ public class FixedAnimator extends Animator
 		int i_5_ = 0;
 		for (int i_6_ = 0; EntityNode_Sub3_Sub1.aClass86_9166.anInt1175 > i_6_; i_6_++) {
 			ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_6_, 14434);
-			if ((!bool_0_ || itemdefinition.aBoolean1933) && itemdefinition.anInt1857 == -1 && itemdefinition.anInt1852 == -1 && (itemdefinition.anInt1928 ^ 0xffffffff) == 0 && itemdefinition.anInt1877 == 0 && itemdefinition.aString1860.toLowerCase().indexOf(string) != -1) {
-				if ((i_1_ ^ 0xffffffff) != 0) {
+			if ((!bool_0_ || itemdefinition.aBoolean1933) && itemdefinition.anInt1857 == -1 && itemdefinition.anInt1852 == -1 && itemdefinition.anInt1928 == -1 && itemdefinition.anInt1877 == 0 && itemdefinition.aString1860.toLowerCase().indexOf(string) != -1) {
+				if (i_1_ != -1) {
 					if (!bool) {
-						if ((i ^ 0xffffffff) != (itemdefinition.method1678(i_1_, i_3_, 10247) ^ 0xffffffff)) {
+						if (itemdefinition.method1678(i_1_, i_3_, 10247) != i) {
 							continue;
 						}
 					} else if (!string_2_.equals(itemdefinition.method1684(string_4_, b ^ 0x7f3d, i_1_))) {
 						continue;
 					}
 				}
-				if ((i_5_ ^ 0xffffffff) <= -251) {
+				if (i_5_ >= 250) {
 					Node_Sub20.aShortArray7175 = null;
 					Class365_Sub1.anInt8759 = -1;
 					return;
 				}
-				if ((ses.length ^ 0xffffffff) >= (i_5_ ^ 0xffffffff)) {
+				if (i_5_ >= ses.length) {
 					short[] ses_7_ = new short[ses.length * 2];
-					for (int i_8_ = 0; (i_5_ ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++)
+					for (int i_8_ = 0; i_8_ < i_5_; i_8_++)
 						ses_7_[i_8_] = ses[i_8_];
 					ses = ses_7_;
 				}
@@ -100,7 +100,7 @@ public class FixedAnimator extends Animator
 		Animable_Sub1.anInt9096 = 0;
 		Node_Sub20.aShortArray7175 = ses;
 		String[] strings = new String[Class365_Sub1.anInt8759];
-		for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > (Class365_Sub1.anInt8759 ^ 0xffffffff); i_9_++)
+		for (int i_9_ = 0; Class365_Sub1.anInt8759 > i_9_; i_9_++)
 			strings[i_9_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(ses[i_9_], 14434).aString1860;
 		Class293.method3461(strings, Node_Sub20.aShortArray7175, 127);
 		if (b != -50) {

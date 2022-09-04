@@ -14,7 +14,7 @@ public class Class324 {
 			Node_Sub23_Sub1.DECODE_MASKS_PLAYERS_INDEXES_LIST[Node_Sub9_Sub4.DECODE_MASKS_PLAYERS_COUNT++] = playerIndex;
 		int opcode = packet.readBits(2);
 		Player player = Class270_Sub2.LOCAL_PLAYERS[playerIndex];
-		if ((opcode ^ 0xffffffff) == -1) {
+		if (opcode == 0) {
 			if (needMasksUpdate) {
 				player.aBoolean11156 = false;
 			} else { // removes player
@@ -26,11 +26,11 @@ public class Class324 {
 						+ ((Node_Sub53.gameSceneBaseX
 								+ player.scenePositionXQueue[0] >> 6 << 14) - -(Class320_Sub4.gameSceneBaseY
 								+ player.scenePositionYQueue[0] >> 6));
-				if ((player.anInt11180 ^ 0xffffffff) != 0) {
-					class323.anInt4079 = player.anInt11180;
-				} else {
+				if (player.anInt11180 == -1) {
 					class323.anInt4079 = player.aClass99_10893
 							.method1086(16383);
+				} else {
+					class323.anInt4079 = player.anInt11180;
 				}
 				class323.anInt4074 = player.faceEntity;
 				class323.aBoolean4076 = player.aBoolean11157;
@@ -48,119 +48,91 @@ public class Class324 {
 			int i_2_ = packet.readBits(3);
 			int x = player.scenePositionXQueue[0];
 			int y = player.scenePositionYQueue[0];
-			if (i_2_ != 0) {
-				if (i_2_ == 1) {
-					y--;
-				} else if ((i_2_ ^ 0xffffffff) == -3) {
-					y--;
-					x++;
-				} else if ((i_2_ ^ 0xffffffff) == -4) {
-					x--;
-				} else if (i_2_ != 4) {
-					if ((i_2_ ^ 0xffffffff) != -6) {
-						if (i_2_ != 6) {
-							if ((i_2_ ^ 0xffffffff) == -8) {
-								x++;
-								y++;
-							}
-						} else {
-							y++;
-						}
-					} else {
-						y++;
-						x--;
-					}
-				} else {
-					x++;
-				}
-			} else {
+			if (i_2_ == 0) {
 				y--;
 				x--;
+			} else if (i_2_ == 1) {
+				y--;
+			} else if (i_2_ == 2) {
+				y--;
+				x++;
+			} else if (i_2_ == 3) {
+				x--;
+			} else if (i_2_ == 4) {
+				x++;
+			} else if (i_2_ == 5) {
+				y++;
+				x--;
+			} else if (i_2_ == 6) {
+				y++;
+			} else if (i_2_ == 7) {
+				x++;
+				y++;
 			}
-			if (!needMasksUpdate) {
-				player.method894(y, x, -9380,
-						Class73.movementTypes[playerIndex]);
-			} else {
+			if (needMasksUpdate) {
 				player.anInt11160 = y;
 				player.anInt11147 = x;
 				player.aBoolean11156 = true;
+			} else {
+				player.method894(y, x, -9380,
+						Class73.movementTypes[playerIndex]);
 			}
 		} else if (opcode == 2) { // run
 			int i_5_ = packet.readBits(4);
 			int i_6_ = player.scenePositionXQueue[0];
 			int i_7_ = player.scenePositionYQueue[0];
-			if ((i_5_ ^ 0xffffffff) == -1) {
+			if (i_5_ == 0) {
 				i_6_ -= 2;
 				i_7_ -= 2;
-			} else if ((i_5_ ^ 0xffffffff) == -2) {
+			} else if (i_5_ == 1) {
 				i_6_--;
 				i_7_ -= 2;
 			} else if (i_5_ == 2) {
 				i_7_ -= 2;
-			} else if ((i_5_ ^ 0xffffffff) == -4) {
+			} else if (i_5_ == 3) {
 				i_6_++;
 				i_7_ -= 2;
-			} else if ((i_5_ ^ 0xffffffff) != -5) {
-				if ((i_5_ ^ 0xffffffff) != -6) {
-					if (i_5_ != 6) {
-						if (i_5_ != 7) {
-							if ((i_5_ ^ 0xffffffff) != -9) {
-								if ((i_5_ ^ 0xffffffff) != -10) {
-									if (i_5_ != 10) {
-										if ((i_5_ ^ 0xffffffff) != -12) {
-											if ((i_5_ ^ 0xffffffff) != -13) {
-												if (i_5_ != 13) {
-													if ((i_5_ ^ 0xffffffff) == -15) {
-														i_7_ += 2;
-														i_6_++;
-													} else if (i_5_ == 15) {
-														i_6_ += 2;
-														i_7_ += 2;
-													}
-												} else {
-													i_7_ += 2;
-												}
-											} else {
-												i_7_ += 2;
-												i_6_--;
-											}
-										} else {
-											i_7_ += 2;
-											i_6_ -= 2;
-										}
-									} else {
-										i_6_ += 2;
-										i_7_++;
-									}
-								} else {
-									i_6_ -= 2;
-									i_7_++;
-								}
-							} else {
-								i_6_ += 2;
-							}
-						} else {
-							i_6_ -= 2;
-						}
-					} else {
-						i_6_ += 2;
-						i_7_--;
-					}
-				} else {
-					i_7_--;
-					i_6_ -= 2;
-				}
-			} else {
+			} else if (i_5_ == 4) {
 				i_7_ -= 2;
 				i_6_ += 2;
+			} else if (i_5_ == 5) {
+				i_7_--;
+				i_6_ -= 2;
+			} else if (i_5_ == 6) {
+				i_6_ += 2;
+				i_7_--;
+			} else if (i_5_ == 7) {
+				i_6_ -= 2;
+			} else if (i_5_ == 8) {
+				i_6_ += 2;
+			} else if (i_5_ == 9) {
+				i_6_ -= 2;
+				i_7_++;
+			} else if (i_5_ == 10) {
+				i_6_ += 2;
+				i_7_++;
+			} else if (i_5_ == 11) {
+				i_7_ += 2;
+				i_6_ -= 2;
+			} else if (i_5_ == 12) {
+				i_7_ += 2;
+				i_6_--;
+			} else if (i_5_ == 13) {
+				i_7_ += 2;
+			} else if (i_5_ == 14) {
+				i_7_ += 2;
+				i_6_++;
+			} else if (i_5_ == 15) {
+				i_6_ += 2;
+				i_7_ += 2;
 			}
-			if (!needMasksUpdate) {
-				player.method894(i_7_, i_6_, -9380,
-						Class73.movementTypes[playerIndex]);
-			} else {
+			if (needMasksUpdate) {
 				player.anInt11147 = i_6_;
 				player.anInt11160 = i_7_;
 				player.aBoolean11156 = true;
+			} else {
+				player.method894(i_7_, i_6_, -9380,
+						Class73.movementTypes[playerIndex]);
 			}
 		} else { // teleport
 			int teleportType = packet.readBits(1);
@@ -168,31 +140,31 @@ public class Class324 {
 				int i_9_ = packet.readBits(12);
 				int planeOffset = i_9_ >> 10;
 				int xOffset = i_9_ >> 5 & 0x1f;
-				if ((xOffset ^ 0xffffffff) < -16) { // because bit flags are
+				if (xOffset > 15) { // because bit flags are
 													// never negative
 					xOffset -= 32;
 				}
 				int yOffset = 0x1f & i_9_;
-				if ((yOffset ^ 0xffffffff) < -16) {
+				if (yOffset > 15) {
 					yOffset -= 32;
 				}
 				int i_13_ = player.scenePositionXQueue[0] + xOffset;
 				int i_14_ = yOffset + player.scenePositionYQueue[0];
-				if (!needMasksUpdate) {
-					player.method894(i_14_, i_13_, -9380,
-							Class73.movementTypes[playerIndex]);
-				} else {
+				if (needMasksUpdate) {
 					player.anInt11147 = i_13_;
 					player.aBoolean11156 = true;
 					player.anInt11160 = i_14_;
+				} else {
+					player.method894(i_14_, i_13_, -9380,
+							Class73.movementTypes[playerIndex]);
 				}
 				player.plane = player.aByte5931 = (byte) (player.plane
 						+ planeOffset & 0x3);
 				if (Class238.method3021(i_14_, i_13_, -53)) {
 					player.aByte5931++;
 				}
-				if ((Class166.myPlayerIndex ^ 0xffffffff) == (playerIndex ^ 0xffffffff)) {
-					if ((player.plane ^ 0xffffffff) != (CacheNode_Sub20_Sub1.myPlayerPlane ^ 0xffffffff)) {
+				if (playerIndex == Class166.myPlayerIndex) {
+					if (CacheNode_Sub20_Sub1.myPlayerPlane != player.plane) {
 						Class194_Sub1.aBoolean6892 = true;
 					}
 					CacheNode_Sub20_Sub1.myPlayerPlane = player.plane;
@@ -233,7 +205,7 @@ public class Class324 {
 				 * System
 				 * .out.println("seceneBaseY: "+Class320_Sub4.gameSceneBaseY);
 				 */
-				if ((Class166.myPlayerIndex ^ 0xffffffff) == (playerIndex ^ 0xffffffff)) {
+				if (playerIndex == Class166.myPlayerIndex) {
 					CacheNode_Sub20_Sub1.myPlayerPlane = player.plane;
 				}
 			}

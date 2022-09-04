@@ -180,10 +180,10 @@ public class Node_Sub23_Sub1 extends Node_Sub23
 					OpenGL.glVertex2i(0, 1);
 					OpenGL.glEnd();
 				}
-				if ((i_6_ ^ 0xffffffff) < -257) {
+				if (i_6_ > 256) {
 					i_6_ >>= 1;
 				}
-				if ((i_5_ ^ 0xffffffff) < -257) {
+				if (i_5_ > 256) {
 					i_5_ >>= 1;
 				}
 				i_7_++;
@@ -285,13 +285,13 @@ public class Node_Sub23_Sub1 extends Node_Sub23
 		anInt9904 = i_11_;
 		int i_12_ = Class215.method2072(anInt9914, true);
 		int i_13_ = Class215.method2072(anInt9904, true);
-		if (anInt9909 != i_12_ || (anInt9917 ^ 0xffffffff) != (i_13_ ^ 0xffffffff)) {
+		if (anInt9909 != i_12_ || i_13_ != anInt9917) {
 			if (aClass169_Sub2Array9921 != null) {
-				for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > (aClass169_Sub2Array9921.length ^ 0xffffffff); i_14_++)
+				for (int i_14_ = 0; aClass169_Sub2Array9921.length > i_14_; i_14_++)
 					aClass169_Sub2Array9921[i_14_].method1761((byte) -53);
 				aClass169_Sub2Array9921 = null;
 			}
-			if ((i_12_ ^ 0xffffffff) >= -257 && (i_13_ ^ 0xffffffff) >= -257) {
+			if (i_12_ <= 256 && i_13_ <= 256) {
 				aClass382_9906 = null;
 			} else {
 				int i_15_ = i_12_;
@@ -300,12 +300,12 @@ public class Node_Sub23_Sub1 extends Node_Sub23
 				if (aClass382_9906 == null) {
 					aClass382_9906 = new Class382(aGLToolkit7197);
 				}
-				while (i_15_ > 256 || (i_16_ ^ 0xffffffff) < -257) {
+				while (i_15_ > 256 || i_16_ > 256) {
 					i_17_++;
 					if (i_15_ > 256) {
 						i_15_ >>= 1;
 					}
-					if ((i_16_ ^ 0xffffffff) < -257) {
+					if (i_16_ > 256) {
 						i_16_ >>= 1;
 					}
 				}
@@ -313,9 +313,9 @@ public class Node_Sub23_Sub1 extends Node_Sub23
 				aClass169_Sub2Array9921 = new Class169_Sub2[i_17_];
 				i_15_ = i_12_;
 				i_17_ = 0;
-				while ((i_15_ ^ 0xffffffff) < -257 || (i_16_ ^ 0xffffffff) < -257) {
+				while (i_15_ > 256 || i_16_ > 256) {
 					aClass169_Sub2Array9921[i_17_++] = new Class169_Sub2(aGLToolkit7197, 3553, 34842, i_15_, i_16_);
-					if ((i_15_ ^ 0xffffffff) < -257) {
+					if (i_15_ > 256) {
 						i_15_ >>= 1;
 					}
 					if (i_16_ > 256) {

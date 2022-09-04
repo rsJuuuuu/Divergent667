@@ -73,7 +73,7 @@ public class Class179
 		if (i_3_ != -1) {
 			return true;
 		}
-        return (i & 0x34 ^ 0xffffffff) != -1;
+        return (i & 0x34) != 0;
     }
 	
 	static final boolean method1817(int i, int i_5_, int i_6_) {
@@ -81,7 +81,7 @@ public class Class179
 		if (i != -1) {
 			return false;
 		}
-        return (i_6_ & 0x800 ^ 0xffffffff) != -1;
+        return (i_6_ & 0x800) != 0;
     }
 	
 	Class179(boolean bool) {

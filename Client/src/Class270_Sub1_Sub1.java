@@ -34,14 +34,14 @@ public class Class270_Sub1_Sub1 extends Class270_Sub1
 				}
 				Class91 class91 = var_d.method10(Class319.anIntArray4058[i_0_], -8217);
 				int i_1_ = !class91.aBoolean1204 ? 128 : 64;
-				if ((i_1_ ^ 0xffffffff) < (i ^ 0xffffffff)) {
+				if (i < i_1_) {
 					i = i_1_;
 				}
-				if ((class91.aByte1207 ^ 0xffffffff) < -1) {
+				if (class91.aByte1207 > 0) {
 					bool = true;
 				}
 			}
-			for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > -7; i_2_++)
+			for (int i_2_ = 0; i_2_ < 6; i_2_++)
 				Mobile.anIntArrayArray9122[i_2_] = var_d.method11(i, false, i, Class319.anIntArray4058[i_2_], (byte) 0, 1.0F);
 			anInterface13_Impl2_10536 = anAbstractToolkit10531.method1287(i, Mobile.anIntArrayArray9122, bool, b + -79);
 		}
@@ -53,7 +53,7 @@ public class Class270_Sub1_Sub1 extends Class270_Sub1
 	
 	static final int method3301(int i, int i_3_, int i_4_, int i_5_) {
 		anInt10535++;
-		if ((Node_Sub25_Sub1.anInt9947 ^ 0xffffffff) > -101) {
+		if (Node_Sub25_Sub1.anInt9947 < 100) {
 			return -2;
 		}
 		int i_6_ = -2;
@@ -64,12 +64,12 @@ public class Class270_Sub1_Sub1 extends Class270_Sub1
 			return 25;
 		}
 		for (Node_Sub14 node_sub14 = (Node_Sub14) Class20.aClass312_331.method3613(65280); node_sub14 != null; node_sub14 = (Node_Sub14) Class20.aClass312_331.method3620(16776960)) {
-			if ((node_sub14.anInt7128 ^ 0xffffffff) == (i ^ 0xffffffff)) {
+			if (i == node_sub14.anInt7128) {
 				int i_10_ = node_sub14.anInt7125;
 				int i_11_ = node_sub14.anInt7120;
 				int i_12_ = Class20.anInt343 + i_11_ | Class20.anInt354 + i_10_ << 14;
 				int i_13_ = (-i_11_ + i_9_) * (i_9_ - i_11_) + (i_8_ + -i_10_) * (-i_10_ + i_8_);
-				if ((i_6_ ^ 0xffffffff) > -1 || (i_7_ ^ 0xffffffff) < (i_13_ ^ 0xffffffff)) {
+				if (i_6_ < 0 || i_13_ < i_7_) {
 					i_7_ = i_13_;
 					i_6_ = i_12_;
 				}
@@ -81,31 +81,29 @@ public class Class270_Sub1_Sub1 extends Class270_Sub1
 	static final void method3302(int i, int i_14_, byte b, int i_15_, int i_16_) {
 		if (b >= 90) {
 			anInt10534++;
-			if (i_15_ != 8 && (i_15_ ^ 0xffffffff) != -17) {
-				Class261 class261 = Class175.aClass261ArrayArrayArray2099[i_14_][i][i_16_];
-				if (class261 != null) {
-					if ((i_15_ ^ 0xffffffff) != -2) {
-						if ((i_15_ ^ 0xffffffff) == -3) {
-							class261.aShort3313 = (short) 0;
-						}
-					} else {
-						class261.aShort3318 = (short) 0;
-					}
-				}
-				Node_Sub32.method2729(true);
-			} else {
-				for (int i_17_ = 0; (Class83.anInt5183 ^ 0xffffffff) < (i_17_ ^ 0xffffffff); i_17_++) {
+			if (i_15_ == 8 || i_15_ == 16) {
+				for (int i_17_ = 0; i_17_ < Class83.anInt5183; i_17_++) {
 					Class54 class54 = IsaacCipher.aClass54Array1840[i_17_];
-					if (class54.aByte822 == i_15_ && (i ^ 0xffffffff) == (class54.aShort821 ^ 0xffffffff) && (i_16_ ^ 0xffffffff) == (class54.aShort815 ^ 0xffffffff) || (class54.aShort818 ^ 0xffffffff) == (i ^ 0xffffffff) && i_16_ == class54.aShort815) {
-						if ((i_17_ ^ 0xffffffff) != (Class83.anInt5183 ^ 0xffffffff)) {
+					if (class54.aByte822 == i_15_ && class54.aShort821 == i && class54.aShort815 == i_16_ || i == class54.aShort818 && i_16_ == class54.aShort815) {
+						if (Class83.anInt5183 != i_17_) {
 							Class311.method3605(IsaacCipher.aClass54Array1840, 1 + i_17_, IsaacCipher.aClass54Array1840, i_17_, -i_17_ + (-1 + IsaacCipher.aClass54Array1840.length));
 						}
 						Class83.anInt5183--;
 						break;
 					}
 				}
+			} else {
+				Class261 class261 = Class175.aClass261ArrayArrayArray2099[i_14_][i][i_16_];
+				if (class261 != null) {
+					if (i_15_ == 1) {
+						class261.aShort3318 = (short) 0;
+					} else if (i_15_ == 2) {
+						class261.aShort3313 = (short) 0;
+					}
+                }
+				Node_Sub32.method2729(true);
 			}
-		}
+        }
 	}
 	
 	static final Animable_Sub1 method3303(int i, int i_18_, int i_19_) {

@@ -41,7 +41,7 @@ public class Node_Sub18 extends Node
 		}
 		i = (i_0_ & 0x7f) * i >> 7;
 		if (i >= 2) {
-			if ((i ^ 0xffffffff) < -127) {
+			if (i > 126) {
 				i = 126;
 			}
 		} else {

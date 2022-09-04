@@ -29,9 +29,7 @@ public class Class242
 				int i_5_ = is_2_[i_3_];
 				is[i] = i_5_;
 				int i_6_;
-				if ((i_5_ & i_4_) != 0) {
-					i_6_ = is_2_[i_3_ - 1];
-				} else {
+				if ((i_5_ & i_4_) == 0) {
 					i_6_ = i_5_ | i_4_;
 					for (int i_7_ = i_3_ - 1; i_7_ >= 1; i_7_--) {
 						int i_8_ = is_2_[i_7_];
@@ -45,8 +43,10 @@ public class Class242
 						}
 						is_2_[i_7_] = i_8_ | i_9_;
 					}
+				} else {
+					i_6_ = is_2_[i_3_ - 1];
 				}
-				is_2_[i_3_] = i_6_;
+                is_2_[i_3_] = i_6_;
 				for (int i_10_ = i_3_ + 1; i_10_ <= 32; i_10_++) {
 					int i_11_ = is_2_[i_10_];
 					if (i_11_ == i_5_) {
@@ -64,15 +64,15 @@ public class Class242
 				int i_15_ = 0;
 				for (int i_16_ = 0; i_16_ < i_13_; i_16_++) {
 					int i_17_ = -2147483648 >>> i_16_;
-					if ((i_14_ & i_17_) != 0) {
+					if ((i_14_ & i_17_) == 0) {
+						i_15_++;
+					} else {
 						if (anIntArray3063[i_15_] == 0) {
 							anIntArray3063[i_15_] = i;
 						}
 						i_15_ = anIntArray3063[i_15_];
-					} else {
-						i_15_++;
 					}
-					if (i_15_ >= anIntArray3063.length) {
+                    if (i_15_ >= anIntArray3063.length) {
 						int[] is_18_ = new int[anIntArray3063.length * 2];
 						for (int i_19_ = 0; i_19_ < anIntArray3063.length; i_19_++)
 							is_18_[i_19_] = anIntArray3063[i_19_];

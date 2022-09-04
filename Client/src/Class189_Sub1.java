@@ -36,7 +36,7 @@ public class Class189_Sub1 extends Class189
 		anInt6879++;
 		if (anIntArray6886 != null) {
 			for (int i_1_ = 0; i_1_ < 10; i_1_++) {
-				if ((i_1_ + anInt6888 ^ 0xffffffff) <= (anIntArray6886.length ^ 0xffffffff)) {
+				if (anIntArray6886.length <= i_1_ + anInt6888) {
 					break;
 				}
 				if (aByteArrayArray6884[i_1_] == null && index36.method3515(0, anIntArray6886[anInt6888 - -i_1_], 0)) {
@@ -63,16 +63,16 @@ public class Class189_Sub1 extends Class189
 			aBuffer6889.offset = 0;
 			int i_3_ = bs_2_.length >> 1;
 			anIntArray6886 = new int[i_3_];
-			for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (i_3_ ^ 0xffffffff); i_4_++)
+			for (int i_4_ = 0; i_3_ > i_4_; i_4_++)
 				anIntArray6886[i_4_] = aBuffer6889.readUnsignedShort();
 		}
-		if ((anInt6888 ^ 0xffffffff) <= (anIntArray6886.length ^ 0xffffffff)) {
+		if (anIntArray6886.length <= anInt6888) {
 			return -1;
 		}
 		method1937(103);
 		aBuffer6889.buffer = bs;
 		aBuffer6889.offset = 0;
-		while ((aBuffer6889.offset ^ 0xffffffff) > (aBuffer6889.buffer.length ^ 0xffffffff)) {
+		while (aBuffer6889.buffer.length > aBuffer6889.offset) {
 			if (aBuffer6883.buffer == null) {
 				if (aByteArrayArray6884[0] == null) {
 					aBuffer6889.buffer = null;
@@ -82,7 +82,7 @@ public class Class189_Sub1 extends Class189
 			}
 			int i_5_ = -aBuffer6889.offset + aBuffer6889.buffer.length;
 			int i_6_ = -aBuffer6883.offset + aBuffer6883.buffer.length;
-			if ((i_6_ ^ 0xffffffff) >= (i_5_ ^ 0xffffffff)) {
+			if (i_5_ >= i_6_) {
 				aBuffer6889.writeBytes(i_6_, aBuffer6883.buffer, aBuffer6883.offset);
 				aBuffer6883.offset = 0;
 				anInt6888++;
@@ -90,7 +90,7 @@ public class Class189_Sub1 extends Class189
 				for (int i_7_ = 0; i_7_ < 9; i_7_++)
 					aByteArrayArray6884[i_7_] = aByteArrayArray6884[1 + i_7_];
 				aByteArrayArray6884[9] = null;
-				if ((anIntArray6886.length ^ 0xffffffff) >= (anInt6888 ^ 0xffffffff)) {
+				if (anInt6888 >= anIntArray6886.length) {
 					aBuffer6889.buffer = null;
 					return aBuffer6889.offset;
 				}

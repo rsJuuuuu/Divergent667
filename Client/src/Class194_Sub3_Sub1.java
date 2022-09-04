@@ -39,7 +39,7 @@ public class Class194_Sub3_Sub1 extends Class194_Sub3
 		} catch (Exception exception) {
 			String string = "T2 - " + (class123.incomming_packet == null ? -1 : class123.incomming_packet.method1953(102)) + "," + (class123.aClass192_1582 != null ? class123.aClass192_1582.method1953(i + -4034) : -1) + "," + (class123.aClass192_1573 == null ? -1 : class123.aClass192_1573.method1953(112)) + " - " + class123.anInt1581 + "," + (Node_Sub53.gameSceneBaseX - -Class295.myPlayer.scenePositionXQueue[0]) + "," + (Class320_Sub4.gameSceneBaseY + Class295.myPlayer.scenePositionYQueue[0]) + " - ";
 			for (int i_0_ = 0; class123.anInt1581 > i_0_; i_0_++) {
-				if ((i_0_ ^ 0xffffffff) <= -51) {
+				if (i_0_ >= 50) {
 					break;
 				}
 				string += class123.aPacket1570.buffer[i_0_] + ",";

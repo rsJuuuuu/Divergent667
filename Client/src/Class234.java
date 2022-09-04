@@ -37,7 +37,7 @@ abstract class Class234
 			return -89;
 		}
 		long l_0_ = method2148((byte) 92);
-		if ((l_0_ ^ 0xffffffffffffffffL) < -1L) {
+		if (l_0_ > 0) {
 			Class262_Sub22.method3208(l_0_, false);
 		}
 		return method2145((byte) 84, l);
@@ -57,7 +57,7 @@ abstract class Class234
 		if (i_1_ != 256) {
 			method2144(-6);
 		}
-        return (i_2_ & 0x100 ^ 0xffffffff) != -1;
+        return (i_2_ & 0x100) != 0;
     }
 	
 	abstract long method2151(int i);

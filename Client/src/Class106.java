@@ -23,7 +23,7 @@ public class Class106
 		int i_2_ = 0;
 		for (int i_3_ = 0; i > i_3_; i_3_++) {
 			int i_4_;
-			for (i_4_ = i_2_; (c ^ 0xffffffff) != (string.charAt(i_4_) ^ 0xffffffff); i_4_++) {
+			for (i_4_ = i_2_; string.charAt(i_4_) != c; i_4_++) {
 				/* empty */
 			}
 			strings[i_1_++] = string.substring(i_2_, i_4_);
@@ -44,14 +44,14 @@ public class Class106
 		if (i >= -96) {
 			aClass170_1357 = null;
 		}
-		if (c > 0 && (c ^ 0xffffffff) > -129 || c >= 160 && c <= 255) {
+		if (c > 0 && c < 128 || c >= 160 && c <= 255) {
 			return true;
 		}
 		if (c != 0) {
 			char[] cs = Class204.aCharArray2455;
-			for (int i_5_ = 0; (cs.length ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++) {
+			for (int i_5_ = 0; i_5_ < cs.length; i_5_++) {
 				int i_6_ = cs[i_5_];
-				if ((i_6_ ^ 0xffffffff) == (c ^ 0xffffffff)) {
+				if (c == i_6_) {
 					return true;
 				}
 			}
@@ -72,7 +72,7 @@ public class Class106
 		if (b != 39) {
 			aClass135_1354 = null;
 		}
-		for (/**/; (i_7_ ^ 0xffffffff) > (class251s.length ^ 0xffffffff); i_7_++) {
+		for (/**/; class251s.length > i_7_; i_7_++) {
 			Class251 class251 = class251s[i_7_];
 			if (i == class251.anInt3182) {
 				return class251;

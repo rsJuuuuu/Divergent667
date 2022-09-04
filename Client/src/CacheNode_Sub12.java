@@ -47,7 +47,7 @@ public class CacheNode_Sub12 extends CacheNode
 	static final void method2343(ObjectDefinition objectdefinition, byte b, int i, GraphicsToolkit graphicstoolkit, int i_10_, int i_11_) {
 		anInt9553++;
 		Class140 class140 = Node_Sub54.aClass338_7671.method3909(objectdefinition.anInt3006, 34);
-		if ((class140.anInt1740 ^ 0xffffffff) != 0) {
+		if (class140.anInt1740 != -1) {
 			if (objectdefinition.aBoolean3056) {
 				i += objectdefinition.anInt2958;
 				i &= 0x3;
@@ -61,7 +61,7 @@ public class CacheNode_Sub12 extends CacheNode
 				if (b < 79) {
 					anInt9555 = 47;
 				}
-				if ((i & 0x1 ^ 0xffffffff) == -2) {
+				if ((i & 0x1) == 1) {
 					i_12_ = objectdefinition.anInt2986;
 					i_13_ = objectdefinition.anInt3055;
 				}
@@ -71,12 +71,12 @@ public class CacheNode_Sub12 extends CacheNode
 					i_15_ = i_13_ * 4;
 					i_14_ = i_12_ * 4;
 				}
-				if (class140.anInt1737 != 0) {
-					glsprite.method1199(i_10_, -((i_13_ + -1) * 4) + i_11_, i_14_, i_15_, 0, ~0xffffff | class140.anInt1737, 1);
-				} else {
+				if (class140.anInt1737 == 0) {
 					glsprite.method1200(i_10_, -(4 * i_13_) + 4 + i_11_, i_14_, i_15_);
+				} else {
+					glsprite.method1199(i_10_, -((i_13_ + -1) * 4) + i_11_, i_14_, i_15_, 0, ~0xffffff | class140.anInt1737, 1);
 				}
-			}
+            }
 		}
 	}
 	

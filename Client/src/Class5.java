@@ -29,7 +29,7 @@ public class Class5
 					int i_6_ = i_4_ - -(i_5_ * 128);
 					int i_7_ = i_4_ - -(128 * (0x7f & i_5_ - 1));
 					int i_8_ = (i_5_ - -1 & 0x7f) * 128 + i_4_;
-					for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > -129; i_9_++) {
+					for (int i_9_ = 0; i_9_ < 128; i_9_++) {
 						float f = (float) (-(0xff & bs[i_9_ + i_8_]) + (0xff & bs[i_7_ - -i_9_]));
 						float f_10_ = (float) (-(bs[i_6_ - -(1 + i_9_ & 0x7f)] & 0xff) + (0xff & bs[i_6_ + (0x7f & -1 + i_9_)]));
 						float f_11_ = (float) (128.0 / Math.sqrt((double) (f * f + (f_10_ * f_10_ + 16384.0F))));
@@ -77,7 +77,7 @@ public class Class5
 				anAbstractToolkit126.method1262(Class259.aClass68_3268, bs, (byte) -57, 128, 16, 128);
 			} else {
 				anInterface13_Impl1Array131 = new Interface13_Impl1[16];
-				for (int i = 0; (i ^ 0xffffffff) > -17; i++) {
+				for (int i = 0; i < 16; i++) {
 					byte[] bs = Node_Sub38_Sub5.method2801(32768, Class320_Sub6.anObject8265, 1, 16384 * (i * 2));
 					anInterface13_Impl1Array131[i] = anAbstractToolkit126.method1252(128, bs, Class259.aClass68_3268, 128, (byte) -3, true);
 				}

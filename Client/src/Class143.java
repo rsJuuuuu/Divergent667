@@ -47,11 +47,11 @@ public class Class143
 			int i_11_ = -i_7_;
 			Class369.method4086(i_7_ + i, i_5_, i - i_7_, Class169_Sub4.anIntArrayArray8826[i_8_], 0);
 			int i_12_ = -1;
-			while ((i_9_ ^ 0xffffffff) > (i_10_ ^ 0xffffffff)) {
+			while (i_10_ > i_9_) {
 				i_12_ += 2;
 				i_11_ += i_12_;
 				i_9_++;
-				if ((i_11_ ^ 0xffffffff) <= -1) {
+				if (i_11_ >= 0) {
 					i_10_--;
 					i_11_ -= i_10_ << 1;
 					int[] is = Class169_Sub4.anIntArrayArray8826[i_10_ + i_8_];
@@ -85,7 +85,7 @@ public class Class143
 		if (i <= 66) {
 			method1622(2, 6, true, 113, -82, 64, 0.5866943F, -83);
 		}
-        return class143_19_.anInt1767 == anInt1767 && class143_19_.anInt1776 == anInt1776 && (class143_19_.anInt1769 ^ 0xffffffff) == (anInt1769 ^ 0xffffffff);
+        return class143_19_.anInt1767 == anInt1767 && class143_19_.anInt1776 == anInt1776 && anInt1769 == class143_19_.anInt1769;
     }
 	
 	static {

@@ -26,7 +26,7 @@ public class Class339_Sub5 extends Class339 {
 			}
 			int offsetX = packet.readBits(6);
 			int offsetY = packet.readBits(6);
-			boolean needUpdate = (packet.readBits(1) ^ 0xffffffff) == -2;
+			boolean needUpdate = packet.readBits(1) == 1;
 			if (needUpdate) {
 				Node_Sub23_Sub1.DECODE_MASKS_PLAYERS_INDEXES_LIST[Node_Sub9_Sub4.DECODE_MASKS_PLAYERS_COUNT++] = playerIndex;
 			}
@@ -87,13 +87,13 @@ public class Class339_Sub5 extends Class339 {
 				x++;
 				y--;
 			}
-			if ((moveType ^ 0xffffffff) == -4) {
+			if (moveType == 3) {
 				x--;
 			}
 			if (moveType == 4) {
 				x++;
 			}
-			if ((moveType ^ 0xffffffff) == -6) {
+			if (moveType == 5) {
 				x--;
 				y++;
 			}
@@ -207,9 +207,9 @@ public class Class339_Sub5 extends Class339 {
 		anInt8689++;
 		float f = -5.0E-4F * (float) (1 + (i_29_ & 0x3));
 		float f_30_ = (float) ((0x3 & i_29_ >> 3) + 1) * 5.0E-4F;
-		float f_31_ = (i_29_ & 0x40 ^ 0xffffffff) == -1 ? 4.8828125E-4F
+		float f_31_ = (i_29_ & 0x40) == 0 ? 4.8828125E-4F
 				: 9.765625E-4F;
-		boolean bool = (0x80 & i_29_ ^ 0xffffffff) != -1;
+		boolean bool = (0x80 & i_29_) != 0;
 		aGLToolkit4202.method1457(i + 47421, 1);
 		if (bool) {
 			Class290_Sub11.aFloatArray8183[1] = 0.0F;
@@ -230,17 +230,17 @@ public class Class339_Sub5 extends Class339 {
 			Class290_Sub11.aFloatArray8183[3] = (float) aGLToolkit4202.anInt6605
 					* f % 1.0F;
 			OpenGL.glTexGenfv(8193, 9474, Class290_Sub11.aFloatArray8183, 0);
-			if (!aClass301_8688.aBoolean3780) {
-				int i_32_ = (int) (16.0F * ((float) aGLToolkit4202.anInt6605 * f_30_));
-				aGLToolkit4202.method1444(-2,
-						aClass301_8688.aClass169_Sub2Array3779[i_32_ % 16]);
-			} else {
+			if (aClass301_8688.aBoolean3780) {
 				Class290_Sub11.aFloatArray8183[3] = (float) aGLToolkit4202.anInt6605
 						* f_30_ % 1.0F;
 				Class290_Sub11.aFloatArray8183[0] = 0.0F;
 				Class290_Sub11.aFloatArray8183[1] = 0.0F;
 				Class290_Sub11.aFloatArray8183[2] = 0.0F;
 				OpenGL.glTexGenfv(8194, 9473, Class290_Sub11.aFloatArray8183, 0);
+			} else {
+				int i_32_ = (int) (16.0F * ((float) aGLToolkit4202.anInt6605 * f_30_));
+				aGLToolkit4202.method1444(-2,
+						aClass301_8688.aClass169_Sub2Array3779[i_32_ % 16]);
 			}
 			aGLToolkit4202.method1457(33984, 0);
 		}

@@ -73,13 +73,13 @@ public class GLPlane extends Plane
 		int[] is_4_ = anIntArrayArrayArray7909[i][i_3_];
 		if (b <= -29) {
 			int i_5_ = is.length;
-			if ((aGLToolkit7926.anIntArray6747.length ^ 0xffffffff) > (i_5_ ^ 0xffffffff)) {
+			if (i_5_ > aGLToolkit7926.anIntArray6747.length) {
 				aGLToolkit7926.anIntArray6747 = new int[i_5_];
 				aGLToolkit7926.anIntArray6749 = new int[i_5_];
 			}
 			int[] is_6_ = aGLToolkit7926.anIntArray6747;
 			int[] is_7_ = aGLToolkit7926.anIntArray6749;
-			for (int i_8_ = 0; (i_5_ ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++) {
+			for (int i_8_ = 0; i_8_ < i_5_; i_8_++) {
 				is_6_[i_8_] = is[i_8_] >> aGLToolkit7926.anInt6611;
 				is_7_[i_8_] = is_4_[i_8_] >> aGLToolkit7926.anInt6611;
 			}
@@ -166,7 +166,7 @@ public class GLPlane extends Plane
 						if (bools[i_25_ + -i_18_][-i_19_ + i_23_]) {
 							short[] ses = aShortArrayArray7925[i_24_];
 							if (ses != null) {
-								for (int i_26_ = 0; (i_26_ ^ 0xffffffff) > (ses.length ^ 0xffffffff); i_26_++) {
+								for (int i_26_ = 0; ses.length > i_26_; i_26_++) {
 									i_22_++;
 									floatbuffer.writeShort(ses[i_26_] & 0xffff);
 								}
@@ -176,13 +176,13 @@ public class GLPlane extends Plane
 					}
 				}
 			} else {
-				for (int i_27_ = i_19_; (i_27_ ^ 0xffffffff) > (i_21_ ^ 0xffffffff); i_27_++) {
+				for (int i_27_ = i_19_; i_21_ > i_27_; i_27_++) {
 					int i_28_ = i_27_ * anInt3408 + i_18_;
 					for (int i_29_ = i_18_; i_29_ < i_20_; i_29_++) {
 						if (bools[i_29_ - i_18_][-i_19_ + i_27_]) {
 							short[] ses = aShortArrayArray7925[i_28_];
 							if (ses != null) {
-								for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > (ses.length ^ 0xffffffff); i_30_++) {
+								for (int i_30_ = 0; ses.length > i_30_; i_30_++) {
 									floatbuffer.method2191(-74, ses[i_30_] & 0xffff);
 									i_22_++;
 								}
@@ -220,26 +220,26 @@ public class GLPlane extends Plane
 			}
 			aNode_Sub33Array7955 = new Node_Sub33[aHashTable7949.method1519((byte) -90)];
 			aHashTable7949.method1523((byte) -122, aNode_Sub33Array7955);
-			for (int i = 0; (aNode_Sub33Array7955.length ^ 0xffffffff) < (i ^ 0xffffffff); i++)
+			for (int i = 0; i < aNode_Sub33Array7955.length; i++)
 				aNode_Sub33Array7955[i].method2739(73, anInt7948);
 			int i = 24;
 			if (anIntArrayArrayArray7908 != null) {
 				i += 4;
 			}
-			if ((0x7 & anInt7911 ^ 0xffffffff) != -1) {
+			if ((0x7 & anInt7911) != 0) {
 				i += 12;
 			}
 			jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = aGLToolkit7926.aNativeHeap6609.a(anInt7948 * i, false);
 			Stream stream = new Stream(nativeheapbuffer);
 			Node_Sub33[] node_sub33s = new Node_Sub33[anInt7948];
 			int i_37_ = Class215.method2072(anInt7948 / 4, true);
-			if ((i_37_ ^ 0xffffffff) > -2) {
+			if (i_37_ < 1) {
 				i_37_ = 1;
 			}
 			HashTable hashtable = new HashTable(i_37_);
 			Node_Sub33[] node_sub33s_38_ = new Node_Sub33[anInt7944];
 			for (int i_39_ = 0; anInt3408 > i_39_; i_39_++) {
-				for (int i_40_ = 0; (anInt3404 ^ 0xffffffff) < (i_40_ ^ 0xffffffff); i_40_++) {
+				for (int i_40_ = 0; i_40_ < anInt3404; i_40_++) {
 					if (anIntArrayArrayArray7934[i_39_][i_40_] != null) {
 						Node_Sub33[] node_sub33s_41_ = aNode_Sub33ArrayArrayArray7936[i_39_][i_40_];
 						int[] is = anIntArrayArrayArray7929[i_39_][i_40_];
@@ -297,17 +297,17 @@ public class GLPlane extends Plane
 							float f_79_;
 							float f_80_;
 							if (i_73_ != 0 || i_74_ != 0) {
-								if ((i_73_ ^ 0xffffffff) == -1 && i_74_ == anInt3398) {
+								if (i_73_ == 0 && i_74_ == anInt3398) {
 									f_79_ = f_51_;
 									i_75_ -= i_59_;
 									f_78_ = f_50_;
 									f_80_ = f_49_;
-								} else if ((anInt3398 ^ 0xffffffff) == (i_73_ ^ 0xffffffff) && (anInt3398 ^ 0xffffffff) == (i_74_ ^ 0xffffffff)) {
+								} else if (i_73_ == anInt3398 && i_74_ == anInt3398) {
 									i_75_ -= i_60_;
 									f_79_ = f_54_;
 									f_78_ = f_53_;
 									f_80_ = f_52_;
-								} else if ((anInt3398 ^ 0xffffffff) == (i_73_ ^ 0xffffffff) && i_74_ == 0) {
+								} else if (i_73_ == anInt3398 && i_74_ == 0) {
 									i_75_ -= i_61_;
 									f_78_ = f_56_;
 									f_80_ = f_55_;
@@ -334,30 +334,32 @@ public class GLPlane extends Plane
 								f_79_ = f_48_;
 								f_80_ = f;
 							}
-							if ((i_70_ ^ 0xffffffff) != 0) {
+							if (i_70_ != -1) {
 								int i_91_ = i_75_ * (0x7f & i_70_) >> 7;
-								if ((i_91_ ^ 0xffffffff) > -3) {
+								if (i_91_ < 2) {
 									i_91_ = 2;
 								} else if (i_91_ > 126) {
 									i_91_ = 126;
 								}
 								i_76_ = Class85.anIntArray1158[0xff80 & i_70_ | i_91_];
-								if ((anInt7911 & 0x7 ^ 0xffffffff) == -1) {
+								if ((anInt7911 & 0x7) == 0) {
 									f_77_ = f_79_ * aGLToolkit7926.aFloatArray6664[2] + (f_78_ * aGLToolkit7926.aFloatArray6664[1] + f_80_ * aGLToolkit7926.aFloatArray6664[0]);
 									f_77_ = aGLToolkit7926.aFloat6737 + f_77_ * (!(f_77_ > 0.0F) ? aGLToolkit7926.aFloat6648 : aGLToolkit7926.aFloat6645);
 								}
 							}
 							Node node = null;
-							if ((anInt7933 - 1 & i_66_ ^ 0xffffffff) == -1 && (-1 + anInt7933 & i_67_) == 0) {
+							if ((anInt7933 - 1 & i_66_) == 0 && (-1 + anInt7933 & i_67_) == 0) {
 								node = hashtable.method1518(3512, l);
 							}
 							int i_92_;
 							if (node == null) {
 								int i_93_;
-								if ((i_70_ ^ 0xffffffff) != (i_71_ ^ 0xffffffff)) {
+								if (i_71_ == i_70_) {
+									i_93_ = i_76_;
+								} else {
 									int i_94_ = (0x7f & i_71_) * i_75_ >> 7;
-									if ((i_94_ ^ 0xffffffff) <= -3) {
-										if ((i_94_ ^ 0xffffffff) < -127) {
+									if (i_94_ >= 2) {
+										if (i_94_ > 126) {
 											i_94_ = 126;
 										}
 									} else {
@@ -371,8 +373,8 @@ public class GLPlane extends Plane
 										int i_97_ = i_93_ >> 8 & 0xff;
 										i_96_ *= f_95_;
 										int i_98_ = i_93_ & 0xff;
-										if ((i_96_ ^ 0xffffffff) <= -1) {
-											if ((i_96_ ^ 0xffffffff) < -256) {
+										if (i_96_ >= 0) {
+											if (i_96_ > 255) {
 												i_96_ = 255;
 											}
 										} else {
@@ -381,7 +383,7 @@ public class GLPlane extends Plane
 										i_97_ *= f_95_;
 										if (i_97_ < 0) {
 											i_97_ = 0;
-										} else if ((i_97_ ^ 0xffffffff) < -256) {
+										} else if (i_97_ > 255) {
 											i_97_ = 255;
 										}
 										i_98_ *= f_95_;
@@ -392,49 +394,47 @@ public class GLPlane extends Plane
 										}
 										i_93_ = i_96_ << 16 | i_97_ << 8 | i_98_;
 									}
-								} else {
-									i_93_ = i_76_;
 								}
-								if (!aGLToolkit7926.aBoolean6736) {
-									stream.b((float) i_66_);
-									stream.b((float) (i_72_ + this.method3260(i_67_, -112, i_66_)));
-									stream.b((float) i_67_);
-									stream.d((byte) (i_93_ >> 16));
-									stream.d((byte) (i_93_ >> 8));
-									stream.d((byte) i_93_);
-									stream.d(-1);
-									stream.b((float) i_66_);
-									stream.b((float) i_67_);
-									if (anIntArrayArrayArray7908 != null) {
-										stream.b((float) (is_46_ == null ? 0 : is_46_[i_65_] - 1));
-									}
-									if ((0x7 & anInt7911) != 0) {
-										stream.b(f_80_);
-										stream.b(f_78_);
-										stream.b(f_79_);
-									}
-								} else {
-									stream.a((float) i_66_);
-									stream.a((float) (i_72_ + this.method3260(i_67_, -110, i_66_)));
-									stream.a((float) i_67_);
-									stream.d((byte) (i_93_ >> 16));
-									stream.d((byte) (i_93_ >> 8));
-									stream.d((byte) i_93_);
-									stream.d(-1);
-									stream.a((float) i_66_);
-									stream.a((float) i_67_);
-									if (anIntArrayArrayArray7908 != null) {
-										stream.a((float) (is_46_ == null ? 0 : -1 + is_46_[i_65_]));
-									}
-									if ((0x7 & anInt7911 ^ 0xffffffff) != -1) {
-										stream.a(f_80_);
-										stream.a(f_78_);
-										stream.a(f_79_);
-									}
-								}
-								i_92_ = anInt7932++;
+                                if (aGLToolkit7926.aBoolean6736) {
+                                    stream.a((float) i_66_);
+                                    stream.a((float) (i_72_ + this.method3260(i_67_, -110, i_66_)));
+                                    stream.a((float) i_67_);
+                                    stream.d((byte) (i_93_ >> 16));
+                                    stream.d((byte) (i_93_ >> 8));
+                                    stream.d((byte) i_93_);
+                                    stream.d(-1);
+                                    stream.a((float) i_66_);
+                                    stream.a((float) i_67_);
+                                    if (anIntArrayArrayArray7908 != null) {
+                                        stream.a((float) (is_46_ == null ? 0 : -1 + is_46_[i_65_]));
+                                    }
+                                    if ((0x7 & anInt7911) != 0) {
+                                        stream.a(f_80_);
+                                        stream.a(f_78_);
+                                        stream.a(f_79_);
+                                    }
+                                } else {
+                                    stream.b((float) i_66_);
+                                    stream.b((float) (i_72_ + this.method3260(i_67_, -112, i_66_)));
+                                    stream.b((float) i_67_);
+                                    stream.d((byte) (i_93_ >> 16));
+                                    stream.d((byte) (i_93_ >> 8));
+                                    stream.d((byte) i_93_);
+                                    stream.d(-1);
+                                    stream.b((float) i_66_);
+                                    stream.b((float) i_67_);
+                                    if (anIntArrayArrayArray7908 != null) {
+                                        stream.b((float) (is_46_ == null ? 0 : is_46_[i_65_] - 1));
+                                    }
+                                    if ((0x7 & anInt7911) != 0) {
+                                        stream.b(f_80_);
+                                        stream.b(f_78_);
+                                        stream.b(f_79_);
+                                    }
+                                }
+                                i_92_ = anInt7932++;
 								ses[i_65_] = (short) i_92_;
-								if ((i_70_ ^ 0xffffffff) != 0) {
+								if (i_70_ != -1) {
 									node_sub33s[i_92_] = node_sub33s_41_[i_65_];
 								}
 								hashtable.method1515(l, new Node_Sub46(ses[i_65_]), -125);
@@ -452,14 +452,14 @@ public class GLPlane extends Plane
 					}
 				}
 			}
-			for (int i_100_ = 0; (anInt7932 ^ 0xffffffff) < (i_100_ ^ 0xffffffff); i_100_++) {
+			for (int i_100_ = 0; i_100_ < anInt7932; i_100_++) {
 				Node_Sub33 node_sub33 = node_sub33s[i_100_];
 				if (node_sub33 != null) {
 					node_sub33.method2737((byte) 125, i_100_);
 				}
 			}
 			for (int i_101_ = 0; i_101_ < anInt3408; i_101_++) {
-				for (int i_102_ = 0; (i_102_ ^ 0xffffffff) > (anInt3404 ^ 0xffffffff); i_102_++) {
+				for (int i_102_ = 0; anInt3404 > i_102_; i_102_++) {
 					short[] ses = aShortArrayArray7925[i_101_ + i_102_ * anInt3408];
 					if (ses != null) {
 						int i_103_ = 0;
@@ -478,13 +478,13 @@ public class GLPlane extends Plane
 							}
 							if (node_sub33_108_ != null) {
 								node_sub33_108_.method2738(i_101_, i_103_, true, i_102_);
-								if (node_sub33_110_ == null || (node_sub33_110_.aLong2797 ^ 0xffffffffffffffffL) < (node_sub33_108_.aLong2797 ^ 0xffffffffffffffffL)) {
+								if (node_sub33_110_ == null || node_sub33_108_.aLong2797 < node_sub33_110_.aLong2797) {
 									node_sub33_110_ = node_sub33_108_;
 								}
 							}
 							if (node_sub33_109_ != null) {
 								node_sub33_109_.method2738(i_101_, i_103_, true, i_102_);
-								if (node_sub33_110_ == null || (node_sub33_110_.aLong2797 ^ 0xffffffffffffffffL) < (node_sub33_109_.aLong2797 ^ 0xffffffffffffffffL)) {
+								if (node_sub33_110_ == null || node_sub33_109_.aLong2797 < node_sub33_110_.aLong2797) {
 									node_sub33_110_ = node_sub33_109_;
 								}
 							}
@@ -510,14 +510,14 @@ public class GLPlane extends Plane
 			aClass69_7945 = new Class69(anInterface9_7956, 5126, 3, 0);
 			aClass69_7952 = new Class69(anInterface9_7956, 5121, 4, 12);
 			int i_111_;
-			if (anIntArrayArrayArray7908 != null) {
-				i_111_ = 28;
-				aClass69_7954 = new Class69(anInterface9_7956, 5126, 3, 16);
-			} else {
+			if (anIntArrayArrayArray7908 == null) {
 				i_111_ = 24;
 				aClass69_7954 = new Class69(anInterface9_7956, 5126, 2, 16);
+			} else {
+				i_111_ = 28;
+				aClass69_7954 = new Class69(anInterface9_7956, 5126, 3, 16);
 			}
-			if ((anInt7911 & 0x7) != 0) {
+            if ((anInt7911 & 0x7) != 0) {
 				aClass69_7953 = new Class69(anInterface9_7956, 5126, 3, i_111_);
 			}
 			long[] ls = new long[aNode_Sub33Array7955.length];
@@ -547,7 +547,7 @@ public class GLPlane extends Plane
 	}
 	
 	final void ka(int i, int i_114_, int i_115_) {
-		if ((i_115_ ^ 0xffffffff) < (aByteArrayArray7951[i][i_114_] & 0xff ^ 0xffffffff)) {
+		if ((aByteArrayArray7951[i][i_114_] & 0xff) < i_115_) {
 			aByteArrayArray7951[i][i_114_] = (byte) i_115_;
 		}
 		anInt7910++;
@@ -589,8 +589,8 @@ public class GLPlane extends Plane
 		anIntArrayArrayArray7924 = new int[i_127_][i_128_][];
 		aFloatArrayArray7957 = new float[1 + anInt3408][anInt3404 + 1];
 		anInt7933 = 1 << anInt7915;
-		for (int i_131_ = 1; (anInt3404 ^ 0xffffffff) < (i_131_ ^ 0xffffffff); i_131_++) {
-			for (int i_132_ = 1; (i_132_ ^ 0xffffffff) > (anInt3408 ^ 0xffffffff); i_132_++) {
+		for (int i_131_ = 1; i_131_ < anInt3404; i_131_++) {
+			for (int i_132_ = 1; anInt3408 > i_132_; i_132_++) {
 				int i_133_ = is_129_[i_132_ + 1][i_131_] + -is_129_[i_132_ + -1][i_131_];
 				int i_134_ = -is_129_[i_132_][i_131_ - 1] + is_129_[i_132_][i_131_ - -1];
 				float f = (float) (1.0 / Math.sqrt((double) (i_134_ * i_134_ + (i_130_ * (4 * i_130_) + i_133_ * i_133_))));
@@ -628,7 +628,7 @@ public class GLPlane extends Plane
 		for (int i_146_ = 0; i_146_ < is_139_.length; i_146_++) {
 			int i_147_ = is_141_[i_146_];
 			int i_148_ = is_142_[i_146_];
-			if ((0x20 & anInt7911) != 0 && (i_147_ ^ 0xffffffff) != 0 && var_d.method10(i_147_, -8217).aBoolean1223) {
+			if ((0x20 & anInt7911) != 0 && i_147_ != -1 && var_d.method10(i_147_, -8217).aBoolean1223) {
 				i_147_ = -1;
 				i_148_ = 128;
 			}
@@ -636,21 +636,21 @@ public class GLPlane extends Plane
 			Node node;
 			for (node = aHashTable7949.method1518(3512, l); node != null; node = aHashTable7949.method1524((byte) 84)) {
 				Node_Sub33 node_sub33 = (Node_Sub33) node;
-				if ((node_sub33.anInt7400 ^ 0xffffffff) == (i_147_ ^ 0xffffffff) && (float) i_148_ == node_sub33.aFloat7389 && (i_143_ ^ 0xffffffff) == (node_sub33.anInt7401 ^ 0xffffffff) && node_sub33.anInt7403 == i_144_ && (node_sub33.anInt7392 ^ 0xffffffff) == (i_145_ ^ 0xffffffff)) {
+				if (i_147_ == node_sub33.anInt7400 && (float) i_148_ == node_sub33.aFloat7389 && node_sub33.anInt7401 == i_143_ && node_sub33.anInt7403 == i_144_ && i_145_ == node_sub33.anInt7392) {
 					break;
 				}
 			}
-			if (node != null) {
-				node_sub33s[i_146_] = (Node_Sub33) node;
-			} else {
+			if (node == null) {
 				node_sub33s[i_146_] = new Node_Sub33(this, i_147_, i_148_, i_143_, i_144_, i_145_);
 				aHashTable7949.method1515(l, node_sub33s[i_146_], -125);
+			} else {
+				node_sub33s[i_146_] = (Node_Sub33) node;
 			}
-		}
+        }
 		if (bool) {
 			aByteArrayArray7938[i][i_135_] = (byte) Node_Sub16.method2590(aByteArrayArray7938[i][i_135_], 1);
 		}
-		if ((anInt7944 ^ 0xffffffff) > (is_139_.length ^ 0xffffffff)) {
+		if (is_139_.length > anInt7944) {
 			anInt7944 = is_139_.length;
 		}
 		anInt7948 += is_139_.length;
@@ -669,12 +669,12 @@ public class GLPlane extends Plane
 			if (i_158_ > aGLToolkit7926.anIntArray6748.length) {
 				aGLToolkit7926.anIntArray6748 = new int[i_158_];
 			}
-			if ((aGLToolkit7926.aFloatBuffer6661.buffer.length ^ 0xffffffff) > (anInt7919 * 2 ^ 0xffffffff)) {
+			if (anInt7919 * 2 > aGLToolkit7926.aFloatBuffer6661.buffer.length) {
 				aGLToolkit7926.aFloatBuffer6661 = new FloatBuffer(anInt7919 * 2);
 			}
 			int i_159_ = i_153_ - i_155_;
 			int i_160_ = i_159_;
-			if ((i_159_ ^ 0xffffffff) > -1) {
+			if (i_159_ < 0) {
 				i_159_ = 0;
 			}
 			int i_161_ = i_156_ + -i_155_;
@@ -683,11 +683,11 @@ public class GLPlane extends Plane
 				i_161_ = 0;
 			}
 			int i_163_ = i_153_ - -i_155_;
-			if ((-1 + anInt3408 ^ 0xffffffff) > (i_163_ ^ 0xffffffff)) {
+			if (i_163_ > -1 + anInt3408) {
 				i_163_ = -1 + anInt3408;
 			}
 			int i_164_ = i_155_ + i_156_;
-			if ((i_164_ ^ 0xffffffff) < (anInt3404 + -1 ^ 0xffffffff)) {
+			if (anInt3404 + -1 < i_164_) {
 				i_164_ = anInt3404 + -1;
 			}
 			int i_165_ = 0;
@@ -700,14 +700,14 @@ public class GLPlane extends Plane
 					}
 				}
 			}
-			if ((i_154_ ^ 0xffffffff) == 0) {
+			if (i_154_ == -1) {
 				aGLToolkit7926.method1470(1);
 			} else {
 				aGLToolkit7926.method1407((byte) -111, (float) i_154_);
 				aGLToolkit7926.method1421(1);
 			}
 			aGLToolkit7926.method1451((anInt7911 & 0x7) != 0, -31277);
-			for (int i_169_ = 0; (i_169_ ^ 0xffffffff) > (aNode_Sub33Array7955.length ^ 0xffffffff); i_169_++)
+			for (int i_169_ = 0; aNode_Sub33Array7955.length > i_169_; i_169_++)
 				aNode_Sub33Array7955[i_169_].method2732(0, is, i_165_);
 			if (!aClass312_7914.method3616(0)) {
 				int i_170_ = aGLToolkit7926.anInt6678;
@@ -774,7 +774,7 @@ public class GLPlane extends Plane
 		int[] is_196_ = is_176_ == null ? null : new int[3 * i_189_];
 		int[] is_197_ = is_178_ == null ? null : new int[i_189_ * 3];
 		int i_198_ = 0;
-		for (int i_199_ = 0; (i_199_ ^ 0xffffffff) > (i_189_ ^ 0xffffffff); i_199_++) {
+		for (int i_199_ = 0; i_189_ > i_199_; i_199_++) {
 			int i_200_ = is_179_[i_199_];
 			int i_201_ = is_180_[i_199_];
 			int i_202_ = is_181_[i_199_];
@@ -840,7 +840,7 @@ public class GLPlane extends Plane
 		if (bool != true) {
 			anIntArray7918 = null;
 		}
-		if ((c ^ 0xffffffff) == -224) {
+		if (c == 223) {
 			return 's';
 		}
 		if (c == 338) {

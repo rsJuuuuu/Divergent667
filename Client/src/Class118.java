@@ -35,7 +35,7 @@ public class Class118 implements Interface17
 					buffer.readUnsignedByte();
 				} else {
 					int i_9_ = buffer.readSmart();
-					if ((i_9_ ^ 0xffffffff) == -1) {
+					if (i_9_ == 0) {
 						break;
 					}
 					i_6_ += -1 + i_9_;
@@ -44,9 +44,9 @@ public class Class118 implements Interface17
 					int i_12_ = buffer.readUnsignedByte() >> 2;
 					int i_13_ = i_0_ + i_11_;
 					int i_14_ = i_10_ + i_2_;
-					if ((i_13_ ^ 0xffffffff) < -1 && i_14_ > 0 && (-1 + i_1_ ^ 0xffffffff) < (i_13_ ^ 0xffffffff) && (-1 + i_3_ ^ 0xffffffff) < (i_14_ ^ 0xffffffff)) {
+					if (i_13_ > 0 && i_14_ > 0 && i_13_ < -1 + i_1_ && i_14_ < -1 + i_3_) {
 						ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(i_4_, i + 110);
-						if (i_12_ != 22 || Class213.aNode_Sub27_2512.aClass320_Sub6_7267.method3701(false) != 0 || (objectdefinition.anInt3057 ^ 0xffffffff) != -1 || (objectdefinition.anInt3010 ^ 0xffffffff) == -2 || objectdefinition.aBoolean3051) {
+						if (i_12_ != 22 || Class213.aNode_Sub27_2512.aClass320_Sub6_7267.method3701(false) != 0 || objectdefinition.anInt3057 != 0 || objectdefinition.anInt3010 == 1 || objectdefinition.aBoolean3051) {
 							bool_7_ = true;
 							if (!objectdefinition.method3039(82)) {
 								bool = false;

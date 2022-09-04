@@ -29,15 +29,15 @@ abstract class Class365
 	
 	static final void method4066(long l, int i) {
 		if (Class175.aClass261ArrayArrayArray2099 != null) {
-			if ((Class320_Sub22.anInt8415 ^ 0xffffffff) == -2 || Class320_Sub22.anInt8415 == 5) {
+			if (Class320_Sub22.anInt8415 == 1 || Class320_Sub22.anInt8415 == 5) {
 				Class321.method3799(l, 320);
-			} else if ((Class320_Sub22.anInt8415 ^ 0xffffffff) == -5) {
+			} else if (Class320_Sub22.anInt8415 == 4) {
 				Node_Sub28.method2703(false, l);
 			}
 		}
 		anInt4522++;
 		Class78.method780((long) Class174.clientCycle, 0, Class93.aGraphicsToolkit1241);
-		if ((Class320_Sub15.WINDOWS_PANE_ID ^ 0xffffffff) != 0) {
+		if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
 			Class290_Sub1.method3424(-23620, Class320_Sub15.WINDOWS_PANE_ID);
 		}
 		for (int i_1_ = 0; Node_Sub11.anInt7105 > i_1_; i_1_++) {
@@ -50,14 +50,14 @@ abstract class Class365
 		Node_Sub12.anInt5453 = Class174.clientCycle;
 		Class243.method3059(-1, (byte) 29, -1, null);
 		if (i > 103) {
-			if ((Class320_Sub15.WINDOWS_PANE_ID ^ 0xffffffff) != 0) {
+			if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
 				Node_Sub11.anInt7105 = 0;
 				Exception_Sub1.method141(90);
 			}
 			Class93.aGraphicsToolkit1241.la();
 			Class93_Sub2.method1061(Class93.aGraphicsToolkit1241, false);
 			int i_2_ = Node_Sub52.method2972(false);
-			if ((i_2_ ^ 0xffffffff) == 0) {
+			if (i_2_ == -1) {
 				i_2_ = Class239.anInt2928;
 			}
 			if (i_2_ == -1) {

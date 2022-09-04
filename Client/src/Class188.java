@@ -27,7 +27,7 @@ abstract class Class188
 		for (int i_3_ = 0; i_1_ > i_3_; i_3_++)
 			is[i_3_] = (i_3_ << 12) / i_1_;
 		int[] is_4_ = new int[i_0_];
-		for (int i_5_ = 0; (i ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++)
+		for (int i_5_ = 0; i_5_ < i; i_5_++)
 			is_2_[i_5_] = (i_5_ << 12) / i;
 		int i_6_ = 0;
 		for (/**/; i_0_ > i_6_; i_6_++)
@@ -35,8 +35,8 @@ abstract class Class188
 		method1890(0);
 		for (int i_8_ = 0; i_0_ > i_8_; i_8_++) {
 			for (int i_9_ = 0; i_9_ < i; i_9_++) {
-				for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > (i_1_ ^ 0xffffffff); i_10_++) {
-					for (int i_11_ = 0; (i_11_ ^ 0xffffffff) > (anInt2282 ^ 0xffffffff); i_11_++) {
+				for (int i_10_ = 0; i_1_ > i_10_; i_10_++) {
+					for (int i_11_ = 0; anInt2282 > i_11_; i_11_++) {
 						int i_12_ = aShortArray2284[i_11_] << 12;
 						int i_13_ = is_4_[i_8_] * i_12_ >> 12;
 						int i_14_ = anInt2290 * i_12_ >> 12;
@@ -68,7 +68,7 @@ abstract class Class188
 							i_24_ &= 0xff;
 						}
 						i_13_ &= 0xfff;
-						if ((i_14_ ^ 0xffffffff) >= (i_22_ ^ 0xffffffff)) {
+						if (i_22_ >= i_14_) {
 							i_22_ = 0;
 						} else {
 							i_22_ &= 0xff;
@@ -111,7 +111,7 @@ abstract class Class188
 	private final void method1885(byte b) {
 		aShortArray2284 = new short[anInt2282];
 		anInt2278++;
-		for (int i_43_ = 0; (i_43_ ^ 0xffffffff) > (anInt2282 ^ 0xffffffff); i_43_++)
+		for (int i_43_ = 0; anInt2282 > i_43_; i_43_++)
 			aShortArray2284[i_43_] = (short) (int) Math.pow(2.0, (double) i_43_);
 	}
 	
@@ -128,7 +128,7 @@ abstract class Class188
 		if (b != 121) {
 			anInt2290 = -100;
 		}
-		for (/**/; (i ^ 0xffffffff) > -256; i++) {
+		for (/**/; i < 255; i++) {
 			int i_46_ = 255 - i;
 			int i_47_ = Class330.method3838(-5208, i_46_, random);
 			short s = aShortArray2285[i_47_];

@@ -27,12 +27,12 @@ public class Class301
 			c_2_ = '\u00a0';
 		}
 		boolean bool_3_ = false;
-		if ((l ^ 0xffffffffffffffffL) > -1L) {
+		if (l < 0) {
 			l = -l;
 			bool_3_ = true;
 		}
 		StringBuffer stringbuffer = new StringBuffer(26);
-		if ((i_0_ ^ 0xffffffff) < -1) {
+		if (i_0_ > 0) {
 			for (int i_4_ = 0; i_0_ > i_4_; i_4_++) {
 				int i_5_ = (int) l;
 				l /= 10L;
@@ -45,7 +45,7 @@ public class Class301
 			int i_7_ = (int) l;
 			l /= 10L;
 			stringbuffer.append((char) (48 - -i_7_ - (int) l * 10));
-			if ((l ^ 0xffffffffffffffffL) == -1L) {
+			if (l == 0) {
 				break;
 			}
 			if (bool && ++i_6_ % 3 == 0) {

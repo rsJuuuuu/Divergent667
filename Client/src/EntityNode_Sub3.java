@@ -41,7 +41,7 @@ class EntityNode_Sub3 extends EntityNode
 		if (i != -1) {
 			anInt5965 = -15;
 		}
-        return (i_1_ & 0x180 ^ 0xffffffff) != -1;
+        return (i_1_ & 0x180) != 0;
     }
 	
 	public EntityNode_Sub3() {
@@ -56,12 +56,12 @@ class EntityNode_Sub3 extends EntityNode
 				Class366.aSeekableFile4529.method3577(0L, false);
 				Class366.aSeekableFile4529.method3574(bs, (byte) -1);
 				int i_2_;
-				for (i_2_ = 0; (i_2_ ^ 0xffffffff) > -25; i_2_++) {
+				for (i_2_ = 0; i_2_ < 24; i_2_++) {
 					if (bs[i_2_] != 0) {
 						break;
 					}
 				}
-				if ((i_2_ ^ 0xffffffff) <= -25) {
+				if (i_2_ >= 24) {
 					throw new IOException();
 				}
 			} catch (Exception exception) {

@@ -132,388 +132,312 @@ public class ObjectDefinition {
 				}
 			} else if (opcode == 2) {
 				aString2999 = buffer.readString();
-			} else if ((opcode ^ 0xffffffff) != -15) {
-				if ((opcode ^ 0xffffffff) != -16) {
-					if (opcode == 17) {
-						aBoolean3034 = false;
-						anInt3010 = 0;
-					} else if (opcode == 18) {
-						aBoolean3034 = false;
-					} else if ((opcode ^ 0xffffffff) == -20) {
-						anInt3057 = buffer.readUnsignedByte();
-					} else if (opcode != 21) {
-						if ((opcode ^ 0xffffffff) != -23) {
-							if ((opcode ^ 0xffffffff) != -24) {
-								if (opcode != 24) {
-									if (opcode == 27) {
-										anInt3010 = 1;
-									} else if (opcode == 28) {
-										anInt3011 = buffer.readUnsignedByte() << 2;
-									} else if ((opcode ^ 0xffffffff) != -30) {
-										if ((opcode ^ 0xffffffff) == -40) {
-											anInt3026 = 5 * buffer.readByte();
-										} else if (opcode < 30 || opcode >= 35) {
-											if ((opcode ^ 0xffffffff) != -41) {
-												if (opcode != 41) {
-													if ((opcode ^ 0xffffffff) == -43) {
-														int i_5_ = buffer
-																.readUnsignedByte();
-														aByteArray2996 = new byte[i_5_];
-														for (int i_6_ = 0; (i_5_ ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++)
-															aByteArray2996[i_6_] = buffer
-																	.readByte();
-													} else if (opcode != 62) {
-														if ((opcode ^ 0xffffffff) != -65) {
-															if (opcode == 65) {
-																anInt2969 = buffer
-																		.readUnsignedShort();
-															} else if (opcode != 66) {
-																if ((opcode ^ 0xffffffff) == -68) {
-																	anInt3009 = buffer
-																			.readUnsignedShort();
-																} else if ((opcode ^ 0xffffffff) == -70) {
-																	anInt3040 = buffer
-																			.readUnsignedByte();
-																} else if (opcode == 70) {
-																	anInt2968 = buffer
-																			.readShort() << 2;
-																} else if (opcode != 71) {
-																	if (opcode == 72) {
-																		anInt2985 = buffer
-																				.readShort() << 2;
-																	} else if (opcode != 73) {
-																		if (opcode == 74) {
-																			aBoolean3016 = true;
-																		} else if ((opcode ^ 0xffffffff) != -76) {
-																			if (opcode != 77
-																					&& (opcode ^ 0xffffffff) != -93) {
-																				if (opcode != 78) {
-																					if ((opcode ^ 0xffffffff) == -80) {
-																						anInt2989 = buffer
-																								.readUnsignedShort();
-																						anInt2971 = buffer
-																								.readUnsignedShort();
-																						anInt3012 = buffer
-																								.readUnsignedByte();
-																						int i_7_ = buffer
-																								.readUnsignedByte();
-																						anIntArray3036 = new int[i_7_];
-																						for (int i_8_ = 0; (i_7_ ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++)
-																							anIntArray3036[i_8_] = buffer
-																									.readUnsignedShort();
-																					} else if ((opcode ^ 0xffffffff) != -82) {
-																						if ((opcode ^ 0xffffffff) != -83) {
-																							if (opcode == 88) {
-																								aBoolean2972 = false;
-																							} else if (opcode != 89) {
-																								if ((opcode ^ 0xffffffff) != -92) {
-																									if (opcode == 93) {
-																										aByte3027 = (byte) 3;
-																										anInt3023 = buffer
-																												.readUnsignedShort();
-																									} else if (opcode != 94) {
-																										if (opcode != 95) {
-																											if ((opcode ^ 0xffffffff) != -98) {
-																												if (opcode == 98) {
-																													aBoolean2998 = true;
-																												} else if ((opcode ^ 0xffffffff) != -100) {
-																													if ((opcode ^ 0xffffffff) != -101) {
-																														if (opcode == 101) {
-																															anInt2958 = buffer
-																																	.readUnsignedByte();
-																														} else if ((opcode ^ 0xffffffff) == -103) {
-																															anInt3006 = buffer
-																																	.readUnsignedShort();
-																														} else if ((opcode ^ 0xffffffff) == -104) {
-																															anInt2977 = 0;
-																														} else if (opcode == 104) {
-																															anInt3024 = buffer
-																																	.readUnsignedByte();
-																														} else if (opcode != 105) {
-																															if (opcode == 106) {
-																																int i_9_ = buffer
-																																		.readUnsignedByte();
-																																int i_10_ = 0;
-																																anIntArray3019 = new int[i_9_];
-																																anIntArray2995 = new int[i_9_];
-																																for (int i_11_ = 0; (i_9_ ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++) {
-																																	anIntArray3019[i_11_] = buffer
-																																			.readBigSmart();
-																																	if ((anIntArray3019[i_11_] ^ 0xffffffff) == -65536) {
-																																		anIntArray3019[i_11_] = -1;
-																																	}
-																																	i_10_ += anIntArray2995[i_11_] = buffer
-																																			.readUnsignedByte();
-																																}
-																																for (int i_12_ = 0; i_12_ < i_9_; i_12_++)
-																																	anIntArray2995[i_12_] = 65535
-																																			* anIntArray2995[i_12_]
-																																			/ i_10_;
-																															} else if ((opcode ^ 0xffffffff) != -108) {
-																																if ((opcode ^ 0xffffffff) > -151
-																																		|| opcode >= 155) {
-																																	if ((opcode ^ 0xffffffff) != -161) {
-																																		if ((opcode ^ 0xffffffff) != -163) {
-																																			if ((opcode ^ 0xffffffff) == -164) {
-																																				aByte2974 = buffer
-																																						.readByte();
-																																				aByte3045 = buffer
-																																						.readByte();
-																																				aByte3052 = buffer
-																																						.readByte();
-																																				aByte2960 = buffer
-																																						.readByte();
-																																			} else if (opcode != 164) {
-																																				if ((opcode ^ 0xffffffff) == -166) {
-																																					anInt2963 = buffer
-																																							.readShort();
-																																				} else if ((opcode ^ 0xffffffff) != -167) {
-																																					if (opcode == 167) {
-																																						anInt2983 = buffer
-																																								.readUnsignedShort();
-																																					} else if (opcode != 168) {
-																																						if ((opcode ^ 0xffffffff) == -170) {
-																																							aBoolean2993 = true;
-																																						} else if (opcode == 170) {
-																																							anInt3032 = buffer
-																																									.readSmart();
-																																						} else if ((opcode ^ 0xffffffff) != -172) {
-																																							if (opcode == 173) {
-																																								anInt3050 = buffer
-																																										.readUnsignedShort();
-																																								anInt3020 = buffer
-																																										.readUnsignedShort();
-																																							} else if (opcode != 177) {
-																																								if ((opcode ^ 0xffffffff) == -179) {
-																																									anInt2975 = buffer
-																																											.readUnsignedByte();
-																																								} else if (opcode == 189) {
-																																								} else if ((opcode ^ 0xffffffff) == -250) {
-																																									int i_13_ = buffer
-																																											.readUnsignedByte();
-																																									if (aHashTable3014 == null) {
-																																										int i_14_ = Class320_Sub19
-																																												.method3753(
-																																														i_13_,
-																																														-729073628);
-																																										aHashTable3014 = new HashTable(
-																																												i_14_);
-																																									}
-																																									for (int i_15_ = 0; (i_13_ ^ 0xffffffff) < (i_15_ ^ 0xffffffff); i_15_++) {
-																																										boolean bool = buffer
-																																												.readUnsignedByte() == 1;
-																																										int i_16_ = buffer
-																																												.read24BitInteger();
-																																										Node node;
-																																										if (bool) {
-																																											node = new Node_Sub18(
-																																													buffer.readString());
-																																										} else {
-																																											node = new Node_Sub32(
-																																													buffer.readInt());
-																																										}
-																																										aHashTable3014
-																																												.method1515(
-																																														(long) i_16_,
-																																														node,
-																																														-125);
-																																									}
-																																								}
-																																							} else {
-																																								aBoolean2992 = true;
-																																							}
-																																						} else {
-																																							anInt2962 = buffer
-																																									.readSmart();
-																																						}
-																																					} else {
-																																						aBoolean2961 = true;
-																																					}
-																																				} else {
-																																					anInt3018 = buffer
-																																							.readShort();
-																																				}
-																																			} else {
-																																				anInt2964 = buffer
-																																						.readShort();
-																																			}
-																																		} else {
-																																			aByte3027 = (byte) 3;
-																																			anInt3023 = buffer
-																																					.readInt();
-																																		}
-																																	} else {
-																																		int i_17_ = buffer
-																																				.readUnsignedByte();
-																																		anIntArray2981 = new int[i_17_];
-																																		for (int i_18_ = 0; i_17_ > i_18_; i_18_++)
-																																			anIntArray2981[i_18_] = buffer
-																																					.readUnsignedShort();
-																																	}
-																																} else {
-																																	aStringArray2980[-150
-																																			+ opcode] = buffer
-																																			.readString();
-																																	if (!aClass112_3028.aBoolean1431) {
-																																		aStringArray2980[-150
-																																				+ opcode] = null;
-																																	}
-																																}
-																															} else {
-																																anInt2994 = buffer
-																																		.readUnsignedShort();
-																															}
-																														} else {
-																															aBoolean3007 = true;
-																														}
-																													} else {
-																														anInt3038 = buffer
-																																.readUnsignedByte();
-																														anInt3013 = buffer
-																																.readUnsignedShort();
-																													}
-																												} else {
-																													anInt2987 = buffer
-																															.readUnsignedByte();
-																													anInt3008 = buffer
-																															.readUnsignedShort();
-																												}
-																											} else {
-																												aBoolean3056 = true;
-																											}
-																										} else {
-																											aByte3027 = (byte) 5;
-																											anInt3023 = buffer
-																													.readShort();
-																										}
-																									} else {
-																										aByte3027 = (byte) 4;
-																									}
-																								} else {
-																									aBoolean3002 = true;
-																								}
-																							} else {
-																								aBoolean3000 = false;
-																							}
-																						} else {
-																							aBoolean2990 = true;
-																						}
-																					} else {
-																						aByte3027 = (byte) 2;
-																						anInt3023 = 256 * buffer
-																								.readUnsignedByte();
-																					}
-																				} else {
-																					anInt3015 = buffer
-																							.readUnsignedShort();
-																					anInt3012 = buffer
-																							.readUnsignedByte();
-																				}
-																			} else {
-																				anInt3017 = buffer
-																						.readUnsignedShort();
-																				if (anInt3017 == 65535) {
-																					anInt3017 = -1;
-																				}
-																				anInt3035 = buffer
-																						.readUnsignedShort();
-																				if (anInt3035 == 65535) {
-																					anInt3035 = -1;
-																				}
-																				int i_19_ = -1;
-																				if ((opcode ^ 0xffffffff) == -93) {
-																					i_19_ = buffer
-																							.readBigSmart();
-																					if ((i_19_ ^ 0xffffffff) == -65536) {
-																						i_19_ = -1;
-																					}
-																				}
-																				int i_20_ = buffer
-																						.readUnsignedByte();
-																				anIntArray2984 = new int[i_20_ + 2];
-																				for (int i_21_ = 0; i_20_ >= i_21_; i_21_++) {
-																					anIntArray2984[i_21_] = buffer
-																							.readBigSmart();
-																					if ((anIntArray2984[i_21_] ^ 0xffffffff) == -65536) {
-																						anIntArray2984[i_21_] = -1;
-																					}
-																				}
-																				anIntArray2984[1 + i_20_] = i_19_;
-																			}
-																		} else {
-																			anInt2970 = buffer
-																					.readUnsignedByte();
-																		}
-																	} else {
-																		aBoolean3051 = true;
-																	}
-																} else {
-																	anInt3037 = buffer
-																			.readShort() << 2;
-																}
-															} else {
-																anInt2973 = buffer
-																		.readUnsignedShort();
-															}
-														} else {
-															aBoolean3033 = false;
-														}
-													} else {
-														aBoolean3039 = true;
-													}
-												} else {
-													int i_22_ = buffer
-															.readUnsignedByte();
-													aShortArray2988 = new short[i_22_];
-													aShortArray3044 = new short[i_22_];
-													for (int i_23_ = 0; i_22_ > i_23_; i_23_++) {
-														aShortArray3044[i_23_] = (short) buffer
-																.readUnsignedShort();
-														aShortArray2988[i_23_] = (short) buffer
-																.readUnsignedShort();
-													}
-												}
-											} else {
-												int i_24_ = buffer
-														.readUnsignedByte();
-												aShortArray3025 = new short[i_24_];
-												aShortArray3047 = new short[i_24_];
-												for (int i_25_ = 0; i_25_ < i_24_; i_25_++) {
-													aShortArray3047[i_25_] = (short) buffer
-															.readUnsignedShort();
-													aShortArray3025[i_25_] = (short) buffer
-															.readUnsignedShort();
-												}
-											}
-										} else {
-											aStringArray2980[opcode + -30] = buffer
-													.readString();
-										}
-									} else {
-										anInt3042 = buffer.readByte();
-									}
-								} else {
-									int i_26_ = buffer.readBigSmart();
-									if ((i_26_ ^ 0xffffffff) != -65536) {
-										anIntArray3019 = new int[] { i_26_ };
-									}
-								}
-							} else {
-								anInt2977 = 1;
-							}
-						} else {
-							aBoolean3053 = true;
-						}
-					} else {
-						aByte3027 = (byte) 1;
-					}
-				} else {
-					anInt2986 = buffer.readUnsignedByte();
-				}
-			} else {
+			} else if (opcode == 14) {
 				anInt3055 = buffer.readUnsignedByte();
+			} else if (opcode == 15) {
+				anInt2986 = buffer.readUnsignedByte();
+			} else if (opcode == 17) {
+				aBoolean3034 = false;
+				anInt3010 = 0;
+			} else if (opcode == 18) {
+				aBoolean3034 = false;
+			} else if (opcode == 19) {
+				anInt3057 = buffer.readUnsignedByte();
+			} else if (opcode == 21) {
+				aByte3027 = (byte) 1;
+			} else if (opcode == 22) {
+				aBoolean3053 = true;
+			} else if (opcode == 23) {
+				anInt2977 = 1;
+			} else if (opcode == 24) {
+				int i_26_ = buffer.readBigSmart();
+				if (i_26_ != 65535) {
+					anIntArray3019 = new int[]{i_26_};
+				}
+			} else if (opcode == 27) {
+				anInt3010 = 1;
+			} else if (opcode == 28) {
+				anInt3011 = buffer.readUnsignedByte() << 2;
+			} else if (opcode == 29) {
+				anInt3042 = buffer.readByte();
+			} else if (opcode == 39) {
+				anInt3026 = 5 * buffer.readByte();
+			} else if (opcode >= 30 && opcode < 35) {
+				aStringArray2980[opcode + -30] = buffer
+						.readString();
+			} else if (opcode == 40) {
+				int i_24_ = buffer
+						.readUnsignedByte();
+				aShortArray3025 = new short[i_24_];
+				aShortArray3047 = new short[i_24_];
+				for (int i_25_ = 0; i_25_ < i_24_; i_25_++) {
+					aShortArray3047[i_25_] = (short) buffer
+							.readUnsignedShort();
+					aShortArray3025[i_25_] = (short) buffer
+							.readUnsignedShort();
+				}
+			} else if (opcode == 41) {
+				int i_22_ = buffer
+						.readUnsignedByte();
+				aShortArray2988 = new short[i_22_];
+				aShortArray3044 = new short[i_22_];
+				for (int i_23_ = 0; i_22_ > i_23_; i_23_++) {
+					aShortArray3044[i_23_] = (short) buffer
+							.readUnsignedShort();
+					aShortArray2988[i_23_] = (short) buffer
+							.readUnsignedShort();
+				}
+			} else if (opcode == 42) {
+				int i_5_ = buffer
+						.readUnsignedByte();
+				aByteArray2996 = new byte[i_5_];
+				for (int i_6_ = 0; i_6_ < i_5_; i_6_++)
+					aByteArray2996[i_6_] = buffer
+							.readByte();
+			} else if (opcode == 62) {
+				aBoolean3039 = true;
+			} else if (opcode == 64) {
+				aBoolean3033 = false;
+			} else if (opcode == 65) {
+				anInt2969 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 66) {
+				anInt2973 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 67) {
+				anInt3009 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 69) {
+				anInt3040 = buffer
+						.readUnsignedByte();
+			} else if (opcode == 70) {
+				anInt2968 = buffer
+						.readShort() << 2;
+			} else if (opcode == 71) {
+				anInt3037 = buffer
+						.readShort() << 2;
+			} else if (opcode == 72) {
+				anInt2985 = buffer
+						.readShort() << 2;
+			} else if (opcode == 73) {
+				aBoolean3051 = true;
+			} else if (opcode == 74) {
+				aBoolean3016 = true;
+			} else if (opcode == 75) {
+				anInt2970 = buffer
+						.readUnsignedByte();
+			} else if (opcode == 77 || opcode == 92) {
+				anInt3017 = buffer
+						.readUnsignedShort();
+				if (anInt3017 == 65535) {
+					anInt3017 = -1;
+				}
+				anInt3035 = buffer
+						.readUnsignedShort();
+				if (anInt3035 == 65535) {
+					anInt3035 = -1;
+				}
+				int i_19_ = -1;
+				if (opcode == 92) {
+					i_19_ = buffer
+							.readBigSmart();
+					if (i_19_ == 65535) {
+						i_19_ = -1;
+					}
+				}
+				int i_20_ = buffer
+						.readUnsignedByte();
+				anIntArray2984 = new int[i_20_ + 2];
+				for (int i_21_ = 0; i_20_ >= i_21_; i_21_++) {
+					anIntArray2984[i_21_] = buffer
+							.readBigSmart();
+					if (anIntArray2984[i_21_] == 65535) {
+						anIntArray2984[i_21_] = -1;
+					}
+				}
+				anIntArray2984[1 + i_20_] = i_19_;
+			} else if (opcode == 78) {
+				anInt3015 = buffer
+						.readUnsignedShort();
+				anInt3012 = buffer
+						.readUnsignedByte();
+			} else if (opcode == 79) {
+				anInt2989 = buffer
+						.readUnsignedShort();
+				anInt2971 = buffer
+						.readUnsignedShort();
+				anInt3012 = buffer
+						.readUnsignedByte();
+				int i_7_ = buffer
+						.readUnsignedByte();
+				anIntArray3036 = new int[i_7_];
+				for (int i_8_ = 0; i_8_ < i_7_; i_8_++)
+					anIntArray3036[i_8_] = buffer
+							.readUnsignedShort();
+			} else if (opcode == 81) {
+				aByte3027 = (byte) 2;
+				anInt3023 = 256 * buffer
+						.readUnsignedByte();
+			} else if (opcode == 82) {
+				aBoolean2990 = true;
+			} else if (opcode == 88) {
+				aBoolean2972 = false;
+			} else if (opcode == 89) {
+				aBoolean3000 = false;
+			} else if (opcode == 91) {
+				aBoolean3002 = true;
+			} else if (opcode == 93) {
+				aByte3027 = (byte) 3;
+				anInt3023 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 94) {
+				aByte3027 = (byte) 4;
+			} else if (opcode == 95) {
+				aByte3027 = (byte) 5;
+				anInt3023 = buffer
+						.readShort();
+			} else if (opcode == 97) {
+				aBoolean3056 = true;
+			} else if (opcode == 98) {
+				aBoolean2998 = true;
+			} else if (opcode == 99) {
+				anInt2987 = buffer
+						.readUnsignedByte();
+				anInt3008 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 100) {
+				anInt3038 = buffer
+						.readUnsignedByte();
+				anInt3013 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 101) {
+				anInt2958 = buffer
+						.readUnsignedByte();
+			} else if (opcode == 102) {
+				anInt3006 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 103) {
+				anInt2977 = 0;
+			} else if (opcode == 104) {
+				anInt3024 = buffer
+						.readUnsignedByte();
+			} else if (opcode == 105) {
+				aBoolean3007 = true;
+			} else if (opcode == 106) {
+				int i_9_ = buffer
+						.readUnsignedByte();
+				int i_10_ = 0;
+				anIntArray3019 = new int[i_9_];
+				anIntArray2995 = new int[i_9_];
+				for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
+					anIntArray3019[i_11_] = buffer
+							.readBigSmart();
+					if (anIntArray3019[i_11_] == 65535) {
+						anIntArray3019[i_11_] = -1;
+					}
+					i_10_ += anIntArray2995[i_11_] = buffer
+							.readUnsignedByte();
+				}
+				for (int i_12_ = 0; i_12_ < i_9_; i_12_++)
+					anIntArray2995[i_12_] = 65535
+							* anIntArray2995[i_12_]
+							/ i_10_;
+			} else if (opcode == 107) {
+				anInt2994 = buffer
+						.readUnsignedShort();
+			} else if (opcode >= 150 && opcode < 155) {
+				aStringArray2980[-150
+						+ opcode] = buffer
+						.readString();
+				if (!aClass112_3028.aBoolean1431) {
+					aStringArray2980[-150
+							+ opcode] = null;
+				}
+			} else if (opcode == 160) {
+				int i_17_ = buffer
+						.readUnsignedByte();
+				anIntArray2981 = new int[i_17_];
+				for (int i_18_ = 0; i_17_ > i_18_; i_18_++)
+					anIntArray2981[i_18_] = buffer
+							.readUnsignedShort();
+			} else if (opcode == 162) {
+				aByte3027 = (byte) 3;
+				anInt3023 = buffer
+						.readInt();
+			} else if (opcode == 163) {
+				aByte2974 = buffer
+						.readByte();
+				aByte3045 = buffer
+						.readByte();
+				aByte3052 = buffer
+						.readByte();
+				aByte2960 = buffer
+						.readByte();
+			} else if (opcode == 164) {
+				anInt2964 = buffer
+						.readShort();
+			} else if (opcode == 165) {
+				anInt2963 = buffer
+						.readShort();
+			} else if (opcode == 166) {
+				anInt3018 = buffer
+						.readShort();
+			} else if (opcode == 167) {
+				anInt2983 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 168) {
+				aBoolean2961 = true;
+			} else if (opcode == 169) {
+				aBoolean2993 = true;
+			} else if (opcode == 170) {
+				anInt3032 = buffer
+						.readSmart();
+			} else if (opcode == 171) {
+				anInt2962 = buffer
+						.readSmart();
+			} else if (opcode == 173) {
+				anInt3050 = buffer
+						.readUnsignedShort();
+				anInt3020 = buffer
+						.readUnsignedShort();
+			} else if (opcode == 177) {
+				aBoolean2992 = true;
+			} else if (opcode == 178) {
+				anInt2975 = buffer
+						.readUnsignedByte();
+			} else if (opcode == 189) {
+			} else if (opcode == 249) {
+				int i_13_ = buffer
+						.readUnsignedByte();
+				if (aHashTable3014 == null) {
+					int i_14_ = Class320_Sub19
+							.method3753(
+									i_13_,
+									-729073628);
+					aHashTable3014 = new HashTable(
+							i_14_);
+				}
+				for (int i_15_ = 0; i_15_ < i_13_; i_15_++) {
+					boolean bool = buffer
+							.readUnsignedByte() == 1;
+					int i_16_ = buffer
+							.read24BitInteger();
+					Node node;
+					if (bool) {
+						node = new Node_Sub18(
+								buffer.readString());
+					} else {
+						node = new Node_Sub32(
+								buffer.readInt());
+					}
+					aHashTable3014
+							.method1515(
+									(long) i_16_,
+									node,
+									-125);
+				}
 			}
-		}
+        }
 	}
 
 	final String method3034(String string, int i, boolean bool) {
@@ -584,15 +508,15 @@ public class ObjectDefinition {
 		if (i != 13) {
 			method3032((byte) -109);
 		}
-		if ((anInt3017 ^ 0xffffffff) == 0) {
-			if ((anInt3035 ^ 0xffffffff) != 0) {
+		if (anInt3017 == -1) {
+			if (anInt3035 != -1) {
 				i_32_ = interface17.method65(anInt3035, -3);
 			}
 		} else {
 			i_32_ = interface17.method64(anInt3017, (byte) -42);
 		}
-		if ((i_32_ ^ 0xffffffff) > -1
-				|| (-1 + anIntArray2984.length ^ 0xffffffff) >= (i_32_ ^ 0xffffffff)
+		if (i_32_ < 0
+				|| i_32_ >= -1 + anIntArray2984.length
 				|| anIntArray2984[i_32_] == -1) {
 			int i_33_ = anIntArray2984[-1 + anIntArray2984.length];
 			if (i_33_ != -1) {
@@ -610,8 +534,8 @@ public class ObjectDefinition {
 		}
 		boolean bool = true;
 		synchronized (aClass112_3028.aClass302_1433) {
-			for (int i_34_ = 0; (modelIds.length ^ 0xffffffff) < (i_34_ ^ 0xffffffff); i_34_++) {
-				for (int i_35_ = 0; (i_35_ ^ 0xffffffff) > (modelIds[i_34_].length ^ 0xffffffff); i_35_++)
+			for (int i_34_ = 0; i_34_ < modelIds.length; i_34_++) {
+				for (int i_35_ = 0; modelIds[i_34_].length > i_35_; i_35_++)
 					bool &= aClass112_3028.aClass302_1433.method3515(0,
 							modelIds[i_34_][i_35_], 0);
 			}
@@ -631,7 +555,7 @@ public class ObjectDefinition {
 			method3034(null, 122, false);
 		}
 		for (int i_36_ = 0; i_36_ < anIntArray2984.length; i_36_++) {
-			if ((anIntArray2984[i_36_] ^ 0xffffffff) != 0) {
+			if (anIntArray2984[i_36_] != -1) {
 				ObjectDefinition objectdefinition_37_ = aClass112_3028
 						.method1145(anIntArray2984[i_36_], 59);
 				if (objectdefinition_37_.anInt3015 != -1
@@ -652,9 +576,9 @@ public class ObjectDefinition {
 			if (i_38_ <= 12) {
 				return true;
 			}
-			for (int i_39_ = 0; (i_39_ ^ 0xffffffff) > (aByteArray2967.length ^ 0xffffffff); i_39_++) {
+			for (int i_39_ = 0; aByteArray2967.length > i_39_; i_39_++) {
 				if (i == aByteArray2967[i_39_]) {
-					for (int i_40_ = 0; (i_40_ ^ 0xffffffff) > (modelIds[i_39_].length ^ 0xffffffff); i_40_++) {
+					for (int i_40_ = 0; modelIds[i_39_].length > i_40_; i_40_++) {
 						if (!aClass112_3028.aClass302_1433.method3515(0,
 								modelIds[i_39_][i_40_], 0)) {
 							return false;
@@ -670,7 +594,7 @@ public class ObjectDefinition {
 	final void method3042(byte b, BufferedStream buffer) {
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method3033(buffer, i, 21120);
@@ -683,7 +607,7 @@ public class ObjectDefinition {
 	final void method3043(int i) {
 		if (i == 5) {
 			anInt2979++;
-			if ((anInt3057 ^ 0xffffffff) == 0) {
+			if (anInt3057 == -1) {
 				anInt3057 = 0;
 				if (aByteArray2967 != null && aByteArray2967.length == 1
 						&& aByteArray2967[0] == 10) {
@@ -711,11 +635,11 @@ public class ObjectDefinition {
 			anInt3012 = 11;
 		}
 		if (anIntArray3019 != null) {
-			if ((anIntArray3019.length ^ 0xffffffff) >= -2) {
+			if (anIntArray3019.length <= 1) {
 				return anIntArray3019[0];
 			}
 			int i_42_ = (int) (65535.0 * Math.random());
-			for (int i_43_ = 0; (i_43_ ^ 0xffffffff) > (anIntArray3019.length ^ 0xffffffff); i_43_++) {
+			for (int i_43_ = 0; anIntArray3019.length > i_43_; i_43_++) {
 				if (i_42_ <= anIntArray2995[i_43_]) {
 					return anIntArray3019[i_43_];
 				}
@@ -747,14 +671,14 @@ public class ObjectDefinition {
 			l |= class121.aLong1522 << 32;
 		}
 		int i_50_ = i_48_;
-		if ((aByte3027 ^ 0xffffffff) == -4) {
+		if (aByte3027 == 3) {
 			i_50_ |= 0x7;
 		} else {
-			if ((aByte3027 ^ 0xffffffff) != -1
-					|| (anInt2963 ^ 0xffffffff) != -1) {
+			if (aByte3027 != 0
+					|| anInt2963 != 0) {
 				i_50_ |= 0x2;
 			}
-			if ((anInt2964 ^ 0xffffffff) != -1) {
+			if (anInt2964 != 0) {
 				i_50_ |= 0x1;
 			}
 			if (anInt3018 != 0) {
@@ -777,7 +701,7 @@ public class ObjectDefinition {
 				i_50_ = graphicstoolkit.c(i_50_, drawablemodel.ua());
 			}
 			int i_51_ = i_50_;
-			if ((i_47_ ^ 0xffffffff) == -11 && i > 3) {
+			if (i_47_ == 10 && i > 3) {
 				i_51_ |= 0x5;
 			}
 			drawablemodel = method3051(graphicstoolkit, i_51_, class121,
@@ -785,7 +709,7 @@ public class ObjectDefinition {
 			if (drawablemodel == null) {
 				return null;
 			}
-			if (i_47_ == 10 && (i ^ 0xffffffff) < -4) {
+			if (i_47_ == 10 && i > 3) {
 				drawablemodel.a(2048);
 			}
 			if (bool) {
@@ -810,11 +734,9 @@ public class ObjectDefinition {
 		}
 		boolean bool_52_ = aByte3027 != 0
 				&& (plane != null || plane_49_ != null);
-		boolean bool_53_ = anInt2964 != 0 || (anInt2963 ^ 0xffffffff) != -1
+		boolean bool_53_ = anInt2964 != 0 || anInt2963 != 0
 				|| anInt3018 != 0;
-		if (!bool_52_ && !bool_53_) {
-			drawablemodel = drawablemodel.method633((byte) 0, i_48_, true);
-		} else {
+		if (bool_52_ || bool_53_) {
 			drawablemodel = drawablemodel.method633((byte) 0, i_50_, true);
 			if (bool_52_) {
 				drawablemodel.p(aByte3027, anInt3023, plane, plane_49_, i_45_,
@@ -824,8 +746,10 @@ public class ObjectDefinition {
 				drawablemodel.H(anInt2964, anInt2963, anInt3018);
 			}
 			drawablemodel.s(i_48_);
+		} else {
+			drawablemodel = drawablemodel.method633((byte) 0, i_48_, true);
 		}
-		Node_Sub21.aClass243_7185.aDrawableModel3064 = drawablemodel;
+        Node_Sub21.aClass243_7185.aDrawableModel3064 = drawablemodel;
 		Node_Sub21.aClass243_7185.aR3072 = var_r;
 		return Node_Sub21.aClass243_7185;
 	}
@@ -858,21 +782,21 @@ public class ObjectDefinition {
 		if (animator != null) {
 			i_63_ |= animator.method237((byte) -128);
 		}
-		if (aByte3027 != 3) {
-			if ((aByte3027 ^ 0xffffffff) != -1
-					|| (anInt2963 ^ 0xffffffff) != -1) {
+		if (aByte3027 == 3) {
+			i_63_ |= 0x7;
+		} else {
+			if (aByte3027 != 0
+					|| anInt2963 != 0) {
 				i_63_ |= 0x2;
 			}
 			if (anInt2964 != 0) {
 				i_63_ |= 0x1;
 			}
-			if ((anInt3018 ^ 0xffffffff) != -1) {
+			if (anInt3018 != 0) {
 				i_63_ |= 0x4;
 			}
-		} else {
-			i_63_ |= 0x7;
 		}
-		if ((i_59_ ^ 0xffffffff) == -11 && (i ^ 0xffffffff) < -4) {
+        if (i_59_ == 10 && i > 3) {
 			i_63_ |= 0x5;
 		}
 		DrawableModel drawablemodel;
@@ -881,7 +805,7 @@ public class ObjectDefinition {
 					.method607(l, 0);
 		}
 		if (drawablemodel == null
-				|| (graphicstoolkit.b(drawablemodel.ua(), i_63_) ^ 0xffffffff) != -1) {
+				|| graphicstoolkit.b(drawablemodel.ua(), i_63_) != 0) {
 			if (drawablemodel != null) {
 				i_63_ = graphicstoolkit.c(i_63_, drawablemodel.ua());
 			}
@@ -900,14 +824,14 @@ public class ObjectDefinition {
 			bool = true;
 			animator.method225(0, drawablemodel, 0x3 & i);
 		}
-		if (i_59_ == 10 && (i ^ 0xffffffff) < -4) {
+		if (i_59_ == 10 && i > 3) {
 			if (!bool) {
 				drawablemodel = drawablemodel.method633((byte) 3, i_63_, true);
 				bool = true;
 			}
 			drawablemodel.a(2048);
 		}
-		if ((aByte3027 ^ 0xffffffff) != -1) {
+		if (aByte3027 != 0) {
 			if (!bool) {
 				bool = true;
 				drawablemodel = drawablemodel.method633((byte) 3, i_63_, true);
@@ -915,8 +839,8 @@ public class ObjectDefinition {
 			drawablemodel.p(aByte3027, anInt3023, plane_62_, plane, i_60_,
 					i_64_, i_58_);
 		}
-		if ((anInt2964 ^ 0xffffffff) != -1 || (anInt2963 ^ 0xffffffff) != -1
-				|| (anInt3018 ^ 0xffffffff) != -1) {
+		if (anInt2964 != 0 || anInt2963 != 0
+				|| anInt3018 != 0) {
 			if (!bool) {
 				drawablemodel = drawablemodel.method633((byte) 3, i_63_, true);
 				bool = true;
@@ -938,7 +862,7 @@ public class ObjectDefinition {
 			method3045(null, null, true);
 		}
 		if (signlink.anEventQueue4002 != null) {
-			for (int i = 0; (i ^ 0xffffffff) > -51; i++) {
+			for (int i = 0; i < 50; i++) {
 				if (signlink.anEventQueue4002.peekEvent() == null) {
 					break;
 				}
@@ -973,21 +897,21 @@ public class ObjectDefinition {
 		int i_68_ = 64 + anInt3042;
 		int i_69_ = anInt3026 - -850;
 		int i_70_ = i;
-		boolean bool = aBoolean3039 || i_67_ == 2 && (i_66_ ^ 0xffffffff) < -4;
+		boolean bool = aBoolean3039 || i_67_ == 2 && i_66_ > 3;
 		if (bool) {
 			i |= 0x10;
 		}
-		if (i_66_ != 0) {
-			i |= 0xd;
-		} else {
-			if (anInt2969 != 128 || (anInt2968 ^ 0xffffffff) != -1) {
+		if (i_66_ == 0) {
+			if (anInt2969 != 128 || anInt2968 != 0) {
 				i |= 0x1;
 			}
-			if ((anInt3009 ^ 0xffffffff) != -129 || anInt2985 != 0) {
+			if (anInt3009 != 128 || anInt2985 != 0) {
 				i |= 0x4;
 			}
+		} else {
+			i |= 0xd;
 		}
-		if ((anInt2973 ^ 0xffffffff) != -129 || (anInt3037 ^ 0xffffffff) != -1) {
+        if (anInt2973 != 128 || anInt3037 != 0) {
 			i |= 0x2;
 		}
 		if (aShortArray3047 != null) {
@@ -996,7 +920,7 @@ public class ObjectDefinition {
 		if (aShortArray3044 != null) {
 			i |= 0x8000;
 		}
-		if ((aByte2960 ^ 0xffffffff) != -1) {
+		if (aByte2960 != 0) {
 			i |= 0x80000;
 		}
 		DrawableModel drawablemodel = null;
@@ -1019,7 +943,7 @@ public class ObjectDefinition {
 		int[] is = class121 == null || class121.anIntArray1526 == null ? modelIds[i_71_]
 				: class121.anIntArray1526;
 		int i_73_ = is.length;
-		if ((i_73_ ^ 0xffffffff) < -1) {
+		if (i_73_ > 0) {
 			long l = (long) graphicstoolkit.anInt1537;
 			for (int i_74_ = 0; i_74_ < i_73_; i_74_++)
 				l = l * 67783L + (long) is[i_74_];
@@ -1031,7 +955,7 @@ public class ObjectDefinition {
 				if (drawablemodel.WA() != i_68_) {
 					i |= 0x1000;
 				}
-				if ((i_69_ ^ 0xffffffff) != (drawablemodel.da() ^ 0xffffffff)) {
+				if (drawablemodel.da() != i_69_) {
 					i |= 0x2000;
 				}
 			}
@@ -1051,14 +975,14 @@ public class ObjectDefinition {
 						if (model == null) {
 							return null;
 						}
-						if ((model.anInt2614 ^ 0xffffffff) > -14) {
+						if (model.anInt2614 < 13) {
 							model.method2081(2, 0);
 						}
 						if (i_73_ > 1) {
 							Animable_Sub3_Sub1.aModelArray11008[i_76_] = model;
 						}
 					}
-					if ((i_73_ ^ 0xffffffff) < -2) {
+					if (i_73_ > 1) {
 						model = new Model(Animable_Sub3_Sub1.aModelArray11008,
 								i_73_);
 					}
@@ -1085,30 +1009,26 @@ public class ObjectDefinition {
 		if (bool) {
 			drawablemodel_77_.v();
 		}
-		if ((i_67_ ^ 0xffffffff) == -5 && (i_66_ ^ 0xffffffff) < -4) {
+		if (i_67_ == 4 && i_66_ > 3) {
 			drawablemodel_77_.k(2048);
 			drawablemodel_77_.H(180, 0, -180);
 		}
 		i_66_ &= 0x3;
-		if (i_66_ != 1) {
-			if ((i_66_ ^ 0xffffffff) != -3) {
-				if (i_66_ == 3) {
-					drawablemodel_77_.k(12288);
-				}
-			} else {
-				drawablemodel_77_.k(8192);
-			}
-		} else {
+		if (i_66_ == 1) {
 			drawablemodel_77_.k(4096);
+		} else if (i_66_ == 2) {
+			drawablemodel_77_.k(8192);
+		} else if (i_66_ == 3) {
+			drawablemodel_77_.k(12288);
 		}
-		if (aShortArray3047 != null) {
+        if (aShortArray3047 != null) {
 			short[] ses;
 			if (class121 == null || class121.aShortArray1523 == null) {
 				ses = aShortArray3025;
 			} else {
 				ses = class121.aShortArray1523;
 			}
-			for (int i_78_ = 0; (i_78_ ^ 0xffffffff) > (aShortArray3047.length ^ 0xffffffff); i_78_++) {
+			for (int i_78_ = 0; aShortArray3047.length > i_78_; i_78_++) {
 				if (aByteArray2996 != null && aByteArray2996.length > i_78_) {
 					drawablemodel_77_
 							.ia(aShortArray3047[i_78_],
@@ -1133,11 +1053,11 @@ public class ObjectDefinition {
 					aByte2960 & 0xff);
 		}
 		if (anInt2969 != 128 || anInt2973 != 128
-				|| (anInt3009 ^ 0xffffffff) != -129) {
+				|| anInt3009 != 128) {
 			drawablemodel_77_.O(anInt2969, anInt2973, anInt3009);
 		}
-		if ((anInt2968 ^ 0xffffffff) != -1 || (anInt3037 ^ 0xffffffff) != -1
-				|| (anInt2985 ^ 0xffffffff) != -1) {
+		if (anInt2968 != 0 || anInt3037 != 0
+				|| anInt2985 != 0) {
 			drawablemodel_77_.H(anInt2968, anInt3037, anInt2985);
 		}
 		drawablemodel_77_.s(i_70_);
@@ -1148,7 +1068,7 @@ public class ObjectDefinition {
 		anInt3004++;
 		if (b == -111) {
 			int i = buffer.readUnsignedByte();
-			for (int i_80_ = 0; (i_80_ ^ 0xffffffff) > (i ^ 0xffffffff); i_80_++) {
+			for (int i_80_ = 0; i > i_80_; i_80_++) {
 				buffer.offset++;
 				int length2 = buffer.readUnsignedByte();
 				for (int i2 = 0; i2 < length2; i2++)

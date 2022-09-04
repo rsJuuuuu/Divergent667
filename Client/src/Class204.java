@@ -15,7 +15,7 @@ public class Class204
 	static int anInt2461;
 	
 	static final void method2030(byte b) {
-		if ((Class263.anInt3336 ^ 0xffffffff) >= -2) {
+		if (Class263.anInt3336 <= 1) {
 			Class213.aNode_Sub27_2512.method2690(b ^ 0x8, 2, Class213.aNode_Sub27_2512.aClass320_Sub21_7293);
 		} else {
 			Class213.aNode_Sub27_2512.method2690(b + -47, 4, Class213.aNode_Sub27_2512.aClass320_Sub21_7293);

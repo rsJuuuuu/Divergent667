@@ -33,7 +33,7 @@ public class Class345
 		synchronized (Class30.aClass103Array494) {
 			int i_1_ = -111 % ((b - 16) / 39);
 			EntityNode_Sub6 entitynode_sub6;
-			if ((Class30.aClass103Array494.length ^ 0xffffffff) >= (i ^ 0xffffffff) || Class30.aClass103Array494[i].method1105(-92)) {
+			if (i >= Class30.aClass103Array494.length || Class30.aClass103Array494[i].method1105(-92)) {
 				entitynode_sub6 = new EntityNode_Sub6();
 				entitynode_sub6.anEntityNode_Sub5Array5995 = new EntityNode_Sub5[i];
 				for (int i_2_ = 0; i_2_ < i; i_2_++)

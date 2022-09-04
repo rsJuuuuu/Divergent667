@@ -35,7 +35,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 				i_6_ -= 2000;
 			}
 			long l = cachenode_sub13.aLong9563;
-			if ((i_6_ ^ 0xffffffff) == -45) {
+			if (i_6_ == 44) {
 				Player player = Class270_Sub2.LOCAL_PLAYERS[itemId];
 				if (player != null) {	
 					int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], player.scenePositionXQueue[0], player.scenePositionYQueue[0], Class295.myPlayer.getSize((byte) 0), -1, true, player.getSize((byte) 0), player.getSize((byte) 0), 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
@@ -56,7 +56,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 99), true, player.scenePositionXQueue[0], 0, -2, 32, player.getSize((byte) 110));
 				}
 			}
-			if ((i_6_ ^ 0xffffffff) == -5) {
+			if (i_6_ == 4) {
 				Node_Sub38_Sub28.anInt10403 = 2;
 				Class163.anInt2014 = i;
 				Node_Sub37.anInt7431 = 0;
@@ -84,7 +84,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 				}
 			} else {
 				if (i_6_ == 58) {
-					if ((Class339_Sub7.rights ^ 0xffffffff) >= -1 || !Class175.aClass291_2100.method3450(119, 82) || !Class175.aClass291_2100.method3450(i_2_ ^ 0x6a, 81)) {
+					if (Class339_Sub7.rights <= 0 || !Class175.aClass291_2100.method3450(119, 82) || !Class175.aClass291_2100.method3450(i_2_ ^ 0x6a, 81)) {
 						int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), -4, true, 1, 1, 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
 						Node_Sub13 node_sub13 = Class22.createWalkPacket(steps, itemId);
 						if (itemId == 1) {
@@ -116,36 +116,28 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					ClientScript.method2321(-1, Node_Sub25_Sub3.aWidget9990);
 				}
 				OutcommingPacket class318 = null;
-				if ((i_6_ ^ 0xffffffff) == -3) {
+				if (i_6_ == 2) {
 					class318 = Class228.aClass318_2720;
-				} else if ((i_6_ ^ 0xffffffff) != -23) {
-					if ((i_6_ ^ 0xffffffff) == -53) {
-						class318 = OutputStream_Sub2.aClass318_93;
-					} else if (i_6_ != 30) {
-						if ((i_6_ ^ 0xffffffff) != -54) {
-							if (i_6_ == 9) {
-								class318 = Class290_Sub4.aClass318_8089;
-							} else if ((i_6_ ^ 0xffffffff) != -52) {
-								if ((i_6_ ^ 0xffffffff) == -16) {
-									class318 = Mobile_Sub4.aClass318_10992;
-								} else if (i_6_ == 48) {
-									class318 = CacheNode_Sub15.aClass318_9590;
-								} else if (i_6_ == 16) {
-									class318 = Node_Sub38_Sub23.aClass318_10329;
-								}
-							} else {
-								class318 = Node_Sub25_Sub1.aClass318_9953;
-							}
-						} else {
-							class318 = Class359.aClass318_4463;
-						}
-					} else {
-						class318 = Class312.aClass318_3973;
-					}
-				} else {
+				} else if (i_6_ == 22) {
 					class318 = Class37.aClass318_557;
+				} else if (i_6_ == 52) {
+					class318 = OutputStream_Sub2.aClass318_93;
+				} else if (i_6_ == 30) {
+					class318 = Class312.aClass318_3973;
+				} else if (i_6_ == 53) {
+					class318 = Class359.aClass318_4463;
+				} else if (i_6_ == 9) {
+					class318 = Class290_Sub4.aClass318_8089;
+				} else if (i_6_ == 51) {
+					class318 = Node_Sub25_Sub1.aClass318_9953;
+				} else if (i_6_ == 15) {
+					class318 = Mobile_Sub4.aClass318_10992;
+				} else if (i_6_ == 48) {
+					class318 = CacheNode_Sub15.aClass318_9590;
+				} else if (i_6_ == 16) {
+					class318 = Node_Sub38_Sub23.aClass318_10329;
 				}
-				if (class318 != null) {
+                if (class318 != null) {
 					Player player = Class270_Sub2.LOCAL_PLAYERS[itemId];
 					if (player != null) {
 						int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], player.scenePositionXQueue[0], player.scenePositionYQueue[0], Class295.myPlayer.getSize((byte) 0), -1, true, player.getSize((byte) 0), player.getSize((byte) 0), 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
@@ -168,28 +160,20 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					anInt9015 = 28;
 				}
 				OutcommingPacket class318_8_ = null;
-				if (i_6_ != 25) {
-					if (i_6_ != 5) {
-						if (i_6_ == 50) {
-							class318_8_ = CacheNode_Sub16.aClass318_9599;
-						} else if ((i_6_ ^ 0xffffffff) != -7) {
-							if ((i_6_ ^ 0xffffffff) != -46) {
-								if ((i_6_ ^ 0xffffffff) == -1008) {
-									class318_8_ = Class51_Sub1.aClass318_9061;
-								}
-							} else {
-								class318_8_ = Class50.aClass318_780;
-							}
-						} else {
-							class318_8_ = Class294.aClass318_3685;
-						}
-					} else {
-						class318_8_ = Class218.aClass318_2570;
-					}
-				} else {
+				if (i_6_ == 25) {
 					class318_8_ = Class128.aClass318_1658;
+				} else if (i_6_ == 5) {
+					class318_8_ = Class218.aClass318_2570;
+				} else if (i_6_ == 50) {
+					class318_8_ = CacheNode_Sub16.aClass318_9599;
+				} else if (i_6_ == 6) {
+					class318_8_ = Class294.aClass318_3685;
+				} else if (i_6_ == 45) {
+					class318_8_ = Class50.aClass318_780;
+				} else if (i_6_ == 1007) {
+					class318_8_ = Class51_Sub1.aClass318_9061;
 				}
-				if (class318_8_ != null) {
+                if (class318_8_ != null) {
 					//interacting with item
 					if(class318_8_ != Class51_Sub1.aClass318_9061) { //droped item examine
 						int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), -1, true, 1, 1, 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
@@ -210,7 +194,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					Class223.method2104(0, interfaceHash, i_4_);
 				}
 				if (i_6_ == 11) {
-					if ((Class339_Sub7.rights ^ 0xffffffff) < -1 && Class175.aClass291_2100.method3450(-121, 82) && Class175.aClass291_2100.method3450(111, 81)) {
+					if (Class339_Sub7.rights > 0 && Class175.aClass291_2100.method3450(-121, 82) && Class175.aClass291_2100.method3450(111, 81)) {
 						Class331.method3843(false, Class295.myPlayer.plane, Class320_Sub4.gameSceneBaseY + interfaceHash, Node_Sub53.gameSceneBaseX + i_4_);
 					} else {
 						Node_Sub37.anInt7431 = 0;
@@ -224,33 +208,27 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 						Class218.aClass123_2566.sendPacket(126, node_sub13);
 					}
 				}
-				if ((i_6_ ^ 0xffffffff) == -19) {
+				if (i_6_ == 18) {
 					IComponentDefinitions widget = Node_Sub3.method2169(-101, i_4_, interfaceHash);
 					if (widget != null) {
 						Class166.method1747((byte) -53, widget);
 					}
 				}
 				OutcommingPacket currentPacket = null;
-				if (i_6_ != 49) {
-					if (i_6_ != 59) {
-						if ((i_6_ ^ 0xffffffff) == -48) {
-							currentPacket = Class68.aClass318_933;
-						} else if ((i_6_ ^ 0xffffffff) == -58) {
-							currentPacket = Class163.aClass318_2018;
-						} else if (i_6_ != 3) {
-							if ((i_6_ ^ 0xffffffff) == -1012) {
-								currentPacket = Class66_Sub2_Sub1.aClass318_10581;
-							}
-						} else {
-							currentPacket = Class225.aClass318_2679;
-						}
-					} else {
-						currentPacket = Node_Sub42.aClass318_7523;
-					}
-				} else {
+				if (i_6_ == 49) {
 					currentPacket = Class320_Sub13.aClass318_8334;
+				} else if (i_6_ == 59) {
+					currentPacket = Node_Sub42.aClass318_7523;
+				} else if (i_6_ == 47) {
+					currentPacket = Class68.aClass318_933;
+				} else if (i_6_ == 57) {
+					currentPacket = Class163.aClass318_2018;
+				} else if (i_6_ == 3) {
+					currentPacket = Class225.aClass318_2679;
+				} else if (i_6_ == 1011) {
+					currentPacket = Class66_Sub2_Sub1.aClass318_10581;
 				}
-				if (currentPacket != null) {
+                if (currentPacket != null) {
 					Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) itemId);
 					if (node_sub41 != null) {
 						Class93_Sub2.anInt6067 = i_3_;
@@ -273,41 +251,33 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					}
 				}
 				OutcommingPacket class318_10_ = null;
-				if (i_6_ != 19) {
-					if (i_6_ != 13) {
-						if ((i_6_ ^ 0xffffffff) != -47) {
-							if (i_6_ != 8) {
-								if ((i_6_ ^ 0xffffffff) == -1011) {
-									class318_10_ = Class194_Sub3_Sub1.aClass318_9373;
-								} else if ((i_6_ ^ 0xffffffff) == -1009) {
-									class318_10_ = Animable_Sub2.aClass318_9114;
-								}
-							} else {
-								class318_10_ = Class117_Sub1.aClass318_4932;
-							}
-						} else {
-							class318_10_ = Class215.aClass318_2529;
-						}
-					} else {
-						class318_10_ = Class262_Sub4.aClass318_7726;
-					}
-				} else {
+				if (i_6_ == 19) {
 					class318_10_ = Class39.aClass318_584;
+				} else if (i_6_ == 13) {
+					class318_10_ = Class262_Sub4.aClass318_7726;
+				} else if (i_6_ == 46) {
+					class318_10_ = Class215.aClass318_2529;
+				} else if (i_6_ == 8) {
+					class318_10_ = Class117_Sub1.aClass318_4932;
+				} else if (i_6_ == 1010) {
+					class318_10_ = Class194_Sub3_Sub1.aClass318_9373;
+				} else if (i_6_ == 1008) {
+					class318_10_ = Animable_Sub2.aClass318_9114;
 				}
-				if (class318_10_ != null) {
+                if (class318_10_ != null) {
 					if(class318_10_ != Animable_Sub2.aClass318_9114) {//examine 
 						int steps;
 						int routeType = (0x7d32b & (int) l) >> 14;
 						int rotation = ((int) l & 0x3b48d1) >> 20;
 						int objectId = 0x7fffffff & (int) (l >>> 32);
-						if (routeType != 10 && routeType != 11 && (routeType ^ 0xffffffff) != -23) {
+						if (routeType != 10 && routeType != 11 && routeType != 22) {
 							steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), routeType, true, 0, 0, 0, rotation, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
 						} else {
 							ObjectDefinition objectdefinition = Class186.aClass112_2256
 									.method1145(objectId, 63);
 							int sizeX;
 							int sizeY;
-							if ((rotation ^ 0xffffffff) == -1 || rotation == 2) {
+							if (rotation == 0 || rotation == 2) {
 								sizeX = objectdefinition.anInt3055;
 								sizeY = objectdefinition.anInt2986;
 							} else {
@@ -338,10 +308,10 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					Class218.aClass123_2566.sendPacket(i_2_ + 125, node_sub13);
 					Class25.method306(-43, i_4_, l, interfaceHash);
 				}
-				if ((i_6_ ^ 0xffffffff) == -1004 || (i_6_ ^ 0xffffffff) == -1002 || i_6_ == 1006 || i_6_ == 1009 || i_6_ == 1004) {
+				if (i_6_ == 1003 || i_6_ == 1001 || i_6_ == 1006 || i_6_ == 1009 || i_6_ == 1004) {
 					Class262_Sub20.method3204((byte) -121, i_4_, itemId, i_6_);
 				}
-				if ((i_6_ ^ 0xffffffff) == -22) {
+				if (i_6_ == 21) {
 					Class93_Sub2.anInt6067 = i_3_;
 					Node_Sub38_Sub28.anInt10403 = 1;
 					Class163.anInt2014 = i;
@@ -356,7 +326,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					Class218.aClass123_2566.sendPacket(127, node_sub13);
 					Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, -107, 1);
 				}
-				if ((i_6_ ^ 0xffffffff) == -18) {
+				if (i_6_ == 17) {
 					Node_Sub38_Sub28.anInt10403 = 2;
 					Node_Sub37.anInt7431 = 0;
 					Class163.anInt2014 = i;
@@ -373,7 +343,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					Class218.aClass123_2566.sendPacket(127, node_sub13);
 					Class223.method2104(0, interfaceHash, i_4_);
 				}
-				if ((i_6_ ^ 0xffffffff) == -24) {
+				if (i_6_ == 23) {
 					Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) itemId);
 					if (node_sub41 != null) {
 						Npc npc = node_sub41.aNpc7518;
@@ -397,7 +367,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 						Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 44), true, npc.scenePositionXQueue[0], 0, -2, i_2_ ^ ~0x5b, npc.getSize((byte) 50));
 					}
 				}
-				if ((i_6_ ^ 0xffffffff) == -21 || (i_6_ ^ 0xffffffff) == -1003) {
+				if (i_6_ == 20 || i_6_ == 1002) {
 					r_Sub1.method2364(-54, interfaceHash, i_4_, cachenode_sub13.aString9558, itemId);
 				}
 				if (i_6_ == 60) {
@@ -411,14 +381,14 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 					int routeType = (0x7d32b & (int) l) >> 14;
 					int rotation = ((int) l & 0x3b48d1) >> 20;
 					int objectId = 0x7fffffff & (int) (l >>> 32);
-					if (routeType != 10 && routeType != 11 && (routeType ^ 0xffffffff) != -23) {
+					if (routeType != 10 && routeType != 11 && routeType != 22) {
 						steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), routeType, true, 0, 0, 0, rotation, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs, (byte) -41);
 					} else {
 						ObjectDefinition objectdefinition = Class186.aClass112_2256
 								.method1145(objectId, 63);
 						int sizeX;
 						int sizeY;
-						if ((rotation ^ 0xffffffff) == -1 || rotation == 2) {
+						if (rotation == 0 || rotation == 2) {
 							sizeX = objectdefinition.anInt3055;
 							sizeY = objectdefinition.anInt2986;
 						} else {
@@ -461,6 +431,6 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3
 		if (i_11_ != -25900) {
 			anInt9014 = -33;
 		}
-        return !(i != 3 && (i ^ 0xffffffff) != -5);
+        return !(i != 3 && i != 4);
     }
 }

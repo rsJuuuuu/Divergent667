@@ -108,12 +108,12 @@ public class Index
 	}
 	
 	private final void method3508(int i, int i_3_) {
-		if (!aBoolean3819) {
-			anObjectArray3783[i] = Class135.method1588(aClass34_3804.method373(i, (byte) 55), 23386, false);
-		} else {
+		if (aBoolean3819) {
 			anObjectArray3783[i] = aClass34_3804.method373(i, (byte) 118);
+		} else {
+			anObjectArray3783[i] = Class135.method1588(aClass34_3804.method373(i, (byte) 55), 23386, false);
 		}
-		if (i_3_ != 0) {
+        if (i_3_ != 0) {
 			aBoolean3819 = true;
 		}
 		anInt3814++;
@@ -164,7 +164,7 @@ public class Index
 		int i_4_ = 0;
 		int i_5_ = 0;
 		for (int i_6_ = 0; anObjectArray3783.length > i_6_; i_6_++) {
-			if ((anArchive3797.anIntArray295[i_6_] ^ 0xffffffff) < -1) {
+			if (anArchive3797.anIntArray295[i_6_] > 0) {
 				i_4_ += 100;
 				i_5_ += method3509(false, i_6_);
 			}
@@ -192,17 +192,15 @@ public class Index
 			}
 		}
 		byte[] bs = Class320_Sub15.method3739((byte) -48, false, anObjectArrayArray3786[i_9_][i]);
-		if ((anInt3795 ^ 0xffffffff) != -2) {
-			if ((anInt3795 ^ 0xffffffff) == -3) {
-				anObjectArrayArray3786[i_9_] = null;
-			}
-		} else {
+		if (anInt3795 == 1) {
 			anObjectArrayArray3786[i_9_][i] = null;
-			if ((anArchive3797.anIntArray285[i_9_] ^ 0xffffffff) == -2) {
+			if (anArchive3797.anIntArray285[i_9_] == 1) {
 				anObjectArrayArray3786[i_9_] = null;
 			}
+		} else if (anInt3795 == 2) {
+			anObjectArrayArray3786[i_9_] = null;
 		}
-		return bs;
+        return bs;
 	}
 	
 	private final boolean method3513(int i, int i_11_, byte b) {
@@ -210,7 +208,7 @@ public class Index
 		if (!method3530(0)) {
 			return false;
 		}
-		if (i_11_ < 0 || (i ^ 0xffffffff) > -1 || i_11_ >= anArchive3797.anIntArray285.length || anArchive3797.anIntArray285[i_11_] <= i) {
+		if (i_11_ < 0 || i < 0 || i_11_ >= anArchive3797.anIntArray285.length || anArchive3797.anIntArray285[i_11_] <= i) {
 			if (Class144_Sub3.aBoolean6833) {
 				throw new IllegalArgumentException(String.valueOf(i_11_) + "," + i);
 			}
@@ -242,12 +240,12 @@ public class Index
 		boolean bool = true;
 		for (int i_16_ = 0; i_14_ > i_16_; i_16_++) {
 			int i_17_;
-			if (is_15_ != null) {
-				i_17_ = is_15_[i_16_];
-			} else {
+			if (is_15_ == null) {
 				i_17_ = i_16_;
+			} else {
+				i_17_ = is_15_[i_16_];
 			}
-			if (objects[i_17_] == null) {
+            if (objects[i_17_] == null) {
 				bool = false;
 				break;
 			}
@@ -256,7 +254,7 @@ public class Index
 			return true;
 		}
 		byte[] bs;
-		if (is == null || (is[0] ^ 0xffffffff) == -1 && (is[1] ^ 0xffffffff) == -1 && (is[2] ^ 0xffffffff) == -1 && (is[3] ^ 0xffffffff) == -1) {
+		if (is == null || is[0] == 0 && is[1] == 0 && is[2] == 0 && is[3] == 0) {
 			bs = Class320_Sub15.method3739((byte) 126, false, anObjectArray3783[i_13_]);
 		} else {
 			bs = Class320_Sub15.method3739((byte) 127, true, anObjectArray3783[i_13_]);
@@ -279,7 +277,56 @@ public class Index
 			} else {
 				objects[i_19_] = bs_18_;
 			}
-		} else if (anInt3795 != 2) {
+		} else if (anInt3795 == 2) {
+			int i_34_ = bs_18_.length;
+			int i_35_ = 0xff & bs_18_[--i_34_];
+			i_34_ -= i_35_ * (i_14_ * 4);
+			BufferedStream buffer = new BufferedStream(bs_18_);
+			int i_36_ = 0;
+			buffer.offset = i_34_;
+			int i_37_ = 0;
+			for (int i_38_ = 0; i_38_ < i_35_; i_38_++) {
+				int i_39_ = 0;
+				for (int i_40_ = 0; i_14_ > i_40_; i_40_++) {
+					i_39_ += buffer.readInt();
+					int i_41_;
+					if (is_15_ == null) {
+						i_41_ = i_40_;
+					} else {
+						i_41_ = is_15_[i_40_];
+					}
+                    if (i_41_ == i_12_) {
+						i_37_ = i_41_;
+						i_36_ += i_39_;
+					}
+				}
+			}
+			if (i_36_ == 0) {
+				return true;
+			}
+			byte[] bs_42_ = new byte[i_36_];
+			buffer.offset = i_34_;
+			i_36_ = 0;
+			int i_43_ = 0;
+			for (int i_44_ = 0; i_35_ > i_44_; i_44_++) {
+				int i_45_ = 0;
+				for (int i_46_ = 0; i_14_ > i_46_; i_46_++) {
+					i_45_ += buffer.readInt();
+					int i_47_;
+					if (is_15_ == null) {
+						i_47_ = i_46_;
+					} else {
+						i_47_ = is_15_[i_46_];
+					}
+                    if (i_12_ == i_47_) {
+						Class311.method3608(bs_18_, i_43_, bs_42_, i_36_, i_45_);
+						i_36_ += i_45_;
+					}
+					i_43_ += i_45_;
+				}
+			}
+			objects[i_37_] = bs_42_;
+		} else {
 			int i_20_ = bs_18_.length;
 			int i_21_ = 0xff & bs_18_[--i_20_];
 			i_20_ -= i_21_ * (i_14_ * 4);
@@ -288,13 +335,13 @@ public class Index
 			int[] is_22_ = new int[i_14_];
 			for (int i_23_ = 0; i_21_ > i_23_; i_23_++) {
 				int i_24_ = 0;
-				for (int i_25_ = 0; (i_25_ ^ 0xffffffff) > (i_14_ ^ 0xffffffff); i_25_++) {
+				for (int i_25_ = 0; i_14_ > i_25_; i_25_++) {
 					i_24_ += buffer.readInt();
 					is_22_[i_25_] += i_24_;
 				}
 			}
 			byte[][] bs_26_ = new byte[i_14_][];
-			for (int i_27_ = 0; (i_27_ ^ 0xffffffff) > (i_14_ ^ 0xffffffff); i_27_++) {
+			for (int i_27_ = 0; i_14_ > i_27_; i_27_++) {
 				bs_26_[i_27_] = new byte[is_22_[i_27_]];
 				is_22_[i_27_] = 0;
 			}
@@ -316,63 +363,14 @@ public class Index
 				} else {
 					i_33_ = is_15_[i_32_];
 				}
-				if ((anInt3795 ^ 0xffffffff) == -1) {
+				if (anInt3795 == 0) {
 					objects[i_33_] = Class135.method1588(bs_26_[i_32_], 23386, false);
 				} else {
 					objects[i_33_] = bs_26_[i_32_];
 				}
 			}
-		} else {
-			int i_34_ = bs_18_.length;
-			int i_35_ = 0xff & bs_18_[--i_34_];
-			i_34_ -= i_35_ * (i_14_ * 4);
-			BufferedStream buffer = new BufferedStream(bs_18_);
-			int i_36_ = 0;
-			buffer.offset = i_34_;
-			int i_37_ = 0;
-			for (int i_38_ = 0; i_38_ < i_35_; i_38_++) {
-				int i_39_ = 0;
-				for (int i_40_ = 0; (i_40_ ^ 0xffffffff) > (i_14_ ^ 0xffffffff); i_40_++) {
-					i_39_ += buffer.readInt();
-					int i_41_;
-					if (is_15_ != null) {
-						i_41_ = is_15_[i_40_];
-					} else {
-						i_41_ = i_40_;
-					}
-					if ((i_12_ ^ 0xffffffff) == (i_41_ ^ 0xffffffff)) {
-						i_37_ = i_41_;
-						i_36_ += i_39_;
-					}
-				}
-			}
-			if (i_36_ == 0) {
-				return true;
-			}
-			byte[] bs_42_ = new byte[i_36_];
-			buffer.offset = i_34_;
-			i_36_ = 0;
-			int i_43_ = 0;
-			for (int i_44_ = 0; (i_44_ ^ 0xffffffff) > (i_35_ ^ 0xffffffff); i_44_++) {
-				int i_45_ = 0;
-				for (int i_46_ = 0; (i_46_ ^ 0xffffffff) > (i_14_ ^ 0xffffffff); i_46_++) {
-					i_45_ += buffer.readInt();
-					int i_47_;
-					if (is_15_ != null) {
-						i_47_ = is_15_[i_46_];
-					} else {
-						i_47_ = i_46_;
-					}
-					if ((i_47_ ^ 0xffffffff) == (i_12_ ^ 0xffffffff)) {
-						Class311.method3608(bs_18_, i_43_, bs_42_, i_36_, i_45_);
-						i_36_ += i_45_;
-					}
-					i_43_ += i_45_;
-				}
-			}
-			objects[i_37_] = bs_42_;
 		}
-		return true;
+        return true;
 	}
 	
 	final boolean method3515(int i, int i_48_, int i_49_) {
@@ -400,7 +398,7 @@ public class Index
 		}
 		string = string.toLowerCase();
 		int i_50_ = anArchive3797.aClass75_301.method766(-1, Class336_Sub1.method3887(false, string));
-        return (i_50_ ^ 0xffffffff) <= -1;
+        return i_50_ >= 0;
     }
 	
 	private final void method3517(int i, int i_51_) {
@@ -416,7 +414,7 @@ public class Index
 		if (!method3530(0)) {
 			return null;
 		}
-		if ((anArchive3797.anIntArray285.length ^ 0xffffffff) == -2) {
+		if (anArchive3797.anIntArray285.length == 1) {
 			return method3524(false, i, 0);
 		}
 		if (!method3525((byte) -86, i)) {
@@ -467,7 +465,7 @@ public class Index
 	
 	final void method3521(byte b) {
 		if (anObjectArrayArray3786 != null) {
-			for (int i = 0; (anObjectArrayArray3786.length ^ 0xffffffff) < (i ^ 0xffffffff); i++)
+			for (int i = 0; i < anObjectArrayArray3786.length; i++)
 				anObjectArrayArray3786[i] = null;
 		}
 		if (b != -18) {
@@ -495,7 +493,7 @@ public class Index
 			method3527(null, 1);
 		}
 		if (anObjectArray3783 != null) {
-			for (int i = 0; (anObjectArray3783.length ^ 0xffffffff) < (i ^ 0xffffffff); i++)
+			for (int i = 0; i < anObjectArray3783.length; i++)
 				anObjectArray3783[i] = null;
 		}
 	}
@@ -513,7 +511,7 @@ public class Index
 		if (!method3530(0)) {
 			return false;
 		}
-		if ((i ^ 0xffffffff) > -1 || i >= anArchive3797.anIntArray285.length || (anArchive3797.anIntArray285[i] ^ 0xffffffff) == -1) {
+		if (i < 0 || i >= anArchive3797.anIntArray285.length || anArchive3797.anIntArray285[i] == 0) {
 			if (!Class144_Sub3.aBoolean6833) {
 				return false;
 			}
@@ -615,7 +613,7 @@ public class Index
 		int[] is = anArchive3797.anIntArrayArray290[i];
 		if (is == null) {
 			is = new int[anArchive3797.anIntArray295[i]];
-			for (int i_62_ = 0; (i_62_ ^ 0xffffffff) > (is.length ^ 0xffffffff); i_62_++)
+			for (int i_62_ = 0; is.length > i_62_; i_62_++)
 				is[i_62_] = i_62_;
 		}
 		if (i_61_ != 0) {
@@ -653,12 +651,12 @@ public class Index
 		Dimension dimension = canvas.getSize();
 		if (bool == true) {
 			Node_Sub15_Sub8.method2575(dimension.height, dimension.width, 110);
-			if (Class320_Sub20.anInt8397 != 1) {
-				Class44.aGraphicsToolkit668.a(canvas, Animable_Sub1_Sub2.anInt10668, Class148.anInt1825);
-			} else {
+			if (Class320_Sub20.anInt8397 == 1) {
 				Class44.aGraphicsToolkit668.a(canvas, CacheNode_Sub15.anInt9589, Class303.anInt3831);
+			} else {
+				Class44.aGraphicsToolkit668.a(canvas, Animable_Sub1_Sub2.anInt10668, Class148.anInt1825);
 			}
-		}
+        }
 	}
 	
 	final boolean method3536(int i, int i_66_) {
@@ -688,7 +686,7 @@ public class Index
 	}
 	
 	Index(Class34 class34, boolean bool, int i) {
-		if (i < 0 || (i ^ 0xffffffff) < -3) {
+		if (i < 0 || i > 2) {
 			throw new IllegalArgumentException("js5: Invalid value " + i + " supplied for discardunpacked");
 		}
 		aClass34_3804 = class34;

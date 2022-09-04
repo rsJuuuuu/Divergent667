@@ -19,7 +19,7 @@ abstract class CacheNode_Sub14 extends CacheNode
 	static final void method2348(int i, int i_1_, int i_2_, ObjectDefinition objectdefinition, int i_3_) {
 		anInt9577++;
 		for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(65280); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620(16776960)) {
-			if (node_sub47.anInt7560 == i_2_ && node_sub47.anInt7569 == i << 9 && (node_sub47.anInt7563 ^ 0xffffffff) == (i_1_ << 9 ^ 0xffffffff) && (objectdefinition.objectId ^ 0xffffffff) == (node_sub47.anObjectDefinition7562.objectId ^ 0xffffffff)) {
+			if (node_sub47.anInt7560 == i_2_ && node_sub47.anInt7569 == i << 9 && i_1_ << 9 == node_sub47.anInt7563 && node_sub47.anObjectDefinition7562.objectId == objectdefinition.objectId) {
 				if (node_sub47.aNode_Sub9_Sub2_7568 != null) {
 					Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
 					node_sub47.aNode_Sub9_Sub2_7568 = null;
@@ -39,7 +39,7 @@ abstract class CacheNode_Sub14 extends CacheNode
 		if (b != 5) {
 			anIntArray9575 = null;
 		}
-		if ((Class290_Sub4.anInt8100 ^ 0xffffffff) <= -1) {
+		if (Class290_Sub4.anInt8100 >= 0) {
 			long l = Class313.method3650(false);
 			Class290_Sub4.anInt8100 -= -Class181.aLong2157 + l;
 			if (Class290_Sub4.anInt8100 > 0) {
@@ -60,15 +60,15 @@ abstract class CacheNode_Sub14 extends CacheNode
 					Class229.aClass270_2733 = Class229.aGraphicsToolkit2732.a(Class44.aClass270_669, Class20_Sub1.aClass343_5509.aClass270_4240, f_6_, Class229.aClass270_2733);
 				}
 				if (Class20_Sub1.aClass343_5509.aClass119_4238 != Class44.aClass119_670) {
-					if (Class44.aClass119_670 != null) {
-						Class245.aClass119_3085 = Class44.aClass119_670;
-						if (Class245.aClass119_3085 != null) {
-							Class245.aClass119_3085.method1217(255, i_5_, (byte) 85);
-						}
-					} else {
+					if (Class44.aClass119_670 == null) {
 						Class245.aClass119_3085 = Class20_Sub1.aClass343_5509.aClass119_4238;
 						if (Class245.aClass119_3085 != null) {
 							Class245.aClass119_3085.method1217(0, i_5_, (byte) -127);
+						}
+					} else {
+						Class245.aClass119_3085 = Class44.aClass119_670;
+						if (Class245.aClass119_3085 != null) {
+							Class245.aClass119_3085.method1217(255, i_5_, (byte) 85);
 						}
 					}
 				}

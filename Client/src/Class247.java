@@ -58,14 +58,12 @@ public class Class247
 			if (aClass382_3109 != null) {
 				aCacheNode_Sub17_3137 = new CacheNode_Sub17(aGLToolkit3121, 6402, anInt3114, anInt3113, aGLToolkit3121.anInt6599);
 			}
-			if (!aBoolean3140) {
-				if (aCacheNode_Sub17_3137 == null) {
-					aCacheNode_Sub17_3137 = new CacheNode_Sub17(aGLToolkit3121, 6402, anInt3114, anInt3113);
-				}
-			} else {
+			if (aBoolean3140) {
 				aClass169_Sub2_3135 = new Class169_Sub2(aGLToolkit3121, 34037, 6402, anInt3114, anInt3113);
+			} else if (aCacheNode_Sub17_3137 == null) {
+				aCacheNode_Sub17_3137 = new CacheNode_Sub17(aGLToolkit3121, 6402, anInt3114, anInt3113);
 			}
-			aBoolean3133 = true;
+            aBoolean3133 = true;
 			aBoolean3131 = true;
 			aBoolean3139 = false;
 		}
@@ -96,13 +94,28 @@ public class Class247
 			aBoolean3134 = false;
 		}
 		if (aBoolean3131) {
-			if (aClass382_3109 != null) {
+			if (aClass382_3109 == null) {
+				aGLToolkit3121.method1410(15, aClass382_3128);
+				aClass382_3128.method4175(0, -25845);
+				aClass382_3128.method4175(1, -25845);
+				aClass382_3128.method4175(8, b ^ ~0x64a5);
+				aClass382_3128.method4181(18264, aClass169_Sub2Array3132[0], 0);
+				if (anInt3136 > 1) {
+					aClass382_3128.method4181(18264, aClass169_Sub2Array3132[1], 1);
+				}
+				if (aBoolean3140) {
+					aClass382_3128.method4181(18264, aClass169_Sub2_3135, 8);
+				} else {
+					aClass382_3128.method4178(aCacheNode_Sub17_3137, 8, 1);
+				}
+				aGLToolkit3121.method1436(aClass382_3128, (byte) 13);
+			} else {
 				aGLToolkit3121.method1410(15, aClass382_3128);
 				aClass382_3128.method4175(0, -25845);
 				aClass382_3128.method4175(1, -25845);
 				aClass382_3128.method4175(8, -25845);
 				aClass382_3128.method4181(18264, aClass169_Sub2Array3132[0], 0);
-				if ((anInt3136 ^ 0xffffffff) < -2) {
+				if (anInt3136 > 1) {
 					aClass382_3128.method4181(b + 18183, aClass169_Sub2Array3132[1], 1);
 				}
 				if (aBoolean3140) {
@@ -115,23 +128,8 @@ public class Class247
 				aClass382_3109.method4178(aCacheNode_Sub17_3138, 0, b + -80);
 				aClass382_3109.method4178(aCacheNode_Sub17_3137, 8, 1);
 				aGLToolkit3121.method1436(aClass382_3109, (byte) 82);
-			} else {
-				aGLToolkit3121.method1410(15, aClass382_3128);
-				aClass382_3128.method4175(0, -25845);
-				aClass382_3128.method4175(1, -25845);
-				aClass382_3128.method4175(8, b ^ ~0x64a5);
-				aClass382_3128.method4181(18264, aClass169_Sub2Array3132[0], 0);
-				if ((anInt3136 ^ 0xffffffff) < -2) {
-					aClass382_3128.method4181(18264, aClass169_Sub2Array3132[1], 1);
-				}
-				if (aBoolean3140) {
-					aClass382_3128.method4181(18264, aClass169_Sub2_3135, 8);
-				} else {
-					aClass382_3128.method4178(aCacheNode_Sub17_3137, 8, 1);
-				}
-				aGLToolkit3121.method1436(aClass382_3128, (byte) 13);
 			}
-			aBoolean3131 = false;
+            aBoolean3131 = false;
 			aBoolean3133 = true;
 		}
 		if (aBoolean3133) {
@@ -171,9 +169,9 @@ public class Class247
 			for (Node_Sub23 node_sub23_1_ = (Node_Sub23) aClass312_3112.method3613(65280); node_sub23_1_ != null; node_sub23_1_ = node_sub23) {
 				node_sub23 = (Node_Sub23) aClass312_3112.method3620(16776960);
 				int i_2_ = node_sub23_1_.method2623(1);
-				for (int i_3_ = 0; (i_2_ ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+				for (int i_3_ = 0; i_3_ < i_2_; i_3_++) {
 					node_sub23_1_.method2629(aClass169_Sub2_3135, aClass169_Sub2Array3132[i], 0, i_3_);
-					if (node_sub23 != null || (-1 + i_2_ ^ 0xffffffff) != (i_3_ ^ 0xffffffff)) {
+					if (node_sub23 != null || i_3_ != -1 + i_2_) {
 						aClass382_3128.method4183(i_0_, (byte) 7);
 						OpenGL.glBegin(7);
 						OpenGL.glTexCoord2f(0.0F, (float) anInt3113);
@@ -223,7 +221,7 @@ public class Class247
 				aClass312_3112.method3625((byte) -54, node_sub23);
 				method3078(-17454);
 				if (method3075((byte) 81)) {
-					if ((anInt3114 ^ 0xffffffff) != 0 && anInt3113 != -1) {
+					if (anInt3114 != -1 && anInt3113 != -1) {
 						node_sub23.method2632(anInt3114, 0, anInt3113);
 					}
 					node_sub23.aBoolean7205 = true;
@@ -255,21 +253,19 @@ public class Class247
 			bool |= node_sub23.method2631((byte) -100);
 		}
 		int i_7_;
-		if ((i_4_ ^ 0xffffffff) != -3) {
-			if (i_4_ == 1) {
-				i_7_ = 34842;
-			} else {
-				i_7_ = 6408;
-			}
-		} else {
+		if (i_4_ == 2) {
 			i_7_ = 34836;
+		} else if (i_4_ == 1) {
+			i_7_ = 34842;
+		} else {
+			i_7_ = 6408;
 		}
-		if ((i_7_ ^ 0xffffffff) != (anInt3142 ^ 0xffffffff)) {
+        if (anInt3142 != i_7_) {
 			anInt3142 = i_7_;
 			aBoolean3134 = true;
 		}
-		int i_8_ = (anInt3136 ^ 0xffffffff) >= -3 ? anInt3136 : 2;
-		int i_9_ = (i_5_ ^ 0xffffffff) >= -3 ? i_5_ : 2;
+		int i_8_ = anInt3136 <= 2 ? anInt3136 : 2;
+		int i_9_ = i_5_ <= 2 ? i_5_ : 2;
 		anInt3136 = i_5_;
 		if (aBoolean3140 == !bool) {
 			aBoolean3139 = true;
@@ -310,7 +306,7 @@ public class Class247
 		if (aClass382_3129 == null || aClass312_3112.method3616(0)) {
 			return false;
 		}
-		if (i_10_ != anInt3114 || (i_12_ ^ 0xffffffff) != (anInt3113 ^ 0xffffffff)) {
+		if (i_10_ != anInt3114 || anInt3113 != i_12_) {
 			anInt3114 = i_10_;
 			anInt3113 = i_12_;
 			for (Node node = aClass312_3112.method3613(65280); aClass312_3112.aNode3958 != node; node = node.aNode2800)
@@ -373,7 +369,7 @@ public class Class247
 		aGLToolkit3121 = gltoolkit;
 		if (aGLToolkit3121.aBoolean6719 && aGLToolkit3121.aBoolean6649) {
 			aClass382_3129 = aClass382_3128 = new Class382(aGLToolkit3121);
-			if ((aGLToolkit3121.anInt6599 ^ 0xffffffff) < -2 && aGLToolkit3121.aBoolean6662 && aGLToolkit3121.aBoolean6735) {
+			if (aGLToolkit3121.anInt6599 > 1 && aGLToolkit3121.aBoolean6662 && aGLToolkit3121.aBoolean6735) {
 				aClass382_3129 = aClass382_3109 = new Class382(aGLToolkit3121);
 			}
 		}

@@ -152,20 +152,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								int i_55_ = anIntArray10570[i_6_++];
 								int i_56_ = (i_55_ >>> 24) * (i_2_ >>> 24) >> 8;
 								int i_57_ = 256 - i_56_;
-								if (i_56_ != 255) {
+								if (i_56_ == 255) {
+									int i_62_ = (i_55_ & 0xff0000) * i_50_ & ~0xffffff;
+									int i_63_ = (i_55_ & 0xff00) * i_51_ & 0xff0000;
+									int i_64_ = (i_55_ & 0xff) * i_52_ & 0xff00;
+									is[i_5_++] = (i_62_ | i_63_ | i_64_) >>> 8;
+								} else {
 									int i_58_ = (i_55_ & 0xff0000) * i_50_ & ~0xffffff;
 									int i_59_ = (i_55_ & 0xff00) * i_51_ & 0xff0000;
 									int i_60_ = (i_55_ & 0xff) * i_52_ & 0xff00;
 									i_55_ = (i_58_ | i_59_ | i_60_) >>> 8;
 									int i_61_ = is[i_5_];
 									is[i_5_++] = ((i_55_ & 0xff00ff) * i_56_ + (i_61_ & 0xff00ff) * i_57_ & ~0xff00ff) + ((i_55_ & 0xff00) * i_56_ + (i_61_ & 0xff00) * i_57_ & 0xff0000) >> 8;
-								} else {
-									int i_62_ = (i_55_ & 0xff0000) * i_50_ & ~0xffffff;
-									int i_63_ = (i_55_ & 0xff00) * i_51_ & 0xff0000;
-									int i_64_ = (i_55_ & 0xff) * i_52_ & 0xff00;
-									is[i_5_++] = (i_62_ | i_63_ | i_64_) >>> 8;
 								}
-							}
+                            }
 							i_5_ += i_9_;
 							i_6_ += i_10_;
 						}
@@ -224,16 +224,16 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 					for (int i_83_ = -i_7_; i_83_ < 0; i_83_++) {
 						for (int i_84_ = -i_8_; i_84_ < 0; i_84_++) {
 							int i_85_ = anIntArray10570[i_6_++];
-							if (i_85_ != 0) {
+							if (i_85_ == 0) {
+								i_5_++;
+							} else {
 								int i_86_ = is[i_5_];
 								int i_87_ = i_85_ + i_86_;
 								int i_88_ = (i_85_ & 0xff00ff) + (i_86_ & 0xff00ff);
 								i_86_ = (i_88_ & 0x1000100) + (i_87_ - i_88_ & 0x10000);
 								is[i_5_++] = i_87_ - i_86_ | i_86_ - (i_86_ >>> 8);
-							} else {
-								i_5_++;
 							}
-						}
+                        }
 						i_5_ += i_9_;
 						i_6_ += i_10_;
 					}
@@ -246,7 +246,9 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 					for (int i_92_ = -i_7_; i_92_ < 0; i_92_++) {
 						for (int i_93_ = -i_8_; i_93_ < 0; i_93_++) {
 							int i_94_ = anIntArray10570[i_6_++];
-							if (i_94_ != 0) {
+							if (i_94_ == 0) {
+								i_5_++;
+							} else {
 								int i_95_ = (i_94_ & 0xff0000) * i_89_ & ~0xffffff;
 								int i_96_ = (i_94_ & 0xff00) * i_90_ & 0xff0000;
 								int i_97_ = (i_94_ & 0xff) * i_91_ & 0xff00;
@@ -256,10 +258,8 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								int i_100_ = (i_94_ & 0xff00ff) + (i_98_ & 0xff00ff);
 								i_98_ = (i_100_ & 0x1000100) + (i_99_ - i_100_ & 0x10000);
 								is[i_5_++] = i_99_ - i_98_ | i_98_ - (i_98_ >>> 8);
-							} else {
-								i_5_++;
 							}
-						}
+                        }
 						i_5_ += i_9_;
 						i_6_ += i_10_;
 					}
@@ -293,7 +293,9 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 					for (int i_111_ = -i_7_; i_111_ < 0; i_111_++) {
 						for (int i_112_ = -i_8_; i_112_ < 0; i_112_++) {
 							int i_113_ = anIntArray10570[i_6_++];
-							if (i_113_ != 0) {
+							if (i_113_ == 0) {
+								i_5_++;
+							} else {
 								i_109_ = (i_113_ & 0xff00ff) * i_107_ & ~0xff00ff;
 								i_110_ = (i_113_ & 0xff00) * i_107_ & 0xff0000;
 								i_113_ = ((i_109_ | i_110_) >>> 8) + i_2_;
@@ -302,10 +304,8 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								int i_116_ = (i_113_ & 0xff00ff) + (i_114_ & 0xff00ff);
 								i_114_ = (i_116_ & 0x1000100) + (i_115_ - i_116_ & 0x10000);
 								is[i_5_++] = i_115_ - i_114_ | i_114_ - (i_114_ >>> 8);
-							} else {
-								i_5_++;
 							}
-						}
+                        }
 						i_5_ += i_9_;
 						i_6_ += i_10_;
 					}
@@ -372,20 +372,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 									if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 										int i_147_ = is_125_[i_124_];
 										is_125_[i_124_] = ((i_144_ & 0xff00ff) * i_145_ + (i_147_ & 0xff00ff) * i_146_ & ~0xff00ff) + ((i_144_ & 0xff00) * i_145_ + (i_147_ & 0xff00) * i_146_ & 0xff0000) >> 8;
-									} else if (i_145_ != 255) {
+									} else if (i_145_ == 255) {
+										int i_152_ = (i_144_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+										int i_153_ = (i_144_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+										int i_154_ = (i_144_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+										is_125_[i_124_] = (i_152_ | i_153_ | i_154_) >>> 8;
+									} else {
 										int i_148_ = (i_144_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 										int i_149_ = (i_144_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 										int i_150_ = (i_144_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 										i_144_ = (i_148_ | i_149_ | i_150_) >>> 8;
 										int i_151_ = is_125_[i_124_];
 										is_125_[i_124_] = ((i_144_ & 0xff00ff) * i_145_ + (i_151_ & 0xff00ff) * i_146_ & ~0xff00ff) + ((i_144_ & 0xff00) * i_145_ + (i_151_ & 0xff00) * i_146_ & 0xff0000) >> 8;
-									} else {
-										int i_152_ = (i_144_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-										int i_153_ = (i_144_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-										int i_154_ = (i_144_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-										is_125_[i_124_] = (i_152_ | i_153_ | i_154_) >>> 8;
 									}
-								} else if (i_126_ == 3) {
+                                } else if (i_126_ == 3) {
 									int i_155_ = anIntArray10570[i_123_];
 									int i_156_ = GLSprite_Sub2.anInt8904;
 									int i_157_ = i_155_ + i_156_;
@@ -524,20 +524,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 									if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 										int i_220_ = is_198_[i_197_];
 										is_198_[i_197_] = ((i_217_ & 0xff00ff) * i_218_ + (i_220_ & 0xff00ff) * i_219_ & ~0xff00ff) + ((i_217_ & 0xff00) * i_218_ + (i_220_ & 0xff00) * i_219_ & 0xff0000) >> 8;
-									} else if (i_218_ != 255) {
+									} else if (i_218_ == 255) {
+										int i_225_ = (i_217_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+										int i_226_ = (i_217_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+										int i_227_ = (i_217_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+										is_198_[i_197_] = (i_225_ | i_226_ | i_227_) >>> 8;
+									} else {
 										int i_221_ = (i_217_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 										int i_222_ = (i_217_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 										int i_223_ = (i_217_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 										i_217_ = (i_221_ | i_222_ | i_223_) >>> 8;
 										int i_224_ = is_198_[i_197_];
 										is_198_[i_197_] = ((i_217_ & 0xff00ff) * i_218_ + (i_224_ & 0xff00ff) * i_219_ & ~0xff00ff) + ((i_217_ & 0xff00) * i_218_ + (i_224_ & 0xff00) * i_219_ & 0xff0000) >> 8;
-									} else {
-										int i_225_ = (i_217_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-										int i_226_ = (i_217_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-										int i_227_ = (i_217_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-										is_198_[i_197_] = (i_225_ | i_226_ | i_227_) >>> 8;
 									}
-								} else if (i_199_ == 3) {
+                                } else if (i_199_ == 3) {
 									int i_228_ = anIntArray10570[i_196_];
 									int i_229_ = GLSprite_Sub2.anInt8904;
 									int i_230_ = i_228_ + i_229_;
@@ -678,20 +678,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 									if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 										int i_294_ = is_272_[i_271_];
 										is_272_[i_271_] = ((i_291_ & 0xff00ff) * i_292_ + (i_294_ & 0xff00ff) * i_293_ & ~0xff00ff) + ((i_291_ & 0xff00) * i_292_ + (i_294_ & 0xff00) * i_293_ & 0xff0000) >> 8;
-									} else if (i_292_ != 255) {
+									} else if (i_292_ == 255) {
+										int i_299_ = (i_291_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+										int i_300_ = (i_291_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+										int i_301_ = (i_291_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+										is_272_[i_271_] = (i_299_ | i_300_ | i_301_) >>> 8;
+									} else {
 										int i_295_ = (i_291_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 										int i_296_ = (i_291_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 										int i_297_ = (i_291_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 										i_291_ = (i_295_ | i_296_ | i_297_) >>> 8;
 										int i_298_ = is_272_[i_271_];
 										is_272_[i_271_] = ((i_291_ & 0xff00ff) * i_292_ + (i_298_ & 0xff00ff) * i_293_ & ~0xff00ff) + ((i_291_ & 0xff00) * i_292_ + (i_298_ & 0xff00) * i_293_ & 0xff0000) >> 8;
-									} else {
-										int i_299_ = (i_291_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-										int i_300_ = (i_291_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-										int i_301_ = (i_291_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-										is_272_[i_271_] = (i_299_ | i_300_ | i_301_) >>> 8;
 									}
-								} else if (i_273_ == 3) {
+                                } else if (i_273_ == 3) {
 									int i_302_ = anIntArray10570[i_270_];
 									int i_303_ = GLSprite_Sub2.anInt8904;
 									int i_304_ = i_302_ + i_303_;
@@ -834,20 +834,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 									if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 										int i_367_ = is_345_[i_344_];
 										is_345_[i_344_] = ((i_364_ & 0xff00ff) * i_365_ + (i_367_ & 0xff00ff) * i_366_ & ~0xff00ff) + ((i_364_ & 0xff00) * i_365_ + (i_367_ & 0xff00) * i_366_ & 0xff0000) >> 8;
-									} else if (i_365_ != 255) {
+									} else if (i_365_ == 255) {
+										int i_372_ = (i_364_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+										int i_373_ = (i_364_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+										int i_374_ = (i_364_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+										is_345_[i_344_] = (i_372_ | i_373_ | i_374_) >>> 8;
+									} else {
 										int i_368_ = (i_364_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 										int i_369_ = (i_364_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 										int i_370_ = (i_364_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 										i_364_ = (i_368_ | i_369_ | i_370_) >>> 8;
 										int i_371_ = is_345_[i_344_];
 										is_345_[i_344_] = ((i_364_ & 0xff00ff) * i_365_ + (i_371_ & 0xff00ff) * i_366_ & ~0xff00ff) + ((i_364_ & 0xff00) * i_365_ + (i_371_ & 0xff00) * i_366_ & 0xff0000) >> 8;
-									} else {
-										int i_372_ = (i_364_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-										int i_373_ = (i_364_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-										int i_374_ = (i_364_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-										is_345_[i_344_] = (i_372_ | i_373_ | i_374_) >>> 8;
 									}
-								} else if (i_346_ == 3) {
+                                } else if (i_346_ == 3) {
 									int i_375_ = anIntArray10570[i_343_];
 									int i_376_ = GLSprite_Sub2.anInt8904;
 									int i_377_ = i_375_ + i_376_;
@@ -998,20 +998,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 									int i_440_ = is_418_[i_417_];
 									is_418_[i_417_] = ((i_437_ & 0xff00ff) * i_438_ + (i_440_ & 0xff00ff) * i_439_ & ~0xff00ff) + ((i_437_ & 0xff00) * i_438_ + (i_440_ & 0xff00) * i_439_ & 0xff0000) >> 8;
-								} else if (i_438_ != 255) {
+								} else if (i_438_ == 255) {
+									int i_445_ = (i_437_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+									int i_446_ = (i_437_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+									int i_447_ = (i_437_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+									is_418_[i_417_] = (i_445_ | i_446_ | i_447_) >>> 8;
+								} else {
 									int i_441_ = (i_437_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 									int i_442_ = (i_437_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 									int i_443_ = (i_437_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 									i_437_ = (i_441_ | i_442_ | i_443_) >>> 8;
 									int i_444_ = is_418_[i_417_];
 									is_418_[i_417_] = ((i_437_ & 0xff00ff) * i_438_ + (i_444_ & 0xff00ff) * i_439_ & ~0xff00ff) + ((i_437_ & 0xff00) * i_438_ + (i_444_ & 0xff00) * i_439_ & 0xff0000) >> 8;
-								} else {
-									int i_445_ = (i_437_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-									int i_446_ = (i_437_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-									int i_447_ = (i_437_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-									is_418_[i_417_] = (i_445_ | i_446_ | i_447_) >>> 8;
 								}
-							} else if (i_419_ == 3) {
+                            } else if (i_419_ == 3) {
 								int i_448_ = anIntArray10570[i_416_];
 								int i_449_ = GLSprite_Sub2.anInt8904;
 								int i_450_ = i_448_ + i_449_;
@@ -1163,20 +1163,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 									int i_513_ = is_491_[i_490_];
 									is_491_[i_490_] = ((i_510_ & 0xff00ff) * i_511_ + (i_513_ & 0xff00ff) * i_512_ & ~0xff00ff) + ((i_510_ & 0xff00) * i_511_ + (i_513_ & 0xff00) * i_512_ & 0xff0000) >> 8;
-								} else if (i_511_ != 255) {
+								} else if (i_511_ == 255) {
+									int i_518_ = (i_510_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+									int i_519_ = (i_510_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+									int i_520_ = (i_510_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+									is_491_[i_490_] = (i_518_ | i_519_ | i_520_) >>> 8;
+								} else {
 									int i_514_ = (i_510_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 									int i_515_ = (i_510_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 									int i_516_ = (i_510_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 									i_510_ = (i_514_ | i_515_ | i_516_) >>> 8;
 									int i_517_ = is_491_[i_490_];
 									is_491_[i_490_] = ((i_510_ & 0xff00ff) * i_511_ + (i_517_ & 0xff00ff) * i_512_ & ~0xff00ff) + ((i_510_ & 0xff00) * i_511_ + (i_517_ & 0xff00) * i_512_ & 0xff0000) >> 8;
-								} else {
-									int i_518_ = (i_510_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-									int i_519_ = (i_510_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-									int i_520_ = (i_510_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-									is_491_[i_490_] = (i_518_ | i_519_ | i_520_) >>> 8;
 								}
-							} else if (i_492_ == 3) {
+                            } else if (i_492_ == 3) {
 								int i_521_ = anIntArray10570[i_489_];
 								int i_522_ = GLSprite_Sub2.anInt8904;
 								int i_523_ = i_521_ + i_522_;
@@ -1319,20 +1319,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 									int i_587_ = is_565_[i_564_];
 									is_565_[i_564_] = ((i_584_ & 0xff00ff) * i_585_ + (i_587_ & 0xff00ff) * i_586_ & ~0xff00ff) + ((i_584_ & 0xff00) * i_585_ + (i_587_ & 0xff00) * i_586_ & 0xff0000) >> 8;
-								} else if (i_585_ != 255) {
+								} else if (i_585_ == 255) {
+									int i_592_ = (i_584_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+									int i_593_ = (i_584_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+									int i_594_ = (i_584_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+									is_565_[i_564_] = (i_592_ | i_593_ | i_594_) >>> 8;
+								} else {
 									int i_588_ = (i_584_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 									int i_589_ = (i_584_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 									int i_590_ = (i_584_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 									i_584_ = (i_588_ | i_589_ | i_590_) >>> 8;
 									int i_591_ = is_565_[i_564_];
 									is_565_[i_564_] = ((i_584_ & 0xff00ff) * i_585_ + (i_591_ & 0xff00ff) * i_586_ & ~0xff00ff) + ((i_584_ & 0xff00) * i_585_ + (i_591_ & 0xff00) * i_586_ & 0xff0000) >> 8;
-								} else {
-									int i_592_ = (i_584_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-									int i_593_ = (i_584_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-									int i_594_ = (i_584_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-									is_565_[i_564_] = (i_592_ | i_593_ | i_594_) >>> 8;
 								}
-							} else if (i_566_ == 3) {
+                            } else if (i_566_ == 3) {
 								int i_595_ = anIntArray10570[i_563_];
 								int i_596_ = GLSprite_Sub2.anInt8904;
 								int i_597_ = i_595_ + i_596_;
@@ -1483,20 +1483,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 							if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 								int i_661_ = is_639_[i_638_];
 								is_639_[i_638_] = ((i_658_ & 0xff00ff) * i_659_ + (i_661_ & 0xff00ff) * i_660_ & ~0xff00ff) + ((i_658_ & 0xff00) * i_659_ + (i_661_ & 0xff00) * i_660_ & 0xff0000) >> 8;
-							} else if (i_659_ != 255) {
+							} else if (i_659_ == 255) {
+								int i_666_ = (i_658_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+								int i_667_ = (i_658_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+								int i_668_ = (i_658_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+								is_639_[i_638_] = (i_666_ | i_667_ | i_668_) >>> 8;
+							} else {
 								int i_662_ = (i_658_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 								int i_663_ = (i_658_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 								int i_664_ = (i_658_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 								i_658_ = (i_662_ | i_663_ | i_664_) >>> 8;
 								int i_665_ = is_639_[i_638_];
 								is_639_[i_638_] = ((i_658_ & 0xff00ff) * i_659_ + (i_665_ & 0xff00ff) * i_660_ & ~0xff00ff) + ((i_658_ & 0xff00) * i_659_ + (i_665_ & 0xff00) * i_660_ & 0xff0000) >> 8;
-							} else {
-								int i_666_ = (i_658_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-								int i_667_ = (i_658_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-								int i_668_ = (i_658_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-								is_639_[i_638_] = (i_666_ | i_667_ | i_668_) >>> 8;
 							}
-						} else if (i_640_ == 3) {
+                        } else if (i_640_ == 3) {
 							int i_669_ = anIntArray10570[i_637_];
 							int i_670_ = GLSprite_Sub2.anInt8904;
 							int i_671_ = i_669_ + i_670_;
@@ -1646,20 +1646,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 							if ((GLSprite_Sub2.anInt8904 & 0xffffff) == 16777215) {
 								int i_735_ = is_713_[i_712_];
 								is_713_[i_712_] = ((i_732_ & 0xff00ff) * i_733_ + (i_735_ & 0xff00ff) * i_734_ & ~0xff00ff) + ((i_732_ & 0xff00) * i_733_ + (i_735_ & 0xff00) * i_734_ & 0xff0000) >> 8;
-							} else if (i_733_ != 255) {
+							} else if (i_733_ == 255) {
+								int i_740_ = (i_732_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
+								int i_741_ = (i_732_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
+								int i_742_ = (i_732_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
+								is_713_[i_712_] = (i_740_ | i_741_ | i_742_) >>> 8;
+							} else {
 								int i_736_ = (i_732_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
 								int i_737_ = (i_732_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
 								int i_738_ = (i_732_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
 								i_732_ = (i_736_ | i_737_ | i_738_) >>> 8;
 								int i_739_ = is_713_[i_712_];
 								is_713_[i_712_] = ((i_732_ & 0xff00ff) * i_733_ + (i_739_ & 0xff00ff) * i_734_ & ~0xff00ff) + ((i_732_ & 0xff00) * i_733_ + (i_739_ & 0xff00) * i_734_ & 0xff0000) >> 8;
-							} else {
-								int i_740_ = (i_732_ & 0xff0000) * GLSprite_Sub2.anInt8910 & ~0xffffff;
-								int i_741_ = (i_732_ & 0xff00) * GLSprite_Sub2.anInt8890 & 0xff0000;
-								int i_742_ = (i_732_ & 0xff) * GLSprite_Sub2.anInt8906 & 0xff00;
-								is_713_[i_712_] = (i_740_ | i_741_ | i_742_) >>> 8;
 							}
-						} else if (i_714_ == 3) {
+                        } else if (i_714_ == 3) {
 							int i_743_ = anIntArray10570[i_711_];
 							int i_744_ = GLSprite_Sub2.anInt8904;
 							int i_745_ = i_743_ + i_744_;
@@ -1939,7 +1939,13 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 									int i_853_ = anIntArray10570[(i_786_ >> 16) + i_851_];
 									int i_854_ = (i_853_ >>> 24) * (i_783_ >>> 24) >> 8;
 									int i_855_ = 256 - i_854_;
-									if (i_854_ != 255) {
+									if (i_854_ == 255) {
+										int i_861_ = (i_853_ & 0xff0000) * i_847_ & ~0xffffff;
+										int i_862_ = (i_853_ & 0xff00) * i_848_ & 0xff0000;
+										int i_863_ = (i_853_ & 0xff) * i_849_ & 0xff00;
+										is[i_794_] = (i_861_ | i_862_ | i_863_) >>> 8;
+										fs[i_794_] = (float) i_779_;
+									} else {
 										int i_856_ = (i_853_ & 0xff0000) * i_847_ & ~0xffffff;
 										int i_857_ = (i_853_ & 0xff00) * i_848_ & 0xff0000;
 										int i_858_ = (i_853_ & 0xff) * i_849_ & 0xff00;
@@ -1952,14 +1958,8 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 											i_860_ = 255;
 										}
 										is[i_794_] |= i_860_ << 24;
-									} else {
-										int i_861_ = (i_853_ & 0xff0000) * i_847_ & ~0xffffff;
-										int i_862_ = (i_853_ & 0xff00) * i_848_ & 0xff0000;
-										int i_863_ = (i_853_ & 0xff) * i_849_ & 0xff00;
-										is[i_794_] = (i_861_ | i_862_ | i_863_) >>> 8;
-										fs[i_794_] = (float) i_779_;
 									}
-								}
+                                }
 								i_786_ += i_790_;
 								i_794_++;
 							}
@@ -2993,20 +2993,20 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								int i_1198_ = anIntArray10570[(i_1130_ >> 16) + i_1196_];
 								int i_1199_ = (i_1198_ >>> 24) * (i_1127_ >>> 24) >> 8;
 								int i_1200_ = 256 - i_1199_;
-								if (i_1199_ != 255) {
+								if (i_1199_ == 255) {
+									int i_1205_ = (i_1198_ & 0xff0000) * i_1192_ & ~0xffffff;
+									int i_1206_ = (i_1198_ & 0xff00) * i_1193_ & 0xff0000;
+									int i_1207_ = (i_1198_ & 0xff) * i_1194_ & 0xff00;
+									is[i_1139_++] = (i_1205_ | i_1206_ | i_1207_) >>> 8;
+								} else {
 									int i_1201_ = (i_1198_ & 0xff0000) * i_1192_ & ~0xffffff;
 									int i_1202_ = (i_1198_ & 0xff00) * i_1193_ & 0xff0000;
 									int i_1203_ = (i_1198_ & 0xff) * i_1194_ & 0xff00;
 									i_1198_ = (i_1201_ | i_1202_ | i_1203_) >>> 8;
 									int i_1204_ = is[i_1139_];
 									is[i_1139_++] = ((i_1198_ & 0xff00ff) * i_1199_ + (i_1204_ & 0xff00ff) * i_1200_ & ~0xff00ff) + ((i_1198_ & 0xff00) * i_1199_ + (i_1204_ & 0xff00) * i_1200_ & 0xff0000) >> 8;
-								} else {
-									int i_1205_ = (i_1198_ & 0xff0000) * i_1192_ & ~0xffffff;
-									int i_1206_ = (i_1198_ & 0xff00) * i_1193_ & 0xff0000;
-									int i_1207_ = (i_1198_ & 0xff) * i_1194_ & 0xff00;
-									is[i_1139_++] = (i_1205_ | i_1206_ | i_1207_) >>> 8;
 								}
-								i_1130_ += i_1135_;
+                                i_1130_ += i_1135_;
 							}
 							i_1131_ += i_1136_;
 							i_1130_ = i_1184_;
@@ -3077,16 +3077,16 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 						int i_1232_ = (i_1131_ >> 16) * anInt8893;
 						for (int i_1233_ = -i_1124_; i_1233_ < 0; i_1233_++) {
 							int i_1234_ = anIntArray10570[(i_1130_ >> 16) + i_1232_];
-							if (i_1234_ != 0) {
+							if (i_1234_ == 0) {
+								i_1139_++;
+							} else {
 								int i_1235_ = is[i_1139_];
 								int i_1236_ = i_1234_ + i_1235_;
 								int i_1237_ = (i_1234_ & 0xff00ff) + (i_1235_ & 0xff00ff);
 								i_1235_ = (i_1237_ & 0x1000100) + (i_1236_ - i_1237_ & 0x10000);
 								is[i_1139_++] = i_1236_ - i_1235_ | i_1235_ - (i_1235_ >>> 8);
-							} else {
-								i_1139_++;
 							}
-							i_1130_ += i_1135_;
+                            i_1130_ += i_1135_;
 						}
 						i_1131_ += i_1136_;
 						i_1130_ = i_1230_;
@@ -3103,7 +3103,9 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 						int i_1243_ = (i_1131_ >> 16) * anInt8893;
 						for (int i_1244_ = -i_1124_; i_1244_ < 0; i_1244_++) {
 							int i_1245_ = anIntArray10570[(i_1130_ >> 16) + i_1243_];
-							if (i_1245_ != 0) {
+							if (i_1245_ == 0) {
+								i_1139_++;
+							} else {
 								int i_1246_ = (i_1245_ & 0xff0000) * i_1239_ & ~0xffffff;
 								int i_1247_ = (i_1245_ & 0xff00) * i_1240_ & 0xff0000;
 								int i_1248_ = (i_1245_ & 0xff) * i_1241_ & 0xff00;
@@ -3113,10 +3115,8 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								int i_1251_ = (i_1245_ & 0xff00ff) + (i_1249_ & 0xff00ff);
 								i_1249_ = (i_1251_ & 0x1000100) + (i_1250_ - i_1251_ & 0x10000);
 								is[i_1139_++] = i_1250_ - i_1249_ | i_1249_ - (i_1249_ >>> 8);
-							} else {
-								i_1139_++;
 							}
-							i_1130_ += i_1135_;
+                            i_1130_ += i_1135_;
 						}
 						i_1131_ += i_1136_;
 						i_1130_ = i_1238_;
@@ -3158,7 +3158,9 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 						int i_1266_ = (i_1131_ >> 16) * anInt8893;
 						for (int i_1267_ = -i_1124_; i_1267_ < 0; i_1267_++) {
 							int i_1268_ = anIntArray10570[(i_1130_ >> 16) + i_1266_];
-							if (i_1268_ != 0) {
+							if (i_1268_ == 0) {
+								i_1139_++;
+							} else {
 								i_1262_ = (i_1268_ & 0xff00ff) * i_1260_ & ~0xff00ff;
 								i_1263_ = (i_1268_ & 0xff00) * i_1260_ & 0xff0000;
 								i_1268_ = ((i_1262_ | i_1263_) >>> 8) + i_1127_;
@@ -3167,10 +3169,8 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 								int i_1271_ = (i_1268_ & 0xff00ff) + (i_1269_ & 0xff00ff);
 								i_1269_ = (i_1271_ & 0x1000100) + (i_1270_ - i_1271_ & 0x10000);
 								is[i_1139_++] = i_1270_ - i_1269_ | i_1269_ - (i_1269_ >>> 8);
-							} else {
-								i_1139_++;
 							}
-							i_1130_ += i_1135_;
+                            i_1130_ += i_1135_;
 						}
 						i_1131_ += i_1136_;
 						i_1130_ = i_1264_;
@@ -3382,7 +3382,13 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 									int i_1347_ = anIntArray10570[(i_1280_ >> 16) + i_1345_];
 									int i_1348_ = (i_1347_ >>> 24) * (i_1277_ >>> 24) >> 8;
 									int i_1349_ = 256 - i_1348_;
-									if (i_1348_ != 255) {
+									if (i_1348_ == 255) {
+										int i_1354_ = (i_1347_ & 0xff0000) * i_1341_ & ~0xffffff;
+										int i_1355_ = (i_1347_ & 0xff00) * i_1342_ & 0xff0000;
+										int i_1356_ = (i_1347_ & 0xff) * i_1343_ & 0xff00;
+										is[i_1288_] = (i_1354_ | i_1355_ | i_1356_) >>> 8;
+										fs[i_1288_] = (float) i_1273_;
+									} else {
 										int i_1350_ = (i_1347_ & 0xff0000) * i_1341_ & ~0xffffff;
 										int i_1351_ = (i_1347_ & 0xff00) * i_1342_ & 0xff0000;
 										int i_1352_ = (i_1347_ & 0xff) * i_1343_ & 0xff00;
@@ -3390,14 +3396,8 @@ public class GLSprite_Sub2_Sub2 extends GLSprite_Sub2
 										int i_1353_ = is[i_1288_];
 										is[i_1288_] = ((i_1347_ & 0xff00ff) * i_1348_ + (i_1353_ & 0xff00ff) * i_1349_ & ~0xff00ff) + ((i_1347_ & 0xff00) * i_1348_ + (i_1353_ & 0xff00) * i_1349_ & 0xff0000) >> 8;
 										fs[i_1288_] = (float) i_1273_;
-									} else {
-										int i_1354_ = (i_1347_ & 0xff0000) * i_1341_ & ~0xffffff;
-										int i_1355_ = (i_1347_ & 0xff00) * i_1342_ & 0xff0000;
-										int i_1356_ = (i_1347_ & 0xff) * i_1343_ & 0xff00;
-										is[i_1288_] = (i_1354_ | i_1355_ | i_1356_) >>> 8;
-										fs[i_1288_] = (float) i_1273_;
 									}
-								}
+                                }
 								i_1280_ += i_1284_;
 								i_1288_++;
 							}

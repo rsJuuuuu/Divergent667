@@ -25,7 +25,7 @@ public class Node_Sub38_Sub12 extends Node_Sub38
 			int i_2_ = 1 + (anInt10224 + anInt10224);
 			int i_3_ = 65536 / i_2_;
 			int[][][] is_4_ = new int[i_0_][][];
-			for (int i_5_ = -anInt10229 + i; (i + anInt10229 ^ 0xffffffff) <= (i_5_ ^ 0xffffffff); i_5_++) {
+			for (int i_5_ = -anInt10229 + i; i_5_ <= i + anInt10229; i_5_++) {
 				int[][] is_6_ = this.method2777(-104, 0, r_Sub2.anInt11054 & i_5_);
 				int[][] is_7_ = new int[3][Class339_Sub7.anInt8728];
 				int i_8_ = 0;
@@ -34,7 +34,7 @@ public class Node_Sub38_Sub12 extends Node_Sub38
 				int[] is_11_ = is_6_[0];
 				int[] is_12_ = is_6_[1];
 				int[] is_13_ = is_6_[2];
-				for (int i_14_ = -anInt10224; (i_14_ ^ 0xffffffff) >= (anInt10224 ^ 0xffffffff); i_14_++) {
+				for (int i_14_ = -anInt10224; anInt10224 >= i_14_; i_14_++) {
 					int i_15_ = i_14_ & Class303.anInt3824;
 					i_10_ += is_13_[i_15_];
 					i_8_ += is_11_[i_15_];
@@ -67,7 +67,7 @@ public class Node_Sub38_Sub12 extends Node_Sub38
 				int i_25_ = 0;
 				int i_26_ = 0;
 				int i_27_ = 0;
-				for (int i_28_ = 0; (i_0_ ^ 0xffffffff) < (i_28_ ^ 0xffffffff); i_28_++) {
+				for (int i_28_ = 0; i_28_ < i_0_; i_28_++) {
 					int[][] is_29_ = is_4_[i_28_];
 					i_25_ += is_29_[0][i_24_];
 					i_26_ += is_29_[1][i_24_];
@@ -113,9 +113,9 @@ public class Node_Sub38_Sub12 extends Node_Sub38
 				}
 				is_37_[i_38_ + (anInt10229 - i_32_)] = is_40_;
 			}
-			for (int i_44_ = 0; (i_44_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_44_++) {
+			for (int i_44_ = 0; Class339_Sub7.anInt8728 > i_44_; i_44_++) {
 				int i_45_ = 0;
-				for (int i_46_ = 0; (i_33_ ^ 0xffffffff) < (i_46_ ^ 0xffffffff); i_46_++)
+				for (int i_46_ = 0; i_46_ < i_33_; i_46_++)
 					i_45_ += is_37_[i_46_][i_44_];
 				is[i_44_] = i_45_ * i_34_ >> 16;
 			}
@@ -133,21 +133,19 @@ public class Node_Sub38_Sub12 extends Node_Sub38
 		while_149_:
 			do {
 				do {
-					if (i_47_ != 0) {
-						if ((i_47_ ^ 0xffffffff) != -2) {
-							if (i_47_ == 2) {
-								break;
-							}
-							break while_149_;
-						}
-					} else {
+					if (i_47_ == 0) {
 						anInt10224 = buffer.readUnsignedByte();
 						return;
-					}
-					anInt10229 = buffer.readUnsignedByte();
+					} else if (i_47_ != 1) {
+                        if (i_47_ == 2) {
+                            break;
+                        }
+                        break while_149_;
+                    }
+                    anInt10229 = buffer.readUnsignedByte();
 					return;
 				} while (false);
-				aBoolean7463 = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
+				aBoolean7463 = buffer.readUnsignedByte() == 1;
 			} while (false);
 		}
 	}

@@ -75,7 +75,7 @@ public class Class320_Sub27 extends Class320
 		if (aNode_Sub27_4063.method2691(3) == Class169_Sub4.aClass353_8825) {
 			anInt4064 = 2;
 		}
-		if ((anInt4064 ^ 0xffffffff) > -1 || (anInt4064 ^ 0xffffffff) < -3) {
+		if (anInt4064 < 0 || anInt4064 > 2) {
 			anInt4064 = method3677(0);
 		}
 		if (b >= -35) {

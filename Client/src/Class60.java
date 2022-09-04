@@ -23,8 +23,8 @@ public class Class60
 		if (Class213.aNode_Sub27_2512.aClass320_Sub14_7268.method3737(false) == 0) {
 			i_0_ = -1;
 		}
-		if ((i_0_ ^ 0xffffffff) != (Node_Sub38_Sub23.anInt10346 ^ 0xffffffff)) {
-			if ((i_0_ ^ 0xffffffff) != 0) {
+		if (Node_Sub38_Sub23.anInt10346 != i_0_) {
+			if (i_0_ != -1) {
 				Class364 class364 = Class186.aClass239_2249.method3026(33, i_0_);
 				Class383 class383 = class364.method4060((byte) 80);
 				if (class383 == null) {

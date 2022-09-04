@@ -25,7 +25,7 @@ public class Class186
 	static final void method1870(byte b, Actor actor) {
 		anInt2253++;
 		Animator animator = actor.anAnimator10876;
-		if ((Class174.clientCycle ^ 0xffffffff) == (actor.toSecondTileTicketDelay ^ 0xffffffff) || !animator.method245(-124) || animator.method226((byte) -105, 1)) {
+		if (actor.toSecondTileTicketDelay == Class174.clientCycle || !animator.method245(-124) || animator.method226((byte) -105, 1)) {
 			int i = -actor.toFirstTileTicketDelay + actor.toSecondTileTicketDelay;
 			int i_0_ = -actor.toFirstTileTicketDelay + Class174.clientCycle;
 			int i_1_ = actor.toFirstTileX * 512 - -(256 * actor.getSize((byte) 124));
@@ -42,13 +42,13 @@ public class Class186
 		if (actor.forceMovementDirection == 1) {
 			actor.method849(12288, -83, false);
 		}
-		if ((actor.forceMovementDirection ^ 0xffffffff) == -3) {
+		if (actor.forceMovementDirection == 2) {
 			actor.method849(0, -117, false);
 		}
 		if (b <= 16) {
 			method1870((byte) -110, null);
 		}
-		if ((actor.forceMovementDirection ^ 0xffffffff) == -4) {
+		if (actor.forceMovementDirection == 3) {
 			actor.method849(4096, -120, false);
 		}
 	}

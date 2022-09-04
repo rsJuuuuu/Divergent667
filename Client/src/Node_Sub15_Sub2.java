@@ -19,12 +19,12 @@ public class Node_Sub15_Sub2 extends Node_Sub15
 		anInt9775++;
 		int i_5_ = i_3_ % i_1_;
 		int i_6_;
-		if (i_5_ != 0) {
-			i_6_ = i_1_ + -i_5_;
-		} else {
+		if (i_5_ == 0) {
 			i_6_ = 0;
+		} else {
+			i_6_ = i_1_ + -i_5_;
 		}
-		int i_7_ = -((i_1_ + i - 1) / i_1_);
+        int i_7_ = -((i_1_ + i - 1) / i_1_);
 		int i_8_ = -((i_1_ + (i_3_ + -1)) / i_1_);
 		for (int i_9_ = i_7_; i_9_ < 0; i_9_++) {
 			for (int i_10_ = i_8_; i_10_ < 0; i_10_++) {
@@ -34,7 +34,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15
 				i_0_ += i_1_;
 			}
 			i_0_ -= i_6_;
-			if ((bs[-1 + i_0_] ^ 0xffffffff) == -1) {
+			if (bs[-1 + i_0_] == 0) {
 				return true;
 			}
 			i_0_ += i_2_;
@@ -53,15 +53,15 @@ public class Node_Sub15_Sub2 extends Node_Sub15
 		}
 		int i_13_ = i_11_ >> 3 & 0x70;
 		int i_14_ = i_11_ & 0x7f;
-		i_13_ = (i_14_ ^ 0xffffffff) >= -65 ? i_14_ * i_13_ >> 7 : i_13_ * (-i_14_ + 127) >> 7;
+		i_13_ = i_14_ <= 64 ? i_14_ * i_13_ >> 7 : i_13_ * (-i_14_ + 127) >> 7;
 		int i_15_ = i_13_ + i_14_;
 		int i_16_;
-		if (i_15_ != 0) {
-			i_16_ = (i_13_ << 8) / i_15_;
-		} else {
+		if (i_15_ == 0) {
 			i_16_ = i_13_ << 1;
+		} else {
+			i_16_ = (i_13_ << 8) / i_15_;
 		}
-		int i_17_ = i_15_;
+        int i_17_ = i_15_;
 		return (short) (i_16_ >> 4 << 7 | i_12_ << 10 | i_17_);
 	}
 	

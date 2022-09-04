@@ -43,14 +43,12 @@ public class OutputStream_Sub1 extends OutputStream
 		if (Class223.aString2660.startsWith("win")) {
 			return string + ".dll";
 		}
-		if (!Class223.aString2660.startsWith("linux")) {
-			if (Class223.aString2660.startsWith("mac")) {
-				return "lib" + string + ".dylib";
-			}
-		} else {
+		if (Class223.aString2660.startsWith("linux")) {
 			return "lib" + string + ".so";
+		} else if (Class223.aString2660.startsWith("mac")) {
+			return "lib" + string + ".dylib";
 		}
-		@SuppressWarnings("unused")
+        @SuppressWarnings("unused")
 		int i_1_ = 35 / ((i - 66) / 55);
 		return null;
 	}

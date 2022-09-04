@@ -84,7 +84,7 @@ public class Class374
 			aClass151_4614 = null;
 		}
 		anInt4623++;
-		if ((CacheNode_Sub11.aByteArrayArrayArray9550[i_3_][i_2_][i] & 0x8 ^ 0xffffffff) != -1) {
+		if ((CacheNode_Sub11.aByteArrayArrayArray9550[i_3_][i_2_][i] & 0x8) != 0) {
 			return 0;
 		}
 		if (i_3_ > 0 && (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_2_][i] & 0x2) != 0) {
@@ -123,7 +123,7 @@ public class Class374
 		aPureJavaToolkit4610 = purejavatoolkit;
 		anInt4618 = -255 + aPureJavaToolkit4610.anInt6776;
 		aClass185_4627 = new Class185(purejavatoolkit, this);
-		for (int i = 0; (i ^ 0xffffffff) > -8; i++) {
+		for (int i = 0; i < 7; i++) {
 			aPureJavaDrawableModelArray4652[i] = new PureJavaDrawableModel(aPureJavaToolkit4610);
 			aPureJavaDrawableModelArray4651[i] = new PureJavaDrawableModel(aPureJavaToolkit4610);
 		}

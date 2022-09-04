@@ -55,13 +55,13 @@ public class Class42_Sub1 extends Class42
 			aSourceDataLine5551.start();
 			anInt5553 = i;
 		} catch (LineUnavailableException lineunavailableexception) {
-			if (1 != Node_Sub12.method2545(i, 858993459)) {
-				method447(Class320_Sub19.method3753(i, -729073628));
-			} else {
+			if (1 == Node_Sub12.method2545(i, 858993459)) {
 				aSourceDataLine5551 = null;
 				throw lineunavailableexception;
+			} else {
+				method447(Class320_Sub19.method3753(i, -729073628));
 			}
-		}
+        }
 	}
 	
 	final void method455() {
@@ -83,11 +83,11 @@ public class Class42_Sub1 extends Class42
 		Mixer.Info[] infos = AudioSystem.getMixerInfo();
 		if (null != infos) {
 			Mixer.Info[] infos_2_ = infos;
-			for (int i = 0; (i ^ 0xffffffff) > (infos_2_.length ^ 0xffffffff); i++) {
+			for (int i = 0; infos_2_.length > i; i++) {
 				Mixer.Info info = infos_2_[i];
 				if (null != info) {
 					String string = info.getName();
-					if (null != string && (string.toLowerCase().indexOf("soundmax") ^ 0xffffffff) <= -1) {
+					if (null != string && string.toLowerCase().indexOf("soundmax") >= 0) {
 						aBoolean5554 = true;
 					}
 				}

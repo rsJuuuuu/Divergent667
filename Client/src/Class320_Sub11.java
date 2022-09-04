@@ -4434,7 +4434,7 @@ public class Class320_Sub11 extends Class320 {
 			Node_Sub15_Sub2.aClass138Array9784[k1] = new Class138();
 		}
 
-		for(int l1 = 0; ~l1 > -26; l1++) {
+		for(int l1 = 0; l1 < 25; l1++) {
 			Class307.SKILL_LEVEL[l1] = 0;
 			Class34_Sub1.SKILL_REAL_LEVEL[l1] = 0;
 			Class188_Sub1.SKILL_XP[l1] = 0;
@@ -4471,15 +4471,15 @@ public class Class320_Sub11 extends Class320 {
 		if(Node_Sub3.aBoolean6948) {
 			return;
 		}
-		if(i != 0) {
-			return;
-		} else {
+		if(i == 0) {
 			Node_Sub25_Sub1.aBoolean9950 = true;
 			Node_Sub3.aBoolean6948 = true;
 			Class291.aFloat3666 += (24F - Class291.aFloat3666) / 2.0F;
 			return;
+		} else {
+			return;
 		}
-	}
+    }
 
 	final void method3676(boolean flag, int i) {
 		if(flag) {

@@ -38,7 +38,7 @@ public class Class262_Sub3 extends Class262
 			return false;
 		}
 		anInt7720++;
-        return !(i != 1 && (i ^ 0xffffffff) != -4 && i != 5);
+        return !(i != 1 && i != 3 && i != 5);
     }
 	
 	public static void method3158(int i) {

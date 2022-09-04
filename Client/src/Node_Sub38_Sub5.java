@@ -57,10 +57,10 @@ public class Node_Sub38_Sub5 extends Node_Sub38
 			int[] is_6_ = is[0];
 			int[] is_7_ = is[1];
 			int[] is_8_ = is[2];
-			for (int i_9_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_9_ ^ 0xffffffff); i_9_++) {
+			for (int i_9_ = 0; i_9_ < Class339_Sub7.anInt8728; i_9_++) {
 				int i_10_ = is_3_[i_9_];
 				int i_11_ = -anIntArray10127[0] + i_10_;
-				if ((i_11_ ^ 0xffffffff) > -1) {
+				if (i_11_ < 0) {
 					i_11_ = -i_11_;
 				}
 				if (i_11_ > anInt10129) {
@@ -70,10 +70,10 @@ public class Node_Sub38_Sub5 extends Node_Sub38
 				} else {
 					int i_12_ = is_4_[i_9_];
 					i_11_ = -anIntArray10127[1] + i_12_;
-					if ((i_11_ ^ 0xffffffff) > -1) {
+					if (i_11_ < 0) {
 						i_11_ = -i_11_;
 					}
-					if ((i_11_ ^ 0xffffffff) < (anInt10129 ^ 0xffffffff)) {
+					if (anInt10129 < i_11_) {
 						is_6_[i_9_] = i_10_;
 						is_7_[i_9_] = i_12_;
 						is_8_[i_9_] = is_5_[i_9_];
@@ -100,7 +100,7 @@ public class Node_Sub38_Sub5 extends Node_Sub38
 	}
 	
 	static final void method2802(int i, boolean bool, int i_14_, int i_15_, int i_16_) {
-		if ((Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) ^ 0xffffffff) == -1) {
+		if (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) == 0) {
 			Class262_Sub23.method3212(false, 1295);
 		} else {
 			CacheNode_Sub8.anInt9493 = Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false);
@@ -125,25 +125,21 @@ public class Node_Sub38_Sub5 extends Node_Sub38
 			while_8_:
 				do {
 					do {
-						if ((i_17_ ^ 0xffffffff) != -1) {
-							if (i_17_ != 1) {
-								if (i_17_ != 2) {
-									if (i_17_ != 3) {
-										if (i_17_ == 4) {
-											break while_9_;
-										}
-										break while_10_;
-									}
-								} else {
-									break;
-								}
-								break while_8_;
-							}
-						} else {
+						if (i_17_ == 0) {
 							anInt10129 = buffer.readUnsignedShort();
 							break while_10_;
-						}
-						anInt10122 = buffer.readUnsignedShort();
+						} else if (i_17_ != 1) {
+                            if (i_17_ == 2) {
+                                break;
+                            } else if (i_17_ != 3) {
+                                if (i_17_ == 4) {
+                                    break while_9_;
+                                }
+                                break while_10_;
+                            }
+                            break while_8_;
+                        }
+                        anInt10122 = buffer.readUnsignedShort();
 						break while_10_;
 					} while (false);
 					anInt10126 = buffer.readUnsignedShort();

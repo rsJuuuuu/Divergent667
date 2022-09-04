@@ -36,7 +36,7 @@ public class Class83 implements Interface10
 			int i_5_ = i_0_;
 			int i_6_ = i_0_ * i_3_ / i_2_;
 			int i_7_ = (i_1_ + -i_6_) / 2;
-			if ((i_1_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff)) {
+			if (i_6_ > i_1_) {
 				i_5_ = i_2_ * i_1_ / i_3_;
 				i_6_ = i_1_;
 				i_7_ = 0;
@@ -50,7 +50,7 @@ public class Class83 implements Interface10
 	static final void method800(byte b) {
 		anInt5190++;
 		Class290_Sub4.method3430(true);
-		Class274.method3325((Class213.aNode_Sub27_2512.aClass320_Sub17_7311.method3747(false) ^ 0xffffffff) == -2, 120, 22050, 2);
+		Class274.method3325(Class213.aNode_Sub27_2512.aClass320_Sub17_7311.method3747(false) == 1, 120, 22050, 2);
 		AnimableAnimator.aClass42_5498 = Class262_Sub22.method3207(Class240.aSignLink2946, (byte) -27, 0, 22050, Node_Sub38_Sub20.aCanvas10309);
 		AnimableAnimator_Sub1.method256(true, 1405, Class32.method359(null, -9293));
 		Packet.aClass42_9402 = Class262_Sub22.method3207(Class240.aSignLink2946, (byte) -27, 1, 2048, Node_Sub38_Sub20.aCanvas10309);

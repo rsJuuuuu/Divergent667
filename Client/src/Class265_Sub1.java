@@ -25,21 +25,21 @@ public class Class265_Sub1 extends Class265 implements Interface13_Impl3
 			int i_3_ = anInt7900 * aClass68_3367.anInt934;
 			int i_4_ = i_3_ * anInt7897;
 			int i_5_ = pixelbuffer.getSlicePitch();
-			if (i_4_ != i_5_) {
+			if (i_4_ == i_5_) {
+				pixelbuffer.a(bs, 0, 0, anInt7897 * i_3_ * anInt7899);
+			} else {
 				int i_6_ = pixelbuffer.getRowPitch();
-				if ((i_3_ ^ 0xffffffff) != (i_6_ ^ 0xffffffff)) {
+				if (i_6_ == i_3_) {
+					for (int i_9_ = 0; anInt7899 > i_9_; i_9_++)
+						pixelbuffer.a(bs, i_4_ * i_9_, i_9_ * i_5_, i_4_);
+				} else {
 					for (int i_7_ = 0; anInt7899 > i_7_; i_7_++) {
 						for (int i_8_ = 0; anInt7897 > i_8_; i_8_++)
 							pixelbuffer.a(bs, i_4_ * i_7_ + i_3_ * i_8_, i_8_ * i_6_ + i_5_ * i_7_, i_3_);
 					}
-				} else {
-					for (int i_9_ = 0; anInt7899 > i_9_; i_9_++)
-						pixelbuffer.a(bs, i_4_ * i_9_, i_9_ * i_5_, i_4_);
 				}
-			} else {
-				pixelbuffer.a(bs, 0, 0, anInt7897 * i_3_ * anInt7899);
-			}
-			anIDirect3DVolumeTexture7898.UnlockBox(0);
+            }
+            anIDirect3DVolumeTexture7898.UnlockBox(0);
 		}
 	}
 	

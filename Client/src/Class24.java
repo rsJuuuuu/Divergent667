@@ -35,15 +35,15 @@ public class Class24
 		OpenGL.glCompileShaderARB(l);
 		OpenGL.glGetObjectParameterivARB(l, 35713, Node_Sub26.anIntArray7255, 0);
 		if (Node_Sub26.anIntArray7255[0] == 0) {
-			if ((Node_Sub26.anIntArray7255[0] ^ 0xffffffff) == -1) {
+			if (Node_Sub26.anIntArray7255[0] == 0) {
 				//System.out.println("Shader compile failed:");
 			}
 			OpenGL.glGetObjectParameterivARB(l, 35716, Node_Sub26.anIntArray7255, 1);
-			if ((Node_Sub26.anIntArray7255[1] ^ 0xffffffff) < -2) {
+			if (Node_Sub26.anIntArray7255[1] > 1) {
 				byte[] bs_1_ = new byte[Node_Sub26.anIntArray7255[1]];
 				OpenGL.glGetInfoLogARB(l, Node_Sub26.anIntArray7255[1], Node_Sub26.anIntArray7255, 0, bs_1_, 0);
 			}
-			if ((Node_Sub26.anIntArray7255[0] ^ 0xffffffff) == -1) {
+			if (Node_Sub26.anIntArray7255[0] == 0) {
 				OpenGL.glDeleteObjectARB(l);
 				return null;
 			}
@@ -59,7 +59,7 @@ public class Class24
 		if (i < 0) {
 			i = 0;
 		}
-		if ((Class144_Sub1.anInt6806 ^ 0xffffffff) > (i_2_ ^ 0xffffffff)) {
+		if (i_2_ > Class144_Sub1.anInt6806) {
 			i_2_ = Class144_Sub1.anInt6806;
 		}
 		if (i_2_ <= i) {
@@ -68,9 +68,9 @@ public class Class24
 		i_3_ += i * i_4_;
 		i_5_ = i_2_ + -i >> 2;
 		i_6_ += -1 + i;
-		if ((Class320_Sub11.anInt8315 ^ 0xffffffff) == -2) {
+		if (Class320_Sub11.anInt8315 == 1) {
 			Class233.anInt2786 += i_5_;
-			while ((--i_5_ ^ 0xffffffff) <= -1) {
+			while (--i_5_ >= 0) {
 				if (i_3_ < is[++i_6_]) {
 					is[i_6_] = i_3_;
 				}
@@ -79,7 +79,7 @@ public class Class24
 					is[i_6_] = i_3_;
 				}
 				i_3_ += i_4_;
-				if ((is[++i_6_] ^ 0xffffffff) < (i_3_ ^ 0xffffffff)) {
+				if (i_3_ < is[++i_6_]) {
 					is[i_6_] = i_3_;
 				}
 				i_3_ += i_4_;
@@ -97,27 +97,27 @@ public class Class24
 			}
 		} else {
 			i_3_ -= 38400;
-			while ((--i_5_ ^ 0xffffffff) <= -1) {
+			while (--i_5_ >= 0) {
 				if (i_3_ < is[++i_6_]) {
 					return false;
 				}
 				i_3_ += i_4_;
-				if ((is[++i_6_] ^ 0xffffffff) < (i_3_ ^ 0xffffffff)) {
+				if (i_3_ < is[++i_6_]) {
 					return false;
 				}
 				i_3_ += i_4_;
-				if ((is[++i_6_] ^ 0xffffffff) < (i_3_ ^ 0xffffffff)) {
+				if (i_3_ < is[++i_6_]) {
 					return false;
 				}
 				i_3_ += i_4_;
-				if ((is[++i_6_] ^ 0xffffffff) < (i_3_ ^ 0xffffffff)) {
+				if (i_3_ < is[++i_6_]) {
 					return false;
 				}
 				i_3_ += i_4_;
 			}
 			i_5_ = i_2_ - i & 0x3;
-			while ((--i_5_ ^ 0xffffffff) <= -1) {
-				if ((i_3_ ^ 0xffffffff) > (is[++i_6_] ^ 0xffffffff)) {
+			while (--i_5_ >= 0) {
+				if (is[++i_6_] > i_3_) {
 					return false;
 				}
 				i_3_ += i_4_;

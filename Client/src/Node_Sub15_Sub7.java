@@ -33,7 +33,7 @@ public class Node_Sub15_Sub7 extends Node_Sub15
 	
 	final void method2554(int i, BufferedStream buffer) {
 		if (i == 29147) {
-			if ((buffer.readUnsignedByte() ^ 0xffffffff) != -256) {
+			if (buffer.readUnsignedByte() != 255) {
 				buffer.offset--;
 				aLong9826 = buffer.readLong();
 			}

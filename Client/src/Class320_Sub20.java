@@ -46,7 +46,7 @@ public class Class320_Sub20 extends Class320
 			if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789(-1) && !Class262_Sub3.method3157(aNode_Sub27_4063.aClass320_Sub29_7270.method3791(false), (byte) 28)) {
 				anInt4064 = 0;
 			}
-			if ((anInt4064 ^ 0xffffffff) > -1 || anInt4064 > 1) {
+			if (anInt4064 < 0 || anInt4064 > 1) {
 				anInt4064 = method3677(0);
 			}
 		}

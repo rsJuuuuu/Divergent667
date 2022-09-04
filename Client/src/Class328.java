@@ -33,7 +33,7 @@ abstract class Class328
 				int i_21_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_0_ + i_3_);
 				Class369.method4086(i_20_, i_4_, i_21_, Class169_Sub4.anIntArrayArray8826[i], 0);
 			}
-			while ((i_6_ ^ 0xffffffff) < -1) {
+			while (i_6_ > 0) {
 				if (i_12_ < 0) {
 					while (i_12_ < 0) {
 						i_13_ += i_18_;
@@ -43,7 +43,7 @@ abstract class Class328
 						i_16_ += i_15_;
 					}
 				}
-				if ((i_13_ ^ 0xffffffff) > -1) {
+				if (i_13_ < 0) {
 					i_12_ += i_16_;
 					i_13_ += i_18_;
 					i_5_++;
@@ -57,13 +57,13 @@ abstract class Class328
 				i_17_ -= i_14_;
 				int i_22_ = i - i_6_;
 				int i_23_ = i - -i_6_;
-				if ((Class384.anInt4906 ^ 0xffffffff) >= (i_23_ ^ 0xffffffff) && Node_Sub25_Sub1.anInt9936 >= i_22_) {
+				if (i_23_ >= Class384.anInt4906 && Node_Sub25_Sub1.anInt9936 >= i_22_) {
 					int i_24_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_3_ - -i_5_);
 					int i_25_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_5_ + i_3_);
 					if (Class384.anInt4906 <= i_22_) {
 						Class369.method4086(i_24_, i_4_, i_25_, Class169_Sub4.anIntArrayArray8826[i_22_], 0);
 					}
-					if ((Node_Sub25_Sub1.anInt9936 ^ 0xffffffff) <= (i_23_ ^ 0xffffffff)) {
+					if (i_23_ <= Node_Sub25_Sub1.anInt9936) {
 						Class369.method4086(i_24_, i_4_, i_25_, Class169_Sub4.anIntArrayArray8826[i_23_], 0);
 					}
 				}

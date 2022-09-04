@@ -18,7 +18,7 @@ public class CacheNode_Sub5 extends CacheNode
 	
 	static final boolean method2307(int i, int i_0_, int i_1_) {
 		anInt9469++;
-		if ((i_0_ & i_1_ ^ 0xffffffff) != -1 | Class73.method749((byte) -65, i_1_, i) || FloatBuffer.method2248(i_1_, i, 51)) {
+		if ((i_0_ & i_1_) != 0 | Class73.method749((byte) -65, i_1_, i) || FloatBuffer.method2248(i_1_, i, 51)) {
 			return true;
 		}
         return !((0x37 & i) != 0 || !Class110.method1135(i_1_, i, false));

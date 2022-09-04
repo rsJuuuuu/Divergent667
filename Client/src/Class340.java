@@ -88,13 +88,13 @@ public class Class340 implements Runnable
 			anInt4229 = -104;
 		}
 		int i_2_ = aClass110_4223.method1130(-3);
-		if (aClass110_4223.aBoolean1393 && (aClass110_4223.loadPercentage ^ 0xffffffff) < (anInt4230 ^ 0xffffffff)) {
+		if (aClass110_4223.aBoolean1393 && anInt4230 < aClass110_4223.loadPercentage) {
 			return 1 + anInt4230;
 		}
-		if ((i_2_ ^ 0xffffffff) > -1 || (i_2_ ^ 0xffffffff) <= (Node_Sub25_Sub4.aClass110Array10006.length + -1 ^ 0xffffffff)) {
+		if (i_2_ < 0 || Node_Sub25_Sub4.aClass110Array10006.length + -1 <= i_2_) {
 			return 100;
 		}
-		if ((anInt4230 ^ 0xffffffff) == (aClass110_4223.anInt1383 ^ 0xffffffff)) {
+		if (aClass110_4223.anInt1383 == anInt4230) {
 			return aClass110_4223.loadPercentage;
 		}
 		return aClass110_4223.anInt1383;
@@ -128,9 +128,11 @@ public class Class340 implements Runnable
 			synchronized (this) {
 				try {
 					anInt4229++;
-					if (!(anInterface16_4216 instanceof Class350)) {
+					if (anInterface16_4216 instanceof Class350) {
+						anInterface16_4216.method63(aBoolean4206, (byte) -113);
+					} else {
 						long l_4_ = Class313.method3650(false);
-						if (Class93.aGraphicsToolkit1241 != null && anInterface16_4228 != null && anInterface16_4228.method60(66) != 0 && (aLong4222 ^ 0xffffffffffffffffL) <= (-(long) anInterface16_4228.method60(36) + l_4_ ^ 0xffffffffffffffffL)) {
+						if (Class93.aGraphicsToolkit1241 != null && anInterface16_4228 != null && anInterface16_4228.method60(66) != 0 && -(long) anInterface16_4228.method60(36) + l_4_ <= aLong4222) {
 							int i = (int) ((-aLong4222 + l_4_) * 255L / (long) anInterface16_4228.method60(124));
 							int i_5_ = -i + 255;
 							Node_Sub36_Sub1.method2758(-90);
@@ -169,17 +171,15 @@ public class Class340 implements Runnable
 							ClanChat.method507(exception_sub1, exception_sub1.getMessage() + " (Recovered) " + Class158.aClient1983.method100(10), -108);
 							Class22.method300(0, true, true);
 						}
-					} else {
-						anInterface16_4216.method63(aBoolean4206, (byte) -113);
 					}
-					java.awt.Container container;
+                    java.awt.Container container;
 					if (Node_Sub29.aFrame7344 == null) {
-						if (Class96.anApplet1270 != null) {
-							container = Class96.anApplet1270;
-						} else {
+						if (Class96.anApplet1270 == null) {
 							container = Class82.aGameStub1123;
+						} else {
+							container = Class96.anApplet1270;
 						}
-					} else {
+                    } else {
 						container = Node_Sub29.aFrame7344;
 					}
 					container.getSize();
@@ -197,7 +197,7 @@ public class Class340 implements Runnable
 			}
 			long l_6_ = Class313.method3650(false);
 			int i = (int) (20L + (l + -l_6_));
-			if ((i ^ 0xffffffff) < -1) {
+			if (i > 0) {
 				Class262_Sub22.method3208((long) i, false);
 			}
 		}

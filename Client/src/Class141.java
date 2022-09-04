@@ -30,7 +30,7 @@ public class Class141 implements Runnable
 		cachenode_sub16_sub2.anInt11080 = 1;
 		synchronized (aClass158_1745) {
 			for (CacheNode_Sub16_Sub2 cachenode_sub16_sub2_0_ = (CacheNode_Sub16_Sub2) aClass158_1745.method1723(13); cachenode_sub16_sub2_0_ != null; cachenode_sub16_sub2_0_ = (CacheNode_Sub16_Sub2) aClass158_1745.method1721(0)) {
-				if ((cachenode_sub16_sub2_0_.aLong7037 ^ 0xffffffffffffffffL) == ((long) i ^ 0xffffffffffffffffL) && cachenode_sub16_sub2_0_.aClass6_11081 == class6 && cachenode_sub16_sub2_0_.anInt11080 == 2) {
+				if ((long) i == cachenode_sub16_sub2_0_.aLong7037 && cachenode_sub16_sub2_0_.aClass6_11081 == class6 && cachenode_sub16_sub2_0_.anInt11080 == 2) {
 					cachenode_sub16_sub2.aBoolean9602 = false;
 					cachenode_sub16_sub2.aByteArray11086 = cachenode_sub16_sub2_0_.aByteArray11086;
 					return cachenode_sub16_sub2;
@@ -64,13 +64,13 @@ public class Class141 implements Runnable
 		anInt1742++;
 		synchronized (aClass158_1745) {
 			aClass158_1745.method1719(true, cachenode_sub16_sub2);
-			if (i != 0) {
-				/* empty */
-			} else {
+			if (i == 0) {
 				anInt1753++;
 				aClass158_1745.notifyAll();
+			} else {
+				/* empty */
 			}
-		}
+        }
 	}
 	
 	public final void run() {
@@ -90,9 +90,9 @@ public class Class141 implements Runnable
 				anInt1753--;
 			}
 			try {
-				if ((cachenode_sub16_sub2.anInt11080 ^ 0xffffffff) == -3) {
+				if (cachenode_sub16_sub2.anInt11080 == 2) {
 					cachenode_sub16_sub2.aClass6_11081.method176(cachenode_sub16_sub2.aByteArray11086.length, cachenode_sub16_sub2.aByteArray11086, (int) cachenode_sub16_sub2.aLong7037, true);
-				} else if ((cachenode_sub16_sub2.anInt11080 ^ 0xffffffff) == -4) {
+				} else if (cachenode_sub16_sub2.anInt11080 == 3) {
 					cachenode_sub16_sub2.aByteArray11086 = cachenode_sub16_sub2.aClass6_11081.method177((int) cachenode_sub16_sub2.aLong7037, 512);
 				}
 			} catch (Exception exception) {
@@ -164,7 +164,7 @@ public class Class141 implements Runnable
 	
 	static {
 		int i = 2;
-		for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > -33; i_2_++) {
+		for (int i_2_ = 0; i_2_ < 32; i_2_++) {
 			anIntArray1750[i_2_] = -1 + i;
 			i += i;
 		}

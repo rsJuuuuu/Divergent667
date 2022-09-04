@@ -272,7 +272,16 @@ public class PureJavaToolkit extends GraphicsToolkit
 	}
 	
 	final void a(java.awt.Canvas canvas) {
-		if (canvas != null) {
+		if (canvas == null) {
+			aCanvas6755 = null;
+			aGraphicsBuffer6756 = null;
+			if (aClass64_6771 == null) {
+				anIntArray6787 = null;
+				anInt6789 = anInt6791 = 1;
+				anInt6765 = anInt6783 = 1;
+				method1496();
+			}
+		} else {
 			GraphicsBuffer graphicsbuffer = (GraphicsBuffer) aHashTable6753.method1518(3512, (long) canvas.hashCode());
 			if (graphicsbuffer != null) {
 				aCanvas6755 = canvas;
@@ -292,17 +301,8 @@ public class PureJavaToolkit extends GraphicsToolkit
 					method1496();
 				}
 			}
-		} else {
-			aCanvas6755 = null;
-			aGraphicsBuffer6756 = null;
-			if (aClass64_6771 == null) {
-				anIntArray6787 = null;
-				anInt6789 = anInt6791 = 1;
-				anInt6765 = anInt6783 = 1;
-				method1496();
-			}
 		}
-	}
+    }
 	
 	private final void method1490(int i, int i_71_, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_) {
 		if (i >= anInt6767 && i < anInt6778) {
@@ -452,14 +452,14 @@ public class PureJavaToolkit extends GraphicsToolkit
 				GLSprite glsprite = (GLSprite) aClass61_6762.method607((long) i_111_, 0);
 				if (glsprite == null) {
 					int[] is = method1495(i_111_);
-					if (is != null) {
+					if (is == null) {
+						return;
+					} else {
 						int i_113_ = method1505(i_111_) ? 64 : anInt6775;
 						glsprite = this.method1235(i_113_, i_113_, i_113_, is, 0, 7468);
 						aClass61_6762.method601(glsprite, 25566, (long) i_111_);
-					} else {
-						return;
 					}
-				}
+                }
 				anInt6800 = i_111_;
 				aGLSprite6799 = glsprite;
 			}
@@ -1592,9 +1592,7 @@ public class PureJavaToolkit extends GraphicsToolkit
 	
 	final void da(int i, int i_374_, int i_375_, int[] is) {
 		float f = aClass336_Sub2_6788.aFloat8589 + (aClass336_Sub2_6788.aFloat8577 * (float) i + aClass336_Sub2_6788.aFloat8567 * (float) i_374_ + aClass336_Sub2_6788.aFloat8584 * (float) i_375_);
-		if (f < (float) anInt6798 || f > (float) anInt6776) {
-			is[0] = is[1] = is[2] = -1;
-		} else {
+		if (f >= (float) anInt6798 && f <= (float) anInt6776) {
 			int i_376_ = (int) ((float) anInt6785 * (aClass336_Sub2_6788.aFloat8583 + (aClass336_Sub2_6788.aFloat8580 * (float) i + aClass336_Sub2_6788.aFloat8571 * (float) i_374_ + aClass336_Sub2_6788.aFloat8566 * (float) i_375_)) / f);
 			int i_377_ = (int) ((float) anInt6763 * (aClass336_Sub2_6788.aFloat8579 + (aClass336_Sub2_6788.aFloat8578 * (float) i + aClass336_Sub2_6788.aFloat8561 * (float) i_374_ + aClass336_Sub2_6788.aFloat8558 * (float) i_375_)) / f);
 			if (i_376_ >= anInt6793 && i_376_ <= anInt6768 && i_377_ >= anInt6790 && i_377_ <= anInt6779) {
@@ -1604,14 +1602,14 @@ public class PureJavaToolkit extends GraphicsToolkit
 			} else {
 				is[0] = is[1] = is[2] = -1;
 			}
+		} else {
+			is[0] = is[1] = is[2] = -1;
 		}
-	}
+    }
 	
 	final void HA(int i, int i_378_, int i_379_, int i_380_, int[] is) {
 		float f = aClass336_Sub2_6788.aFloat8589 + (aClass336_Sub2_6788.aFloat8577 * (float) i + aClass336_Sub2_6788.aFloat8567 * (float) i_378_ + aClass336_Sub2_6788.aFloat8584 * (float) i_379_);
-		if (f < (float) anInt6798 || f > (float) anInt6776) {
-			is[0] = is[1] = is[2] = -1;
-		} else {
+		if (f >= (float) anInt6798 && f <= (float) anInt6776) {
 			int i_381_ = (int) ((float) anInt6785 * (aClass336_Sub2_6788.aFloat8583 + (aClass336_Sub2_6788.aFloat8580 * (float) i + aClass336_Sub2_6788.aFloat8571 * (float) i_378_ + aClass336_Sub2_6788.aFloat8566 * (float) i_379_)) / (float) i_380_);
 			int i_382_ = (int) ((float) anInt6763 * (aClass336_Sub2_6788.aFloat8579 + (aClass336_Sub2_6788.aFloat8578 * (float) i + aClass336_Sub2_6788.aFloat8561 * (float) i_378_ + aClass336_Sub2_6788.aFloat8558 * (float) i_379_)) / (float) i_380_);
 			if (i_381_ >= anInt6793 && i_381_ <= anInt6768 && i_382_ >= anInt6790 && i_382_ <= anInt6779) {
@@ -1621,8 +1619,10 @@ public class PureJavaToolkit extends GraphicsToolkit
 			} else {
 				is[0] = is[1] = is[2] = -1;
 			}
+		} else {
+			is[0] = is[1] = is[2] = -1;
 		}
-	}
+    }
 	
 	final boolean k() {
 		return false;
@@ -1705,7 +1705,9 @@ public class PureJavaToolkit extends GraphicsToolkit
 	
 	final void method1498(int i, int i_396_, int i_397_, int i_398_, int i_399_, int i_400_, int i_401_, int i_402_, int i_403_, int i_404_) {
 		if (i_398_ != 0 && i_399_ != 0) {
-			if (i_401_ != 65535 && !aD1543.method10(i_401_, -8217).aBoolean1223) {
+			if (i_401_ == 65535 || aD1543.method10(i_401_, -8217).aBoolean1223) {
+				method1497(i, i_396_, i_397_, i_398_, i_402_, i_404_);
+			} else {
 				if (anInt6800 != i_401_) {
 					GLSprite glsprite = (GLSprite) aClass61_6762.method607((long) i_401_, 0);
 					if (glsprite == null) {
@@ -1721,10 +1723,8 @@ public class PureJavaToolkit extends GraphicsToolkit
 					aGLSprite6799 = glsprite;
 				}
 				((GLSprite_Sub2) aGLSprite6799).method1208(i - i_398_, i_396_ - i_399_, i_397_, i_398_ << 1, i_399_ << 1, i_403_, i_402_, i_404_, 1);
-			} else {
-				method1497(i, i_396_, i_397_, i_398_, i_402_, i_404_);
 			}
-		}
+        }
 	}
 	
 	final GLSprite a(int i, int i_406_, int i_407_, int i_408_, boolean bool) {
@@ -1779,14 +1779,7 @@ public class PureJavaToolkit extends GraphicsToolkit
 		} else {
 			int[] is_424_ = new int[i * i_417_];
 			byte[] bs_425_ = class383.aByteArray4905;
-			if (bs_425_ != null) {
-				for (int i_426_ = 0; i_426_ < i_417_; i_426_++) {
-					int i_427_ = i_426_ * i;
-					for (int i_428_ = 0; i_428_ < i; i_428_++)
-						is_424_[i_427_ + i_428_] = is[bs[i_427_ + i_428_] & 0xff] | bs_425_[i_427_ + i_428_] << 24;
-				}
-				glsprite_sub2 = new GLSprite_Sub2_Sub2(this, is_424_, i, i_417_);
-			} else {
+			if (bs_425_ == null) {
 				for (int i_429_ = 0; i_429_ < i_417_; i_429_++) {
 					int i_430_ = i_429_ * i;
 					for (int i_431_ = 0; i_431_ < i; i_431_++) {
@@ -1795,8 +1788,15 @@ public class PureJavaToolkit extends GraphicsToolkit
 					}
 				}
 				glsprite_sub2 = new GLSprite_Sub2_Sub1(this, is_424_, i, i_417_);
+			} else {
+				for (int i_426_ = 0; i_426_ < i_417_; i_426_++) {
+					int i_427_ = i_426_ * i;
+					for (int i_428_ = 0; i_428_ < i; i_428_++)
+						is_424_[i_427_ + i_428_] = is[bs[i_427_ + i_428_] & 0xff] | bs_425_[i_427_ + i_428_] << 24;
+				}
+				glsprite_sub2 = new GLSprite_Sub2_Sub2(this, is_424_, i, i_417_);
 			}
-		}
+        }
 		glsprite_sub2.method1178(class383.anInt4902, class383.anInt4898, class383.anInt4901, class383.anInt4899);
 		return glsprite_sub2;
 	}
@@ -2173,12 +2173,12 @@ public class PureJavaToolkit extends GraphicsToolkit
 				for (int i_539_ = -i_522_; i_539_ < 0; i_539_++) {
 					int i_540_ = (i_528_ >> 16) * i_525_;
 					for (int i_541_ = -i_521_; i_541_ < 0; i_541_++) {
-						if (bs[(i_527_ >> 16) + i_540_] != 0) {
-							anIntArray6787[i_531_++] = i_524_;
-						} else {
+						if (bs[(i_527_ >> 16) + i_540_] == 0) {
 							anIntArray6787[i_531_++] = i_523_;
+						} else {
+							anIntArray6787[i_531_++] = i_524_;
 						}
-						i_527_ += i_529_;
+                        i_527_ += i_529_;
 					}
 					i_528_ += i_530_;
 					i_527_ = i_538_;
@@ -2212,16 +2212,16 @@ public class PureJavaToolkit extends GraphicsToolkit
 						if (bs[(i_527_ >> 16) + i_552_] != 0) {
 							i_554_ = i_524_;
 						}
-						if (i_554_ != 0) {
+						if (i_554_ == 0) {
+							i_531_++;
+						} else {
 							int i_555_ = anIntArray6787[i_531_];
 							int i_556_ = i_554_ + i_555_;
 							int i_557_ = (i_554_ & 0xff00ff) + (i_555_ & 0xff00ff);
 							i_555_ = (i_557_ & 0x1000100) + (i_556_ - i_557_ & 0x10000);
 							anIntArray6787[i_531_++] = i_556_ - i_555_ | i_555_ - (i_555_ >>> 8);
-						} else {
-							i_531_++;
 						}
-						i_527_ += i_529_;
+                        i_527_ += i_529_;
 					}
 					i_528_ += i_530_;
 					i_527_ = i_550_;
@@ -2428,22 +2428,22 @@ public class PureJavaToolkit extends GraphicsToolkit
 	}
 	
 	final void v() {
-		if (aCanvas6755 != null) {
-			anIntArray6787 = aGraphicsBuffer6756.anIntArray7145;
-			anInt6789 = aGraphicsBuffer6756.anInt7146;
-			anInt6791 = aGraphicsBuffer6756.anInt7142;
-			aFloatArray6782 = aFloatArray6792;
-			anInt6765 = anInt6773;
-			anInt6783 = anInt6770;
-		} else {
+		if (aCanvas6755 == null) {
 			anInt6789 = 1;
 			anInt6791 = 1;
 			anIntArray6787 = null;
 			anInt6765 = 1;
 			anInt6783 = 1;
 			aFloatArray6782 = null;
+		} else {
+			anIntArray6787 = aGraphicsBuffer6756.anIntArray7145;
+			anInt6789 = aGraphicsBuffer6756.anInt7146;
+			anInt6791 = aGraphicsBuffer6756.anInt7142;
+			aFloatArray6782 = aFloatArray6792;
+			anInt6765 = anInt6773;
+			anInt6783 = anInt6770;
 		}
-		aClass64_6771 = null;
+        aClass64_6771 = null;
 		method1496();
 	}
 	
@@ -2496,7 +2496,9 @@ public class PureJavaToolkit extends GraphicsToolkit
 	
 	final void method1504(int i, int i_617_, int i_618_, int i_619_, int i_620_, int i_621_, int i_622_, int i_623_, int i_624_, int i_625_) {
 		if (i_619_ != 0 && i_620_ != 0) {
-			if (i_622_ != 65535 && !aD1543.method10(i_622_, -8217).aBoolean1223) {
+			if (i_622_ == 65535 || aD1543.method10(i_622_, -8217).aBoolean1223) {
+				method1497(i, i_617_, i_618_, i_619_, i_623_, i_625_);
+			} else {
 				if (anInt6800 != i_622_) {
 					GLSprite glsprite = (GLSprite) aClass61_6762.method607((long) i_622_, 0);
 					if (glsprite == null) {
@@ -2512,10 +2514,8 @@ public class PureJavaToolkit extends GraphicsToolkit
 					aGLSprite6799 = glsprite;
 				}
 				((GLSprite_Sub2) aGLSprite6799).method1207(i - i_619_, i_617_ - i_620_, i_618_, i_619_ << 1, i_620_ << 1, i_624_, i_623_, i_625_, 1);
-			} else {
-				method1497(i, i_617_, i_618_, i_619_, i_623_, i_625_);
 			}
-		}
+        }
 	}
 	
 	final void la() {

@@ -164,18 +164,18 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19
 		}
 		Plane plane;
 		Plane plane_13_;
-		if (!aBoolean10614) {
+		if (aBoolean10614) {
+			plane = Class368.aPlaneArray4548[aByte5931];
+			plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[0];
+		} else {
 			plane = Node_Sub38_Sub37.aPlaneArray10466[aByte5931];
 			if (aByte5931 >= 3) {
 				plane_13_ = null;
 			} else {
 				plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[1 + aByte5931];
 			}
-		} else {
-			plane = Class368.aPlaneArray4548[aByte5931];
-			plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[0];
 		}
-		return objectdefinition.method3046(aByte10608, anInt5940, anInt5934, plane, bool, (byte) 0, anInt5937, 22, graphicstoolkit, null, i, plane_13_);
+        return objectdefinition.method3046(aByte10608, anInt5940, anInt5934, plane, bool, (byte) 0, anInt5937, 22, graphicstoolkit, null, i, plane_13_);
 	}
 	
 	final boolean method813(int i) {
@@ -261,11 +261,11 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19
 	
 	static final void method829(int i, int i_15_, int i_16_, int i_17_, d var_d, GraphicsToolkit graphicstoolkit, int i_18_) {
 		anInt10597++;
-		if ((Node_Sub25_Sub1.anInt9947 ^ 0xffffffff) > -101) {
+		if (Node_Sub25_Sub1.anInt9947 < 100) {
 			AnimableAnimator.method253(var_d, graphicstoolkit, false);
 		}
 		graphicstoolkit.KA(i_16_, i_17_, i_16_ - -i_18_, i_17_ + i_15_);
-		if ((Node_Sub25_Sub1.anInt9947 ^ 0xffffffff) > -101) {
+		if (Node_Sub25_Sub1.anInt9947 < 100) {
 			int i_19_ = 20;
 			int i_20_ = i_18_ / 2 + i_16_;
 			graphicstoolkit.aa(i_16_, i_17_, i_18_, i_15_, -16777216, 0);

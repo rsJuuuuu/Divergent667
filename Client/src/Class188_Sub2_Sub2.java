@@ -54,7 +54,7 @@ public class Class188_Sub2_Sub2 extends Class188_Sub2
 		anInt9359++;
 		String string_6_ = null;
 		int i_7_ = string.indexOf("--> ");
-		if ((i_7_ ^ 0xffffffff) <= -1) {
+		if (i_7_ >= 0) {
 			string_6_ = string.substring(0, i_7_ - -4);
 			string = string.substring(i_7_ - -4);
 		}

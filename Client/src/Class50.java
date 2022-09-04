@@ -28,11 +28,11 @@ public class Class50
 	}
 	
 	static final void method511(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
-		if ((i ^ 0xffffffff) <= (i_0_ ^ 0xffffffff)) {
+		if (i_0_ <= i) {
 			for (int i_4_ = i_0_; i > i_4_; i_4_++)
 				Class169_Sub4.anIntArrayArray8826[i_4_][i_2_] = i_1_;
 		} else {
-			for (int i_5_ = i; (i_5_ ^ 0xffffffff) > (i_0_ ^ 0xffffffff); i_5_++)
+			for (int i_5_ = i; i_0_ > i_5_; i_5_++)
 				Class169_Sub4.anIntArrayArray8826[i_5_][i_2_] = i_1_;
 		}
 		anInt779++;
@@ -62,7 +62,7 @@ public class Class50
 		anInt775++;
 		if (Class247.aGLSprite3141 != null && aa.aGLSprite102 != null) {
 			int i_10_ = (-(aa.aGLSprite102.method1193() * 2) + i) / Class247.aGLSprite3141.method1193();
-			for (int i_11_ = 0; (i_10_ ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++)
+			for (int i_11_ = 0; i_11_ < i_10_; i_11_++)
 				Class247.aGLSprite3141.setPosition(i_8_ - -aa.aGLSprite102.method1193() - -(i_11_ * Class247.aGLSprite3141.method1193()), i_7_);
 			aa.aGLSprite102.setPosition(i_8_, i_7_);
 			Class339_Sub7.aGLSprite8718.setPosition(-Class339_Sub7.aGLSprite8718.method1193() + i + i_8_, i_7_);

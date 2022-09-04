@@ -32,7 +32,7 @@ public class Class380
 		if (i < 29) {
 			method4170(null, 79, null, -124, false);
 		}
-		for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > -9; i_1_++)
+		for (int i_1_ = 0; i_1_ < 8; i_1_++)
 			aLongArray4878[i_1_] = 0L;
 	}
 	
@@ -53,9 +53,9 @@ public class Class380
 			l_5_ >>>= 8;
 			i_7_ >>>= 8;
 		}
-		for (/**/; (l ^ 0xffffffffffffffffL) < -9L; l -= 8L) {
+		for (/**/; l > 8; l -= 8L) {
 			int i_8_ = bs[i_2_] << i_3_ & 0xff | (0xff & bs[i_2_ - -1]) >>> 8 - i_3_;
-			if (i_8_ < 0 || (i_8_ ^ 0xffffffff) <= -257) {
+			if (i_8_ < 0 || i_8_ >= 256) {
 				throw new RuntimeException("LOGIC ERROR");
 			}
 			aByteArray4876[anInt4883] = (byte) Node_Sub16.method2590(aByteArray4876[anInt4883], i_8_ >>> i_4_);
@@ -96,13 +96,13 @@ public class Class380
 		aByteArray4876[anInt4883] = (byte) Node_Sub16.method2590(aByteArray4876[anInt4883], 128 >>> Node_Sub30.method2723(7, anInt4891));
 		anInt4883++;
 		if (anInt4883 > 32) {
-			while ((anInt4883 ^ 0xffffffff) > -65)
+			while (anInt4883 < 64)
 				aByteArray4876[anInt4883++] = (byte) 0;
 			method4168((byte) 122);
 			anInt4883 = 0;
 		}
 		if (i_10_ == 3) {
-			while ((anInt4883 ^ 0xffffffff) > -33)
+			while (anInt4883 < 32)
 				aByteArray4876[anInt4883++] = (byte) 0;
 			Class311.method3608(aByteArray4881, 0, aByteArray4876, 32, 32);
 			method4168((byte) 127);
@@ -127,13 +127,13 @@ public class Class380
 		anInt4874++;
 		int i = 0;
 		int i_13_ = 0;
-		for (/**/; (i ^ 0xffffffff) > -9; i++) {
+		for (/**/; i < 8; i++) {
 			aLongArray4885[i] = Class262_Sub11.method3177(Class300.method3496(255L, (long) aByteArray4876[i_13_ + 7]), Class262_Sub11.method3177(Class300.method3496(255L << 8, (long) aByteArray4876[i_13_ + 6] << 8), Class262_Sub11.method3177(Class262_Sub11.method3177(Class262_Sub11.method3177(Class262_Sub11.method3177(Class300.method3496(255L << 40, (long) aByteArray4876[i_13_ + 2] << 40), Class262_Sub11.method3177(Class300.method3496(255L, (long) aByteArray4876[i_13_ - -1]) << 48, (long) aByteArray4876[i_13_] << 56)), Class300.method3496(255L << 32, (long) aByteArray4876[3 + i_13_] << 32)), Class300.method3496(255L, (long) aByteArray4876[4 + i_13_]) << 24), Class300.method3496((long) aByteArray4876[i_13_ - -5], 255L) << 16)));
 			i_13_ += 8;
 		}
-		for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > -9; i_14_++)
+		for (int i_14_ = 0; i_14_ < 8; i_14_++)
 			aLongArray4879[i_14_] = Class262_Sub11.method3177(aLongArray4885[i_14_], aLongArray4882[i_14_] = aLongArray4878[i_14_]);
-		for (int i_15_ = 1; (i_15_ ^ 0xffffffff) >= -11; i_15_++) {
+		for (int i_15_ = 1; i_15_ <= 10; i_15_++) {
 			for (int i_16_ = 0; i_16_ < 8; i_16_++) {
 				aLongArray4888[i_16_] = 0L;
 				int i_17_ = 0;
@@ -156,10 +156,10 @@ public class Class380
 					i_22_ -= 8;
 				}
 			}
-			for (int i_23_ = 0; (i_23_ ^ 0xffffffff) > -9; i_23_++)
+			for (int i_23_ = 0; i_23_ < 8; i_23_++)
 				aLongArray4879[i_23_] = aLongArray4888[i_23_];
 		}
-		for (int i_24_ = 0; (i_24_ ^ 0xffffffff) > -9; i_24_++)
+		for (int i_24_ = 0; i_24_ < 8; i_24_++)
 			aLongArray4878[i_24_] = Class262_Sub11.method3177(aLongArray4878[i_24_], Class262_Sub11.method3177(aLongArray4879[i_24_], aLongArray4885[i_24_]));
 		if (b <= 116) {
 			anInt4883 = -14;

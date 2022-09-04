@@ -32,14 +32,14 @@ public class aa_Sub3 extends aa
 		anInt5492++;
 		int i_7_ = -(i_5_ >> 2);
 		i_5_ = -(i_3_ & i_5_);
-		for (int i_8_ = -i_1_; (i_8_ ^ 0xffffffff) > -1; i_8_++) {
+		for (int i_8_ = -i_1_; i_8_ < 0; i_8_++) {
 			for (int i_9_ = i_7_; i_9_ < 0; i_9_++) {
 				bs[i_2_++] += -bs_4_[i_0_++];
 				bs[i_2_++] += -bs_4_[i_0_++];
 				bs[i_2_++] += -bs_4_[i_0_++];
 				bs[i_2_++] += -bs_4_[i_0_++];
 			}
-			for (int i_10_ = i_5_; (i_10_ ^ 0xffffffff) > -1; i_10_++)
+			for (int i_10_ = i_5_; i_10_ < 0; i_10_++)
 				bs[i_2_++] += -bs_4_[i_0_++];
 			i_0_ += i_6_;
 			i_2_ += i;

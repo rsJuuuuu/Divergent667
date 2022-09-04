@@ -51,11 +51,11 @@ public class Class91
 			}
 			Node_Sub38_Sub13.method2831(is_4_, -31813, is, is_3_, player);
 		}
-		if ((0x40 & mask ^ 0xffffffff) != -1) { //emote
+		if ((0x40 & mask) != 0) { //emote
 			int[] emotes = new int[4];
 			for (int i_7_ = 0; i_7_ < 4; i_7_++) {
 				emotes[i_7_] = packet.readUnsignedShortLE();
-				if ((emotes[i_7_] ^ 0xffffffff) == -65536) {
+				if (emotes[i_7_] == 65535) {
 					emotes[i_7_] = -1;
 				}
 			}
@@ -74,10 +74,10 @@ public class Class91
 			if (i_13_ == 15) {
 				i_13_ = -1;
 			}
-			boolean bool = ((i_11_ & 0xca) >> 7 ^ 0xffffffff) == -2;
+			boolean bool = (i_11_ & 0xca) >> 7 == 1;
 			player.sendGraphics(2, i_12_, bool, i_10_, i_13_, i_9_);
 		}
-		if ((mask & 0x20000 ^ 0xffffffff) != -1) {
+		if ((mask & 0x20000) != 0) {
 			player.aByte10896 = packet.read128Byte();
 			player.aByte10878 = packet.read128Byte();
 			player.aByte10884 = packet.readByteC();
@@ -88,35 +88,35 @@ public class Class91
 		if ((0x200 & mask) != 0) {
 			temporaryMovementType = packet.readByteC();
 		}
-		if ((0x2000 & mask ^ 0xffffffff) != -1) {
+		if ((0x2000 & mask) != 0) {
 			int i_14_ = packet.readUnsignedShort128();
 			player.anInt10856 = packet.readUnsignedByte();
 			player.anInt10848 = packet.readUnsignedByteC();
-			player.aBoolean10871 = (i_14_ & 0x8000 ^ 0xffffffff) != -1;
+			player.aBoolean10871 = (i_14_ & 0x8000) != 0;
 			player.anInt10855 = i_14_ & 0x7fff;
 			player.anInt10835 = player.anInt10856 + player.anInt10855 + Class174.clientCycle;
 		}
-		if ((0x80000 & mask ^ 0xffffffff) != -1) { //graphics 3
+		if ((0x80000 & mask) != 0) { //graphics 3
 			int i_15_ = packet.readUnsignedShortLE();
 			int settingsHash = packet.readIntV2();
-			if ((i_15_ ^ 0xffffffff) == -65536) {
+			if (i_15_ == 65535) {
 				i_15_ = -1;
 			}
 			int i_17_ = packet.readUnsignedByteC();
 			int i_18_ = 0x7 & i_17_;
 			int i_19_ = (i_17_ & 0x7c) >> 3;
-			if ((i_19_ ^ 0xffffffff) == -16) {
+			if (i_19_ == 15) {
 				i_19_ = -1;
 			}
 			boolean bool = (i_17_ & 0xac) >> 7 == 1;
 			player.sendGraphics(3, i_18_, bool, settingsHash, i_19_, i_15_);
 		}
-		if ((0x100000 & mask ^ 0xffffffff) != -1) {
-			player.aBoolean11135 = (packet.readUnsignedByteC() ^ 0xffffffff) == -2;
+		if ((0x100000 & mask) != 0) {
+			player.aBoolean11135 = packet.readUnsignedByteC() == 1;
 		}
-		if ((0x4 & mask ^ 0xffffffff) != -1) { //send hits
+		if ((0x4 & mask) != 0) { //send hits
 			int hitsCount = packet.readUnsignedByte();
-			if ((hitsCount ^ 0xffffffff) < -1) {
+			if (hitsCount > 0) {
 				for (int i_21_ = 0; i_21_ < hitsCount; i_21_++) {
 					int soakingMark = -1;
 					int damage = -1;
@@ -138,19 +138,19 @@ public class Class91
 				}
 			}
 		}
-		if ((mask & 0x10000 ^ 0xffffffff) != -1) {
+		if ((mask & 0x10000) != 0) {
 			int i_28_ = packet.readUnsigned128Byte();
 			int[] is = new int[i_28_];
 			int[] is_29_ = new int[i_28_];
-			for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > (i_28_ ^ 0xffffffff); i_30_++) {
+			for (int i_30_ = 0; i_28_ > i_30_; i_30_++) {
 				int i_31_ = packet.readUnsignedShort128();
-				if ((i_31_ & 0xc000) != 49152) {
-					is[i_30_] = i_31_;
-				} else {
+				if ((i_31_ & 0xc000) == 49152) {
 					int i_32_ = packet.readUnsignedShort();
 					is[i_30_] = Node_Sub16.method2590(i_32_, i_31_ << 16);
+				} else {
+					is[i_30_] = i_31_;
 				}
-				is_29_[i_30_] = packet.readUnsignedShort128();
+                is_29_[i_30_] = packet.readUnsignedShort128();
 			}
 			player.method866(is_29_, is, (byte) 103);
 		}
@@ -162,7 +162,7 @@ public class Class91
 			Class249.cachedappearances[playerIndex] = buffer;
 			player.decodeAppearance(buffer, i + 1);
 		}
-		if ((mask & 0x4000 ^ 0xffffffff) != -1) { //force talk
+		if ((mask & 0x4000) != 0) { //force talk
 			String string = packet.readString();
 			if (string.charAt(0) == '~') {
 				string = string.substring(1);
@@ -175,7 +175,7 @@ public class Class91
 		if ((mask & 0x400) != 0) {
 			player.aBoolean11157 = packet.readUnsigned128Byte() == 1;
 		}
-		if ((0x1 & mask ^ 0xffffffff) != -1) {
+		if ((0x1 & mask) != 0) {
 			Class73.movementTypes[playerIndex] = packet.read128Byte();
 		}
 		if ((mask & 0x10 ^ 0xffffffff) != i) { //face entity
@@ -185,7 +185,7 @@ public class Class91
 			}
 			player.faceEntity = i_34_;
 		}
-		if ((mask & 0x1000 ^ 0xffffffff) != -1) {  //force movement
+		if ((mask & 0x1000) != 0) {  //force movement
 			player.toFirstTileX = packet.read128Byte();
 			player.toFirstTileY = packet.readByte();
 			player.toSecondTileX = packet.readByte128();
@@ -193,24 +193,24 @@ public class Class91
 			player.toFirstTileTicketDelay = packet.readUnsignedShortLE() - -Class174.clientCycle;
 			player.toSecondTileTicketDelay = packet.readUnsignedShortLE128() + Class174.clientCycle;
 			player.forceMovementDirection = packet.readUnsignedByte128();
-			if (!player.aBoolean11156) {
-				player.toSecondTileX += player.scenePositionXQueue[0];
-				player.anInt10904 = 1;
-				player.toSecondTileY += player.scenePositionYQueue[0];
-				player.toFirstTileY += player.scenePositionYQueue[0];
-				player.toFirstTileX += player.scenePositionXQueue[0];
-			} else {
+			if (player.aBoolean11156) {
 				player.anInt10904 = 0;
 				player.toSecondTileY += player.anInt11160;
 				player.toFirstTileX += player.anInt11147;
 				player.toFirstTileY += player.anInt11160;
 				player.toSecondTileX += player.anInt11147;
+			} else {
+				player.toSecondTileX += player.scenePositionXQueue[0];
+				player.anInt10904 = 1;
+				player.toSecondTileY += player.scenePositionYQueue[0];
+				player.toFirstTileY += player.scenePositionYQueue[0];
+				player.toFirstTileX += player.scenePositionXQueue[0];
 			}
-			player.anInt10900 = 0;
+            player.anInt10900 = 0;
 		}
 		if ((0x20 & mask) != 0) { //face dir
 			player.anInt11180 = packet.readUnsignedShort();
-			if ((player.anInt10904 ^ 0xffffffff) == -1) {
+			if (player.anInt10904 == 0) {
 				player.method856((byte) -107, player.anInt11180);
 				player.anInt11180 = -1;
 			}
@@ -218,7 +218,7 @@ public class Class91
 		if ((0x2 & mask) != 0) { //graphics 1
 			int id = packet.readUnsignedShort();
 			int settingsHash = packet.readIntLE();
-			if ((id ^ 0xffffffff) == -65536) {
+			if (id == 65535) {
 				id = -1;
 			}
 			int settings2Hash = packet.readUnsignedByte128();
@@ -239,31 +239,31 @@ public class Class91
 			int i_42_ = packet.readUnsignedByteC();
 			int i_43_ = 0x7 & i_42_;
 			int i_44_ = (0x7c & i_42_) >> 3;
-			if ((i_44_ ^ 0xffffffff) == -16) {
+			if (i_44_ == 15) {
 				i_44_ = -1;
 			}
 			boolean bool = (i_42_ >> 7 & 0x1) == 1;
 			player.sendGraphics(1, i_43_, bool, i_41_, i_44_, i_40_);
 		}
 		if (player.aBoolean11156) {
-			if (temporaryMovementType != 127) {
-				byte b_45_;
-				if ((temporaryMovementType ^ 0xffffffff) != 0) {
-					b_45_ = temporaryMovementType;
-				} else {
-					b_45_ = Class73.movementTypes[playerIndex];
-				}
-				Class372.method4103(65, player, b_45_);
-				player.method894(player.anInt11160, player.anInt11147, i + -9379, b_45_);
-			} else {
+			if (temporaryMovementType == 127) {
 				player.method888(player.anInt11147, -89, player.anInt11160);
+			} else {
+				byte b_45_;
+				if (temporaryMovementType == -1) {
+					b_45_ = Class73.movementTypes[playerIndex];
+				} else {
+					b_45_ = temporaryMovementType;
+				}
+                Class372.method4103(65, player, b_45_);
+				player.method894(player.anInt11160, player.anInt11147, i + -9379, b_45_);
 			}
-		}
+        }
 	}
 	
 	static final void method1033(int i, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_) {
 		anInt1224++;
-		if (i_50_ != Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776(false) && i_48_ != 0 && (Class23.anInt434 ^ 0xffffffff) > -51 && (i_47_ ^ 0xffffffff) != 0) {
+		if (i_50_ != Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776(false) && i_48_ != 0 && Class23.anInt434 < 50 && i_47_ != -1) {
 			Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 1, i_47_, i_48_, i_46_, i_49_, 0, i, null);
 		}
 	}
@@ -279,9 +279,9 @@ public class Class91
 	static final void method1035(int i) {
 		anInt1219++;
 		Packet packet = Class218.aClass123_2566.aPacket1570;
-		while ((packet.method2264(Class218.aClass123_2566.anInt1581, -92) ^ 0xffffffff) <= -16) {
+		while (packet.method2264(Class218.aClass123_2566.anInt1581, -92) >= 15) {
 			int index = packet.readBits(15);
-			if ((index ^ 0xffffffff) == -32768) {
+			if (index == 32767) {
 				break;
 			}
 			boolean bool = false;
@@ -306,7 +306,7 @@ public class Class91
 				Class194_Sub1_Sub1.anIntArray9370[Node_Sub38_Sub6.anInt10132++] = index;
 			}
 			int i_54_ = packet.readBits(5);
-			if ((i_54_ ^ 0xffffffff) < -16) {
+			if (i_54_ > 15) {
 				i_54_ -= 32;
 			}
 			int i_55_ = packet.readBits(2); //plane

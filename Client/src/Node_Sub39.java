@@ -48,10 +48,10 @@ public class Node_Sub39 extends Node
 		if (bool != false) {
 			method2922(true);
 		}
-		if ((aString7483.length() ^ 0xffffffff) < -11) {
+		if (aString7483.length() > 10) {
 			aString7483 = aString7483.substring(0, 10);
 		}
-		if ((aString7469.length() ^ 0xffffffff) < -11) {
+		if (aString7469.length() > 10) {
 			aString7469 = aString7469.substring(0, 10);
 		}
 	}
@@ -100,47 +100,43 @@ public class Node_Sub39 extends Node
 			method2919(false);
 		}
 		int i_3_ = widget.anInt4695;
-		if (widget.aByte4750 != 0) {
-			if (widget.aByte4750 == 1) {
-				widget.anInt4809 = -widget.anInt4693 + i_1_;
-			} else if (widget.aByte4750 == 2) {
-				widget.anInt4809 = widget.anInt4693 * i_1_ >> 14;
-			}
-		} else {
+		if (widget.aByte4750 == 0) {
 			widget.anInt4809 = widget.anInt4693;
+		} else if (widget.aByte4750 == 1) {
+			widget.anInt4809 = -widget.anInt4693 + i_1_;
+		} else if (widget.aByte4750 == 2) {
+			widget.anInt4809 = widget.anInt4693 * i_1_ >> 14;
 		}
-		if ((widget.aByte4741 ^ 0xffffffff) == -1) {
+		if (widget.aByte4741 == 0) {
 			widget.anInt4695 = widget.anInt4722;
-		} else if ((widget.aByte4741 ^ 0xffffffff) != -2) {
-			if (widget.aByte4741 == 2) {
-				widget.anInt4695 = i * widget.anInt4722 >> 14;
-			}
-		} else {
+		} else if (widget.aByte4741 == 1) {
 			widget.anInt4695 = -widget.anInt4722 + i;
+		} else if (widget.aByte4741 == 2) {
+			widget.anInt4695 = i * widget.anInt4722 >> 14;
 		}
-		if ((widget.aByte4750 ^ 0xffffffff) == -5) {
+		if (widget.aByte4750 == 4) {
 			widget.anInt4809 = widget.anInt4792 * widget.anInt4695 / widget.anInt4700;
 		}
 		if (widget.aByte4741 == 4) {
 			widget.anInt4695 = widget.anInt4809 * widget.anInt4700 / widget.anInt4792;
 		}
-		if (Class54.aBoolean817 && ((Client.method113(widget).settingsHash ^ 0xffffffff) != -1 || widget.type == 0)) {
-			if ((widget.anInt4695 ^ 0xffffffff) <= -6 || (widget.anInt4809 ^ 0xffffffff) <= -6) {
-				if ((widget.anInt4809 ^ 0xffffffff) >= -1) {
+		if (Class54.aBoolean817 && (Client.method113(widget).settingsHash != 0 || widget.type == 0)) {
+			if (widget.anInt4695 < 5 && widget.anInt4809 < 5) {
+				widget.anInt4695 = 5;
+				widget.anInt4809 = 5;
+			} else {
+				if (widget.anInt4809 <= 0) {
 					widget.anInt4809 = 5;
 				}
 				if (widget.anInt4695 <= 0) {
 					widget.anInt4695 = 5;
 				}
-			} else {
-				widget.anInt4695 = 5;
-				widget.anInt4809 = 5;
 			}
 		}
-		if ((Class200_Sub1.anInt5146 ^ 0xffffffff) == (widget.anInt4814 ^ 0xffffffff)) {
+		if (widget.anInt4814 == Class200_Sub1.anInt5146) {
 			Class324.aWidget4085 = widget;
 		}
-		if (bool && widget.anObjectArray4777 != null && ((i_2_ ^ 0xffffffff) != (widget.anInt4809 ^ 0xffffffff) || i_3_ != widget.anInt4695)) {
+		if (bool && widget.anObjectArray4777 != null && (widget.anInt4809 != i_2_ || i_3_ != widget.anInt4695)) {
 			Node_Sub37 node_sub37 = new Node_Sub37();
 			node_sub37.parameters = widget.anObjectArray4777;
 			node_sub37.aWidget7437 = widget;
@@ -180,27 +176,23 @@ public class Node_Sub39 extends Node
 	
 	Node_Sub39(boolean bool, SignLink signlink) {
 		if (bool) {
-			if (!SignLink.aString3981.startsWith("win")) {
-				if (!SignLink.aString3981.startsWith("mac")) {
-					if (SignLink.aString3981.startsWith("linux")) {
-						anInt7485 = 3;
-					} else {
-						anInt7485 = 4;
-					}
-				} else {
-					anInt7485 = 2;
-				}
-			} else {
+			if (SignLink.aString3981.startsWith("win")) {
 				anInt7485 = 1;
+			} else if (SignLink.aString3981.startsWith("mac")) {
+				anInt7485 = 2;
+			} else if (SignLink.aString3981.startsWith("linux")) {
+				anInt7485 = 3;
+			} else {
+				anInt7485 = 4;
 			}
-            aBoolean7475 = !(!SignLink.aString3984.startsWith("amd64") && !SignLink.aString3984.startsWith("x86_64"));
-			if ((anInt7485 ^ 0xffffffff) == -2) {
+			aBoolean7475 = !(!SignLink.aString3984.startsWith("amd64") && !SignLink.aString3984.startsWith("x86_64"));
+			if (anInt7485 == 1) {
 				if (SignLink.aString3982.indexOf("4.0") != -1) {
 					anInt7488 = 1;
-				} else if ((SignLink.aString3982.indexOf("4.1") ^ 0xffffffff) == 0) {
-					if ((SignLink.aString3982.indexOf("4.9") ^ 0xffffffff) == 0) {
-						if ((SignLink.aString3982.indexOf("5.0") ^ 0xffffffff) == 0) {
-							if ((SignLink.aString3982.indexOf("5.1") ^ 0xffffffff) != 0) {
+				} else if (SignLink.aString3982.indexOf("4.1") == -1) {
+					if (SignLink.aString3982.indexOf("4.9") == -1) {
+						if (SignLink.aString3982.indexOf("5.0") == -1) {
+							if (SignLink.aString3982.indexOf("5.1") != -1) {
 								anInt7488 = 5;
 							} else if (SignLink.aString3982.indexOf("6.0") != -1) {
 								anInt7488 = 6;
@@ -216,22 +208,22 @@ public class Node_Sub39 extends Node
 				} else {
 					anInt7488 = 2;
 				}
-			} else if ((anInt7485 ^ 0xffffffff) == -3) {
+			} else if (anInt7485 == 2) {
 				if (SignLink.aString3982.indexOf("10.4") != -1) {
 					anInt7488 = 20;
-				} else if ((SignLink.aString3982.indexOf("10.5") ^ 0xffffffff) != 0) {
+				} else if (SignLink.aString3982.indexOf("10.5") != -1) {
 					anInt7488 = 21;
-				} else if ((SignLink.aString3982.indexOf("10.6") ^ 0xffffffff) == 0) {
-					if ((SignLink.aString3982.indexOf("10.7") ^ 0xffffffff) != 0) {
+				} else if (SignLink.aString3982.indexOf("10.6") == -1) {
+					if (SignLink.aString3982.indexOf("10.7") != -1) {
 						anInt7488 = 23;
 					}
 				} else {
 					anInt7488 = 22;
 				}
 			}
-			if ((SignLink.aString3989.toLowerCase().indexOf("sun") ^ 0xffffffff) == 0) {
+			if (SignLink.aString3989.toLowerCase().indexOf("sun") == -1) {
 				if (SignLink.aString3989.toLowerCase().indexOf("microsoft") == -1) {
-					if ((SignLink.aString3989.toLowerCase().indexOf("apple") ^ 0xffffffff) == 0) {
+					if (SignLink.aString3989.toLowerCase().indexOf("apple") == -1) {
 						anInt7496 = 4;
 					} else {
 						anInt7496 = 3;
@@ -247,7 +239,7 @@ public class Node_Sub39 extends Node
 			try {
 				for (/**/; i < SignLink.aString3995.length(); i++) {
 					int i_5_ = SignLink.aString3995.charAt(i);
-					if ((i_5_ ^ 0xffffffff) > -49 || (i_5_ ^ 0xffffffff) < -58) {
+					if (i_5_ < 48 || i_5_ > 57) {
 						break;
 					}
 					i_4_ = 10 * i_4_ - -i_5_ + -48;
@@ -261,7 +253,7 @@ public class Node_Sub39 extends Node
 			try {
 				while (i < SignLink.aString3995.length()) {
 					int i_6_ = SignLink.aString3995.charAt(i);
-					if ((i_6_ ^ 0xffffffff) > -49 || i_6_ > 57) {
+					if (i_6_ < 48 || i_6_ > 57) {
 						break;
 					}
 					i++;
@@ -276,7 +268,7 @@ public class Node_Sub39 extends Node
 			try {
 				for (/**/; SignLink.aString3995.length() > i; i++) {
 					int i_7_ = SignLink.aString3995.charAt(i);
-					if (i_7_ < 48 || (i_7_ ^ 0xffffffff) < -58) {
+					if (i_7_ < 48 || i_7_ > 57) {
 						break;
 					}
 					i_4_ = 10 * i_4_ - -i_7_ + -48;
@@ -285,7 +277,7 @@ public class Node_Sub39 extends Node
 				/* empty */
 			}
 			anInt7480 = i_4_;
-			if ((anInt7474 ^ 0xffffffff) < -4) {
+			if (anInt7474 > 3) {
 				anInt7482 = Class263.anInt3336;
 			} else {
 				anInt7482 = 0;
@@ -294,7 +286,7 @@ public class Node_Sub39 extends Node
             aBoolean7489 = !signlink.aBoolean4005;
 			try {
 				int[] is = HardwareInfo.getCPUInfo();
-				if (is != null && (is.length ^ 0xffffffff) == -8) {
+				if (is != null && is.length == 7) {
 					anInt7477 = is[2];
 					anInt7468 = is[5];
 					anInt7484 = is[6];

@@ -9,13 +9,13 @@ public class lh
 		if (b < 54) {
 			a((byte) -67, 13);
 		}
-        return (i ^ 0xffffffff) <= -1;
+        return i >= 0;
     }
 	
 	public static final boolean a(int i, boolean bool) {
 		if (bool != true) {
 			a((byte) 91, 118);
 		}
-        return -1 < (i ^ 0xffffffff);
+        return i < 0;
     }
 }

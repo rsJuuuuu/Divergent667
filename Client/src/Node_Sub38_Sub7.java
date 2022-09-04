@@ -93,15 +93,15 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 					i_21_ = is_23_[2];
 					for (;;) {
 						int[] is_26_ = is_17_[i_22_];
-						if ((is_26_[0] ^ 0xffffffff) >= (i_25_ ^ 0xffffffff) && is_26_[1] >= i_25_) {
+						if (i_25_ >= is_26_[0] && is_26_[1] >= i_25_) {
 							break;
 						}
 						i_24_++;
-						if ((i_9_ ^ 0xffffffff) >= (++i_22_ ^ 0xffffffff)) {
+						if (++i_22_ >= i_9_) {
 							i_22_ = 0;
 						}
 					}
-					if ((i_22_ ^ 0xffffffff) != (i_7_ ^ 0xffffffff)) {
+					if (i_7_ != i_22_) {
 						int i_27_ = i_3_ + i_6_;
 						if (i_27_ < 0) {
 							i_27_ += Class339_Sub7.anInt8728;
@@ -109,14 +109,14 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 						if (Class339_Sub7.anInt8728 < i_27_) {
 							i_27_ -= Class339_Sub7.anInt8728;
 						}
-						for (int i_28_ = 1; (i_24_ ^ 0xffffffff) <= (i_28_ ^ 0xffffffff); i_28_++) {
+						for (int i_28_ = 1; i_28_ <= i_24_; i_28_++) {
 							int[] is_29_ = is_17_[(i_28_ + i_7_) % i_9_];
 							i_21_ = Math.max(i_21_, is_29_[2]);
 						}
 						for (int i_30_ = 0; i_24_ >= i_30_; i_30_++) {
 							int[] is_31_ = is_17_[(i_30_ + i_7_) % i_9_];
 							int i_32_ = is_31_[2];
-							if ((i_32_ ^ 0xffffffff) != (i_21_ ^ 0xffffffff)) {
+							if (i_21_ != i_32_) {
 								int i_33_ = is_31_[0];
 								int i_34_ = is_31_[1];
 								int i_35_;
@@ -137,12 +137,12 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 					}
 					i_7_ = i_22_;
 				}
-				if ((i_21_ - -i_19_ ^ 0xffffffff) < (Node_Sub38_Sub1.anInt10083 ^ 0xffffffff)) {
+				if (Node_Sub38_Sub1.anInt10083 < i_21_ - -i_19_) {
 					i_19_ = -i_21_ + Node_Sub38_Sub1.anInt10083;
 				} else {
 					bool = false;
 				}
-				if ((i_20_ ^ 0xffffffff) == (Class339_Sub7.anInt8728 ^ 0xffffffff)) {
+				if (Class339_Sub7.anInt8728 == i_20_) {
 					method2807(is_2_, i_19_, random, i_21_, i_4_ + i_6_, i_18_, (byte) -58);
 					if (bool) {
 						break;
@@ -162,7 +162,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 					i_3_ = -i_5_ + i_4_;
 					i_6_ = 0;
 					int i_39_ = i_3_;
-					if ((i_39_ ^ 0xffffffff) > -1) {
+					if (i_39_ < 0) {
 						i_39_ += Class339_Sub7.anInt8728;
 					}
 					if (Class339_Sub7.anInt8728 < i_39_) {
@@ -171,11 +171,11 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 					i_7_ = 0;
 					for (;;) {
 						int[] is_40_ = is_17_[i_7_];
-						if (i_39_ >= is_40_[0] && (i_39_ ^ 0xffffffff) >= (is_40_[1] ^ 0xffffffff)) {
+						if (i_39_ >= is_40_[0] && is_40_[1] >= i_39_) {
 							break;
 						}
 						i_7_++;
-						if ((i_7_ ^ 0xffffffff) <= (i_9_ ^ 0xffffffff)) {
+						if (i_9_ <= i_7_) {
 							i_7_ = 0;
 						}
 					}
@@ -204,13 +204,13 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 		anInt10158++;
 		int i_45_ = anInt10157 <= 0 ? 4096 : -Class330.method3838(b + -5150, anInt10157, random) + 4096;
 		int i_46_ = anInt10141 * anInt10148 >> 12;
-		int i_47_ = anInt10148 + -((i_46_ ^ 0xffffffff) >= -1 ? 0 : Class330.method3838(b ^ 0x146e, i_46_, random));
+		int i_47_ = anInt10148 + -(i_46_ <= 0 ? 0 : Class330.method3838(b ^ 0x146e, i_46_, random));
 		if (Class339_Sub7.anInt8728 <= i_43_) {
 			i_43_ -= Class339_Sub7.anInt8728;
 		}
 		if (b == -58) {
-			if ((i_47_ ^ 0xffffffff) >= -1) {
-				if ((Class339_Sub7.anInt8728 ^ 0xffffffff) > (i_44_ + i_43_ ^ 0xffffffff)) {
+			if (i_47_ <= 0) {
+				if (i_44_ + i_43_ > Class339_Sub7.anInt8728) {
 					int i_48_ = -i_43_ + Class339_Sub7.anInt8728;
 					for (int i_49_ = 0; i_49_ < i; i_49_++) {
 						int[] is_50_ = is[i_49_ + i_42_];
@@ -221,16 +221,16 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 					for (int i_51_ = 0; i > i_51_; i_51_++)
 						Class311.method3604(is[i_51_ + i_42_], i_43_, i_44_, i_45_);
 				}
-			} else if ((i ^ 0xffffffff) < -1 && i_44_ > 0) {
+			} else if (i > 0 && i_44_ > 0) {
 				int i_52_ = i_44_ / 2;
 				int i_53_ = i / 2;
-				int i_54_ = (i_47_ ^ 0xffffffff) < (i_52_ ^ 0xffffffff) ? i_52_ : i_47_;
-				int i_55_ = (i_53_ ^ 0xffffffff) <= (i_47_ ^ 0xffffffff) ? i_47_ : i_53_;
+				int i_54_ = i_52_ < i_47_ ? i_52_ : i_47_;
+				int i_55_ = i_47_ <= i_53_ ? i_47_ : i_53_;
 				int i_56_ = i_54_ + i_43_;
 				int i_57_ = i_44_ + -(i_54_ * 2);
 				for (int i_58_ = 0; i > i_58_; i_58_++) {
 					int[] is_59_ = is[i_42_ + i_58_];
-					if ((i_58_ ^ 0xffffffff) > (i_55_ ^ 0xffffffff)) {
+					if (i_55_ > i_58_) {
 						int i_60_ = i_45_ * i_58_ / i_55_;
 						if (anInt10140 == 0) {
 							for (int i_61_ = 0; i_54_ > i_61_; i_61_++) {
@@ -252,20 +252,20 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 						}
 					} else {
 						int i_66_ = i - i_58_ - 1;
-						if ((i_66_ ^ 0xffffffff) > (i_55_ ^ 0xffffffff)) {
+						if (i_55_ > i_66_) {
 							int i_67_ = i_66_ * i_45_ / i_55_;
-							if (anInt10140 != 0) {
-								for (int i_68_ = 0; (i_54_ ^ 0xffffffff) < (i_68_ ^ 0xffffffff); i_68_++) {
-									int i_69_ = i_68_ * i_45_ / i_54_;
-									is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ + i_68_)] = is_59_[Node_Sub30.method2723(i_43_ + i_44_ + (-i_68_ + -1), Class303.anInt3824)] = i_67_ > i_69_ ? i_69_ : i_67_;
-								}
-							} else {
+							if (anInt10140 == 0) {
 								for (int i_70_ = 0; i_70_ < i_54_; i_70_++) {
 									int i_71_ = i_45_ * i_70_ / i_54_;
 									is_59_[Node_Sub30.method2723(i_43_ - -i_70_, Class303.anInt3824)] = is_59_[Node_Sub30.method2723(-1 + (-i_70_ + (i_44_ + i_43_)), Class303.anInt3824)] = i_67_ * i_71_ >> 12;
 								}
+							} else {
+								for (int i_68_ = 0; i_68_ < i_54_; i_68_++) {
+									int i_69_ = i_68_ * i_45_ / i_54_;
+									is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ + i_68_)] = is_59_[Node_Sub30.method2723(i_43_ + i_44_ + (-i_68_ + -1), Class303.anInt3824)] = i_67_ > i_69_ ? i_69_ : i_67_;
+								}
 							}
-							if (Class339_Sub7.anInt8728 >= i_57_ + i_56_) {
+                            if (Class339_Sub7.anInt8728 >= i_57_ + i_56_) {
 								Class311.method3604(is_59_, i_56_, i_57_, i_67_);
 							} else {
 								int i_72_ = Class339_Sub7.anInt8728 - i_56_;
@@ -273,9 +273,9 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 								Class311.method3604(is_59_, 0, -i_72_ + i_57_, i_67_);
 							}
 						} else {
-							for (int i_73_ = 0; (i_73_ ^ 0xffffffff) > (i_54_ ^ 0xffffffff); i_73_++)
+							for (int i_73_ = 0; i_54_ > i_73_; i_73_++)
 								is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ - -i_73_)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, -1 + (-i_73_ + (i_44_ + i_43_)))] = i_73_ * i_45_ / i_54_;
-							if ((Class339_Sub7.anInt8728 ^ 0xffffffff) <= (i_56_ + i_57_ ^ 0xffffffff)) {
+							if (i_56_ + i_57_ <= Class339_Sub7.anInt8728) {
 								Class311.method3604(is_59_, i_56_, i_57_, i_45_);
 							} else {
 								int i_74_ = Class339_Sub7.anInt8728 + -i_56_;
@@ -318,11 +318,11 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 		}
 		int i_78_ = i_77_ >> 9;
 		int i_79_ = i_76_ >> 9;
-		if ((i_78_ ^ 0xffffffff) > -1 || (i_79_ ^ 0xffffffff) > -1 || -1 + Node_Sub54.GAME_SCENE_WDITH < i_78_ || Class377_Sub1.GAME_SCENE_HEIGHT + -1 < i_79_) {
+		if (i_78_ < 0 || i_79_ < 0 || -1 + Node_Sub54.GAME_SCENE_WDITH < i_78_ || Class377_Sub1.GAME_SCENE_HEIGHT + -1 < i_79_) {
 			return 0;
 		}
 		int i_80_ = i;
-		if (i_80_ < 3 && (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_78_][i_79_] & 0x2 ^ 0xffffffff) != -1) {
+		if (i_80_ < 3 && (CacheNode_Sub11.aByteArrayArrayArray9550[1][i_78_][i_79_] & 0x2) != 0) {
 			i_80_++;
 		}
 		return Class320_Sub10.aPlaneArray8300[i_80_].method3260(i_76_, -121, i_77_);
@@ -419,39 +419,31 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 							while_65_:
 								do {
 									do {
-										if (i_89_ != 0) {
-											if (i_89_ != 1) {
-												if (i_89_ != 2) {
-													if ((i_89_ ^ 0xffffffff) != -4) {
-														if ((i_89_ ^ 0xffffffff) != -5) {
-															if ((i_89_ ^ 0xffffffff) != -6) {
-																if ((i_89_ ^ 0xffffffff) != -7) {
-																	if (i_89_ != 7) {
-																		if ((i_89_ ^ 0xffffffff) == -9) {
-																			break while_70_;
-																		}
-																		break while_71_;
-																	}
-																} else {
-																	break while_68_;
-																}
-																break while_69_;
-															}
-														} else {
-															break while_66_;
-														}
-														break while_67_;
-													}
-												} else {
-													break;
-												}
-												break while_65_;
-											}
-										} else {
+										if (i_89_ == 0) {
 											anInt10147 = buffer.readUnsignedByte();
 											return;
-										}
-										anInt10155 = buffer.readUnsignedShort();
+										} else if (i_89_ != 1) {
+                                            if (i_89_ == 2) {
+                                                break;
+                                            } else if (i_89_ != 3) {
+                                                if (i_89_ == 4) {
+                                                    break while_66_;
+                                                } else if (i_89_ != 5) {
+                                                    if (i_89_ == 6) {
+                                                        break while_68_;
+                                                    } else if (i_89_ != 7) {
+                                                        if (i_89_ == 8) {
+                                                            break while_70_;
+                                                        }
+                                                        break while_71_;
+                                                    }
+                                                    break while_69_;
+                                                }
+                                                break while_67_;
+                                            }
+                                            break while_65_;
+                                        }
+                                        anInt10155 = buffer.readUnsignedShort();
 										return;
 									} while (false);
 									anInt10149 = buffer.readUnsignedShort();
@@ -478,7 +470,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38
 	
 	static final String method2811(boolean bool, int i, int i_90_, boolean bool_91_) {
 		anInt10154++;
-		if (i_90_ < 2 || (i_90_ ^ 0xffffffff) < -37) {
+		if (i_90_ < 2 || i_90_ > 36) {
 			throw new IllegalArgumentException("Invalid radix:" + i_90_);
 		}
 		if (!bool_91_ || i < 0) {

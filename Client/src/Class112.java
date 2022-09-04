@@ -173,10 +173,10 @@ public class Class112
 			int i_5_ = -1 + aClass302_1430.method3526(-20871);
 			aClass302_1430.method3537(-2, i_5_);
 		}
-		if (Node_Sub38_Sub34.aClass353_10443 != aClass353_1421) {
-			aStringArray1438 = new String[] { null, null, null, null, null, null };
-		} else {
+		if (Node_Sub38_Sub34.aClass353_10443 == aClass353_1421) {
 			aStringArray1438 = new String[] { null, null, null, null, null, Class22.aClass22_385.method297(anInt1422) };
+		} else {
+			aStringArray1438 = new String[] { null, null, null, null, null, null };
 		}
-	}
+    }
 }

@@ -45,17 +45,17 @@ public class Class223
 				if (player.anInt11139 == 0) {
 					boolean bool_0_ = true;
 					if (Class295.myPlayer.anInt11184 != -1 && player.anInt11184 != -1) {
-						int i_1_ = (Class295.myPlayer.anInt11184 ^ 0xffffffff) > (player.anInt11184 ^ 0xffffffff) ? Class295.myPlayer.anInt11184 : player.anInt11184;
+						int i_1_ = player.anInt11184 > Class295.myPlayer.anInt11184 ? Class295.myPlayer.anInt11184 : player.anInt11184;
 						int i_2_ = -player.combatLevel + Class295.myPlayer.combatLevel;
-						if ((i_2_ ^ 0xffffffff) > -1) {
+						if (i_2_ < 0) {
 							i_2_ = -i_2_;
 						}
-						if ((i_2_ ^ 0xffffffff) < (i_1_ ^ 0xffffffff)) {
+						if (i_1_ < i_2_) {
 							bool_0_ = false;
 						}
 					}
 					String string_3_ = Class169_Sub4.aClass353_8825 != Class209.aClass353_2483 ? Class22.aClass22_391.method297(Class35.language) : Class22.aClass22_393.method297(Class35.language);
-					if ((player.combatLevel ^ 0xffffffff) <= (player.combatLevelWithSummoning ^ 0xffffffff)) {
+					if (player.combatLevelWithSummoning <= player.combatLevel) {
 						string = player.fixedName(false, true) + (bool_0_ ? Class368.method4077(Class295.myPlayer.combatLevel, player.combatLevel) : "<col=ffffff>") + " (" + string_3_ + player.combatLevel + ")";
 					} else {
 						string = player.fixedName(false, true) + (!bool_0_ ? "<col=ffffff>" : Class368.method4077(Class295.myPlayer.combatLevel, player.combatLevel)) + " (" + string_3_ + player.combatLevel + "+" + (player.combatLevelWithSummoning + -player.combatLevel) + ")";
@@ -65,43 +65,43 @@ public class Class223
 				} else {
 					string = player.fixedName(false, true) + " (" + Class22.aClass22_392.method297(Class35.language) + player.anInt11139 + ")";
 				}
-				if (Class87.removeWalkHere && !bool && (0x8 & Class200_Sub2.anInt4943 ^ 0xffffffff) != -1) {
+				if (Class87.removeWalkHere && !bool && (0x8 & Class200_Sub2.anInt4943) != 0) {
 					Class320_Sub8.anInt8285++;
 					Node_Sub32.method2731(false, -1, (long) player.index, 0, 0, Class84.aString1148, 44, true, Class201.anInt2444, Class66.aString5177 + " -> <col=ffffff>" + string, (long) player.index, (byte) -18, false);
 				}
 				if (i != -15052) {
 					aString2656 = null;
 				}
-				if (!bool) {
+				if (bool) {
+					Node_Sub32.method2731(true, 0, 0L, 0, 0, "<col=cccccc>" + string, -1, false, -1, "", (long) player.index, (byte) -18, false);
+				} else {
 					for (int i_4_ = 7; i_4_ >= 0; i_4_--) {
 						if (Class320_Sub13.aStringArray8338[i_4_] != null) {
 							short s = 0;
 							if (Class209.aClass353_2483 == Node_Sub38_Sub34.aClass353_10443 && Class320_Sub13.aStringArray8338[i_4_].equalsIgnoreCase(Class22.aClass22_386.method297(Class35.language))) {
-								if (Class171.aBoolean2058 && !Settings.forceLeftClick() && (Class295.myPlayer.combatLevel ^ 0xffffffff) > (player.combatLevel ^ 0xffffffff)) {
+								if (Class171.aBoolean2058 && !Settings.forceLeftClick() && player.combatLevel > Class295.myPlayer.combatLevel) {
 									s = (short) 2000;
 								}
-								if ((Class295.myPlayer.anInt11134 ^ 0xffffffff) != -1 && player.anInt11134 != 0) {
-									if ((player.anInt11134 ^ 0xffffffff) != (Class295.myPlayer.anInt11134 ^ 0xffffffff)) {
-										s = (short) 0;
-									} else {
+								if (Class295.myPlayer.anInt11134 != 0 && player.anInt11134 != 0) {
+									if (Class295.myPlayer.anInt11134 == player.anInt11134) {
 										s = (short) 2000;
+									} else {
+										s = (short) 0;
 									}
-								} else if (player.aBoolean11135) {
+                                } else if (player.aBoolean11135) {
 									s = (short) 2000;
 								}
 							} else if (Class319.aBooleanArray4060[i_4_]) {
 								s = (short) 2000;
 							}
 							short s_5_ = (short) (s + Node_Sub38_Sub9.aShortArray10186[i_4_]);
-							int i_6_ = (Class78.anIntArray1031[i_4_] ^ 0xffffffff) == 0 ? Class230_Sub1.anInt9013 : Class78.anIntArray1031[i_4_];
+							int i_6_ = Class78.anIntArray1031[i_4_] == -1 ? Class230_Sub1.anInt9013 : Class78.anIntArray1031[i_4_];
 							Node_Sub32.method2731(false, -1, (long) player.index, 0, 0, Class320_Sub13.aStringArray8338[i_4_], s_5_, true, i_6_, "<col=ffffff>" + string, (long) player.index, (byte) -18, false);
 							Class106.anInt1349++;
 						}
 					}
-				} else {
-					Node_Sub32.method2731(true, 0, 0L, 0, 0, "<col=cccccc>" + string, -1, false, -1, "", (long) player.index, (byte) -18, false);
 				}
-				if (!bool) {
+                if (!bool) {
 					for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(65280); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
 						if (cachenode_sub13.anInt9562 == 58) {
 							cachenode_sub13.aString9565 = "<col=ffffff>" + string;

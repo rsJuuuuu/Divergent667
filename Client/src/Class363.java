@@ -37,24 +37,20 @@ public class Class363
 				anIntArray4508 = new int[i_1_];
 				for (int i_2_ = 0; anIntArray4508.length > i_2_; i_2_++)
 					anIntArray4508[i_2_] = buffer.readUnsignedByte();
-			} else if ((i_0_ ^ 0xffffffff) == -4) {
+			} else if (i_0_ == 3) {
 				anInt4506 = buffer.readUnsignedByte();
-			} else if ((i_0_ ^ 0xffffffff) != -5) {
-				if (i_0_ != 5) {
-					if (i_0_ == 6) {
-						anIntArray4507 = new int[buffer.readUnsignedByte()];
-						for (int i_3_ = 0; anIntArray4507.length > i_3_; i_3_++)
-							anIntArray4507[i_3_] = buffer.readUnsignedByte();
-					}
-				} else {
-					anIntArray4501 = new int[buffer.readUnsignedByte()];
-					for (int i_4_ = 0; anIntArray4501.length > i_4_; i_4_++)
-						anIntArray4501[i_4_] = buffer.readUnsignedByte();
-				}
-			} else {
+			} else if (i_0_ == 4) {
 				anInt4504 = buffer.readUnsignedByte();
+			} else if (i_0_ == 5) {
+				anIntArray4501 = new int[buffer.readUnsignedByte()];
+				for (int i_4_ = 0; anIntArray4501.length > i_4_; i_4_++)
+					anIntArray4501[i_4_] = buffer.readUnsignedByte();
+			} else if (i_0_ == 6) {
+				anIntArray4507 = new int[buffer.readUnsignedByte()];
+				for (int i_3_ = 0; anIntArray4507.length > i_3_; i_3_++)
+					anIntArray4507[i_3_] = buffer.readUnsignedByte();
 			}
-		}
+        }
 		anInt4510++;
 	}
 	

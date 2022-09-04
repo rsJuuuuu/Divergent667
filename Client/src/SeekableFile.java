@@ -50,7 +50,7 @@ public class SeekableFile
 			if (i >= -58) {
 				method3567(-1);
 			}
-			if ((aLong3895 ^ 0xffffffffffffffffL) != 0L && (aLong3878 ^ 0xffffffffffffffffL) <= (aLong3895 ^ 0xffffffffffffffffL) && ((long) i_0_ + aLong3878 ^ 0xffffffffffffffffL) >= ((long) anInt3880 + aLong3895 ^ 0xffffffffffffffffL)) {
+			if (aLong3895 != -1 && aLong3895 <= aLong3878 && (long) anInt3880 + aLong3895 >= (long) i_0_ + aLong3878) {
 				Class311.method3608(aByteArray3894, (int) (-aLong3895 + aLong3878), bs, i_1_, i_0_);
 				aLong3878 += (long) i_0_;
 				return;
@@ -58,7 +58,7 @@ public class SeekableFile
 			long l = aLong3878;
 			int i_2_ = i_1_;
 			int i_3_ = i_0_;
-			if (aLong3878 >= aLong3893 && (aLong3878 ^ 0xffffffffffffffffL) > (aLong3893 - -(long) anInt3891 ^ 0xffffffffffffffffL)) {
+			if (aLong3878 >= aLong3893 && aLong3893 - -(long) anInt3891 > aLong3878) {
 				int i_4_ = (int) ((long) anInt3891 + -aLong3878 - -aLong3893);
 				if (i_0_ < i_4_) {
 					i_4_ = i_0_;
@@ -81,7 +81,7 @@ public class SeekableFile
 					i_1_ += i_5_;
 					aLong3887 += (long) i_5_;
 				}
-			} else if ((i_0_ ^ 0xffffffff) < -1) {
+			} else if (i_0_ > 0) {
 				method3572((byte) -128);
 				int i_6_ = i_0_;
 				if (anInt3891 < i_6_) {
@@ -92,35 +92,31 @@ public class SeekableFile
 				aLong3878 += (long) i_6_;
 				i_0_ -= i_6_;
 			}
-			if ((aLong3895 ^ 0xffffffffffffffffL) != 0L) {
+			if (aLong3895 != -1) {
 				if (aLong3895 > aLong3878 && i_0_ > 0) {
 					int i_7_ = (int) (-aLong3878 + aLong3895) + i_1_;
-					if ((i_7_ ^ 0xffffffff) < (i_0_ + i_1_ ^ 0xffffffff)) {
+					if (i_0_ + i_1_ < i_7_) {
 						i_7_ = i_1_ - -i_0_;
 					}
-					while ((i_7_ ^ 0xffffffff) < (i_1_ ^ 0xffffffff)) {
+					while (i_1_ < i_7_) {
 						i_0_--;
 						bs[i_1_++] = (byte) 0;
 						aLong3878++;
 					}
 				}
 				long l_8_ = -1L;
-				if (l > aLong3895 || (aLong3895 ^ 0xffffffffffffffffL) <= (l - -(long) i_3_ ^ 0xffffffffffffffffL)) {
-					if (aLong3895 <= l && (aLong3895 + (long) anInt3880 ^ 0xffffffffffffffffL) < (l ^ 0xffffffffffffffffL)) {
-						l_8_ = l;
-					}
-				} else {
+				if (l <= aLong3895 && l - -(long) i_3_ > aLong3895) {
 					l_8_ = aLong3895;
+				} else if (aLong3895 <= l && l < aLong3895 + (long) anInt3880) {
+					l_8_ = l;
 				}
-				long l_9_ = -1L;
-				if (l >= aLong3895 - -(long) anInt3880 || (long) i_3_ + l < aLong3895 + (long) anInt3880) {
-					if ((aLong3895 ^ 0xffffffffffffffffL) > (l - -(long) i_3_ ^ 0xffffffffffffffffL) && ((long) anInt3880 + aLong3895 ^ 0xffffffffffffffffL) <= (l - -(long) i_3_ ^ 0xffffffffffffffffL)) {
-						l_9_ = (long) i_3_ + l;
-					}
-				} else {
+                long l_9_ = -1L;
+				if (l < aLong3895 - -(long) anInt3880 && (long) i_3_ + l >= aLong3895 + (long) anInt3880) {
 					l_9_ = (long) anInt3880 + aLong3895;
+				} else if (l - -(long) i_3_ > aLong3895 && l - -(long) i_3_ <= (long) anInt3880 + aLong3895) {
+					l_9_ = (long) i_3_ + l;
 				}
-				if ((l_8_ ^ 0xffffffffffffffffL) < 0L && l_9_ > l_8_) {
+                if (l_8_ > -1 && l_9_ > l_8_) {
 					int i_10_ = (int) (-l_8_ + l_9_);
 					Class311.method3608(aByteArray3894, (int) (l_8_ + -aLong3895), bs, i_2_ - -(int) (-l + l_8_), i_10_);
 					if (l_9_ > aLong3878) {
@@ -133,7 +129,7 @@ public class SeekableFile
 			aLong3887 = -1L;
 			throw ioexception;
 		}
-		if ((i_0_ ^ 0xffffffff) < -1) {
+		if (i_0_ > 0) {
 			throw new EOFException();
 		}
 	}
@@ -150,10 +146,10 @@ public class SeekableFile
 			if (aLong3888 < (long) i_17_ + aLong3878) {
 				aLong3888 = (long) i_17_ + aLong3878;
 			}
-			if ((aLong3895 ^ 0xffffffffffffffffL) != 0L && ((aLong3895 ^ 0xffffffffffffffffL) < (aLong3878 ^ 0xffffffffffffffffL) || (long) anInt3880 + aLong3895 < aLong3878)) {
+			if (aLong3895 != -1 && (aLong3878 < aLong3895 || (long) anInt3880 + aLong3895 < aLong3878)) {
 				method3576(true);
 			}
-			if ((aLong3895 ^ 0xffffffffffffffffL) != 0L && aLong3895 - -(long) aByteArray3894.length < aLong3878 + (long) i_17_) {
+			if (aLong3895 != -1 && aLong3895 - -(long) aByteArray3894.length < aLong3878 + (long) i_17_) {
 				int i_18_ = (int) (-aLong3878 - (-aLong3895 - (long) aByteArray3894.length));
 				Class311.method3608(bs, i_16_, aByteArray3894, (int) (aLong3878 + -aLong3895), i_18_);
 				i_16_ += i_18_;
@@ -163,7 +159,7 @@ public class SeekableFile
 				method3576(true);
 			}
 			if (i_17_ > aByteArray3894.length) {
-				if ((aLong3887 ^ 0xffffffffffffffffL) != (aLong3878 ^ 0xffffffffffffffffL)) {
+				if (aLong3878 != aLong3887) {
 					aFileOnDisk3890.method1100(true, aLong3878);
 					aLong3887 = aLong3878;
 				}
@@ -173,14 +169,12 @@ public class SeekableFile
 					aLong3879 = aLong3887;
 				}
 				long l = -1L;
-				if (aLong3893 > aLong3878 || aLong3878 >= (long) anInt3891 + aLong3893) {
-					if ((aLong3878 ^ 0xffffffffffffffffL) >= (aLong3893 ^ 0xffffffffffffffffL) && (long) i_17_ + aLong3878 > aLong3893) {
-						l = aLong3893;
-					}
-				} else {
+				if (aLong3893 <= aLong3878 && aLong3878 < (long) anInt3891 + aLong3893) {
 					l = aLong3878;
+				} else if (aLong3893 >= aLong3878 && (long) i_17_ + aLong3878 > aLong3893) {
+					l = aLong3893;
 				}
-				long l_19_ = -1L;
+                long l_19_ = -1L;
 				if (aLong3893 < (long) i_17_ + aLong3878 && aLong3893 - -(long) anInt3891 >= aLong3878 - -(long) i_17_) {
 					l_19_ = (long) i_17_ + aLong3878;
 				} else if (aLong3878 < (long) anInt3891 + aLong3893 && aLong3878 - -(long) i_17_ >= (long) anInt3891 + aLong3893) {
@@ -199,7 +193,7 @@ public class SeekableFile
 				}
 				Class311.method3608(bs, i_16_, aByteArray3894, (int) (-aLong3895 + aLong3878), i_17_);
 				aLong3878 += (long) i_17_;
-				if (((long) anInt3880 ^ 0xffffffffffffffffL) > (aLong3878 + -aLong3895 ^ 0xffffffffffffffffL)) {
+				if (aLong3878 + -aLong3895 > (long) anInt3880) {
 					anInt3880 = (int) (-aLong3895 + aLong3878);
 				}
 				return;
@@ -232,9 +226,9 @@ public class SeekableFile
 			aLong3887 = aLong3878;
 		}
 		aLong3893 = aLong3878;
-		while ((anInt3891 ^ 0xffffffff) > (aByteArray3885.length ^ 0xffffffff)) {
+		while (aByteArray3885.length > anInt3891) {
 			int i = aByteArray3885.length - anInt3891;
-			if ((i ^ 0xffffffff) < -200000001) {
+			if (i > 200000000) {
 				i = 200000000;
 			}
 			int i_22_ = aFileOnDisk3890.method1103((byte) -115, i, aByteArray3885, anInt3891);
@@ -274,8 +268,8 @@ public class SeekableFile
 		if (bool != true) {
 			aLong3888 = 87L;
 		}
-		if ((aLong3895 ^ 0xffffffffffffffffL) != 0L) {
-			if ((aLong3895 ^ 0xffffffffffffffffL) != (aLong3887 ^ 0xffffffffffffffffL)) {
+		if (aLong3895 != -1) {
+			if (aLong3887 != aLong3895) {
 				aFileOnDisk3890.method1100(bool, aLong3895);
 				aLong3887 = aLong3895;
 			}
@@ -286,19 +280,17 @@ public class SeekableFile
 			}
 			long l = -1L;
 			long l_23_ = -1L;
-			if ((aLong3893 ^ 0xffffffffffffffffL) >= (aLong3895 ^ 0xffffffffffffffffL) && (aLong3895 ^ 0xffffffffffffffffL) > (aLong3893 + (long) anInt3891 ^ 0xffffffffffffffffL)) {
+			if (aLong3895 >= aLong3893 && aLong3893 + (long) anInt3891 > aLong3895) {
 				l = aLong3895;
-			} else if (aLong3893 >= aLong3895 && ((long) anInt3880 + aLong3895 ^ 0xffffffffffffffffL) < (aLong3893 ^ 0xffffffffffffffffL)) {
+			} else if (aLong3893 >= aLong3895 && aLong3893 < (long) anInt3880 + aLong3895) {
 				l = aLong3893;
 			}
-			if (aLong3893 >= aLong3895 - -(long) anInt3880 || (long) anInt3891 + aLong3893 < aLong3895 - -(long) anInt3880) {
-				if (aLong3895 < aLong3893 + (long) anInt3891 && ((long) anInt3880 + aLong3895 ^ 0xffffffffffffffffL) <= (aLong3893 - -(long) anInt3891 ^ 0xffffffffffffffffL)) {
-					l_23_ = (long) anInt3891 + aLong3893;
-				}
-			} else {
+			if (aLong3893 < aLong3895 - -(long) anInt3880 && (long) anInt3891 + aLong3893 >= aLong3895 - -(long) anInt3880) {
 				l_23_ = aLong3895 + (long) anInt3880;
+			} else if (aLong3895 < aLong3893 + (long) anInt3891 && aLong3893 - -(long) anInt3891 <= (long) anInt3880 + aLong3895) {
+				l_23_ = (long) anInt3891 + aLong3893;
 			}
-			if (l > -1L && (l_23_ ^ 0xffffffffffffffffL) < (l ^ 0xffffffffffffffffL)) {
+            if (l > -1L && l < l_23_) {
 				int i = (int) (l_23_ + -l);
 				Class311.method3608(aByteArray3894, (int) (l + -aLong3895), aByteArray3885, (int) (l + -aLong3893), i);
 			}
@@ -310,7 +302,7 @@ public class SeekableFile
 	
 	final void method3577(long l, boolean bool) throws IOException {
 		anInt3892++;
-		if ((l ^ 0xffffffffffffffffL) > -1L) {
+		if (l < 0) {
 			throw new IOException("Invalid seek to " + l + " in file " + method3567(65536));
 		}
 		aLong3878 = l;

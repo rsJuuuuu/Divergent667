@@ -171,12 +171,12 @@ public class EntityNode_Sub4 extends EntityNode
 	}
 	
 	final boolean method962(GraphicsToolkit graphicstoolkit, long l) {
-		if (aLong5973 != aLong5968) {
-			method953();
-		} else {
+		if (aLong5973 == aLong5968) {
 			method964();
+		} else {
+			method953();
 		}
-		if (l - aLong5973 > 750L) {
+        if (l - aLong5973 > 750L) {
 			method961();
 			return false;
 		}

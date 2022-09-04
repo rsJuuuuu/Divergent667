@@ -85,7 +85,7 @@ public class Class355
 		anInt4363++;
 		BufferedStream buffer = new BufferedStream(518);
 		int[] is = new int[4];
-		for (int i_0_ = 0; (i_0_ ^ 0xffffffff) > -5; i_0_++)
+		for (int i_0_ = 0; i_0_ < 4; i_0_++)
 			is[i_0_] = (int) (9.9999999E7 * Math.random());
 		if (i != -5410) {
 			method4017(38, false, null, true, null);
@@ -95,7 +95,7 @@ public class Class355
 		buffer.writeInt(is[1]);
 		buffer.writeInt(is[2]);
 		buffer.writeInt(is[3]);
-		for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > -11; i_1_++)
+		for (int i_1_ = 0; i_1_ < 10; i_1_++)
 			buffer.writeInt((int) (9.9999999E7 * Math.random()));
 		buffer.writeShort((int) (Math.random() * 9.9999999E7));
 	//	buffer.applyRsa(0, Class203.LOGIN_RSA_MODULO, Class262_Sub10.LOGIN_RSA_EXPONENT);
@@ -120,113 +120,85 @@ public class Class355
 		} else if (i == 3) {
 			anInt4377 = buffer.readInt();
 			anInt4367 = buffer.readInt();
-		} else if ((i ^ 0xffffffff) == -5) {
+		} else if (i == 4) {
 			anInt4380 = buffer.readUnsignedByte();
 			anInt4404 = buffer.readByte();
 		} else if (i == 5) {
 			anInt4360 = anInt4408 = buffer.readUnsignedShort() << 12 << 2;
-		} else if ((i ^ 0xffffffff) != -7) {
-			if (i != 7) {
-				if (i == 8) {
-					anInt4424 = buffer.readUnsignedShort();
-					anInt4381 = buffer.readUnsignedShort();
-				} else if ((i ^ 0xffffffff) == -10) {
-					int i_4_ = buffer.readUnsignedByte();
-					anIntArray4362 = new int[i_4_];
-					for (int i_5_ = 0; (i_4_ ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++)
-						anIntArray4362[i_5_] = buffer.readUnsignedShort();
-				} else if ((i ^ 0xffffffff) == -11) {
-					int i_6_ = buffer.readUnsignedByte();
-					anIntArray4414 = new int[i_6_];
-					for (int i_7_ = 0; i_7_ < i_6_; i_7_++)
-						anIntArray4414[i_7_] = buffer.readUnsignedShort();
-				} else if ((i ^ 0xffffffff) != -13) {
-					if ((i ^ 0xffffffff) != -14) {
-						if (i != 14) {
-							if (i == 15) {
-								anInt4393 = buffer.readUnsignedShort();
-							} else if ((i ^ 0xffffffff) == -17) {
-								aBoolean4375 = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
-								anInt4361 = buffer.readUnsignedShort();
-								anInt4411 = buffer.readUnsignedShort();
-								aBoolean4390 = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
-							} else if ((i ^ 0xffffffff) == -18) {
-								anInt4353 = buffer.readUnsignedShort();
-							} else if ((i ^ 0xffffffff) != -19) {
-								if (i != 19) {
-									if ((i ^ 0xffffffff) != -21) {
-										if ((i ^ 0xffffffff) != -22) {
-											if (i == 22) {
-												anInt4413 = buffer.readInt();
-											} else if ((i ^ 0xffffffff) != -24) {
-												if ((i ^ 0xffffffff) == -25) {
-													aBoolean4391 = false;
-												} else if ((i ^ 0xffffffff) != -26) {
-													if ((i ^ 0xffffffff) == -27) {
-														aBoolean4373 = false;
-													} else if (i == 27) {
-														anInt4419 = buffer.readUnsignedShort() << 12 << 2;
-													} else if ((i ^ 0xffffffff) == -29) {
-														anInt4385 = buffer.readUnsignedByte();
-													} else if ((i ^ 0xffffffff) == -30) {
-														buffer.readShort();
-													} else if (i != 30) {
-														if ((i ^ 0xffffffff) != -32) {
-															if ((i ^ 0xffffffff) != -33) {
-																if (i == 33) {
-																	aBoolean4355 = true;
-																} else if ((i ^ 0xffffffff) == -35) {
-																	aBoolean4354 = false;
-																}
-															} else {
-																aBoolean4365 = false;
-															}
-														} else {
-															anInt4360 = buffer.readUnsignedShort() << 12 << 2;
-															anInt4408 = buffer.readUnsignedShort() << 12 << 2;
-														}
-													} else {
-														aBoolean4350 = true;
-													}
-												} else {
-													int i_8_ = buffer.readUnsignedByte();
-													anIntArray4371 = new int[i_8_];
-													for (int i_9_ = 0; i_9_ < i_8_; i_9_++)
-														anIntArray4371[i_9_] = buffer.readUnsignedShort();
-												}
-											} else {
-												anInt4395 = buffer.readUnsignedByte();
-											}
-										} else {
-											anInt4376 = buffer.readUnsignedByte();
-										}
-									} else {
-										anInt4423 = buffer.readUnsignedByte();
-									}
-								} else {
-									anInt4379 = buffer.readUnsignedByte();
-								}
-							} else {
-								anInt4409 = buffer.readInt();
-							}
-						} else {
-							anInt4358 = buffer.readUnsignedShort();
-						}
-					} else {
-						anInt4374 = buffer.readByte();
-					}
-				} else {
-					anInt4407 = buffer.readByte();
-				}
-			} else {
-				anInt4401 = buffer.readUnsignedShort();
-				anInt4388 = buffer.readUnsignedShort();
-			}
-		} else {
+		} else if (i == 6) {
 			anInt4359 = buffer.readInt();
 			anInt4356 = buffer.readInt();
-		}
-		anInt4412++;
+		} else if (i == 7) {
+            anInt4401 = buffer.readUnsignedShort();
+            anInt4388 = buffer.readUnsignedShort();
+        } else if (i == 8) {
+            anInt4424 = buffer.readUnsignedShort();
+            anInt4381 = buffer.readUnsignedShort();
+        } else if (i == 9) {
+            int i_4_ = buffer.readUnsignedByte();
+            anIntArray4362 = new int[i_4_];
+            for (int i_5_ = 0; i_5_ < i_4_; i_5_++)
+                anIntArray4362[i_5_] = buffer.readUnsignedShort();
+        } else if (i == 10) {
+            int i_6_ = buffer.readUnsignedByte();
+            anIntArray4414 = new int[i_6_];
+            for (int i_7_ = 0; i_7_ < i_6_; i_7_++)
+                anIntArray4414[i_7_] = buffer.readUnsignedShort();
+        } else if (i == 12) {
+            anInt4407 = buffer.readByte();
+        } else if (i == 13) {
+            anInt4374 = buffer.readByte();
+        } else if (i == 14) {
+            anInt4358 = buffer.readUnsignedShort();
+        } else if (i == 15) {
+            anInt4393 = buffer.readUnsignedShort();
+        } else if (i == 16) {
+            aBoolean4375 = buffer.readUnsignedByte() == 1;
+            anInt4361 = buffer.readUnsignedShort();
+            anInt4411 = buffer.readUnsignedShort();
+            aBoolean4390 = buffer.readUnsignedByte() == 1;
+        } else if (i == 17) {
+            anInt4353 = buffer.readUnsignedShort();
+        } else if (i == 18) {
+            anInt4409 = buffer.readInt();
+        } else if (i == 19) {
+            anInt4379 = buffer.readUnsignedByte();
+        } else if (i == 20) {
+            anInt4423 = buffer.readUnsignedByte();
+        } else if (i == 21) {
+            anInt4376 = buffer.readUnsignedByte();
+        } else if (i == 22) {
+            anInt4413 = buffer.readInt();
+        } else if (i == 23) {
+            anInt4395 = buffer.readUnsignedByte();
+        } else if (i == 24) {
+            aBoolean4391 = false;
+        } else if (i == 25) {
+            int i_8_ = buffer.readUnsignedByte();
+            anIntArray4371 = new int[i_8_];
+            for (int i_9_ = 0; i_9_ < i_8_; i_9_++)
+                anIntArray4371[i_9_] = buffer.readUnsignedShort();
+        } else if (i == 26) {
+            aBoolean4373 = false;
+        } else if (i == 27) {
+            anInt4419 = buffer.readUnsignedShort() << 12 << 2;
+        } else if (i == 28) {
+            anInt4385 = buffer.readUnsignedByte();
+        } else if (i == 29) {
+            buffer.readShort();
+        } else if (i == 30) {
+            aBoolean4350 = true;
+        } else if (i == 31) {
+            anInt4360 = buffer.readUnsignedShort() << 12 << 2;
+            anInt4408 = buffer.readUnsignedShort() << 12 << 2;
+        } else if (i == 32) {
+            aBoolean4365 = false;
+        } else if (i == 33) {
+            aBoolean4355 = true;
+        } else if (i == 34) {
+            aBoolean4354 = false;
+        }
+        anInt4412++;
 	}
 	
 	final void method4016(int i) {
@@ -249,14 +221,14 @@ public class Class355
 			anInt4349 = anInt4370 + -anInt4394;
 			if (anInt4419 != -1) {
 				anInt4398 = anInt4385 * anInt4388 / 100;
-				if ((anInt4398 ^ 0xffffffff) == -1) {
+				if (anInt4398 == 0) {
 					anInt4398 = 1;
 				}
 				anInt4399 = (anInt4419 + (-((-anInt4360 + anInt4408) / 2) + -anInt4360)) / anInt4398;
 			}
 			if (anInt4413 != -1) {
 				anInt4384 = anInt4388 * anInt4395 / 100;
-				if ((anInt4384 ^ 0xffffffff) == -1) {
+				if (anInt4384 == 0) {
 					anInt4384 = 1;
 				}
 				anInt4368 = (-((-anInt4377 + anInt4367) / 2) + (-anInt4377 + anInt4413)) / anInt4384;
@@ -264,24 +236,24 @@ public class Class355
 			if (anInt4409 != 0) {
 				anInt4416 = anInt4376 * anInt4388 / 100;
 				anInt4387 = anInt4388 * anInt4423 / 100;
-				if ((anInt4387 ^ 0xffffffff) == -1) {
+				if (anInt4387 == 0) {
 					anInt4387 = 1;
 				}
-				if ((anInt4416 ^ 0xffffffff) == -1) {
+				if (anInt4416 == 0) {
 					anInt4416 = 1;
 				}
 				anInt4422 = (((anInt4409 & 0xff34dc) >> 16) + (-(anInt4420 / 2) + -anInt4383) << 8) / anInt4387;
 				anInt4410 = (((anInt4409 & 0xff00) >> 8) - anInt4403 - anInt4400 / 2 << 8) / anInt4387;
 				anInt4405 = ((0xff & anInt4409) - anInt4402 / 2 - anInt4389 << 8) / anInt4387;
 				Class355 class355_10_ = this;
-				class355_10_.anInt4405 = class355_10_.anInt4405 + ((anInt4405 ^ 0xffffffff) >= -1 ? 4 : -4);
+				class355_10_.anInt4405 = class355_10_.anInt4405 + (anInt4405 <= 0 ? 4 : -4);
 				anInt4364 = (-(anInt4349 / 2) + -anInt4394 + (anInt4409 >> 24 & 0xff) << 8) / anInt4416;
 				Class355 class355_11_ = this;
-				class355_11_.anInt4422 = class355_11_.anInt4422 + ((anInt4422 ^ 0xffffffff) >= -1 ? 4 : -4);
+				class355_11_.anInt4422 = class355_11_.anInt4422 + (anInt4422 <= 0 ? 4 : -4);
 				Class355 class355_12_ = this;
-				class355_12_.anInt4410 = class355_12_.anInt4410 + ((anInt4410 ^ 0xffffffff) < -1 ? -4 : 4);
+				class355_12_.anInt4410 = class355_12_.anInt4410 + (anInt4410 > 0 ? -4 : 4);
 				Class355 class355_13_ = this;
-				class355_13_.anInt4364 = class355_13_.anInt4364 + ((anInt4364 ^ 0xffffffff) >= -1 ? 4 : -4);
+				class355_13_.anInt4364 = class355_13_.anInt4364 + (anInt4364 <= 0 ? 4 : -4);
 			}
 		}
 	}
@@ -297,7 +269,7 @@ public class Class355
 	final void method4018(byte b, BufferedStream buffer) {
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method4015((byte) 33, buffer, i);
@@ -309,7 +281,7 @@ public class Class355
 	static final void method4019(boolean bool) {
 		if (bool == false) {
 			anInt4421++;
-			if ((SignLink.aString3989.toLowerCase().indexOf("microsoft") ^ 0xffffffff) == 0) {
+			if (SignLink.aString3989.toLowerCase().indexOf("microsoft") == -1) {
 				Node_Sub38_Sub24.anIntArray10352[92] = 74;
 				Node_Sub38_Sub24.anIntArray10352[47] = 73;
 				Node_Sub38_Sub24.anIntArray10352[46] = 72;
@@ -349,7 +321,7 @@ public class Class355
 		if (string == null) {
 			return -1;
 		}
-		for (int i_15_ = 0; (Node_Sub38_Sub14.anInt10242 ^ 0xffffffff) < (i_15_ ^ 0xffffffff); i_15_++) {
+		for (int i_15_ = 0; i_15_ < Node_Sub38_Sub14.anInt10242; i_15_++) {
 			if (string.equalsIgnoreCase(Class262_Sub12.aStringArray7793[i_15_])) {
 				return i_15_;
 			}

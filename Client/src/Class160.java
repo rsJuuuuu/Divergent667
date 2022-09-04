@@ -47,7 +47,7 @@ public class Class160
 		anInt2001++;
 		int i_1_ = buffer.readSmart();
 		Class320_Sub22.aClass46Array8418 = new Class46[i_1_];
-		for (int i_2_ = i; (i_1_ ^ 0xffffffff) < (i_2_ ^ 0xffffffff); i_2_++) {
+		for (int i_2_ = i; i_2_ < i_1_; i_2_++) {
 			Class320_Sub22.aClass46Array8418[i_2_] = new Class46();
 			Class320_Sub22.aClass46Array8418[i_2_].anInt675 = buffer.readSmart();
 			Class320_Sub22.aClass46Array8418[i_2_].aString678 = buffer.method2180((byte) -118);
@@ -56,7 +56,7 @@ public class Class160
 		Node_Sub9_Sub5.anInt9757 = buffer.readSmart();
 		Class254.anInt3212 = buffer.readSmart();
 		Class56.aClass377_Sub1Array841 = new Class377_Sub1[Node_Sub9_Sub5.anInt9757 + -Mobile_Sub4.anInt10972 + 1];
-		for (int i_3_ = 0; (Class254.anInt3212 ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
+		for (int i_3_ = 0; i_3_ < Class254.anInt3212; i_3_++) {
 			int i_4_ = buffer.readSmart();
 			Class377_Sub1 class377_sub1 = Class56.aClass377_Sub1Array841[i_4_] = new Class377_Sub1();
 			class377_sub1.anInt4674 = buffer.readUnsignedByte();
@@ -74,7 +74,7 @@ public class Class160
 		anInt1999++;
 		@SuppressWarnings("unused")
 		int i_5_ = -22 / ((24 - i) / 34);
-		if (CacheNode_Sub8.anInt9493 >= 0 && (CacheNode_Sub8.anInt9493 ^ 0xffffffff) != -1) {
+		if (CacheNode_Sub8.anInt9493 >= 0 && CacheNode_Sub8.anInt9493 != 0) {
 			Class22.method300(CacheNode_Sub8.anInt9493, true, false);
 			CacheNode_Sub8.anInt9493 = -1;
 		}

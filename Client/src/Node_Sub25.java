@@ -19,8 +19,8 @@ abstract class Node_Sub25 extends Node
 			method2653(-77, -102, -10, 4, 41, 99, 99);
 		}
 		if (i <= 243) {
-			if ((i ^ 0xffffffff) >= -218) {
-				if ((i ^ 0xffffffff) < -193) {
+			if (i <= 217) {
+				if (i > 192) {
 					i_0_ >>= 2;
 				} else if (i > 179) {
 					i_0_ >>= 1;
@@ -72,7 +72,7 @@ abstract class Node_Sub25 extends Node
 				return false;
 			}
 		}
-		if ((i_6_ ^ 0xffffffff) <= (Class380.anInt4889 ^ 0xffffffff)) {
+		if (Class380.anInt4889 <= i_6_) {
 			if (!Class99.method1087(i_9_, i_11_, i_10_, i_10_, i_7_, (byte) 89, i_11_, i_11_, i_4_, i_4_)) {
 				return false;
 			}

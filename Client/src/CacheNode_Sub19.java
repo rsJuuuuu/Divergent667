@@ -77,14 +77,14 @@ public class CacheNode_Sub19 extends CacheNode
 				}
 			}
 		}
-		for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (aNode_Sub38Array9618.length ^ 0xffffffff); i_12_++)
+		for (int i_12_ = 0; aNode_Sub38Array9618.length > i_12_; i_12_++)
 			aNode_Sub38Array9618[i_12_].method2787(108);
 		return fs;
 	}
 	
 	final boolean method2401(Index class302, d var_d, byte b) {
 		anInt9612++;
-		if ((Class230.anInt5209 ^ 0xffffffff) > -1) {
+		if (Class230.anInt5209 < 0) {
 			for (int i = 0; anIntArray9616.length > i; i++) {
 				if (!class302.method3510(anIntArray9616[i], (byte) 63)) {
 					return false;
@@ -100,7 +100,7 @@ public class CacheNode_Sub19 extends CacheNode
 		if (b != 4) {
 			return true;
 		}
-		for (int i = 0; (anIntArray9614.length ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
+		for (int i = 0; i < anIntArray9614.length; i++) {
 			if (!var_d.method7(9900, anIntArray9614[i])) {
 				return false;
 			}
@@ -112,7 +112,7 @@ public class CacheNode_Sub19 extends CacheNode
 		Class308.aClass302_3909 = class302;
 		Node_Sub38_Sub35.aD10455 = var_d;
 		anInt9615++;
-		for (int i_14_ = 0; (aNode_Sub38Array9618.length ^ 0xffffffff) < (i_14_ ^ 0xffffffff); i_14_++)
+		for (int i_14_ = 0; i_14_ < aNode_Sub38Array9618.length; i_14_++)
 			aNode_Sub38Array9618[i_14_].method2782(i_13_, i, false);
 		Class385.method4205(false, d);
 		Class169_Sub1.method1769(485964236, i_13_, i);
@@ -122,16 +122,16 @@ public class CacheNode_Sub19 extends CacheNode
 			int[] is_18_;
 			int[] is_19_;
 			int[] is_20_;
-			if (!aNode_Sub38_9619.aBoolean7463) {
-				int[][] is_21_ = aNode_Sub38_9619.method2778(i_17_, true);
-				is_20_ = is_21_[0];
-				is_18_ = is_21_[2];
-				is_19_ = is_21_[1];
-			} else {
+			if (aNode_Sub38_9619.aBoolean7463) {
 				int[] is_22_ = aNode_Sub38_9619.method2775(117, i_17_);
 				is_18_ = is_22_;
 				is_19_ = is_22_;
 				is_20_ = is_22_;
+			} else {
+				int[][] is_21_ = aNode_Sub38_9619.method2778(i_17_, true);
+				is_20_ = is_21_[0];
+				is_18_ = is_21_[2];
+				is_19_ = is_21_[1];
 			}
 			int[] is_23_;
 			if (aNode_Sub38_9611.aBoolean7463) {
@@ -158,24 +158,24 @@ public class CacheNode_Sub19 extends CacheNode
 					i_26_ = 0;
 				}
 				int i_27_ = is_18_[i_24_] >> 4;
-				if ((i_27_ ^ 0xffffffff) < -256) {
+				if (i_27_ > 255) {
 					i_27_ = 255;
 				}
 				i_26_ = PlayerUpdateReference.anIntArray4084[i_26_];
-				if ((i_27_ ^ 0xffffffff) > -1) {
+				if (i_27_ < 0) {
 					i_27_ = 0;
 				}
 				i_25_ = PlayerUpdateReference.anIntArray4084[i_25_];
 				i_27_ = PlayerUpdateReference.anIntArray4084[i_27_];
 				int i_28_;
-				if (i_25_ == 0 && (i_26_ ^ 0xffffffff) == -1 && (i_27_ ^ 0xffffffff) == -1) {
+				if (i_25_ == 0 && i_26_ == 0 && i_27_ == 0) {
 					i_28_ = 0;
 				} else {
 					i_28_ = is_23_[i_24_] >> 4;
-					if ((i_28_ ^ 0xffffffff) < -256) {
+					if (i_28_ > 255) {
 						i_28_ = 255;
 					}
-					if ((i_28_ ^ 0xffffffff) > -1) {
+					if (i_28_ < 0) {
 						i_28_ = 0;
 					}
 				}
@@ -185,7 +185,7 @@ public class CacheNode_Sub19 extends CacheNode
 				}
 			}
 		}
-		for (int i_29_ = 0; (i_29_ ^ 0xffffffff) > (aNode_Sub38Array9618.length ^ 0xffffffff); i_29_++)
+		for (int i_29_ = 0; aNode_Sub38Array9618.length > i_29_; i_29_++)
 			aNode_Sub38Array9618[i_29_].method2787(103);
 		return is;
 	}
@@ -214,14 +214,14 @@ public class CacheNode_Sub19 extends CacheNode
 		int i_37_;
 		int i_38_;
 		int i_39_;
-		if (!bool_33_) {
-			i_37_ = i_34_;
-			i_38_ = 0;
-			i_39_ = 1;
-		} else {
+		if (bool_33_) {
 			i_37_ = -1;
 			i_38_ = -1 + i_34_;
 			i_39_ = -1;
+		} else {
+			i_37_ = i_34_;
+			i_38_ = 0;
+			i_39_ = 1;
 		}
 		int i_40_ = i_35_;
 		for (int i_41_ = 0; i > i_41_; i_41_++) {
@@ -242,16 +242,16 @@ public class CacheNode_Sub19 extends CacheNode
 			if (bool) {
 				i_40_ = i_41_;
 			}
-			for (int i_47_ = i_38_; (i_37_ ^ 0xffffffff) != (i_47_ ^ 0xffffffff); i_47_ += i_39_) {
+			for (int i_47_ = i_38_; i_47_ != i_37_; i_47_ += i_39_) {
 				int i_48_ = is_44_[i_47_] >> 4;
 				if (i_48_ > 255) {
 					i_48_ = 255;
 				}
-				if ((i_48_ ^ 0xffffffff) > -1) {
+				if (i_48_ < 0) {
 					i_48_ = 0;
 				}
 				int i_49_ = is_43_[i_47_] >> 4;
-				if ((i_49_ ^ 0xffffffff) < -256) {
+				if (i_49_ > 255) {
 					i_49_ = 255;
 				}
 				if (i_49_ < 0) {
@@ -263,12 +263,12 @@ public class CacheNode_Sub19 extends CacheNode
 				}
 				i_49_ = PlayerUpdateReference.anIntArray4084[i_49_];
 				i_48_ = PlayerUpdateReference.anIntArray4084[i_48_];
-				if ((i_50_ ^ 0xffffffff) > -1) {
+				if (i_50_ < 0) {
 					i_50_ = 0;
 				}
 				i_50_ = PlayerUpdateReference.anIntArray4084[i_50_];
 				int i_51_ = (i_48_ << 16) + (i_49_ << 8) - -i_50_;
-				if ((i_51_ ^ 0xffffffff) != -1) {
+				if (i_51_ != 0) {
 					i_51_ |= ~0xffffff;
 				}
 				is[i_40_++] = i_51_;
@@ -277,7 +277,7 @@ public class CacheNode_Sub19 extends CacheNode
 				}
 			}
 		}
-		for (int i_52_ = 0; (i_52_ ^ 0xffffffff) > (aNode_Sub38Array9618.length ^ 0xffffffff); i_52_++)
+		for (int i_52_ = 0; aNode_Sub38Array9618.length > i_52_; i_52_++)
 			aNode_Sub38Array9618[i_52_].method2787(115);
 		return is;
 	}
@@ -302,7 +302,7 @@ public class CacheNode_Sub19 extends CacheNode
 		aNode_Sub38Array9618 = new Node_Sub38[i];
 		for (int i_55_ = 0; i > i_55_; i_55_++) {
 			Node_Sub38 node_sub38 = Class157.method1712(-57, buffer);
-			if ((node_sub38.method2776((byte) -100) ^ 0xffffffff) <= -1) {
+			if (node_sub38.method2776((byte) -100) >= 0) {
 				i_53_++;
 			}
 			if (node_sub38.method2783(-1) >= 0) {
@@ -310,7 +310,7 @@ public class CacheNode_Sub19 extends CacheNode
 			}
 			int i_56_ = node_sub38.aNode_Sub38Array7453.length;
 			is[i_55_] = new int[i_56_];
-			for (int i_57_ = 0; (i_56_ ^ 0xffffffff) < (i_57_ ^ 0xffffffff); i_57_++)
+			for (int i_57_ = 0; i_57_ < i_56_; i_57_++)
 				is[i_55_][i_57_] = buffer.readUnsignedByte();
 			aNode_Sub38Array9618[i_55_] = node_sub38;
 		}
@@ -318,14 +318,14 @@ public class CacheNode_Sub19 extends CacheNode
 		anIntArray9614 = new int[i_54_];
 		i_53_ = 0;
 		i_54_ = 0;
-		for (int i_58_ = 0; (i ^ 0xffffffff) < (i_58_ ^ 0xffffffff); i_58_++) {
+		for (int i_58_ = 0; i_58_ < i; i_58_++) {
 			Node_Sub38 node_sub38 = aNode_Sub38Array9618[i_58_];
 			int i_59_ = node_sub38.aNode_Sub38Array7453.length;
-			for (int i_60_ = 0; (i_59_ ^ 0xffffffff) < (i_60_ ^ 0xffffffff); i_60_++)
+			for (int i_60_ = 0; i_60_ < i_59_; i_60_++)
 				node_sub38.aNode_Sub38Array7453[i_60_] = aNode_Sub38Array9618[is[i_58_][i_60_]];
 			int i_61_ = node_sub38.method2776((byte) -84);
 			int i_62_ = node_sub38.method2783(-1);
-			if ((i_61_ ^ 0xffffffff) < -1) {
+			if (i_61_ > 0) {
 				anIntArray9616[i_53_++] = i_61_;
 			}
 			if (i_62_ > 0) {

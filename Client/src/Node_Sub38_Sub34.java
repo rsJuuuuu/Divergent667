@@ -47,7 +47,7 @@ public class Node_Sub38_Sub34 extends Node_Sub38
 		Class241 class241 = signlink.method3634((byte) 25);
 		while (class241.anInt2953 == 0)
 			Class262_Sub22.method3208(10L, false);
-		if ((class241.anInt2953 ^ 0xffffffff) == -3) {
+		if (class241.anInt2953 == 2) {
 			return new Class244[0];
 		}
 		int[] is = (int[]) class241.anObject2956;

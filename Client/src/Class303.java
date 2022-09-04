@@ -31,7 +31,7 @@ public class Class303
 			aNode3828 = node.aNode2800;
 			return node;
 		}
-		while ((aHashTable3822.anInt1592 ^ 0xffffffff) < (anInt3823 ^ 0xffffffff)) {
+		while (anInt3823 < aHashTable3822.anInt1592) {
 			Node node = aHashTable3822.aNodeArray1597[anInt3823++].aNode2800;
 			if (aHashTable3822.aNodeArray1597[anInt3823 + -1] != node) {
 				aNode3828 = node.aNode2800;
@@ -48,7 +48,7 @@ public class Class303
 	static final boolean method3540(boolean bool) {
 		anInt3821++;
 		try {
-			if ((Class52.anInt800 ^ 0xffffffff) == -3) {
+			if (Class52.anInt800 == 2) {
 				if (Player.aNode_Sub4_11155 == null) {
 					Player.aNode_Sub4_11155 = Node_Sub4.method2173(Class93_Sub2.aClass302_6049, CacheNode_Sub6.anInt9485, Class101.anInt1306);
 					if (Player.aNode_Sub4_11155 == null) {
@@ -68,7 +68,7 @@ public class Class303
 					if (Class339_Sub8.anInt8733 <= 0) {
 						Class52.anInt800 = 0;
 						Class307.aNode_Sub9_Sub1_3902.method2439(-12651, Class17.anInt282);
-						for (int i = 0; (i ^ 0xffffffff) > (Class153.anIntArray1948.length ^ 0xffffffff); i++) {
+						for (int i = 0; Class153.anIntArray1948.length > i; i++) {
 							Class307.aNode_Sub9_Sub1_3902.method2449(Class153.anIntArray1948[i], false, i);
 							Class153.anIntArray1948[i] = 255;
 						}

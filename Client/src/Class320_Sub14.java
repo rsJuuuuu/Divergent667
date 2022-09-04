@@ -33,7 +33,7 @@ public class Class320_Sub14 extends Class320
 	}
 	
 	static final short[][] method3735(int i, float[][] fs, short[][] ses) {
-		for (int i_0_ = i; (i_0_ ^ 0xffffffff) > (fs.length ^ 0xffffffff); i_0_++) {
+		for (int i_0_ = i; fs.length > i_0_; i_0_++) {
 			for (int i_1_ = 0; ses[i_0_].length > i_1_; i_1_++)
 				ses[i_0_][i_1_] = (short) (int) (16383.0F * fs[i_0_][i_1_]);
 		}
@@ -66,7 +66,7 @@ public class Class320_Sub14 extends Class320
 	
 	final void method3673(byte b) {
 		anInt8342++;
-		if ((anInt4064 ^ 0xffffffff) != -2 && anInt4064 != 0) {
+		if (anInt4064 != 1 && anInt4064 != 0) {
 			anInt4064 = method3677(0);
 		}
 		if (b > -35) {

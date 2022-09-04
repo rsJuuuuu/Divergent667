@@ -57,7 +57,7 @@ public class Class262_Sub2 extends Class262
 			index31 = null;
 		}
 		anInt7710++;
-        return !((i ^ 0xffffffff) != -3 && i != 22 && i != 52 && i != 30 && i != 53 && i != 9 && i != 51 && i != 15 && i != 48 && (i ^ 0xffffffff) != -17 && (i ^ 0xffffffff) != -45);
+        return !(i != 2 && i != 22 && i != 52 && i != 30 && i != 53 && i != 9 && i != 51 && i != 15 && i != 48 && i != 16 && i != 44);
     }
 	
 	final void method3148(int i) {

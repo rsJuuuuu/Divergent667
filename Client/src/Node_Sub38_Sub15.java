@@ -34,25 +34,21 @@ public class Node_Sub38_Sub15 extends Node_Sub38
 			while_156_:
 				do {
 					do {
-						if ((i_0_ ^ 0xffffffff) != -1) {
-							if (i_0_ != 1) {
-								if ((i_0_ ^ 0xffffffff) != -3) {
-									if (i_0_ != 3) {
-										if (i_0_ == 4) {
-											break while_157_;
-										}
-										break while_158_;
-									}
-								} else {
-									break;
-								}
-								break while_156_;
-							}
-						} else {
+						if (i_0_ == 0) {
 							anInt10253 = buffer.readUnsignedByte();
 							break while_158_;
-						}
-						anInt10254 = buffer.readUnsignedShort();
+						} else if (i_0_ != 1) {
+                            if (i_0_ == 2) {
+                                break;
+                            } else if (i_0_ != 3) {
+                                if (i_0_ == 4) {
+                                    break while_157_;
+                                }
+                                break while_158_;
+                            }
+                            break while_156_;
+                        }
+                        anInt10254 = buffer.readUnsignedShort();
 						break while_158_;
 					} while (false);
 					anInt10256 = buffer.readUnsignedByte();
@@ -84,7 +80,7 @@ public class Node_Sub38_Sub15 extends Node_Sub38
 			int[][] is_3_ = aClass146_7460.method1642((byte) -46);
 			Random random = new Random((long) anInt10253);
 			for (int i_4_ = 0; anInt10254 > i_4_; i_4_++) {
-				int i_5_ = (anInt10258 ^ 0xffffffff) < -1 ? anInt10252 - -Class330.method3838(-5208, anInt10258, random) - i_2_ : anInt10252;
+				int i_5_ = anInt10258 > 0 ? anInt10252 - -Class330.method3838(-5208, anInt10258, random) - i_2_ : anInt10252;
 				i_5_ = 0xff & i_5_ >> 4;
 				int i_6_ = Class330.method3838(-5208, Class339_Sub7.anInt8728, random);
 				int i_7_ = Class330.method3838(-5208, Node_Sub38_Sub1.anInt10083, random);
@@ -108,7 +104,7 @@ public class Node_Sub38_Sub15 extends Node_Sub38
 						i_7_ = i_12_;
 						i_9_ = i_13_;
 					}
-					if ((i_6_ ^ 0xffffffff) < (i_8_ ^ 0xffffffff)) {
+					if (i_8_ < i_6_) {
 						int i_14_ = i_6_;
 						int i_15_ = i_7_;
 						i_6_ = i_8_;
@@ -122,20 +118,20 @@ public class Node_Sub38_Sub15 extends Node_Sub38
 					int i_19_ = -i_17_ / 2;
 					int i_20_ = 2048 / i_17_;
 					int i_21_ = 1024 + -(Class330.method3838(-5208, 4096, random) >> 2);
-					if ((i_18_ ^ 0xffffffff) > -1) {
+					if (i_18_ < 0) {
 						i_18_ = -i_18_;
 					}
 					int i_22_ = i_9_ > i_7_ ? 1 : -1;
-					for (int i_23_ = i_6_; (i_23_ ^ 0xffffffff) > (i_8_ ^ 0xffffffff); i_23_++) {
+					for (int i_23_ = i_6_; i_8_ > i_23_; i_23_++) {
 						int i_24_ = i_20_ * (i_23_ - i_6_) + 1024 + i_21_;
 						int i_25_ = Class303.anInt3824 & i_23_;
 						int i_26_ = i_16_ & r_Sub2.anInt11054;
-						if (!bool) {
-							is_3_[i_25_][i_26_] = i_24_;
-						} else {
+						if (bool) {
 							is_3_[i_26_][i_25_] = i_24_;
+						} else {
+							is_3_[i_25_][i_26_] = i_24_;
 						}
-						i_19_ += i_18_;
+                        i_19_ += i_18_;
 						if (i_19_ > 0) {
 							i_16_ = i_22_ + i_16_;
 							i_19_ = -i_17_ + i_19_;

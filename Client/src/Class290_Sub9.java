@@ -17,7 +17,7 @@ public class Class290_Sub9 extends Class290
 		}
 		if (anIDirect3DVertexShader8151 != null) {
 			IDirect3DDevice idirect3ddevice = aD3DToolkit8149.anIDirect3DDevice9199;
-			if (-1 > (anAbstractToolkit3654.anInt6355 ^ 0xffffffff)) {
+			if (anAbstractToolkit3654.anInt6355 > 0) {
 				float f = anAbstractToolkit3654.aFloat6328;
 				float f_0_ = anAbstractToolkit3654.aFloat6311;
 				float f_1_ = -512.0F + f_0_;

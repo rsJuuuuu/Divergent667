@@ -29,16 +29,16 @@ public class Node_Sub36_Sub1 extends Node_Sub36
 			int i_3_ = -i_1_ + Class36.anInt542 + -Class360.screenWidth;
 			int i_4_ = -i_2_ + (CacheNode_Sub3.anInt9441 - Class205.screenHeight);
 			do {
-				if (i_1_ > 0 || (i_3_ ^ 0xffffffff) < -1 || i_2_ > 0 || i_4_ > 0) {
+				if (i_1_ > 0 || i_3_ > 0 || i_2_ > 0 || i_4_ > 0) {
 					try {
 						java.awt.Container container;
 						if (Node_Sub29.aFrame7344 == null) {
-							if (Class96.anApplet1270 != null) {
-								container = Class96.anApplet1270;
-							} else {
+							if (Class96.anApplet1270 == null) {
 								container = Class82.aGameStub1123;
+							} else {
+								container = Class96.anApplet1270;
 							}
-						} else {
+                        } else {
 							container = Node_Sub29.aFrame7344;
 						}
 						int i_5_ = 0;
@@ -50,7 +50,7 @@ public class Node_Sub36_Sub1 extends Node_Sub36
 						}
 						Graphics graphics = container.getGraphics();
 						graphics.setColor(Color.black);
-						if ((i_1_ ^ 0xffffffff) < -1) {
+						if (i_1_ > 0) {
 							graphics.fillRect(i_5_, i_6_, i_1_, CacheNode_Sub3.anInt9441);
 						}
 						if (i_2_ > 0) {
@@ -59,7 +59,7 @@ public class Node_Sub36_Sub1 extends Node_Sub36
 						if (i_3_ > 0) {
 							graphics.fillRect(-i_3_ + (Class36.anInt542 + i_5_), i_6_, i_3_, CacheNode_Sub3.anInt9441);
 						}
-						if ((i_4_ ^ 0xffffffff) >= -1) {
+						if (i_4_ <= 0) {
 							break;
 						}
 						graphics.fillRect(i_5_, -i_4_ + i_6_ - -CacheNode_Sub3.anInt9441, Class36.anInt542, i_4_);

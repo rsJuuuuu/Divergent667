@@ -140,14 +140,14 @@ public class Class290_Sub11 extends Class290
 			aClass106_8161 = Class157.method1709(glxtoolkit, 34336, -92, class302.method3529("gl", "uw_ground_lit", 1));
 			aClass106_8171 = Class157.method1709(glxtoolkit, 34336, -124, class302.method3529("gl", "uw_model_unlit", 1));
 			aClass106_8168 = Class157.method1709(glxtoolkit, 34336, -71, class302.method3529("gl", "uw_model_lit", 1));
-			if (!(aClass106_8168 != null & (aClass106_8160 != null & aClass106_8161 != null & aClass106_8171 != null))) {
-				aBoolean8176 = false;
-			} else {
+			if (aClass106_8168 != null & (aClass106_8160 != null & aClass106_8161 != null & aClass106_8171 != null)) {
 				anInterface13_Impl1_8173 = anAbstractToolkit3654.method1258(false, 1, true, 2, new int[] { 0, -1 });
 				anInterface13_Impl1_8173.method51(false, false, false);
 				aBoolean8176 = true;
+			} else {
+				aBoolean8176 = false;
 			}
-		}
+        }
 	}
 	
 	final void method3415(boolean bool, int i, int i_5_) {
@@ -161,12 +161,12 @@ public class Class290_Sub11 extends Class290
 		anInt8163++;
 		int i_6_ = anAbstractToolkit3654.method1316(-2);
 		Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1342(118);
-		if (!aBoolean8182) {
-			OpenGL.glBindProgramARB(34336, i_6_ == 2147483647 ? aClass106_8160.anInt1350 : aClass106_8171.anInt1350);
+		if (aBoolean8182) {
+			OpenGL.glBindProgramARB(34336, i_6_ == 2147483647 ? aClass106_8161.anInt1350 : aClass106_8168.anInt1350);
 		} else {
-			OpenGL.glBindProgramARB(34336, (i_6_ ^ 0xffffffff) == -2147483648 ? aClass106_8161.anInt1350 : aClass106_8168.anInt1350);
+			OpenGL.glBindProgramARB(34336, i_6_ == 2147483647 ? aClass106_8160.anInt1350 : aClass106_8171.anInt1350);
 		}
-		OpenGL.glEnable(34336);
+        OpenGL.glEnable(34336);
 		if (i >= 4) {
 			aBoolean8170 = true;
 			class336_sub1.method3872((float) i_6_, -1.0F, (byte) 86, 0.0F, aFloatArray8164, 0.0F);
@@ -196,7 +196,7 @@ public class Class290_Sub11 extends Class290
 			aCharArray8172[i] = (char) (65 + i);
 		for (int i = 26; i < 52; i++)
 			aCharArray8172[i] = (char) (97 + (i - 26));
-		for (int i = 52; (i ^ 0xffffffff) > -63; i++)
+		for (int i = 52; i < 62; i++)
 			aCharArray8172[i] = (char) (i + -4);
 		aCharArray8172[63] = '-';
 		aCharArray8172[62] = '*';

@@ -80,8 +80,8 @@ public class Node_Sub25_Sub1 extends Node_Sub25
 	
 	final void method2654(int i, OggPacket oggpacket) {
 		anInt9943++;
-		if ((anInt7234 ^ 0xffffffff) <= -4) {
-			if ((aVorbisBlock9951.synthesis(oggpacket) ^ 0xffffffff) == -1) {
+		if (anInt7234 >= 3) {
+			if (aVorbisBlock9951.synthesis(oggpacket) == 0) {
 				aDSPState9935.blockIn(aVorbisBlock9951);
 			}
 			float[][] fs = aDSPState9935.pcmOut(aVorbisInfo9931.channels);
@@ -93,7 +93,7 @@ public class Node_Sub25_Sub1 extends Node_Sub25
 			anInt9937 += fs[0].length;
 			CacheNode_Sub8 cachenode_sub8 = aNode_Sub9_Sub5_9930.method2531(fs[0].length, aDouble9949, 0);
 			Class320_Sub14.method3735(0, fs, cachenode_sub8.aShortArrayArray9491);
-			for (int i_5_ = 0; (aVorbisInfo9931.channels ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++)
+			for (int i_5_ = 0; i_5_ < aVorbisInfo9931.channels; i_5_++)
 				cachenode_sub8.aShortArrayArray9491[i_5_] = aClass191_9939.method1951(cachenode_sub8.aShortArrayArray9491[i_5_], 30664);
 			aNode_Sub9_Sub5_9930.method2532(cachenode_sub8, (byte) -73);
 		} else {
@@ -102,7 +102,7 @@ public class Node_Sub25_Sub1 extends Node_Sub25
 				throw new IllegalStateException(String.valueOf(i_6_));
 			}
 			if (anInt7234 == 2) {
-				if ((aVorbisInfo9931.channels ^ 0xffffffff) < -3 || (aVorbisInfo9931.channels ^ 0xffffffff) > -2) {
+				if (aVorbisInfo9931.channels > 2 || aVorbisInfo9931.channels < 1) {
 					throw new RuntimeException(String.valueOf(aVorbisInfo9931.channels));
 				}
 				aDSPState9935 = new DSPState(aVorbisInfo9931);

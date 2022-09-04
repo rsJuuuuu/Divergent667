@@ -62,22 +62,22 @@ public class Class222
 					if (i_5_ == 3 || i_5_ == 10) {
 						s = (short) 128;
 					}
-					if ((i_6_ & 0x1) != 0) {
-						aShortArray2645[i_1_] = (short) buffer_0_.method2197(-129);
-					} else {
+					if ((i_6_ & 0x1) == 0) {
 						aShortArray2645[i_1_] = s;
-					}
-					if ((i_6_ & 0x2) != 0) {
-						aShortArray2639[i_1_] = (short) buffer_0_.method2197(-129);
 					} else {
-						aShortArray2639[i_1_] = s;
+						aShortArray2645[i_1_] = (short) buffer_0_.method2197(-129);
 					}
-					if ((i_6_ & 0x4) != 0) {
-						aShortArray2644[i_1_] = (short) buffer_0_.method2197(-129);
-					} else {
-						aShortArray2644[i_1_] = s;
-					}
-					aByteArray2638[i_1_] = (byte) (i_6_ >>> 3 & 0x3);
+                    if ((i_6_ & 0x2) == 0) {
+                        aShortArray2639[i_1_] = s;
+                    } else {
+                        aShortArray2639[i_1_] = (short) buffer_0_.method2197(-129);
+                    }
+                    if ((i_6_ & 0x4) == 0) {
+                        aShortArray2644[i_1_] = s;
+                    } else {
+                        aShortArray2644[i_1_] = (short) buffer_0_.method2197(-129);
+                    }
+                    aByteArray2638[i_1_] = (byte) (i_6_ >>> 3 & 0x3);
 					if (i_5_ == 2 || i_5_ == 9) {
 						aShortArray2645[i_1_] = (short) (aShortArray2645[i_1_] << 2 & 0x3fff);
 						aShortArray2639[i_1_] = (short) (aShortArray2639[i_1_] << 2 & 0x3fff);

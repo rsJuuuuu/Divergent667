@@ -51,7 +51,7 @@ public class Class20_Sub1 extends Class20
 		Class91.method1035(i + 25136);
 		Class284.decodeNPCMasks();
 		boolean bool = false;
-		for (int i_2_ = 0; (Class270_Sub2_Sub1.anInt10543 ^ 0xffffffff) < (i_2_ ^ 0xffffffff); i_2_++) {
+		for (int i_2_ = 0; i_2_ < Class270_Sub2_Sub1.anInt10543; i_2_++) {
 			int i_3_ = FileOnDisk.anIntArray1322[i_2_];
 			Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) i_3_);
 			Npc npc = node_sub41.aNpc7518;
@@ -71,10 +71,10 @@ public class Class20_Sub1 extends Class20
 			Node_Sub32.cachedNPCcsCount = Class12.aHashTable187.method1519((byte) -90);
 			Class12.aHashTable187.method1523((byte) -112, Class314.LocalNPCs);
 		}
-		if ((Class218.aClass123_2566.aPacket1570.offset ^ 0xffffffff) != (Class218.aClass123_2566.anInt1581 ^ 0xffffffff)) {
+		if (Class218.aClass123_2566.anInt1581 != Class218.aClass123_2566.aPacket1570.offset) {
 			//throw new RuntimeException("gnp1 pos:" + Class218.aClass123_2566.aPacket1570.offset + " psize:" + Class218.aClass123_2566.anInt1581);
 		}
-		for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (Node_Sub25_Sub3.localNPCsCount ^ 0xffffffff); i_4_++) {
+		for (int i_4_ = 0; Node_Sub25_Sub3.localNPCsCount > i_4_; i_4_++) {
 			if (Class12.aHashTable187.method1518(i + 28644, (long) Class54.LocalNPCsIndexes[i_4_]) == null) {
 				throw new RuntimeException("gnp2 pos:" + i_4_ + " size:" + Node_Sub25_Sub3.localNPCsCount);
 			}
@@ -83,8 +83,8 @@ public class Class20_Sub1 extends Class20
 			throw new RuntimeException("gnp3 mis:" + (Node_Sub32.cachedNPCcsCount - Node_Sub25_Sub3.localNPCsCount));
 		}
 		if (i == -25132) {
-			for (int i_5_ = 0; (i_5_ ^ 0xffffffff) > (Node_Sub32.cachedNPCcsCount ^ 0xffffffff); i_5_++) {
-				if ((Class314.LocalNPCs[i_5_].aNpc7518.anInt10880 ^ 0xffffffff) != (Plane.anInt3423 ^ 0xffffffff)) {
+			for (int i_5_ = 0; Node_Sub32.cachedNPCcsCount > i_5_; i_5_++) {
+				if (Plane.anInt3423 != Class314.LocalNPCs[i_5_].aNpc7518.anInt10880) {
 					throw new RuntimeException("gnp4 uk:" + Class314.LocalNPCs[i_5_].aNpc7518.index);
 				}
 			}

@@ -32,12 +32,12 @@ public class Class128
 	
 	static final void method1544(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
 		anInt1653++;
-		if ((i_3_ ^ 0xffffffff) <= -2 && (i ^ 0xffffffff) <= -2 && (-2 + Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) <= (i_3_ ^ 0xffffffff) && (-2 + Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) <= (i ^ 0xffffffff)) {
+		if (i_3_ >= 1 && i >= 1 && i_3_ <= -2 + Node_Sub54.GAME_SCENE_WDITH && i <= -2 + Class377_Sub1.GAME_SCENE_HEIGHT) {
 			int i_9_ = i_6_;
 			if (i_9_ < 3 && Class238.method3021(i, i_3_, 106)) {
 				i_9_++;
 			}
-			if ((Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) ^ 0xffffffff) == -1 && !Class369.method4085(i, 0, Class94.anInt1249, i_3_, i_9_) || Class175.aClass261ArrayArrayArray2099 == null) {
+			if (Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) == 0 && !Class369.method4085(i, 0, Class94.anInt1249, i_3_, i_9_) || Class175.aClass261ArrayArrayArray2099 == null) {
 				return;
 			}
 			Node_Sub38_Sub1.aClass277_Sub1_10084.method3359(i_5_, (byte) 102, i, Class304.SCENE_CLIP_DATA_PLANES[i_6_], i_6_, i_3_, Class93.aGraphicsToolkit1241);
@@ -75,7 +75,7 @@ public class Class128
 			return true;
 		}
 		ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(i, 61);
-		if ((i_14_ ^ 0xffffffff) <= -6 && (i_14_ ^ 0xffffffff) >= -9) {
+		if (i_14_ >= 5 && i_14_ <= 8) {
 			i_14_ = 4;
 		}
 		return objectdefinition.method3041(i_14_, 31);
@@ -140,106 +140,78 @@ public class Class128
 																										while_109_:
 																											do {
 																												do {
-																													if (Class194_Sub1_Sub1.aClass124_9368 != class124_16_) {
-																														if (EntityNode_Sub8.aClass124_6024 != class124_16_) {
-																															if (Node_Sub16.aClass124_7132 != class124_16_) {
-																																if (class124_16_ != Class262_Sub21.aClass124_7865) {
-																																	if (Class233.aClass124_2784 != class124_16_) {
-																																		if (Class320_Sub6.aClass124_8267 != class124_16_) {
-																																			if (class124_16_ != Animable_Sub3.aClass124_9141) {
-																																				if (class124_16_ != Class262_Sub6.aClass124_7745) {
-																																					if (class124_16_ != Class320_Sub5.aClass124_8253) {
-																																						if (class124_16_ != Class144_Sub4.aClass124_6846) {
-																																							if (Class155.aClass124_1955 != class124_16_) {
-																																								if (class124_16_ != CacheNode_Sub16_Sub1.aClass124_11076) {
-																																									if (Class144_Sub4.aClass124_6838 != class124_16_) {
-																																										if (class124_16_ != CacheNode_Sub4.aClass124_9463) {
-																																											if (Class188.aClass124_2291 != class124_16_) {
-																																												if (class124_16_ != Class10.aClass124_169) {
-																																													if (class124_16_ != Node_Sub25_Sub2.aClass124_9957) {
-																																														if (class124_16_ != Class274.aClass124_4975) {
-																																															if (Class127.aClass124_1638 != class124_16_) {
-																																																if (Animable_Sub3.aClass124_9135 != class124_16_) {
-																																																	if (Node_Sub38_Sub23.aClass124_10344 != class124_16_) {
-																																																		if (class124_16_ != Class260.aClass124_5230) {
-																																																			if (class124_16_ != Class64.aClass124_5036) {
-																																																				if (class124_16_ != OutputStream_Sub1.aClass124_88) {
-																																																					if (AnimableAnimator.aClass124_5500 != class124_16_) {
-																																																						if (Class362.aClass124_4494 != class124_16_) {
-																																																							if (Class262_Sub12.aClass124_7785 != class124_16_) {
-																																																								if (class124_16_ != Node_Sub15_Sub4.aClass124_9793) {
-																																																									break while_134_;
-																																																								}
-																																																							} else {
-																																																								break while_132_;
-																																																							}
-																																																							break while_133_;
-																																																						}
-																																																					} else {
-																																																						break while_130_;
-																																																					}
-																																																					break while_131_;
-																																																				}
-																																																			} else {
-																																																				break while_128_;
-																																																			}
-																																																			break while_129_;
-																																																		}
-																																																	} else {
-																																																		break while_126_;
-																																																	}
-																																																	break while_127_;
-																																																}
-																																															} else {
-																																																break while_124_;
-																																															}
-																																															break while_125_;
-																																														}
-																																													} else {
-																																														break while_122_;
-																																													}
-																																													break while_123_;
-																																												}
-																																											} else {
-																																												break while_120_;
-																																											}
-																																											break while_121_;
-																																										}
-																																									} else {
-																																										break while_118_;
-																																									}
-																																									break while_119_;
-																																								}
-																																							} else {
-																																								break while_116_;
-																																							}
-																																							break while_117_;
-																																						}
-																																					} else {
-																																						break while_114_;
-																																					}
-																																					break while_115_;
-																																				}
-																																			} else {
-																																				break while_112_;
-																																			}
-																																			break while_113_;
-																																		}
-																																	} else {
-																																		break while_110_;
-																																	}
-																																	break while_111_;
-																																}
-																															} else {
-																																break;
-																															}
-																															break while_109_;
-																														}
-																													} else {
+																													if (Class194_Sub1_Sub1.aClass124_9368 == class124_16_) {
 																														class262 = new Class262_Sub16(buffer);//sendobject or destroy?
 																														break while_134_;
-																													}
-																													class262 = new Class262_Sub2(buffer); //sendobject or destroy?
+																													} else if (EntityNode_Sub8.aClass124_6024 != class124_16_) {
+                                                                                                                        if (Node_Sub16.aClass124_7132 == class124_16_) {
+                                                                                                                            break;
+                                                                                                                        } else if (class124_16_ != Class262_Sub21.aClass124_7865) {
+                                                                                                                            if (Class233.aClass124_2784 == class124_16_) {
+                                                                                                                                break while_110_;
+                                                                                                                            } else if (Class320_Sub6.aClass124_8267 != class124_16_) {
+                                                                                                                                if (class124_16_ == Animable_Sub3.aClass124_9141) {
+                                                                                                                                    break while_112_;
+                                                                                                                                } else if (class124_16_ != Class262_Sub6.aClass124_7745) {
+                                                                                                                                    if (class124_16_ == Class320_Sub5.aClass124_8253) {
+                                                                                                                                        break while_114_;
+                                                                                                                                    } else if (class124_16_ != Class144_Sub4.aClass124_6846) {
+                                                                                                                                        if (Class155.aClass124_1955 == class124_16_) {
+                                                                                                                                            break while_116_;
+                                                                                                                                        } else if (class124_16_ != CacheNode_Sub16_Sub1.aClass124_11076) {
+                                                                                                                                            if (Class144_Sub4.aClass124_6838 == class124_16_) {
+                                                                                                                                                break while_118_;
+                                                                                                                                            } else if (class124_16_ != CacheNode_Sub4.aClass124_9463) {
+                                                                                                                                                if (Class188.aClass124_2291 == class124_16_) {
+                                                                                                                                                    break while_120_;
+                                                                                                                                                } else if (class124_16_ != Class10.aClass124_169) {
+                                                                                                                                                    if (class124_16_ == Node_Sub25_Sub2.aClass124_9957) {
+                                                                                                                                                        break while_122_;
+                                                                                                                                                    } else if (class124_16_ != Class274.aClass124_4975) {
+                                                                                                                                                        if (Class127.aClass124_1638 == class124_16_) {
+                                                                                                                                                            break while_124_;
+                                                                                                                                                        } else if (Animable_Sub3.aClass124_9135 != class124_16_) {
+                                                                                                                                                            if (Node_Sub38_Sub23.aClass124_10344 == class124_16_) {
+                                                                                                                                                                break while_126_;
+                                                                                                                                                            } else if (class124_16_ != Class260.aClass124_5230) {
+                                                                                                                                                                if (class124_16_ == Class64.aClass124_5036) {
+                                                                                                                                                                    break while_128_;
+                                                                                                                                                                } else if (class124_16_ != OutputStream_Sub1.aClass124_88) {
+                                                                                                                                                                    if (AnimableAnimator.aClass124_5500 == class124_16_) {
+                                                                                                                                                                        break while_130_;
+                                                                                                                                                                    } else if (Class362.aClass124_4494 != class124_16_) {
+                                                                                                                                                                        if (Class262_Sub12.aClass124_7785 == class124_16_) {
+                                                                                                                                                                            break while_132_;
+                                                                                                                                                                        } else if (class124_16_ != Node_Sub15_Sub4.aClass124_9793) {
+                                                                                                                                                                            break while_134_;
+                                                                                                                                                                        }
+                                                                                                                                                                        break while_133_;
+                                                                                                                                                                    }
+                                                                                                                                                                    break while_131_;
+                                                                                                                                                                }
+                                                                                                                                                                break while_129_;
+                                                                                                                                                            }
+                                                                                                                                                            break while_127_;
+                                                                                                                                                        }
+                                                                                                                                                        break while_125_;
+                                                                                                                                                    }
+                                                                                                                                                    break while_123_;
+                                                                                                                                                }
+                                                                                                                                                break while_121_;
+                                                                                                                                            }
+                                                                                                                                            break while_119_;
+                                                                                                                                        }
+                                                                                                                                        break while_117_;
+                                                                                                                                    }
+                                                                                                                                    break while_115_;
+                                                                                                                                }
+                                                                                                                                break while_113_;
+                                                                                                                            }
+                                                                                                                            break while_111_;
+                                                                                                                        }
+                                                                                                                        break while_109_;
+                                                                                                                    }
+                                                                                                                    class262 = new Class262_Sub2(buffer); //sendobject or destroy?
 																													break while_134_;
 																												} while (false);
 																												class262 = new Class262_Sub6(buffer); //object animation

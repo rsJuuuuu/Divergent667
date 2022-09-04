@@ -25,13 +25,13 @@ public class Class267
 		anInt3448++;
 		@SuppressWarnings("unused")
 		int i = 83 / ((38 - b) / 60);
-        return (aChar3444 ^ 0xffffffff) == -116;
+        return aChar3444 == 115;
     }
 	
 	final void method3288(BufferedStream buffer, byte b) {
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method3289(b ^ 0x21, i, buffer);
@@ -45,16 +45,14 @@ public class Class267
 		if (i <= 92) {
 			aChar3444 = '0';
 		}
-		if (i_0_ != 1) {
-			if ((i_0_ ^ 0xffffffff) == -3) {
-				anInt3443 = buffer.readInt();
-			} else if ((i_0_ ^ 0xffffffff) == -5) {
-				aBoolean3442 = false;
-			} else if (i_0_ == 5) {
-				aString3450 = buffer.readString();
-			}
-		} else {
+		if (i_0_ == 1) {
 			aChar3444 = Class20_Sub1.method294(buffer.readByte(), (byte) 124);
+		} else if (i_0_ == 2) {
+			anInt3443 = buffer.readInt();
+		} else if (i_0_ == 4) {
+			aBoolean3442 = false;
+		} else if (i_0_ == 5) {
+			aString3450 = buffer.readString();
 		}
 		anInt3447++;
 	}

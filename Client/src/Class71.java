@@ -38,7 +38,7 @@ public class Class71
 		if (i_0_ != -23003) {
 			return false;
 		}
-        return (i_1_ & 0xc580 ^ 0xffffffff) != -1;
+        return (i_1_ & 0xc580) != 0;
     }
 	
 	final void method742(int i) {

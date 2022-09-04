@@ -72,7 +72,7 @@ public class Class270_Sub2_Sub2 extends Class270_Sub2
 			Class188_Sub1_Sub1.anIntArray9330[1] = anInt10559;
 			boolean bool_2_ = false;
 			int i = 0;
-			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > -7; i_3_++) {
+			for (int i_3_ = 0; i_3_ < 6; i_3_++) {
 				if (!var_d.method7(9900, Class188_Sub1_Sub1.anIntArray9330[i_3_])) {
 					return null;
 				}
@@ -81,7 +81,7 @@ public class Class270_Sub2_Sub2 extends Class270_Sub2
 				if (class91.aByte1207 > 0) {
 					bool_2_ = true;
 				}
-				if ((i ^ 0xffffffff) > (i_4_ ^ 0xffffffff)) {
+				if (i_4_ > i) {
 					i = i_4_;
 				}
 			}

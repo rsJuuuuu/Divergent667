@@ -115,7 +115,7 @@ public class Class266
 				i = 200;
 			}
 			anInt3390 += i;
-			if ((anInt3390 ^ 0xffffffff) < -30001) {
+			if (anInt3390 > 30000) {
 				try {
 					aBufferedConnection3389.method430(b + 20622);
 				} catch (Exception exception) {
@@ -126,7 +126,7 @@ public class Class266
 		}
 		anInt3379++;
 		if (aBufferedConnection3389 == null) {
-            return !(method3236(b ^ 0x46) != 0 || (method3246((byte) 111) ^ 0xffffffff) != -1);
+            return !(method3236(b ^ 0x46) != 0 || method3246((byte) 111) != 0);
         }
 		try {
 			aBufferedConnection3389.method423(-1650936088);
@@ -182,7 +182,7 @@ public class Class266
 					}
 					aBufferedConnection3389.method425(i_3_, (byte) 48, aBuffer3396.offset, aBuffer3396.buffer);
 					if (encryptValue != 0) {
-						for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (i_3_ ^ 0xffffffff); i_4_++)
+						for (int i_4_ = 0; i_3_ > i_4_; i_4_++)
 							aBuffer3396.buffer[aBuffer3396.offset - -i_4_] = (byte) Node_Sub19.method2612(aBuffer3396.buffer[aBuffer3396.offset + i_4_], encryptValue);
 					}
 					aBuffer3396.offset += i_3_;
@@ -194,62 +194,62 @@ public class Class266
 							int settings = aBuffer3396.readUnsignedByte(); //4
 							int size = aBuffer3396.readInt(); //8 
 							int compression = 0x7f & settings;
-							boolean noPriority = (settings & 0x80 ^ 0xffffffff) != -1;
+							boolean noPriority = (settings & 0x80) != 0;
 							long l = archiveId + ((long) indexId << 32);
 							@SuppressWarnings("unused")
 							Object object = null;
 							CacheNode_Sub16_Sub1 cachenode_sub16_sub1_10_;
-							if (!noPriority) {
-								for (cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3386.method1723(13); cachenode_sub16_sub1_10_ != null; cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3386.method1721(0)) {
-									if ((cachenode_sub16_sub1_10_.aLong7037 ^ 0xffffffffffffffffL) == (l ^ 0xffffffffffffffffL)) {
+							if (noPriority) {
+								for (cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3388.method1723(13); cachenode_sub16_sub1_10_ != null; cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3388.method1721(0)) {
+									if (l == cachenode_sub16_sub1_10_.aLong7037) {
 										break;
 									}
 								}
 							} else {
-								for (cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3388.method1723(13); cachenode_sub16_sub1_10_ != null; cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3388.method1721(0)) {
-									if ((cachenode_sub16_sub1_10_.aLong7037 ^ 0xffffffffffffffffL) == (l ^ 0xffffffffffffffffL)) {
+								for (cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3386.method1723(13); cachenode_sub16_sub1_10_ != null; cachenode_sub16_sub1_10_ = (CacheNode_Sub16_Sub1) aClass158_3386.method1721(0)) {
+									if (l == cachenode_sub16_sub1_10_.aLong7037) {
 										break;
 									}
 								}
 							}
-							if (cachenode_sub16_sub1_10_ == null) {
+                            if (cachenode_sub16_sub1_10_ == null) {
 								throw new IOException();
 							}
 							aCacheNode_Sub16_Sub1_3397 = cachenode_sub16_sub1_10_;
-							int i_11_ = (compression ^ 0xffffffff) != -1 ? 9 : 5;
+							int i_11_ = compression != 0 ? 9 : 5;
 							aCacheNode_Sub16_Sub1_3397.aBuffer11072 = new BufferedStream(i_11_ + size - -aCacheNode_Sub16_Sub1_3397.aByte11069);
 							aCacheNode_Sub16_Sub1_3397.aBuffer11072.writeByte(compression);
 							aCacheNode_Sub16_Sub1_3397.aBuffer11072.writeInt(size);
 							aCacheNode_Sub16_Sub1_3397.position = 10;
 							aBuffer3396.offset = 0;
 						} else if (aCacheNode_Sub16_Sub1_3397.position == 0) {
-							if (aBuffer3396.buffer[0] != -1) {
-								aCacheNode_Sub16_Sub1_3397 = null;
-							} else {
+							if (aBuffer3396.buffer[0] == -1) {
 								aBuffer3396.offset = 0;
 								aCacheNode_Sub16_Sub1_3397.position = 1;
+							} else {
+								aCacheNode_Sub16_Sub1_3397 = null;
 							}
-						} else {
+                        } else {
 							throw new IOException();
 						}
 					}
 				} else {
 					int i_12_ = -aCacheNode_Sub16_Sub1_3397.aByte11069 + aCacheNode_Sub16_Sub1_3397.aBuffer11072.buffer.length;
 					int i_13_ = 512 - aCacheNode_Sub16_Sub1_3397.position;
-					if ((i_13_ ^ 0xffffffff) < (-aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset + i_12_ ^ 0xffffffff)) {
+					if (-aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset + i_12_ < i_13_) {
 						i_13_ = -aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset + i_12_;
 					}
 					if (i_13_ > i_1_) {
 						i_13_ = i_1_;
 					}
 					aBufferedConnection3389.method425(i_13_, (byte) 67, aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset, aCacheNode_Sub16_Sub1_3397.aBuffer11072.buffer);
-					if ((encryptValue ^ 0xffffffff) != -1) {
+					if (encryptValue != 0) {
 						for (int i_14_ = 0; i_14_ < i_13_; i_14_++)
 							aCacheNode_Sub16_Sub1_3397.aBuffer11072.buffer[aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset - -i_14_] = (byte) Node_Sub19.method2612(aCacheNode_Sub16_Sub1_3397.aBuffer11072.buffer[aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset + i_14_], encryptValue);
 					}
 					aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset += i_13_;
 					aCacheNode_Sub16_Sub1_3397.position += i_13_;
-					if ((i_12_ ^ 0xffffffff) == (aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset ^ 0xffffffff)) {
+					if (aCacheNode_Sub16_Sub1_3397.aBuffer11072.offset == i_12_) {
 						aCacheNode_Sub16_Sub1_3397.method2275(-65);
 						aCacheNode_Sub16_Sub1_3397.aBoolean9602 = false;
 						aCacheNode_Sub16_Sub1_3397 = null;
@@ -268,7 +268,7 @@ public class Class266
 			aBufferedConnection3389 = null;
 			anInt3394++;
 			anInt3393 = -2;
-            return method3236(0) == 0 && (method3246((byte) 71) ^ 0xffffffff) == -1;
+            return method3236(0) == 0 && method3246((byte) 71) == 0;
         }
 	}
 	
@@ -277,7 +277,7 @@ public class Class266
 			return false;
 		}
 		anInt3376++;
-        return (method3246((byte) 121) ^ 0xffffffff) <= -21;
+        return method3246((byte) 121) >= 20;
     }
 	
 	final void method3240(boolean bool, int i) {
@@ -394,18 +394,16 @@ public class Class266
 		}
 		Class259 class259 = npc.method868((byte) -124);
 		int i_16_ = npc.anAnimator10860.method250((byte) 81);
-		if (i_16_ != -1 && !npc.aBoolean10867) {
-			if (class259.anInt3252 != i_16_ && class259.anInt3271 != i_16_ && (class259.anInt3293 ^ 0xffffffff) != (i_16_ ^ 0xffffffff) && (i_16_ ^ 0xffffffff) != (class259.anInt3270 ^ 0xffffffff)) {
-				if (class259.anInt3262 == i_16_ || (i_16_ ^ 0xffffffff) == (class259.anInt3297 ^ 0xffffffff) || (class259.anInt3304 ^ 0xffffffff) == (i_16_ ^ 0xffffffff) || (class259.anInt3269 ^ 0xffffffff) == (i_16_ ^ 0xffffffff)) {
-					i_15_ = npcdefinition.anInt2833;
-				}
-			} else {
-				i_15_ = npcdefinition.anInt2810;
+		if (i_16_ == -1 || npc.aBoolean10867) {
+			i_15_ = npcdefinition.anInt2812;
+		} else if (class259.anInt3252 != i_16_ && class259.anInt3271 != i_16_ && i_16_ != class259.anInt3293 && class259.anInt3270 != i_16_) {
+			if (class259.anInt3262 == i_16_ || class259.anInt3297 == i_16_ || i_16_ == class259.anInt3304 || i_16_ == class259.anInt3269) {
+				i_15_ = npcdefinition.anInt2833;
 			}
 		} else {
-			i_15_ = npcdefinition.anInt2812;
+			i_15_ = npcdefinition.anInt2810;
 		}
-		return i_15_;
+        return i_15_;
 	}
 	
 	final boolean method3244(int i) {
@@ -413,7 +411,7 @@ public class Class266
 			encryptValue = (byte) -93;
 		}
 		anInt3368++;
-        return (method3236(0) ^ 0xffffffff) <= -21;
+        return method3236(0) >= 20;
     }
 	
 	final void method3245(int i) {
@@ -445,7 +443,7 @@ public class Class266
 		cachenode_sub16_sub1.aByte11069 = b_18_;
 		cachenode_sub16_sub1.aLong7037 = l;
 		if (bool) {
-			if ((method3236(0) ^ 0xffffffff) <= -21) {
+			if (method3236(0) >= 20) {
 				throw new RuntimeException();
 			}
 			aClass158_3384.method1719(true, cachenode_sub16_sub1);

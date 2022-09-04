@@ -140,25 +140,23 @@ public class Class336_Sub1 extends Class336
 		float f_20_;
 		float f_21_;
 		float f_22_;
-		if (!(f_19_ > 0.00390625F) && !(f_19_ < -0.00390625F)) {
-			if (f_17_ > 0.00390625F || f_17_ < -0.00390625F) {
-				float f_23_ = -f / f_17_;
-				f_20_ = aFloat8538 * f_23_ + aFloat8521;
-				f_22_ = aFloat8531 * f_23_ + aFloat8550;
-				f_21_ = aFloat8542 + f_23_ * aFloat8508;
-			} else {
-				float f_24_ = -f / f_18_;
-				f_22_ = aFloat8529 * f_24_ + aFloat8550;
-				f_20_ = aFloat8535 * f_24_ + aFloat8521;
-				f_21_ = aFloat8542 + f_24_ * aFloat8556;
-			}
-		} else {
+		if ((f_19_ > 0.00390625F) || (f_19_ < -0.00390625F)) {
 			float f_25_ = -f / f_19_;
 			f_20_ = f_25_ * aFloat8544 + aFloat8521;
 			f_21_ = aFloat8547 * f_25_ + aFloat8542;
 			f_22_ = f_25_ * aFloat8530 + aFloat8550;
+		} else if (f_17_ <= 0.00390625F && f_17_ >= -0.00390625F) {
+			float f_24_ = -f / f_18_;
+			f_22_ = aFloat8529 * f_24_ + aFloat8550;
+			f_20_ = aFloat8535 * f_24_ + aFloat8521;
+			f_21_ = aFloat8542 + f_24_ * aFloat8556;
+		} else {
+			float f_23_ = -f / f_17_;
+			f_20_ = aFloat8538 * f_23_ + aFloat8521;
+			f_22_ = aFloat8531 * f_23_ + aFloat8550;
+			f_21_ = aFloat8542 + f_23_ * aFloat8508;
 		}
-		fs[3] = -(fs[0] * f_22_ + f_20_ * fs[1] + f_21_ * fs[2]);
+        fs[3] = -(fs[0] * f_22_ + f_20_ * fs[1] + f_21_ * fs[2]);
 	}
 	
 	final void method3861(int i) {

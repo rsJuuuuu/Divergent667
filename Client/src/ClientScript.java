@@ -38,7 +38,7 @@ public class ClientScript extends CacheNode
 			return false;
 		}
 		anInt9513++;
-        return (0x400 & i_0_ ^ 0xffffffff) != -1;
+        return (0x400 & i_0_) != 0;
     }
 	
 	public static void method2323(int i) {

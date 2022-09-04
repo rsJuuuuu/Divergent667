@@ -44,7 +44,7 @@ abstract class Class51 implements Interface15
 	void method38(boolean bool) {
 		anInt5342++;
 		if (bool == false) {
-			if ((anInt5324 ^ 0xffffffff) < -1) {
+			if (anInt5324 > 0) {
 				aGLXToolkit5332.method1402((byte) -98, anInt5324, anInt5329);
 				anInt5324 = -1;
 			}
@@ -62,7 +62,7 @@ abstract class Class51 implements Interface15
 		if (b != 50) {
 			return -22L;
 		}
-		if ((anInt5324 ^ 0xffffffff) == -1) {
+		if (anInt5324 == 0) {
 			return aNativeHeapBuffer5344.getAddress();
 		}
 		return 0L;
@@ -70,9 +70,9 @@ abstract class Class51 implements Interface15
 	
 	final boolean method516(int i, Source source, boolean bool) {
 		anInt5338++;
-		if ((i ^ 0xffffffff) < (anInt5341 ^ 0xffffffff)) {
+		if (anInt5341 < i) {
 			method520(76);
-			if ((anInt5324 ^ 0xffffffff) < -1) {
+			if (anInt5324 > 0) {
 				OpenGL.glBindBufferARB(anInt5326, anInt5324);
 				OpenGL.glBufferDataARBa(anInt5326, i, source.getAddress(), aBoolean5337 ? 35040 : 35044);
 				aGLXToolkit5332.anInt6260 += i + -anInt5329;
@@ -101,8 +101,8 @@ abstract class Class51 implements Interface15
 		}
 		anInt5334++;
 		boolean bool = true;
-		if ((anInt5340 ^ 0xffffffff) != -1) {
-			if ((anInt5324 ^ 0xffffffff) < -1) {
+		if (anInt5340 != 0) {
+			if (anInt5324 > 0) {
 				OpenGL.glBindBufferARB(anInt5326, anInt5324);
 				if (anInt5340 == 1) {
 					OpenGL.glBufferSubDataARBa(anInt5326, 0, anInt5341, aGLXToolkit5332.aNativeHeapBuffer6171.getAddress());
@@ -130,7 +130,7 @@ abstract class Class51 implements Interface15
 			aGLXToolkit5332 = null;
 		}
 		anInt5327++;
-		if ((i_0_ ^ 0xffffffff) < (anInt5341 ^ 0xffffffff)) {
+		if (anInt5341 < i_0_) {
 			method520(55);
 			if (anInt5324 > 0) {
 				OpenGL.glBindBufferARB(anInt5326, anInt5324);
@@ -187,7 +187,7 @@ abstract class Class51 implements Interface15
 	
 	private final void method520(int i) {
 		anInt5336++;
-		if ((anInt5324 ^ 0xffffffff) > -1) {
+		if (anInt5324 < 0) {
 			if (aGLXToolkit5332.aBoolean9316) {
 				OpenGL.glGenBuffersARB(1, Class307.anIntArray3896, 0);
 				anInt5324 = Class307.anIntArray3896[0];

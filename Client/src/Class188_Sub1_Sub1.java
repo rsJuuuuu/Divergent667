@@ -59,7 +59,7 @@ public class Class188_Sub1_Sub1 extends Class188_Sub1
 		ItemDefinitions.anInt1858 = speed1;
 		Node_Sub38_Sub38.anInt10490 = moveLocalY;
 		Renderer.anInt3663 = moveLocalX;
-		if (bool && (ItemDefinitions.anInt1858 ^ 0xffffffff) <= -101) {
+		if (bool && ItemDefinitions.anInt1858 >= 100) {
 			Class98.anInt5061 = Renderer.anInt3663 * 512 + 256;
 			Node_Sub10.anInt7079 = Node_Sub38_Sub38.anInt10490 * 512 - -256;
 			Class190.anInt2331 = Node_Sub38_Sub7.method2809(CacheNode_Sub20_Sub1.myPlayerPlane, -29754, Node_Sub10.anInt7079, Class98.anInt5061) - Class194.anInt2370;

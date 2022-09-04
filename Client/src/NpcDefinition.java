@@ -93,13 +93,13 @@ public class NpcDefinition {
 			anIntArray2865 = new int[0];
 		}
 		anInt2835++;
-		if ((aByte2855 ^ 0xffffffff) == 0) {
-			if (Node_Sub38_Sub34.aClass353_10443 != aClass279_2861.aClass353_3553) {
-				aByte2855 = (byte) 0;
-			} else {
+		if (aByte2855 == -1) {
+			if (Node_Sub38_Sub34.aClass353_10443 == aClass279_2861.aClass353_3553) {
 				aByte2855 = (byte) 1;
+			} else {
+				aByte2855 = (byte) 0;
 			}
-		}
+        }
 		if (b != -110) {
 			aBoolean2883 = false;
 		}
@@ -108,20 +108,20 @@ public class NpcDefinition {
 	final boolean method2998(byte b) {
 		anInt2866++;
 		if (anIntArray2827 == null) {
-            return !((anInt2812 ^ 0xffffffff) == 0 && (anInt2809 ^ 0xffffffff) == 0
+            return !(anInt2812 == -1 && anInt2809 == -1
                     && anInt2810 == -1);
         }
 		int i = 0;
 		if (b != 91) {
 			aClass61_2805 = null;
 		}
-		for (/**/; (anIntArray2827.length ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
-			if ((anIntArray2827[i] ^ 0xffffffff) != 0) {
+		for (/**/; i < anIntArray2827.length; i++) {
+			if (anIntArray2827[i] != -1) {
 				NpcDefinition npcdefinition_0_ = aClass279_2861
 						.getNPCDefinitions(anIntArray2827[i], (byte) 107);
 				if (npcdefinition_0_.anInt2812 != -1
-						|| (npcdefinition_0_.anInt2809 ^ 0xffffffff) != 0
-						|| (npcdefinition_0_.anInt2810 ^ 0xffffffff) != 0) {
+						|| npcdefinition_0_.anInt2809 != -1
+						|| npcdefinition_0_.anInt2810 != -1) {
 					return true;
 				}
 			}
@@ -137,14 +137,14 @@ public class NpcDefinition {
 		int i_1_ = -1;
 		if (anInt2881 != -1) {
 			i_1_ = interface17.method64(anInt2881, (byte) -42);
-		} else if ((anInt2882 ^ 0xffffffff) != 0) {
+		} else if (anInt2882 != -1) {
 			i_1_ = interface17.method65(anInt2882, 119);
 		}
 		if (i_1_ < 0
-				|| (anIntArray2827.length + -1 ^ 0xffffffff) >= (i_1_ ^ 0xffffffff)
-				|| (anIntArray2827[i_1_] ^ 0xffffffff) == 0) {
+				|| i_1_ >= anIntArray2827.length + -1
+				|| anIntArray2827[i_1_] == -1) {
 			int i_2_ = anIntArray2827[anIntArray2827.length - 1];
-			if ((i_2_ ^ 0xffffffff) == 0) {
+			if (i_2_ == -1) {
 				return null;
 			}
 			return aClass279_2861.getNPCDefinitions(i_2_, (byte) 107);
@@ -201,325 +201,277 @@ public class NpcDefinition {
 
 	private final void method3004(int opcode, BufferedStream buffer, byte b) {
 		anInt2808++;
-		if ((opcode ^ 0xffffffff) == -2) {
+		if (opcode == 1) {
 			int i_6_ = buffer.readUnsignedByte();
 			anIntArray2865 = new int[i_6_];
-			for (int i_7_ = 0; (i_6_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++) {
+			for (int i_7_ = 0; i_7_ < i_6_; i_7_++) {
 				anIntArray2865[i_7_] = buffer.readBigSmart();
-				if ((anIntArray2865[i_7_] ^ 0xffffffff) == -65536) {
+				if (anIntArray2865[i_7_] == 65535) {
 					anIntArray2865[i_7_] = -1;
 				}
 			}
-		} else if ((opcode ^ 0xffffffff) == -3) {
+		} else if (opcode == 2) {
 			name = buffer.readString();
 		} else if (opcode == 12) {
 			anInt2811 = buffer.readUnsignedByte();
-		} else if (opcode < 30 || (opcode ^ 0xffffffff) <= -36) {
-			if ((opcode ^ 0xffffffff) != -41) {
-				if (opcode == 41) {
-					int i_8_ = buffer.readUnsignedByte();
-					aShortArray2874 = new short[i_8_];
-					aShortArray2841 = new short[i_8_];
-					for (int i_9_ = 0; i_9_ < i_8_; i_9_++) {
-						aShortArray2841[i_9_] = (short) buffer
-								.readUnsignedShort();
-						aShortArray2874[i_9_] = (short) buffer
-								.readUnsignedShort();
-					}
-				} else if (opcode != 42) {
-					if ((opcode ^ 0xffffffff) == -61) {
-						int i_10_ = buffer.readUnsignedByte();
-						anIntArray2847 = new int[i_10_];
-						for (int i_11_ = 0; (i_10_ ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++)
-							anIntArray2847[i_11_] = buffer.readBigSmart();
-					} else if ((opcode ^ 0xffffffff) == -94) {
-						aBoolean2879 = false;
-					} else if ((opcode ^ 0xffffffff) != -96) {
-						if ((opcode ^ 0xffffffff) == -98) {
-							anInt2858 = buffer.readUnsignedShort();
-						} else if (opcode != 98) {
-							if ((opcode ^ 0xffffffff) != -100) {
-								if ((opcode ^ 0xffffffff) != -101) {
-									if ((opcode ^ 0xffffffff) != -102) {
-										if (opcode == 102) {
-											anInt2806 = buffer
-													.readUnsignedShort();
-										} else if (opcode != 103) {
-											if (opcode == 106 || opcode == 118) {
-												anInt2881 = buffer
-														.readUnsignedShort();
-												if (anInt2881 == 65535) {
-													anInt2881 = -1;
-												}
-												anInt2882 = buffer
-														.readUnsignedShort();
-												if (anInt2882 == 65535) {
-													anInt2882 = -1;
-												}
-												int i_12_ = -1;
-												if ((opcode ^ 0xffffffff) == -119) {
-													i_12_ = buffer
-															.readUnsignedShort();
-													if (i_12_ == 65535) {
-														i_12_ = -1;
-													}
-												}
-												int i_13_ = buffer
-														.readUnsignedByte();
-												anIntArray2827 = new int[i_13_
-														- -2];
-												for (int i_14_ = 0; i_13_ >= i_14_; i_14_++) {
-													anIntArray2827[i_14_] = buffer
-															.readUnsignedShort();
-													if (anIntArray2827[i_14_] == 65535) {
-														anIntArray2827[i_14_] = -1;
-													}
-												}
-												anIntArray2827[i_13_ - -1] = i_12_;
-											} else if ((opcode ^ 0xffffffff) != -108) {
-												if (opcode == 109) {
-													aBoolean2817 = false;
-												} else if (opcode != 111) {
-													if (opcode == 113) {
-														aShort2863 = (short) buffer
-																.readUnsignedShort();
-														aShort2871 = (short) buffer
-																.readUnsignedShort();
-													} else if (opcode == 114) {
-														aByte2877 = buffer
-																.readByte();
-														aByte2868 = buffer
-																.readByte();
-													} else if ((opcode ^ 0xffffffff) != -120) {
-														if ((opcode ^ 0xffffffff) != -122) {
-															if ((opcode ^ 0xffffffff) != -123) {
-																if ((opcode ^ 0xffffffff) != -124) {
-																	if (opcode == 125) {
-																		aByte2873 = buffer
-																				.readByte();
-																	} else if (opcode != 127) {
-																		if (opcode == 128) {
-																			buffer.readUnsignedByte();
-																		} else if (opcode == 134) {
-																			anInt2812 = buffer
-																					.readUnsignedShort();
-																			if ((anInt2812 ^ 0xffffffff) == -65536) {
-																				anInt2812 = -1;
-																			}
-																			anInt2833 = buffer
-																					.readUnsignedShort();
-																			if (anInt2833 == 65535) {
-																				anInt2833 = -1;
-																			}
-																			anInt2809 = buffer
-																					.readUnsignedShort();
-																			if (anInt2809 == 65535) {
-																				anInt2809 = -1;
-																			}
-																			anInt2810 = buffer
-																					.readUnsignedShort();
-																			if ((anInt2810 ^ 0xffffffff) == -65536) {
-																				anInt2810 = -1;
-																			}
-																			anInt2864 = buffer
-																					.readUnsignedByte();
-																		} else if ((opcode ^ 0xffffffff) != -136) {
-																			if ((opcode ^ 0xffffffff) != -137) {
-																				if ((opcode ^ 0xffffffff) == -138) {
-																					anInt2860 = buffer
-																							.readBigSmart();
-																				} else if (opcode != 138) {
-																					if ((opcode ^ 0xffffffff) == -140) {
-																						anInt2826 = buffer
-																								.readUnsignedShort();
-																					} else if (opcode == 140) {
-																						anInt2828 = buffer
-																								.readUnsignedByte();
-																					} else if ((opcode ^ 0xffffffff) != -142) {
-																						if ((opcode ^ 0xffffffff) == -143) {
-																							anInt2849 = buffer
-																									.readUnsignedShort();
-																						} else if ((opcode ^ 0xffffffff) == -144) {
-																							aBoolean2825 = true;
-																						} else if ((opcode ^ 0xffffffff) <= -151
-																								&& (opcode ^ 0xffffffff) > -156) {
-																							options[-150
-																									+ opcode] = buffer
-																									.readString();
-																							if (!aClass279_2861.aBoolean3556) {
-																								options[opcode
-																										+ -150] = null;
-																							}
-																						} else if ((opcode ^ 0xffffffff) != -156) {
-																							if ((opcode ^ 0xffffffff) != -159) {
-																								if (opcode == 159) {
-																									aByte2855 = (byte) 0;
-																								} else if (opcode == 160) {
-																									int i_15_ = buffer
-																											.readUnsignedByte();
-																									anIntArray2832 = new int[i_15_];
-																									for (int i_16_ = 0; (i_16_ ^ 0xffffffff) > (i_15_ ^ 0xffffffff); i_16_++)
-																										anIntArray2832[i_16_] = buffer
-																												.readUnsignedShort();
-																								} else if (opcode != 162) {
-																									if (opcode == 163) {
-																										anInt2803 = buffer
-																												.readUnsignedByte();
-																									} else if (opcode != 164) {
-																										if ((opcode ^ 0xffffffff) == -166) {
-																											anInt2831 = buffer
-																													.readUnsignedByte();
-																										} else if (opcode == 168) {
-																											anInt2862 = buffer
-																													.readUnsignedByte();
-																										} else if (opcode == 249) {
-																											int i_17_ = buffer
-																													.readUnsignedByte();
-																											if (aHashTable2813 == null) {
-																												int i_18_ = Class320_Sub19
-																														.method3753(
-																																i_17_,
-																																-729073628);
-																												aHashTable2813 = new HashTable(
-																														i_18_);
-																											}
-																											for (int i_19_ = 0; (i_17_ ^ 0xffffffff) < (i_19_ ^ 0xffffffff); i_19_++) {
-																												boolean bool = buffer
-																														.readUnsignedByte() == 1;
-																												int i_20_ = buffer
-																														.read24BitInteger();
-																												Node node;
-																												if (!bool) {
-																													node = new Node_Sub32(
-																															buffer.readInt());
-																												} else {
-																													node = new Node_Sub18(
-																															buffer.readString());
-																												}
-																												aHashTable2813
-																														.method1515(
-																																(long) i_20_,
-																																node,
-																																-127);
-																											}
-																										}
-																									} else {
-																										anInt2844 = buffer
-																												.readUnsignedShort();
-																										anInt2852 = buffer
-																												.readUnsignedShort();
-																									}
-																								} else {
-																									aBoolean2883 = true;
-																								}
-																							} else {
-																								aByte2855 = (byte) 1;
-																							}
-																						} else {
-																							aByte2836 = buffer
-																									.readByte();
-																							aByte2853 = buffer
-																									.readByte();
-																							aByte2857 = buffer
-																									.readByte();
-																							aByte2839 = buffer
-																									.readByte();
-																						}
-																					} else {
-																						aBoolean2843 = true;
-																					}
-																				} else {
-																					anInt2814 = buffer
-																							.readBigSmart();
-																				}
-																			} else {
-																				anInt2856 = buffer
-																						.readUnsignedByte();
-																				anInt2886 = buffer
-																						.readUnsignedShort();
-																			}
-																		} else {
-																			anInt2815 = buffer
-																					.readUnsignedByte();
-																			anInt2859 = buffer
-																					.readUnsignedShort();
-																		}
-																	} else {
-																		anInt2837 = buffer
-																				.readUnsignedShort();
-																	}
-																} else {
-																	anInt2804 = buffer
-																			.readUnsignedShort();
-																}
-															} else {
-																anInt2878 = buffer
-																		.readBigSmart();
-															}
-														} else {
-															anIntArrayArray2842 = new int[anIntArray2865.length][];
-															int i_21_ = buffer
-																	.readUnsignedByte();
-															for (int i_22_ = 0; i_22_ < i_21_; i_22_++) {
-																int i_23_ = buffer
-																		.readUnsignedByte();
-																int[] is = anIntArrayArray2842[i_23_] = new int[3];
-																is[0] = buffer
-																		.readByte();
-																is[1] = buffer
-																		.readByte();
-																is[2] = buffer
-																		.readByte();
-															}
-														}
-													} else {
-														aByte2816 = buffer
-																.readByte();
-													}
-												} else {
-													aBoolean2875 = false;
-												}
-											} else {
-												aBoolean2854 = false;
-											}
-										} else {
-											anInt2876 = buffer
-													.readUnsignedShort();
-										}
-									} else {
-										anInt2872 = 5 * buffer.readByte();
-									}
-								} else {
-									anInt2848 = buffer.readByte();
-								}
-							} else {
-								aBoolean2824 = true;
-							}
-						} else {
-							anInt2830 = buffer.readUnsignedShort();
-						}
-					} else {
-						anInt2838 = buffer.readUnsignedShort();
-					}
-				} else {
-					int i_24_ = buffer.readUnsignedByte();
-					aByteArray2820 = new byte[i_24_];
-					for (int i_25_ = 0; (i_24_ ^ 0xffffffff) < (i_25_ ^ 0xffffffff); i_25_++)
-						aByteArray2820[i_25_] = buffer.readByte();
-				}
-			} else {
-				int i_26_ = buffer.readUnsignedByte();
-				aShortArray2829 = new short[i_26_];
-				aShortArray2823 = new short[i_26_];
-				for (int i_27_ = 0; (i_26_ ^ 0xffffffff) < (i_27_ ^ 0xffffffff); i_27_++) {
-					aShortArray2823[i_27_] = (short) buffer.readUnsignedShort();
-					aShortArray2829[i_27_] = (short) buffer.readUnsignedShort();
-				}
-			}
-		} else { //options
+		} else if (opcode >= 30 && opcode < 35) { //options
 			options[-30 + opcode] = buffer.readString();
-		}
-		if (b >= -66) {
+		} else if (opcode == 40) {
+            int i_26_ = buffer.readUnsignedByte();
+            aShortArray2829 = new short[i_26_];
+            aShortArray2823 = new short[i_26_];
+            for (int i_27_ = 0; i_27_ < i_26_; i_27_++) {
+                aShortArray2823[i_27_] = (short) buffer.readUnsignedShort();
+                aShortArray2829[i_27_] = (short) buffer.readUnsignedShort();
+            }
+        } else if (opcode == 41) {
+            int i_8_ = buffer.readUnsignedByte();
+            aShortArray2874 = new short[i_8_];
+            aShortArray2841 = new short[i_8_];
+            for (int i_9_ = 0; i_9_ < i_8_; i_9_++) {
+                aShortArray2841[i_9_] = (short) buffer
+                        .readUnsignedShort();
+                aShortArray2874[i_9_] = (short) buffer
+                        .readUnsignedShort();
+            }
+        } else if (opcode == 42) {
+            int i_24_ = buffer.readUnsignedByte();
+            aByteArray2820 = new byte[i_24_];
+            for (int i_25_ = 0; i_25_ < i_24_; i_25_++)
+                aByteArray2820[i_25_] = buffer.readByte();
+        } else if (opcode == 60) {
+            int i_10_ = buffer.readUnsignedByte();
+            anIntArray2847 = new int[i_10_];
+            for (int i_11_ = 0; i_11_ < i_10_; i_11_++)
+                anIntArray2847[i_11_] = buffer.readBigSmart();
+        } else if (opcode == 93) {
+            aBoolean2879 = false;
+        } else if (opcode == 95) {
+            anInt2838 = buffer.readUnsignedShort();
+        } else if (opcode == 97) {
+            anInt2858 = buffer.readUnsignedShort();
+        } else if (opcode == 98) {
+            anInt2830 = buffer.readUnsignedShort();
+        } else if (opcode == 99) {
+            aBoolean2824 = true;
+        } else if (opcode == 100) {
+            anInt2848 = buffer.readByte();
+        } else if (opcode == 101) {
+            anInt2872 = 5 * buffer.readByte();
+        } else if (opcode == 102) {
+            anInt2806 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 103) {
+            anInt2876 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 106 || opcode == 118) {
+            anInt2881 = buffer
+                    .readUnsignedShort();
+            if (anInt2881 == 65535) {
+                anInt2881 = -1;
+            }
+            anInt2882 = buffer
+                    .readUnsignedShort();
+            if (anInt2882 == 65535) {
+                anInt2882 = -1;
+            }
+            int i_12_ = -1;
+            if (opcode == 118) {
+                i_12_ = buffer
+                        .readUnsignedShort();
+                if (i_12_ == 65535) {
+                    i_12_ = -1;
+                }
+            }
+            int i_13_ = buffer
+                    .readUnsignedByte();
+            anIntArray2827 = new int[i_13_
+                    - -2];
+            for (int i_14_ = 0; i_13_ >= i_14_; i_14_++) {
+                anIntArray2827[i_14_] = buffer
+                        .readUnsignedShort();
+                if (anIntArray2827[i_14_] == 65535) {
+                    anIntArray2827[i_14_] = -1;
+                }
+            }
+            anIntArray2827[i_13_ - -1] = i_12_;
+        } else if (opcode == 107) {
+            aBoolean2854 = false;
+        } else if (opcode == 109) {
+            aBoolean2817 = false;
+        } else if (opcode == 111) {
+            aBoolean2875 = false;
+        } else if (opcode == 113) {
+            aShort2863 = (short) buffer
+                    .readUnsignedShort();
+            aShort2871 = (short) buffer
+                    .readUnsignedShort();
+        } else if (opcode == 114) {
+            aByte2877 = buffer
+                    .readByte();
+            aByte2868 = buffer
+                    .readByte();
+        } else if (opcode == 119) {
+            aByte2816 = buffer
+                    .readByte();
+        } else if (opcode == 121) {
+            anIntArrayArray2842 = new int[anIntArray2865.length][];
+            int i_21_ = buffer
+                    .readUnsignedByte();
+            for (int i_22_ = 0; i_22_ < i_21_; i_22_++) {
+                int i_23_ = buffer
+                        .readUnsignedByte();
+                int[] is = anIntArrayArray2842[i_23_] = new int[3];
+                is[0] = buffer
+                        .readByte();
+                is[1] = buffer
+                        .readByte();
+                is[2] = buffer
+                        .readByte();
+            }
+        } else if (opcode == 122) {
+            anInt2878 = buffer
+                    .readBigSmart();
+        } else if (opcode == 123) {
+            anInt2804 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 125) {
+            aByte2873 = buffer
+                    .readByte();
+        } else if (opcode == 127) {
+            anInt2837 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 128) {
+            buffer.readUnsignedByte();
+        } else if (opcode == 134) {
+            anInt2812 = buffer
+                    .readUnsignedShort();
+            if (anInt2812 == 65535) {
+                anInt2812 = -1;
+            }
+            anInt2833 = buffer
+                    .readUnsignedShort();
+            if (anInt2833 == 65535) {
+                anInt2833 = -1;
+            }
+            anInt2809 = buffer
+                    .readUnsignedShort();
+            if (anInt2809 == 65535) {
+                anInt2809 = -1;
+            }
+            anInt2810 = buffer
+                    .readUnsignedShort();
+            if (anInt2810 == 65535) {
+                anInt2810 = -1;
+            }
+            anInt2864 = buffer
+                    .readUnsignedByte();
+        } else if (opcode == 135) {
+            anInt2815 = buffer
+                    .readUnsignedByte();
+            anInt2859 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 136) {
+            anInt2856 = buffer
+                    .readUnsignedByte();
+            anInt2886 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 137) {
+            anInt2860 = buffer
+                    .readBigSmart();
+        } else if (opcode == 138) {
+            anInt2814 = buffer
+                    .readBigSmart();
+        } else if (opcode == 139) {
+            anInt2826 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 140) {
+            anInt2828 = buffer
+                    .readUnsignedByte();
+        } else if (opcode == 141) {
+            aBoolean2843 = true;
+        } else if (opcode == 142) {
+            anInt2849 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 143) {
+            aBoolean2825 = true;
+        } else if (opcode >= 150
+                && opcode < 155) {
+            options[-150
+                    + opcode] = buffer
+                    .readString();
+            if (!aClass279_2861.aBoolean3556) {
+                options[opcode
+                        + -150] = null;
+            }
+        } else if (opcode == 155) {
+            aByte2836 = buffer
+                    .readByte();
+            aByte2853 = buffer
+                    .readByte();
+            aByte2857 = buffer
+                    .readByte();
+            aByte2839 = buffer
+                    .readByte();
+        } else if (opcode == 158) {
+            aByte2855 = (byte) 1;
+        } else if (opcode == 159) {
+            aByte2855 = (byte) 0;
+        } else if (opcode == 160) {
+            int i_15_ = buffer
+                    .readUnsignedByte();
+            anIntArray2832 = new int[i_15_];
+            for (int i_16_ = 0; i_15_ > i_16_; i_16_++)
+                anIntArray2832[i_16_] = buffer
+                        .readUnsignedShort();
+        } else if (opcode == 162) {
+            aBoolean2883 = true;
+        } else if (opcode == 163) {
+            anInt2803 = buffer
+                    .readUnsignedByte();
+        } else if (opcode == 164) {
+            anInt2844 = buffer
+                    .readUnsignedShort();
+            anInt2852 = buffer
+                    .readUnsignedShort();
+        } else if (opcode == 165) {
+            anInt2831 = buffer
+                    .readUnsignedByte();
+        } else if (opcode == 168) {
+            anInt2862 = buffer
+                    .readUnsignedByte();
+        } else if (opcode == 249) {
+            int i_17_ = buffer
+                    .readUnsignedByte();
+            if (aHashTable2813 == null) {
+                int i_18_ = Class320_Sub19
+                        .method3753(
+                                i_17_,
+                                -729073628);
+                aHashTable2813 = new HashTable(
+                        i_18_);
+            }
+            for (int i_19_ = 0; i_19_ < i_17_; i_19_++) {
+                boolean bool = buffer
+                        .readUnsignedByte() == 1;
+                int i_20_ = buffer
+                        .read24BitInteger();
+                Node node;
+                if (bool) {
+                    node = new Node_Sub18(
+                            buffer.readString());
+                } else {
+                    node = new Node_Sub32(
+                            buffer.readInt());
+                }
+                aHashTable2813
+                        .method1515(
+                                (long) i_20_,
+                                node,
+                                -127);
+            }
+        }
+        if (b >= -66) {
 			anInt2858 = 38;
 		}
 	}
@@ -573,7 +525,7 @@ public class NpcDefinition {
 					.method607(l, 0);
 		}
 		if (drawablemodel == null
-				|| (drawablemodel.ua() & i_30_ ^ 0xffffffff) != (i_30_ ^ 0xffffffff)) {
+				|| i_30_ != (drawablemodel.ua() & i_30_)) {
 			if (drawablemodel != null) {
 				i_30_ |= drawablemodel.ua();
 			}
@@ -584,14 +536,14 @@ public class NpcDefinition {
 			if (aShortArray2841 != null) {
 				i_31_ |= 0x8000;
 			}
-			if ((aByte2839 ^ 0xffffffff) != -1) {
+			if (aByte2839 != 0) {
 				i_31_ |= 0x80000;
 			}
 			int[] is = class361 == null || class361.anIntArray4482 == null ? anIntArray2847
 					: class361.anIntArray4482;
 			boolean bool = false;
 			synchronized (aClass279_2861.aClass302_3564) {
-				for (int i_32_ = 0; (i_32_ ^ 0xffffffff) > (is.length ^ 0xffffffff); i_32_++) {
+				for (int i_32_ = 0; is.length > i_32_; i_32_++) {
 					if (!aClass279_2861.aClass302_3564.method3515(0, is[i_32_],
 							0)) {
 						bool = true;
@@ -603,7 +555,7 @@ public class NpcDefinition {
 			}
 			Model[] models = new Model[is.length];
 			synchronized (aClass279_2861.aClass302_3564) {
-				for (int i_33_ = 0; (i_33_ ^ 0xffffffff) > (is.length ^ 0xffffffff); i_33_++)
+				for (int i_33_ = 0; is.length > i_33_; i_33_++)
 					models[i_33_] = Renderer.method3448(is[i_33_], 7, 0,
 							aClass279_2861.aClass302_3564);
 			}
@@ -613,12 +565,12 @@ public class NpcDefinition {
 				}
 			}
 			Model model;
-			if ((models.length ^ 0xffffffff) != -2) {
-				model = new Model(models, models.length);
-			} else {
+			if (models.length == 1) {
 				model = models[0];
+			} else {
+				model = new Model(models, models.length);
 			}
-			drawablemodel = graphicstoolkit.a(model, i_31_,
+            drawablemodel = graphicstoolkit.a(model, i_31_,
 					aClass279_2861.anInt3567, 64, 768);
 			if (aShortArray2823 != null) {
 				short[] ses;
@@ -627,7 +579,7 @@ public class NpcDefinition {
 				} else {
 					ses = class361.aShortArray4487;
 				}
-				for (int i_35_ = 0; (i_35_ ^ 0xffffffff) > (aShortArray2823.length ^ 0xffffffff); i_35_++) {
+				for (int i_35_ = 0; aShortArray2823.length > i_35_; i_35_++) {
 					if (aByteArray2820 == null
 							|| aByteArray2820.length <= i_35_) {
 						drawablemodel.ia(aShortArray2823[i_35_], ses[i_35_]);
@@ -645,10 +597,10 @@ public class NpcDefinition {
 				} else {
 					ses = class361.aShortArray4485;
 				}
-				for (int i_36_ = 0; (i_36_ ^ 0xffffffff) > (aShortArray2841.length ^ 0xffffffff); i_36_++)
+				for (int i_36_ = 0; aShortArray2841.length > i_36_; i_36_++)
 					drawablemodel.aa(aShortArray2841[i_36_], ses[i_36_]);
 			}
-			if ((aByte2839 ^ 0xffffffff) != -1) {
+			if (aByte2839 != 0) {
 				drawablemodel.method626(aByte2836, aByte2853, aByte2857,
 						0xff & aByte2839);
 			}
@@ -680,7 +632,7 @@ public class NpcDefinition {
 					animator_37_, i_38_, animators);
 		}
 		int i_40_ = i_38_;
-		if ((anInt2830 ^ 0xffffffff) != -129) {
+		if (anInt2830 != 128) {
 			i_40_ |= 0x2;
 		}
 		if (anInt2858 != 128) {
@@ -688,7 +640,7 @@ public class NpcDefinition {
 		}
 		boolean bool = false;
 		int i_41_ = animators == null ? 0 : animators.length;
-		for (int i_42_ = 0; (i_41_ ^ 0xffffffff) < (i_42_ ^ 0xffffffff); i_42_++) {
+		for (int i_42_ = 0; i_42_ < i_41_; i_42_++) {
 			if (animators[i_42_] != null) {
 				i_40_ |= animators[i_42_].method237((byte) -126);
 				bool = true;
@@ -726,7 +678,7 @@ public class NpcDefinition {
 			if (aShortArray2841 != null) {
 				i_43_ |= 0x8000;
 			}
-			if ((aByte2839 ^ 0xffffffff) != -1) {
+			if (aByte2839 != 0) {
 				i_43_ |= 0x80000;
 			}
 			int[] is_44_ = class361 != null && class361.anIntArray4482 != null ? class361.anIntArray4482
@@ -734,7 +686,7 @@ public class NpcDefinition {
 			boolean bool_45_ = false;
 			synchronized (aClass279_2861.aClass302_3564) {
 				for (int i_46_ = 0; i_46_ < is_44_.length; i_46_++) {
-					if ((is_44_[i_46_] ^ 0xffffffff) != 0
+					if (is_44_[i_46_] != -1
 							&& !aClass279_2861.aClass302_3564.method3515(0,
 									is_44_[i_46_], 0)) {
 						bool_45_ = true;
@@ -745,14 +697,14 @@ public class NpcDefinition {
 				return null;
 			}
 			Model[] models = new Model[is_44_.length];
-			for (int i_47_ = 0; (i_47_ ^ 0xffffffff) > (is_44_.length ^ 0xffffffff); i_47_++) {
-				if ((is_44_[i_47_] ^ 0xffffffff) != 0) {
+			for (int i_47_ = 0; is_44_.length > i_47_; i_47_++) {
+				if (is_44_[i_47_] != -1) {
 					synchronized (aClass279_2861.aClass302_3564) {
 						models[i_47_] = Renderer.method3448(is_44_[i_47_], 7,
 								0, aClass279_2861.aClass302_3564);
 					}
 					if (models[i_47_] != null) {
-						if ((models[i_47_].anInt2614 ^ 0xffffffff) > -14) {
+						if (models[i_47_].anInt2614 < 13) {
 							models[i_47_].method2081(2, 0);
 						}
 						if (anIntArrayArray2842 != null
@@ -767,7 +719,7 @@ public class NpcDefinition {
 			}
 			if (class259 != null && class259.anIntArrayArray3273 != null) {
 				for (int i_48_ = 0; i_48_ < class259.anIntArrayArray3273.length; i_48_++) {
-					if ((models.length ^ 0xffffffff) < (i_48_ ^ 0xffffffff)
+					if (i_48_ < models.length
 							&& models[i_48_] != null) {
 						int i_49_ = 0;
 						int i_50_ = 0;
@@ -783,12 +735,12 @@ public class NpcDefinition {
 							i_54_ = class259.anIntArrayArray3273[i_48_][5] << 3;
 							i_51_ = class259.anIntArrayArray3273[i_48_][2];
 						}
-						if ((i_52_ ^ 0xffffffff) != -1
-								|| (i_53_ ^ 0xffffffff) != -1
-								|| (i_54_ ^ 0xffffffff) != -1) {
+						if (i_52_ != 0
+								|| i_53_ != 0
+								|| i_54_ != 0) {
 							models[i_48_].method2085(i_54_, i_52_, -119, i_53_);
 						}
-						if ((i_49_ ^ 0xffffffff) != -1 || i_50_ != 0
+						if (i_49_ != 0 || i_50_ != 0
 								|| i_51_ != 0) {
 							models[i_48_].method2082(i_49_, i_50_, -79, i_51_);
 						}
@@ -796,7 +748,7 @@ public class NpcDefinition {
 				}
 			}
 			Model model;
-			if ((models.length ^ 0xffffffff) == -2) {
+			if (models.length == 1) {
 				model = models[0];
 			} else {
 				model = new Model(models, models.length);
@@ -828,7 +780,7 @@ public class NpcDefinition {
 				} else {
 					ses = class361.aShortArray4485;
 				}
-				for (int i_56_ = 0; (aShortArray2841.length ^ 0xffffffff) < (i_56_ ^ 0xffffffff); i_56_++)
+				for (int i_56_ = 0; i_56_ < aShortArray2841.length; i_56_++)
 					drawablemodel.aa(aShortArray2841[i_56_], ses[i_56_]);
 			}
 			if (aByte2839 != 0) {
@@ -844,7 +796,7 @@ public class NpcDefinition {
 				i_40_, true);
 		boolean bool_59_ = false;
 		if (is != null) {
-			for (int i_60_ = 0; (i_60_ ^ 0xffffffff) > -13; i_60_++) {
+			for (int i_60_ = 0; i_60_ < 12; i_60_++) {
 				if (is[i_60_] != -1) {
 					bool_59_ = true;
 				}
@@ -867,7 +819,7 @@ public class NpcDefinition {
 		}
 		int i_62_ = 0;
 		int i_63_ = 1;
-		while ((i_62_ ^ 0xffffffff) > (i_41_ ^ 0xffffffff)) {
+		while (i_41_ > i_62_) {
 			if (animators[i_62_] != null) {
 				animators[i_62_].method246(i_63_, 0, true, drawablemodel_57_);
 			}
@@ -903,7 +855,7 @@ public class NpcDefinition {
 		} else {
 			animator.method225(0, drawablemodel_57_, 0);
 		}
-		if ((anInt2858 ^ 0xffffffff) != -129 || anInt2830 != 128) {
+		if (anInt2858 != 128 || anInt2830 != 128) {
 			drawablemodel_57_.O(anInt2858, anInt2830, anInt2858);
 		}
 		drawablemodel_57_.s(i_38_);
@@ -950,7 +902,7 @@ public class NpcDefinition {
 		}
 		int i = -1;
 		if (anInt2881 == -1) {
-			if ((anInt2882 ^ 0xffffffff) != 0) {
+			if (anInt2882 != -1) {
 				i = interface17.method65(anInt2882, 111);
 			}
 		} else {

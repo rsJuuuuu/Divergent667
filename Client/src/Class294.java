@@ -25,7 +25,7 @@ public class Class294
 		if (i_0_ != -1) {
 			method3467(-37, -57, 35, -14);
 		}
-        return (0x8000 & i ^ 0xffffffff) != -1;
+        return (0x8000 & i) != 0;
     }
 	
 	static final void method3467(int i, int i_2_, int i_3_, int i_4_) {

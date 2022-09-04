@@ -78,10 +78,10 @@ public class StandardPlane extends Plane
 			anIntArrayArrayArray7995[i][i_3_] = is_4_;
 		}
 		Node_Sub54[] node_sub54s = aNode_Sub54ArrayArrayArray8007[i][i_3_] = new Node_Sub54[is_7_.length];
-		for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > (is_7_.length ^ 0xffffffff); i_14_++) {
+		for (int i_14_ = 0; is_7_.length > i_14_; i_14_++) {
 			int i_15_ = is_9_[i_14_];
 			int i_16_ = is_10_[i_14_];
-			if ((0x20 & anInt7981 ^ 0xffffffff) != -1 && (i_15_ ^ 0xffffffff) != 0 && var_d.method10(i_15_, -8217).aBoolean1223) {
+			if ((0x20 & anInt7981) != 0 && i_15_ != -1 && var_d.method10(i_15_, -8217).aBoolean1223) {
 				i_16_ = 128;
 				i_15_ = -1;
 			}
@@ -89,17 +89,17 @@ public class StandardPlane extends Plane
 			Node node;
 			for (node = aHashTable8022.method1518(3512, l); node != null; node = aHashTable8022.method1524((byte) 84)) {
 				Node_Sub54 node_sub54 = (Node_Sub54) node;
-				if ((node_sub54.anInt7689 ^ 0xffffffff) == (i_15_ ^ 0xffffffff) && (float) i_16_ == node_sub54.aFloat7690 && (node_sub54.anInt7680 ^ 0xffffffff) == (i_11_ ^ 0xffffffff) && i_12_ == node_sub54.anInt7676 && i_13_ == node_sub54.anInt7686) {
+				if (i_15_ == node_sub54.anInt7689 && (float) i_16_ == node_sub54.aFloat7690 && i_11_ == node_sub54.anInt7680 && i_12_ == node_sub54.anInt7676 && i_13_ == node_sub54.anInt7686) {
 					break;
 				}
 			}
-			if (node != null) {
-				node_sub54s[i_14_] = (Node_Sub54) node;
-			} else {
+			if (node == null) {
 				node_sub54s[i_14_] = new Node_Sub54(this, i_15_, i_16_, i_11_, i_12_, i_13_);
 				aHashTable8022.method1515(l, node_sub54s[i_14_], -123);
+			} else {
+				node_sub54s[i_14_] = (Node_Sub54) node;
 			}
-		}
+        }
 		if (bool) {
 			aByteArrayArray7996[i][i_3_] = (byte) Node_Sub16.method2590(aByteArrayArray7996[i][i_3_], 1);
 		}
@@ -116,7 +116,7 @@ public class StandardPlane extends Plane
 	
 	final void ka(int i, int i_21_, int i_22_) {
 		anInt7994++;
-		if ((aByteArrayArray8026[i][i_21_] & 0xff ^ 0xffffffff) > (i_22_ ^ 0xffffffff)) {
+		if (i_22_ > (aByteArrayArray8026[i][i_21_] & 0xff)) {
 			aByteArrayArray8026[i][i_21_] = (byte) i_22_;
 		}
 	}
@@ -129,7 +129,7 @@ public class StandardPlane extends Plane
 		if (aNode_Sub54Array8024 != null) {
 			int i_28_ = 1 + (i_25_ + i_25_);
 			i_28_ *= i_28_;
-			if ((Class47.anIntArray689.length ^ 0xffffffff) > (i_28_ ^ 0xffffffff)) {
+			if (i_28_ > Class47.anIntArray689.length) {
 				Class47.anIntArray689 = new int[i_28_];
 			}
 			int i_29_ = -i_25_ + i_27_;
@@ -151,25 +151,25 @@ public class StandardPlane extends Plane
 			if (-1 + anInt3404 < i_34_) {
 				i_34_ = -1 + anInt3404;
 			}
-			for (int i_35_ = i_29_; (i_33_ ^ 0xffffffff) <= (i_35_ ^ 0xffffffff); i_35_++) {
+			for (int i_35_ = i_29_; i_35_ <= i_33_; i_35_++) {
 				boolean[] bools_36_ = bools[-i_30_ + i_35_];
-				for (int i_37_ = i_31_; (i_37_ ^ 0xffffffff) >= (i_34_ ^ 0xffffffff); i_37_++) {
+				for (int i_37_ = i_31_; i_34_ >= i_37_; i_37_++) {
 					if (bools_36_[i_37_ - i_32_]) {
 						Class47.anIntArray689[Class194_Sub3_Sub1.anInt9376++] = anInt3408 * i_37_ + i_35_;
 					}
 				}
 			}
-			if (i_23_ != -1) {
+			if (i_23_ == -1) {
+				anAbstractToolkit8004.method1268(0);
+			} else {
 				anAbstractToolkit8004.method1270((byte) -126, (float) i_23_);
 				anAbstractToolkit8004.method1335(true);
-			} else {
-				anAbstractToolkit8004.method1268(0);
 			}
-			anAbstractToolkit8004.method1320((byte) -121);
-			anAbstractToolkit8004.method1296(127, (anInt7981 & 0x7 ^ 0xffffffff) != -1);
+            anAbstractToolkit8004.method1320((byte) -121);
+			anAbstractToolkit8004.method1296(127, (anInt7981 & 0x7) != 0);
 			anAbstractToolkit8004.method1332(3, false, -1, false);
 			anAbstractToolkit8004.method1354(0, i_24_ + 32010, anInterface15_Impl2_8018);
-			for (int i_38_ = 0; (i_38_ ^ 0xffffffff) > (aNode_Sub54Array8024.length ^ 0xffffffff); i_38_++)
+			for (int i_38_ = 0; aNode_Sub54Array8024.length > i_38_; i_38_++)
 				aNode_Sub54Array8024[i_38_].method2985((byte) 60, Class47.anIntArray689, Class194_Sub3_Sub1.anInt9376);
 			Class336_Sub1 class336_sub1 = anAbstractToolkit8004.method1264(false);
 			class336_sub1.method3854(0, -1, 0);
@@ -206,23 +206,23 @@ public class StandardPlane extends Plane
 	
 	final void YA() {
 		anInt7991++;
-		if ((anInt8023 ^ 0xffffffff) >= -1) {
+		if (anInt8023 <= 0) {
 			aClass263_8008 = null;
 		} else {
 			byte[][] bs = new byte[1 + anInt3408][1 + anInt3404];
-			for (int i = 1; (i ^ 0xffffffff) > (anInt3408 ^ 0xffffffff); i++) {
+			for (int i = 1; anInt3408 > i; i++) {
 				for (int i_41_ = 1; i_41_ < anInt3404; i_41_++)
 					bs[i][i_41_] = (byte) ((aByteArrayArray8026[i][i_41_ - -1] >> 3) + ((aByteArrayArray8026[-1 + i][i_41_] >> 2) + ((aByteArrayArray8026[i - -1][i_41_] >> 3) + ((aByteArrayArray8026[i][i_41_ - 1] >> 2) + (aByteArrayArray8026[i][i_41_] >> 1)))));
 			}
 			Node_Sub54[] node_sub54s = new Node_Sub54[aHashTable8022.method1519((byte) -90)];
 			aHashTable8022.method1523((byte) -126, node_sub54s);
-			for (int i = 0; (node_sub54s.length ^ 0xffffffff) < (i ^ 0xffffffff); i++)
+			for (int i = 0; i < node_sub54s.length; i++)
 				node_sub54s[i].method2984((byte) 74, anInt8023);
 			int i = 20;
 			if (anIntArrayArrayArray8002 != null) {
 				i += 4;
 			}
-			if ((anInt7981 & 0x7 ^ 0xffffffff) != -1) {
+			if ((anInt7981 & 0x7) != 0) {
 				i += 12;
 			}
 			jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = anAbstractToolkit8004.aNativeHeap6084.a(anInt8023 * 4, false);
@@ -269,7 +269,7 @@ public class StandardPlane extends Plane
 					while_236_:
 						for (int i_71_ = 0; i_71_ < is_52_.length; i_71_++) {
 							Node_Sub54 node_sub54 = node_sub54s_49_[i_71_];
-							for (int i_72_ = 0; (i_72_ ^ 0xffffffff) > (i_70_ ^ 0xffffffff); i_72_++) {
+							for (int i_72_ = 0; i_70_ > i_72_; i_72_++) {
 								if (node_sub54 == node_sub54s_46_[i_72_]) {
 									continue while_236_;
 								}
@@ -277,7 +277,7 @@ public class StandardPlane extends Plane
 							node_sub54s_46_[i_70_++] = node_sub54;
 						}
 						short[] ses = aShortArrayArray7985[i_47_ + anInt3408 * i_48_] = new short[is_52_.length];
-						for (int i_73_ = 0; (i_73_ ^ 0xffffffff) > (is_52_.length ^ 0xffffffff); i_73_++) {
+						for (int i_73_ = 0; is_52_.length > i_73_; i_73_++) {
 							int i_74_ = (i_47_ << anInt3410) - -is[i_73_];
 							int i_75_ = (i_48_ << anInt3410) - -is_50_[i_73_];
 							int i_76_ = i_74_ >> anInt7993;
@@ -294,17 +294,17 @@ public class StandardPlane extends Plane
 							float f_86_;
 							float f_87_;
 							float f_88_;
-							if ((i_81_ ^ 0xffffffff) == -1 && (i_82_ ^ 0xffffffff) == -1) {
+							if (i_81_ == 0 && i_82_ == 0) {
 								f_86_ = f_55_;
 								f_88_ = f_56_;
 								f_87_ = f;
 								i_83_ -= i_66_;
-							} else if (i_81_ == 0 && (anInt3398 ^ 0xffffffff) == (i_82_ ^ 0xffffffff)) {
+							} else if (i_81_ == 0 && i_82_ == anInt3398) {
 								f_86_ = f_58_;
 								i_83_ -= i_67_;
 								f_87_ = f_57_;
 								f_88_ = f_59_;
-							} else if (anInt3398 == i_81_ && (anInt3398 ^ 0xffffffff) == (i_82_ ^ 0xffffffff)) {
+							} else if (anInt3398 == i_81_ && i_82_ == anInt3398) {
 								f_86_ = f_61_;
 								f_87_ = f_60_;
 								f_88_ = f_62_;
@@ -330,33 +330,27 @@ public class StandardPlane extends Plane
 								f_86_ = f_64_;
 								f_87_ = f_63_;
 							}
-							if ((i_78_ ^ 0xffffffff) != 0) {
+							if (i_78_ != -1) {
 								int i_99_ = i_83_ * (0x7f & i_78_) >> 7;
 								if (i_99_ < 2) {
 									i_99_ = 2;
-								} else if ((i_99_ ^ 0xffffffff) < -127) {
+								} else if (i_99_ > 126) {
 									i_99_ = 126;
 								}
 								i_84_ = Class85.anIntArray1158[i_78_ & 0xff80 | i_99_];
-								if ((anInt7981 & 0x7 ^ 0xffffffff) == -1) {
+								if ((anInt7981 & 0x7) == 0) {
 									f_85_ = anAbstractToolkit8004.aFloatArray6292[0] * f_87_ + f_86_ * anAbstractToolkit8004.aFloatArray6292[1] + anAbstractToolkit8004.aFloatArray6292[2] * f_88_;
 									f_85_ = f_85_ * (f_85_ > 0.0F ? anAbstractToolkit8004.aFloat6274 : anAbstractToolkit8004.aFloat6272) + anAbstractToolkit8004.aFloat6300;
 								}
 							}
 							Node node = null;
-							if ((-1 + anInt7982 & i_74_ ^ 0xffffffff) == -1 && (-1 + anInt7982 & i_75_ ^ 0xffffffff) == -1) {
+							if ((-1 + anInt7982 & i_74_) == 0 && (-1 + anInt7982 & i_75_) == 0) {
 								node = hashtable.method1518(3512, l);
 							}
 							int i_100_;
-							if (node != null) {
-								ses[i_73_] = ((Node_Sub46) node).aShort7554;
-								i_100_ = 0xffff & ses[i_73_];
-								if (i_78_ != -1 && (node_sub54s_44_[i_100_].aLong2797 ^ 0xffffffffffffffffL) < (node_sub54s_49_[i_73_].aLong2797 ^ 0xffffffffffffffffL)) {
-									node_sub54s_44_[i_100_] = node_sub54s_49_[i_73_];
-								}
-							} else {
+							if (node == null) {
 								int i_101_;
-								if ((i_79_ ^ 0xffffffff) == (i_78_ ^ 0xffffffff)) {
+								if (i_78_ == i_79_) {
 									i_101_ = i_84_;
 								} else {
 									int i_102_ = (i_79_ & 0x7f) * i_83_ >> 7;
@@ -373,9 +367,9 @@ public class StandardPlane extends Plane
 										int i_105_ = (0xff6b & i_101_) >> 8;
 										i_104_ *= f_103_;
 										int i_106_ = 0xff & i_101_;
-										if ((i_104_ ^ 0xffffffff) > -1) {
+										if (i_104_ < 0) {
 											i_104_ = 0;
-										} else if ((i_104_ ^ 0xffffffff) < -256) {
+										} else if (i_104_ > 255) {
 											i_104_ = 255;
 										}
 										i_105_ *= f_103_;
@@ -406,7 +400,7 @@ public class StandardPlane extends Plane
 									if (anIntArrayArrayArray8002 != null) {
 										stream.a((float) (is_54_ != null ? is_54_[i_73_] + -1 : 0));
 									}
-									if ((0x7 & anInt7981 ^ 0xffffffff) != -1) {
+									if ((0x7 & anInt7981) != 0) {
 										stream.a(f_87_);
 										stream.a(f_86_);
 										stream.a(f_88_);
@@ -426,7 +420,7 @@ public class StandardPlane extends Plane
 										stream.b(f_88_);
 									}
 								}
-								if ((anAbstractToolkit8004.anInt6360 ^ 0xffffffff) == -1) {
+								if (anAbstractToolkit8004.anInt6360 == 0) {
 									stream_43_.a(i_101_ | ~0xffffff);
 								} else {
 									stream_43_.e(i_101_ | ~0xffffff);
@@ -437,8 +431,14 @@ public class StandardPlane extends Plane
 									node_sub54s_44_[i_100_] = node_sub54s_49_[i_73_];
 								}
 								hashtable.method1515(l, new Node_Sub46(ses[i_73_]), -125);
+							} else {
+								ses[i_73_] = ((Node_Sub46) node).aShort7554;
+								i_100_ = 0xffff & ses[i_73_];
+								if (i_78_ != -1 && node_sub54s_49_[i_73_].aLong2797 < node_sub54s_44_[i_100_].aLong2797) {
+									node_sub54s_44_[i_100_] = node_sub54s_49_[i_73_];
+								}
 							}
-							for (int i_107_ = 0; i_107_ < i_70_; i_107_++)
+                            for (int i_107_ = 0; i_107_ < i_70_; i_107_++)
 								node_sub54s_46_[i_107_].method2989(i_84_, i_83_, f_85_, 39, i_100_);
 							anInt8009++;
 						}
@@ -457,7 +457,7 @@ public class StandardPlane extends Plane
 					if (ses != null) {
 						int i_111_ = 0;
 						int i_112_ = 0;
-						while ((ses.length ^ 0xffffffff) < (i_112_ ^ 0xffffffff)) {
+						while (i_112_ < ses.length) {
 							int i_113_ = 0xffff & ses[i_112_++];
 							int i_114_ = ses[i_112_++] & 0xffff;
 							int i_115_ = ses[i_112_++] & 0xffff;
@@ -510,20 +510,20 @@ public class StandardPlane extends Plane
 				} else {
 					aClass213_8017 = anAbstractToolkit8004.method1372((byte) -119, new Class207[] { new Class207(new Class126[] { Class126.aClass126_1620, Class126.aClass126_1628, Class126.aClass126_1627 }), new Class207(Class126.aClass126_1626) });
 				}
-			} else if (anIntArrayArrayArray8002 != null) {
-				aClass213_8017 = anAbstractToolkit8004.method1372((byte) -119, new Class207[] { new Class207(new Class126[] { Class126.aClass126_1620, Class126.aClass126_1628, Class126.aClass126_1627, Class126.aClass126_1625 }), new Class207(Class126.aClass126_1626) });
-			} else {
+			} else if (anIntArrayArrayArray8002 == null) {
 				aClass213_8017 = anAbstractToolkit8004.method1372((byte) -121, new Class207[] { new Class207(new Class126[] { Class126.aClass126_1620, Class126.aClass126_1628, Class126.aClass126_1625 }), new Class207(Class126.aClass126_1626) });
+			} else {
+				aClass213_8017 = anAbstractToolkit8004.method1372((byte) -119, new Class207[] { new Class207(new Class126[] { Class126.aClass126_1620, Class126.aClass126_1628, Class126.aClass126_1627, Class126.aClass126_1625 }), new Class207(Class126.aClass126_1626) });
 			}
-			int i_119_ = 0;
-			for (int i_120_ = 0; (i_120_ ^ 0xffffffff) > (node_sub54s.length ^ 0xffffffff); i_120_++) {
+            int i_119_ = 0;
+			for (int i_120_ = 0; node_sub54s.length > i_120_; i_120_++) {
 				if (node_sub54s[i_120_].anInt7692 > 0) {
 					node_sub54s[i_119_++] = node_sub54s[i_120_];
 				}
 			}
 			aNode_Sub54Array8024 = new Node_Sub54[i_119_];
 			long[] ls = new long[i_119_];
-			for (int i_121_ = 0; (i_119_ ^ 0xffffffff) < (i_121_ ^ 0xffffffff); i_121_++) {
+			for (int i_121_ = 0; i_121_ < i_119_; i_121_++) {
 				Node_Sub54 node_sub54 = node_sub54s[i_121_];
 				ls[i_121_] = node_sub54.aLong2797;
 				aNode_Sub54Array8024[i_121_] = node_sub54;
@@ -568,7 +568,7 @@ public class StandardPlane extends Plane
 		aNode_Sub54ArrayArrayArray8007 = new Node_Sub54[i_124_][i_125_][];
 		aFloatArrayArray8025 = new float[1 + anInt3408][anInt3404 + 1];
 		for (int i_128_ = 0; i_128_ <= anInt3404; i_128_++) {
-			for (int i_129_ = 0; (i_129_ ^ 0xffffffff) >= (anInt3408 ^ 0xffffffff); i_129_++) {
+			for (int i_129_ = 0; anInt3408 >= i_129_; i_129_++) {
 				int i_130_ = anIntArrayArray3407[i_129_][i_128_];
 				if (aFloat7988 > (float) i_130_) {
 					aFloat7988 = (float) i_130_;
@@ -576,7 +576,7 @@ public class StandardPlane extends Plane
 				if ((float) i_130_ > aFloat7987) {
 					aFloat7987 = (float) i_130_;
 				}
-				if (i_129_ > 0 && (i_128_ ^ 0xffffffff) < -1 && i_129_ < anInt3408 && (i_128_ ^ 0xffffffff) > (anInt3404 ^ 0xffffffff)) {
+				if (i_129_ > 0 && i_128_ > 0 && i_129_ < anInt3408 && anInt3404 > i_128_) {
 					int i_131_ = -is_126_[i_129_ + -1][i_128_] + is_126_[i_129_ + 1][i_128_];
 					int i_132_ = is_126_[i_129_][1 + i_128_] - is_126_[i_129_][-1 + i_128_];
 					float f = (float) (1.0 / Math.sqrt((double) (i_132_ * i_132_ + i_131_ * i_131_ + 4 * (i_127_ * i_127_))));
@@ -610,7 +610,7 @@ public class StandardPlane extends Plane
 	
 	final void method3255(int i, int i_138_, int i_139_, int i_140_, int i_141_, int i_142_, int i_143_, boolean[][] bools) {
 		anInt8001++;
-		if ((anInt8023 ^ 0xffffffff) < -1) {
+		if (anInt8023 > 0) {
 			Interface15_Impl1 interface15_impl1 = anAbstractToolkit8004.method1298(0, anInt8009);
 			int i_144_ = 0;
 			int i_145_ = 32767;
@@ -620,37 +620,14 @@ public class StandardPlane extends Plane
 				jaclib.memory.Buffer buffer = interface15_impl1.method54(true, (byte) 82);
 				if (buffer != null) {
 					Stream stream = anAbstractToolkit8004.method1324(true, buffer);
-					if (!Stream.b()) {
-						for (int i_148_ = i_141_; i_143_ > i_148_; i_148_++) {
-							int i_149_ = i_140_ + anInt3408 * i_148_;
-							for (int i_150_ = i_140_; (i_142_ ^ 0xffffffff) < (i_150_ ^ 0xffffffff); i_150_++) {
-								if (bools[-i_140_ + i_150_][-i_141_ + i_148_]) {
-									short[] ses = aShortArrayArray7985[i_149_];
-									if (ses != null) {
-										for (int i_151_ = 0; (i_151_ ^ 0xffffffff) > (ses.length ^ 0xffffffff); i_151_++) {
-											int i_152_ = ses[i_151_] & 0xffff;
-											stream.c(i_152_);
-											i_144_++;
-											if ((i_152_ ^ 0xffffffff) < (i_146_ ^ 0xffffffff)) {
-												i_146_ = i_152_;
-											}
-											if (i_145_ > i_152_) {
-												i_145_ = i_152_;
-											}
-										}
-									}
-								}
-								i_149_++;
-							}
-						}
-					} else {
+					if (Stream.b()) {
 						for (int i_153_ = i_141_; i_153_ < i_143_; i_153_++) {
 							int i_154_ = i_140_ + i_153_ * anInt3408;
 							for (int i_155_ = i_140_; i_155_ < i_142_; i_155_++) {
 								if (bools[i_155_ + -i_140_][-i_141_ + i_153_]) {
 									short[] ses = aShortArrayArray7985[i_154_];
 									if (ses != null) {
-										for (int i_156_ = 0; (ses.length ^ 0xffffffff) < (i_156_ ^ 0xffffffff); i_156_++) {
+										for (int i_156_ = 0; i_156_ < ses.length; i_156_++) {
 											int i_157_ = 0xffff & ses[i_156_];
 											if (i_157_ > i_146_) {
 												i_146_ = i_157_;
@@ -666,14 +643,37 @@ public class StandardPlane extends Plane
 								i_154_++;
 							}
 						}
+					} else {
+						for (int i_148_ = i_141_; i_143_ > i_148_; i_148_++) {
+							int i_149_ = i_140_ + anInt3408 * i_148_;
+							for (int i_150_ = i_140_; i_150_ < i_142_; i_150_++) {
+								if (bools[-i_140_ + i_150_][-i_141_ + i_148_]) {
+									short[] ses = aShortArrayArray7985[i_149_];
+									if (ses != null) {
+										for (int i_151_ = 0; ses.length > i_151_; i_151_++) {
+											int i_152_ = ses[i_151_] & 0xffff;
+											stream.c(i_152_);
+											i_144_++;
+											if (i_146_ < i_152_) {
+												i_146_ = i_152_;
+											}
+											if (i_145_ > i_152_) {
+												i_145_ = i_152_;
+											}
+										}
+									}
+								}
+								i_149_++;
+							}
+						}
 					}
-					stream.c();
+                    stream.c();
 					if (interface15_impl1.method53(-3308)) {
 						break;
 					}
 				}
 			}
-			if ((i_144_ ^ 0xffffffff) < -1) {
+			if (i_144_ > 0) {
 				anAbstractToolkit8004.method1376(530);
 				anAbstractToolkit8004.method1371(false, false);
 				anAbstractToolkit8004.method1296(121, false);
@@ -703,13 +703,13 @@ public class StandardPlane extends Plane
 				class336_sub1.method3880(0.0F, (byte) 88, 0.0F, 0.0F, 1.0F, 1.0F, 0.0F, 1.0F, 0.0F, 0.0F);
 				anAbstractToolkit8004.method1339(103);
 				anAbstractToolkit8004.method1266((byte) 119);
-				if ((0x7 & anInt7981) != 0) {
+				if ((0x7 & anInt7981) == 0) {
+					anAbstractToolkit8004.method1296(115, false);
+				} else {
 					anAbstractToolkit8004.method1296(123, true);
 					anAbstractToolkit8004.method1382(119);
-				} else {
-					anAbstractToolkit8004.method1296(115, false);
 				}
-				anAbstractToolkit8004.method1365(false, (byte) -117);
+                anAbstractToolkit8004.method1365(false, (byte) -117);
 				anAbstractToolkit8004.method1354(0, 32011, anInterface15_Impl2_8018);
 				anAbstractToolkit8004.method1354(1, 32011, anInterface15_Impl2_8020);
 				anAbstractToolkit8004.method1338(aClass213_8017, 9422);
@@ -800,7 +800,7 @@ public class StandardPlane extends Plane
 		int[] is = anIntArrayArrayArray7986[i][i_191_];
 		int[] is_193_ = anIntArrayArrayArray7997[i][i_191_];
 		int i_194_ = is.length;
-		if ((Node_Sub23.anIntArray7200.length ^ 0xffffffff) > (i_194_ ^ 0xffffffff)) {
+		if (i_194_ > Node_Sub23.anIntArray7200.length) {
 			Node_Sub23.anIntArray7200 = new int[i_194_];
 			Node_Sub38_Sub27.anIntArray10372 = new int[i_194_];
 		}
@@ -819,7 +819,7 @@ public class StandardPlane extends Plane
 			int i_200_ = Node_Sub38_Sub27.anIntArray10372[i_196_++];
 			int i_201_ = Node_Sub23.anIntArray7200[i_196_];
 			int i_202_ = Node_Sub38_Sub27.anIntArray10372[i_196_++];
-			if ((-((-i_199_ + i_201_) * (-i_198_ + i_200_)) + (-i_199_ + i_197_) * (i_200_ + -i_202_) ^ 0xffffffff) < -1) {
+			if (-((-i_199_ + i_201_) * (-i_198_ + i_200_)) + (-i_199_ + i_197_) * (i_200_ + -i_202_) > 0) {
 				var_r_Sub1.method2368(i_201_, i_199_, i_197_, -128, i_200_, i_198_, i_202_);
 			}
 		}

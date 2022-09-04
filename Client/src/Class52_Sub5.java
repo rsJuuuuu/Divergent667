@@ -52,12 +52,12 @@ public class Class52_Sub5 extends Class52
 				i_21_ = i_18_ - i_17_;
 			}
 			for (int i_22_ = 0; i_22_ < i_17_; i_22_++) {
-				if (bs[i_0_++] != 0) {
-					is[i_1_++] = i;
-				} else {
+				if (bs[i_0_++] == 0) {
 					i_1_++;
+				} else {
+					is[i_1_++] = i;
 				}
-			}
+            }
 			i_0_ += i_21_ + i_5_;
 			i_1_ += i_21_ + i_4_;
 		}
@@ -122,14 +122,14 @@ public class Class52_Sub5 extends Class52
 				i_48_ = i_45_ - i_44_;
 			}
 			for (int i_49_ = -i_44_; i_49_ < 0; i_49_++) {
-				if (bs[i_24_++] != 0) {
+				if (bs[i_24_++] == 0) {
+					i_25_++;
+				} else {
 					int i_50_ = ((i & 0xff00ff) * i_40_ & ~0xff00ff) + ((i & 0xff00) * i_40_ & 0xff0000) >> 8;
 					int i_51_ = is[i_25_];
 					is[i_25_++] = (((i_51_ & 0xff00ff) * i_41_ & ~0xff00ff) + ((i_51_ & 0xff00) * i_41_ & 0xff0000) >> 8) + i_50_;
-				} else {
-					i_25_++;
 				}
-			}
+            }
 			i_24_ += i_48_ + i_29_;
 			i_25_ += i_48_ + i_28_;
 		}
@@ -232,14 +232,14 @@ public class Class52_Sub5 extends Class52
 		int i_85_ = 255 - i_84_;
 		for (int i_86_ = -i_81_; i_86_ < 0; i_86_++) {
 			for (int i_87_ = -i_80_; i_87_ < 0; i_87_++) {
-				if (bs[i_78_++] != 0) {
+				if (bs[i_78_++] == 0) {
+					i_79_++;
+				} else {
 					int i_88_ = ((i & 0xff00ff) * i_84_ & ~0xff00ff) + ((i & 0xff00) * i_84_ & 0xff0000) >> 8;
 					int i_89_ = is[i_79_];
 					is[i_79_++] = (((i_89_ & 0xff00ff) * i_85_ & ~0xff00ff) + ((i_89_ & 0xff00) * i_85_ & 0xff0000) >> 8) + i_88_;
-				} else {
-					i_79_++;
 				}
-			}
+            }
 			i_79_ += i_82_;
 			i_78_ += i_83_;
 		}
@@ -250,34 +250,34 @@ public class Class52_Sub5 extends Class52
 		i_92_ = -(i_92_ & 0x3);
 		for (int i_97_ = -i_93_; i_97_ < 0; i_97_++) {
 			for (int i_98_ = i_96_; i_98_ < 0; i_98_++) {
-				if (bs[i_90_++] != 0) {
-					is[i_91_++] = i;
-				} else {
+				if (bs[i_90_++] == 0) {
 					i_91_++;
-				}
-				if (bs[i_90_++] != 0) {
-					is[i_91_++] = i;
 				} else {
-					i_91_++;
-				}
-				if (bs[i_90_++] != 0) {
 					is[i_91_++] = i;
-				} else {
-					i_91_++;
 				}
-				if (bs[i_90_++] != 0) {
-					is[i_91_++] = i;
-				} else {
-					i_91_++;
-				}
-			}
+                if (bs[i_90_++] == 0) {
+                    i_91_++;
+                } else {
+                    is[i_91_++] = i;
+                }
+                if (bs[i_90_++] == 0) {
+                    i_91_++;
+                } else {
+                    is[i_91_++] = i;
+                }
+                if (bs[i_90_++] == 0) {
+                    i_91_++;
+                } else {
+                    is[i_91_++] = i;
+                }
+            }
 			for (int i_99_ = i_92_; i_99_ < 0; i_99_++) {
-				if (bs[i_90_++] != 0) {
-					is[i_91_++] = i;
-				} else {
+				if (bs[i_90_++] == 0) {
 					i_91_++;
+				} else {
+					is[i_91_++] = i;
 				}
-			}
+            }
 			i_91_ += i_94_;
 			i_90_ += i_95_;
 		}

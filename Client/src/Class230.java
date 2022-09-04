@@ -31,7 +31,7 @@ class Class230 implements Interface10
 		anInt5218++;
 		for (int i_4_ = i_1_; i_4_ <= i; i_4_++) {
 			for (int i_5_ = i_2_; i_5_ <= i_0_; i_5_++) {
-				if (Node_Sub38_Sub16.anIntArrayArray10269[i_4_][i_5_] == i_3_ && (Class79.anIntArrayArray1070[i_4_][i_5_] ^ 0xffffffff) >= -2) {
+				if (Node_Sub38_Sub16.anIntArrayArray10269[i_4_][i_5_] == i_3_ && Class79.anIntArrayArray1070[i_4_][i_5_] <= 1) {
 					return true;
 				}
 			}

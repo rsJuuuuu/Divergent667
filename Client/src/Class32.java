@@ -61,7 +61,7 @@ public class Class32
 		if (i_5_ == 0) {
 			return i_4_;
 		}
-		if ((i_5_ ^ 0xffffffff) == -2) {
+		if (i_5_ == 1) {
 			return i_1_;
 		}
 		if (i_5_ == 2) {
@@ -99,13 +99,13 @@ public class Class32
 		cachenode_sub9.anInt9511 = buffer.readUnsignedShort();
 		cachenode_sub9.anInt9512 = buffer.readUnsignedShort();
 		int i_11_ = buffer.readUnsignedByte();
-		if ((i_11_ ^ 0xffffffff) < -1) {
+		if (i_11_ > 0) {
 			cachenode_sub9.aHashTableArray9503 = new HashTable[i_11_];
 			for (int i_12_ = 0; i_11_ > i_12_; i_12_++) {
 				int i_13_ = buffer.readUnsignedShort();
 				HashTable hashtable = new HashTable(Class320_Sub19.method3753(i_13_, -729073628));
 				cachenode_sub9.aHashTableArray9503[i_12_] = hashtable;
-				while ((i_13_-- ^ 0xffffffff) < -1) {
+				while (i_13_-- > 0) {
 					int i_14_ = buffer.readInt();
 					int i_15_ = buffer.readInt();
 					hashtable.method1515((long) i_14_, new Node_Sub32(i_15_), -128);
@@ -130,22 +130,22 @@ public class Class32
 			    	cachenode_sub9.stringValues[count] = cachenode_sub9.stringValues[count].replace("Error connecting to server.", "Error connecting to " + Settings.SERVER_NAME
                                                                                                                                    + ".");
 			    }
-			} else if (opcode != 54) {
-				if (cachenode_sub9.intValues == null) {
-					cachenode_sub9.intValues = new int[i_10_];
-				}
-				if ((opcode ^ 0xffffffff) > -151 && opcode != 21 && opcode != 38 && opcode != 39) {
-					cachenode_sub9.intValues[count] = buffer.readInt();
-				} else {
-					cachenode_sub9.intValues[count] = buffer.readUnsignedByte();
-				}
-			} else {
+			} else if (opcode == 54) {
 				if (cachenode_sub9.longValues == null) {
 					cachenode_sub9.longValues = new long[i_10_];
 				}
 				cachenode_sub9.longValues[count] = buffer.readLong();
+			} else {
+				if (cachenode_sub9.intValues == null) {
+					cachenode_sub9.intValues = new int[i_10_];
+				}
+				if (opcode < 150 && opcode != 21 && opcode != 38 && opcode != 39) {
+					cachenode_sub9.intValues[count] = buffer.readInt();
+				} else {
+					cachenode_sub9.intValues[count] = buffer.readUnsignedByte();
+				}
 			}
-			cachenode_sub9.opcodes[count++] = opcode;
+            cachenode_sub9.opcodes[count++] = opcode;
 		}
 		return cachenode_sub9;
 	}

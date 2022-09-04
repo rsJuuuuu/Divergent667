@@ -24,7 +24,7 @@ abstract class PeerReference extends WeakReference<Object>
 		if (i != 0) {
 			b(111);
 		}
-        return (peer ^ 0xffffffffffffffffL) != -1L;
+        return peer != 0;
     }
 	
 	final long b(int i) {
@@ -32,7 +32,7 @@ abstract class PeerReference extends WeakReference<Object>
 			return 30L;
 		}
 		long l;
-		if (-1L == (peer ^ 0xffffffffffffffffL)) {
+		if (peer == 0) {
 			l = 0L;
 		} else {
 			l = releasePeer(peer);

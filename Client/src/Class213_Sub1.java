@@ -26,9 +26,9 @@ public class Class213_Sub1 extends Class213
 			return new aa_Sub2(abstracttoolkit, i_1_, i_2_, bs);
 		}
 		int[] is_6_ = new int[i_1_ * i_2_];
-		for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > (i_2_ ^ 0xffffffff); i_7_++) {
+		for (int i_7_ = 0; i_2_ > i_7_; i_7_++) {
 			int i_8_ = i_7_ * i_1_ + is[i_7_];
-			for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > (is_0_[i_7_] ^ 0xffffffff); i_9_++)
+			for (int i_9_ = 0; is_0_[i_7_] > i_9_; i_9_++)
 				is_6_[i_8_++] = -16777216;
 		}
 		return new aa_Sub2(abstracttoolkit, i_1_, i_2_, is_6_);

@@ -32,10 +32,10 @@ public class Class258 implements Interface12
 		if (i > 0 && !Class371.method4094(i, false)) {
 			throw new IllegalArgumentException("");
 		}
-		if ((i_3_ ^ 0xffffffff) < -1 && !Class371.method4094(i_3_, false)) {
+		if (i_3_ > 0 && !Class371.method4094(i_3_, false)) {
 			throw new IllegalArgumentException("");
 		}
-		if ((i_1_ ^ 0xffffffff) != -32994) {
+		if (i_1_ != 32993) {
 			throw new IllegalArgumentException("");
 		}
 		int i_6_ = 0;
@@ -49,14 +49,14 @@ public class Class258 implements Interface12
 		int[] is_11_ = new int[i_9_ * i_8_];
 		for (;;) {
 			OpenGL.glTexImage2Di(i_0_, i_6_, i_2_, i, i_3_, 0, i_1_, i_5_, is_10_, 0);
-			if ((i_7_ ^ 0xffffffff) >= -2) {
+			if (i_7_ <= 1) {
 				break;
 			}
 			int i_12_ = 0;
 			int i_13_ = 0;
 			int i_14_ = i_13_ - -i;
 			int[] is_15_ = is_11_;
-			for (int i_16_ = 0; (i_9_ ^ 0xffffffff) < (i_16_ ^ 0xffffffff); i_16_++) {
+			for (int i_16_ = 0; i_16_ < i_9_; i_16_++) {
 				for (int i_17_ = 0; i_17_ < i_8_; i_17_++) {
 					int i_18_ = is_10_[i_13_++];
 					int i_19_ = is_10_[i_14_++];
@@ -116,11 +116,11 @@ public class Class258 implements Interface12
 		node_sub53.aByteArrayArrayArray7659 = new byte[node_sub53.anInt7658][][];
 		node_sub53.anIntArray7661 = new int[node_sub53.anInt7658];
 		node_sub53.aClass241Array7664 = new Class241[node_sub53.anInt7658];
-		for (int i_27_ = 0; (i_27_ ^ 0xffffffff) > (node_sub53.anInt7658 ^ 0xffffffff); i_27_++) {
+		for (int i_27_ = 0; node_sub53.anInt7658 > i_27_; i_27_++) {
 			try {
 				int i_28_ = buffer.readUnsignedByte();
-				if ((i_28_ ^ 0xffffffff) != -1 && i_28_ != 1 && (i_28_ ^ 0xffffffff) != -3) {
-					if (i_28_ == 3 || (i_28_ ^ 0xffffffff) == -5) {
+				if (i_28_ != 0 && i_28_ != 1 && i_28_ != 2) {
+					if (i_28_ == 3 || i_28_ == 4) {
 						String string = buffer.readString();
 						String string_29_ = buffer.readString();
 						int i_30_ = buffer.readUnsignedByte();
@@ -128,7 +128,7 @@ public class Class258 implements Interface12
 						for (int i_31_ = 0; i_31_ < i_30_; i_31_++)
 							strings[i_31_] = buffer.readString();
 						byte[][] bs = new byte[i_30_][];
-						if ((i_28_ ^ 0xffffffff) == -4) {
+						if (i_28_ == 3) {
 							for (int i_32_ = 0; i_32_ < i_30_; i_32_++) {
 								int i_33_ = buffer.readInt();
 								bs[i_32_] = new byte[i_33_];
@@ -138,7 +138,7 @@ public class Class258 implements Interface12
 						node_sub53.anIntArray7661[i_27_] = i_28_;
 						@SuppressWarnings("rawtypes")
 						Class[] var_classes = new Class[i_30_];
-						for (int i_34_ = 0; (i_30_ ^ 0xffffffff) < (i_34_ ^ 0xffffffff); i_34_++)
+						for (int i_34_ = 0; i_34_ < i_30_; i_34_++)
 							var_classes[i_34_] = Class260.method3139(strings[i_34_], 51);
 						node_sub53.aClass241Array7664[i_27_] = signlink.method3638(Class260.method3139(string, 51), var_classes, string_29_, false);
 						node_sub53.aByteArrayArrayArray7659[i_27_] = bs;

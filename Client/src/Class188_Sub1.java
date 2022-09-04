@@ -42,13 +42,13 @@ class Class188_Sub1 extends Class188
 			anInt6862 = 86;
 		}
 		if (i_7_ == 0) {
-			anInt6863 = anInt6860 - ((i ^ 0xffffffff) <= -1 ? i : -i);
+			anInt6863 = anInt6860 - (i >= 0 ? i : -i);
 			anInt6862 = 4096;
 			anInt6863 = anInt6863 * anInt6863 >> 12;
 			anInt6854 = anInt6863;
 		} else {
 			anInt6862 = anInt6863 * anInt6855 >> 12;
-			anInt6863 = -((i ^ 0xffffffff) > -1 ? -i : i) + anInt6860;
+			anInt6863 = -(i < 0 ? -i : i) + anInt6860;
 			if (anInt6862 < 0) {
 				anInt6862 = 0;
 			} else if (anInt6862 > 4096) {
@@ -68,7 +68,7 @@ class Class188_Sub1 extends Class188
 		anInt6865++;
 		if (anInt6854 < 0) {
 			anInt6854 = 0;
-		} else if ((anInt6854 ^ 0xffffffff) < -256) {
+		} else if (anInt6854 > 255) {
 			anInt6854 = 255;
 		}
 		if (i != 4096) {

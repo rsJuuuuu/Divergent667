@@ -55,35 +55,33 @@ public class Node_Sub28 extends Node
 	static final void method2703(boolean bool, long l) {
 		anInt7333++;
 		int i = Class234.anInt2792;
-		if ((Mobile_Sub4.anInt10987 ^ 0xffffffff) != (i ^ 0xffffffff)) {
+		if (i != Mobile_Sub4.anInt10987) {
 			int i_5_ = i + -Mobile_Sub4.anInt10987;
 			int i_6_ = (int) (l * (long) i_5_ / 320L);
 			if (i_5_ > 0) {
 				if (i_6_ == 0) {
 					i_6_ = 1;
-				} else if ((i_5_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff)) {
+				} else if (i_6_ > i_5_) {
 					i_6_ = i_5_;
 				}
 			} else if (i_6_ == 0) {
 				i_6_ = -1;
-			} else if ((i_5_ ^ 0xffffffff) < (i_6_ ^ 0xffffffff)) {
+			} else if (i_6_ < i_5_) {
 				i_6_ = i_5_;
 			}
 			Mobile_Sub4.anInt10987 += i_6_;
 		}
 		int i_7_ = Node_Sub19.anInt7173;
-		if ((i_7_ ^ 0xffffffff) != (Class25.anInt444 ^ 0xffffffff)) {
+		if (Class25.anInt444 != i_7_) {
 			int i_8_ = i_7_ + -Class25.anInt444;
 			int i_9_ = (int) ((long) i_8_ * l / 320L);
 			if (i_8_ <= 0) {
-				if ((i_9_ ^ 0xffffffff) != -1) {
-					if (i_8_ > i_9_) {
-						i_9_ = i_8_;
-					}
-				} else {
+				if (i_9_ == 0) {
 					i_9_ = -1;
-				}
-			} else if (i_9_ == 0) {
+				} else if (i_8_ > i_9_) {
+                    i_9_ = i_8_;
+                }
+            } else if (i_9_ == 0) {
 				i_9_ = 1;
 			} else if (i_8_ < i_9_) {
 				i_9_ = i_8_;

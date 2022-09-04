@@ -28,9 +28,9 @@ public class Class172
 		int i_1_ = player.anAnimator10860.method250((byte) -53);
 		if (i == i_1_ || player.aBoolean10867) {
 			i_0_ = player.anInt11167;
-		} else if ((class259.anInt3252 ^ 0xffffffff) == (i_1_ ^ 0xffffffff) || (i_1_ ^ 0xffffffff) == (class259.anInt3271 ^ 0xffffffff) || class259.anInt3293 == i_1_ || class259.anInt3270 == i_1_) {
+		} else if (i_1_ == class259.anInt3252 || class259.anInt3271 == i_1_ || class259.anInt3293 == i_1_ || class259.anInt3270 == i_1_) {
 			i_0_ = player.anInt11182;
-		} else if ((class259.anInt3262 ^ 0xffffffff) == (i_1_ ^ 0xffffffff) || class259.anInt3297 == i_1_ || (class259.anInt3304 ^ 0xffffffff) == (i_1_ ^ 0xffffffff) || class259.anInt3269 == i_1_) {
+		} else if (i_1_ == class259.anInt3262 || class259.anInt3297 == i_1_ || i_1_ == class259.anInt3304 || class259.anInt3269 == i_1_) {
 			i_0_ = player.anInt11172;
 		}
 		return i_0_;

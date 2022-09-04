@@ -44,15 +44,13 @@ abstract class Class10
 		for (;;) {
 			int i_3_ = buffer.readUnsignedByte();
 			int i_4_ = i_3_;
-			if ((i_4_ ^ 0xffffffff) != -1) {
-				if ((i_4_ ^ 0xffffffff) == -256) {
-					break;
-				}
-			} else {
+			if (i_4_ == 0) {
 				Class259.anInt3254 = buffer.readUnsignedShort();
 				Class270_Sub1.anInt8034 = buffer.readUnsignedShort();
+			} else if (i_4_ == 255) {
+				break;
 			}
-		}
+        }
 	}
 	
 	@SuppressWarnings("unused")

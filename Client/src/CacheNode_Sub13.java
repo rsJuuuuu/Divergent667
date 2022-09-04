@@ -26,8 +26,8 @@ public class CacheNode_Sub13 extends CacheNode
 		if (i_2_ <= 2) {
 			return 92;
 		}
-		int i_5_ = (i_4_ ^ 0xffffffff) <= -9 ? i_3_ : i_1_;
-		int i_6_ = (i_4_ ^ 0xffffffff) > -5 ? i_3_ : (i_4_ ^ 0xffffffff) != -13 && (i_4_ ^ 0xffffffff) != -15 ? i : i_1_;
+		int i_5_ = i_4_ >= 8 ? i_3_ : i_1_;
+		int i_6_ = i_4_ < 4 ? i_3_ : i_4_ != 12 && i_4_ != 14 ? i : i_1_;
 		return ((i_4_ & 0x1) != 0 ? -i_5_ : i_5_) - -((0x2 & i_4_) != 0 ? -i_6_ : i_6_);
 	}
 	

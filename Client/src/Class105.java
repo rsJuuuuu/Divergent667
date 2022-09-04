@@ -29,7 +29,7 @@ public class Class105 implements Interface10
 	}
 	
 	static final void method1116(int i, int i_0_, int i_1_, byte b, int i_2_, int i_3_, boolean voice) {
-		if ((voice ? Class213.aNode_Sub27_2512.aClass320_Sub25_7276.method3776(false) : Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776(false)) != 0 && i_0_ != 0 && Class23.anInt434 < 50 && (i ^ 0xffffffff) != 0) {
+		if ((voice ? Class213.aNode_Sub27_2512.aClass320_Sub25_7276.method3776(false) : Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776(false)) != 0 && i_0_ != 0 && Class23.anInt434 < 50 && i != -1) {
 			Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78(voice ? (byte) 3 : (byte) 2, i, i_0_, i_2_, i_3_, 0, i_1_, null);
 		}
 		anInt5198++;

@@ -33,7 +33,7 @@ public class Node_Sub38_Sub3 extends Node_Sub38
 			int[] is_4_ = is[0];
 			int[] is_5_ = is[1];
 			int[] is_6_ = is[2];
-			for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_7_++) {
+			for (int i_7_ = 0; Class339_Sub7.anInt8728 > i_7_; i_7_++) {
 				int i_8_ = is_1_[i_7_];
 				int i_9_ = is_3_[i_7_];
 				int i_10_ = is_2_[i_7_];
@@ -67,18 +67,16 @@ public class Node_Sub38_Sub3 extends Node_Sub38
 	while_2_:
 		do {
 			do {
-				if (i_11_ != 0) {
-					if (i_11_ != 1) {
-						if ((i_11_ ^ 0xffffffff) == -3) {
-							break;
-						}
-						break while_2_;
-					}
-				} else {
+				if (i_11_ == 0) {
 					anInt10106 = buffer.readUnsignedShort();
 					break while_2_;
-				}
-				anInt10103 = buffer.readUnsignedShort();
+				} else if (i_11_ != 1) {
+                    if (i_11_ == 2) {
+                        break;
+                    }
+                    break while_2_;
+                }
+                anInt10103 = buffer.readUnsignedShort();
 				break while_2_;
 			} while (false);
 			anInt10099 = buffer.readUnsignedShort();
@@ -87,11 +85,11 @@ public class Node_Sub38_Sub3 extends Node_Sub38
 	}
 	
 	static {
-		for (int i = 0; (i ^ 0xffffffff) > -27; i++)
+		for (int i = 0; i < 26; i++)
 			aCharArray10101[i] = (char) (65 + i);
-		for (int i = 26; (i ^ 0xffffffff) > -53; i++)
+		for (int i = 26; i < 52; i++)
 			aCharArray10101[i] = (char) (97 + i - 26);
-		for (int i = 52; (i ^ 0xffffffff) > -63; i++)
+		for (int i = 52; i < 62; i++)
 			aCharArray10101[i] = (char) (i + -4);
 		aCharArray10101[62] = '+';
 		aCharArray10101[63] = '/';

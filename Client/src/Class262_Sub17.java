@@ -16,10 +16,10 @@ public class Class262_Sub17 extends Class262
 	final void method3148(int i) {
 		anInt7838++;
 		Actor actor = Class121.aClass206Array1529[anInt7832].method2037(-117);
-		if ((anInt7836 ^ 0xffffffff) != -1) {
-			Node_Sub38_Sub13.method2831(new int[] { anInt7836 }, -31813, new int[] { anInt7835 }, new int[1], actor);
-		} else {
+		if (anInt7836 == 0) {
 			Class352.method4011(anIntArray7837, 0, false, actor, -122);
+		} else {
+			Node_Sub38_Sub13.method2831(new int[] { anInt7836 }, -31813, new int[] { anInt7835 }, new int[1], actor);
 		}
 		if (i >= -102) {
 			method3197(30);
@@ -37,7 +37,7 @@ public class Class262_Sub17 extends Class262
 	
 	static final void method3197(int i) {
 		if (CacheNode_Sub18.aClass343ArrayArray9608 != null) {
-			for (int i_0_ = 0; (i_0_ ^ 0xffffffff) > (CacheNode_Sub18.aClass343ArrayArray9608.length ^ 0xffffffff); i_0_++) {
+			for (int i_0_ = 0; CacheNode_Sub18.aClass343ArrayArray9608.length > i_0_; i_0_++) {
 				for (int i_1_ = 0; CacheNode_Sub18.aClass343ArrayArray9608[i_0_].length > i_1_; i_1_++)
 					CacheNode_Sub18.aClass343ArrayArray9608[i_0_][i_1_] = Class295.aClass343_3695;
 			}

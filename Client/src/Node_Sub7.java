@@ -45,7 +45,7 @@ public class Node_Sub7 extends Node
 		int i_1_ = Class247.aCalendar3144.get(13);
 		String string_2_ = Integer.toString(i / 10) + i % 10 + ":" + i_0_ / 10 + i_0_ % 10 + ":" + i_1_ / 10 + i_1_ % 10;
 		String[] strings = Class106.method1120((byte) -113, string, '\n');
-		for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (strings.length ^ 0xffffffff); i_3_++) {
+		for (int i_3_ = 0; strings.length > i_3_; i_3_++) {
 			for (int i_4_ = Class144_Sub4.anInt6848; i_4_ > 0; i_4_--)
 				Class210.aStringArray2502[i_4_] = Class210.aStringArray2502[-1 + i_4_];
 			Class210.aStringArray2502[0] = string_2_ + ": " + strings[i_3_];
@@ -56,9 +56,9 @@ public class Node_Sub7 extends Node
 					/* empty */
 				}
 			}
-			if ((Class144_Sub4.anInt6848 ^ 0xffffffff) > (Class210.aStringArray2502.length + -1 ^ 0xffffffff)) {
+			if (Class210.aStringArray2502.length + -1 > Class144_Sub4.anInt6848) {
 				Class144_Sub4.anInt6848++;
-				if ((Class118.anInt5406 ^ 0xffffffff) < -1) {
+				if (Class118.anInt5406 > 0) {
 					Class118.anInt5406++;
 				}
 			}

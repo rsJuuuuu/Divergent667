@@ -31,7 +31,7 @@ public class Class375
 		byte[] bs = new byte[i_1_ * i_2_];
 		for (int i_3_ = 0; i_1_ > i_3_; i_3_++) {
 			int i_4_ = i_3_ * i_2_ + is_0_[i_3_];
-			for (int i_5_ = 0; (is[i_3_] ^ 0xffffffff) < (i_5_ ^ 0xffffffff); i_5_++)
+			for (int i_5_ = 0; i_5_ < is[i_3_]; i_5_++)
 				bs[i_4_++] = (byte) -1;
 		}
 		if (i != 17787) {

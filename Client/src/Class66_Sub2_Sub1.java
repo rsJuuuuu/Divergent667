@@ -30,7 +30,7 @@ public class Class66_Sub2_Sub1 extends Class66_Sub2
 	static final void method727(int i, int i_7_, int i_8_, int i_9_, int i_10_) {
 		if (i_9_ <= -92) {
 			anInt10580++;
-			if ((Class262_Sub4.anInt7722 ^ 0xffffffff) >= (i ^ 0xffffffff) && (za_Sub2.anInt10513 ^ 0xffffffff) <= (i ^ 0xffffffff)) {
+			if (i >= Class262_Sub4.anInt7722 && i <= za_Sub2.anInt10513) {
 				i_8_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_8_);
 				i_10_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_10_);
 				Class50.method511(i_10_, i_8_, i_7_, i, 1);
@@ -60,15 +60,15 @@ public class Class66_Sub2_Sub1 extends Class66_Sub2
 		aClass318_10581 = new OutcommingPacket(92, 3);
 		aLongArray10583 = new long[11];
 		aLongArrayArray10584 = new long[8][256];
-		for (int i = 0; (i ^ 0xffffffff) > -257; i++) {
+		for (int i = 0; i < 256; i++) {
 			int i_11_ = "\u1823\uc6e8\u87b8\u014f\u36a6\ud2f5\u796f\u9152\u60bc\u9b8e\ua30c\u7b35\u1de0\ud7c2\u2e4b\ufe57\u1577\u37e5\u9ff0\u4ada\u58c9\u290a\ub1a0\u6b85\ubd5d\u10f4\ucb3e\u0567\ue427\u418b\ua77d\u95d8\ufbee\u7c66\udd17\u479e\uca2d\ubf07\uad5a\u8333\u6302\uaa71\uc819\u49d9\uf2e3\u5b88\u9a26\u32b0\ue90f\ud580\ubecd\u3448\uff7a\u905f\u2068\u1aae\ub454\u9322\u64f1\u7312\u4008\uc3ec\udba1\u8d3d\u9700\ucf2b\u7682\ud61b\ub5af\u6a50\u45f3\u30ef\u3f55\ua2ea\u65ba\u2fc0\ude1c\ufd4d\u9275\u068a\ub2e6\u0e1f\u62d4\ua896\uf9c5\u2559\u8472\u394c\u5e78\u388c\ud1a5\ue261\ub321\u9c1e\u43c7\ufc04\u5199\u6d0d\ufadf\u7e24\u3bab\uce11\u8f4e\ub7eb\u3c81\u94f7\ub913\u2cd3\ue76e\uc403\u5644\u7fa9\u2abb\uc153\udc0b\u9d6c\u3174\uf646\uac89\u14e1\u163a\u6909\u70b6\ud0ed\ucc42\u98a4\u285c\uf886".charAt(i / 2);
-			long l = (long) ((0x1 & i ^ 0xffffffff) != -1 ? 0xff & i_11_ : i_11_ >>> 8);
+			long l = (long) ((0x1 & i) != 0 ? 0xff & i_11_ : i_11_ >>> 8);
 			long l_12_ = l << 1;
 			if (l_12_ >= 256L) {
 				l_12_ ^= 0x11dL;
 			}
 			long l_13_ = l_12_ << 1;
-			if ((l_13_ ^ 0xffffffffffffffffL) <= -257L) {
+			if (l_13_ >= 256) {
 				l_13_ ^= 0x11dL;
 			}
 			long l_14_ = l_13_ ^ l;

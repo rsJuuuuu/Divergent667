@@ -17,7 +17,7 @@ abstract class Node_Sub36 extends Node
 		anInt7422++;
 		int i_2_ = i_1_ - -Node_Sub53.gameSceneBaseX;
 		int i_3_ = Class320_Sub4.gameSceneBaseY + i_0_;
-		if (Class175.aClass261ArrayArrayArray2099 != null && (i_1_ ^ 0xffffffff) <= -1 && (i_0_ ^ 0xffffffff) <= -1 && i_1_ < Node_Sub54.GAME_SCENE_WDITH && Class377_Sub1.GAME_SCENE_HEIGHT > i_0_ && ((Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(bool) ^ 0xffffffff) != -1 || i == Class295.myPlayer.plane)) {
+		if (Class175.aClass261ArrayArrayArray2099 != null && i_1_ >= 0 && i_0_ >= 0 && i_1_ < Node_Sub54.GAME_SCENE_WDITH && Class377_Sub1.GAME_SCENE_HEIGHT > i_0_ && (Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(bool) != 0 || i == Class295.myPlayer.plane)) {
 			long l = (long) (i_3_ << 14 | i << 28 | i_2_);
 			Node_Sub11 node_sub11 = (Node_Sub11) Class266.aHashTable3380.method1518(3512, l);
 			if (node_sub11 == null) {
@@ -28,12 +28,12 @@ abstract class Node_Sub36 extends Node
 					Class262_Sub22.method3211(i, i_1_, i_0_);
 				} else {
 					Animable_Sub3_Sub1 animable_sub3_sub1 = (Animable_Sub3_Sub1) Class262_Sub22.method3211(i, i_1_, i_0_);
-					if (animable_sub3_sub1 != null) {
-						animable_sub3_sub1.anInt11010 = animable_sub3_sub1.anInt11007 = -1;
-					} else {
+					if (animable_sub3_sub1 == null) {
 						animable_sub3_sub1 = new Animable_Sub3_Sub1(i_1_ << 9, Class320_Sub10.aPlaneArray8300[i].method3251(i_0_, i_1_, (byte) -118), i_0_ << 9, i, i);
+					} else {
+						animable_sub3_sub1.anInt11010 = animable_sub3_sub1.anInt11007 = -1;
 					}
-					animable_sub3_sub1.anInt11003 = node_sub8.anInt7067;
+                    animable_sub3_sub1.anInt11003 = node_sub8.anInt7067;
 					animable_sub3_sub1.anInt10996 = node_sub8.anInt7065;
 				while_204_:
 					do {
@@ -113,22 +113,16 @@ abstract class Node_Sub36 extends Node
 		if (class68 == Class99.aClass68_1290) {
 			return 6408;
 		}
-		if (class68 != Node_Sub52.aClass68_7639) {
-			if (class68 != Class188_Sub2.aClass68_6875) {
-				if (class68 != Class259.aClass68_3268) {
-					if (class68 == Class262_Sub15_Sub1.aClass68_10521) {
-						return 6145;
-					}
-				} else {
-					return 6410;
-				}
-			} else {
-				return 6409;
-			}
-		} else {
+		if (class68 == Node_Sub52.aClass68_7639) {
 			return 6406;
+		} else if (class68 == Class188_Sub2.aClass68_6875) {
+			return 6409;
+		} else if (class68 == Class259.aClass68_3268) {
+			return 6410;
+		} else if (class68 == Class262_Sub15_Sub1.aClass68_10521) {
+			return 6145;
 		}
-		if (b != -18) {
+        if (b != -18) {
 			aClass192_7428 = null;
 		}
 		throw new IllegalStateException();
@@ -159,9 +153,9 @@ abstract class Node_Sub36 extends Node
 	static final int method2757(int i, int i_10_, byte b) {
 		anInt7425++;
 		i_10_ = (0x7f & i) * i_10_ >> 7;
-		if ((i_10_ ^ 0xffffffff) > -3) {
+		if (i_10_ < 2) {
 			i_10_ = 2;
-		} else if ((i_10_ ^ 0xffffffff) < -127) {
+		} else if (i_10_ > 126) {
 			i_10_ = 126;
 		}
 		if (b > -29) {

@@ -55,11 +55,11 @@ class Class188_Sub2 extends Class188
 		Class369.method4086(-i_10_ + i_6_, i_1_, i_6_ + -i_0_, is, 0);
 		Class369.method4086(i_10_ + i_6_, i, i_6_ - i_10_, is, 0);
 		Class369.method4086(i_6_ + i_0_, i_1_, i_10_ + i_6_, is, 0);
-		while ((i_8_ ^ 0xffffffff) < -1) {
+		while (i_8_ > 0) {
 			boolean bool = i_8_ <= i_11_;
 			if (bool) {
-				if ((i_24_ ^ 0xffffffff) > -1) {
-					while ((i_24_ ^ 0xffffffff) > -1) {
+				if (i_24_ < 0) {
+					while (i_24_ < 0) {
 						i_24_ += i_32_;
 						i_25_ += i_36_;
 						i_9_++;
@@ -122,7 +122,7 @@ class Class188_Sub2 extends Class188
 	
 	Class188_Sub2(int i, int i_44_, int i_45_, int i_46_, int i_47_, float f) {
 		super(i, i_44_, i_45_, i_46_, i_47_);
-		for (int i_48_ = 0; (anInt2282 ^ 0xffffffff) < (i_48_ ^ 0xffffffff); i_48_++)
+		for (int i_48_ = 0; i_48_ < anInt2282; i_48_++)
 			anIntArray6874[i_48_] = (short) (int) (Math.pow((double) f, (double) i_48_) * 4096.0);
 	}
 	
@@ -132,7 +132,7 @@ class Class188_Sub2 extends Class188
 		}
 		anInt6878 = Math.abs(anInt6878);
 		anInt6867++;
-		if ((anInt6878 ^ 0xffffffff) <= -4097) {
+		if (anInt6878 >= 4096) {
 			anInt6878 = 4095;
 		}
 		method1905((byte) -11, anInt6871++, (byte) (anInt6878 >> 4));

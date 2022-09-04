@@ -17,7 +17,7 @@ public class NativeHeapBuffer implements Buffer, Source
 	}
 	
 	public final synchronized void a(byte[] bs, int i, int i_0_, int i_1_) {
-		if ((i_0_ ^ 0xffffffff) > -1 | (bs == null | !a() | (i ^ 0xffffffff) > -1 | (i + i_1_ ^ 0xffffffff) < (bs.length ^ 0xffffffff)) | (b ^ 0xffffffff) > (i_0_ + i_1_ ^ 0xffffffff)) {
+		if (i_0_ < 0 | (bs == null | !a() | i < 0 | bs.length < i + i_1_) | i_0_ + i_1_ > b) {
 			throw new RuntimeException();
 		}
 		a.put(c, bs, i, i_0_, i_1_);

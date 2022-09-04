@@ -28,7 +28,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9
 		for (Node_Sub10 node_sub10 = (Node_Sub10) aClass312_9739.method3613(65280); node_sub10 != null; node_sub10 = (Node_Sub10) aClass312_9739.method3620(16776960)) {
 			if (!aNode_Sub9_Sub1_9734.method2444(node_sub10, (byte) 103)) {
 				int i_0_ = i;
-				while ((i_0_ ^ 0xffffffff) < (node_sub10.anInt7077 ^ 0xffffffff)) {
+				while (node_sub10.anInt7077 < i_0_) {
 					method2520(node_sub10, 262144, node_sub10.anInt7077);
 					i_0_ -= node_sub10.anInt7077;
 					if (aNode_Sub9_Sub1_9734.method2468(node_sub10, 83, null, 0, i_0_)) {
@@ -42,12 +42,12 @@ public class Node_Sub9_Sub4 extends Node_Sub9
 	}
 	
 	private final void method2520(Node_Sub10 node_sub10, int i, int i_1_) {
-		if ((0x4 & aNode_Sub9_Sub1_9734.anIntArray9680[node_sub10.anInt7080] ^ 0xffffffff) != -1 && (node_sub10.anInt7100 ^ 0xffffffff) > -1) {
+		if ((0x4 & aNode_Sub9_Sub1_9734.anIntArray9680[node_sub10.anInt7080]) != 0 && node_sub10.anInt7100 < 0) {
 			int i_2_ = aNode_Sub9_Sub1_9734.anIntArray9685[node_sub10.anInt7080] / Class365.anInt4523;
 			int i_3_ = (1048575 + (i_2_ - node_sub10.anInt7076)) / i_2_;
 			node_sub10.anInt7076 = node_sub10.anInt7076 + i_2_ * i_1_ & 0xfffff;
-			if ((i_3_ ^ 0xffffffff) >= (i_1_ ^ 0xffffffff)) {
-				if ((aNode_Sub9_Sub1_9734.anIntArray9659[node_sub10.anInt7080] ^ 0xffffffff) == -1) {
+			if (i_1_ >= i_3_) {
+				if (aNode_Sub9_Sub1_9734.anIntArray9659[node_sub10.anInt7080] == 0) {
 					node_sub10.aNode_Sub9_Sub2_7095 = Node_Sub9_Sub2.method2509(node_sub10.aNode_Sub45_Sub1_7087, node_sub10.aNode_Sub9_Sub2_7095.method2503(), node_sub10.aNode_Sub9_Sub2_7095.method2504(), node_sub10.aNode_Sub9_Sub2_7095.method2511());
 				} else {
 					node_sub10.aNode_Sub9_Sub2_7095 = Node_Sub9_Sub2.method2509(node_sub10.aNode_Sub45_Sub1_7087, node_sub10.aNode_Sub9_Sub2_7095.method2503(), 0, node_sub10.aNode_Sub9_Sub2_7095.method2511());
@@ -80,7 +80,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9
 		if (i != 0) {
 			method2522(101, 82, 47);
 		}
-        return (i_5_ & 0x800 ^ 0xffffffff) != -1;
+        return (i_5_ & 0x800) != 0;
     }
 	
 	final int method2428() {
@@ -140,7 +140,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9
 		if (i_9_ != 12073) {
 			DECODE_MASKS_PLAYERS_COUNT = 44;
 		}
-		if ((0x4 & aNode_Sub9_Sub1_9734.anIntArray9680[node_sub10.anInt7080] ^ 0xffffffff) != -1 && node_sub10.anInt7100 < 0) {
+		if ((0x4 & aNode_Sub9_Sub1_9734.anIntArray9680[node_sub10.anInt7080]) != 0 && node_sub10.anInt7100 < 0) {
 			int i_10_ = aNode_Sub9_Sub1_9734.anIntArray9685[node_sub10.anInt7080] / Class365.anInt4523;
 			for (;;) {
 				int i_11_ = (-node_sub10.anInt7076 + (1048575 + i_10_)) / i_10_;
@@ -153,18 +153,18 @@ public class Node_Sub9_Sub4 extends Node_Sub9
 				i_8_ += i_11_;
 				int i_12_ = Class365.anInt4523 / 100;
 				int i_13_ = 262144 / i_10_;
-				if ((i_13_ ^ 0xffffffff) > (i_12_ ^ 0xffffffff)) {
+				if (i_12_ > i_13_) {
 					i_12_ = i_13_;
 				}
 				Node_Sub9_Sub2 node_sub9_sub2 = node_sub10.aNode_Sub9_Sub2_7095;
-				if ((aNode_Sub9_Sub1_9734.anIntArray9659[node_sub10.anInt7080] ^ 0xffffffff) != -1) {
+				if (aNode_Sub9_Sub1_9734.anIntArray9659[node_sub10.anInt7080] == 0) {
+					node_sub10.aNode_Sub9_Sub2_7095 = Node_Sub9_Sub2.method2509(node_sub10.aNode_Sub45_Sub1_7087, node_sub9_sub2.method2503(), node_sub9_sub2.method2504(), node_sub9_sub2.method2511());
+				} else {
 					node_sub10.aNode_Sub9_Sub2_7095 = Node_Sub9_Sub2.method2509(node_sub10.aNode_Sub45_Sub1_7087, node_sub9_sub2.method2503(), 0, node_sub9_sub2.method2511());
 					aNode_Sub9_Sub1_9734.method2466(node_sub10.aNode_Sub6_7098.aShortArray7044[node_sub10.anInt7091] < 0, node_sub10, -26045);
 					node_sub10.aNode_Sub9_Sub2_7095.method2478(i_12_, node_sub9_sub2.method2504());
-				} else {
-					node_sub10.aNode_Sub9_Sub2_7095 = Node_Sub9_Sub2.method2509(node_sub10.aNode_Sub45_Sub1_7087, node_sub9_sub2.method2503(), node_sub9_sub2.method2504(), node_sub9_sub2.method2511());
 				}
-				if (node_sub10.aNode_Sub6_7098.aShortArray7044[node_sub10.anInt7091] < 0) {
+                if (node_sub10.aNode_Sub6_7098.aShortArray7044[node_sub10.anInt7091] < 0) {
 					node_sub10.aNode_Sub9_Sub2_7095.method2481(-1);
 				}
 				node_sub9_sub2.method2483(i_12_);

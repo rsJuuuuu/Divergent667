@@ -69,7 +69,7 @@ public class Class123
 			aBuffer1566.offset = 0;
 			for (;;) {
 				Node_Sub13 node_sub13 = (Node_Sub13) aClass312_1558.method3613(65280);
-				if (node_sub13 == null || (node_sub13.anInt7114 ^ 0xffffffff) < (aBuffer1566.buffer.length + -aBuffer1566.offset ^ 0xffffffff)) {
+				if (node_sub13 == null || aBuffer1566.buffer.length + -aBuffer1566.offset < node_sub13.anInt7114) {
 					break;
 				}
 				aBuffer1566.writeBytes(node_sub13.anInt7114, node_sub13.aPacket7113.buffer, 0);

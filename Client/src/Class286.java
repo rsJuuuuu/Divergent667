@@ -10,7 +10,7 @@ public class Class286
 	static GLSprite aGLSprite3604;
 	
 	static final void method3393(Object[] objects, byte b, long[] ls, int i, int i_0_) {
-		if ((i ^ 0xffffffff) > (i_0_ ^ 0xffffffff)) {
+		if (i_0_ > i) {
 			int i_1_ = (i + i_0_) / 2;
 			int i_2_ = i;
 			long l = ls[i_1_];
@@ -51,7 +51,7 @@ public class Class286
 	}
 	
 	static final void method3395(int i, IComponentDefinitions widget) {
-		if ((widget.type ^ 0xffffffff) == -6 && (widget.anInt4718 ^ 0xffffffff) != 0) {
+		if (widget.type == 5 && widget.anInt4718 != -1) {
 			Node_Sub38.method2779(widget, 28564, Class93.aGraphicsToolkit1241);
 		}
 		if (i == 1) {

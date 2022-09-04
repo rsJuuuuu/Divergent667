@@ -86,7 +86,7 @@ public class Class79
 		}
 		anInt1073++;
 		int i;
-		if ((anInt1091 ^ 0xffffffff) == 0) {
+		if (anInt1091 == -1) {
 			if (anInt1069 == -1) {
 				return true;
 			}
@@ -94,20 +94,20 @@ public class Class79
 		} else {
 			i = interface17.method65(anInt1091, -43);
 		}
-		if ((i ^ 0xffffffff) > (anInt1087 ^ 0xffffffff) || (i ^ 0xffffffff) < (anInt1042 ^ 0xffffffff)) {
+		if (anInt1087 > i || anInt1042 < i) {
 			return false;
 		}
 		int i_0_;
 		if (anInt1044 == -1) {
-			if ((anInt1048 ^ 0xffffffff) != 0) {
-				i_0_ = interface17.method64(anInt1048, (byte) -42);
-			} else {
+			if (anInt1048 == -1) {
 				return true;
+			} else {
+				i_0_ = interface17.method64(anInt1048, (byte) -42);
 			}
 		} else {
 			i_0_ = interface17.method65(anInt1044, -56);
 		}
-        return !((anInt1078 ^ 0xffffffff) < (i_0_ ^ 0xffffffff) || anInt1072 < i_0_);
+        return !(i_0_ < anInt1078 || anInt1072 < i_0_);
     }
 	
 	final String method785(int i, int i_1_, String string) {
@@ -185,7 +185,7 @@ public class Class79
 			aString1085 = null;
 		}
 		if (anIntArray1049 != null) {
-			for (int i = 0; (i ^ 0xffffffff) > (anIntArray1049.length ^ 0xffffffff); i += 2) {
+			for (int i = 0; anIntArray1049.length > i; i += 2) {
 				if (anIntArray1049[i] >= anInt1068) {
 					if (anInt1089 < anIntArray1049[i]) {
 						anInt1089 = anIntArray1049[i];
@@ -195,7 +195,7 @@ public class Class79
 				}
 				if (anInt1051 > anIntArray1049[i + 1]) {
 					anInt1051 = anIntArray1049[1 + i];
-				} else if ((anInt1060 ^ 0xffffffff) > (anIntArray1049[1 + i] ^ 0xffffffff)) {
+				} else if (anIntArray1049[1 + i] > anInt1060) {
 					anInt1060 = anIntArray1049[i + 1];
 				}
 			}
@@ -228,111 +228,99 @@ public class Class79
 		anInt1075++;
 		if (i == 1) {
 			anInt1062 = buffer.readUnsignedShort();
-		} else if ((i ^ 0xffffffff) == -3) {
+		} else if (i == 2) {
 			anInt1056 = buffer.readUnsignedShort();
-		} else if ((i ^ 0xffffffff) == -4) {
+		} else if (i == 3) {
 			aString1085 = buffer.readString();
 		} else if (i == 4) {
 			anInt1058 = buffer.read24BitInteger();
-		} else if ((i ^ 0xffffffff) != -6) {
-			if (i != 6) {
-				if (i == 7) {
-					int i_6_ = buffer.readUnsignedByte();
-					if ((0x1 & i_6_) == 0) {
-						aBoolean1047 = false;
-					}
-					if ((i_6_ & 0x2 ^ 0xffffffff) == -3) {
-						aBoolean1079 = true;
-					}
-				} else if (i != 8) {
-					if (i != 9) {
-						if ((i ^ 0xffffffff) <= -11 && i <= 14) {
-							aStringArray1065[i + -10] = buffer.readString();
-						} else if (i != 15) {
-							if ((i ^ 0xffffffff) == -17) {
-								aBoolean1064 = false;
-							} else if ((i ^ 0xffffffff) != -18) {
-								if (i == 18) {
-									anInt1093 = buffer.readUnsignedShort();
-								} else if ((i ^ 0xffffffff) == -20) {
-									anInt1067 = buffer.readUnsignedShort();
-								} else if ((i ^ 0xffffffff) == -21) {
-									anInt1048 = buffer.readUnsignedShort();
-									if ((anInt1048 ^ 0xffffffff) == -65536) {
-										anInt1048 = -1;
-									}
-									anInt1044 = buffer.readUnsignedShort();
-									if (anInt1044 == 65535) {
-										anInt1044 = -1;
-									}
-									anInt1078 = buffer.readInt();
-									anInt1072 = buffer.readInt();
-								} else if (i == 21) {
-									anInt1081 = buffer.readInt();
-								} else if (i == 22) {
-									anInt1077 = buffer.readInt();
-								} else if (i == 23) {
-									anInt1074 = buffer.readUnsignedByte();
-									anInt1050 = buffer.readUnsignedByte();
-									anInt1080 = buffer.readUnsignedByte();
-								} else if ((i ^ 0xffffffff) == -25) {
-									anInt1071 = buffer.readShort();
-									anInt1092 = buffer.readShort();
-								} else if ((i ^ 0xffffffff) == -250) {
-									int i_7_ = buffer.readUnsignedByte();
-									if (aHashTable1053 == null) {
-										int i_8_ = Class320_Sub19.method3753(i_7_, -729073628);
-										aHashTable1053 = new HashTable(i_8_);
-									}
-									for (int i_9_ = 0; (i_9_ ^ 0xffffffff) > (i_7_ ^ 0xffffffff); i_9_++) {
-										boolean bool = buffer.readUnsignedByte() == 1;
-										int i_10_ = buffer.read24BitInteger();
-										Node node;
-										if (bool) {
-											node = new Node_Sub18(buffer.readString());
-										} else {
-											node = new Node_Sub32(buffer.readInt());
-										}
-										aHashTable1053.method1515((long) i_10_, node, -126);
-									}
-								}
-							} else {
-								aString1045 = buffer.readString();
-							}
-						} else {
-							int i_11_ = buffer.readUnsignedByte();
-							anIntArray1049 = new int[i_11_ * 2];
-							for (int i_12_ = 0; i_12_ < 2 * i_11_; i_12_++)
-								anIntArray1049[i_12_] = buffer.readShort();
-							anInt1084 = buffer.readInt();
-							int i_13_ = buffer.readUnsignedByte();
-							anIntArray1066 = new int[i_13_];
-							for (int i_14_ = 0; (i_14_ ^ 0xffffffff) > (anIntArray1066.length ^ 0xffffffff); i_14_++)
-								anIntArray1066[i_14_] = buffer.readInt();
-							aByteArray1057 = new byte[i_11_];
-							for (int i_15_ = 0; (i_11_ ^ 0xffffffff) < (i_15_ ^ 0xffffffff); i_15_++)
-								aByteArray1057[i_15_] = buffer.readByte();
-						}
-					} else {
-						anInt1069 = buffer.readUnsignedShort();
-						if ((anInt1069 ^ 0xffffffff) == -65536) {
-							anInt1069 = -1;
-						}
-						anInt1091 = buffer.readUnsignedShort();
-						if ((anInt1091 ^ 0xffffffff) == -65536) {
-							anInt1091 = -1;
-						}
-						anInt1087 = buffer.readInt();
-						anInt1042 = buffer.readInt();
-					}
-				} else {
-					aBoolean1063 = buffer.readUnsignedByte() == 1;
-				}
-			} else {
-				anInt1090 = buffer.readUnsignedByte();
-			}
-		} else {
+		} else if (i == 5) {
 			anInt1054 = buffer.read24BitInteger();
+		} else if (i == 6) {
+			anInt1090 = buffer.readUnsignedByte();
+		} else if (i == 7) {
+			int i_6_ = buffer.readUnsignedByte();
+			if ((0x1 & i_6_) == 0) {
+				aBoolean1047 = false;
+			}
+			if ((i_6_ & 0x2) == 2) {
+				aBoolean1079 = true;
+			}
+		} else if (i == 8) {
+			aBoolean1063 = buffer.readUnsignedByte() == 1;
+		} else if (i == 9) {
+			anInt1069 = buffer.readUnsignedShort();
+			if (anInt1069 == 65535) {
+				anInt1069 = -1;
+			}
+			anInt1091 = buffer.readUnsignedShort();
+			if (anInt1091 == 65535) {
+				anInt1091 = -1;
+			}
+			anInt1087 = buffer.readInt();
+			anInt1042 = buffer.readInt();
+		} else if (i >= 10 && i <= 14) {
+			aStringArray1065[i + -10] = buffer.readString();
+		} else if (i == 15) {
+			int i_11_ = buffer.readUnsignedByte();
+			anIntArray1049 = new int[i_11_ * 2];
+			for (int i_12_ = 0; i_12_ < 2 * i_11_; i_12_++)
+				anIntArray1049[i_12_] = buffer.readShort();
+			anInt1084 = buffer.readInt();
+			int i_13_ = buffer.readUnsignedByte();
+			anIntArray1066 = new int[i_13_];
+			for (int i_14_ = 0; anIntArray1066.length > i_14_; i_14_++)
+				anIntArray1066[i_14_] = buffer.readInt();
+			aByteArray1057 = new byte[i_11_];
+			for (int i_15_ = 0; i_15_ < i_11_; i_15_++)
+				aByteArray1057[i_15_] = buffer.readByte();
+		} else if (i == 16) {
+			aBoolean1064 = false;
+		} else if (i == 17) {
+			aString1045 = buffer.readString();
+		} else if (i == 18) {
+			anInt1093 = buffer.readUnsignedShort();
+		} else if (i == 19) {
+			anInt1067 = buffer.readUnsignedShort();
+		} else if (i == 20) {
+			anInt1048 = buffer.readUnsignedShort();
+			if (anInt1048 == 65535) {
+				anInt1048 = -1;
+			}
+			anInt1044 = buffer.readUnsignedShort();
+			if (anInt1044 == 65535) {
+				anInt1044 = -1;
+			}
+			anInt1078 = buffer.readInt();
+			anInt1072 = buffer.readInt();
+		} else if (i == 21) {
+			anInt1081 = buffer.readInt();
+		} else if (i == 22) {
+			anInt1077 = buffer.readInt();
+		} else if (i == 23) {
+			anInt1074 = buffer.readUnsignedByte();
+			anInt1050 = buffer.readUnsignedByte();
+			anInt1080 = buffer.readUnsignedByte();
+		} else if (i == 24) {
+			anInt1071 = buffer.readShort();
+			anInt1092 = buffer.readShort();
+		} else if (i == 249) {
+			int i_7_ = buffer.readUnsignedByte();
+			if (aHashTable1053 == null) {
+				int i_8_ = Class320_Sub19.method3753(i_7_, -729073628);
+				aHashTable1053 = new HashTable(i_8_);
+			}
+			for (int i_9_ = 0; i_7_ > i_9_; i_9_++) {
+				boolean bool = buffer.readUnsignedByte() == 1;
+				int i_10_ = buffer.read24BitInteger();
+				Node node;
+				if (bool) {
+					node = new Node_Sub18(buffer.readString());
+				} else {
+					node = new Node_Sub32(buffer.readInt());
+				}
+				aHashTable1053.method1515((long) i_10_, node, -126);
+			}
 		}
 	}
 	

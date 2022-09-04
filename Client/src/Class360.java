@@ -52,7 +52,7 @@ public class Class360 implements Runnable
 					} else {
 						i = -anInt4469 + anInt4470;
 					}
-					if ((i ^ 0xffffffff) < -1) {
+					if (i > 0) {
 						break;
 					}
 					try {
@@ -69,7 +69,7 @@ public class Class360 implements Runnable
 				}
 			}
 			try {
-				if ((anInt4475 ^ 0xffffffff) > (anInt4469 + i ^ 0xffffffff)) {
+				if (anInt4469 + i > anInt4475) {
 					int i_0_ = -anInt4469 + anInt4475;
 					anOutputStream4478.write(aByteArray4477, anInt4469, i_0_);
 					anOutputStream4478.write(aByteArray4477, 0, i + -i_0_);
@@ -90,7 +90,7 @@ public class Class360 implements Runnable
 	
 	final void method4042(byte[] bs, int i, int i_1_, int i_2_) throws IOException {
 		anInt4471++;
-		if ((i ^ 0xffffffff) > -1 || i_2_ < 0 || bs.length < i_2_ + i) {
+		if (i < 0 || i_2_ < 0 || bs.length < i_2_ + i) {
 			throw new IOException();
 		}
 		if (i_1_ == -19032) {
@@ -104,7 +104,7 @@ public class Class360 implements Runnable
 				} else {
 					i_3_ = -1 + anInt4469 + -anInt4470 + anInt4475;
 				}
-				if ((i ^ 0xffffffff) < (i_3_ ^ 0xffffffff)) {
+				if (i_3_ < i) {
 					throw new IOException("");
 				}
 				if (i + anInt4470 > anInt4475) {

@@ -66,7 +66,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19
 		aBoolean10737 = bool;
 		aBoolean10746 = bool_6_;
 		aByte10743 = (byte) i_5_;
-		aBoolean10740 = graphicstoolkit.r() && objectdefinition.aBoolean2972 && !aBoolean10737 && (Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730(false) ^ 0xffffffff) != -1;
+		aBoolean10740 = graphicstoolkit.r() && objectdefinition.aBoolean2972 && !aBoolean10737 && Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730(false) != 0;
 		int i_7_ = 2048;
 		if (aBoolean10746) {
 			i_7_ |= 0x10000;
@@ -99,17 +99,15 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19
 	}
 	
 	final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_8_, byte b, int i_9_, Animable animable) {
-		if (!(animable instanceof Animable_Sub2_Sub2)) {
-			if (animable instanceof Mobile_Sub2) {
-				Mobile_Sub2 mobile_sub2 = (Mobile_Sub2) animable;
-				if (aDrawableModel10756 != null && mobile_sub2.aDrawableModel10724 != null) {
-					aDrawableModel10756.method619(mobile_sub2.aDrawableModel10724, i_9_, i, i_8_, bool);
-				}
-			}
-		} else {
+		if (animable instanceof Animable_Sub2_Sub2) {
 			Animable_Sub2_Sub2 animable_sub2_sub2_10_ = (Animable_Sub2_Sub2) animable;
 			if (aDrawableModel10756 != null && animable_sub2_sub2_10_.aDrawableModel10756 != null) {
 				aDrawableModel10756.method619(animable_sub2_sub2_10_.aDrawableModel10756, i_9_, i, i_8_, bool);
+			}
+		} else if (animable instanceof Mobile_Sub2) {
+			Mobile_Sub2 mobile_sub2 = (Mobile_Sub2) animable;
+			if (aDrawableModel10756 != null && mobile_sub2.aDrawableModel10724 != null) {
+				aDrawableModel10756.method619(mobile_sub2.aDrawableModel10724, i_9_, i, i_8_, bool);
 			}
 		}
 		if (b < 101) {
@@ -161,7 +159,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19
 			aBoolean10740 = false;
 		}
 		anInt10759++;
-		if (aDrawableModel10756 != null && (graphicstoolkit.b(aDrawableModel10756.ua(), i) ^ 0xffffffff) == -1) {
+		if (aDrawableModel10756 != null && graphicstoolkit.b(aDrawableModel10756.ua(), i) == 0) {
 			return aDrawableModel10756;
 		}
 		Class243 class243 = method842(graphicstoolkit, false, i, false);
@@ -226,16 +224,16 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19
 		}
 		Plane plane;
 		Plane plane_13_;
-		if (!aBoolean10737) {
+		if (aBoolean10737) {
+			plane = Class368.aPlaneArray4548[aByte5931];
+			plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[0];
+		} else {
 			plane = Node_Sub38_Sub37.aPlaneArray10466[aByte5931];
 			if (aByte5931 < 3) {
 				plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[aByte5931 + 1];
 			} else {
 				plane_13_ = null;
 			}
-		} else {
-			plane = Class368.aPlaneArray4548[aByte5931];
-			plane_13_ = Node_Sub38_Sub37.aPlaneArray10466[0];
 		}
 		return objectdefinition.method3046(aByte10743, anInt5940, anInt5934, plane, bool_12_, (byte) 0, anInt5937, aByte10751, graphicstoolkit, null, i, plane_13_);
 	}
@@ -279,22 +277,22 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19
 		}
 		long l = 0L;
 		int i_15_ = string.length();
-		for (int i_16_ = 0; (i_15_ ^ 0xffffffff) < (i_16_ ^ 0xffffffff); i_16_++) {
+		for (int i_16_ = 0; i_16_ < i_15_; i_16_++) {
 			l *= 37L;
 			int i_17_ = string.charAt(i_16_);
-			if ((i_17_ ^ 0xffffffff) <= -66 && i_17_ <= 90) {
+			if (i_17_ >= 65 && i_17_ <= 90) {
 				l += (long) (-65 + (i_17_ + 1));
 			} else if (i_17_ >= 97 && i_17_ <= 122) {
 				l += (long) (-97 + i_17_ + 1);
-			} else if ((i_17_ ^ 0xffffffff) <= -49 && (i_17_ ^ 0xffffffff) >= -58) {
+			} else if (i_17_ >= 48 && i_17_ <= 57) {
 				l += (long) (-48 + (27 - -i_17_));
 			}
-			if ((l ^ 0xffffffffffffffffL) <= -177917621779460414L) {
+			if (l >= 177917621779460413L) {
 				break;
 			}
 		}
-		for (/**/; (l % 37L ^ 0xffffffffffffffffL) == -1L; l /= 37L) {
-			if ((l ^ 0xffffffffffffffffL) == -1L) {
+		for (/**/; l % 37L == 0; l /= 37L) {
+			if (l == 0) {
 				break;
 			}
 		}

@@ -92,8 +92,8 @@ public class ItemDefinitions {
 
 	static final void method1673(int i, int i_0_) {
 		anInt1855++;
-		if ((Class151.anInt1843 ^ 0xffffffff) == -8
-				&& ((Node_Sub38_Sub8.anInt10163 ^ 0xffffffff) == -1 && Class4.anInt124 == 0)) {
+		if (Class151.anInt1843 == 7
+				&& (Node_Sub38_Sub8.anInt10163 == 0 && Class4.anInt124 == 0)) {
 			Node_Sub38_Sub23.anInt10347 = i;
 			if (i_0_ != 2) {
 				method1690((byte) 19);
@@ -107,11 +107,11 @@ public class ItemDefinitions {
 			return null;
 		}
 		anInt1902++;
-		if (anIntArray1918 != null && (i ^ 0xffffffff) < -2) {
+		if (anIntArray1918 != null && i > 1) {
 			int i_2_ = -1;
-			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > -11; i_3_++) {
-				if ((anIntArray1872[i_3_] ^ 0xffffffff) >= (i ^ 0xffffffff)
-						&& (anIntArray1872[i_3_] ^ 0xffffffff) != -1) {
+			for (int i_3_ = 0; i_3_ < 10; i_3_++) {
+				if (i >= anIntArray1872[i_3_]
+						&& anIntArray1872[i_3_] != 0) {
 					i_2_ = anIntArray1918[i_3_];
 				}
 			}
@@ -175,7 +175,7 @@ public class ItemDefinitions {
 		maleWornModelId1 = itemdefinition_5_.maleWornModelId1;
 		anInt1931 = itemdefinition_5_.anInt1931;
 		if (itemdefinition_5_.aStringArray1901 != null) {
-			for (int i = 0; (i ^ 0xffffffff) > -5; i++)
+			for (int i = 0; i < 4; i++)
 				aStringArray1901[i] = itemdefinition_5_.aStringArray1901[i];
 		}
 		aStringArray1901[4] = Class22.aClass22_369.method297(aClass86_1868.anInt1161);
@@ -222,18 +222,18 @@ public class ItemDefinitions {
 		anInt1912++;
 		int[] is_13_ = new int[1152];
 		int i_14_ = 0;
-		for (int i_15_ = 0; (i_15_ ^ 0xffffffff) > -33; i_15_++) {
-			for (int i_16_ = 0; (i_16_ ^ 0xffffffff) > -37; i_16_++) {
+		for (int i_15_ = 0; i_15_ < 32; i_15_++) {
+			for (int i_16_ = 0; i_16_ < 36; i_16_++) {
 				int i_17_ = is[i_14_];
 				if (i_17_ == 0) {
-					if ((i_16_ ^ 0xffffffff) >= -1
-							|| (is[-1 + i_14_] ^ 0xffffffff) == -1) {
-						if (i_15_ > 0 && (is[i_14_ - 36] ^ 0xffffffff) != -1) {
+					if (i_16_ <= 0
+							|| is[-1 + i_14_] == 0) {
+						if (i_15_ > 0 && is[i_14_ - 36] != 0) {
 							i_17_ = i_12_;
-						} else if ((i_16_ ^ 0xffffffff) > -36
-								&& (is[i_14_ - -1] ^ 0xffffffff) != -1) {
+						} else if (i_16_ < 35
+								&& is[i_14_ - -1] != 0) {
 							i_17_ = i_12_;
-						} else if ((i_15_ ^ 0xffffffff) > -32
+						} else if (i_15_ < 31
 								&& is[36 + i_14_] != 0) {
 							i_17_ = i_12_;
 						}
@@ -261,30 +261,31 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			int opcode) {
 		if (opcode == 1) {
 			anInt1898 = buffer.readBigSmart();
-		} else if (opcode != 2) {
-			if (opcode == 4) {
-				anInt1874 = buffer.readUnsignedShort();
-			} else if (opcode == 5) {
-				anInt1884 = buffer.readUnsignedShort();
-			} else if ((opcode ^ 0xffffffff) == -7) {
-				anInt1869 = buffer.readUnsignedShort();
-			} else if (opcode == 7) {
-				anInt1905 = buffer.readUnsignedShort();
-				if ((anInt1905 ^ 0xffffffff) < -32768) {
-					anInt1905 -= 65536;
-				}
-			} else if (opcode == 8) {
-				anInt1875 = buffer.readUnsignedShort();
-				if (anInt1875 > 32767) {
-					anInt1875 -= 65536;
-				}
-			} else if ((opcode ^ 0xffffffff) == -12) {
-				anInt1892 = 1;
-			} else if (opcode == 12) {
-				anInt1924 = buffer.readInt();
-			}		else if (opcode == 13)
-				buffer.readUnsignedByte();
-			else if (opcode == 14)
+		} else if (opcode == 2) {
+			aString1860 = buffer.readString();
+		} else if (opcode == 4) {
+			anInt1874 = buffer.readUnsignedShort();
+		} else if (opcode == 5) {
+			anInt1884 = buffer.readUnsignedShort();
+		} else if (opcode == 6) {
+			anInt1869 = buffer.readUnsignedShort();
+		} else if (opcode == 7) {
+			anInt1905 = buffer.readUnsignedShort();
+			if (anInt1905 > 32767) {
+				anInt1905 -= 65536;
+			}
+		} else if (opcode == 8) {
+			anInt1875 = buffer.readUnsignedShort();
+			if (anInt1875 > 32767) {
+				anInt1875 -= 65536;
+			}
+		} else if (opcode == 11) {
+			anInt1892 = 1;
+		} else if (opcode == 12) {
+			anInt1924 = buffer.readInt();
+		} else if (opcode == 13)
+			buffer.readUnsignedByte();
+		else if (opcode == 14)
 			buffer.readUnsignedByte();
 		else if (opcode == 9)
 			buffer.readUnsignedByte();
@@ -306,256 +307,201 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			buffer.readUnsignedByte();
 		else if (opcode == 117)
 			buffer.readUnsignedByte();
-		else if ((opcode ^ 0xffffffff) != -17) {
-				if (opcode != 18) {
-					if ((opcode ^ 0xffffffff) != -24) {
-						if (opcode != 24) {
-							if (opcode != 25) {
-								if ((opcode ^ 0xffffffff) == -27) {
-									femaleWornModelId2 = buffer.readBigSmart();
-								} else if ((opcode ^ 0xffffffff) > -31
-										|| (opcode ^ 0xffffffff) <= -36) {
-									if ((opcode ^ 0xffffffff) <= -36
-											&& (opcode ^ 0xffffffff) > -41) {
-										aStringArray1901[-35 + opcode] = buffer
-												.readString();
-									} else if (opcode != 40) {
-										if (opcode == 41) {
-											int i_18_ = buffer
-													.readUnsignedByte();
-											originalTextureColors = new short[i_18_];
-											modifiedTextureColors = new short[i_18_];
-											for (int i_19_ = 0; (i_18_ ^ 0xffffffff) < (i_19_ ^ 0xffffffff); i_19_++) {
-												originalTextureColors[i_19_] = (short) buffer
-														.readUnsignedShort();
-												modifiedTextureColors[i_19_] = (short) buffer
-														.readUnsignedShort();
-											}
-										} else if (opcode != 42) {
-											if ((opcode ^ 0xffffffff) != -66) {
-												if ((opcode ^ 0xffffffff) == -79) {
-													maleWornModelId3 = buffer
-															.readBigSmart();
-												} else if (opcode != 79) {
-													if (opcode != 90) {
-														if (opcode == 91) {
-															anInt1863 = buffer
-																	.readBigSmart();
-														} else if (opcode != 92) {
-															if ((opcode ^ 0xffffffff) == -94) {
-																anInt1897 = buffer
-																		.readBigSmart();
-															} else if ((opcode ^ 0xffffffff) != -96) {
-																if ((opcode ^ 0xffffffff) != -97) {
-																	if (opcode != 97) {
-																		if ((opcode ^ 0xffffffff) == -99) {
-																			anInt1857 = buffer
-																					.readUnsignedShort();
-																		} else if (opcode < 100
-																				|| opcode >= 110) {
-																			if ((opcode ^ 0xffffffff) != -111) {
-																				if (opcode != 111) {
-																					if ((opcode ^ 0xffffffff) == -113) {
-																						anInt1896 = buffer
-																								.readUnsignedShort();
-																					} else if ((opcode ^ 0xffffffff) == -114) {
-																						anInt1876 = buffer
-																								.readByte();
-																					} else if ((opcode ^ 0xffffffff) != -115) {
-																						if (opcode != 115) {
-																							if (opcode != 121) {
-																								if (opcode == 122) {
-																									anInt1852 = buffer
-																											.readUnsignedShort();
-																								} else if ((opcode ^ 0xffffffff) != -126) {
-																									if (opcode != 126) {
-																										if ((opcode ^ 0xffffffff) == -128) {
-																											anInt1908 = buffer
-																													.readUnsignedByte();
-																											anInt1889 = buffer
-																													.readUnsignedShort();
-																										} else if (opcode != 128) {
-																											if (opcode != 129) {
-																												if (opcode == 130) {
-																													anInt1864 = buffer
-																															.readUnsignedByte();
-																													anInt1862 = buffer
-																															.readUnsignedShort();
-																												} else if (opcode == 132) {
-																													int i_20_ = buffer
-																															.readUnsignedByte();
-																													anIntArray1926 = new int[i_20_];
-																													for (int i_21_ = 0; i_20_ > i_21_; i_21_++)
-																														anIntArray1926[i_21_] = buffer
-																																.readUnsignedShort();
-																												} else if (opcode == 134) {
-																													anInt1919 = buffer
-																															.readUnsignedByte();
-																												} else if ((opcode ^ 0xffffffff) == -140) {
-																													anInt1891 = buffer
-																															.readUnsignedShort();
-																												} else if ((opcode ^ 0xffffffff) == -141) {
-																													anInt1928 = buffer
-																															.readUnsignedShort();
-																												} else if ((opcode ^ 0xffffffff) == -250) {
-																													int i_22_ = buffer
-																															.readUnsignedByte();
-																													if (aHashTable1873 == null) {
-																														int i_23_ = Class320_Sub19
-																																.method3753(
-																																		i_22_,
-																																		-729073628);
-																														aHashTable1873 = new HashTable(
-																																i_23_);
-																													}
-																													for (int i_24_ = 0; i_22_ > i_24_; i_24_++) {
-																														boolean bool_25_ = buffer
-																																.readUnsignedByte() == 1;
-																														int i_26_ = buffer
-																																.read24BitInteger();
-																														Node node;
-																														if (!bool_25_) {
-																															node = new Node_Sub32(
-																																	buffer.readInt());
-																														} else {
-																															node = new Node_Sub18(
-																																	buffer.readString());
-																														}
-																														aHashTable1873
-																																.method1515(
-																																		(long) i_26_,
-																																		node,
-																																		-127);
-																													}
-																												}
-																											} else {
-																												anInt1900 = buffer
-																														.readUnsignedByte();
-																												anInt1859 = buffer
-																														.readUnsignedShort();
-																											}
-																										} else {
-																											anInt1849 = buffer
-																													.readUnsignedByte();
-																											anInt1851 = buffer
-																													.readUnsignedShort();
-																										}
-																									} else {
-																										anInt1890 = buffer
-																												.readByte() << 2;
-																										anInt1893 = buffer
-																												.readByte() << 2;
-																										anInt1916 = buffer
-																												.readByte() << 2;
-																									}
-																								} else {
-																									anInt1931 = buffer
-																											.readByte() << 2;
-																									anInt1930 = buffer
-																											.readByte() << 2;
-																									anInt1895 = buffer
-																											.readByte() << 2;
-																								}
-																							} else {
-																								anInt1927 = buffer
-																										.readUnsignedShort();
-																							}
-																						} else {
-																							anInt1899 = buffer
-																									.readUnsignedByte();
-																						}
-																					} else {
-																						anInt1886 = buffer
-																								.readByte() * 5;
-																					}
-																				} else {
-																					anInt1911 = buffer
-																							.readUnsignedShort();
-																				}
-																			} else {
-																				anInt1904 = buffer
-																						.readUnsignedShort();
-																			}
-																		} else {
-																			if (anIntArray1918 == null) {
-																				anIntArray1872 = new int[10];
-																				anIntArray1918 = new int[10];
-																			}
-																			anIntArray1918[opcode - 100] = buffer
-																					.readUnsignedShort();
-																			anIntArray1872[-100
-																					+ opcode] = buffer
-																					.readUnsignedShort();
-																		}
-																	} else {
-																		anInt1887 = buffer
-																				.readUnsignedShort();
-																	}
-																} else {
-																	anInt1877 = buffer
-																			.readUnsignedByte();
-																}
-															} else {
-																anInt1866 = buffer
-																		.readUnsignedShort();
-															}
-														} else {
-															anInt1888 = buffer
-																	.readBigSmart();
-														}
-													} else {
-														anInt1913 = buffer
-																.readBigSmart();
-													}
-												} else {
-													femaleWornModelId3 = buffer
-															.readBigSmart();
-												}
-											} else {
-												aBoolean1933 = true;
-											}
-										} else {
-											int i_27_ = buffer
-													.readUnsignedByte();
-											aByteArray1882 = new byte[i_27_];
-											for (int i_28_ = 0; i_27_ > i_28_; i_28_++)
-												aByteArray1882[i_28_] = buffer
-														.readByte();
-										}
-									} else {
-										int i_29_ = buffer.readUnsignedByte();
-										aShortArray1856 = new short[i_29_];
-										aShortArray1865 = new short[i_29_];
-										for (int i_30_ = 0; i_29_ > i_30_; i_30_++) {
-											aShortArray1856[i_30_] = (short) buffer
-													.readUnsignedShort();
-											aShortArray1865[i_30_] = (short) buffer
-													.readUnsignedShort();
-										}
-									}
-								} else {
-									aStringArray1920[opcode + -30] = buffer
-											.readString();
-								}
-							} else {
-								femaleWornModelId1 = buffer.readBigSmart();
-							}
-						} else {
-							maleWornModelId2 = buffer.readBigSmart();
-						}
-					} else {
-						maleWornModelId1 = buffer.readBigSmart();
-					}
-				} else {
-					anInt1879 = buffer.readUnsignedShort();
-				}
-			} else {
-				aBoolean1871 = true;
+		else if (opcode == 16) {
+			aBoolean1871 = true;
+		} else if (opcode == 18) {
+			anInt1879 = buffer.readUnsignedShort();
+		} else if (opcode == 23) {
+			maleWornModelId1 = buffer.readBigSmart();
+		} else if (opcode == 24) {
+			maleWornModelId2 = buffer.readBigSmart();
+		} else if (opcode == 25) {
+			femaleWornModelId1 = buffer.readBigSmart();
+		} else if (opcode == 26) {
+			femaleWornModelId2 = buffer.readBigSmart();
+		} else if (opcode >= 30 && opcode < 35) {
+			aStringArray1920[opcode + -30] = buffer
+					.readString();
+		} else if (opcode >= 35
+				&& opcode < 40) {
+			aStringArray1901[-35 + opcode] = buffer
+					.readString();
+		} else if (opcode == 40) {
+			int i_29_ = buffer.readUnsignedByte();
+			aShortArray1856 = new short[i_29_];
+			aShortArray1865 = new short[i_29_];
+			for (int i_30_ = 0; i_29_ > i_30_; i_30_++) {
+				aShortArray1856[i_30_] = (short) buffer
+						.readUnsignedShort();
+				aShortArray1865[i_30_] = (short) buffer
+						.readUnsignedShort();
 			}
-		} else {
-			aString1860 = buffer.readString();
+		} else if (opcode == 41) {
+			int i_18_ = buffer
+					.readUnsignedByte();
+			originalTextureColors = new short[i_18_];
+			modifiedTextureColors = new short[i_18_];
+			for (int i_19_ = 0; i_19_ < i_18_; i_19_++) {
+				originalTextureColors[i_19_] = (short) buffer
+						.readUnsignedShort();
+				modifiedTextureColors[i_19_] = (short) buffer
+						.readUnsignedShort();
+			}
+		} else if (opcode == 42) {
+			int i_27_ = buffer
+					.readUnsignedByte();
+			aByteArray1882 = new byte[i_27_];
+			for (int i_28_ = 0; i_27_ > i_28_; i_28_++)
+				aByteArray1882[i_28_] = buffer
+						.readByte();
+		} else if (opcode == 65) {
+			aBoolean1933 = true;
+		} else if (opcode == 78) {
+			maleWornModelId3 = buffer
+					.readBigSmart();
+		} else if (opcode == 79) {
+			femaleWornModelId3 = buffer
+					.readBigSmart();
+		} else if (opcode == 90) {
+			anInt1913 = buffer
+					.readBigSmart();
+		} else if (opcode == 91) {
+			anInt1863 = buffer
+					.readBigSmart();
+		} else if (opcode == 92) {
+			anInt1888 = buffer
+					.readBigSmart();
+		} else if (opcode == 93) {
+			anInt1897 = buffer
+					.readBigSmart();
+		} else if (opcode == 95) {
+			anInt1866 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 96) {
+			anInt1877 = buffer
+					.readUnsignedByte();
+		} else if (opcode == 97) {
+			anInt1887 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 98) {
+			anInt1857 = buffer
+					.readUnsignedShort();
+		} else if (opcode >= 100 && opcode < 110) {
+			if (anIntArray1918 == null) {
+				anIntArray1872 = new int[10];
+				anIntArray1918 = new int[10];
+			}
+			anIntArray1918[opcode - 100] = buffer
+					.readUnsignedShort();
+			anIntArray1872[-100
+					+ opcode] = buffer
+					.readUnsignedShort();
+		} else if (opcode == 110) {
+			anInt1904 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 111) {
+			anInt1911 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 112) {
+			anInt1896 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 113) {
+			anInt1876 = buffer
+					.readByte();
+		} else if (opcode == 114) {
+			anInt1886 = buffer
+					.readByte() * 5;
+		} else if (opcode == 115) {
+			anInt1899 = buffer
+					.readUnsignedByte();
+		} else if (opcode == 121) {
+			anInt1927 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 122) {
+			anInt1852 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 125) {
+			anInt1931 = buffer
+					.readByte() << 2;
+			anInt1930 = buffer
+					.readByte() << 2;
+			anInt1895 = buffer
+					.readByte() << 2;
+		} else if (opcode == 126) {
+			anInt1890 = buffer
+					.readByte() << 2;
+			anInt1893 = buffer
+					.readByte() << 2;
+			anInt1916 = buffer
+					.readByte() << 2;
+		} else if (opcode == 127) {
+			anInt1908 = buffer
+					.readUnsignedByte();
+			anInt1889 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 128) {
+			anInt1849 = buffer
+					.readUnsignedByte();
+			anInt1851 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 129) {
+			anInt1900 = buffer
+					.readUnsignedByte();
+			anInt1859 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 130) {
+			anInt1864 = buffer
+					.readUnsignedByte();
+			anInt1862 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 132) {
+			int i_20_ = buffer
+					.readUnsignedByte();
+			anIntArray1926 = new int[i_20_];
+			for (int i_21_ = 0; i_20_ > i_21_; i_21_++)
+				anIntArray1926[i_21_] = buffer
+						.readUnsignedShort();
+		} else if (opcode == 134) {
+			anInt1919 = buffer
+					.readUnsignedByte();
+		} else if (opcode == 139) {
+			anInt1891 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 140) {
+			anInt1928 = buffer
+					.readUnsignedShort();
+		} else if (opcode == 249) {
+			int i_22_ = buffer
+					.readUnsignedByte();
+			if (aHashTable1873 == null) {
+				int i_23_ = Class320_Sub19
+						.method3753(
+								i_22_,
+								-729073628);
+				aHashTable1873 = new HashTable(
+						i_23_);
+			}
+			for (int i_24_ = 0; i_22_ > i_24_; i_24_++) {
+				boolean bool_25_ = buffer
+						.readUnsignedByte() == 1;
+				int i_26_ = buffer
+						.read24BitInteger();
+				Node node;
+				if (bool_25_) {
+					node = new Node_Sub18(
+							buffer.readString());
+				} else {
+					node = new Node_Sub32(
+							buffer.readInt());
+				}
+				aHashTable1873
+						.method1515(
+								(long) i_26_,
+								node,
+								-127);
+			}
 		}
-		anInt1922++;
+    anInt1922++;
 		if (bool != false) {
 			anInt1879 = 4;
 		}
@@ -570,13 +516,13 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		if (model == null) {
 			return null;
 		}
-		if ((model.anInt2614 ^ 0xffffffff) > -14) {
+		if (model.anInt2614 < 13) {
 			model.method2081(2, 0);
 		}
 		if (aShortArray1856 != null) {
-			for (int i_35_ = 0; (i_35_ ^ 0xffffffff) > (aShortArray1856.length ^ 0xffffffff); i_35_++) {
+			for (int i_35_ = 0; aShortArray1856.length > i_35_; i_35_++) {
 				if (aByteArray1882 == null
-						|| (i_35_ ^ 0xffffffff) <= (aByteArray1882.length ^ 0xffffffff)) {
+						|| aByteArray1882.length <= i_35_) {
 					model.method2089(aShortArray1856[i_35_],
 							aShortArray1865[i_35_], -126);
 				} else {
@@ -588,14 +534,14 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			}
 		}
 		if (originalTextureColors != null) {
-			for (int i_36_ = 0; (originalTextureColors.length ^ 0xffffffff) < (i_36_ ^ 0xffffffff); i_36_++)
+			for (int i_36_ = 0; i_36_ < originalTextureColors.length; i_36_++)
 				model.method2087(originalTextureColors[i_36_],
 						modifiedTextureColors[i_36_], -78);
 		}
 		if (playerdefinition != null) {
 			for (int i_37_ = 0; i_37_ < 10; i_37_++) {
-				for (int i_38_ = 0; (Class45.aShortArrayArray5265[i_37_].length ^ 0xffffffff) < (i_38_ ^ 0xffffffff); i_38_++) {
-					if ((playerdefinition.anIntArray3430[i_37_] ^ 0xffffffff) > (Class117_Sub2.aShortArrayArrayArray5151[i_37_][i_38_].length ^ 0xffffffff)) {
+				for (int i_38_ = 0; i_38_ < Class45.aShortArrayArray5265[i_37_].length; i_38_++) {
+					if (Class117_Sub2.aShortArrayArrayArray5151[i_37_][i_38_].length > playerdefinition.anIntArray3430[i_37_]) {
 						model.method2089(
 								Class45.aShortArrayArray5265[i_37_][i_38_],
 								Class117_Sub2.aShortArrayArrayArray5151[i_37_][i_38_][playerdefinition.anIntArray3430[i_37_]],
@@ -606,8 +552,8 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		}
 		int i_39_ = 2048;
 		boolean bool_40_ = false;
-		if ((anInt1904 ^ 0xffffffff) != -129
-				|| (anInt1911 ^ 0xffffffff) != -129 || anInt1896 != 128) {
+		if (anInt1904 != 128
+				|| anInt1911 != 128 || anInt1896 != 128) {
 			bool_40_ = true;
 			i_39_ |= 0x7;
 		}
@@ -627,14 +573,14 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			if (glsprite == null) {
 				return null;
 			}
-		} else if ((anInt1852 ^ 0xffffffff) != 0) {
+		} else if (anInt1852 != -1) {
 			glsprite = aClass86_1868.method1002(i_34_, graphicstoolkit_33_,
 					graphicstoolkit, playerdefinition, true, i_32_, i_31_,
 					false, 0, class52, anInt1927, -16139);
 			if (glsprite == null) {
 				return null;
 			}
-		} else if ((anInt1928 ^ 0xffffffff) != 0) {
+		} else if (anInt1928 != -1) {
 			glsprite = aClass86_1868.method1002(i_34_, graphicstoolkit_33_,
 					graphicstoolkit, playerdefinition, true, i_32_, i_31_,
 					false, 0, class52, anInt1891, -16139);
@@ -645,12 +591,12 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		int i_42_;
 		if (bool) {
 			i_42_ = (int) (1.5 * (double) anInt1874) << 2;
-		} else if (i_34_ != 2) {
-			i_42_ = anInt1874 << 2;
-		} else {
+		} else if (i_34_ == 2) {
 			i_42_ = (int) ((double) anInt1874 * 1.04) << 2;
+		} else {
+			i_42_ = anInt1874 << 2;
 		}
-		graphicstoolkit_33_.DA(16, 16, 512, 512);
+            graphicstoolkit_33_.DA(16, 16, 512, 512);
 		Class336 class336 = graphicstoolkit_33_.y();
 		class336.method3862();
 		graphicstoolkit_33_.a(class336);
@@ -674,36 +620,36 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		drawablemodel.method611(class336_43_, null, 1);
 		graphicstoolkit_33_.f(i_44_, i_45_);
 		int[] is = graphicstoolkit_33_.na(0, 0, 36, 32);
-		if ((i_34_ ^ 0xffffffff) <= -2) {
+		if (i_34_ >= 1) {
 			is = method1679(-1, -16777214, is);
 			if (i_34_ >= 2) {
 				is = method1679(-1, -1, is);
 			}
 		}
-		if ((i_32_ ^ 0xffffffff) != -1) {
+		if (i_32_ != 0) {
 			method1688(i_32_, is, -7048);
 		}
 		graphicstoolkit_33_.method1235(36, 36, 32, is, 0, 7468)
 				.setPosition(0, 0);
-		if ((anInt1857 ^ 0xffffffff) == 0) {
+		if (anInt1857 == -1) {
 			if (anInt1852 != -1) {
 				glsprite.setPosition(0, 0);
-			} else if ((anInt1928 ^ 0xffffffff) != 0) {
+			} else if (anInt1928 != -1) {
 				glsprite.setPosition(0, 0);
 			}
 		} else {
 			glsprite.setPosition(0, 0);
 		}
-		if ((i ^ 0xffffffff) == -2
-				|| (i ^ 0xffffffff) == -3
-				&& ((anInt1892 ^ 0xffffffff) == -2 || (i_31_ ^ 0xffffffff) != -2)
+		if (i == 1
+				|| i == 2
+				&& (anInt1892 == 1 || i_31_ != 1)
 				&& i_31_ != -1) {
 			class52.method538(0, 9, method1687(22050, i_31_), -16777215, 1,
 					-256);
 		}
 		is = graphicstoolkit_33_.na(0, 0, 36, 32);
-		for (int i_46_ = 0; (is.length ^ 0xffffffff) < (i_46_ ^ 0xffffffff); i_46_++) {
-			if ((0xffffff & is[i_46_] ^ 0xffffffff) == -1) {
+		for (int i_46_ = 0; i_46_ < is.length; i_46_++) {
+			if ((0xffffff & is[i_46_]) == 0) {
 				is[i_46_] = 0;
 			} else {
 				is[i_46_] = Node_Sub16.method2590(is[i_46_], -16777216);
@@ -718,16 +664,16 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		int i_48_;
 		int i_49_;
 		if (!bool) {
-			if (class38 != null && class38.maleWornModelIds != null) {
-				i_47_ = class38.maleWornModelIds[0];
-				i_48_ = class38.maleWornModelIds[1];
-				i_49_ = class38.maleWornModelIds[2];
-			} else {
+			if (class38 == null || class38.maleWornModelIds == null) {
 				i_49_ = maleWornModelId3;
 				i_47_ = maleWornModelId1;
 				i_48_ = maleWornModelId2;
+			} else {
+				i_47_ = class38.maleWornModelIds[0];
+				i_48_ = class38.maleWornModelIds[1];
+				i_49_ = class38.maleWornModelIds[2];
 			}
-		} else if (class38 == null || class38.femaleWornModelIds == null) {
+        } else if (class38 == null || class38.femaleWornModelIds == null) {
 			i_47_ = femaleWornModelId1;
 			i_48_ = femaleWornModelId2;
 			i_49_ = femaleWornModelId3;
@@ -747,13 +693,16 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		if (model.anInt2614 < 13) {
 			model.method2081(2, 0);
 		}
-		if ((i_48_ ^ 0xffffffff) != 0) {
+		if (i_48_ != -1) {
 			Model model_50_ = Renderer.method3448(i_48_, 7, 0,
 					aClass86_1868.aClass302_1168);
-			if ((model_50_.anInt2614 ^ 0xffffffff) > -14) {
+			if (model_50_.anInt2614 < 13) {
 				model_50_.method2081(2, 0);
 			}
-			if ((i_49_ ^ 0xffffffff) != 0) {
+			if (i_49_ == -1) {
+				Model[] models = { model, model_50_ };
+				model = new Model(models, 2);
+			} else {
 				Model model_51_ = Renderer.method3448(i_49_, 7, 0,
 						aClass86_1868.aClass302_1168);
 				if (model_51_.anInt2614 < 13) {
@@ -761,38 +710,35 @@ private final void method1681(BufferedStream buffer, boolean bool,
 				}
 				Model[] models = { model, model_50_, model_51_ };
 				model = new Model(models, 3);
-			} else {
-				Model[] models = { model, model_50_ };
-				model = new Model(models, 2);
 			}
-		}
+        }
 		if (!bool
-				&& (anInt1931 != 0 || (anInt1930 ^ 0xffffffff) != -1 || (anInt1895 ^ 0xffffffff) != -1)) {
+				&& (anInt1931 != 0 || anInt1930 != 0 || anInt1895 != 0)) {
 			model.method2082(anInt1931, anInt1930, -102, anInt1895);
 		}
 		if (bool
-				&& ((anInt1890 ^ 0xffffffff) != -1
-						|| (anInt1893 ^ 0xffffffff) != -1 || anInt1916 != 0)) {
+				&& (anInt1890 != 0
+						|| anInt1893 != 0 || anInt1916 != 0)) {
 			model.method2082(anInt1890, anInt1893, 96, anInt1916);
 		}
 		if (aShortArray1856 != null) {
 			short[] ses;
-			if (class38 != null && class38.modifiedModelColors != null) {
-				ses = class38.modifiedModelColors;
-			} else {
+			if (class38 == null || class38.modifiedModelColors == null) {
 				ses = aShortArray1865;
+			} else {
+				ses = class38.modifiedModelColors;
 			}
-			for (int i_52_ = 0; i_52_ < aShortArray1856.length; i_52_++)
+            for (int i_52_ = 0; i_52_ < aShortArray1856.length; i_52_++)
 				model.method2089(aShortArray1856[i_52_], ses[i_52_], 76);
 		}
 		if (originalTextureColors != null) {
 			short[] ses;
-			if (class38 != null && class38.modifiedTextureColors != null) {
-				ses = class38.modifiedTextureColors;
-			} else {
+			if (class38 == null || class38.modifiedTextureColors == null) {
 				ses = modifiedTextureColors;
+			} else {
+				ses = class38.modifiedTextureColors;
 			}
-			for (int i_53_ = 0; i_53_ < originalTextureColors.length; i_53_++)
+            for (int i_53_ = 0; i_53_ < originalTextureColors.length; i_53_++)
 				model.method2087(originalTextureColors[i_53_], ses[i_53_], -84);
 		}
 		if (i >= -34) {
@@ -822,21 +768,21 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		int i_55_;
 		int i_56_;
 		if (!bool) {
-			if (class38 != null && class38.anIntArray564 != null) {
-				i_55_ = class38.anIntArray564[0];
-				i_56_ = class38.anIntArray564[1];
-			} else {
+			if (class38 == null || class38.anIntArray564 == null) {
 				i_56_ = anInt1888;
 				i_55_ = anInt1913;
+			} else {
+				i_55_ = class38.anIntArray564[0];
+				i_56_ = class38.anIntArray564[1];
 			}
-		} else if (class38 == null || class38.anIntArray568 == null) {
+        } else if (class38 == null || class38.anIntArray568 == null) {
 			i_55_ = anInt1863;
 			i_56_ = anInt1897;
 		} else {
 			i_56_ = class38.anIntArray568[1];
 			i_55_ = class38.anIntArray568[0];
 		}
-		if ((i_55_ ^ 0xffffffff) == 0) {
+		if (i_55_ == -1) {
 			return null;
 		}
 		if (i > -33) {
@@ -850,7 +796,7 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		if (i_56_ != -1) {
 			Model model_57_ = Renderer.method3448(i_56_, 7, 0,
 					aClass86_1868.aClass302_1168);
-			if ((model_57_.anInt2614 ^ 0xffffffff) > -14) {
+			if (model_57_.anInt2614 < 13) {
 				model_57_.method2081(2, 0);
 			}
 			Model[] models = { model, model_57_ };
@@ -863,7 +809,7 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			} else {
 				ses = class38.modifiedModelColors;
 			}
-			for (int i_58_ = 0; (i_58_ ^ 0xffffffff) > (aShortArray1856.length ^ 0xffffffff); i_58_++)
+			for (int i_58_ = 0; aShortArray1856.length > i_58_; i_58_++)
 				model.method2089(aShortArray1856[i_58_], ses[i_58_], 115);
 		}
 		if (originalTextureColors != null) {
@@ -873,7 +819,7 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			} else {
 				ses = class38.modifiedTextureColors;
 			}
-			for (int i_59_ = 0; (originalTextureColors.length ^ 0xffffffff) < (i_59_ ^ 0xffffffff); i_59_++)
+			for (int i_59_ = 0; i_59_ < originalTextureColors.length; i_59_++)
 				model.method2087(originalTextureColors[i_59_], ses[i_59_], 101);
 		}
 		return model;
@@ -930,7 +876,7 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		if (i_65_ < 100000) {
 			return "<col=ffff00>" + i_65_ + "</col>";
 		}
-		if ((i_65_ ^ 0xffffffff) > -10000001) {
+		if (i_65_ < 10000000) {
 			return "<col=ffffff>"
 					+ i_65_
 					/ 1000
@@ -946,10 +892,10 @@ private final void method1681(BufferedStream buffer, boolean bool,
 		if (i_66_ != -7048) {
 			anInt1895 = -54;
 		}
-		for (int i_67_ = 31; (i_67_ ^ 0xffffffff) < -1; i_67_--) {
+		for (int i_67_ = 31; i_67_ > 0; i_67_--) {
 			int i_68_ = 36 * i_67_;
 			for (int i_69_ = 35; i_69_ > 0; i_69_--) {
-				if ((is[i_69_ - -i_68_] ^ 0xffffffff) == -1
+				if (is[i_69_ - -i_68_] == 0
 						&& is[i_68_ + (i_69_ + -1) - 36] != 0) {
 					is[i_69_ + i_68_] = i;
 				}
@@ -962,11 +908,11 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			PlayerDefinition playerdefinition, int i_70_,
 			GraphicsToolkit graphicstoolkit, int i_71_) {
 		anInt1906++;
-		if (anIntArray1918 != null && (i_70_ ^ 0xffffffff) < -2) {
+		if (anIntArray1918 != null && i_70_ > 1) {
 			int i_72_ = -1;
 			for (int i_73_ = 0; i_73_ < 10; i_73_++) {
-				if ((i_70_ ^ 0xffffffff) <= (anIntArray1872[i_73_] ^ 0xffffffff)
-						&& (anIntArray1872[i_73_] ^ 0xffffffff) != -1) {
+				if (anIntArray1872[i_73_] <= i_70_
+						&& anIntArray1872[i_73_] != 0) {
 					i_72_ = anIntArray1918[i_73_];
 				}
 			}
@@ -990,7 +936,7 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			return null;
 		}
 		if (drawablemodel == null
-				|| (graphicstoolkit.b(drawablemodel.ua(), i_74_) ^ 0xffffffff) != -1) {
+				|| graphicstoolkit.b(drawablemodel.ua(), i_74_) != 0) {
 			if (drawablemodel != null) {
 				i_74_ = graphicstoolkit.c(i_74_, drawablemodel.ua());
 			}
@@ -1001,10 +947,10 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			if (aShortArray1856 != null || playerdefinition != null) {
 				i_75_ |= 0x4000;
 			}
-			if ((anInt1904 ^ 0xffffffff) != -129) {
+			if (anInt1904 != 128) {
 				i_75_ |= 0x1;
 			}
-			if ((anInt1904 ^ 0xffffffff) != -129) {
+			if (anInt1904 != 128) {
 				i_75_ |= 0x2;
 			}
 			if (anInt1904 != 128) {
@@ -1015,19 +961,19 @@ private final void method1681(BufferedStream buffer, boolean bool,
 			if (model == null) {
 				return null;
 			}
-			if ((model.anInt2614 ^ 0xffffffff) > -14) {
+			if (model.anInt2614 < 13) {
 				model.method2081(2, 0);
 			}
 			drawablemodel = graphicstoolkit.a(model, i_75_,
 					aClass86_1868.anInt1181, 64 + anInt1876, 850 - -anInt1886);
-			if ((anInt1904 ^ 0xffffffff) != -129 || anInt1911 != 128
-					|| (anInt1896 ^ 0xffffffff) != -129) {
+			if (anInt1904 != 128 || anInt1911 != 128
+					|| anInt1896 != 128) {
 				drawablemodel.O(anInt1904, anInt1911, anInt1896);
 			}
 			if (aShortArray1856 != null) {
 				for (int i_76_ = 0; aShortArray1856.length > i_76_; i_76_++) {
 					if (aByteArray1882 == null
-							|| (aByteArray1882.length ^ 0xffffffff) >= (i_76_ ^ 0xffffffff)) {
+							|| i_76_ >= aByteArray1882.length) {
 						drawablemodel.ia(aShortArray1856[i_76_],
 								aShortArray1865[i_76_]);
 					} else {
@@ -1038,14 +984,14 @@ private final void method1681(BufferedStream buffer, boolean bool,
 				}
 			}
 			if (originalTextureColors != null) {
-				for (int i_77_ = 0; (originalTextureColors.length ^ 0xffffffff) < (i_77_ ^ 0xffffffff); i_77_++)
+				for (int i_77_ = 0; i_77_ < originalTextureColors.length; i_77_++)
 					drawablemodel.aa(originalTextureColors[i_77_],
 							modifiedTextureColors[i_77_]);
 			}
 			if (playerdefinition != null) {
-				for (int i_78_ = 0; (i_78_ ^ 0xffffffff) > -11; i_78_++) {
-					for (int i_79_ = 0; (Class45.aShortArrayArray5265[i_78_].length ^ 0xffffffff) < (i_79_ ^ 0xffffffff); i_79_++) {
-						if ((Class117_Sub2.aShortArrayArrayArray5151[i_78_][i_79_].length ^ 0xffffffff) < (playerdefinition.anIntArray3430[i_78_] ^ 0xffffffff)) {
+				for (int i_78_ = 0; i_78_ < 10; i_78_++) {
+					for (int i_79_ = 0; i_79_ < Class45.aShortArrayArray5265[i_78_].length; i_79_++) {
+						if (playerdefinition.anIntArray3430[i_78_] < Class117_Sub2.aShortArrayArrayArray5151[i_78_][i_79_].length) {
 							drawablemodel
 									.ia(Class45.aShortArrayArray5265[i_78_][i_79_],
 											Class117_Sub2.aShortArrayArrayArray5151[i_78_][i_79_][playerdefinition.anIntArray3430[i_78_]]);
@@ -1068,8 +1014,8 @@ private final void method1681(BufferedStream buffer, boolean bool,
 	}
 
 	static final void method1690(byte b) {
-		Class274.method3325((Class213.aNode_Sub27_2512.aClass320_Sub17_7311
-				.method3747(false) ^ 0xffffffff) == -2, 122, 22050, 2);
+		Class274.method3325(Class213.aNode_Sub27_2512.aClass320_Sub17_7311
+                .method3747(false) == 1, 122, 22050, 2);
 		if (b <= -102) {
 			anInt1903++;
 			AnimableAnimator.aClass42_5498 = Class262_Sub22.method3207(
@@ -1108,21 +1054,21 @@ private final void method1681(BufferedStream buffer, boolean bool,
 				i_81_ = class38.anIntArray568[0];
 				i_80_ = class38.anIntArray568[1];
 			}
-		} else if (class38 != null && class38.anIntArray564 != null) {
-			i_80_ = class38.anIntArray564[1];
-			i_81_ = class38.anIntArray564[0];
-		} else {
+		} else if (class38 == null || class38.anIntArray564 == null) {
 			i_80_ = anInt1888;
 			i_81_ = anInt1913;
+		} else {
+			i_80_ = class38.anIntArray564[1];
+			i_81_ = class38.anIntArray564[0];
 		}
-		if (i_81_ == -1) {
+        if (i_81_ == -1) {
 			return true;
 		}
 		boolean bool_82_ = true;
 		if (!aClass86_1868.aClass302_1168.method3515(i, i_81_, 0)) {
 			bool_82_ = false;
 		}
-		if ((i_80_ ^ 0xffffffff) != 0
+		if (i_80_ != -1
 				&& !aClass86_1868.aClass302_1168.method3515(0, i_80_, 0)) {
 			bool_82_ = false;
 		}

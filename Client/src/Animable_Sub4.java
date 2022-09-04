@@ -57,7 +57,7 @@ abstract class Animable_Sub4 extends Animable
 		OpenGL.glBindProgramARB(i, i_3_);
 		OpenGL.glProgramStringARB(i, 34933, string);
 		OpenGL.glGetIntegerv(34379, Class96.anIntArray1271, 0);
-		if ((Class96.anIntArray1271[0] ^ 0xffffffff) != 0) {
+		if (Class96.anIntArray1271[0] != -1) {
 			OpenGL.glBindProgramARB(i, 0);
 			return null;
 		}

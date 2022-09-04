@@ -27,13 +27,13 @@ abstract class Mobile extends Animable
 		}
 	while_182_:
 		for (int i_1_ = aShort9119; aShort9130 >= i_1_; i_1_++) {
-			for (int i_2_ = aShort9120; (i_2_ ^ 0xffffffff) >= (aShort9124 ^ 0xffffffff); i_2_++) {
+			for (int i_2_ = aShort9120; aShort9124 >= i_2_; i_2_++) {
 				long l = Class91.aLongArrayArrayArray1228[plane][i_1_][i_2_];
 				long l_3_ = 0L;
 			while_181_:
 				while (l_3_ <= 48L) {
 					int i_4_ = (int) (0xffffL & l >>> (int) l_3_);
-					if ((i_4_ ^ 0xffffffff) >= -1) {
+					if (i_4_ <= 0) {
 						break;
 					}
 					Class326 class326 = Class143.aClass326Array1771[-1 + i_4_];
@@ -51,16 +51,16 @@ abstract class Mobile extends Animable
 				}
 			}
 		}
-		for (int i_6_ = i_0_; (i_6_ ^ 0xffffffff) > -5; i_6_++)
+		for (int i_6_ = i_0_; i_6_ < 4; i_6_++)
 			node_sub29s[i_6_] = null;
-		if ((aByte9127 ^ 0xffffffff) != -1) {
+		if (aByte9127 != 0) {
 			int i_7_ = -Class216.anInt2551 + aShort9119;
 			int i_8_ = -EntityNode_Sub7.anInt6013 + aShort9120;
 			int i_9_;
 			short s;
 			int i_10_;
 			short s_11_;
-			if ((aByte9127 ^ 0xffffffff) != -2) {
+			if (aByte9127 != 1) {
 				if (i_8_ > -i_7_) {
 					i_10_ = aShort9119 - 1;
 					s = aShort9119;
@@ -72,7 +72,7 @@ abstract class Mobile extends Animable
 					i_9_ = aShort9120 - -1;
 					s_11_ = aShort9120;
 				}
-			} else if ((i_7_ ^ 0xffffffff) <= (i_8_ ^ 0xffffffff)) {
+			} else if (i_8_ <= i_7_) {
 				i_9_ = aShort9120 - -1;
 				s = aShort9119;
 				i_10_ = aShort9119 - 1;
@@ -85,7 +85,7 @@ abstract class Mobile extends Animable
 			}
 			int i_12_ = 0;
 		while_184_:
-			for (/**/; (i_0_ ^ 0xffffffff) < (i_12_ ^ 0xffffffff); i_12_++) {
+			for (/**/; i_12_ < i_0_; i_12_++) {
 				long l = Class91.aLongArrayArrayArray1228[plane][s][i_9_];
 				while (l != 0L) {
 					Class326 class326 = Class143.aClass326Array1771[(int) (-1L + (0xffffL & l))];
@@ -95,7 +95,7 @@ abstract class Mobile extends Animable
 					}
 				}
 				l = Class91.aLongArrayArrayArray1228[plane][i_10_][s_11_];
-				while ((l ^ 0xffffffffffffffffL) != -1L) {
+				while (l != 0) {
 					Class326 class326 = Class143.aClass326Array1771[(int) ((l & 0xffffL) + -1L)];
 					l >>>= 16;
 					if (class326.aNode_Sub29_4100 == node_sub29s[i_12_]) {
@@ -123,12 +123,12 @@ abstract class Mobile extends Animable
 		if (i != 0) {
 			method844(null, (byte) -66);
 		}
-		for (int i_14_ = aShort9119; (aShort9130 ^ 0xffffffff) <= (i_14_ ^ 0xffffffff); i_14_++) {
+		for (int i_14_ = aShort9119; i_14_ <= aShort9130; i_14_++) {
 			for (int i_15_ = aShort9120; i_15_ <= aShort9124; i_15_++) {
 				int i_16_ = Node_Sub9_Sub1.anInt9656 + i_14_ + -Class216.anInt2551;
-				if ((i_16_ ^ 0xffffffff) <= -1 && (i_16_ ^ 0xffffffff) > (Class139.aBooleanArrayArray1730.length ^ 0xffffffff)) {
+				if (i_16_ >= 0 && Class139.aBooleanArrayArray1730.length > i_16_) {
 					int i_17_ = Node_Sub9_Sub1.anInt9656 + -EntityNode_Sub7.anInt6013 + i_15_;
-					if ((i_17_ ^ 0xffffffff) <= -1 && (i_17_ ^ 0xffffffff) > (Class139.aBooleanArrayArray1730.length ^ 0xffffffff) && Class139.aBooleanArrayArray1730[i_16_][i_17_]) {
+					if (i_17_ >= 0 && Class139.aBooleanArrayArray1730.length > i_17_ && Class139.aBooleanArrayArray1730[i_16_][i_17_]) {
 						return true;
 					}
 				}
@@ -142,8 +142,8 @@ abstract class Mobile extends Animable
 			method844(null, (byte) 118);
 		}
 		anInt9117++;
-		if (cachenode_sub13.aString9565 != null && (cachenode_sub13.aString9565.length() ^ 0xffffffff) != -1) {
-			if (cachenode_sub13.aString9558 != null && (cachenode_sub13.aString9558.length() ^ 0xffffffff) < -1) {
+		if (cachenode_sub13.aString9565 != null && cachenode_sub13.aString9565.length() != 0) {
+			if (cachenode_sub13.aString9558 != null && cachenode_sub13.aString9558.length() > 0) {
 				return cachenode_sub13.aString9560 + Class22.aClass22_395.method297(Class35.language) + cachenode_sub13.aString9558 + Class22.aClass22_395.method297(Class35.language) + cachenode_sub13.aString9565;
 			}
 			return cachenode_sub13.aString9560 + Class22.aClass22_395.method297(Class35.language) + cachenode_sub13.aString9565;

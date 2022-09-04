@@ -48,7 +48,7 @@ public class Class253
 		anInt3202++;
 		@SuppressWarnings("unused")
 		int i_8_ = 76 % ((b - 24) / 34);
-        return !((i ^ 0xffffffff) != -4 && i != 7 && i != 9 && (i ^ 0xffffffff) != -12);
+        return !(i != 3 && i != 7 && i != 9 && i != 11);
     }
 	
 	public static void method3106(byte b) {

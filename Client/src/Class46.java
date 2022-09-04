@@ -36,7 +36,7 @@ public class Class46
 					break;
 				}
 			}
-			if ((node_sub2.cliped ^ 0xffffffff) == -1) {
+			if (node_sub2.cliped == 0) {
 				Class243.method3060((byte) 103, bool, true, node_sub2);
 			}
 		}
@@ -63,7 +63,7 @@ public class Class46
 		if (i != 255) {
 			method467(21, false);
 		}
-        return (Class315.anInt4035 ^ 0xffffffff) < -1;
+        return Class315.anInt4035 > 0;
     }
 	
 	static final boolean method470(int i, int i_0_, int i_1_) {
@@ -75,20 +75,18 @@ public class Class46
 	static final void method471(int i) {
 		anInt677++;
 		int i_3_ = Class213.aNode_Sub27_2512.aClass320_Sub4_7304.method3694(false);
-		if ((i_3_ ^ 0xffffffff) != i) {
-			if (i_3_ == 1) {
-				Class98.method1082((byte) 0, 2395);
-				Class295.method3469(512, (byte) -128);
-				if (CacheNode_Sub11.aByteArrayArrayArray9550 != null) {
-					IncommingPacket.method1954((byte) -51);
-				}
-			} else {
-				Class98.method1082((byte) (Class110.anInt1412 + -4 & 0xff), 2395);
-				Class295.method3469(2, (byte) -124);
-			}
-		} else {
+		if ((i_3_ ^ 0xffffffff) == i) {
 			Node_Sub38_Sub15.aByteArrayArrayArray10261 = null;
 			Class295.method3469(0, (byte) -124);
+		} else if (i_3_ == 1) {
+			Class98.method1082((byte) 0, 2395);
+			Class295.method3469(512, (byte) -128);
+			if (CacheNode_Sub11.aByteArrayArrayArray9550 != null) {
+				IncommingPacket.method1954((byte) -51);
+			}
+		} else {
+			Class98.method1082((byte) (Class110.anInt1412 + -4 & 0xff), 2395);
+			Class295.method3469(2, (byte) -124);
 		}
 		Node_Sub36_Sub3.anInt10061 = CacheNode_Sub20_Sub1.myPlayerPlane;
 	}

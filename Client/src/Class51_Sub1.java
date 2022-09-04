@@ -63,7 +63,7 @@ public class Class51_Sub1 extends Class51 implements Interface15_Impl2
 			method523(true);
 		}
 		int i_5_ = 0;
-		for (int i_6_ = 0; (i ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++)
+		for (int i_6_ = 0; i_6_ < i; i_6_++)
 			i_5_ = string.charAt(i_6_) + ((i_5_ << 5) + -i_5_);
 		return i_5_;
 	}

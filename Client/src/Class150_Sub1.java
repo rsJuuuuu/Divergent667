@@ -40,7 +40,7 @@ public class Class150_Sub1 extends Class150
 			i_4_ += Class67.method733(-82);
 			i_5_ += Class226.method2112(256);
 		}
-		if ((Node_Sub38_Sub28.anInt10403 ^ 0xffffffff) == -2) {
+		if (Node_Sub38_Sub28.anInt10403 == 1) {
 			GLSprite glsprite = Node_Sub15_Sub7.aGLSpriteArray9828[Node_Sub37.anInt7431 / 100];
 			glsprite.setPosition(i_4_ - 8, -8 + i_5_);
 			Class362.method4053(-8 + i_5_, i_5_ - 8 - -glsprite.method1186(), i_4_ - 8, (byte) -79, glsprite.method1197() + -8 + i_4_);

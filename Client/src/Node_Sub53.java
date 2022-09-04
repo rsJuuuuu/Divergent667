@@ -38,13 +38,13 @@ public class Node_Sub53 extends Node
 			Class105.aClass61_5202.method601(drawablemodel, 25566, l);
 		}
 		drawablemodel = drawablemodel.method633((byte) 6, i_5_, true);
-		if ((i_4_ ^ 0xffffffff) != -1) {
+		if (i_4_ != 0) {
 			drawablemodel.a(i_4_);
 		}
 		if (i != 0) {
 			drawablemodel.FA(i);
 		}
-		if ((i_0_ ^ 0xffffffff) != -1) {
+		if (i_0_ != 0) {
 			drawablemodel.VA(i_0_);
 		}
 		if (i_3_ != 0) {

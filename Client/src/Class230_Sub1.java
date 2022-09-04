@@ -16,12 +16,12 @@ public class Class230_Sub1 extends Class230
 		anInt9009++;
 		int i_2_ = 1;
 		for (/**/; i > 1; i >>= 1) {
-			if ((0x1 & i ^ 0xffffffff) != -1) {
+			if ((0x1 & i) != 0) {
 				i_2_ *= i_0_;
 			}
 			i_0_ *= i_0_;
 		}
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			return i_2_ * i_0_;
 		}
 		return i_2_;
@@ -41,12 +41,12 @@ public class Class230_Sub1 extends Class230
 	static final void method2133(int i, GraphicsToolkit graphicstoolkit) {
 		anInt9007++;
 		if (i > 82) {
-			if (!Node_Sub38_Sub5.aBoolean10130) {
-				Class89.method1021(graphicstoolkit, (byte) -71);
-			} else {
+			if (Node_Sub38_Sub5.aBoolean10130) {
 				Class82.method797(graphicstoolkit, 32712);
+			} else {
+				Class89.method1021(graphicstoolkit, (byte) -71);
 			}
-		}
+        }
 	}
 	
 	public final void method27(boolean bool, int i) {

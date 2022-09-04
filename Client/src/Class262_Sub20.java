@@ -41,18 +41,16 @@ public class Class262_Sub20 extends Class262
 			anInt7861 = -28;
 		}
 		anInt7859++;
-		if ((i_3_ ^ 0xffffffff) != -1004) {
-			if (i_3_ == 1001) {
-				ClientScriptsExecutor.method3565(Class230_Sub1.aClass212_9010, i_2_, i);
-			} else if ((i_3_ ^ 0xffffffff) == -1007) {
-				ClientScriptsExecutor.method3565(GLDrawableModel.aClass212_5708, i_2_, i);
-			} else if (i_3_ == 1009) {
-				ClientScriptsExecutor.method3565(Node_Sub40.aClass212_7512, i_2_, i);
-			} else if ((i_3_ ^ 0xffffffff) == -1005) {
-				ClientScriptsExecutor.method3565(Class21.aClass212_356, i_2_, i);
-			}
-		} else {
+		if (i_3_ == 1003) {
 			ClientScriptsExecutor.method3565(ProducingGraphicsBuffer.aClass212_9894, i_2_, i);
+		} else if (i_3_ == 1001) {
+			ClientScriptsExecutor.method3565(Class230_Sub1.aClass212_9010, i_2_, i);
+		} else if (i_3_ == 1006) {
+			ClientScriptsExecutor.method3565(GLDrawableModel.aClass212_5708, i_2_, i);
+		} else if (i_3_ == 1009) {
+			ClientScriptsExecutor.method3565(Node_Sub40.aClass212_7512, i_2_, i);
+		} else if (i_3_ == 1004) {
+			ClientScriptsExecutor.method3565(Class21.aClass212_356, i_2_, i);
 		}
-	}
+    }
 }

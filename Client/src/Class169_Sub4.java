@@ -87,9 +87,9 @@ public class Class169_Sub4 extends Class169
 		int i_5_ = 99 / ((73 - b) / 34);
 		int i_6_ = Node_Sub38_Sub7.method2809(CacheNode_Sub20_Sub1.myPlayerPlane, -29754, Class25.anInt444, Mobile_Sub4.anInt10987);
 		int i_7_ = 0;
-		if ((i_3_ ^ 0xffffffff) < -4 && (i_4_ ^ 0xffffffff) < -4 && -4 + Node_Sub54.GAME_SCENE_WDITH > i_3_ && i_4_ < Class377_Sub1.GAME_SCENE_HEIGHT - 4) {
+		if (i_3_ > 3 && i_4_ > 3 && -4 + Node_Sub54.GAME_SCENE_WDITH > i_3_ && i_4_ < Class377_Sub1.GAME_SCENE_HEIGHT - 4) {
 			for (int i_8_ = i_3_ - 4; 4 + i_3_ >= i_8_; i_8_++) {
-				for (int i_9_ = i_4_ - 4; (i_9_ ^ 0xffffffff) >= (i_4_ - -4 ^ 0xffffffff); i_9_++) {
+				for (int i_9_ = i_4_ - 4; i_4_ - -4 >= i_9_; i_9_++) {
 					int i_10_ = CacheNode_Sub20_Sub1.myPlayerPlane;
 					if (i_10_ < 3 && Class238.method3021(i_9_, i_8_, -83)) {
 						i_10_++;
@@ -114,9 +114,9 @@ public class Class169_Sub4 extends Class169
 		if (i_13_ < 262144) {
 			i_13_ = 262144;
 		}
-		if ((Class200_Sub1.anInt5145 ^ 0xffffffff) > (i_13_ ^ 0xffffffff)) {
+		if (i_13_ > Class200_Sub1.anInt5145) {
 			Class200_Sub1.anInt5145 += (i_13_ - Class200_Sub1.anInt5145) / 24;
-		} else if ((Class200_Sub1.anInt5145 ^ 0xffffffff) < (i_13_ ^ 0xffffffff)) {
+		} else if (i_13_ < Class200_Sub1.anInt5145) {
 			Class200_Sub1.anInt5145 += (i_13_ + -Class200_Sub1.anInt5145) / 80;
 		}
 	}

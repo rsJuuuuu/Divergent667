@@ -60,7 +60,7 @@ public class Class320_Sub1 extends Class320
 			method3678(false);
 		}
 		anInt8208++;
-		if ((anInt4064 ^ 0xffffffff) > -2 || anInt4064 > 3) {
+		if (anInt4064 < 1 || anInt4064 > 3) {
 			anInt4064 = method3677(0);
 		}
 	}
@@ -96,7 +96,7 @@ public class Class320_Sub1 extends Class320
 	
 	static final void method3681(int i) {
 		anInt8209++;
-		if ((Node_Sub38_Sub8.anInt10163 ^ 0xffffffff) == -11 && i == 11439) {
+		if (Node_Sub38_Sub8.anInt10163 == 10 && i == 11439) {
 			Node_Sub38_Sub8.anInt10163 = 11;
 		}
 	}

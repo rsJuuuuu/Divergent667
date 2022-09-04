@@ -72,7 +72,7 @@ public class Class270_Sub2_Sub1 extends Class270_Sub2
 		}
 		aGLToolkit10544.method1444(-2, class169_sub1_12_);
 		aGLToolkit10544.method1410(15, class382);
-		for (int i = 0; (i ^ 0xffffffff) > -7; i++) {
+		for (int i = 0; i < 6; i++) {
 			int i_13_ = 34069 - -i;
 			class382.method4182(0, aClass169_Sub1_10542, i_13_, 60);
 			class382.method4183(0, (byte) -99);
@@ -91,25 +91,7 @@ public class Class270_Sub2_Sub1 extends Class270_Sub2
 					while_12_:
 						do {
 							do {
-								if (i_14_ != 34069) {
-									if (i_14_ != 34070) {
-										if ((i_14_ ^ 0xffffffff) != -34072) {
-											if (i_14_ != 34072) {
-												if (i_14_ != 34073) {
-													if (i_14_ != 34074) {
-														break while_15_;
-													}
-												} else {
-													break while_13_;
-												}
-												break while_14_;
-											}
-										} else {
-											break;
-										}
-										break while_12_;
-									}
-								} else {
+								if (i_14_ == 34069) {
 									OpenGL.glTexCoord3i(65535, 65534, 65534);
 									OpenGL.glMultiTexCoord3i(33985, 65535, 65534, 65534);
 									OpenGL.glVertex2f(0.0F, 0.0F);
@@ -123,8 +105,20 @@ public class Class270_Sub2_Sub1 extends Class270_Sub2
 									OpenGL.glMultiTexCoord3i(33985, 65535, -65534, 65534);
 									OpenGL.glVertex2f(0.0F, 1.0F);
 									break while_15_;
+								} else if (i_14_ != 34070) {
+									if (i_14_ == 34071) {
+										break;
+									} else if (i_14_ != 34072) {
+										if (i_14_ == 34073) {
+											break while_13_;
+										} else if (i_14_ != 34074) {
+											break while_15_;
+										}
+										break while_14_;
+									}
+									break while_12_;
 								}
-								OpenGL.glTexCoord3i(-65535, 65534, -65534);
+                                OpenGL.glTexCoord3i(-65535, 65534, -65534);
 								OpenGL.glMultiTexCoord3i(33985, -65535, 65534, -65534);
 								OpenGL.glVertex2f(0.0F, 0.0F);
 								OpenGL.glTexCoord3i(-65535, 65534, 65534);

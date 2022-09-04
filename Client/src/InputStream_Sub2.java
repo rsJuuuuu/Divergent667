@@ -19,9 +19,7 @@ public class InputStream_Sub2 extends InputStream
 	}
 	
 	static final void method128(int i) {
-		if (!Class93.aGraphicsToolkit1241.l()) {
-			Class22.method300(Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false), true, false);
-		} else {
+		if (Class93.aGraphicsToolkit1241.l()) {
 			Class93.aGraphicsToolkit1241.b(Node_Sub38_Sub20.aCanvas10309);
 			Class150_Sub1.method1657(true);
 			if (Class71.aBoolean967) {
@@ -31,8 +29,10 @@ public class InputStream_Sub2 extends InputStream
 				Class93.aGraphicsToolkit1241.b(Node_Sub38_Sub20.aCanvas10309, dimension.width, dimension.height);
 			}
 			Class93.aGraphicsToolkit1241.a(Node_Sub38_Sub20.aCanvas10309);
+		} else {
+			Class22.method300(Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false), true, false);
 		}
-		if (i != 30000) {
+        if (i != 30000) {
 			aClass281_83 = null;
 		}
 		anInt79++;

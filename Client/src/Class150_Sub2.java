@@ -15,10 +15,10 @@ public class Class150_Sub2 extends Class150
 	
 	static final boolean method1659(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		anInt8961++;
-		if ((i_1_ ^ 0xffffffff) <= (i - -i_3_ ^ 0xffffffff) || i >= i_1_ - -i_0_) {
+		if (i - -i_3_ <= i_1_ || i >= i_1_ - -i_0_) {
 			return false;
 		}
-		if ((i_6_ + i_4_ ^ 0xffffffff) >= (i_5_ ^ 0xffffffff) || (i_6_ ^ 0xffffffff) <= (i_7_ + i_5_ ^ 0xffffffff)) {
+		if (i_5_ >= i_6_ + i_4_ || i_7_ + i_5_ <= i_6_) {
 			return false;
 		}
         return i_2_ < -12;

@@ -53,10 +53,10 @@ public class Class287
 				for (EntityNode_Sub3 entitynode_sub3_7_ = entitynode_sub3.anEntityNode_Sub3_5961; entitynode_sub3 != entitynode_sub3_7_; entitynode_sub3_7_ = entitynode_sub3_7_.anEntityNode_Sub3_5961) {
 					EntityNode_Sub3_Sub2 entitynode_sub3_sub2 = (EntityNode_Sub3_Sub2) entitynode_sub3_7_;
 					int i_8_ = (int) (f_1_ * (float) (entitynode_sub3_sub2.anInt9171 >> 12) + f * (float) (entitynode_sub3_sub2.anInt9174 >> 12) + f_2_ * (float) (entitynode_sub3_sub2.anInt9173 >> 12) + f_3_);
-					if ((i_8_ ^ 0xffffffff) > (i_5_ ^ 0xffffffff)) {
+					if (i_5_ > i_8_) {
 						i_5_ = i_8_;
 					}
-					if ((i_6_ ^ 0xffffffff) > (i_8_ ^ 0xffffffff)) {
+					if (i_8_ > i_6_) {
 						i_6_ = i_8_;
 					}
 					anIntArray3623[i_4_++] = i_8_;
@@ -156,15 +156,15 @@ public class Class287
 	
 	static final void method3401(Node_Sub19 node_sub19, boolean bool, int i) {
 		if (!node_sub19.aBoolean7156) {
-			if (node_sub19.aBoolean7159 && node_sub19.anInt7171 >= 1 && node_sub19.anInt7161 >= 1 && -2 + Node_Sub54.GAME_SCENE_WDITH >= node_sub19.anInt7171 && (-2 + Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) <= (node_sub19.anInt7161 ^ 0xffffffff) && ((node_sub19.anInt7169 ^ 0xffffffff) > -1 || Class128.method1547(node_sub19.anInt7169, 1, node_sub19.anInt7168))) {
+			if (node_sub19.aBoolean7159 && node_sub19.anInt7171 >= 1 && node_sub19.anInt7161 >= 1 && -2 + Node_Sub54.GAME_SCENE_WDITH >= node_sub19.anInt7171 && node_sub19.anInt7161 <= -2 + Class377_Sub1.GAME_SCENE_HEIGHT && (node_sub19.anInt7169 < 0 || Class128.method1547(node_sub19.anInt7169, 1, node_sub19.anInt7168))) {
 				if (bool) {
 					Node_Sub38_Sub37.method2907(node_sub19.anInt7166, -14347, node_sub19.aClass121_7160, node_sub19.anInt7161, node_sub19.anInt7165, node_sub19.anInt7171);
 				} else {
 					Class128.method1544(node_sub19.anInt7161, node_sub19.anInt7168, node_sub19.anInt7167, node_sub19.anInt7171, -1, node_sub19.anInt7166, node_sub19.anInt7165, -128, node_sub19.anInt7169);
 				}
 				node_sub19.aBoolean7159 = false;
-				if (bool || node_sub19.anInt7154 != node_sub19.anInt7169 || (node_sub19.anInt7154 ^ 0xffffffff) != 0) {
-					if (!bool && (node_sub19.anInt7154 ^ 0xffffffff) == (node_sub19.anInt7169 ^ 0xffffffff) && node_sub19.anInt7167 == node_sub19.anInt7170 && (node_sub19.anInt7168 ^ 0xffffffff) == (node_sub19.anInt7164 ^ 0xffffffff)) {
+				if (bool || node_sub19.anInt7154 != node_sub19.anInt7169 || node_sub19.anInt7154 != -1) {
+					if (!bool && node_sub19.anInt7169 == node_sub19.anInt7154 && node_sub19.anInt7167 == node_sub19.anInt7170 && node_sub19.anInt7164 == node_sub19.anInt7168) {
 						node_sub19.method2160((byte) 44);
 					}
 				} else {
@@ -221,9 +221,9 @@ public class Class287
 			if (buffer != null) {
 				Stream stream = abstracttoolkit.method1324(!bool, buffer);
 				if (Stream.b()) {
-					for (int i_33_ = i - 1; (i_33_ ^ 0xffffffff) <= -1; i_33_--) {
-						int i_34_ = (anIntArray3619[i_33_] ^ 0xffffffff) < -65 ? 64 : anIntArray3619[i_33_];
-						if ((i_34_ ^ 0xffffffff) < -1) {
+					for (int i_33_ = i - 1; i_33_ >= 0; i_33_--) {
+						int i_34_ = anIntArray3619[i_33_] > 64 ? 64 : anIntArray3619[i_33_];
+						if (i_34_ > 0) {
 							for (int i_35_ = -1 + i_34_; i_35_ >= 0; i_35_--) {
 								EntityNode_Sub3_Sub2 entitynode_sub3_sub2 = anEntityNode_Sub3_Sub2ArrayArray3608[i_33_][i_35_];
 								int i_36_ = entitynode_sub3_sub2.anInt9176;
@@ -238,12 +238,12 @@ public class Class287
 								stream.a((float) -i_43_ * f_24_ + f_40_);
 								stream.a((float) -i_43_ * f_25_ + f_41_);
 								stream.a(f_42_ + (float) -i_43_ * f_26_);
-								if ((abstracttoolkit.anInt6360 ^ 0xffffffff) != -1) {
-									stream.b(b, b_37_, b_38_, b_39_);
-								} else {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_37_, b_38_, b_39_);
+								} else {
+									stream.b(b, b_37_, b_38_, b_39_);
 								}
-								stream.a(0.0F);
+                                stream.a(0.0F);
 								stream.a(0.0F);
 								stream.a(f_40_ + f_27_ * (float) i_43_);
 								stream.a(f_41_ + f_28_ * (float) i_43_);
@@ -258,28 +258,28 @@ public class Class287
 								stream.a((float) i_43_ * f_24_ + f_40_);
 								stream.a(f_41_ + (float) i_43_ * f_25_);
 								stream.a(f_42_ + (float) i_43_ * f_26_);
-								if ((abstracttoolkit.anInt6360 ^ 0xffffffff) != -1) {
-									stream.b(b, b_37_, b_38_, b_39_);
-								} else {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_37_, b_38_, b_39_);
+								} else {
+									stream.b(b, b_37_, b_38_, b_39_);
 								}
-								stream.a(1.0F);
+                                stream.a(1.0F);
 								stream.a(1.0F);
 								stream.a((float) i_43_ * f_30_ + f_40_);
 								stream.a(f_31_ * (float) i_43_ + f_41_);
 								stream.a(f_42_ + f_32_ * (float) i_43_);
-								if (abstracttoolkit.anInt6360 != 0) {
-									stream.b(b, b_37_, b_38_, b_39_);
-								} else {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_37_, b_38_, b_39_);
+								} else {
+									stream.b(b, b_37_, b_38_, b_39_);
 								}
-								stream.a(0.0F);
+                                stream.a(0.0F);
 								stream.a(1.0F);
 								i_18_++;
 							}
-							if ((anIntArray3619[i_33_] ^ 0xffffffff) < -65) {
+							if (anIntArray3619[i_33_] > 64) {
 								int i_44_ = -1 + anIntArray3619[i_33_] - 64;
-								for (int i_45_ = -1 + anIntArray3616[i_44_]; (i_45_ ^ 0xffffffff) <= -1; i_45_--) {
+								for (int i_45_ = -1 + anIntArray3616[i_44_]; i_45_ >= 0; i_45_--) {
 									EntityNode_Sub3_Sub2 entitynode_sub3_sub2 = anEntityNode_Sub3_Sub2ArrayArray3615[i_44_][i_45_];
 									int i_46_ = entitynode_sub3_sub2.anInt9176;
 									byte b = (byte) (i_46_ >> 16);
@@ -313,22 +313,22 @@ public class Class287
 									stream.a((float) i_53_ * f_24_ + f_50_);
 									stream.a(f_51_ + f_25_ * (float) i_53_);
 									stream.a(f_26_ * (float) i_53_ + f_52_);
-									if ((abstracttoolkit.anInt6360 ^ 0xffffffff) != -1) {
-										stream.b(b, b_47_, b_48_, b_49_);
-									} else {
+									if (abstracttoolkit.anInt6360 == 0) {
 										stream.a(b, b_47_, b_48_, b_49_);
+									} else {
+										stream.b(b, b_47_, b_48_, b_49_);
 									}
-									stream.a(1.0F);
+                                    stream.a(1.0F);
 									stream.a(1.0F);
 									stream.a(f_30_ * (float) i_53_ + f_50_);
 									stream.a(f_51_ + f_31_ * (float) i_53_);
 									stream.a((float) i_53_ * f_32_ + f_52_);
-									if (abstracttoolkit.anInt6360 != 0) {
-										stream.b(b, b_47_, b_48_, b_49_);
-									} else {
+									if (abstracttoolkit.anInt6360 == 0) {
 										stream.a(b, b_47_, b_48_, b_49_);
+									} else {
+										stream.b(b, b_47_, b_48_, b_49_);
 									}
-									stream.a(0.0F);
+                                    stream.a(0.0F);
 									i_18_++;
 									stream.a(1.0F);
 								}
@@ -338,7 +338,7 @@ public class Class287
 				} else {
 					for (int i_54_ = i + -1; i_54_ >= 0; i_54_--) {
 						int i_55_ = anIntArray3619[i_54_] > 64 ? 64 : anIntArray3619[i_54_];
-						if ((i_55_ ^ 0xffffffff) < -1) {
+						if (i_55_ > 0) {
 							for (int i_56_ = i_55_ - 1; i_56_ >= 0; i_56_--) {
 								EntityNode_Sub3_Sub2 entitynode_sub3_sub2 = anEntityNode_Sub3_Sub2ArrayArray3608[i_54_][i_56_];
 								int i_57_ = entitynode_sub3_sub2.anInt9176;
@@ -353,7 +353,7 @@ public class Class287
 								stream.b(f_24_ * (float) -i_64_ + f_61_);
 								stream.b(f_62_ + (float) -i_64_ * f_25_);
 								stream.b(f_63_ + f_26_ * (float) -i_64_);
-								if ((abstracttoolkit.anInt6360 ^ 0xffffffff) == -1) {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_58_, b_59_, b_60_);
 								} else {
 									stream.b(b, b_58_, b_59_, b_60_);
@@ -363,38 +363,38 @@ public class Class287
 								stream.b(f_61_ + f_27_ * (float) i_64_);
 								stream.b(f_28_ * (float) i_64_ + f_62_);
 								stream.b(f_29_ * (float) i_64_ + f_63_);
-								if ((abstracttoolkit.anInt6360 ^ 0xffffffff) != -1) {
-									stream.b(b, b_58_, b_59_, b_60_);
-								} else {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_58_, b_59_, b_60_);
+								} else {
+									stream.b(b, b_58_, b_59_, b_60_);
 								}
-								stream.b(1.0F);
+                                stream.b(1.0F);
 								stream.b(0.0F);
 								stream.b(f_61_ + f_24_ * (float) i_64_);
 								stream.b(f_25_ * (float) i_64_ + f_62_);
 								stream.b(f_63_ + (float) i_64_ * f_26_);
-								if (abstracttoolkit.anInt6360 != 0) {
-									stream.b(b, b_58_, b_59_, b_60_);
-								} else {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_58_, b_59_, b_60_);
+								} else {
+									stream.b(b, b_58_, b_59_, b_60_);
 								}
-								stream.b(1.0F);
+                                stream.b(1.0F);
 								stream.b(1.0F);
 								stream.b(f_61_ + f_30_ * (float) i_64_);
 								stream.b((float) i_64_ * f_31_ + f_62_);
 								stream.b(f_63_ + f_32_ * (float) i_64_);
-								if ((abstracttoolkit.anInt6360 ^ 0xffffffff) != -1) {
-									stream.b(b, b_58_, b_59_, b_60_);
-								} else {
+								if (abstracttoolkit.anInt6360 == 0) {
 									stream.a(b, b_58_, b_59_, b_60_);
+								} else {
+									stream.b(b, b_58_, b_59_, b_60_);
 								}
-								stream.b(0.0F);
+                                stream.b(0.0F);
 								stream.b(1.0F);
 								i_18_++;
 							}
-							if ((anIntArray3619[i_54_] ^ 0xffffffff) < -65) {
+							if (anIntArray3619[i_54_] > 64) {
 								int i_65_ = -65 + anIntArray3619[i_54_];
-								for (int i_66_ = anIntArray3616[i_65_] + -1; (i_66_ ^ 0xffffffff) <= -1; i_66_--) {
+								for (int i_66_ = anIntArray3616[i_65_] + -1; i_66_ >= 0; i_66_--) {
 									EntityNode_Sub3_Sub2 entitynode_sub3_sub2 = anEntityNode_Sub3_Sub2ArrayArray3615[i_65_][i_66_];
 									int i_67_ = entitynode_sub3_sub2.anInt9176;
 									byte b = (byte) (i_67_ >> 16);
@@ -408,12 +408,12 @@ public class Class287
 									stream.b(f_24_ * (float) -i_74_ + f_71_);
 									stream.b(f_72_ + (float) -i_74_ * f_25_);
 									stream.b(f_26_ * (float) -i_74_ + f_73_);
-									if (abstracttoolkit.anInt6360 != 0) {
-										stream.b(b, b_68_, b_69_, b_70_);
-									} else {
+									if (abstracttoolkit.anInt6360 == 0) {
 										stream.a(b, b_68_, b_69_, b_70_);
+									} else {
+										stream.b(b, b_68_, b_69_, b_70_);
 									}
-									stream.b(0.0F);
+                                    stream.b(0.0F);
 									stream.b(0.0F);
 									stream.b((float) i_74_ * f_27_ + f_71_);
 									stream.b(f_72_ + f_28_ * (float) i_74_);
@@ -428,17 +428,17 @@ public class Class287
 									stream.b(f_71_ + (float) i_74_ * f_24_);
 									stream.b((float) i_74_ * f_25_ + f_72_);
 									stream.b((float) i_74_ * f_26_ + f_73_);
-									if ((abstracttoolkit.anInt6360 ^ 0xffffffff) != -1) {
-										stream.b(b, b_68_, b_69_, b_70_);
-									} else {
+									if (abstracttoolkit.anInt6360 == 0) {
 										stream.a(b, b_68_, b_69_, b_70_);
+									} else {
+										stream.b(b, b_68_, b_69_, b_70_);
 									}
-									stream.b(1.0F);
+                                    stream.b(1.0F);
 									stream.b(1.0F);
 									stream.b(f_30_ * (float) i_74_ + f_71_);
 									stream.b(f_31_ * (float) i_74_ + f_72_);
 									stream.b((float) i_74_ * f_32_ + f_73_);
-									if ((abstracttoolkit.anInt6360 ^ 0xffffffff) == -1) {
+									if (abstracttoolkit.anInt6360 == 0) {
 										stream.a(b, b_68_, b_69_, b_70_);
 									} else {
 										stream.b(b, b_68_, b_69_, b_70_);
@@ -503,22 +503,7 @@ public class Class287
 		jaclib.memory.Buffer buffer_77_ = anInterface15_Impl2_3618.method40(112, true);
 		if (buffer_77_ != null) {
 			Stream stream = abstracttoolkit.method1324(true, buffer_77_);
-			if (!Stream.b()) {
-				for (int i = 0; (i ^ 0xffffffff) > -8192; i++) {
-					stream.b(0.0F);
-					stream.b(-1.0F);
-					stream.b(0.0F);
-					stream.b(0.0F);
-					stream.b(-1.0F);
-					stream.b(0.0F);
-					stream.b(0.0F);
-					stream.b(-1.0F);
-					stream.b(0.0F);
-					stream.b(0.0F);
-					stream.b(-1.0F);
-					stream.b(0.0F);
-				}
-			} else {
+			if (Stream.b()) {
 				for (int i = 0; i < 8191; i++) {
 					stream.a(0.0F);
 					stream.a(-1.0F);
@@ -533,8 +518,23 @@ public class Class287
 					stream.a(-1.0F);
 					stream.a(0.0F);
 				}
+			} else {
+				for (int i = 0; i < 8191; i++) {
+					stream.b(0.0F);
+					stream.b(-1.0F);
+					stream.b(0.0F);
+					stream.b(0.0F);
+					stream.b(-1.0F);
+					stream.b(0.0F);
+					stream.b(0.0F);
+					stream.b(-1.0F);
+					stream.b(0.0F);
+					stream.b(0.0F);
+					stream.b(-1.0F);
+					stream.b(0.0F);
+				}
 			}
-			stream.c();
+            stream.c();
 			anInterface15_Impl2_3618.method39(127);
 		}
 	}

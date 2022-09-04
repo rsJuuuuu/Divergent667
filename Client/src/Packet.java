@@ -42,12 +42,12 @@ public class Packet extends BufferedStream
 			i_2_ += (CacheNode_Sub17.BIT_FLAGS[i_1_] & buffer[i_0_++]) << -i_1_ + numBits;
 			numBits -= i_1_;
 		}
-		if (numBits != i_1_) {
-			i_2_ += buffer[i_0_] >> i_1_ + -numBits & CacheNode_Sub17.BIT_FLAGS[numBits];
-		} else {
+		if (numBits == i_1_) {
 			i_2_ += buffer[i_0_] & CacheNode_Sub17.BIT_FLAGS[i_1_];
+		} else {
+			i_2_ += buffer[i_0_] >> i_1_ + -numBits & CacheNode_Sub17.BIT_FLAGS[numBits];
 		}
-		return i_2_;
+        return i_2_;
 	}
 	
 	Packet(int i) {
@@ -60,7 +60,7 @@ public class Packet extends BufferedStream
 		}
 		anInt9390++;
 		int i = 0xff & buffer[offset] ;//- anIsaacCipher9399.method1670((byte) -21);
-        return (i ^ 0xffffffff) <= -129;
+        return i >= 128;
     }
 	
 	static final void method2258(boolean bool, int i) {
@@ -86,7 +86,7 @@ public class Packet extends BufferedStream
 	
 	final void method2260(byte[] bs, int i, int i_4_, boolean bool) {
 		anInt9391++;
-		for (int i_5_ = 0; (i_5_ ^ 0xffffffff) > (i ^ 0xffffffff); i_5_++)
+		for (int i_5_ = 0; i > i_5_; i_5_++)
 			bs[i_5_ + i_4_] = buffer[offset++];// + -anIsaacCipher9399.method1667((byte) -96));
 		if (bool != true) {
 		}

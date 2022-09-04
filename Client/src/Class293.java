@@ -17,7 +17,7 @@ public class Class293
 	
 	private final void method3462(byte b, BufferedStream buffer, int i) {
 		anInt3684++;
-		if ((i ^ 0xffffffff) == -6) {
+		if (i == 5) {
 			anInt3682 = buffer.readUnsignedShort();
 		}
 	}
@@ -26,7 +26,7 @@ public class Class293
 		anInt3683++;
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method3462((byte) 22, buffer, i);

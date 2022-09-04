@@ -99,7 +99,7 @@ public class Class377_Sub1 extends Class377
 		if (b != 83) {
 			return false;
 		}
-        return !((i ^ 0xffffffff) == -2 || i == 7);
+        return !(i == 1 || i == 7);
     }
 	
 	static final void method4130(boolean bool, int i) {

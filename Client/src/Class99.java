@@ -83,51 +83,51 @@ public class Class99
 			return false;
 		}
 		boolean bool;
-		if ((anInt1284 ^ 0xffffffff) == -1) {
-			if ((i ^ 0xffffffff) < (anInt1281 ^ 0xffffffff) && (i ^ 0xffffffff) >= (i_11_ + anInt1281 ^ 0xffffffff) || anInt1281 > i && (-i_11_ + anInt1281 ^ 0xffffffff) >= (i ^ 0xffffffff)) {
+		if (anInt1284 == 0) {
+			if (anInt1281 < i && i_11_ + anInt1281 >= i || anInt1281 > i && i >= -i_11_ + anInt1281) {
 				anInt1281 = i;
 				return false;
 			}
 			bool = true;
-		} else if (anInt1284 > 0 && (anInt1281 ^ 0xffffffff) > (i ^ 0xffffffff)) {
+		} else if (anInt1284 > 0 && i > anInt1281) {
 			int i_13_ = anInt1284 * anInt1284 / (2 * i_11_);
 			int i_14_ = i_13_ + anInt1281;
             bool = !(i <= i_14_ || i_14_ < anInt1281);
-		} else if (anInt1284 >= 0 || i >= anInt1281) {
-			bool = false;
-		} else {
+		} else if (anInt1284 < 0 && i < anInt1281) {
 			int i_15_ = anInt1284 * anInt1284 / (2 * i_11_);
 			int i_16_ = anInt1281 + -i_15_;
-            bool = !((i ^ 0xffffffff) <= (i_16_ ^ 0xffffffff) || i_16_ > anInt1281);
+            bool = !(i_16_ <= i || i_16_ > anInt1281);
+		} else {
+			bool = false;
 		}
-		if (i_10_ != -21712) {
+        if (i_10_ != -21712) {
 			method1088((byte) -95, -89);
 		}
 		if (bool) {
 			if (i > anInt1281) {
 				anInt1284 += i_11_;
-				if ((i_9_ ^ 0xffffffff) != -1 && (i_9_ ^ 0xffffffff) > (anInt1284 ^ 0xffffffff)) {
+				if (i_9_ != 0 && anInt1284 > i_9_) {
 					anInt1284 = i_9_;
 				}
 			} else {
 				anInt1284 -= i_11_;
-				if ((i_9_ ^ 0xffffffff) != -1 && -i_9_ > anInt1284) {
+				if (i_9_ != 0 && -i_9_ > anInt1284) {
 					anInt1284 = -i_9_;
 				}
 			}
 			if (anInt1284 != i_12_) {
 				int i_17_ = anInt1284 * anInt1284 / (2 * i_11_);
-				if ((i ^ 0xffffffff) >= (anInt1281 ^ 0xffffffff)) {
+				if (anInt1281 >= i) {
 					if (anInt1281 > i && anInt1281 + -i_17_ < i) {
 						anInt1284 = i_12_;
 					}
-				} else if ((i_17_ + anInt1281 ^ 0xffffffff) < (i ^ 0xffffffff)) {
+				} else if (i < i_17_ + anInt1281) {
 					anInt1284 = i_12_;
 				}
 			}
-		} else if ((anInt1284 ^ 0xffffffff) < -1) {
+		} else if (anInt1284 > 0) {
 			anInt1284 -= i_11_;
-			if ((anInt1284 ^ 0xffffffff) > -1) {
+			if (anInt1284 < 0) {
 				anInt1284 = 0;
 			}
 		} else {

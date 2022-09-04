@@ -37,7 +37,7 @@ public class CacheNode_Sub4 extends CacheNode
 		int i_0_ = method2300((byte) 88);
 		cachenode_sub13.method2275(-122);
 		anInt9462--;
-		if ((anInt9462 ^ 0xffffffff) != -1) {
+		if (anInt9462 != 0) {
             return i_0_ != method2300((byte) 88);
         }
 		this.method2160((byte) 73);
@@ -51,7 +51,7 @@ public class CacheNode_Sub4 extends CacheNode
 		anInt9455++;
 		GraphicsToolkit graphicstoolkit = Class93.aGraphicsToolkit1241;
 		boolean bool = false;
-		if ((Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) ^ 0xffffffff) != -1) {
+		if (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) != 0) {
 			java.awt.Canvas canvas = new java.awt.Canvas();
 			canvas.setSize(100, 100);
 			bool = true;

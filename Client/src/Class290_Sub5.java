@@ -29,7 +29,7 @@ public class Class290_Sub5 extends Class290
 			if (b != 27) {
 				aClass192_8103 = null;
 			}
-			if ((Class336_Sub2.anInt8586 ^ 0xffffffff) != (i ^ 0xffffffff)) {
+			if (i != Class336_Sub2.anInt8586) {
 				Class188_Sub1_Sub1.aString9327 = "";
 			}
 			Class336_Sub2.anInt8586 = i;

@@ -35,12 +35,12 @@ public class IDirect3DDevice extends IUnknown
 	private final native int _CreateDepthStencilSurface(int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, IDirect3DSurface idirect3dsurface);
 	
 	public final IDirect3DVertexBuffer a(int i, int i_7_, int i_8_, int i_9_, IDirect3DVertexBuffer idirect3dvertexbuffer) {
-		if (null != idirect3dvertexbuffer) {
-			idirect3dvertexbuffer.a(-117);
-		} else {
+		if (null == idirect3dvertexbuffer) {
 			idirect3dvertexbuffer = new IDirect3DVertexBuffer(b);
+		} else {
+			idirect3dvertexbuffer.a(-117);
 		}
-		int i_10_ = _CreateVertexBuffer(i, i_7_, i_8_, i_9_, idirect3dvertexbuffer);
+        int i_10_ = _CreateVertexBuffer(i, i_7_, i_8_, i_9_, idirect3dvertexbuffer);
 		if (lh.a(i_10_, true)) {
 			throw new sja(String.valueOf(i_10_));
 		}
@@ -180,12 +180,12 @@ public class IDirect3DDevice extends IUnknown
 	private final native int _GetRenderTarget(int i, IDirect3DSurface idirect3dsurface);
 	
 	public final IDirect3DVertexDeclaration a(VertexElementCollection vertexelementcollection, IDirect3DVertexDeclaration idirect3dvertexdeclaration) {
-		if (null != idirect3dvertexdeclaration) {
-			idirect3dvertexdeclaration.a(-109);
-		} else {
+		if (null == idirect3dvertexdeclaration) {
 			idirect3dvertexdeclaration = new IDirect3DVertexDeclaration(b);
+		} else {
+			idirect3dvertexdeclaration.a(-109);
 		}
-		int i = _CreateVertexDeclaration(vertexelementcollection, idirect3dvertexdeclaration);
+        int i = _CreateVertexDeclaration(vertexelementcollection, idirect3dvertexdeclaration);
 		if (lh.a(i, true)) {
 			throw new sja(String.valueOf(i));
 		}
@@ -208,12 +208,12 @@ public class IDirect3DDevice extends IUnknown
 	private final native int _CreateVertexBuffer(int i, int i_64_, int i_65_, int i_66_, IDirect3DVertexBuffer idirect3dvertexbuffer);
 	
 	public final IDirect3DIndexBuffer a(int i, int i_67_, int i_68_, int i_69_, IDirect3DIndexBuffer idirect3dindexbuffer) {
-		if (null != idirect3dindexbuffer) {
-			idirect3dindexbuffer.a(47);
-		} else {
+		if (null == idirect3dindexbuffer) {
 			idirect3dindexbuffer = new IDirect3DIndexBuffer(b);
+		} else {
+			idirect3dindexbuffer.a(47);
 		}
-		int i_70_ = _CreateIndexBuffer(i, i_67_, i_68_, i_69_, idirect3dindexbuffer);
+        int i_70_ = _CreateIndexBuffer(i, i_67_, i_68_, i_69_, idirect3dindexbuffer);
 		if (lh.a(i_70_, true)) {
 			throw new sja(String.valueOf(i_70_));
 		}

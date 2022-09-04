@@ -183,14 +183,14 @@ public class Class350 implements Interface16
 	static final String method3999(long l, boolean bool, int i, int i_5_) {
 		anInt5376++;
 		Calendar calendar;
-		if (!bool) {
-			Node_Sub43.method2941(6, l);
-			calendar = Class141.aCalendar1756;
-		} else {
+		if (bool) {
 			Class187.method1876(-1, l);
 			calendar = Class141.aCalendar1754;
+		} else {
+			Node_Sub43.method2941(6, l);
+			calendar = Class141.aCalendar1756;
 		}
-		int i_6_ = calendar.get(5);
+        int i_6_ = calendar.get(5);
 		int i_7_ = calendar.get(2);
 		int i_8_ = calendar.get(i_5_);
 		int i_9_ = calendar.get(11);
@@ -227,18 +227,16 @@ public class Class350 implements Interface16
 	
 	public final void method63(boolean bool, byte b) {
 		if (!aBoolean5389) {
-			if (Class96.anApplet1270 != null) {
-				if (aFont5361 == null) {
-					try {
-						method3995(3630);
-					} catch (Exception exception) {
-						aBoolean5389 = true;
-					}
-				}
-			} else {
+			if (Class96.anApplet1270 == null) {
 				aBoolean5389 = true;
+			} else if (aFont5361 == null) {
+				try {
+					method3995(3630);
+				} catch (Exception exception) {
+					aBoolean5389 = true;
+				}
 			}
-		}
+        }
 		anInt5369++;
 		if (aBoolean5389) {
 			method3996(true);
@@ -267,7 +265,7 @@ public class Class350 implements Interface16
 					graphics_12_.drawImage(anImage5383, method3994(-24768, i_13_) + anInt5366 - anInt5379 / 2, method3991((byte) -121, i_16_) - -anInt5384, null);
 					int i_19_ = i_13_ + (-(anInt5379 / 2) + anInt5366);
 					int i_20_ = anInt5379 / 2 + anInt5366;
-					for (int i_21_ = i_19_; (i_20_ ^ 0xffffffff) <= (i_21_ ^ 0xffffffff); i_21_ += i_15_)
+					for (int i_21_ = i_19_; i_21_ <= i_20_; i_21_ += i_15_)
 						graphics_12_.drawImage(anImage5386, method3994(-24768, i_13_) + anInt5366 + i_21_, method3991((byte) -116, i_18_) - -anInt5384, null);
 					graphics_12_.drawImage(anImage5398, method3994(-24768, i_14_) - -anInt5366 + anInt5379 / 2, method3991((byte) -128, i_17_) + anInt5384, null);
 					int i_22_ = anImage5390.getWidth(null);
@@ -288,17 +286,17 @@ public class Class350 implements Interface16
 						anImage5400 = Node_Sub38_Sub20.aCanvas10309.createImage(-i_22_ + anInt5371 - i_24_, anInt5393);
 					}
 					Graphics graphics_34_ = anImage5400.getGraphics();
-					for (int i_35_ = 0; (i_35_ ^ 0xffffffff) > (-i_24_ + (anInt5371 + -i_22_) ^ 0xffffffff); i_35_ += i_27_)
+					for (int i_35_ = 0; -i_24_ + (anInt5371 + -i_22_) > i_35_; i_35_ += i_27_)
 						graphics_34_.drawImage(anImage5382, i_35_, 0, null);
-					for (int i_36_ = 0; (-i_24_ + (anInt5371 - i_22_) ^ 0xffffffff) < (i_36_ ^ 0xffffffff); i_36_ = i_36_ + i_29_)
+					for (int i_36_ = 0; i_36_ < -i_24_ + (anInt5371 - i_22_); i_36_ = i_36_ + i_29_)
 						graphics_34_.drawImage(anImage5378, i_36_, anInt5393 + -i_26_, null);
 					int i_37_ = i * (-i_24_ + anInt5371 - i_22_) / 100;
-					if ((i_37_ ^ 0xffffffff) < -1) {
+					if (i_37_ > 0) {
 						Image image = Node_Sub38_Sub20.aCanvas10309.createImage(i_37_, -i_26_ + -i_28_ + anInt5393);
 						int i_38_ = image.getWidth(null);
 						Graphics graphics_39_ = image.getGraphics();
 						int i_40_ = anInt5385 * Class295.method3471((byte) -34) / 10 % i_30_;
-						for (int i_41_ = i_40_ + -i_30_; (i_41_ ^ 0xffffffff) > (i_38_ ^ 0xffffffff); i_41_ += i_30_)
+						for (int i_41_ = i_40_ + -i_30_; i_38_ > i_41_; i_41_ += i_30_)
 							graphics_39_.drawImage(anImage5374, i_41_, 0, null);
 						graphics_34_.drawImage(image, 0, i_28_, null);
 					}

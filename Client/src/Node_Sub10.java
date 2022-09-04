@@ -36,7 +36,7 @@ public class Node_Sub10 extends Node
 		anInt7097++;
 		int i_0_ = Class174.clientCycle - Node_Sub15_Sub4.anInt9801;
 		if (bool == false) {
-			if ((i_0_ ^ 0xffffffff) <= -101) {
+			if (i_0_ >= 100) {
 				Class367.anInt4541 = Class368.anInt4551 = -1;
 				Class320_Sub22.anInt8415 = 1;
 			} else {
@@ -55,7 +55,7 @@ public class Node_Sub10 extends Node
 				anInt7079 = (int) (f * (float) (-Class320_Sub17.anInt8371 + anInt7079) + (float) Class320_Sub17.anInt8371);
 				OutcommingPacket.anInt4050 = (int) ((float) (-Class179.anInt2127 + OutcommingPacket.anInt4050) * f + (float) Class179.anInt2127);
 				int i_3_ = -Class123.anInt1568 + Class170.anInt2053;
-				if ((i_3_ ^ 0xffffffff) < -8193) {
+				if (i_3_ > 8192) {
 					i_3_ -= 16384;
 				} else if (i_3_ < -8192) {
 					i_3_ += 16384;

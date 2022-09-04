@@ -37,35 +37,27 @@ public class Class249
 	}
 	
 	private final void method3087(BufferedStream buffer, int i, int i_3_) {
-		if (i_3_ != 1) {
-			if ((i_3_ ^ 0xffffffff) == -3) {
-				buffer.readUnsignedByte();
-			} else if ((i_3_ ^ 0xffffffff) == -4) {
-				anInt3157 = buffer.readInt();
-				anInt3166 = buffer.readInt();
-				anInt3150 = buffer.readInt();
-			} else if ((i_3_ ^ 0xffffffff) != -5) {
-				if (i_3_ == 6) {
-					anInt3160 = buffer.readUnsignedByte();
-				} else if ((i_3_ ^ 0xffffffff) != -9) {
-					if ((i_3_ ^ 0xffffffff) != -10) {
-						if (i_3_ == 10) {
-							aBoolean3165 = true;
-						}
-					} else {
-						anInt3162 = 1;
-					}
-				} else {
-					anInt3155 = 1;
-				}
-			} else {
-				anInt3163 = buffer.readUnsignedByte();
-				anInt3148 = buffer.readInt();
-			}
-		} else {
+		if (i_3_ == 1) {
 			anInt3167 = buffer.readUnsignedShort();
-		}
-		anInt3153++;
+		} else if (i_3_ == 2) {
+            buffer.readUnsignedByte();
+        } else if (i_3_ == 3) {
+            anInt3157 = buffer.readInt();
+            anInt3166 = buffer.readInt();
+            anInt3150 = buffer.readInt();
+        } else if (i_3_ == 4) {
+            anInt3163 = buffer.readUnsignedByte();
+            anInt3148 = buffer.readInt();
+        } else if (i_3_ == 6) {
+            anInt3160 = buffer.readUnsignedByte();
+        } else if (i_3_ == 8) {
+            anInt3155 = 1;
+        } else if (i_3_ == 9) {
+            anInt3162 = 1;
+        } else if (i_3_ == 10) {
+            aBoolean3165 = true;
+        }
+        anInt3153++;
 		if (i != 2) {
 			anInt3152 = 73;
 		}
@@ -94,15 +86,13 @@ public class Class249
 		}
 		if (anInt3163 == 0) {
 			aLong3156 = 2147483647L;
-		} else if ((anInt3163 ^ 0xffffffff) != -2) {
-			if ((anInt3163 ^ 0xffffffff) == -3) {
-				aLong3156 = (long) (8 * anInt3164 / anInt3148);
-			}
-		} else {
+		} else if (anInt3163 == 1) {
 			aLong3156 = (long) (anInt3164 * 8 / anInt3148);
 			aLong3156 *= aLong3156;
-		}
-		if (aBoolean3165) {
+		} else if (anInt3163 == 2) {
+            aLong3156 = (long) (8 * anInt3164 / anInt3148);
+        }
+        if (aBoolean3165) {
 			anInt3164 *= -1;
 		}
 	}
@@ -114,7 +104,7 @@ public class Class249
 		}
 		for (;;) {
 			int i = buffer.readUnsignedByte();
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				break;
 			}
 			method3087(buffer, 2, i);

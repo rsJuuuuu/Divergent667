@@ -34,7 +34,7 @@ public class Node_Sub20 extends Node
 	static final void method2614(boolean bool, Actor actor, boolean bool_1_) {
 		anInt7180++;
 		Class259 class259 = actor.method868((byte) -128);
-		if ((actor.anInt10904 ^ 0xffffffff) == -1) {
+		if (actor.anInt10904 == 0) {
 			actor.anInt10901 = 0;
 			Class320_Sub23.anInt8431 = 0;
 			Class275.anInt5412 = -1;
@@ -47,17 +47,17 @@ public class Node_Sub20 extends Node
 					actor.anInt10901++;
 					return;
 				}
-				if ((actor.anInt10900 ^ 0xffffffff) >= -1 && class48.anInt718 == 0) {
+				if (actor.anInt10900 <= 0 && class48.anInt718 == 0) {
 					Class275.anInt5412 = -1;
 					actor.anInt10901++;
 					Class320_Sub23.anInt8431 = 0;
 					return;
 				}
 			}
-			for (int i = 0; (actor.aClass165Array10886.length ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
-				if ((actor.aClass165Array10886[i].graphicsId ^ 0xffffffff) != 0 && actor.aClass165Array10886[i].anAnimator2026.method242((byte) -77)) {
+			for (int i = 0; i < actor.aClass165Array10886.length; i++) {
+				if (actor.aClass165Array10886[i].graphicsId != -1 && actor.aClass165Array10886[i].anAnimator2026.method242((byte) -77)) {
 					Class195 class195 = Class16.aClass101_228.method1090(-121, actor.aClass165Array10886[i].graphicsId);
-					if (class195.aBoolean2402 && (class195.anInt2394 ^ 0xffffffff) != 0) {
+					if (class195.aBoolean2402 && class195.anInt2394 != -1) {
 						Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -95);
 						if (actor.anInt10900 > 0 && class48.anInt698 == 0) {
 							Class275.anInt5412 = -1;
@@ -79,7 +79,7 @@ public class Node_Sub20 extends Node
 			int i_3_ = 512 * actor.scenePositionXQueue[-1 + actor.anInt10904] - -(actor.getSize((byte) 76) * 256);
 			int i_4_ = actor.scenePositionYQueue[-1 + actor.anInt10904] * 512 + 256 * actor.getSize((byte) 105);
 			if (i < i_3_) {
-				if ((i_2_ ^ 0xffffffff) > (i_4_ ^ 0xffffffff)) {
+				if (i_4_ > i_2_) {
 					actor.method856((byte) -108, 10240);
 				} else if (i_4_ < i_2_) {
 					actor.method856((byte) 113, 14336);
@@ -88,21 +88,21 @@ public class Node_Sub20 extends Node
 				}
 			} else if (i_3_ >= i) {
 				if (i_2_ >= i_4_) {
-					if ((i_4_ ^ 0xffffffff) > (i_2_ ^ 0xffffffff)) {
+					if (i_2_ > i_4_) {
 						actor.method856((byte) 81, 0);
 					}
 				} else {
 					actor.method856((byte) 126, 8192);
 				}
-			} else if ((i_4_ ^ 0xffffffff) < (i_2_ ^ 0xffffffff)) {
+			} else if (i_2_ < i_4_) {
 				actor.method856((byte) 78, 6144);
-			} else if ((i_4_ ^ 0xffffffff) > (i_2_ ^ 0xffffffff)) {
+			} else if (i_2_ > i_4_) {
 				actor.method856((byte) -72, 2048);
 			} else {
 				actor.method856((byte) 66, 4096);
 			}
 			byte b = actor.movementTypeQueue[-1 + actor.anInt10904];
-			if (!bool_1_ && (i_3_ - i > 1024 || i_3_ - i < -1024 || (-i_2_ + i_4_ ^ 0xffffffff) < -1025 || (i_4_ + -i_2_ ^ 0xffffffff) > 1023)) {
+			if (!bool_1_ && (i_3_ - i > 1024 || i_3_ - i < -1024 || -i_2_ + i_4_ > 1024 || i_4_ + -i_2_ < -1024)) {
 				actor.anInt5940 = i_4_;
 				actor.anInt5934 = i_3_;
 				actor.method849(actor.anInt10889, -72, false);
@@ -118,14 +118,7 @@ public class Node_Sub20 extends Node
 				if (actor instanceof Npc) {
 					bool_6_ = ((Npc) actor).aNpcDefinition11122.aBoolean2817;
 				}
-				if (!bool_6_) {
-					if (!bool_1_ && actor.anInt10904 > 1) {
-						i_5_ = 24;
-					}
-					if (!bool_1_ && (actor.anInt10904 ^ 0xffffffff) < -3) {
-						i_5_ = 32;
-					}
-				} else {
+				if (bool_6_) {
 					int i_7_ = -actor.aClass99_10893.anInt1281 + actor.anInt10889;
 					if (i_7_ != 0 && actor.faceEntity == -1 && actor.anInt10890 != 0) {
 						i_5_ = 8;
@@ -133,68 +126,71 @@ public class Node_Sub20 extends Node
 					if (!bool_1_ && actor.anInt10904 > 2) {
 						i_5_ = 24;
 					}
-					if (!bool_1_ && (actor.anInt10904 ^ 0xffffffff) < -4) {
+					if (!bool_1_ && actor.anInt10904 > 3) {
+						i_5_ = 32;
+					}
+				} else {
+					if (!bool_1_ && actor.anInt10904 > 1) {
+						i_5_ = 24;
+					}
+					if (!bool_1_ && actor.anInt10904 > 2) {
 						i_5_ = 32;
 					}
 				}
-				if (actor.anInt10901 > 0 && (actor.anInt10904 ^ 0xffffffff) < -2) {
+                if (actor.anInt10901 > 0 && actor.anInt10904 > 1) {
 					actor.anInt10901--;
 					i_5_ = 32;
 				}
-				if ((b ^ 0xffffffff) != -3) {
-					if ((b ^ 0xffffffff) == -1) {
-						i_5_ >>= 1;
-					}
-				} else {
+				if (b == 2) {
 					i_5_ <<= 1;
+				} else if (b == 0) {
+					i_5_ >>= 1;
 				}
-				if (class259.anInt3256 != -1) {
+                if (class259.anInt3256 != -1) {
 					i_5_ <<= 9;
-					if (actor.anInt10904 != 1) {
-						if ((i_5_ ^ 0xffffffff) >= (actor.anInt10907 ^ 0xffffffff)) {
-							if (actor.anInt10907 > 0) {
-								actor.anInt10907 -= class259.anInt3256;
-								if ((actor.anInt10907 ^ 0xffffffff) > -1) {
-									actor.anInt10907 = 0;
-								}
-							}
-						} else {
-							actor.anInt10907 += class259.anInt3256;
-							if (i_5_ < actor.anInt10907) {
-								actor.anInt10907 = i_5_;
-							}
-						}
-					} else {
+					if (actor.anInt10904 == 1) {
 						int i_8_ = actor.anInt10907 * actor.anInt10907;
-						int i_9_ = ((i_3_ ^ 0xffffffff) <= (actor.anInt5934 ^ 0xffffffff) ? i_3_ - actor.anInt5934 : actor.anInt5934 - i_3_) << 9;
+						int i_9_ = (actor.anInt5934 <= i_3_ ? i_3_ - actor.anInt5934 : actor.anInt5934 - i_3_) << 9;
 						int i_10_ = (actor.anInt5940 <= i_4_ ? -actor.anInt5940 + i_4_ : actor.anInt5940 + -i_4_) << 9;
-						int i_11_ = (i_9_ ^ 0xffffffff) < (i_10_ ^ 0xffffffff) ? i_9_ : i_10_;
+						int i_11_ = i_10_ < i_9_ ? i_9_ : i_10_;
 						int i_12_ = i_11_ * class259.anInt3256 * 2;
 						if (i_12_ >= i_8_) {
 							if (i_8_ / 2 <= i_11_) {
-								if ((i_5_ ^ 0xffffffff) < (actor.anInt10907 ^ 0xffffffff)) {
+								if (actor.anInt10907 < i_5_) {
 									actor.anInt10907 += class259.anInt3256;
-									if ((actor.anInt10907 ^ 0xffffffff) < (i_5_ ^ 0xffffffff)) {
+									if (i_5_ < actor.anInt10907) {
 										actor.anInt10907 = i_5_;
 									}
 								}
 							} else {
 								actor.anInt10907 -= class259.anInt3256;
-								if ((actor.anInt10907 ^ 0xffffffff) > -1) {
+								if (actor.anInt10907 < 0) {
 									actor.anInt10907 = 0;
 								}
 							}
 						} else {
 							actor.anInt10907 /= 2;
 						}
+					} else if (actor.anInt10907 >= i_5_) {
+						if (actor.anInt10907 > 0) {
+							actor.anInt10907 -= class259.anInt3256;
+							if (actor.anInt10907 < 0) {
+								actor.anInt10907 = 0;
+							}
+						}
+					} else {
+						actor.anInt10907 += class259.anInt3256;
+						if (i_5_ < actor.anInt10907) {
+							actor.anInt10907 = i_5_;
+						}
 					}
-					i_5_ = actor.anInt10907 >> 9;
+                    i_5_ = actor.anInt10907 >> 9;
 					if (i_5_ < 1) {
 						i_5_ = 1;
 					}
 				}
 				Class320_Sub23.anInt8431 = 0;
-				if ((i_3_ ^ 0xffffffff) == (i ^ 0xffffffff) && i_2_ == i_4_) {
+				if (i == i_3_ && i_2_ == i_4_) {
 					Class275.anInt5412 = -1;
 				} else {
 					if (i_3_ > i) {
@@ -210,28 +206,28 @@ public class Node_Sub20 extends Node
 							actor.anInt5934 = i_3_;
 						}
 					}
-					if ((i_5_ ^ 0xffffffff) <= -33) {
+					if (i_5_ >= 32) {
 						Class275.anInt5412 = 2;
 					} else {
 						Class275.anInt5412 = b;
 					}
-					if ((i_4_ ^ 0xffffffff) >= (i_2_ ^ 0xffffffff)) {
-						if ((i_4_ ^ 0xffffffff) > (i_2_ ^ 0xffffffff)) {
+					if (i_2_ >= i_4_) {
+						if (i_2_ > i_4_) {
 							actor.anInt5940 -= i_5_;
 							Class320_Sub23.anInt8431 |= 0x2;
-							if ((i_4_ ^ 0xffffffff) < (actor.anInt5940 ^ 0xffffffff)) {
+							if (actor.anInt5940 < i_4_) {
 								actor.anInt5940 = i_4_;
 							}
 						}
 					} else {
 						Class320_Sub23.anInt8431 |= 0x1;
 						actor.anInt5940 += i_5_;
-						if ((i_4_ ^ 0xffffffff) > (actor.anInt5940 ^ 0xffffffff)) {
+						if (actor.anInt5940 > i_4_) {
 							actor.anInt5940 = i_4_;
 						}
 					}
 				}
-				if (actor.anInt5934 == i_3_ && (i_4_ ^ 0xffffffff) == (actor.anInt5940 ^ 0xffffffff)) {
+				if (actor.anInt5934 == i_3_ && actor.anInt5940 == i_4_) {
 					actor.anInt10904--;
 					if (actor.anInt10900 > 0) {
 						actor.anInt10900--;
@@ -259,7 +255,7 @@ public class Node_Sub20 extends Node
 			method2615(null, null, null, -66, 108, -17, true, null, null, -31, 37, -11);
 		}
 		int i_20_ = i_15_ * i_15_ + i_17_ * i_17_;
-		if ((i_19_ * i_19_ ^ 0xffffffff) <= (i_20_ ^ 0xffffffff)) {
+		if (i_20_ <= i_19_ * i_19_) {
 			int i_21_ = Class335.anIntArray4167[i_18_];
 			int i_22_ = Class335.anIntArray4165[i_18_];
 			if (Class320_Sub22.anInt8415 != 4) {
@@ -271,7 +267,7 @@ public class Node_Sub20 extends Node
 			int i_25_ = class357.method4030(null, 0, string, 100);
 			i_23_ -= i_25_ / 2;
 			int i_26_ = class357.method4034(100, 0, string, null, (byte) -35);
-			if (i_23_ >= -widget.anInt4809 && (widget.anInt4809 ^ 0xffffffff) <= (i_23_ ^ 0xffffffff) && i_24_ >= -widget.anInt4695 && (widget.anInt4695 ^ 0xffffffff) <= (i_24_ ^ 0xffffffff)) {
+			if (i_23_ >= -widget.anInt4809 && i_23_ <= widget.anInt4809 && i_24_ >= -widget.anInt4695 && i_24_ <= widget.anInt4695) {
 				class52.method535(i_16_, null, i_13_, string, var_aa, null, -i_24_ + (widget.anInt4695 / 2 + (i_16_ + -i_14_ + -i_26_)), 0, 101, i, 1, widget.anInt4809 / 2 + (i_23_ - -i), 0, 0, i_25_, 50);
 			}
 		}

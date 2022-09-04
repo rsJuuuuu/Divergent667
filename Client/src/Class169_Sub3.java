@@ -34,7 +34,7 @@ public class Class169_Sub3 extends Class169
 			Random random = new Random((long) i);
 			for (int i_0_ = 0; i_0_ < 255; i_0_++)
 				bs[i_0_] = (byte) i_0_;
-			for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > -256; i_1_++) {
+			for (int i_1_ = 0; i_1_ < 255; i_1_++) {
 				int i_2_ = -i_1_ + 255;
 				int i_3_ = Class330.method3838(-5208, i_2_, random);
 				byte b = bs[i_3_];
@@ -63,7 +63,7 @@ public class Class169_Sub3 extends Class169
 				if (Class168.anInt2043 > i_6_) {
 					i_6_ = Class168.anInt2043;
 				}
-				if ((Class180.anInt2133 ^ 0xffffffff) < (i_5_ ^ 0xffffffff)) {
+				if (i_5_ < Class180.anInt2133) {
 					i_5_ = Class180.anInt2133;
 				}
 				int i_9_ = Class262_Sub4.aClass379_7731.method4160(i + 16777098, Node_Sub38_Sub12.anInt10225, i_5_) + CacheNode_Sub18.anInt9604;
@@ -144,7 +144,7 @@ public class Class169_Sub3 extends Class169
 		if (b != 82) {
 			method1779(null, null, false, null, null, 76);
 		}
-		if ((i ^ 0xffffffff) > (Node_Sub25_Sub4.aClass110Array10006.length - 1 ^ 0xffffffff)) {
+		if (Node_Sub25_Sub4.aClass110Array10006.length - 1 > i) {
 			Class252.aClass110_3189 = Node_Sub25_Sub4.aClass110Array10006[i - -1];
 		}
 		return 100;
@@ -158,7 +158,7 @@ public class Class169_Sub3 extends Class169
 			int i_20_ = AnimableAnimator.method254(Class259.anInt3300 + i_19_, 16939, Class290_Sub11.anInt8181) * Class117.anInt1479;
 			for (int i_21_ = 0; Class117.anInt1479 > i_21_; i_21_++) {
 				int i_22_ = AnimableAnimator.method254(Class338.anInt4190 + i_21_, 16939, Class117.anInt1479) + i_20_;
-				if ((Class290_Sub4.anIntArray8102[i_22_] ^ 0xffffffff) == (Class225.anInt2675 ^ 0xffffffff)) {
+				if (Class225.anInt2675 == Class290_Sub4.anIntArray8102[i_22_]) {
 					Class352.anInterface6Array4332[i_22_].method19(0, 0, StandardSprite.anInt8946, aa_Sub3.anInt5493, StandardSprite.anInt8946 * i_21_, aa_Sub3.anInt5493 * i_19_, true, true);
 				}
 			}

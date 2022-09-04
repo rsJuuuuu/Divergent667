@@ -24,7 +24,7 @@ public class Class339_Sub9 extends Class339
 	Class339_Sub9(GLToolkit gltoolkit, Class301 class301) {
 		super(gltoolkit);
 		aClass301_8743 = class301;
-		if (aGLToolkit4202.aBoolean6703 && (aGLToolkit4202.anInt6680 ^ 0xffffffff) <= -3) {
+		if (aGLToolkit4202.aBoolean6703 && aGLToolkit4202.anInt6680 >= 2) {
 			aClass50_8747 = Animable_Sub4.method926("!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", 34336, aGLToolkit4202, (byte) 122);
 			if (aClass50_8747 != null) {
 				int[][] is = Class261.method3142(false, 3, 256, 4, 4, 0, 64, 126, 0.4F);
@@ -48,7 +48,7 @@ public class Class339_Sub9 extends Class339
 		anInt8751++;
 		if (aClass25_8752 != null) {
 			aGLToolkit4202.method1457(33984, 1);
-			if ((0x80 & i_6_ ^ 0xffffffff) == -1) {
+			if ((0x80 & i_6_) == 0) {
 				if ((i_5_ & 0x1) == 1) {
 					if (aClass301_8743.aBoolean3780) {
 						aGLToolkit4202.method1444(-2, aClass301_8743.aClass169_Sub3_3777);
@@ -79,16 +79,14 @@ public class Class339_Sub9 extends Class339
 				OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0F, 1.0F, 1.0F, 1.0F);
 			}
 			int i_8_ = 0x3 & i_6_;
-			if ((i_8_ ^ 0xffffffff) != -3) {
-				if ((i_8_ ^ 0xffffffff) == -4) {
-					OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.1F, 1.0F, 1.0F, 1.0F);
-				} else {
-					OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.025F, 1.0F, 1.0F, 1.0F);
-				}
-			} else {
+			if (i_8_ == 2) {
 				OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05F, 1.0F, 1.0F, 1.0F);
-			}
-			if (i != -13437) {
+			} else if (i_8_ == 3) {
+                OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.1F, 1.0F, 1.0F, 1.0F);
+            } else {
+                OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.025F, 1.0F, 1.0F, 1.0F);
+            }
+            if (i != -13437) {
 				anInt8744 = 18;
 			}
 		}
@@ -159,18 +157,18 @@ public class Class339_Sub9 extends Class339
 			OpenGL.glLoadMatrixf(aGLToolkit4202.aClass336_Sub3_6642.method3899(i + -82), 0);
 			OpenGL.glMatrixMode(5888);
 			aGLToolkit4202.method1457(33984, i);
-			if ((anInt8744 ^ 0xffffffff) != (aGLToolkit4202.anInt6605 ^ 0xffffffff)) {
+			if (aGLToolkit4202.anInt6605 != anInt8744) {
 				int i_9_ = 128 * (aGLToolkit4202.anInt6605 % 5000) / 5000;
-				for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > -65; i_10_++) {
+				for (int i_10_ = 0; i_10_ < 64; i_10_++) {
 					OpenGL.glProgramLocalParameter4fvARB(34336, i_10_, aFloatArray8742, i_9_);
 					i_9_ += 2;
 				}
-				if (!aClass301_8743.aBoolean3780) {
-					OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0F, 0.0F, 0.0F, 1.0F);
-				} else {
+				if (aClass301_8743.aBoolean3780) {
 					aFloat8746 = (float) (aGLToolkit4202.anInt6605 % 4000) / 4000.0F;
+				} else {
+					OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0F, 0.0F, 0.0F, 1.0F);
 				}
-				anInt8744 = aGLToolkit4202.anInt6605;
+                anInt8744 = aGLToolkit4202.anInt6605;
 			}
 		}
 	}

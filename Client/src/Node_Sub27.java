@@ -75,7 +75,7 @@ public class Node_Sub27 extends Node
 					method2689(true, (byte) -123);
 				}
 				method2689(false, (byte) 35);
-			} else if ((i ^ 0xffffffff) >= -26) {
+			} else if (i <= 25) {
 				aClass320_Sub13_7284 = new Class320_Sub13(buffer.readUnsignedByte(), this);
 				aClass320_Sub13_7283 = new Class320_Sub13(aClass320_Sub13_7284.method3734(false), this);
 				aClass320_Sub20_7306 = new Class320_Sub20(buffer.readUnsignedByte(), this);
@@ -95,7 +95,7 @@ public class Node_Sub27 extends Node
 				aClass320_Sub4_7302 = new Class320_Sub4(buffer.readUnsignedByte(), this);
 				aClass320_Sub4_7304 = new Class320_Sub4(aClass320_Sub4_7302.method3694(false), this);
 				aClass320_Sub18_7303 = new Class320_Sub18(buffer.readUnsignedByte(), this);
-				if ((i ^ 0xffffffff) <= -26) {
+				if (i >= 25) {
 					aClass320_Sub2_7272 = new Class320_Sub2(buffer.readUnsignedByte(), this);
 				}
 				aClass320_Sub7_7308 = new Class320_Sub7(buffer.readUnsignedByte(), this);
@@ -295,7 +295,7 @@ public class Node_Sub27 extends Node
 		try {
 			Field[] fields = this.getClass().getDeclaredFields();
 			Field[] fields_1_ = fields;
-			for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > (fields_1_.length ^ 0xffffffff); i_2_++) {
+			for (int i_2_ = 0; fields_1_.length > i_2_; i_2_++) {
 				Field field = fields_1_[i_2_];
 				if ((aClass7318 == null ? aClass7318 = method2700("Class320") : aClass7318).isAssignableFrom(field.getType())) {
 					Class320 class320 = (Class320) field.get(this);
@@ -378,13 +378,13 @@ public class Node_Sub27 extends Node
 		aClass320_Sub12_7282 = new Class320_Sub12(i_5_ >= i_4_ ? i_5_ : i_4_, this);
 		boolean bool_6_ = true;
 		boolean bool_7_ = true;
-		if ((i ^ 0xffffffff) > -3) {
+		if (i < 2) {
 			bool_6_ = buffer.readUnsignedByte() == 1;
 			buffer.readUnsignedByte();
 		} else {
 			bool_6_ = buffer.readUnsignedByte() == 1;
 			if (i >= 17) {
-				bool_7_ = (buffer.readUnsignedByte() ^ 0xffffffff) == -2;
+				bool_7_ = buffer.readUnsignedByte() == 1;
 			}
 		}
 		aClass320_Sub24_7317 = new Class320_Sub24(bool_7_ | bool_6_ ? 1 : 0, this);
@@ -396,14 +396,14 @@ public class Node_Sub27 extends Node
 		aClass320_Sub13_7284 = new Class320_Sub13(buffer.readUnsignedByte(), this);
 		aClass320_Sub17_7311 = new Class320_Sub17(buffer.readUnsignedByte(), this);
 		aClass320_Sub25_7295 = new Class320_Sub25(buffer.readUnsignedByte(), this);
-		if ((i ^ 0xffffffff) <= -21) {
+		if (i >= 20) {
 			aClass320_Sub25_7276 = new Class320_Sub25(buffer.readUnsignedByte(), this);
 		} else {
 			aClass320_Sub25_7276 = new Class320_Sub25(aClass320_Sub25_7295.method3776(bool), this);
 		}
 		aClass320_Sub25_7274 = new Class320_Sub25(buffer.readUnsignedByte(), this);
 		aClass320_Sub25_7265 = new Class320_Sub25(buffer.readUnsignedByte(), this);
-		if ((i ^ 0xffffffff) <= -22) {
+		if (i >= 21) {
 			aClass320_Sub25_7309 = new Class320_Sub25(buffer.readUnsignedByte(), this);
 		} else {
 			aClass320_Sub25_7309 = new Class320_Sub25(aClass320_Sub25_7274.method3776(bool), this);
@@ -412,7 +412,7 @@ public class Node_Sub27 extends Node
 			buffer.readUnsignedShort();
 			buffer.readUnsignedShort();
 		}
-		if (i >= 3 && (i ^ 0xffffffff) > -7) {
+		if (i >= 3 && i < 6) {
 			buffer.readUnsignedByte();
 		}
 		if (i >= 4) {
@@ -428,10 +428,10 @@ public class Node_Sub27 extends Node
 		if (i >= 8) {
 			buffer.readUnsignedByte();
 		}
-		if ((i ^ 0xffffffff) <= -10) {
+		if (i >= 9) {
 			aClass320_Sub5_7297 = new Class320_Sub5(buffer.readUnsignedByte(), this);
 		}
-		if ((i ^ 0xffffffff) <= -11) {
+		if (i >= 10) {
 			aClass320_Sub20_7306 = new Class320_Sub20(buffer.readUnsignedByte(), this);
 		}
 		if (i >= 11) {
@@ -446,7 +446,7 @@ public class Node_Sub27 extends Node
 		if (i >= 14) {
 			aClass320_Sub29_7291 = new Class320_Sub29(buffer.readUnsignedByte(), this);
 		}
-		if ((i ^ 0xffffffff) <= -16) {
+		if (i >= 15) {
 			aClass320_Sub21_7293 = new Class320_Sub21(buffer.readUnsignedByte(), this);
 		}
 		if (i >= 16) {
@@ -458,7 +458,7 @@ public class Node_Sub27 extends Node
 		if (i >= 19) {
 			aClass320_Sub18_7303 = new Class320_Sub18(buffer.readUnsignedByte(), this);
 		}
-		if ((i ^ 0xffffffff) <= -23) {
+		if (i >= 22) {
 			aClass320_Sub11_7264 = new Class320_Sub11(buffer.readUnsignedByte(), this);
 		}
 	}
@@ -468,19 +468,19 @@ public class Node_Sub27 extends Node
 			aFloat7310 = -1.5500692F;
 		}
 		anInt7281++;
-        return !(i_8_ != 21 && i_8_ != 60 && i_8_ != 23 && (i_8_ ^ 0xffffffff) != -18 && (i_8_ ^ 0xffffffff) != -45 && (i_8_ ^ 0xffffffff) != -5 && i_8_ != 18);
+        return !(i_8_ != 21 && i_8_ != 60 && i_8_ != 23 && i_8_ != 17 && i_8_ != 44 && i_8_ != 4 && i_8_ != 18);
     }
 	
 	Node_Sub27(Class353 class353, int i) {
 		aClass353_7263 = class353;
-		aClass187_7292 = new Class187(Class240.aSignLink2946.aBoolean4005, Class201.anInt2446, Class263.anInt3336, (SignLink.aString3984.toLowerCase().indexOf("arm") ^ 0xffffffff) != 0);
+		aClass187_7292 = new Class187(Class240.aSignLink2946.aBoolean4005, Class201.anInt2446, Class263.anInt3336, SignLink.aString3984.toLowerCase().indexOf("arm") != -1);
 		aClass320_Sub29_7270 = new Class320_Sub29(i, this);
 		method2689(true, (byte) -103);
 	}
 	
 	Node_Sub27(BufferedStream buffer, Class353 class353, int i) {
 		aClass353_7263 = class353;
-		aClass187_7292 = new Class187(Class240.aSignLink2946.aBoolean4005, Class201.anInt2446, Class263.anInt3336, (SignLink.aString3984.indexOf("arm") ^ 0xffffffff) != 0);
+		aClass187_7292 = new Class187(Class240.aSignLink2946.aBoolean4005, Class201.anInt2446, Class263.anInt3336, SignLink.aString3984.indexOf("arm") != -1);
 		aClass320_Sub29_7270 = new Class320_Sub29(i, this);
 		method2688(buffer, true);
 	}

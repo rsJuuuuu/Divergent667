@@ -37,7 +37,7 @@ abstract class Class117
 		int i_0_ = -84 / ((b - 33) / 61);
 		anInt1468++;
 		method1167(-20931);
-		if ((anInt1473 ^ 0xffffffff) <= (i ^ 0xffffffff)) {
+		if (i <= anInt1473) {
 			OpenGL.glBufferSubDataARBub(anInt1469, 0, i, bs, 0);
 		} else {
 			OpenGL.glBufferDataARBub(anInt1469, i, bs, 0, !aBoolean1477 ? 35044 : 35040);
@@ -76,8 +76,8 @@ abstract class Class117
 		int i_20_ = (1 + i_7_) * i_17_;
 		Class369.method4086(i_4_ + i_6_, i_5_, -i_4_ + i_6_, Class169_Sub4.anIntArrayArray8826[i], 0);
 		int i_21_ = (i_3_ + i_8_) * i_16_;
-		while ((i_8_ ^ 0xffffffff) < -1) {
-			if ((i_14_ ^ 0xffffffff) > -1) {
+		while (i_8_ > 0) {
+			if (i_14_ < 0) {
 				while (i_14_ < 0) {
 					i_15_ += i_20_;
 					i_14_ += i_18_;

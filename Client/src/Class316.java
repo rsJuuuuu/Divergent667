@@ -20,6 +20,6 @@ public class Class316
 		if (bool != false) {
 			method3662(true, '%');
 		}
-        return !(((c ^ 0xffffffff) > -49 || (c ^ 0xffffffff) < -58) && (c < 65 || (c ^ 0xffffffff) < -91) && (c < 97 || c > 122));
+        return !((c < 48 || c > 57) && (c < 65 || c > 90) && (c < 97 || c > 122));
     }
 }

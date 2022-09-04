@@ -37,13 +37,13 @@ public class Node_Sub19 extends Node
 		if (b < 35) {
 			anInt7163 = 45;
 		}
-		for (/**/; (i_9_ ^ 0xffffffff) < (i_11_ ^ 0xffffffff); i_11_++)
+		for (/**/; i_11_ < i_9_; i_11_++)
 			Class369.method4086(i_8_, i_4_, i_7_, Class169_Sub4.anIntArrayArray8826[i_11_], 0);
 		for (int i_12_ = i_6_; i_10_ < i_12_; i_12_--)
 			Class369.method4086(i_8_, i_4_, i_7_, Class169_Sub4.anIntArrayArray8826[i_12_], 0);
 		int i_13_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_3_ + i);
 		int i_14_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i + i_1_);
-		for (int i_15_ = i_9_; (i_15_ ^ 0xffffffff) >= (i_10_ ^ 0xffffffff); i_15_++) {
+		for (int i_15_ = i_9_; i_10_ >= i_15_; i_15_++) {
 			int[] is = Class169_Sub4.anIntArrayArray8826[i_15_];
 			Class369.method4086(i_13_, i_4_, i_7_, is, 0);
 			Class369.method4086(i_8_, i_4_, i_14_, is, 0);
@@ -56,32 +56,30 @@ public class Node_Sub19 extends Node
 		int i = 99 % ((b - 25) / 47);
 		String string = Mobile.method844(cachenode_sub13, (byte) 126);
 		int[] is = null;
-		if (!Class134.method1574(false, cachenode_sub13.anInt9562)) {
-			if ((cachenode_sub13.anInt9569 ^ 0xffffffff) != 0) {
-				is = EntityNode_Sub3_Sub1.aClass86_9166.method1010(cachenode_sub13.anInt9569, 14434).anIntArray1926;
-			} else if (OutcommingPacket.method3666(cachenode_sub13.anInt9562, (byte) 119)) {
-				Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) (int) cachenode_sub13.aLong9563);
-				if (node_sub41 != null) {
-					Npc npc = node_sub41.aNpc7518;
-					NpcDefinition npcdefinition = npc.aNpcDefinition11122;
-					if (npcdefinition.anIntArray2827 != null) {
-						npcdefinition = npcdefinition.method2999(65535, Class24.aClass275_442);
-					}
-					if (npcdefinition != null) {
-						is = npcdefinition.anIntArray2832;
-					}
+		if (Class134.method1574(false, cachenode_sub13.anInt9562)) {
+			is = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) cachenode_sub13.aLong9563, 14434).anIntArray1926;
+		} else if (cachenode_sub13.anInt9569 != -1) {
+			is = EntityNode_Sub3_Sub1.aClass86_9166.method1010(cachenode_sub13.anInt9569, 14434).anIntArray1926;
+		} else if (OutcommingPacket.method3666(cachenode_sub13.anInt9562, (byte) 119)) {
+			Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) (int) cachenode_sub13.aLong9563);
+			if (node_sub41 != null) {
+				Npc npc = node_sub41.aNpc7518;
+				NpcDefinition npcdefinition = npc.aNpcDefinition11122;
+				if (npcdefinition.anIntArray2827 != null) {
+					npcdefinition = npcdefinition.method2999(65535, Class24.aClass275_442);
 				}
-			} else if (Class194_Sub3.method1973(cachenode_sub13.anInt9562, 31922)) {
-				ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145((int) (0x7fffffffL & cachenode_sub13.aLong9563 >>> 32), 46);
-				if (objectdefinition.anIntArray2984 != null) {
-					objectdefinition = objectdefinition.method3038(13, Class24.aClass275_442);
-				}
-				if (objectdefinition != null) {
-					is = objectdefinition.anIntArray2981;
+				if (npcdefinition != null) {
+					is = npcdefinition.anIntArray2832;
 				}
 			}
-		} else {
-			is = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) cachenode_sub13.aLong9563, 14434).anIntArray1926;
+		} else if (Class194_Sub3.method1973(cachenode_sub13.anInt9562, 31922)) {
+			ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145((int) (0x7fffffffL & cachenode_sub13.aLong9563 >>> 32), 46);
+			if (objectdefinition.anIntArray2984 != null) {
+				objectdefinition = objectdefinition.method3038(13, Class24.aClass275_442);
+			}
+			if (objectdefinition != null) {
+				is = objectdefinition.anIntArray2981;
+			}
 		}
 		if (is != null) {
 			string += Class43.method458(4923, is);

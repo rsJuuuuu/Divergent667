@@ -19,19 +19,19 @@ public class Class368
 		if (i_2_ < -9) {
 			return "<col=ff0000>";
 		}
-		if ((i_2_ ^ 0xffffffff) > 5) {
+		if (i_2_ < -6) {
 			return "<col=ff3000>";
 		}
 		if (i_2_ < -3) {
 			return "<col=ff7000>";
 		}
-		if ((i_2_ ^ 0xffffffff) > -1) {
+		if (i_2_ < 0) {
 			return "<col=ffb000>";
 		}
-		if ((i_2_ ^ 0xffffffff) < -10) {
+		if (i_2_ > 9) {
 			return "<col=00ff00>";
 		}
-		if ((i_2_ ^ 0xffffffff) < -7) {
+		if (i_2_ > 6) {
 			return "<col=40ff00>";
 		}
 		if (i_2_ > 3) {
@@ -45,14 +45,14 @@ public class Class368
 	
 	static final void method4078(byte[][] bs, byte b, Class277_Sub1 class277_sub1) {
 		anInt4543++;
-		for (int i = 0; (i ^ 0xffffffff) > (class277_sub1.anInt3535 ^ 0xffffffff); i++) {
+		for (int i = 0; class277_sub1.anInt3535 > i; i++) {
 			CacheNode_Sub16_Sub1.method2387((byte) -114);
-			for (int i_3_ = 0; (Node_Sub54.GAME_SCENE_WDITH >> 3 ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
-				for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (Class377_Sub1.GAME_SCENE_HEIGHT >> 3 ^ 0xffffffff); i_4_++) {
+			for (int i_3_ = 0; i_3_ < Node_Sub54.GAME_SCENE_WDITH >> 3; i_3_++) {
+				for (int i_4_ = 0; Class377_Sub1.GAME_SCENE_HEIGHT >> 3 > i_4_; i_4_++) {
 					int i_5_ = Class330.anIntArrayArrayArray4128[i][i_3_][i_4_];
-					if ((i_5_ ^ 0xffffffff) != 0) {
+					if (i_5_ != -1) {
 						int i_6_ = i_5_ >> 24 & 0x3;
-						if (!class277_sub1.aBoolean3516 || (i_6_ ^ 0xffffffff) == -1) {
+						if (!class277_sub1.aBoolean3516 || i_6_ == 0) {
 							int i_7_ = (0x6 & i_5_) >> 1;
 							int i_8_ = (i_5_ & 0xfff625) >> 14;
 							int i_9_ = i_5_ >> 3 & 0x7ff;

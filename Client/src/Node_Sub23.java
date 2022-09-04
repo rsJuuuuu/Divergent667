@@ -35,10 +35,10 @@ abstract class Node_Sub23 extends Node
 		}
 		if (Class290_Sub1.aGLSprite8062 != null && Class40.aGLSprite621 != null && Exception_Sub1.aGLSprite98 != null) {
 			int i_5_ = (i_1_ - 2 * Exception_Sub1.aGLSprite98.method1193()) / Class290_Sub1.aGLSprite8062.method1193();
-			for (int i_6_ = 0; (i_6_ ^ 0xffffffff) > (i_5_ ^ 0xffffffff); i_6_++)
+			for (int i_6_ = 0; i_5_ > i_6_; i_6_++)
 				Class290_Sub1.aGLSprite8062.setPosition(Exception_Sub1.aGLSprite98.method1193() + (i_0_ - -(Class290_Sub1.aGLSprite8062.method1193() * i_6_)), -Class290_Sub1.aGLSprite8062.getYOffset() + i_3_ + i);
 			int i_7_ = (i_3_ + (-i_2_ + -Exception_Sub1.aGLSprite98.getYOffset())) / Class40.aGLSprite621.getYOffset();
-			for (int i_8_ = 0; (i_7_ ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++) {
+			for (int i_8_ = 0; i_8_ < i_7_; i_8_++) {
 				Class40.aGLSprite621.setPosition(i_0_, i_2_ + (i + Class40.aGLSprite621.getYOffset() * i_8_));
 				Class286.aGLSprite3604.setPosition(-Class286.aGLSprite3604.method1193() + (i_1_ + i_0_), i - -i_2_ + Class40.aGLSprite621.getYOffset() * i_8_);
 			}
@@ -58,7 +58,7 @@ abstract class Node_Sub23 extends Node
 	static final void method2624(int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_) {
 		anInt7195++;
 		int i_16_ = -334 + i_10_;
-		if ((i_16_ ^ 0xffffffff) > -1) {
+		if (i_16_ < 0) {
 			i_16_ = 0;
 		} else if (i_16_ > 100) {
 			i_16_ = 100;
@@ -74,7 +74,7 @@ abstract class Node_Sub23 extends Node
 		int i_20_ = 0;
 		int i_21_ = 0;
 		int i_22_ = i_9_;
-		if ((i_18_ ^ 0xffffffff) != -1) {
+		if (i_18_ != 0) {
 			i_21_ = Class335.anIntArray4167[i_18_] * -i_22_ >> 14;
 			i_22_ = i_22_ * Class335.anIntArray4165[i_18_] >> 14;
 		}

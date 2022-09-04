@@ -15,7 +15,7 @@ public class Class55
 	static Class104 aClass104_833 = new Class104();
 	static int[] anIntArray834;
 	
-	static final void method558(byte b, String string) {
+	static void method558(byte b, String string) {
 		anInt830++;
 		Node_Sub13 node_sub13 = Node_Sub25_Sub1.method2660(0);
 		node_sub13.aPacket7113.writeByte(Plane.aClass133_3419.packetId);
@@ -25,7 +25,7 @@ public class Class55
 			anIntArray834 = null;
 		}
 		int i = node_sub13.aPacket7113.offset;
-		node_sub13.aPacket7113.writeShort(667);
+		node_sub13.aPacket7113.writeShort(Settings.REVISION);
 		int[] is = Class355.method4014(-5410, node_sub13);
 		int i_0_ = node_sub13.aPacket7113.offset;
 		node_sub13.aPacket7113.writeString(string);

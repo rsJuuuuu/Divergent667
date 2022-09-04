@@ -17,7 +17,7 @@ public class Node_Sub50 extends Node
 		}
 		anInt7627++;
 		Class253 class253 = r_Sub2.aClass253Array11063[99];
-		for (int i_6_ = 99; (i_6_ ^ 0xffffffff) < -1; i_6_--)
+		for (int i_6_ = 99; i_6_ > 0; i_6_--)
 			r_Sub2.aClass253Array11063[i_6_] = r_Sub2.aClass253Array11063[-1 + i_6_];
 		if (class253 == null) {
 			class253 = new Class253(i_5_, i_3_, string_0_, string, string_4_, string_2_, i, string_1_);

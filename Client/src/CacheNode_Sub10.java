@@ -26,7 +26,7 @@ public class CacheNode_Sub10 extends CacheNode
 		anInt9526++;
 		@SuppressWarnings("unused")
 		int i_1_ = 19 % ((43 - i) / 62);
-		if (anIntArray9518 == null || (i_0_ ^ 0xffffffff) > -1 || (i_0_ ^ 0xffffffff) < (anIntArray9518.length ^ 0xffffffff)) {
+		if (anIntArray9518 == null || i_0_ < 0 || anIntArray9518.length < i_0_) {
 			return null;
 		}
 		return Class240.method3028((byte) 31, anIntArray9518[i_0_]);
@@ -48,10 +48,10 @@ public class CacheNode_Sub10 extends CacheNode
 	
 	final int method2326(int i, boolean bool, int i_3_) {
 		anInt9523++;
-		if (anIntArray9518 == null || (i ^ 0xffffffff) > -1 || (i ^ 0xffffffff) < (anIntArray9518.length ^ 0xffffffff)) {
+		if (anIntArray9518 == null || i < 0 || anIntArray9518.length < i) {
 			return -1;
 		}
-		if (anIntArrayArray9515[i] == null || i_3_ < 0 || (i_3_ ^ 0xffffffff) < (anIntArrayArray9515[i].length ^ 0xffffffff)) {
+		if (anIntArrayArray9515[i] == null || i_3_ < 0 || anIntArrayArray9515[i].length < i_3_) {
 			return -1;
 		}
 		if (bool != true) {
@@ -86,7 +86,7 @@ public class CacheNode_Sub10 extends CacheNode
 		anInt9525++;
 		StringBuffer stringbuffer = new StringBuffer(80);
 		if (anIntArray9518 != null) {
-			for (int i = 0; (i ^ 0xffffffff) > (anIntArray9518.length ^ 0xffffffff); i++) {
+			for (int i = 0; anIntArray9518.length > i; i++) {
 				stringbuffer.append(aStringArray9529[i]);
 				stringbuffer.append(aClass109_9516.method1126(method2324(-28, i), buffer.method2244(Class240.method3028((byte) 9, anIntArray9518[i]).anInt1847, 8), anIntArrayArray9515[i], 1));
 			}
@@ -103,7 +103,7 @@ public class CacheNode_Sub10 extends CacheNode
 		if (anIntArray9518 != null && i >= 118) {
 			for (int i_5_ = 0; anIntArray9518.length > i_5_ && is.length > i_5_; i_5_++) {
 				int i_6_ = method2324(105, i_5_).anInt1846;
-				if ((i_6_ ^ 0xffffffff) < -1) {
+				if (i_6_ > 0) {
 					buffer.method2206((byte) 126, i_6_, (long) is[i_5_]);
 				}
 			}
@@ -137,33 +137,31 @@ public class CacheNode_Sub10 extends CacheNode
 	
 	private final void method2333(BufferedStream buffer, int i, int i_8_) {
 		anInt9517++;
-		if ((i_8_ ^ 0xffffffff) != -2) {
-			if ((i_8_ ^ 0xffffffff) == -3) {
-				int i_9_ = buffer.readUnsignedByte();
-				anIntArray9522 = new int[i_9_];
-				for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > (i_9_ ^ 0xffffffff); i_10_++)
-					anIntArray9522[i_10_] = buffer.readUnsignedShort();
-			} else if ((i_8_ ^ 0xffffffff) == -4) {
-				int i_11_ = buffer.readUnsignedByte();
-				anIntArrayArray9515 = new int[i_11_][];
-				anIntArray9518 = new int[i_11_];
-				for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (i_11_ ^ 0xffffffff); i_12_++) {
-					int i_13_ = buffer.readUnsignedShort();
-					Class151 class151 = Class240.method3028((byte) 84, i_13_);
-					if (class151 != null) {
-						anIntArray9518[i_12_] = i_13_;
-						anIntArrayArray9515[i_12_] = new int[class151.anInt1842];
-						for (int i_14_ = 0; (class151.anInt1842 ^ 0xffffffff) < (i_14_ ^ 0xffffffff); i_14_++)
-							anIntArrayArray9515[i_12_][i_14_] = buffer.readUnsignedShort();
-					}
-				}
-			} else if (i_8_ == 4) {
-				aBoolean9521 = false;
-			}
-		} else {
+		if (i_8_ == 1) {
 			aStringArray9529 = Class106.method1120((byte) -102, buffer.readString(), '<');
-		}
-		if (i != 0) {
+		} else if (i_8_ == 2) {
+            int i_9_ = buffer.readUnsignedByte();
+            anIntArray9522 = new int[i_9_];
+            for (int i_10_ = 0; i_9_ > i_10_; i_10_++)
+                anIntArray9522[i_10_] = buffer.readUnsignedShort();
+        } else if (i_8_ == 3) {
+            int i_11_ = buffer.readUnsignedByte();
+            anIntArrayArray9515 = new int[i_11_][];
+            anIntArray9518 = new int[i_11_];
+            for (int i_12_ = 0; i_11_ > i_12_; i_12_++) {
+                int i_13_ = buffer.readUnsignedShort();
+                Class151 class151 = Class240.method3028((byte) 84, i_13_);
+                if (class151 != null) {
+                    anIntArray9518[i_12_] = i_13_;
+                    anIntArrayArray9515[i_12_] = new int[class151.anInt1842];
+                    for (int i_14_ = 0; i_14_ < class151.anInt1842; i_14_++)
+                        anIntArrayArray9515[i_12_][i_14_] = buffer.readUnsignedShort();
+                }
+            }
+        } else if (i_8_ == 4) {
+            aBoolean9521 = false;
+        }
+        if (i != 0) {
 			method2326(21, true, -113);
 		}
 	}

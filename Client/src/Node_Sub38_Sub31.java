@@ -107,7 +107,7 @@ public class Node_Sub38_Sub31 extends Node_Sub38
 		anInt10423++;
 		int[] is = aClass146_7460.method1645(27356, i_8_);
 		if (aClass146_7460.aBoolean1819) {
-			for (int i_9_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_9_ ^ 0xffffffff); i_9_++) {
+			for (int i_9_ = 0; i_9_ < Class339_Sub7.anInt8728; i_9_++) {
 				method2891(i_9_, i_8_, (byte) -48);
 				int[] is_10_ = this.method2786(Node_Sub38_Sub9.anInt10192, 0, 0);
 				is[i_9_] = is_10_[Node_Sub38_Sub3.anInt10102];
@@ -126,7 +126,7 @@ public class Node_Sub38_Sub31 extends Node_Sub38
 			Class241 class241 = Class240.aSignLink2946.method3631(true, "", (byte) 122);
 			while (class241.anInt2953 == 0)
 				Class262_Sub22.method3208(1L, false);
-			if ((class241.anInt2953 ^ 0xffffffff) == -2) {
+			if (class241.anInt2953 == 1) {
 				fileondisk = (FileOnDisk) class241.anObject2956;
 				BufferedStream buffer = Class213.aNode_Sub27_2512.method2696(11665);
 				fileondisk.method1102((byte) 76, buffer.buffer, 0, buffer.offset);

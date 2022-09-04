@@ -76,12 +76,12 @@ public class Class362
 	
 	static final void method4053(int i, int i_6_, int i_7_, byte b, int i_8_) {
 		anInt4499++;
-		if ((Class320_Sub20.anInt8397 ^ 0xffffffff) == -2) {
+		if (Class320_Sub20.anInt8397 == 1) {
 			int i_9_ = i_7_ / StandardSprite.anInt8946;
 			int i_10_ = i_8_ / StandardSprite.anInt8946;
 			int i_11_ = i / aa_Sub3.anInt5493;
 			int i_12_ = i_6_ / aa_Sub3.anInt5493;
-			if ((i_9_ ^ 0xffffffff) > (Class117.anInt1479 ^ 0xffffffff) && (i_10_ ^ 0xffffffff) <= -1 && (i_11_ ^ 0xffffffff) > (Class290_Sub11.anInt8181 ^ 0xffffffff) && (i_12_ ^ 0xffffffff) <= -1) {
+			if (Class117.anInt1479 > i_9_ && i_10_ >= 0 && Class290_Sub11.anInt8181 > i_11_ && i_12_ >= 0) {
 				if (i_9_ < 0) {
 					i_9_ = 0;
 				}
@@ -91,7 +91,7 @@ public class Class362
 				if (Class290_Sub11.anInt8181 <= i_12_) {
 					i_12_ = -1 + Class290_Sub11.anInt8181;
 				}
-				if ((Class117.anInt1479 ^ 0xffffffff) >= (i_10_ ^ 0xffffffff)) {
+				if (i_10_ >= Class117.anInt1479) {
 					i_10_ = -1 + Class117.anInt1479;
 				}
 				int i_13_ = 25 / ((b - 17) / 36);

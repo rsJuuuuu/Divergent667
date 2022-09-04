@@ -26,7 +26,7 @@ public class Class194_Sub1_Sub1 extends Class194_Sub1
 		for (int i = 0; class261s.length > i; i++) {
 			Class261[][] class261s_0_ = class261s[i];
 			for (int i_1_ = 0; i_1_ < class261s_0_.length; i_1_++) {
-				for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > (class261s_0_[i_1_].length ^ 0xffffffff); i_2_++) {
+				for (int i_2_ = 0; class261s_0_[i_1_].length > i_2_; i_2_++) {
 					Class261 class261 = class261s_0_[i_1_][i_2_];
 					if (class261 != null) {
 						if (class261.anAnimable_Sub1_3317 instanceof Interface19) {

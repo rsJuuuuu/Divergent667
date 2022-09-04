@@ -23,10 +23,10 @@ public class Node_Sub3 extends Node
 			method2171(-24, 50, (byte) 32, null, 92, -119, -58);
 		}
 		IComponentDefinitions widget = Class76.method771((byte) 107, i_1_);
-		if ((i_0_ ^ 0xffffffff) == 0) {
+		if (i_0_ == -1) {
 			return widget;
 		}
-		if (widget == null || widget.aWidgetArray4804 == null || (i_0_ ^ 0xffffffff) <= (widget.aWidgetArray4804.length ^ 0xffffffff)) {
+		if (widget == null || widget.aWidgetArray4804 == null || widget.aWidgetArray4804.length <= i_0_) {
 			return null;
 		}
 		return widget.aWidgetArray4804[i_0_];
@@ -54,10 +54,10 @@ public class Node_Sub3 extends Node
 		if (b >= -124) {
 			method2171(-69, -122, (byte) -82, null, -41, 6, 98);
 		}
-		if ((Class233.anInt2786 ^ 0xffffffff) > -101) {
+		if (Class233.anInt2786 < 100) {
 			return false;
 		}
-		if (i_6_ == i_4_ && (i_5_ ^ 0xffffffff) == (i ^ 0xffffffff)) {
+		if (i_6_ == i_4_ && i == i_5_) {
 			if (!Class313.method3649(true, i, i_7_, i_6_)) {
 				return false;
 			}
@@ -68,7 +68,7 @@ public class Node_Sub3 extends Node
 			return false;
 		}
 		for (int i_8_ = i_6_; i_8_ <= i_4_; i_8_++) {
-			for (int i_9_ = i; (i_5_ ^ 0xffffffff) <= (i_9_ ^ 0xffffffff); i_9_++) {
+			for (int i_9_ = i; i_9_ <= i_5_; i_9_++) {
 				if (Class240.anIntArrayArrayArray2948[i_7_][i_8_][i_9_] == -Class359.anInt4465) {
 					return false;
 				}

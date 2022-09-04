@@ -29,21 +29,21 @@ public class CacheNode_Sub6 extends CacheNode
 	
 	static final String method2313(byte b, long l) {
 		anInt9481++;
-		if ((l ^ 0xffffffffffffffffL) >= -1L || l >= 6582952005840035281L) {
+		if (l <= 0 || l >= 6582952005840035281L) {
 			return null;
 		}
 		if (l % 37L == 0L) {
 			return null;
 		}
 		int i = 0;
-		for (long l_1_ = l; (l_1_ ^ 0xffffffffffffffffL) != -1L; l_1_ /= 37L)
+		for (long l_1_ = l; l_1_ != 0; l_1_ /= 37L)
 			i++;
 		StringBuffer stringbuffer = new StringBuffer(i);
-		while ((l ^ 0xffffffffffffffffL) != -1L) {
+		while (l != 0) {
 			long l_3_ = l;
 			l /= 37L;
 			char c = Class174.aCharArray2095[(int) (l_3_ + -(37L * l))];
-			if ((c ^ 0xffffffff) == -96) {
+			if (c == 95) {
 				int i_4_ = -1 + stringbuffer.length();
 				stringbuffer.setCharAt(i_4_, Character.toUpperCase(stringbuffer.charAt(i_4_)));
 				c = '\u00a0';
@@ -59,7 +59,7 @@ public class CacheNode_Sub6 extends CacheNode
 		if (b >= -93) {
 			aClass57_9480 = null;
 		}
-		if ((i ^ 0xffffffff) == -3) {
+		if (i == 2) {
 			anInt9479 = buffer.readUnsignedShort();
 		}
 		anInt9484++;
@@ -71,7 +71,7 @@ public class CacheNode_Sub6 extends CacheNode
 		}
 		for (;;) {
 			int i_5_ = buffer.readUnsignedByte();
-			if ((i_5_ ^ 0xffffffff) == -1) {
+			if (i_5_ == 0) {
 				break;
 			}
 			method2314(i_5_, buffer, (byte) -110);

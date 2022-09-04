@@ -16,7 +16,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15
 			return false;
 		}
 		anInt9771++;
-        return (0x400 & i_1_ ^ 0xffffffff) != -1;
+        return (0x400 & i_1_) != 0;
     }
 	
 	final void method2556(ClanChat clanchat, int i) {

@@ -31,15 +31,15 @@ abstract class Class144
 		Node_Sub38_Sub7.anInt10153 = Class61.anInt898 = -1;
 		anInt1783++;
 		Animable_Sub2.updateGameSceneSize(0);
-		for (int i_2_ = i; (i_2_ ^ 0xffffffff) > -5; i_2_++) {
-			for (int i_3_ = 0; (Node_Sub54.GAME_SCENE_WDITH >> 3 ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++) {
-				for (int i_4_ = 0; (i_4_ ^ 0xffffffff) > (Class377_Sub1.GAME_SCENE_HEIGHT >> 3 ^ 0xffffffff); i_4_++)
+		for (int i_2_ = i; i_2_ < 4; i_2_++) {
+			for (int i_3_ = 0; i_3_ < Node_Sub54.GAME_SCENE_WDITH >> 3; i_3_++) {
+				for (int i_4_ = 0; Class377_Sub1.GAME_SCENE_HEIGHT >> 3 > i_4_; i_4_++)
 					Class330.anIntArrayArrayArray4128[i_2_][i_3_][i_4_] = -1;
 			}
 		}
 		for (Node_Sub28 node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3613(65280); node_sub28 != null; node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3620(i + 16776960)) {
 			int i_5_ = node_sub28.anInt7323;
-			boolean bool = (i_5_ & 0x1 ^ 0xffffffff) == -2;
+			boolean bool = (i_5_ & 0x1) == 1;
 			int i_6_ = node_sub28.anInt7325 >> 3;
 			int i_7_ = node_sub28.anInt7326 >> 3;
 			int i_8_ = node_sub28.anInt7319;
@@ -52,24 +52,20 @@ abstract class Class144
 			int i_15_ = 0;
 			int i_16_ = 1;
 			int i_17_ = 1;
-			if (i_5_ != 1) {
-				if (i_5_ != 2) {
-					if ((i_5_ ^ 0xffffffff) == -4) {
-						i_16_ = 1;
-						i_14_ = i_13_ - 1;
-						i_17_ = -1;
-					}
-				} else {
-					i_17_ = -1;
-					i_16_ = -1;
-					i_15_ = i_12_ - 1;
-					i_14_ = i_13_ + -1;
-				}
-			} else {
+			if (i_5_ == 1) {
 				i_16_ = -1;
 				i_15_ = i_12_ + -1;
+			} else if (i_5_ == 2) {
+				i_17_ = -1;
+				i_16_ = -1;
+				i_15_ = i_12_ - 1;
+				i_14_ = i_13_ + -1;
+			} else if (i_5_ == 3) {
+				i_16_ = 1;
+				i_14_ = i_13_ - 1;
+				i_17_ = -1;
 			}
-			for (int i_18_ = i_7_; i_13_ + i_7_ > i_18_; i_18_++) {
+            for (int i_18_ = i_7_; i_13_ + i_7_ > i_18_; i_18_++) {
 				int i_19_ = i_15_;
 				int i_20_ = i_6_;
 				while (i_20_ < i_6_ - -i_12_) {
@@ -101,12 +97,12 @@ abstract class Class144
 			int i_22_ = node_sub28.anInt7325 >>> -2127211805;
 			int i_23_ = node_sub28.anInt7326 >>> 3;
 			int i_24_ = node_sub28.anInt7320 + i_22_;
-			if ((i_24_ & 0x7 ^ 0xffffffff) == -1) {
+			if ((i_24_ & 0x7) == 0) {
 				i_24_--;
 			}
 			i_24_ >>>= 3;
 			int i_25_ = i_23_ - -node_sub28.anInt7328;
-			if ((0x7 & i_25_ ^ 0xffffffff) == -1) {
+			if ((0x7 & i_25_) == 0) {
 				i_25_--;
 			}
 			i_25_ >>>= 3;
@@ -115,7 +111,7 @@ abstract class Class144
 				for (int i_27_ = i_23_ >>> 3; i_27_ <= i_25_; i_27_++) {
 					int i_28_ = i_26_ << 8 | i_27_;
 					for (int i_29_ = 0; i_29_ < i_21_; i_29_++) {
-						if ((i_28_ ^ 0xffffffff) == (Class262_Sub1.MAP_REGION_HASHES[i_29_] ^ 0xffffffff)) {
+						if (Class262_Sub1.MAP_REGION_HASHES[i_29_] == i_28_) {
 							continue while_142_;
 						}
 					}

@@ -54,7 +54,7 @@ public class Class39
 			anInt590++;
 			for (;;) {
 				int i = buffer.readUnsignedByte();
-				if ((i ^ 0xffffffff) == -1) {
+				if (i == 0) {
 					break;
 				}
 				method417(i, 24, buffer);
@@ -89,50 +89,38 @@ public class Class39
 		float f_14_ = fs_10_[8] * (float) i_6_ + ((float) i_4_ * fs_10_[7] + fs_10_[6] * (float) i_1_);
 		float f_15_;
 		float f_16_;
-		if (i != 0) {
-			if (i != 1) {
-				if ((i ^ 0xffffffff) != -3) {
-					if (i != 3) {
-						if ((i ^ 0xffffffff) != -5) {
-							f_15_ = f_2_ + -f_13_ + 0.5F;
-							f_16_ = 0.5F + (-f_14_ + f_9_);
-						} else {
-							f_16_ = f_9_ + f_14_ + 0.5F;
-							f_15_ = f_2_ + -f_13_ + 0.5F;
-						}
-					} else {
-						f_16_ = 0.5F + (f_12_ + f);
-						f_15_ = 0.5F + (-f_13_ + f_2_);
-					}
-				} else {
-					f_16_ = f + -f_12_ + 0.5F;
-					f_15_ = 0.5F + (-f_13_ + f_2_);
-				}
-			} else {
-				f_16_ = 0.5F + (f + f_12_);
-				f_15_ = 0.5F + (f_9_ + f_14_);
-			}
-		} else {
+		if (i == 0) {
 			f_15_ = 0.5F + (-f_14_ + f_9_);
 			f_16_ = 0.5F + (f_12_ + f);
-		}
-		if ((i_11_ ^ 0xffffffff) != -2) {
-			if (i_11_ != 2) {
-				if ((i_11_ ^ 0xffffffff) == -4) {
-					float f_17_ = f_16_;
-					f_16_ = f_15_;
-					f_15_ = -f_17_;
-				}
-			} else {
-				f_15_ = -f_15_;
-				f_16_ = -f_16_;
-			}
-		} else {
-			float f_18_ = f_16_;
-			f_16_ = -f_15_;
-			f_15_ = f_18_;
-		}
-		fs[1] = f_15_;
+		} else if (i == 1) {
+            f_16_ = 0.5F + (f + f_12_);
+            f_15_ = 0.5F + (f_9_ + f_14_);
+        } else if (i == 2) {
+            f_16_ = f + -f_12_ + 0.5F;
+            f_15_ = 0.5F + (-f_13_ + f_2_);
+        } else if (i == 3) {
+            f_16_ = 0.5F + (f_12_ + f);
+            f_15_ = 0.5F + (-f_13_ + f_2_);
+        } else if (i == 4) {
+            f_16_ = f_9_ + f_14_ + 0.5F;
+            f_15_ = f_2_ + -f_13_ + 0.5F;
+        } else {
+            f_15_ = f_2_ + -f_13_ + 0.5F;
+            f_16_ = 0.5F + (-f_14_ + f_9_);
+        }
+        if (i_11_ == 1) {
+            float f_18_ = f_16_;
+            f_16_ = -f_15_;
+            f_15_ = f_18_;
+        } else if (i_11_ == 2) {
+            f_15_ = -f_15_;
+            f_16_ = -f_16_;
+        } else if (i_11_ == 3) {
+            float f_17_ = f_16_;
+            f_16_ = f_15_;
+            f_15_ = -f_17_;
+        }
+        fs[1] = f_15_;
 		fs[0] = f_16_;
 	}
 	
@@ -157,53 +145,7 @@ public class Class39
 				method415(99, null, null, 54);
 			}
 			anInt571++;
-			if (!(anObject589 instanceof HashTable)) {
-				String[] strings = (String[]) anObject589;
-				int i_23_ = Class320_Sub19.method3753(strings.length, -729073628);
-				aHashTable579 = new HashTable(i_23_);
-				HashTable hashtable = new HashTable(i_23_);
-				for (int i_24_ = 0; (strings.length ^ 0xffffffff) < (i_24_ ^ 0xffffffff); i_24_++) {
-					if (strings[i_24_] != null) {
-						String string = strings[i_24_];
-						long l = Class113.method1153(1, string);
-						Node_Sub42 node_sub42;
-						for (node_sub42 = (Node_Sub42) hashtable.method1518(3512, l); node_sub42 != null; node_sub42 = (Node_Sub42) hashtable.method1524((byte) 84)) {
-							if (node_sub42.aString7522.equals(string)) {
-								break;
-							}
-						}
-						if (node_sub42 == null) {
-							node_sub42 = new Node_Sub42(string, 0);
-							hashtable.method1515(l, node_sub42, -126);
-						}
-						node_sub42.anInt7521++;
-					}
-				}
-				for (int i_25_ = 0; (strings.length ^ 0xffffffff) < (i_25_ ^ 0xffffffff); i_25_++) {
-					if (strings[i_25_] != null) {
-						String string = strings[i_25_];
-						long l = Class113.method1153(1, string);
-						Node_Sub20 node_sub20;
-						for (node_sub20 = (Node_Sub20) aHashTable579.method1518(3512, l); node_sub20 != null; node_sub20 = (Node_Sub20) aHashTable579.method1524((byte) 84)) {
-							if (node_sub20.aString7174.equals(string)) {
-								break;
-							}
-						}
-						Node_Sub42 node_sub42;
-						for (node_sub42 = (Node_Sub42) hashtable.method1518(3512, l); node_sub42 != null; node_sub42 = (Node_Sub42) hashtable.method1524((byte) 84)) {
-							if (node_sub42.aString7522.equals(string)) {
-								break;
-							}
-						}
-						int i_26_ = node_sub42.anInt7521--;
-						if (node_sub20 == null) {
-							node_sub20 = new Node_Sub20(string, i_26_);
-							aHashTable579.method1515(l, node_sub20, -124);
-						}
-						node_sub20.anIntArray7177[node_sub20.anIntArray7177.length + -i_26_] = i_25_;
-					}
-				}
-			} else {
+			if (anObject589 instanceof HashTable) {
 				HashTable hashtable = (HashTable) anObject589;
 				aHashTable579 = new HashTable(hashtable.method1522(false));
 				HashTable hashtable_27_ = new HashTable(hashtable.method1522(false));
@@ -242,8 +184,54 @@ public class Class39
 					}
 					node_sub20.anIntArray7177[node_sub20.anIntArray7177.length - i_28_] = (int) node_sub18.aLong2797;
 				}
+			} else {
+				String[] strings = (String[]) anObject589;
+				int i_23_ = Class320_Sub19.method3753(strings.length, -729073628);
+				aHashTable579 = new HashTable(i_23_);
+				HashTable hashtable = new HashTable(i_23_);
+				for (int i_24_ = 0; i_24_ < strings.length; i_24_++) {
+					if (strings[i_24_] != null) {
+						String string = strings[i_24_];
+						long l = Class113.method1153(1, string);
+						Node_Sub42 node_sub42;
+						for (node_sub42 = (Node_Sub42) hashtable.method1518(3512, l); node_sub42 != null; node_sub42 = (Node_Sub42) hashtable.method1524((byte) 84)) {
+							if (node_sub42.aString7522.equals(string)) {
+								break;
+							}
+						}
+						if (node_sub42 == null) {
+							node_sub42 = new Node_Sub42(string, 0);
+							hashtable.method1515(l, node_sub42, -126);
+						}
+						node_sub42.anInt7521++;
+					}
+				}
+				for (int i_25_ = 0; i_25_ < strings.length; i_25_++) {
+					if (strings[i_25_] != null) {
+						String string = strings[i_25_];
+						long l = Class113.method1153(1, string);
+						Node_Sub20 node_sub20;
+						for (node_sub20 = (Node_Sub20) aHashTable579.method1518(3512, l); node_sub20 != null; node_sub20 = (Node_Sub20) aHashTable579.method1524((byte) 84)) {
+							if (node_sub20.aString7174.equals(string)) {
+								break;
+							}
+						}
+						Node_Sub42 node_sub42;
+						for (node_sub42 = (Node_Sub42) hashtable.method1518(3512, l); node_sub42 != null; node_sub42 = (Node_Sub42) hashtable.method1524((byte) 84)) {
+							if (node_sub42.aString7522.equals(string)) {
+								break;
+							}
+						}
+						int i_26_ = node_sub42.anInt7521--;
+						if (node_sub20 == null) {
+							node_sub20 = new Node_Sub20(string, i_26_);
+							aHashTable579.method1515(l, node_sub20, -124);
+						}
+						node_sub20.anIntArray7177[node_sub20.anIntArray7177.length + -i_26_] = i_25_;
+					}
+				}
 			}
-		} catch (RuntimeException runtimeexception) {
+        } catch (RuntimeException runtimeexception) {
 			throw Class126.method1537(runtimeexception, "bt.J(" + i + ')');
 		}
 	}
@@ -264,7 +252,7 @@ public class Class39
 			return anInt583;
 		}
 		Integer[] integers = (Integer[]) anObject589;
-		if ((i ^ 0xffffffff) > -1 || (i ^ 0xffffffff) <= (integers.length ^ 0xffffffff)) {
+		if (i < 0 || integers.length <= i) {
 			return anInt583;
 		}
 		Integer integer = integers[i];
@@ -298,7 +286,7 @@ public class Class39
 			return aString570;
 		}
 		String[] strings = (String[]) anObject589;
-		if (i_29_ < 0 || (strings.length ^ 0xffffffff) >= (i_29_ ^ 0xffffffff)) {
+		if (i_29_ < 0 || i_29_ >= strings.length) {
 			return aString570;
 		}
 		String string = strings[i_29_];
@@ -330,9 +318,9 @@ public class Class39
 			boolean bool = false;
 			int i_31_ = Class178.LOCAL_PLAYERS_INDEXES_COUNT;
 			int[] is = Class66_Sub1.LOCAL_PLAYERS_INDEXES;
-			for (int i_32_ = 0; (i_31_ ^ 0xffffffff) < (i_32_ ^ 0xffffffff); i_32_++) {
+			for (int i_32_ = 0; i_32_ < i_31_; i_32_++) {
 				Player player = Class270_Sub2.LOCAL_PLAYERS[is[i_32_]];
-				if (player.username != null && player.username.equalsIgnoreCase(string) && (Class295.myPlayer == player && (0x10 & Class200_Sub2.anInt4943 ^ 0xffffffff) != -1 || (Class200_Sub2.anInt4943 & 0x8) != 0)) {
+				if (player.username != null && player.username.equalsIgnoreCase(string) && (Class295.myPlayer == player && (0x10 & Class200_Sub2.anInt4943) != 0 || (Class200_Sub2.anInt4943 & 0x8) != 0)) {
 					Class270.anInt3475++;
 					Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class355.aClass318_4396, Class218.aClass123_2566.anIsaacCipher1571);
 					node_sub13.aPacket7113.writeShortLE(is[i_32_]);
@@ -357,7 +345,7 @@ public class Class39
 	
 	static final void method415(int i, String string, String string_33_, int i_34_) {
 		anInt582++;
-		if ((string_33_.length() ^ 0xffffffff) >= -321 && Node_Sub38_Sub23.method2866(false)) {
+		if (string_33_.length() <= 320 && Node_Sub38_Sub23.method2866(false)) {
 			Class198.method2005((byte) -37);
 			Node_Sub38_Sub23.anInt10347 = i;
 			Node_Sub5.password = string;
@@ -383,52 +371,48 @@ public class Class39
 	
 	private final void method417(int i, int i_37_, BufferedStream buffer) {
 		anInt576++;
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			aChar592 = Class20_Sub1.method294(buffer.readByte(), (byte) 123);
-		} else if ((i ^ 0xffffffff) != -3) {
-			if (i == 3) {
-				aString570 = buffer.readString();
-			} else if (i != 4) {
-				if ((i ^ 0xffffffff) == -6 || i == 6) {
-					anInt586 = buffer.readUnsignedShort();
-					HashTable hashtable = new HashTable(Class320_Sub19.method3753(anInt586, -729073628));
-					for (int i_38_ = 0; i_38_ < anInt586; i_38_++) {
-						int i_39_ = buffer.readInt();
-						Node node;
-						if (i != 5) {
-							node = new Node_Sub32(buffer.readInt());
-						} else {
-							node = new Node_Sub18(buffer.readString());
-						}
-						hashtable.method1515((long) i_39_, node, i_37_ + -147);
-					}
-					anObject589 = hashtable;
-				} else if (i == 7) {
-					int i_40_ = buffer.readUnsignedShort();
-					anInt586 = buffer.readUnsignedShort();
-					String[] strings = new String[i_40_];
-					for (int i_41_ = 0; i_41_ < anInt586; i_41_++) {
-						int i_42_ = buffer.readUnsignedShort();
-						strings[i_42_] = buffer.readString();
-					}
-					anObject589 = strings;
-				} else if ((i ^ 0xffffffff) == -9) {
-					int i_43_ = buffer.readUnsignedShort();
-					anInt586 = buffer.readUnsignedShort();
-					Integer[] integers = new Integer[i_43_];
-					for (int i_44_ = 0; i_44_ < anInt586; i_44_++) {
-						int i_45_ = buffer.readUnsignedShort();
-						integers[i_45_] = new Integer(buffer.readInt());
-					}
-					anObject589 = integers;
-				}
-			} else {
-				anInt583 = buffer.readInt();
-			}
-		} else {
+		} else if (i == 2) {
 			aChar587 = Class20_Sub1.method294(buffer.readByte(), (byte) 127);
-		}
-		if (i_37_ != 24) {
+		} else if (i == 3) {
+            aString570 = buffer.readString();
+        } else if (i == 4) {
+            anInt583 = buffer.readInt();
+        } else if (i == 5 || i == 6) {
+            anInt586 = buffer.readUnsignedShort();
+            HashTable hashtable = new HashTable(Class320_Sub19.method3753(anInt586, -729073628));
+            for (int i_38_ = 0; i_38_ < anInt586; i_38_++) {
+                int i_39_ = buffer.readInt();
+                Node node;
+                if (i == 5) {
+                    node = new Node_Sub18(buffer.readString());
+                } else {
+                    node = new Node_Sub32(buffer.readInt());
+                }
+                hashtable.method1515((long) i_39_, node, i_37_ + -147);
+            }
+            anObject589 = hashtable;
+        } else if (i == 7) {
+            int i_40_ = buffer.readUnsignedShort();
+            anInt586 = buffer.readUnsignedShort();
+            String[] strings = new String[i_40_];
+            for (int i_41_ = 0; i_41_ < anInt586; i_41_++) {
+                int i_42_ = buffer.readUnsignedShort();
+                strings[i_42_] = buffer.readString();
+            }
+            anObject589 = strings;
+        } else if (i == 8) {
+            int i_43_ = buffer.readUnsignedShort();
+            anInt586 = buffer.readUnsignedShort();
+            Integer[] integers = new Integer[i_43_];
+            for (int i_44_ = 0; i_44_ < anInt586; i_44_++) {
+                int i_45_ = buffer.readUnsignedShort();
+                integers[i_45_] = new Integer(buffer.readInt());
+            }
+            anObject589 = integers;
+        }
+        if (i_37_ != 24) {
 			method417(55, -60, null);
 		}
 	}
@@ -470,7 +454,7 @@ public class Class39
 					int i = Class320_Sub19.method3753(integers.length, -729073628);
 					aHashTable579 = new HashTable(i);
 					HashTable hashtable = new HashTable(i);
-					for (int i_48_ = 0; (i_48_ ^ 0xffffffff) > (integers.length ^ 0xffffffff); i_48_++) {
+					for (int i_48_ = 0; integers.length > i_48_; i_48_++) {
 						if (integers[i_48_] != null) {
 							int i_49_ = integers[i_48_].intValue();
 							Node_Sub32 node_sub32 = (Node_Sub32) hashtable.method1518(3512, (long) i_49_);

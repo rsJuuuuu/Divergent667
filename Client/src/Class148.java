@@ -16,7 +16,7 @@ public class Class148
 		for (int i_1_ = i; i_1_ < i_0_; i_1_++)
 			entitynode_sub6.anEntityNode_Sub5Array5995[i_1_].aBoolean5987 = false;
 		synchronized (Class30.aClass103Array494) {
-			if (i_0_ < Class30.aClass103Array494.length && (Class89.anIntArray1195[i_0_] ^ 0xffffffff) > -201) {
+			if (i_0_ < Class30.aClass103Array494.length && Class89.anIntArray1195[i_0_] < 200) {
 				Class30.aClass103Array494[i_0_].method1110(false, entitynode_sub6);
 				Class89.anIntArray1195[i_0_]++;
 			}

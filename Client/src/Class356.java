@@ -28,18 +28,16 @@ public class Class356
 		Class173.method1800((byte) -16, Node_Sub52.aGLSpriteArray7655);
 		Class320_Sub21.method3764(-95);
 		Class320_Sub12.method3728(0);
-		if ((Class151.anInt1843 ^ 0xffffffff) == -4) {
+		if (Class151.anInt1843 == 3) {
 			Class48.method478(4, (byte) 122);
-		} else if (Class151.anInt1843 != 7) {
-			if ((Class151.anInt1843 ^ 0xffffffff) == -10) {
-				Class48.method478(10, (byte) 107);
-			} else if (Class151.anInt1843 == 11) {
-				Class48.method478(12, (byte) 119);
-			} else if ((Class151.anInt1843 ^ 0xffffffff) == -2 || (Class151.anInt1843 ^ 0xffffffff) == -3) {
-				Animable_Sub1.method825((byte) -68);
-			}
-		} else {
+		} else if (Class151.anInt1843 == 7) {
 			Class48.method478(8, (byte) 117);
-		}
-	}
+		} else if (Class151.anInt1843 == 9) {
+            Class48.method478(10, (byte) 107);
+        } else if (Class151.anInt1843 == 11) {
+            Class48.method478(12, (byte) 119);
+        } else if (Class151.anInt1843 == 1 || Class151.anInt1843 == 2) {
+            Animable_Sub1.method825((byte) -68);
+        }
+    }
 }

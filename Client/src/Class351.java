@@ -36,7 +36,7 @@ public class Class351
 		if(!f.exists())
 			f.mkdirs();
 		for (int i_2_ = 0; i_2_ < 2; i_2_++) {
-				for (int i_4_ = 0; (strings.length ^ 0xffffffff) < (i_4_ ^ 0xffffffff); i_4_++) {
+				for (int i_4_ = 0; i_4_ < strings.length; i_4_++) {
 					String string_5_ = strings[i_4_] + "/" + (string == null ? "" : string + "/") + string_0_;
 					RandomAccessFile randomaccessfile = null;
 					try {

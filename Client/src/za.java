@@ -26,7 +26,7 @@ abstract class za extends Node
 				if (bool != true) {
 					method2991(null, false);
 				}
-				for (int i = 0; (i ^ 0xffffffff) > (Class235.anInt5122 ^ 0xffffffff); i++) {
+				for (int i = 0; Class235.anInt5122 > i; i++) {
 					String string_1_ = Class338.aStringArray4197[i];
 					String string_2_ = Node_Sub25_Sub3.method2671(-13472, string_1_);
 					if (Class310.method3601(string, string_2_, 30195, string_1_, string_0_)) {

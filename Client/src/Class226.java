@@ -33,7 +33,7 @@ public class Class226
 			if (aCacheNode_Sub15_2683 == null) {
 				return false;
 			}
-			if (class48.aBoolean714 && (i ^ 0xffffffff) != 0 && (is.length ^ 0xffffffff) < (i ^ 0xffffffff)) {
+			if (class48.aBoolean714 && i != -1 && i < is.length) {
 				anInt2688 = is[i];
 				aCacheNode_Sub15_2687 = class37.method399(anInt2688 >> 16, -122);
 				anInt2688 &= 0xffff;
@@ -97,7 +97,7 @@ public class Class226
 		anInt2682++;
 		for (int i_6_ = 0; i_6_ < Node_Sub11.anInt7105; i_6_++) {
 			Rectangle rectangle = Node_Sub38_Sub28.aRectangleArray10404[i_6_];
-			if (i < rectangle.x - -rectangle.width && (rectangle.x ^ 0xffffffff) > (i_3_ + i ^ 0xffffffff) && (rectangle.height + rectangle.y ^ 0xffffffff) < (i_2_ ^ 0xffffffff) && (rectangle.y ^ 0xffffffff) > (i_2_ + i_4_ ^ 0xffffffff)) {
+			if (i < rectangle.x - -rectangle.width && i_3_ + i > rectangle.x && i_2_ < rectangle.height + rectangle.y && i_2_ + i_4_ > rectangle.y) {
 				Class320_Sub21.aBooleanArray8403[i_6_] = true;
 			}
 		}

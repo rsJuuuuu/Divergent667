@@ -19,23 +19,19 @@ public class Class47
 		aLong684 = buffer.readLong();
 		for (int i_0_ = buffer.readUnsignedByte(); i_0_ != 0; i_0_ = buffer.readUnsignedByte()) {
 			Node_Sub36 node_sub36;
-			if (i_0_ != 1) {
-				if (i_0_ != 4) {
-					if ((i_0_ ^ 0xffffffff) == -4) {
-						node_sub36 = new Node_Sub36_Sub3();
-					} else {
-						if (i_0_ != 2) {
-							throw new RuntimeException("Unrecognised ClanChannelDelta type in decode()");
-						}
-						node_sub36 = new Node_Sub36_Sub4();
-					}
-				} else {
-					node_sub36 = new Node_Sub36_Sub2();
-				}
-			} else {
+			if (i_0_ == 1) {
 				node_sub36 = new Node_Sub36_Sub1();
-			}
-			node_sub36.method2756(buffer, -1);
+			} else if (i_0_ == 4) {
+                node_sub36 = new Node_Sub36_Sub2();
+            } else if (i_0_ == 3) {
+                node_sub36 = new Node_Sub36_Sub3();
+            } else {
+                if (i_0_ != 2) {
+                    throw new RuntimeException("Unrecognised ClanChannelDelta type in decode()");
+                }
+                node_sub36 = new Node_Sub36_Sub4();
+            }
+            node_sub36.method2756(buffer, -1);
 			aClass312_686.method3625((byte) -54, node_sub36);
 		}
 		if (i != 17) {

@@ -10,7 +10,7 @@ public class Class280
 	static final int method3378(int i, int i_0_, byte b, int i_1_) {
 		anInt3569++;
 		i_1_ &= 0x3;
-		if ((i_1_ ^ 0xffffffff) == -1) {
+		if (i_1_ == 0) {
 			return i;
 		}
 		if (i_1_ == 1) {
@@ -19,7 +19,7 @@ public class Class280
 		if (b < 124) {
 			method3378(82, -34, (byte) -4, 119);
 		}
-		if ((i_1_ ^ 0xffffffff) == -3) {
+		if (i_1_ == 2) {
 			return 7 + -i;
 		}
 		return i_0_;

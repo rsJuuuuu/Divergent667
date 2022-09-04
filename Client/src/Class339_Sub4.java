@@ -89,7 +89,7 @@ public class Class339_Sub4 extends Class339
 					i_6_ = i_10_;
 				}
 				i_11_ = node_sub14.anInt7118 + (1 + glsprite.method1186() >> 1);
-				if ((i_11_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff)) {
+				if (i_7_ < i_11_) {
 					i_7_ = i_11_;
 				}
 			}
@@ -110,12 +110,12 @@ public class Class339_Sub4 extends Class339
 				i_12_ = Class85.aClass357_1159.method4029(Node_Sub38_Sub3.aStringArray10107, null, -100, null, class79.aString1085);
 				i_14_ = node_sub14.anInt7118 - class79.anInt1092 * (Class20.anInt339 + -Class20.anInt350) / (-Class20.anInt352 + Class20.anInt337);
 				i_13_ = class79.anInt1071 * (Class20.anInt348 + -Class20.anInt344) / (-Class20.anInt349 + Class20.anInt341) + node_sub14.anInt7126;
-				if (glsprite != null) {
-					i_14_ -= (glsprite.method1186() >> 1) - -(class299.method3487() * i_12_);
-				} else {
+				if (glsprite == null) {
 					i_14_ -= i_12_ * class299.method3489() / 2;
+				} else {
+					i_14_ -= (glsprite.method1186() >> 1) - -(class299.method3487() * i_12_);
 				}
-				for (int i_21_ = 0; i_12_ > i_21_; i_21_++) {
+                for (int i_21_ = 0; i_12_ > i_21_; i_21_++) {
 					String string = Node_Sub38_Sub3.aStringArray10107[i_21_];
 					if (i_21_ < -1 + i_12_) {
 						string = string.substring(0, -4 + string.length());
@@ -130,25 +130,25 @@ public class Class339_Sub4 extends Class339
 				if (i_4_ > i_17_) {
 					i_4_ = i_17_;
 				}
-				if ((i_5_ ^ 0xffffffff) > (i_18_ ^ 0xffffffff)) {
+				if (i_18_ > i_5_) {
 					i_5_ = i_18_;
 				}
 				i_19_ = i_14_ - -i_3_;
 				i_20_ = i_3_ + i_14_ + i_12_ * class299.method3487();
-				if ((i_6_ ^ 0xffffffff) < (i_19_ ^ 0xffffffff)) {
+				if (i_19_ < i_6_) {
 					i_6_ = i_19_;
 				}
-				if ((i_20_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff)) {
+				if (i_7_ < i_20_) {
 					i_7_ = i_20_;
 				}
 			}
 		}
-		if (i_5_ < Class20.anInt344 || (Class20.anInt348 ^ 0xffffffff) > (i_4_ ^ 0xffffffff) || Class20.anInt350 > i_7_ || (i_6_ ^ 0xffffffff) < (Class20.anInt339 ^ 0xffffffff)) {
+		if (i_5_ < Class20.anInt344 || i_4_ > Class20.anInt348 || Class20.anInt350 > i_7_ || Class20.anInt339 < i_6_) {
 			return true;
 		}
 		Class20.method281(graphicstoolkit, node_sub14, class79);
 		if (glsprite != null) {
-			if (Class168.anInt2044 > 0 && ((Class253.anInt3201 ^ 0xffffffff) != 0 && node_sub14.anInt7128 == Class253.anInt3201 || (Node_Sub38_Sub19.anInt10296 ^ 0xffffffff) != 0 && class79.anInt1067 == Node_Sub38_Sub19.anInt10296)) {
+			if (Class168.anInt2044 > 0 && (Class253.anInt3201 != -1 && node_sub14.anInt7128 == Class253.anInt3201 || Node_Sub38_Sub19.anInt10296 != -1 && class79.anInt1067 == Node_Sub38_Sub19.anInt10296)) {
 				int i_23_;
 				if (Node_Sub15_Sub4.anInt9800 > 50) {
 					i_23_ = 200 + -(2 * Node_Sub15_Sub4.anInt9800);

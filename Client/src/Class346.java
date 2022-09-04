@@ -32,7 +32,7 @@ public class Class346
 		for (int i_5_ = 0; i_5_ < widgets.length; i_5_++) {
 			IComponentDefinitions widget = widgets[i_5_];
 			if (widget != null && widget.parentId == i_4_ && !Client.method112(widget)) {
-				if ((widget.type ^ 0xffffffff) == -1) {
+				if (widget.type == 0) {
 					method3975(i, widget.ihash, widgets);
 					if (widget.aWidgetArray4793 != null) {
 						method3975(-18690, widget.ihash, widget.aWidgetArray4793);
@@ -42,7 +42,7 @@ public class Class346
 						Class290_Sub1.method3424(-23620, node_sub2.interfaceId);
 					}
 				}
-				if (widget.type == 6 && (widget.anInt4773 ^ 0xffffffff) != 0) {
+				if (widget.type == 6 && widget.anInt4773 != -1) {
 					if (widget.anAnimator4755 == null) {
 						widget.anAnimator4755 = new FixedAnimator();
 						widget.anAnimator4755.method249(true, widget.anInt4773);
@@ -74,9 +74,9 @@ public class Class346
 	static {
 		for (int i = 0; anIntArray4275.length > i; i++)
 			anIntArray4275[i] = -1;
-		for (int i = 65; (i ^ 0xffffffff) >= -91; i++)
+		for (int i = 65; i <= 90; i++)
 			anIntArray4275[i] = i - 65;
-		for (int i = 97; (i ^ 0xffffffff) >= -123; i++)
+		for (int i = 97; i <= 122; i++)
 			anIntArray4275[i] = -71 + i;
 		for (int i = 48; i <= 57; i++)
 			anIntArray4275[i] = 4 + i;

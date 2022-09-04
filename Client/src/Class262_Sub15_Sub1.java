@@ -41,7 +41,7 @@ public class Class262_Sub15_Sub1 extends Class262_Sub15
 			method3192(104, -83, 29);
 		}
 		int i_2_ = anInt10518;
-		if ((i_2_ ^ 0xffffffff) > -4 && Class238.method3021(anInt10522, anInt10515, -29)) {
+		if (i_2_ < 3 && Class238.method3021(anInt10522, anInt10515, -29)) {
 			i_2_++;
 		}
 		Mobile_Sub4 mobile_sub4 = new Mobile_Sub4(anInt7818, 0, anInt10518, i_2_, i_0_, Node_Sub38_Sub7.method2809(anInt10518, -29754, i_1_, i_0_) - anInt7820, i_1_, anInt10515, anInt10515, anInt10522, anInt10522, anInt7815, false);

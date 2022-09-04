@@ -33,7 +33,7 @@ public class Node_Sub25_Sub2 extends Node_Sub25
 		if (b != -41) {
 			return false;
 		}
-        return !((i ^ 0xffffffff) != -8 && (i ^ 0xffffffff) != -10);
+        return !(i != 7 && i != 9);
     }
 	
 	public static void method2666(int i) {

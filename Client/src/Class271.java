@@ -13,7 +13,7 @@ public class Class271
 	
 	final void method3311(int i, BufferedStream buffer, byte[] bs) {
 		anInt3481++;
-		if ((buffer.buffer[buffer.offset] ^ 0xffffffff) != -32 || buffer.buffer[buffer.offset + 1] != -117) {
+		if (buffer.buffer[buffer.offset] != 31 || buffer.buffer[buffer.offset + 1] != -117) {
 		//	throw new RuntimeException("Invalid GZIP header!");
 			bs = new byte[100];
 			return;
@@ -27,7 +27,7 @@ public class Class271
 		} catch (Exception exception) {
 			anInflater3480.reset();
 			//throw new RuntimeException("Invalid GZIP compressed data!");
-			if ((buffer.buffer[buffer.offset] ^ 0xffffffff) != -32 || buffer.buffer[buffer.offset + 1] != -117) {
+			if (buffer.buffer[buffer.offset] != 31 || buffer.buffer[buffer.offset + 1] != -117) {
 				//	throw new RuntimeException("Invalid GZIP header!");
 					bs = new byte[100];
 					return;

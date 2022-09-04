@@ -28,12 +28,12 @@ public class Class207
 			Class94.anInt1250 = Class20.anInt345;
 			Class150_Sub3.anInt8963 = -1;
 		}
-		if ((Class327.anInt5360 ^ 0xffffffff) > -1) {
+		if (Class327.anInt5360 < 0) {
 			Class150_Sub3.anInt8963 = -1;
 			Class262_Sub4.anInt7730 = -1;
 			Class327.anInt5360 = 0;
 		}
-		if ((Class20.anInt333 ^ 0xffffffff) > (Class327.anInt5360 ^ 0xffffffff)) {
+		if (Class327.anInt5360 > Class20.anInt333) {
 			Class150_Sub3.anInt8963 = -1;
 			Class262_Sub4.anInt7730 = -1;
 			Class327.anInt5360 = Class20.anInt333;
@@ -44,7 +44,7 @@ public class Class207
 		anInt2480++;
 		try {
 			int i_1_ = buffer.readSmart();
-			if ((i ^ 0xffffffff) > (i_1_ ^ 0xffffffff)) {
+			if (i_1_ > i) {
 				i_1_ = i;
 			}
 			byte[] bs = new byte[i_1_];
@@ -96,7 +96,7 @@ public class Class207
 	}
 	
 	Class207(Class126[] class126s) {
-		for (int i = 0; (i ^ 0xffffffff) > (class126s.length ^ 0xffffffff); i++)
+		for (int i = 0; class126s.length > i; i++)
 			method2043(class126s[i], -121);
 	}
 }

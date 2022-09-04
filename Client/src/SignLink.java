@@ -87,15 +87,15 @@ public class SignLink implements Runnable {
         String string_7_;
         if (i == 33) {
             string_7_ = string + "_preferences" + string_5_ + "_rc.dat";
-        } else if (i != 34) {
-            string_7_ = string + "_preferences" + string_5_ + ".dat";
-        } else {
+        } else if (i == 34) {
             string_7_ = string + "_preferences" + string_5_ + "_wip.dat";
+        } else {
+            string_7_ = string + "_preferences" + string_5_ + ".dat";
         }
         String[] strings = {Settings.getCachePath()};
         for (int i_8_ = 0; strings.length > i_8_; i_8_++) {
             String string_9_ = strings[i_8_];
-            if ((string_9_.length() ^ 0xffffffff) >= -1 || new File(string_9_).exists()) {
+            if (string_9_.length() <= 0 || new File(string_9_).exists()) {
                 try {
                     FileOnDisk fileondisk = new FileOnDisk(new File(string_9_, string_7_), "rw", 10000L);
                     return fileondisk;
@@ -166,7 +166,7 @@ public class SignLink implements Runnable {
             }
         }
         if (aFileOnDiskArray4003 != null) {
-            for (int i_10_ = 0; (aFileOnDiskArray4003.length ^ 0xffffffff) < (i_10_ ^ 0xffffffff); i_10_++) {
+            for (int i_10_ = 0; i_10_ < aFileOnDiskArray4003.length; i_10_++) {
                 if (aFileOnDiskArray4003[i_10_] != null) {
                     try {
                         aFileOnDiskArray4003[i_10_].method1098(true);
@@ -258,11 +258,11 @@ public class SignLink implements Runnable {
         class241.anInt2957 = i_11_;
         class241.anInt2951 = i;
         synchronized (this) {
-            if (aClass241_3986 != null) {
+            if (aClass241_3986 == null) {
+                aClass241_3986 = aClass241_3983 = class241;
+            } else {
                 aClass241_3986.aClass241_2955 = class241;
                 aClass241_3986 = class241;
-            } else {
-                aClass241_3986 = aClass241_3983 = class241;
             }
             this.notify();
         }
@@ -302,168 +302,13 @@ public class SignLink implements Runnable {
             }
             try {
                 int i = class241.anInt2957;
-                if ((i ^ 0xffffffff) == -2) {
+                if (i == 1) {
                     if (Class313.method3650(false) < aLong3999) {
                         throw new IOException();
                     }
                     class241.anObject2956 = new Socket(InetAddress.getByName((String) class241.anObject2954),
 							class241.anInt2952);
-                } else if (i != 22) {
-                    if ((i ^ 0xffffffff) != -3) {
-                        if (i != 4) {
-                            if (i != 8) {
-                                if ((i ^ 0xffffffff) == -10) {
-                                    Object[] objects = (Object[]) class241.anObject2954;
-                                    if (aBoolean4005 && ((Class<?>) objects[0]).getClassLoader() == null) {
-                                        throw new SecurityException();
-                                    }
-                                    class241.anObject2956 = ((Class<?>) objects[0]).getDeclaredField((String)
-											objects[1]);
-                                } else if (i == 18) {
-                                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                                    class241.anObject2956 = clipboard.getContents(null);
-                                } else if (i == 19) {
-                                    Transferable transferable = (Transferable) class241.anObject2954;
-                                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                                    clipboard.setContents(transferable, null);
-                                } else {
-                                    if (!aBoolean4005) {
-                                        throw new Exception("");
-                                    }
-                                    if ((i ^ 0xffffffff) == -4) {
-                                        if (Class313.method3650(false) < aLong3999) {
-                                            throw new IOException();
-                                        }
-                                        String string = String.valueOf(class241.anInt2952 >> 24 & 0xff) + "." + (
-                                        		(0xffd9e4 & class241.anInt2952) >> 16) + "." + (class241.anInt2952 >>
-												8 & 0xff) + "." + (0xff & class241.anInt2952);
-                                        class241.anObject2956 = InetAddress.getByName(string).getHostName();
-                                    } else if (i == 21) {
-                                        if (Class313.method3650(false) < aLong3999) {
-                                            throw new IOException();
-                                        }
-                                        class241.anObject2956 = InetAddress.getByName((String) class241.anObject2954)
-												.getAddress();
-                                    } else if ((i ^ 0xffffffff) != -6) {
-                                        if ((i ^ 0xffffffff) == -7) {
-                                            Frame frame = new Frame(Settings.SERVER_NAME + " Full Screen");
-                                            class241.anObject2956 = frame;
-                                            frame.setResizable(false);
-                                            if (aBoolean3985) {
-                                                aClass11_3997.method191(frame, class241.anInt2951 >> 16, 0xffff &
-														class241.anInt2951, 0xffff & class241.anInt2952, 106,
-														class241.anInt2952 >>> 16);
-                                            } else {
-                                                Class.forName("Display").getMethod("enter", new Class[]{aClass4006 ==
-														null ? aClass4006 = method3646("java.awt.Frame") : aClass4006,
-														Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE})
-														.invoke(anObject3980, frame, new Integer(class241.anInt2952
-																>>> 16), new Integer(0xffff & class241.anInt2952), new
-																Integer(class241.anInt2951 >> 16), new Integer(0xffff
-																& class241.anInt2951));
-                                            }
-                                        } else if (i == 7) {
-                                            if (aBoolean3985) {
-                                                aClass11_3997.method192((Frame) class241.anObject2954, 8);
-                                            } else {
-                                                Class.forName("Display").getMethod("exit", new Class[0]).invoke
-														(anObject3980);
-                                            }
-                                        } else if ((i ^ 0xffffffff) == -13) {
-                                            FileOnDisk fileondisk = method3630(aString3987, anInt3978, (String)
-													class241.anObject2954, 19613);
-                                            class241.anObject2956 = fileondisk;
-                                        } else if (i != 13) {
-                                            if (aBoolean4005 && (i ^ 0xffffffff) == -15) {
-                                                int i_16_ = class241.anInt2952;
-                                                int i_17_ = class241.anInt2951;
-                                                if (aBoolean3985) {
-                                                    aCallback_Sub1_3988.method81(i_16_, -33, i_17_);
-                                                } else {
-                                                    Class.forName("Class208").getDeclaredMethod("method2046", new
-															Class[]{Integer.TYPE, Integer.TYPE}).invoke(anObject3990,
-															new Integer(i_16_), new Integer(i_17_));
-                                                }
-                                            } else if (aBoolean4005 && i == 15) {
-                                                boolean bool = (class241.anInt2952 ^ 0xffffffff) != -1;
-                                                Component component = (Component) class241.anObject2954;
-                                                if (aBoolean3985) {
-                                                    aCallback_Sub1_3988.method82(bool, component, (byte) 95);
-                                                } else {
-                                                    Class.forName("Class208").getDeclaredMethod("method2045", new
-															Class[]{aClass4007 == null ? aClass4007 = method3646("java" +
-															".awt.Component") : aClass4007, Boolean.TYPE}).invoke
-															(anObject3990, component, new Boolean(bool));
-                                                }
-                                            } else if (!aBoolean3985 && (i ^ 0xffffffff) == -18) {
-                                                Object[] objects = (Object[]) class241.anObject2954;
-                                                Class.forName("Class208").getDeclaredMethod("method2047", new
-														Class[]{aClass4007 == null ? aClass4007 = method3646("java.awt" +
-														".Component") : aClass4007, aClass4008 == null ? aClass4008 =
-														method3646("[I") : aClass4008, Integer.TYPE, Integer.TYPE,
-														aClass4009 == null ? aClass4009 = method3646("java.awt.Point")
-																: aClass4009}).invoke(anObject3990, objects[0],
-														objects[1], new Integer(class241.anInt2952), new Integer
-																(class241.anInt2951), objects[2]);
-                                            } else if (i == 16) {
-                                                try {
-                                                    if (!aString3981.startsWith("win")) {
-                                                        throw new Exception();
-                                                    }
-                                                    String string = (String) class241.anObject2954;
-                                                    if (!string.startsWith("http://") && !string.startsWith
-															("https://")) {
-                                                        throw new Exception();
-                                                    }
-                                                    String string_18_ =
-															"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                    for (int i_19_ = 0; string.length() > i_19_; i_19_++) {
-                                                        if (string_18_.indexOf(string.charAt(i_19_)) == -1) {
-                                                            throw new Exception();
-                                                        }
-                                                    }
-                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + string + "\"");
-                                                    class241.anObject2956 = null;
-                                                } catch (Exception exception) {
-                                                    class241.anObject2956 = exception;
-                                                    throw exception;
-                                                }
-                                            } else {
-                                                throw new Exception("");
-                                            }
-                                        } else {
-                                            FileOnDisk fileondisk = method3630("", anInt3978, (String)
-													class241.anObject2954, 19613);
-                                            class241.anObject2956 = fileondisk;
-                                        }
-                                    } else if (!aBoolean3985) {
-                                        class241.anObject2956 = Class.forName("Display").getMethod("listmodes", new
-												Class[0]).invoke(anObject3980);
-                                    } else {
-                                        class241.anObject2956 = aClass11_3997.method193(0);
-                                    }
-                                }
-                            } else {
-                                Object[] objects = (Object[]) class241.anObject2954;
-                                if (aBoolean4005 && ((Class<?>) objects[0]).getClassLoader() == null) {
-                                    throw new SecurityException();
-                                }
-                                class241.anObject2956 = ((Class<?>) objects[0]).getDeclaredMethod((String) objects[1], (Class[]) objects[2]);
-                            }
-                        } else {
-                            if ((Class313.method3650(false) ^ 0xffffffffffffffffL) > (aLong3999 ^ 0xffffffffffffffffL)) {
-                                throw new IOException();
-                            }
-                            class241.anObject2956 = new DataInputStream(((URL) class241.anObject2954).openStream());
-                        }
-                    } else {
-                        Thread thread = new Thread((Runnable) class241.anObject2954);
-                        thread.setDaemon(true);
-                        thread.start();
-                        thread.setPriority(class241.anInt2952);
-                        class241.anObject2956 = thread;
-                    }
-                } else {
+                } else if (i == 22) {
                     if (aLong3999 > Class313.method3650(false)) {
                         throw new IOException();
                     }
@@ -472,6 +317,151 @@ public class SignLink implements Runnable {
                     } catch (IOException_Sub1 ioexception_sub1) {
                         class241.anObject2956 = ioexception_sub1.getMessage();
                         throw ioexception_sub1;
+                    }
+                } else if (i == 2) {
+                    Thread thread = new Thread((Runnable) class241.anObject2954);
+                    thread.setDaemon(true);
+                    thread.start();
+                    thread.setPriority(class241.anInt2952);
+                    class241.anObject2956 = thread;
+                } else if (i == 4) {
+                    if (aLong3999 > Class313.method3650(false)) {
+                        throw new IOException();
+                    }
+                    class241.anObject2956 = new DataInputStream(((URL) class241.anObject2954).openStream());
+                } else if (i == 8) {
+                    Object[] objects = (Object[]) class241.anObject2954;
+                    if (aBoolean4005 && ((Class<?>) objects[0]).getClassLoader() == null) {
+                        throw new SecurityException();
+                    }
+                    class241.anObject2956 = ((Class<?>) objects[0]).getDeclaredMethod((String) objects[1], (Class[]) objects[2]);
+                } else if (i == 9) {
+                    Object[] objects = (Object[]) class241.anObject2954;
+                    if (aBoolean4005 && ((Class<?>) objects[0]).getClassLoader() == null) {
+                        throw new SecurityException();
+                    }
+                    class241.anObject2956 = ((Class<?>) objects[0]).getDeclaredField((String)
+                            objects[1]);
+                } else if (i == 18) {
+                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                    class241.anObject2956 = clipboard.getContents(null);
+                } else if (i == 19) {
+                    Transferable transferable = (Transferable) class241.anObject2954;
+                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                    clipboard.setContents(transferable, null);
+                } else {
+                    if (!aBoolean4005) {
+                        throw new Exception("");
+                    }
+                    if (i == 3) {
+                        if (Class313.method3650(false) < aLong3999) {
+                            throw new IOException();
+                        }
+                        String string = String.valueOf(class241.anInt2952 >> 24 & 0xff) + "." + (
+                                (0xffd9e4 & class241.anInt2952) >> 16) + "." + (class241.anInt2952 >>
+                                8 & 0xff) + "." + (0xff & class241.anInt2952);
+                        class241.anObject2956 = InetAddress.getByName(string).getHostName();
+                    } else if (i == 21) {
+                        if (Class313.method3650(false) < aLong3999) {
+                            throw new IOException();
+                        }
+                        class241.anObject2956 = InetAddress.getByName((String) class241.anObject2954)
+                                .getAddress();
+                    } else if (i != 5) {
+                        if (i == 6) {
+                            Frame frame = new Frame(Settings.SERVER_NAME + " Full Screen");
+                            class241.anObject2956 = frame;
+                            frame.setResizable(false);
+                            if (aBoolean3985) {
+                                aClass11_3997.method191(frame, class241.anInt2951 >> 16, 0xffff &
+                                                class241.anInt2951, 0xffff & class241.anInt2952, 106,
+                                        class241.anInt2952 >>> 16);
+                            } else {
+                                Class.forName("Display").getMethod("enter", new Class[]{aClass4006 ==
+                                                null ? aClass4006 = method3646("java.awt.Frame") : aClass4006,
+                                                Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE})
+                                        .invoke(anObject3980, frame, new Integer(class241.anInt2952
+                                                >>> 16), new Integer(0xffff & class241.anInt2952), new
+                                                Integer(class241.anInt2951 >> 16), new Integer(0xffff
+                                                & class241.anInt2951));
+                            }
+                        } else if (i == 7) {
+                            if (aBoolean3985) {
+                                aClass11_3997.method192((Frame) class241.anObject2954, 8);
+                            } else {
+                                Class.forName("Display").getMethod("exit", new Class[0]).invoke
+                                        (anObject3980);
+                            }
+                        } else if (i == 12) {
+                            FileOnDisk fileondisk = method3630(aString3987, anInt3978, (String)
+                                    class241.anObject2954, 19613);
+                            class241.anObject2956 = fileondisk;
+                        } else if (i == 13) {
+                            FileOnDisk fileondisk = method3630("", anInt3978, (String)
+                                    class241.anObject2954, 19613);
+                            class241.anObject2956 = fileondisk;
+                        } else if (aBoolean4005 && i == 14) {
+                            int i_16_ = class241.anInt2952;
+                            int i_17_ = class241.anInt2951;
+                            if (aBoolean3985) {
+                                aCallback_Sub1_3988.method81(i_16_, -33, i_17_);
+                            } else {
+                                Class.forName("Class208").getDeclaredMethod("method2046", new
+                                        Class[]{Integer.TYPE, Integer.TYPE}).invoke(anObject3990,
+                                        new Integer(i_16_), new Integer(i_17_));
+                            }
+                        } else if (aBoolean4005 && i == 15) {
+                            boolean bool = class241.anInt2952 != 0;
+                            Component component = (Component) class241.anObject2954;
+                            if (aBoolean3985) {
+                                aCallback_Sub1_3988.method82(bool, component, (byte) 95);
+                            } else {
+                                Class.forName("Class208").getDeclaredMethod("method2045", new
+                                        Class[]{aClass4007 == null ? aClass4007 = method3646("java" +
+                                        ".awt.Component") : aClass4007, Boolean.TYPE}).invoke
+                                        (anObject3990, component, new Boolean(bool));
+                            }
+                        } else if (!aBoolean3985 && i == 17) {
+                            Object[] objects = (Object[]) class241.anObject2954;
+                            Class.forName("Class208").getDeclaredMethod("method2047", new
+                                    Class[]{aClass4007 == null ? aClass4007 = method3646("java.awt" +
+                                    ".Component") : aClass4007, aClass4008 == null ? aClass4008 =
+                                    method3646("[I") : aClass4008, Integer.TYPE, Integer.TYPE,
+                                    aClass4009 == null ? aClass4009 = method3646("java.awt.Point")
+                                            : aClass4009}).invoke(anObject3990, objects[0],
+                                    objects[1], new Integer(class241.anInt2952), new Integer
+                                            (class241.anInt2951), objects[2]);
+                        } else if (i == 16) {
+                            try {
+                                if (!aString3981.startsWith("win")) {
+                                    throw new Exception();
+                                }
+                                String string = (String) class241.anObject2954;
+                                if (!string.startsWith("http://") && !string.startsWith
+                                        ("https://")) {
+                                    throw new Exception();
+                                }
+                                String string_18_ =
+                                        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                for (int i_19_ = 0; string.length() > i_19_; i_19_++) {
+                                    if (string_18_.indexOf(string.charAt(i_19_)) == -1) {
+                                        throw new Exception();
+                                    }
+                                }
+                                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + string + "\"");
+                                class241.anObject2956 = null;
+                            } catch (Exception exception) {
+                                class241.anObject2956 = exception;
+                                throw exception;
+                            }
+                        } else {
+                            throw new Exception("");
+                        }
+                    } else if (aBoolean3985) {
+                        class241.anObject2956 = aClass11_3997.method193(0);
+                    } else {
+                        class241.anObject2956 = Class.forName("Display").getMethod("listmodes", new
+                                Class[0]).invoke(anObject3980);
                     }
                 }
                 class241.anInt2953 = 1;
@@ -588,7 +578,7 @@ public class SignLink implements Runnable {
                 threadgroup = threadgroup_22_;
             Thread[] threads = new Thread[1000];
             threadgroup.enumerate(threads);
-            for (int i_23_ = 0; (threads.length ^ 0xffffffff) < (i_23_ ^ 0xffffffff); i_23_++) {
+            for (int i_23_ = 0; i_23_ < threads.length; i_23_++) {
                 if (threads[i_23_] != null && threads[i_23_].getName().startsWith("AWT")) {
                     threads[i_23_].setPriority(1);
                 }

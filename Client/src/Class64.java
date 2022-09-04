@@ -31,12 +31,12 @@ public class Class64 implements Interface6
 			method712(55);
 		}
 		anInt5035++;
-		if ((Class52.anInt800 ^ 0xffffffff) != -1) {
-			Class17.anInt282 = i;
-		} else {
+		if (Class52.anInt800 == 0) {
 			Class307.aNode_Sub9_Sub1_3902.method2439(b ^ 0x3133, i);
+		} else {
+			Class17.anInt282 = i;
 		}
-	}
+    }
 	
 	static final void method711(GraphicsToolkit graphicstoolkit, int i, int i_0_, int i_1_, int i_2_, int i_3_, byte b, int i_4_) {
 		anInt5045++;
@@ -85,24 +85,22 @@ public class Class64 implements Interface6
 	
 	Class64(PureJavaToolkit purejavatoolkit, GLSprite glsprite, Class131 class131) {
 		aPureJavaToolkit5038 = purejavatoolkit;
-		if (!(glsprite instanceof GLSprite_Sub2_Sub1)) {
-			if (glsprite instanceof GLSprite_Sub2_Sub2) {
-				GLSprite_Sub2_Sub2 glsprite_sub2_sub2 = (GLSprite_Sub2_Sub2) glsprite;
-				anIntArray5042 = glsprite_sub2_sub2.anIntArray10570;
-				anInt5041 = glsprite_sub2_sub2.anInt8893;
-				anInt5037 = glsprite_sub2_sub2.anInt8897;
-			} else {
-				throw new RuntimeException();
-			}
-		} else {
+		if (glsprite instanceof GLSprite_Sub2_Sub1) {
 			GLSprite_Sub2_Sub1 glsprite_sub2_sub1 = (GLSprite_Sub2_Sub1) glsprite;
 			anInt5041 = glsprite_sub2_sub1.anInt8893;
 			anInt5037 = glsprite_sub2_sub1.anInt8897;
 			anIntArray5042 = glsprite_sub2_sub1.anIntArray10569;
-		}
-		if (class131 != null) {
+		} else if (glsprite instanceof GLSprite_Sub2_Sub2) {
+            GLSprite_Sub2_Sub2 glsprite_sub2_sub2 = (GLSprite_Sub2_Sub2) glsprite;
+            anIntArray5042 = glsprite_sub2_sub2.anIntArray10570;
+            anInt5041 = glsprite_sub2_sub2.anInt8893;
+            anInt5037 = glsprite_sub2_sub2.anInt8897;
+        } else {
+            throw new RuntimeException();
+        }
+        if (class131 != null) {
 			aClass131_5043 = class131;
-			if (anInt5041 != aClass131_5043.anInt5446 || (aClass131_5043.anInt5445 ^ 0xffffffff) != (anInt5037 ^ 0xffffffff)) {
+			if (anInt5041 != aClass131_5043.anInt5446 || anInt5037 != aClass131_5043.anInt5445) {
 				throw new RuntimeException();
 			}
 			aFloatArray5049 = aClass131_5043.aFloatArray5444;

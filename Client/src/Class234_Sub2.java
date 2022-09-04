@@ -19,8 +19,8 @@ public class Class234_Sub2 extends Class234
 			int i = 0;
 			do
 				aLong6919 += l;
-			while ((++i ^ 0xffffffff) > -11 && aLong6920 > aLong6919);
-			if ((aLong6919 ^ 0xffffffffffffffffL) > (aLong6920 ^ 0xffffffffffffffffL)) {
+			while (++i < 10 && aLong6920 > aLong6919);
+			if (aLong6920 > aLong6919) {
 				aLong6919 = aLong6920;
 			}
 			return i;
@@ -53,10 +53,10 @@ public class Class234_Sub2 extends Class234
 		long l = System.nanoTime();
 		long l_0_ = -aLong6921 + l;
 		aLong6921 = l;
-		if (l_0_ > -5000000000L && (l_0_ ^ 0xffffffffffffffffL) > -5000000001L) {
+		if (l_0_ > -5000000000L && l_0_ < 5000000000L) {
 			aLongArray6924[anInt6923] = l_0_;
 			anInt6923 = (anInt6923 + 1) % 10;
-			if ((anInt6922 ^ 0xffffffff) > -2) {
+			if (anInt6922 < 1) {
 				anInt6922++;
 			}
 		}

@@ -13,7 +13,7 @@ public class Node_Sub2 extends Node
 	
 	static final void method2167(int i) {
 		anInt6936++;
-		for (int i_0_ = i; (Node_Sub25_Sub3.localNPCsCount ^ 0xffffffff) < (i_0_ ^ 0xffffffff); i_0_++) {
+		for (int i_0_ = i; i_0_ < Node_Sub25_Sub3.localNPCsCount; i_0_++) {
 			int i_1_ = Class54.LocalNPCsIndexes[i_0_];
 			Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) i_1_);
 			if (node_sub41 != null) {

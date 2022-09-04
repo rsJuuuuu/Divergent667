@@ -33,15 +33,15 @@ public class Class265_Sub2 extends Class265 implements Interface13_Impl2
 			anIDirect3DCubeTexture7902 = aD3DToolkit3365.anIDirect3DDevice9199.a(anInt7901, 1, 0, 21, 1);
 		}
 		PixelBuffer pixelbuffer = aD3DToolkit3365.aPixelBuffer9187;
-		for (int i_0_ = 0; -7 < (i_0_ ^ 0xffffffff); i_0_++) {
+		for (int i_0_ = 0; i_0_ < 6; i_0_++) {
 			int i_1_ = anIDirect3DCubeTexture7902.LockRect(i_0_, 0, 0, 0, anInt7901, anInt7901, 0, pixelbuffer);
 			if (lh.a((byte) 84, i_1_)) {
 				int i_2_ = pixelbuffer.getRowPitch();
-				if ((i_2_ ^ 0xffffffff) != (anInt7901 * 4 ^ 0xffffffff)) {
+				if (anInt7901 * 4 == i_2_) {
+					pixelbuffer.b(is[i_0_], 0, 0, anInt7901 * anInt7901);
+				} else {
 					for (int i_3_ = 0; i_3_ < anInt7901; i_3_++)
 						pixelbuffer.b(is[i_0_], anInt7901 * i_3_, i_2_ * i_3_, anInt7901);
-				} else {
-					pixelbuffer.b(is[i_0_], 0, 0, anInt7901 * anInt7901);
 				}
 				anIDirect3DCubeTexture7902.UnlockRect(i_0_, 0);
 			}

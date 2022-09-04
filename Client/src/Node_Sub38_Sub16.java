@@ -105,11 +105,11 @@ public class Node_Sub38_Sub16 extends Node_Sub38
 			if (i_12_ >= node_sub16.anIntArray7137.length) {
 				int[] is = new int[1 + i_12_];
 				int[] is_15_ = new int[i_12_ - -1];
-				for (int i_16_ = 0; (node_sub16.anIntArray7137.length ^ 0xffffffff) < (i_16_ ^ 0xffffffff); i_16_++) {
+				for (int i_16_ = 0; i_16_ < node_sub16.anIntArray7137.length; i_16_++) {
 					is[i_16_] = node_sub16.anIntArray7137[i_16_];
 					is_15_[i_16_] = node_sub16.anIntArray7138[i_16_];
 				}
-				for (int i_17_ = node_sub16.anIntArray7137.length; (i_17_ ^ 0xffffffff) > (i_12_ ^ 0xffffffff); i_17_++) {
+				for (int i_17_ = node_sub16.anIntArray7137.length; i_12_ > i_17_; i_17_++) {
 					is[i_17_] = -1;
 					is_15_[i_17_] = 0;
 				}

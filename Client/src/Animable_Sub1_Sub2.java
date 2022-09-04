@@ -146,7 +146,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19
 	Animable_Sub1_Sub2(GraphicsToolkit graphicstoolkit, ObjectDefinition objectdefinition, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_) {
 		super(i_6_, i_7_, i_8_, i, i_5_, objectdefinition.anInt2983);
 		aClass310_10652 = new Class310(graphicstoolkit, objectdefinition, 22, i_9_, i, i_5_, this, bool, i_10_);
-		aBoolean10672 = (objectdefinition.anInt3057 ^ 0xffffffff) != -1 && !bool;
+		aBoolean10672 = objectdefinition.anInt3057 != 0 && !bool;
 	}
 	
 	final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
@@ -161,26 +161,26 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19
 		int i_12_ = anInt5934 >> 9;
 		int i_13_ = anInt5940 >> 9;
 		aClass310_10652.method3600(i_13_, drawablemodel, true, -9827, graphicstoolkit, i_12_, i_12_, i_13_, class336);
-		if (!Node_Sub15_Sub10.aBoolean9850) {
-			drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], 0);
-		} else {
+		if (Node_Sub15_Sub10.aBoolean9850) {
 			drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
-		}
-		if (aClass310_10652.anEntityNode_Sub4_3931 != null) {
-			Class198 class198 = aClass310_10652.anEntityNode_Sub4_3931.method954();
-			if (!Node_Sub15_Sub10.aBoolean9850) {
-				graphicstoolkit.a(class198);
-			} else {
-				graphicstoolkit.a(class198, Class308.anInt3912);
-			}
-		}
-		aBoolean10658 = drawablemodel.F() || aClass310_10652.anEntityNode_Sub4_3931 != null;
-		if (aClass171_10661 != null) {
-			Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10661, -98);
 		} else {
-			aClass171_10661 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+			drawablemodel.method611(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], 0);
 		}
-		return entitynode_sub6;
+        if (aClass310_10652.anEntityNode_Sub4_3931 != null) {
+			Class198 class198 = aClass310_10652.anEntityNode_Sub4_3931.method954();
+			if (Node_Sub15_Sub10.aBoolean9850) {
+				graphicstoolkit.a(class198, Class308.anInt3912);
+			} else {
+				graphicstoolkit.a(class198);
+			}
+        }
+		aBoolean10658 = drawablemodel.F() || aClass310_10652.anEntityNode_Sub4_3931 != null;
+		if (aClass171_10661 == null) {
+			aClass171_10661 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+		} else {
+			Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10661, -98);
+		}
+        return entitynode_sub6;
 	}
 	
 	public final int method68(int i) {

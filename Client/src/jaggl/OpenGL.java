@@ -83,7 +83,7 @@ public class OpenGL
 				i = i_60_ - -1;
 			}
 			String string_62_ = string_59_.substring(i).trim();
-			if ((string_62_.length() ^ 0xffffffff) != -1) {
+			if (string_62_.length() != 0) {
 				c.put(string_62_, string_62_);
 			}
 		}

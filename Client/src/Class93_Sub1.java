@@ -30,13 +30,13 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
 
     public final synchronized void mouseReleased(MouseEvent mouseevent) {
         int i = method1055(mouseevent, (byte) 123);
-        if ((anInt6037 & i ^ 0xffffffff) == -1) {
+        if ((anInt6037 & i) == 0) {
             i = anInt6037;
         }
         if (0 != (0x1 & i)) {
             method1052(mouseevent.getY(), mouseevent.getX(), 3, 0, mouseevent.getClickCount());
         }
-        if (-1 != (0x4 & i ^ 0xffffffff)) {
+        if ((0x4 & i) != 0) {
             method1052(mouseevent.getY(), mouseevent.getX(), 5, 0, mouseevent.getClickCount());
         }
         if (0 != (i & 0x2)) {
@@ -144,7 +144,7 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
         if (i >= -43) {
             anInt6039 = -47;
         }
-        return -1 != (anInt6034 & 0x1 ^ 0xffffffff);
+        return (anInt6034 & 0x1) != 0;
     }
 
     final int method1050(byte b) {
@@ -156,16 +156,12 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
 
     public final synchronized void mousePressed(MouseEvent mouseevent) {
         int i = method1055(mouseevent, (byte) -79);
-        if (-2 != (i ^ 0xffffffff)) {
-            if ((i ^ 0xffffffff) != -5) {
-                if (2 == i) {
-                    method1052(mouseevent.getY(), mouseevent.getX(), 1, 0, mouseevent.getClickCount());
-                }
-            } else {
-                method1052(mouseevent.getY(), mouseevent.getX(), 2, 0, mouseevent.getClickCount());
-            }
-        } else {
+        if (i == 1) {
             method1052(mouseevent.getY(), mouseevent.getX(), 0, 0, mouseevent.getClickCount());
+        } else if (i == 4) {
+            method1052(mouseevent.getY(), mouseevent.getX(), 2, 0, mouseevent.getClickCount());
+        } else if (2 == i) {
+            method1052(mouseevent.getY(), mouseevent.getX(), 1, 0, mouseevent.getClickCount());
         }
         anInt6037 |= i;
         if (mouseevent.isPopupTrigger()) {

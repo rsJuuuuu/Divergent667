@@ -22,7 +22,7 @@ public class Class378
 		}
 		anInt4678++;
 		if (Class194_Sub3_Sub1.aClass241_9377 != null) {
-			if ((Class194_Sub3_Sub1.aClass241_9377.anInt2953 ^ 0xffffffff) == -2) {
+			if (Class194_Sub3_Sub1.aClass241_9377.anInt2953 == 1) {
 				Class194_Sub3_Sub1.aClass241_9377 = null;
 			} else if (Class194_Sub3_Sub1.aClass241_9377.anInt2953 == 2) {
 				Class343.method3962(Class179.aString2123, -117, 2, Class146.aSignLink1813);

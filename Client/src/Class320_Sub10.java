@@ -77,7 +77,7 @@ public class Class320_Sub10 extends Class320
 			method3720(33, 110, 2);
 		}
 		anInt8302++;
-        return (0xc580 & i_0_ ^ 0xffffffff) != -1;
+        return (0xc580 & i_0_) != 0;
     }
 	
 	static final String[] method3721(int i, String[] strings) {

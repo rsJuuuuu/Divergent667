@@ -66,12 +66,12 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19
 			}
 		}
 		aBoolean10813 = drawablemodel.F() || aClass310_10794.anEntityNode_Sub4_3931 != null;
-		if (aClass171_10793 != null) {
-			Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10793, -79);
-		} else {
+		if (aClass171_10793 == null) {
 			aClass171_10793 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+		} else {
+			Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10793, -79);
 		}
-		return entitynode_sub6;
+        return entitynode_sub6;
 	}
 	
 	public final int method68(int i) {

@@ -69,10 +69,10 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 		anInt9975 = i;
 		anInt9988++;
 		if (aBoolean9991) {
-			if ((anInt9975 ^ 0xffffffff) < (anInt9963 ^ 0xffffffff)) {
+			if (anInt9963 < anInt9975) {
 				anInt9975 = anInt9963;
 			}
-			if ((anInt9975 ^ 0xffffffff) > -1) {
+			if (anInt9975 < 0) {
 				anInt9975 = 0;
 			}
 			aDecoderContext9961.setPostProcessingLevel(anInt9975);
@@ -110,13 +110,13 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 		if (i != -13472) {
 			return null;
 		}
-		for (/**/; (i_1_ ^ 0xffffffff) > (i_2_ ^ 0xffffffff); i_2_--) {
+		for (/**/; i_2_ > i_1_; i_2_--) {
 			if (!Class13.method206(string.charAt(-1 + i_2_), 10)) {
 				break;
 			}
 		}
 		int i_3_ = -i_1_ + i_2_;
-		if ((i_3_ ^ 0xffffffff) > -2 || (i_3_ ^ 0xffffffff) < -13) {
+		if (i_3_ < 1 || i_3_ > 12) {
 			return null;
 		}
 		StringBuffer stringbuffer = new StringBuffer(i_3_);
@@ -140,35 +140,7 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 			anIntArray9966 = null;
 		}
 		anInt9977++;
-		if (i != 0) {
-			if (i == 1) {
-				if ((double) Class20.aFloat327 == 3.0) {
-					return Class75.aClass299_1007;
-				}
-				if ((double) Class20.aFloat327 == 4.0) {
-					return Class352.aClass299_4329;
-				}
-				if ((double) Class20.aFloat327 == 6.0) {
-					return Class150_Sub2.aClass299_8962;
-				}
-				if ((double) Class20.aFloat327 >= 8.0) {
-					return aClass299_9980;
-				}
-			} else if (i == 2) {
-				if ((double) Class20.aFloat327 == 3.0) {
-					return Class150_Sub2.aClass299_8962;
-				}
-				if ((double) Class20.aFloat327 == 4.0) {
-					return aClass299_9980;
-				}
-				if ((double) Class20.aFloat327 == 6.0) {
-					return Class195.aClass299_2380;
-				}
-				if ((double) Class20.aFloat327 >= 8.0) {
-					return Class190.aClass299_2330;
-				}
-			}
-		} else {
+		if (i == 0) {
 			if ((double) Class20.aFloat327 == 3.0) {
 				return Packet.aClass299_9394;
 			}
@@ -181,8 +153,34 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 			if ((double) Class20.aFloat327 >= 8.0) {
 				return Class352.aClass299_4329;
 			}
+		} else if (i == 1) {
+			if ((double) Class20.aFloat327 == 3.0) {
+				return Class75.aClass299_1007;
+			}
+			if ((double) Class20.aFloat327 == 4.0) {
+				return Class352.aClass299_4329;
+			}
+			if ((double) Class20.aFloat327 == 6.0) {
+				return Class150_Sub2.aClass299_8962;
+			}
+			if ((double) Class20.aFloat327 >= 8.0) {
+				return aClass299_9980;
+			}
+		} else if (i == 2) {
+			if ((double) Class20.aFloat327 == 3.0) {
+				return Class150_Sub2.aClass299_8962;
+			}
+			if ((double) Class20.aFloat327 == 4.0) {
+				return aClass299_9980;
+			}
+			if ((double) Class20.aFloat327 == 6.0) {
+				return Class195.aClass299_2380;
+			}
+			if ((double) Class20.aFloat327 >= 8.0) {
+				return Class190.aClass299_2330;
+			}
 		}
-		return null;
+        return null;
 	}
 	
 	final void method2656(int i) {
@@ -216,8 +214,8 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 			return 0;
 		}
 		int i_9_ = 0;
-		for (int i_10_ = 0; (i_10_ ^ 0xffffffff) > (node_sub16.anIntArray7137.length ^ 0xffffffff); i_10_++) {
-			if (node_sub16.anIntArray7137[i_10_] >= 0 && (node_sub16.anIntArray7137[i_10_] ^ 0xffffffff) > (EntityNode_Sub3_Sub1.aClass86_9166.anInt1175 ^ 0xffffffff)) {
+		for (int i_10_ = 0; node_sub16.anIntArray7137.length > i_10_; i_10_++) {
+			if (node_sub16.anIntArray7137[i_10_] >= 0 && EntityNode_Sub3_Sub1.aClass86_9166.anInt1175 > node_sub16.anIntArray7137[i_10_]) {
 				ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub16.anIntArray7137[i_10_], 14434);
 				int i_11_ = itemdefinition.method1678(i_6_, Class188_Sub2_Sub2.aClass36_9366.method394(i_6_, -78).anInt3443, 10247);
 				if (bool) {
@@ -239,7 +237,7 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 		if (i_12_ != 393216) {
 			aWidget9990 = null;
 		}
-        return !(!(Class262_Sub16.method3193(i_13_, i, (byte) -109) | (i & 0x60000 ^ 0xffffffff) != -1) && !Class110.method1135(i, i_13_, false) && !Class188_Sub1_Sub1.method1894(i, (byte) -29, i_13_));
+        return !(!(Class262_Sub16.method3193(i_13_, i, (byte) -109) | (i & 0x60000) != 0) && !Class110.method1135(i, i_13_, false) && !Class188_Sub1_Sub1.method1894(i, (byte) -29, i_13_));
     }
 	
 	final long method2675(int i) {
@@ -268,19 +266,19 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 		if (aBoolean9991) {
 			aLong9973 = Class313.method3650(false);
 			int i_15_ = aDecoderContext9961.decodePacketIn(oggpacket, aGranulePos9989);
-			if ((i_15_ ^ 0xffffffff) > -1) {
+			if (i_15_ < 0) {
 				throw new IllegalStateException(String.valueOf(i_15_));
 			}
 			aDecoderContext9961.granuleFrame(aGranulePos9989);
 			aDouble9983 = aDecoderContext9961.granuleTime(aGranulePos9989);
 			if (aBoolean9964) {
-				boolean bool = (oggpacket.isKeyFrame() ^ 0xffffffff) == -2;
+				boolean bool = oggpacket.isKeyFrame() == 1;
 				if (!bool) {
 					return;
 				}
 				aBoolean9964 = false;
 			}
-			if (!aBoolean9969 || (oggpacket.isKeyFrame() ^ 0xffffffff) == -2) {
+			if (!aBoolean9969 || oggpacket.isKeyFrame() == 1) {
 				if (aDecoderContext9961.decodeFrame(aFrame9986) != 0) {
 					throw new IllegalStateException(String.valueOf(i_15_));
 				}
@@ -290,7 +288,7 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 			int i_16_ = aSetupInfo9968.decodeHeader(aTheoraInfo9972, aTheoraComment9981, oggpacket);
 			if (i_16_ == 0) {
 				aBoolean9991 = true;
-				if ((aTheoraInfo9972.frameWidth ^ 0xffffffff) < -2049 || aTheoraInfo9972.frameHeight > 1024) {
+				if (aTheoraInfo9972.frameWidth > 2048 || aTheoraInfo9972.frameHeight > 1024) {
 					throw new IllegalStateException();
 				}
 				aDecoderContext9961 = new DecoderContext(aTheoraInfo9972, aSetupInfo9968);
@@ -298,7 +296,7 @@ public class Node_Sub25_Sub3 extends Node_Sub25
 				aFrame9986 = new Frame(aTheoraInfo9972.frameWidth, aTheoraInfo9972.frameHeight);
 				anInt9963 = aDecoderContext9961.getMaxPostProcessingLevel();
 				method2669((byte) -125, anInt9975);
-			} else if ((i_16_ ^ 0xffffffff) > -1) {
+			} else if (i_16_ < 0) {
 				throw new IllegalStateException(String.valueOf(i_16_));
 			}
 		}

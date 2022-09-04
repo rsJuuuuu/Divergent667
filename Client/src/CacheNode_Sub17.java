@@ -42,18 +42,14 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2
 			getPasswordAsStream((byte) -89);
 		}
 		String string = "www";
-		if (Node_Sub38_Sub1.aClass329_10086 != Class189_Sub1.aClass329_6887) {
-			if (Node_Sub38_Sub1.aClass329_10086 != Class379.aClass329_4873) {
-				if (Node_Sub38_Sub1.aClass329_10086 == Class229.aClass329_2730) {
-					string = "www-wtwip";
-				}
-			} else {
-				string = "www-wtqa";
-			}
-		} else {
+		if (Node_Sub38_Sub1.aClass329_10086 == Class189_Sub1.aClass329_6887) {
 			string = "www-wtrc";
+		} else if (Node_Sub38_Sub1.aClass329_10086 == Class379.aClass329_4873) {
+			string = "www-wtqa";
+		} else if (Node_Sub38_Sub1.aClass329_10086 == Class229.aClass329_2730) {
+			string = "www-wtwip";
 		}
-		String string_4_ = "";
+        String string_4_ = "";
 		if (Class83.aString5186 != null) {
 			string_4_ = "/p=" + Class83.aString5186;
 		}
@@ -92,7 +88,7 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2
 	
 	static final BufferedStream getPasswordAsStream(byte b) {
 		anInt8844++;
-		BufferedStream buffer = Class300.getBufferWithIsaacKeys(3);
+		BufferedStream buffer = Class300.getBufferWithIsaacKeys();
 		buffer.writeLong(0L);
 		buffer.writeString(Node_Sub5.password);
 		if (b != 27) {
@@ -107,7 +103,7 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2
 	final void method2398(byte b) {
 		@SuppressWarnings("unused")
 		int i = -98 % ((-19 - b) / 32);
-		if ((anInt8838 ^ 0xffffffff) < -1) {
+		if (anInt8838 > 0) {
 			aGLToolkit8836.method1426(anInt8838, (byte) -32, anInt8833);
 			anInt8838 = 0;
 		}
@@ -141,7 +137,7 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2
 	}
 	
 	static {
-		for (int i = 0; (i ^ 0xffffffff) > -4097; i++)
+		for (int i = 0; i < 4096; i++)
 			anIntArray8840[i] = ObjectDefinition.method3047(i, -1);
 		BIT_FLAGS = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1 };
 	}

@@ -49,7 +49,7 @@ public class Node_Sub15_Sub4 extends Node_Sub15
 		int i_2_ = 63;
 		if (b == -96) {
 			int i_3_ = 7;
-			for (int i_4_ = 63; (i_4_ ^ 0xffffffff) <= -1; i_4_--) {
+			for (int i_4_ = 63; i_4_ >= 0; i_4_--) {
 				Class110.method1132(b ^ ~0x5f, true, false);
 				int i_5_ = 0x7f & i_2_ | (i_4_ << 10 & 0xfc00 | (i_3_ & 0x7) << 7);
 				int i_6_ = Class85.anIntArray1158[i_5_];

@@ -14,7 +14,7 @@ public class Class234_Sub3 extends Class234
 	
 	final void method2146(int i) {
 		aLong6928 = 0L;
-		if ((aLong6926 ^ 0xffffffffffffffffL) > (aLong6925 ^ 0xffffffffffffffffL)) {
+		if (aLong6925 > aLong6926) {
 			aLong6926 += -aLong6926 + aLong6925;
 		}
 		if (i != -4756) {
@@ -29,7 +29,7 @@ public class Class234_Sub3 extends Class234
 		}
 		long l_0_ = l - aLong6928;
 		aLong6928 = l;
-		if (l_0_ > -5000000000L && (l_0_ ^ 0xffffffffffffffffL) > -5000000001L) {
+		if (l_0_ > -5000000000L && l_0_ < 5000000000L) {
 			aLongArray6929[anInt6927] = l_0_;
 			if (anInt6930 < 1) {
 				anInt6930++;
@@ -73,7 +73,7 @@ public class Class234_Sub3 extends Class234
 		int i = 0;
 		do
 			aLong6925 += l;
-		while (++i < 10 && (aLong6926 ^ 0xffffffffffffffffL) < (aLong6925 ^ 0xffffffffffffffffL));
+		while (++i < 10 && aLong6925 < aLong6926);
 		if (aLong6926 > aLong6925) {
 			aLong6925 = aLong6926;
 		}

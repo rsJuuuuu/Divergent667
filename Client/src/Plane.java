@@ -110,12 +110,12 @@ abstract class Plane
 		if (Class194_Sub3_Sub1.aBoolean9375) {
 			for (CacheNode_Sub4 cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1723(13); cachenode_sub4 != null; cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1721(0)) {
 				int i_59_;
-				if (cachenode_sub4.anInt9462 != 1) {
-					i_59_ = Node_Sub14.method2551(cachenode_sub4, -1);
-				} else {
+				if (cachenode_sub4.anInt9462 == 1) {
 					i_59_ = Node_Sub19.method2609((byte) -88, (CacheNode_Sub13) cachenode_sub4.aClass158_9457.aCacheNode1984.aCacheNode7035);
+				} else {
+					i_59_ = Node_Sub14.method2551(cachenode_sub4, -1);
 				}
-				if (i_59_ > i_57_) {
+                if (i_59_ > i_57_) {
 					i_57_ = i_59_;
 				}
 			}
@@ -134,7 +134,7 @@ abstract class Plane
 			i_58_ = Class315.anInt4035 * 16 + 21;
 		}
 		int i_61_ = -(i_57_ / 2) + i_56_;
-		if ((Class360.screenWidth ^ 0xffffffff) > (i_57_ + i_61_ ^ 0xffffffff)) {
+		if (i_57_ + i_61_ > Class360.screenWidth) {
 			i_61_ = -i_57_ + Class360.screenWidth;
 		}
 		if (i_61_ < 0) {
@@ -159,7 +159,7 @@ abstract class Plane
 		anInt3399++;
 		int i_70_ = i_69_ >> anInt3410;
 		int i_71_ = i >> anInt3410;
-		if ((i_70_ ^ 0xffffffff) > -1 || i_71_ < 0 || (anInt3408 + -1 ^ 0xffffffff) > (i_70_ ^ 0xffffffff) || -1 + anInt3404 < i_71_) {
+		if (i_70_ < 0 || i_71_ < 0 || i_70_ > anInt3408 + -1 || -1 + anInt3404 < i_71_) {
 			return 0;
 		}
 		int i_72_ = anInt3398 - 1 & i_69_;

@@ -31,26 +31,18 @@ public class Class260 implements Interface10
 		if (i != 30716) {
 			aClass124_5230 = null;
 		}
-		if (class94 != Class117_Sub1.aClass94_4924) {
-			if (class94 != Class116.aClass94_5075) {
-				if (class94 != Class385.aClass94_4911) {
-					if (class94 != Class236.aClass94_2898) {
-						if (GameStub.aClass94_11 == class94) {
-							return 34023;
-						}
-					} else {
-						return 260;
-					}
-				} else {
-					return 34165;
-				}
-			} else {
-				return 8448;
-			}
-		} else {
+		if (class94 == Class117_Sub1.aClass94_4924) {
 			return 7681;
+		} else if (class94 == Class116.aClass94_5075) {
+			return 8448;
+		} else if (class94 == Class385.aClass94_4911) {
+			return 34165;
+		} else if (class94 == Class236.aClass94_2898) {
+			return 260;
+		} else if (GameStub.aClass94_11 == class94) {
+			return 34023;
 		}
-		throw new IllegalArgumentException();
+        throw new IllegalArgumentException();
 	}
 	
 	public final void method27(boolean bool, int i) {

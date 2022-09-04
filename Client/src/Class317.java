@@ -19,7 +19,7 @@ public class Class317
 		if (node_sub16 == null) {
 			return -1;
 		}
-		if (i_1_ < 0 || (i_1_ ^ 0xffffffff) <= (node_sub16.anIntArray7137.length ^ 0xffffffff)) {
+		if (i_1_ < 0 || node_sub16.anIntArray7137.length <= i_1_) {
 			return -1;
 		}
 		return node_sub16.anIntArray7137[i_1_];

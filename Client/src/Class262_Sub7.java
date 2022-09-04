@@ -17,7 +17,7 @@ public class Class262_Sub7 extends Class262
 	
 	final void method3148(int i) {
 		if (i <= -102) {
-			if ((Class200_Sub2.anInt4935 ^ 0xffffffff) != 0) {
+			if (Class200_Sub2.anInt4935 != -1) {
 				ClientScriptsExecutor.method3563(Class200_Sub2.anInt4935, aString7752, anInt7751);
 			}
 			anInt7749++;

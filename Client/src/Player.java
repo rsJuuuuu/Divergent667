@@ -71,7 +71,7 @@ public class Player extends Actor {
 			class336.method3863(anInt5934, i + anInt5937, anInt5940);
 			this.method870(graphicstoolkit, (byte) 45, aBoolean10906,
 					aDrawableModelArray10909, class336);
-			for (int i_0_ = 0; (i_0_ ^ 0xffffffff) > (aDrawableModelArray10909.length ^ 0xffffffff); i_0_++)
+			for (int i_0_ = 0; aDrawableModelArray10909.length > i_0_; i_0_++)
 				aDrawableModelArray10909[i_0_] = null;
 		}
 	}
@@ -90,8 +90,8 @@ public class Player extends Actor {
 			method820(null, 41);
 		}
 		int i_6_ = i_5_ * i_5_ + i * i;
-		if ((i_6_ ^ 0xffffffff) <= -262145
-				&& (i_6_ ^ 0xffffffff) >= (i_3_ ^ 0xffffffff)) {
+		if (i_6_ >= 262144
+				&& i_3_ >= i_6_) {
 			int i_7_ = (int) (2607.5945876176133 * Math.atan2((double) i,
 					(double) i_5_) - (double) aClass99_10893.method1086(16383)) & 0x3fff;
 			DrawableModel drawablemodel_8_ = Node_Sub53.method2978(anInt10872,
@@ -133,7 +133,7 @@ public class Player extends Actor {
 		class336.method3860(i_10_);
 		class336.method3863(anInt5934, anInt5937, anInt5940);
 		boolean bool_11_ = bool;
-		for (int i_12_ = 0; (i_12_ ^ 0xffffffff) > (aDrawableModelArray10909.length ^ 0xffffffff); i_12_++) {
+		for (int i_12_ = 0; aDrawableModelArray10909.length > i_12_; i_12_++) {
 			if (aDrawableModelArray10909[i_12_] != null
 					&& (!Node_Sub15_Sub10.aBoolean9850 ? aDrawableModelArray10909[i_12_]
 							.method624(i_9_, i, class336, true, 0)
@@ -185,8 +185,8 @@ public class Player extends Actor {
 			Class336 class336, int i_18_, int i_19_) {
 		anInt11174++;
 		int i_20_ = i_17_ * i_17_ - -(i_19_ * i_19_);
-		if ((i_20_ ^ 0xffffffff) <= -262145
-				&& (i_20_ ^ 0xffffffff) >= (i ^ 0xffffffff)) {
+		if (i_20_ >= 262144
+				&& i >= i_20_) {
 			if (b > -15) {
 				anInt11172 = -60;
 			}
@@ -227,7 +227,7 @@ public class Player extends Actor {
 
 	final int getSize(byte b) {
 		if (aPlayerDefinition11137 != null
-				&& (aPlayerDefinition11137.toNPCId ^ 0xffffffff) != 0) {
+				&& aPlayerDefinition11137.toNPCId != -1) {
 			return Class366.aClass279_4526.getNPCDefinitions(
 					aPlayerDefinition11137.toNPCId, (byte) 107).anInt2811;
 		}
@@ -272,16 +272,16 @@ public class Player extends Actor {
 		int i_29_ = aClass99_10893.method1086(16383);
 		class336.method3860(i_29_);
 		Class261 class261 = Class175.aClass261ArrayArrayArray2099[plane][anInt5934 >> Class36.anInt549][anInt5940 >> Class36.anInt549];
-		if (class261 != null && class261.anAnimable_Sub1_3317 != null) {
+		if (class261 == null || class261.anAnimable_Sub1_3317 == null) {
+			anInt10849 -= (float) anInt10849 / 10.0F;
+		} else {
 			int i_31_ = anInt10849 + -class261.anAnimable_Sub1_3317.aShort9102;
 			anInt10849 -= (float) i_31_ / 10.0F;
-		} else {
-			anInt10849 -= (float) anInt10849 / 10.0F;
 		}
-		class336.method3863(anInt5934, -anInt10849 + anInt5937 + -20, anInt5940);
+        class336.method3863(anInt5934, -anInt10849 + anInt5937 + -20, anInt5940);
 		aBoolean10903 = false;
 		EntityNode_Sub6 entitynode_sub6 = null;
-		if ((Class213.aNode_Sub27_2512.aClass320_Sub7_7308.method3708(false) ^ 0xffffffff) == -2) {
+		if (Class213.aNode_Sub27_2512.aClass320_Sub7_7308.method3708(false) == 1) {
 			Class259 class259 = this.method868((byte) -126);
 			if (class259.aBoolean3267
 					&& (aPlayerDefinition11137.toNPCId == -1 || Class366.aClass279_4526
@@ -322,9 +322,9 @@ public class Player extends Actor {
 			}
 		}
 		if (Class295.myPlayer == this) {
-			for (int i_33_ = Class320_Sub24.cachedHintIcons.length + -1; (i_33_ ^ 0xffffffff) <= -1; i_33_--) {
+			for (int i_33_ = Class320_Sub24.cachedHintIcons.length + -1; i_33_ >= 0; i_33_--) {
 				Class223 class223 = Class320_Sub24.cachedHintIcons[i_33_];
-				if (class223 != null && (class223.anInt2666 ^ 0xffffffff) != 0) {
+				if (class223 != null && class223.anInt2666 != -1) {
 					if (class223.anInt2654 == 1) {
 						Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187
 								.method1518(3512, (long) class223.anInt2658);
@@ -354,18 +354,18 @@ public class Player extends Actor {
 								+ class223.anInt2653;
 						int i_38_ = class223.anInt2655 << 9;
 						i_38_ *= i_38_;
-						if (!Node_Sub15_Sub10.aBoolean9850) {
-							method883((byte) -74, i_36_, i_38_,
-									class223.anInt2666,
-									aDrawableModelArray10909[0], class336,
-									graphicstoolkit, i_37_);
-						} else {
+						if (Node_Sub15_Sub10.aBoolean9850) {
 							method885(aDrawableModelArray10909[0], i_38_,
 									(byte) -36, graphicstoolkit,
 									class223.anInt2666, i_36_, class336,
 									Class308.anInt3912, i_37_);
+						} else {
+							method883((byte) -74, i_36_, i_38_,
+									class223.anInt2666,
+									aDrawableModelArray10909[0], class336,
+									graphicstoolkit, i_37_);
 						}
-					}
+                    }
 					if (class223.anInt2654 == 10
 							&& class223.anInt2658 >= 0
 							&& class223.anInt2658 < Class270_Sub2.LOCAL_PLAYERS.length) {
@@ -427,7 +427,7 @@ public class Player extends Actor {
 				graphicstoolkit.a(class198);
 			}
 		}
-		for (int i_44_ = 0; (i_44_ ^ 0xffffffff) > (aDrawableModelArray10909.length ^ 0xffffffff); i_44_++) {
+		for (int i_44_ = 0; aDrawableModelArray10909.length > i_44_; i_44_++) {
 			if (aDrawableModelArray10909[i_44_] != null) {
 				aBoolean10903 |= aDrawableModelArray10909[i_44_].F();
 			}
@@ -454,7 +454,7 @@ public class Player extends Actor {
 		chatPrefix = stream.readString();
 		skullId = stream.readByte();
 		prayIconId = stream.readByte();
-		aBoolean11131 = (stream.readByte() ^ 0xffffffff) == -2;
+		aBoolean11131 = stream.readByte() == 1;
 		if (Class240.aClass329_2943 == Node_Sub38_Sub1.aClass329_10086
 				&& Class339_Sub7.rights >= 2) {
 			aBoolean11131 = false;
@@ -467,7 +467,7 @@ public class Player extends Actor {
 		for (int i_49_ = 0; Class63.aClass363_922.anIntArray4508.length > i_49_; i_49_++) {
 			if (Class63.aClass363_922.anIntArray4508[i_49_] != 1) {
 				int i_50_ = stream.readUnsignedByte();
-				if ((i_50_ ^ 0xffffffff) == -1) {
+				if (i_50_ == 0) {
 					equipIds[i_49_] = 0;
 				} else {
 					int i_51_ = stream.readUnsignedByte();
@@ -484,7 +484,7 @@ public class Player extends Actor {
 						itemDefinitions[i_49_] = EntityNode_Sub3_Sub1.aClass86_9166
 								.method1010(i_52_, 14434);
 						int i_53_ = itemDefinitions[i_49_].anInt1899;
-						if ((i_53_ ^ 0xffffffff) != -1) {
+						if (i_53_ != 0) {
 							anInt11134 = i_53_;
 						}
 					} else {
@@ -497,8 +497,8 @@ public class Player extends Actor {
 		if (npcId == -1) {
 			int flagHash = stream.readUnsignedShort();
 			int slotId = 0;
-			for (int i_56_ = 0; (Class63.aClass363_922.anIntArray4508.length ^ 0xffffffff) < (i_56_ ^ 0xffffffff); i_56_++) {
-				if ((Class63.aClass363_922.anIntArray4508[i_56_] ^ 0xffffffff) == -1) {
+			for (int i_56_ = 0; i_56_ < Class63.aClass363_922.anIntArray4508.length; i_56_++) {
+				if (Class63.aClass363_922.anIntArray4508[i_56_] == 0) {
 					if ((flagHash & 1 << slotId) != 0) {
 						class38s[i_56_] = Node_Sub38_Sub27.method2882(stream,
 								itemDefinitions[i_56_], 0);
@@ -508,11 +508,11 @@ public class Player extends Actor {
 			}
 		}
 		int[] colorIds = new int[10];
-		for (int i_58_ = i; (i_58_ ^ 0xffffffff) > -11; i_58_++) {
+		for (int i_58_ = i; i_58_ < 10; i_58_++) {
 			int i_59_ = stream.readUnsignedByte();
-			if ((i_58_ ^ 0xffffffff) <= (Class117_Sub2.aShortArrayArrayArray5151.length ^ 0xffffffff)
+			if (Class117_Sub2.aShortArrayArrayArray5151.length <= i_58_
 					|| i_59_ < 0
-					|| (Class117_Sub2.aShortArrayArrayArray5151[i_58_][0].length ^ 0xffffffff) >= (i_59_ ^ 0xffffffff)) {
+					|| i_59_ >= Class117_Sub2.aShortArrayArrayArray5151[i_58_][0].length) {
 				i_59_ = 0;
 			}
 			colorIds[i_58_] = i_59_;
@@ -524,22 +524,22 @@ public class Player extends Actor {
 		}
 		username = displayName;
 		combatLevel = stream.readUnsignedByte();
-		if (!bool_46_) {
-			anInt11139 = 0;
-			combatLevelWithSummoning = stream.readUnsignedByte();
-			anInt11184 = stream.readUnsignedByte();
-			if (anInt11184 == 255) {
-				anInt11184 = -1;
-			}
-		} else {
+		if (bool_46_) {
 			anInt11139 = stream.readUnsignedShort();
 			combatLevelWithSummoning = combatLevel;
 			if (anInt11139 == 65535) {
 				anInt11139 = -1;
 			}
 			anInt11184 = -1;
+		} else {
+			anInt11139 = 0;
+			combatLevelWithSummoning = stream.readUnsignedByte();
+			anInt11184 = stream.readUnsignedByte();
+			if (anInt11184 == 255) {
+				anInt11184 = -1;
+			}
 		}
-		int i_60_ = anInt11164;
+        int i_60_ = anInt11164;
 		anInt11164 = stream.readUnsignedByte();
 		if (anInt11164 == 0) {
 			Class45.method462((byte) 69, this);
@@ -555,11 +555,11 @@ public class Player extends Actor {
 			anInt11182 = stream.readUnsignedShort();
 			anInt11173 = stream.readUnsignedByte();
 			if (hasDisplayName == !bool
-					|| (anInt11164 ^ 0xffffffff) != (i_60_ ^ 0xffffffff)
+					|| i_60_ != anInt11164
 					|| i_61_ != anInt11167
-					|| (i_62_ ^ 0xffffffff) != (anInt11172 ^ 0xffffffff)
+					|| anInt11172 != i_62_
 					|| anInt11153 != i_63_
-					|| (anInt11182 ^ 0xffffffff) != (i_64_ ^ 0xffffffff)
+					|| i_64_ != anInt11182
 					|| i_65_ != anInt11173) {
 				Class135.method1587(113, this);
 			}
@@ -570,7 +570,7 @@ public class Player extends Actor {
 		int i_66_ = aPlayerDefinition11137.toNPCId;
 		int[] is_67_ = aPlayerDefinition11137.anIntArray3430;
 		aPlayerDefinition11137.method3278(colorIds, equipIds, class38s, npcId,
-				method871(0), (genderId ^ 0xffffffff) == -2, (byte) -110);
+				method871(0), genderId == 1, (byte) -110);
 		if (npcId != i_66_) {
 			anInt5934 = (scenePositionXQueue[0] << 9)
 					- -(getSize((byte) 83) << 8);
@@ -614,13 +614,13 @@ public class Player extends Actor {
 				: null;
 		int i_72_ = class259.anInt3261;
 		int i_73_ = class259.anInt3266;
-		if ((i_72_ ^ 0xffffffff) != -1 || i_73_ != 0 || class259.anInt3250 != 0
-				|| (class259.anInt3285 ^ 0xffffffff) != -1) {
+		if (i_72_ != 0 || i_73_ != 0 || class259.anInt3250 != 0
+				|| class259.anInt3285 != 0) {
 			i |= 0x7;
 		}
 		int i_74_ = aClass99_10893.method1086(16383);
 		boolean bool = aByte10888 != 0
-				&& (Class174.clientCycle ^ 0xffffffff) <= (anInt10895 ^ 0xffffffff)
+				&& anInt10895 <= Class174.clientCycle
 				&& Class174.clientCycle < anInt10882;
 		if (bool) {
 			i |= 0x80000;
@@ -634,13 +634,13 @@ public class Player extends Actor {
 						anAnimableAnimator_Sub1Array10894, i_74_, animator_71_,
 						Class24.aClass275_442);
 		int i_75_ = Class290_Sub5.method3435(-85);
-		if ((Class201.anInt2446 ^ 0xffffffff) > -97 && i_75_ > 50) {
+		if (Class201.anInt2446 < 96 && i_75_ > 50) {
 			Class189.method1934((byte) 17);
 		}
 		if (Class240.aClass329_2943 != Node_Sub38_Sub1.aClass329_10086
 				&& i_75_ < 50) {
 			int i_76_;
-			for (i_76_ = 50 - i_75_; (Class57.anInt849 ^ 0xffffffff) > (i_76_ ^ 0xffffffff); Class57.anInt849++)
+			for (i_76_ = 50 - i_75_; i_76_ > Class57.anInt849; Class57.anInt849++)
 				Class93.aByteArrayArray1244[Class57.anInt849] = new byte[102400];
 			while (i_76_ < Class57.anInt849) {
 				Class57.anInt849--;
@@ -656,7 +656,7 @@ public class Player extends Actor {
 		anInt10875 = drawablemodel.fa();
 		anInt10844 = drawablemodel.ma();
 		this.method857(drawablemodel, false);
-		if ((i_72_ ^ 0xffffffff) == -1 && (i_73_ ^ 0xffffffff) == -1) {
+		if (i_72_ == 0 && i_73_ == 0) {
 			this.method865(i_74_, 0, 0, getSize((byte) 59) << 9,
 					getSize((byte) 126) << 9, -81);
 		} else {
@@ -762,7 +762,7 @@ public class Player extends Actor {
 		anInt11136++;
 		String title = "";
 		int[] is;
-		if ((genderId ^ 0xffffffff) == -2 && Class83.anIntArray5188 != null) {
+		if (genderId == 1 && Class83.anIntArray5188 != null) {
 			is = Class83.anIntArray5188;
 		} else {
 			is = InputStream_Sub1.anIntArray77;
@@ -770,7 +770,7 @@ public class Player extends Actor {
 				is = new int[] { (4 * 256 + 69) };
 			}
 		}
-		if (is != null && (is[aByte11145] ^ 0xffffffff) != 0) {
+		if (is != null && is[aByte11145] != -1) {
 			Class39 class39 = Class328.aClass362_4112.method4051(is[aByte11145], -752);
 			if (class39.aChar587 == 's') {
 				title += class39.method412(-3470, titleId & 0xff);
@@ -792,7 +792,7 @@ public class Player extends Actor {
 			method821(106);
 		}
 		int[] is;
-		if ((genderId ^ 0xffffffff) == -2 && Class83.anIntArray5188 != null) {
+		if (genderId == 1 && Class83.anIntArray5188 != null) {
 			is = Class83.anIntArray5188;
 		} else {
 			is = InputStream_Sub1.anIntArray77;
@@ -801,7 +801,7 @@ public class Player extends Actor {
 			}
 		}
 
-		if (is != null && (is[aByte11145] ^ 0xffffffff) != 0) {
+		if (is != null && is[aByte11145] != -1) {
 			Class39 class39 = Class328.aClass362_4112.method4051(
 					is[aByte11145], -752);
 			if (class39.aChar587 == 's') {
@@ -811,12 +811,12 @@ public class Player extends Actor {
 				is[aByte11145] = -1;
 			}
 		}
-		if (!bool_79_) {
-			string += username;
-		} else {
+		if (bool_79_) {
 			string += displayName;
+		} else {
+			string += username;
 		}
-		if (Class320_Sub15.aStringArray8354 != null) {
+        if (Class320_Sub15.aStringArray8354 != null) {
 			string += Class320_Sub15.aStringArray8354[aByte11145];
 		}
 		return string;
@@ -832,7 +832,7 @@ public class Player extends Actor {
 			method821(106);
 		}
 		int[] is;
-		if ((genderId ^ 0xffffffff) == -2 && Class83.anIntArray5188 != null) {
+		if (genderId == 1 && Class83.anIntArray5188 != null) {
 			is = Class83.anIntArray5188;
 		} else {
 			is = InputStream_Sub1.anIntArray77;
@@ -841,7 +841,7 @@ public class Player extends Actor {
 			}
 		}
 
-		if (is != null && (is[aByte11145] ^ 0xffffffff) != 0) {
+		if (is != null && is[aByte11145] != -1) {
 			Class39 class39 = Class328.aClass362_4112.method4051(
 					is[aByte11145], -752);
 			if (class39.aChar587 == 's') {
@@ -851,12 +851,12 @@ public class Player extends Actor {
 				is[aByte11145] = -1;
 			}
 		}
-		if (!bool_79_) {
-			string += username;
-		} else {
+		if (bool_79_) {
 			string += displayName;
+		} else {
+			string += username;
 		}
-		if (Class320_Sub15.aStringArray8354 != null) {
+        if (Class320_Sub15.aStringArray8354 != null) {
 			string += Class320_Sub15.aStringArray8354[aByte11145];
 		}
 		return string;
@@ -871,8 +871,8 @@ public class Player extends Actor {
 			if (aClass59_10861.aString877 == null) {
 				return null;
 			}
-			if ((Class69.anInt943 ^ 0xffffffff) == -1
-					|| (Class69.anInt943 ^ 0xffffffff) == -4
+			if (Class69.anInt943 == 0
+					|| Class69.anInt943 == 3
 					|| Class69.anInt943 == 1
 					&& Class193.method1955(i + 3109, username)) {
 				return aClass59_10861;
@@ -883,17 +883,17 @@ public class Player extends Actor {
 
 	final void method894(int i, int i_80_, int i_81_, byte b) {
 		if (anAnimator10876.method245(-126)
-				&& (anAnimator10876.method243((byte) -24).anInt718 ^ 0xffffffff) == -2) {
+				&& anAnimator10876.method243((byte) -24).anInt718 == 1) {
 			anIntArray10817 = null;
 			anAnimator10876.method249(true, -1);
 		}
 		anInt11143++;
-		for (int i_82_ = 0; (i_82_ ^ 0xffffffff) > (aClass165Array10886.length ^ 0xffffffff); i_82_++) {
-			if ((aClass165Array10886[i_82_].graphicsId ^ 0xffffffff) != 0) {
+		for (int i_82_ = 0; aClass165Array10886.length > i_82_; i_82_++) {
+			if (aClass165Array10886[i_82_].graphicsId != -1) {
 				Class195 class195 = Class16.aClass101_228.method1090(i_81_
 						^ ~0x24c3, aClass165Array10886[i_82_].graphicsId);
 				if (class195.aBoolean2402
-						&& (class195.anInt2394 ^ 0xffffffff) != 0
+						&& class195.anInt2394 != -1
 						&& Class18.aClass37_306.method395(class195.anInt2394,
 								(byte) -107).anInt718 == 1) {
 					aClass165Array10886[i_82_].anAnimator2026.method249(true,
@@ -907,16 +907,16 @@ public class Player extends Actor {
 		}
 		anInt11180 = -1;
 		if (i_80_ >= 0
-				&& (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) < (i_80_ ^ 0xffffffff)
-				&& (i ^ 0xffffffff) <= -1
-				&& (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (i ^ 0xffffffff)) {
-			if ((scenePositionXQueue[0] ^ 0xffffffff) > -1
-					|| (scenePositionXQueue[0] ^ 0xffffffff) <= (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff)
+				&& i_80_ < Node_Sub54.GAME_SCENE_WDITH
+				&& i >= 0
+				&& i < Class377_Sub1.GAME_SCENE_HEIGHT) {
+			if (scenePositionXQueue[0] < 0
+					|| Node_Sub54.GAME_SCENE_WDITH <= scenePositionXQueue[0]
 					|| scenePositionYQueue[0] < 0
-					|| (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) >= (scenePositionYQueue[0] ^ 0xffffffff)) {
+					|| scenePositionYQueue[0] >= Class377_Sub1.GAME_SCENE_HEIGHT) {
 				method888(i_80_, -97, i);
 			} else {
-				if ((b ^ 0xffffffff) == -3) {
+				if (b == 2) {
 					Class191.method1946(this, i_80_, true, (byte) 2, i);
 				}
 				method887(-24527, i, i_80_, b);

@@ -40,14 +40,14 @@ public class Class262_Sub16 extends Class262
 			if (b != -24) {
 				method3193(-8, -82, (byte) -41);
 			}
-			while ((--i_3_ ^ 0xffffffff) <= -1) {
+			while (--i_3_ >= 0) {
 				bs[i_2_++] = (byte) 1;
 				bs[i_2_++] = (byte) 1;
 				bs[i_2_++] = (byte) 1;
 				bs[i_2_++] = (byte) 1;
 			}
 			i_3_ = 0x3 & i + -i_4_;
-			while ((--i_3_ ^ 0xffffffff) <= -1)
+			while (--i_3_ >= 0)
 				bs[i_2_++] = (byte) 1;
 		}
 	}

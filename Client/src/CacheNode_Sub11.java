@@ -57,7 +57,7 @@ public class CacheNode_Sub11 extends CacheNode
 			aByteArrayArrayArray9550 = null;
 		}
 		anInt9536++;
-        return (0x800 & i_5_ ^ 0xffffffff) != -1;
+        return (0x800 & i_5_) != 0;
     }
 	
 	final boolean method2337(int i, int[] is, int i_6_, int i_7_, int i_8_) {
@@ -91,16 +91,16 @@ public class CacheNode_Sub11 extends CacheNode
 			anInt9540 = 12800;
 			anInt9531 = 0;
 			for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(65280); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620(16776960)) {
-				if ((node_sub52.anInt7646 ^ 0xffffffff) > (anInt9540 ^ 0xffffffff)) {
+				if (anInt9540 > node_sub52.anInt7646) {
 					anInt9540 = node_sub52.anInt7646;
 				}
-				if ((anInt9531 ^ 0xffffffff) > (node_sub52.anInt7641 ^ 0xffffffff)) {
+				if (node_sub52.anInt7641 > anInt9531) {
 					anInt9531 = node_sub52.anInt7641;
 				}
 				if (anInt9545 < node_sub52.anInt7635) {
 					anInt9545 = node_sub52.anInt7635;
 				}
-				if ((anInt9541 ^ 0xffffffff) < (node_sub52.anInt7636 ^ 0xffffffff)) {
+				if (node_sub52.anInt7636 < anInt9541) {
 					anInt9541 = node_sub52.anInt7636;
 				}
 			}

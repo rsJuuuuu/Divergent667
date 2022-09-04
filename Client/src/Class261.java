@@ -52,7 +52,7 @@ public class Class261
 		node_sub38_sub27.anInt10382 = i;
 		node_sub38_sub27.method2785(7);
 		Class169_Sub1.method1769(485964236, i_0_, i_4_);
-		for (int i_6_ = 0; (i_0_ ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++)
+		for (int i_6_ = 0; i_6_ < i_0_; i_6_++)
 			node_sub38_sub27.method2880(i_6_, is[i_6_], -52);
 		return is;
 	}
@@ -69,7 +69,7 @@ public class Class261
 		if (bool != false) {
 			aHashTable3306 = null;
 		}
-		if ((i_7_ ^ 0xffffffff) == -2 || i_7_ == 3) {
+		if (i_7_ == 1 || i_7_ == 3) {
 			return Node_Sub15.anIntArray7129[0x3 & i];
 		}
 		return Class339_Sub3.anIntArray8665[0x3 & i];

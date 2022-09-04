@@ -268,7 +268,20 @@ public class Class383
 	final int[] method4195() {
 		int i = method4190();
 		int[] is = new int[i * method4196()];
-		if (aByteArray4905 != null) {
+		if (aByteArray4905 == null) {
+			for (int i_71_ = 0; i_71_ < anInt4900; i_71_++) {
+				int i_72_ = i_71_ * anInt4897;
+				int i_73_ = anInt4902 + (i_71_ + anInt4898) * i;
+				for (int i_74_ = 0; i_74_ < anInt4897; i_74_++) {
+					int i_75_ = anIntArray4904[aByteArray4903[i_72_++] & 0xff];
+					if (i_75_ == 0) {
+						is[i_73_++] = 0;
+					} else {
+						is[i_73_++] = ~0xffffff | i_75_;
+					}
+                }
+			}
+		} else {
 			for (int i_67_ = 0; i_67_ < anInt4900; i_67_++) {
 				int i_68_ = i_67_ * anInt4897;
 				int i_69_ = anInt4902 + (i_67_ + anInt4898) * i;
@@ -277,21 +290,8 @@ public class Class383
 					i_68_++;
 				}
 			}
-		} else {
-			for (int i_71_ = 0; i_71_ < anInt4900; i_71_++) {
-				int i_72_ = i_71_ * anInt4897;
-				int i_73_ = anInt4902 + (i_71_ + anInt4898) * i;
-				for (int i_74_ = 0; i_74_ < anInt4897; i_74_++) {
-					int i_75_ = anIntArray4904[aByteArray4903[i_72_++] & 0xff];
-					if (i_75_ != 0) {
-						is[i_73_++] = ~0xffffff | i_75_;
-					} else {
-						is[i_73_++] = 0;
-					}
-				}
-			}
 		}
-		return is;
+        return is;
 	}
 	
 	final int method4196() {
@@ -440,7 +440,14 @@ public class Class383
 		int i_106_ = method4196();
 		if (anInt4897 != i || anInt4900 != i_106_) {
 			byte[] bs = new byte[i * i_106_];
-			if (aByteArray4905 != null) {
+			if (aByteArray4905 == null) {
+				for (int i_112_ = 0; i_112_ < anInt4900; i_112_++) {
+					int i_113_ = i_112_ * anInt4897;
+					int i_114_ = (i_112_ + anInt4898) * i + anInt4902;
+					for (int i_115_ = 0; i_115_ < anInt4897; i_115_++)
+						bs[i_114_++] = aByteArray4903[i_113_++];
+				}
+			} else {
 				byte[] bs_107_ = new byte[i * i_106_];
 				for (int i_108_ = 0; i_108_ < anInt4900; i_108_++) {
 					int i_109_ = i_108_ * anInt4897;
@@ -451,15 +458,8 @@ public class Class383
 					}
 				}
 				aByteArray4905 = bs_107_;
-			} else {
-				for (int i_112_ = 0; i_112_ < anInt4900; i_112_++) {
-					int i_113_ = i_112_ * anInt4897;
-					int i_114_ = (i_112_ + anInt4898) * i + anInt4902;
-					for (int i_115_ = 0; i_115_ < anInt4897; i_115_++)
-						bs[i_114_++] = aByteArray4903[i_113_++];
-				}
 			}
-			anInt4902 = anInt4901 = anInt4898 = anInt4899 = 0;
+            anInt4902 = anInt4901 = anInt4898 = anInt4899 = 0;
 			anInt4897 = i;
 			anInt4900 = i_106_;
 			aByteArray4903 = bs;

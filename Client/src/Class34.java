@@ -40,18 +40,16 @@ abstract class Class34
 			fs = new float[i_4_][];
 			for (int i_12_ = 0; i_12_ < i_0_; i_12_++) {
 				int i_13_ = is[i_12_];
-				if ((model.aByteArray2610[i_13_] ^ 0xffffffff) != 0) {
+				if (model.aByteArray2610[i_13_] != -1) {
 					int i_14_ = 0xff & model.aByteArray2610[i_13_];
-					for (int i_15_ = 0; (i_15_ ^ 0xffffffff) > -4; i_15_++) {
+					for (int i_15_ = 0; i_15_ < 3; i_15_++) {
 						short s;
-						if ((i_15_ ^ 0xffffffff) != -1) {
-							if ((i_15_ ^ 0xffffffff) == -2) {
-								s = model.aShortArray2583[i_13_];
-							} else {
-								s = model.aShortArray2589[i_13_];
-							}
-						} else {
+						if (i_15_ == 0) {
 							s = model.aShortArray2600[i_13_];
+						} else if (i_15_ == 1) {
+							s = model.aShortArray2583[i_13_];
+						} else {
+							s = model.aShortArray2589[i_13_];
 						}
 						int i_16_ = model.anIntArray2616[s];
 						int i_17_ = model.anIntArray2576[s];
@@ -62,13 +60,13 @@ abstract class Class34
 						if (i_16_ > is_6_[i_14_]) {
 							is_6_[i_14_] = i_16_;
 						}
-						if ((is_7_[i_14_] ^ 0xffffffff) < (i_17_ ^ 0xffffffff)) {
+						if (i_17_ < is_7_[i_14_]) {
 							is_7_[i_14_] = i_17_;
 						}
 						if (i_17_ > is_8_[i_14_]) {
 							is_8_[i_14_] = i_17_;
 						}
-						if ((is_9_[i_14_] ^ 0xffffffff) < (i_18_ ^ 0xffffffff)) {
+						if (i_18_ < is_9_[i_14_]) {
 							is_9_[i_14_] = i_18_;
 						}
 						if (i_18_ > is_10_[i_14_]) {
@@ -88,22 +86,20 @@ abstract class Class34
 					float f;
 					float f_20_;
 					float f_21_;
-					if ((b ^ 0xffffffff) == -2) {
+					if (b == 1) {
 						int i_22_ = model.anIntArray2603[i_19_];
 						f = 64.0F / (float) model.anIntArray2588[i_19_];
-						if (i_22_ != 0) {
-							if (i_22_ <= 0) {
-								f_20_ = 1.0F;
-								f_21_ = (float) -i_22_ / 1024.0F;
-							} else {
-								f_21_ = 1.0F;
-								f_20_ = (float) i_22_ / 1024.0F;
-							}
-						} else {
+						if (i_22_ == 0) {
 							f_21_ = 1.0F;
 							f_20_ = 1.0F;
+						} else if (i_22_ <= 0) {
+							f_20_ = 1.0F;
+							f_21_ = (float) -i_22_ / 1024.0F;
+						} else {
+							f_21_ = 1.0F;
+							f_20_ = (float) i_22_ / 1024.0F;
 						}
-					} else if ((b ^ 0xffffffff) == -3) {
+					} else if (b == 2) {
 						f = 64.0F / (float) model.anIntArray2588[i_19_];
 						f_20_ = 64.0F / (float) model.anIntArray2593[i_19_];
 						f_21_ = 64.0F / (float) model.anIntArray2603[i_19_];
@@ -142,19 +138,19 @@ abstract class Class34
 			pingPacket = null;
 		}
 		for (/**/; i < actor.aClass165Array10886.length; i++) {
-			if ((actor.aClass165Array10886[i].graphicsId ^ 0xffffffff) != 0) {
+			if (actor.aClass165Array10886[i].graphicsId != -1) {
 				Animator animator_24_ = actor.aClass165Array10886[i].anAnimator2026;
 				if (animator_24_.method242((byte) -77)) {
 					Class195 class195 = Class16.aClass101_228.method1090(-121, actor.aClass165Array10886[i].graphicsId);
 					Class48 class48 = animator_24_.method243((byte) -24);
 					if (class195.aBoolean2402) {
 						if (class48.anInt698 == 3) {
-							if (actor.anInt10900 > 0 && (Class174.clientCycle ^ 0xffffffff) <= (actor.toFirstTileTicketDelay ^ 0xffffffff) && actor.toSecondTileTicketDelay < Class174.clientCycle) {
+							if (actor.anInt10900 > 0 && actor.toFirstTileTicketDelay <= Class174.clientCycle && actor.toSecondTileTicketDelay < Class174.clientCycle) {
 								animator_24_.method249(true, -1);
 								actor.aClass165Array10886[i].graphicsId = -1;
 								continue;
 							}
-						} else if (class48.anInt698 == 1 && (actor.anInt10900 ^ 0xffffffff) < -1 && actor.toFirstTileTicketDelay <= Class174.clientCycle && (Class174.clientCycle ^ 0xffffffff) < (actor.toSecondTileTicketDelay ^ 0xffffffff)) {
+						} else if (class48.anInt698 == 1 && actor.anInt10900 > 0 && actor.toFirstTileTicketDelay <= Class174.clientCycle && actor.toSecondTileTicketDelay < Class174.clientCycle) {
 							continue;
 						}
 					}
@@ -170,13 +166,13 @@ abstract class Class34
 			if (animator_25_.method245(-127)) {
 				Class48 class48 = animator_25_.method243((byte) -24);
 				if (class48.anInt698 == 3) {
-					if ((actor.anInt10900 ^ 0xffffffff) < -1 && actor.toFirstTileTicketDelay <= Class174.clientCycle && Class174.clientCycle > actor.toSecondTileTicketDelay) {
+					if (actor.anInt10900 > 0 && actor.toFirstTileTicketDelay <= Class174.clientCycle && Class174.clientCycle > actor.toSecondTileTicketDelay) {
 						actor.anIntArray10817 = null;
 						animator_25_.method249(true, -1);
 						break;
 					}
-				} else if ((class48.anInt698 ^ 0xffffffff) == -2) {
-					if ((actor.anInt10900 ^ 0xffffffff) < -1 && Class174.clientCycle >= actor.toFirstTileTicketDelay && actor.toSecondTileTicketDelay < Class174.clientCycle) {
+				} else if (class48.anInt698 == 1) {
+					if (actor.anInt10900 > 0 && Class174.clientCycle >= actor.toFirstTileTicketDelay && actor.toSecondTileTicketDelay < Class174.clientCycle) {
 						animator_25_.method227(1, -10);
 						break;
 					}
@@ -188,10 +184,10 @@ abstract class Class34
 				}
 			}
 		} while (false);
-		for (int i_26_ = 0; (actor.anAnimableAnimator_Sub1Array10894.length ^ 0xffffffff) < (i_26_ ^ 0xffffffff); i_26_++) {
+		for (int i_26_ = 0; i_26_ < actor.anAnimableAnimator_Sub1Array10894.length; i_26_++) {
 			AnimableAnimator_Sub1 animableanimator_sub1 = actor.anAnimableAnimator_Sub1Array10894[i_26_];
 			if (animableanimator_sub1 != null) {
-				if ((animableanimator_sub1.anInt9094 ^ 0xffffffff) < -1) {
+				if (animableanimator_sub1.anInt9094 > 0) {
 					animableanimator_sub1.anInt9094--;
 				} else if (animableanimator_sub1.method248(-116, 1) && animableanimator_sub1.method238(-71)) {
 					actor.anAnimableAnimator_Sub1Array10894[i_26_] = null;

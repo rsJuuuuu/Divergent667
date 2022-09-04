@@ -29,14 +29,14 @@ public class Node_Sub51 extends Node
 	
 	static final int method2969(Class377_Sub1 class377_sub1, boolean bool, Class377_Sub1 class377_sub1_1_, int i, int i_2_) {
 		anInt7632++;
-		if ((i ^ 0xffffffff) == -2) {
+		if (i == 1) {
 			int i_3_ = class377_sub1_1_.anInt4671;
 			int i_4_ = class377_sub1.anInt4671;
 			if (!bool) {
 				if (i_3_ == -1) {
 					i_3_ = 2001;
 				}
-				if ((i_4_ ^ 0xffffffff) == 0) {
+				if (i_4_ == -1) {
 					i_4_ = 2001;
 				}
 			}
@@ -45,7 +45,7 @@ public class Node_Sub51 extends Node
 		if (i == 2) {
 			return r.method2359(class377_sub1.method4131((byte) -97).aString678, (byte) -4, Class35.language, class377_sub1_1_.method4131((byte) -97).aString678);
 		}
-		if ((i ^ 0xffffffff) == -4) {
+		if (i == 3) {
 			if (class377_sub1_1_.aString8780.equals("-")) {
 				if (class377_sub1.aString8780.equals("-")) {
 					return 0;
@@ -90,7 +90,7 @@ public class Node_Sub51 extends Node
 		if (i_2_ != 1) {
 			return 117;
 		}
-		if ((i ^ 0xffffffff) == -7) {
+		if (i == 6) {
 			if (class377_sub1_1_.method4122(-80)) {
 				if (class377_sub1.method4122(-43)) {
 					return 0;
@@ -102,7 +102,7 @@ public class Node_Sub51 extends Node
 			}
 			return 0;
 		}
-		if ((i ^ 0xffffffff) == -8) {
+		if (i == 7) {
 			if (class377_sub1_1_.method4123(i_2_ ^ 0x6bfe)) {
 				if (class377_sub1.method4123(i_2_ ^ 0x6bfe)) {
 					return 0;
@@ -114,25 +114,25 @@ public class Node_Sub51 extends Node
 			}
 			return -1;
 		}
-		if ((i ^ 0xffffffff) == -9) {
+		if (i == 8) {
 			int i_5_ = class377_sub1_1_.anInt8779;
 			int i_6_ = class377_sub1.anInt8779;
-			if (!bool) {
-				if (i_5_ == -1) {
-					i_5_ = 1000;
-				}
-				if (i_6_ == -1) {
-					i_6_ = 1000;
-				}
-			} else {
+			if (bool) {
 				if (i_5_ == 1000) {
 					i_5_ = -1;
 				}
 				if (i_6_ == 1000) {
 					i_6_ = -1;
 				}
+			} else {
+				if (i_5_ == -1) {
+					i_5_ = 1000;
+				}
+				if (i_6_ == -1) {
+					i_6_ = 1000;
+				}
 			}
-			return i_5_ - i_6_;
+            return i_5_ - i_6_;
 		}
 		return -class377_sub1.anInt8777 + class377_sub1_1_.anInt8777;
 	}

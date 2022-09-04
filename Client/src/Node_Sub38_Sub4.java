@@ -74,18 +74,16 @@ public class Node_Sub38_Sub4 extends Node_Sub38
 					i_8_ = (int) (3.141592653589793 * (double) (i_8_ * anInt10109));
 				}
 				i_8_ -= ~0xfff & i_8_;
-				if ((anInt10113 ^ 0xffffffff) != -1) {
-					if (anInt10113 == 2) {
-						i_8_ -= 2048;
-						if (i_8_ < 0) {
-							i_8_ = -i_8_;
-						}
-						i_8_ = 2048 + -i_8_ << 1;
-					}
-				} else {
+				if (anInt10113 == 0) {
 					i_8_ = Class122.anIntArray1556[(i_8_ & 0xffd) >> 4] - -4096 >> 1;
+				} else if (anInt10113 == 2) {
+					i_8_ -= 2048;
+					if (i_8_ < 0) {
+						i_8_ = -i_8_;
+					}
+					i_8_ = 2048 + -i_8_ << 1;
 				}
-				is[i_5_] = i_8_;
+                is[i_5_] = i_8_;
 			}
 		}
 		return is;
@@ -104,7 +102,7 @@ public class Node_Sub38_Sub4 extends Node_Sub38
 			method2797(53, -123, 37);
 		}
 		anInt10117++;
-		if ((Class320_Sub20.anInt8397 ^ 0xffffffff) == -2) {
+		if (Class320_Sub20.anInt8397 == 1) {
 			return Class303.anInt3831;
 		}
 		return Class148.anInt1825;
@@ -117,18 +115,16 @@ public class Node_Sub38_Sub4 extends Node_Sub38
 		while_7_:
 			do {
 				do {
-					if (i_10_ != 0) {
-						if ((i_10_ ^ 0xffffffff) != -2) {
-							if ((i_10_ ^ 0xffffffff) == -4) {
-								break;
-							}
-							break while_7_;
-						}
-					} else {
+					if (i_10_ == 0) {
 						anInt10114 = buffer.readUnsignedByte();
 						return;
+					} else if (i_10_ != 1) {
+						if (i_10_ == 3) {
+							break;
+						}
+						break while_7_;
 					}
-					anInt10113 = buffer.readUnsignedByte();
+                    anInt10113 = buffer.readUnsignedByte();
 					return;
 				} while (false);
 				anInt10109 = buffer.readUnsignedByte();

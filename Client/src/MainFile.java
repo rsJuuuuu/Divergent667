@@ -33,10 +33,10 @@ public class MainFile
 			BufferedStream buffer = new BufferedStream(bs);
 			for (;;) {
 				int i = buffer.readUnsignedByte();
-				if ((i ^ 0xffffffff) == -1) {
+				if (i == 0) {
 					break;
 				}
-				if ((i ^ 0xffffffff) == -2) {
+				if (i == 1) {
 					int i_0_ = buffer.readUnsignedShort();
 					if (Class317.anInt4038 == -1) {
 						Class317.anInt4038 = i_0_;
@@ -54,7 +54,7 @@ public class MainFile
 	final boolean method176(int i, byte[] bs, int i_1_, boolean bool) {
 		anInt140++;
 		synchronized (aSeekableFile134) {
-			if ((i ^ 0xffffffff) > -1 || i > anInt139) {
+			if (i < 0 || i > anInt139) {
 				throw new IllegalArgumentException();
 			}
 			boolean bool_2_ = method179(bs, 11233, i_1_, i, bool);
@@ -69,7 +69,7 @@ public class MainFile
 		anInt145++;
 		synchronized (aSeekableFile134) {
 			try {
-				if ((aSeekableFile137.method3573(-1) ^ 0xffffffffffffffffL) > ((long) (archiveId * 6 - -6) ^ 0xffffffffffffffffL)) {
+				if ((long) (archiveId * 6 - -6) > aSeekableFile137.method3573(-1)) {
 					return null;
 				}
 				aSeekableFile137.method3577((long) (archiveId * 6), false);
@@ -79,7 +79,7 @@ public class MainFile
 				if (archiveLength < 0 || archiveLength > anInt139) {
 					return null;
 				}
-				if ((sector ^ 0xffffffff) >= -1 || aSeekableFile134.method3573(-1) / 520L < (long) sector) {
+				if (sector <= 0 || aSeekableFile134.method3573(-1) / 520L < (long) sector) {
 					return null;
 				}
 				byte[] bs = new byte[archiveLength];
@@ -88,13 +88,13 @@ public class MainFile
 					method178(-80);
 				}
 				int i_7_ = 0;
-				while ((archiveLength ^ 0xffffffff) < (readBytesCount ^ 0xffffffff)) {
+				while (readBytesCount < archiveLength) {
 					if (sector == 0) {
 						return null;
 					}
 					aSeekableFile134.method3577((long) (sector * 520), false);
 					int i_8_ = archiveLength - readBytesCount;
-					if ((i_8_ ^ 0xffffffff) < -513) {
+					if (i_8_ > 512) {
 						i_8_ = 512;
 					}
 					aSeekableFile134.method3568(-92, i_8_ - -8, Class157.aByteArray1973, 0);
@@ -102,10 +102,10 @@ public class MainFile
 					int i_10_ = (Class157.aByteArray1973[3] & 0xff) + ((0xff & Class157.aByteArray1973[2]) << 8);
 					int i_11_ = (Class157.aByteArray1973[5] << 8 & 0xff00) + ((Class157.aByteArray1973[4] << 16 & 0xff0000) + (Class157.aByteArray1973[6] & 0xff));
 					int i_12_ = 0xff & Class157.aByteArray1973[7];
-					if ((archiveId <= 65535 && archiveId != currentArchive) || (i_7_ ^ 0xffffffff) != (i_10_ ^ 0xffffffff) || (i_12_ ^ 0xffffffff) != (anInt143 ^ 0xffffffff)) {
+					if ((archiveId <= 65535 && archiveId != currentArchive) || i_10_ != i_7_ || anInt143 != i_12_) {
 						return null;
 					}
-					if ((i_11_ ^ 0xffffffff) > -1 || (long) i_11_ > aSeekableFile134.method3573(-1) / 520L) {
+					if (i_11_ < 0 || (long) i_11_ > aSeekableFile134.method3573(-1) / 520L) {
 						return null;
 					}
 					i_7_++;
@@ -138,7 +138,7 @@ public class MainFile
 			try {
 				int i_16_;
 				if (bool) {
-					if ((aSeekableFile137.method3573(-1) ^ 0xffffffffffffffffL) > ((long) (6 + archiveId * 6) ^ 0xffffffffffffffffL)) {
+					if ((long) (6 + archiveId * 6) > aSeekableFile137.method3573(-1)) {
 						return false;
 					}
 					aSeekableFile137.method3577((long) (archiveId * 6), false);
@@ -176,24 +176,24 @@ public class MainFile
 						int i_21_ = (Class157.aByteArray1973[3] & 0xff) + (Class157.aByteArray1973[2] << 8 & 0xff00);
 						i_19_ = (0xff & Class157.aByteArray1973[6]) + (((0xff & Class157.aByteArray1973[4]) << 16) - -((0xff & Class157.aByteArray1973[5]) << 8));
 						int i_22_ = Class157.aByteArray1973[7] & 0xff;
-						if ((archiveId <= 65535 && archiveId != currentArchive) || (i_18_ ^ 0xffffffff) != (i_21_ ^ 0xffffffff) || i_22_ != anInt143) {
+						if ((archiveId <= 65535 && archiveId != currentArchive) || i_21_ != i_18_ || i_22_ != anInt143) {
 							return false;
 						}
-						if ((i_19_ ^ 0xffffffff) > -1 || (aSeekableFile134.method3573(i + -11234) / 520L ^ 0xffffffffffffffffL) > ((long) i_19_ ^ 0xffffffffffffffffL)) {
+						if (i_19_ < 0 || (long) i_19_ > aSeekableFile134.method3573(i + -11234) / 520L) {
 							return false;
 						}
 					}
-					if ((i_19_ ^ 0xffffffff) == -1) {
+					if (i_19_ == 0) {
 						bool = false;
 						i_19_ = (int) ((519L + aSeekableFile134.method3573(i + -11234)) / 520L);
-						if ((i_19_ ^ 0xffffffff) == -1) {
+						if (i_19_ == 0) {
 							i_19_++;
 						}
-						if ((i_19_ ^ 0xffffffff) == (i_16_ ^ 0xffffffff)) {
+						if (i_16_ == i_19_) {
 							i_19_++;
 						}
 					}
-					if ((i_15_ + -i_17_ ^ 0xffffffff) >= -513) {
+					if (i_15_ + -i_17_ <= 512) {
 						i_19_ = 0;
 					}
 					Class157.aByteArray1973[3] = (byte) i_18_;
@@ -207,7 +207,7 @@ public class MainFile
 					aSeekableFile134.method3577((long) (520 * i_16_), false);
 					aSeekableFile134.method3570(5033, 0, 8, Class157.aByteArray1973);
 					int i_23_ = -i_17_ + i_15_;
-					if ((i_23_ ^ 0xffffffff) < -513) {
+					if (i_23_ > 512) {
 						i_23_ = 512;
 					}
 					aSeekableFile134.method3570(5033, i_17_, i_23_, bs);

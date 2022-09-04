@@ -60,7 +60,7 @@ public class Class320_Sub2 extends Class320
 	final void method3673(byte b) {
 		if (b < -35) {
 			anInt8222++;
-			if ((anInt4064 ^ 0xffffffff) > -1 || (anInt4064 ^ 0xffffffff) < -2) {
+			if (anInt4064 < 0 || anInt4064 > 1) {
 				anInt4064 = method3677(0);
 			}
 		}

@@ -14,7 +14,7 @@ public class Class283
 		if (node_sub16 == null) {
 			return 0;
 		}
-		if (i < 0 || (node_sub16.anIntArray7138.length ^ 0xffffffff) >= (i ^ 0xffffffff)) {
+		if (i < 0 || i >= node_sub16.anIntArray7138.length) {
 			return 0;
 		}
 		if (b <= 60) {

@@ -34,15 +34,13 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 		while_257_:
 			do {
 				do {
-					if (i_0_ != 0) {
-						if ((i_0_ ^ 0xffffffff) != -2) {
-							if ((i_0_ ^ 0xffffffff) == -3) {
-								break;
-							}
-							break while_257_;
-						}
-					} else {
+					if (i_0_ == 0) {
 						anInt10399 = buffer.readUnsignedByte();
+						break while_257_;
+					} else if (i_0_ != 1) {
+						if (i_0_ == 2) {
+							break;
+						}
 						break while_257_;
 					}
 					anInt10392 = buffer.readUnsignedShort();
@@ -89,8 +87,19 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 		}
 		if (aClass146_7460.aBoolean1819) {
 			int i_7_ = Node_Sub25_Sub1.anIntArray9941[i_6_];
-			if (anInt10393 != 0) {
-				for (int i_8_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_8_ ^ 0xffffffff); i_8_++) {
+			if (anInt10393 == 0) {
+				int i_13_ = 0;
+				for (int i_14_ = 0; anInt10399 > i_14_; i_14_++) {
+					if (i_7_ >= anIntArray10391[i_14_] && anIntArray10391[1 + i_14_] > i_7_) {
+						if (anIntArray10400[i_14_] > i_7_) {
+							i_13_ = 4096;
+						}
+						break;
+					}
+				}
+				Class311.method3604(is, 0, Class339_Sub7.anInt8728, i_13_);
+			} else {
+				for (int i_8_ = 0; i_8_ < Class339_Sub7.anInt8728; i_8_++) {
 					int i_9_ = 0;
 					int i_10_ = 0;
 					int i_11_ = CacheNode_Sub3.anIntArray9442[i_8_];
@@ -98,15 +107,13 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 				while_258_:
 					do {
 						do {
-							if (i_12_ != 1) {
-								if ((i_12_ ^ 0xffffffff) != -3) {
-									if (i_12_ == 3) {
-										break;
-									}
-									break while_258_;
-								}
-							} else {
+							if (i_12_ == 1) {
 								i_9_ = i_11_;
+								break while_258_;
+							} else if (i_12_ != 2) {
+								if (i_12_ == 3) {
+									break;
+								}
 								break while_258_;
 							}
 							i_9_ = 2048 + (i_11_ + -4096 + i_7_ >> 1);
@@ -115,7 +122,7 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 						i_9_ = (i_11_ + -i_7_ >> 1) + 2048;
 					} while (false);
 					for (i_12_ = 0; anInt10399 > i_12_; i_12_++) {
-						if ((i_9_ ^ 0xffffffff) <= (anIntArray10391[i_12_] ^ 0xffffffff) && i_9_ < anIntArray10391[1 + i_12_]) {
+						if (anIntArray10391[i_12_] <= i_9_ && i_9_ < anIntArray10391[1 + i_12_]) {
 							if (anIntArray10400[i_12_] > i_9_) {
 								i_10_ = 4096;
 							}
@@ -124,17 +131,6 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 					}
 					is[i_8_] = i_10_;
 				}
-			} else {
-				int i_13_ = 0;
-				for (int i_14_ = 0; anInt10399 > i_14_; i_14_++) {
-					if ((anIntArray10391[i_14_] ^ 0xffffffff) >= (i_7_ ^ 0xffffffff) && anIntArray10391[1 + i_14_] > i_7_) {
-						if (anIntArray10400[i_14_] > i_7_) {
-							i_13_ = 4096;
-						}
-						break;
-					}
-				}
-				Class311.method3604(is, 0, Class339_Sub7.anInt8728, i_13_);
 			}
 		}
 		return is;
@@ -162,7 +158,7 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 	}
 	
 	static {
-		for (int i = 0; (i ^ 0xffffffff) > -101; i++)
+		for (int i = 0; i < 100; i++)
 			aRectangleArray10404[i] = new Rectangle();
 	}
 }

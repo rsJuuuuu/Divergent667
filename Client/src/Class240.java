@@ -58,14 +58,14 @@ public class Class240
 			method3029(-11);
 		}
 		String string;
-		if (!(throwable instanceof RuntimeException_Sub1)) {
-			string = "";
-		} else {
+		if (throwable instanceof RuntimeException_Sub1) {
 			RuntimeException_Sub1 runtimeexception_sub1 = (RuntimeException_Sub1) throwable;
 			string = runtimeexception_sub1.aString4919 + " | ";
 			throwable = runtimeexception_sub1.aThrowable4921;
+		} else {
+			string = "";
 		}
-		StringWriter stringwriter = new StringWriter();
+        StringWriter stringwriter = new StringWriter();
 		PrintWriter printwriter = new PrintWriter(stringwriter);
 		throwable.printStackTrace(printwriter);
 		printwriter.close();
@@ -80,18 +80,18 @@ public class Class240
 			int i_4_ = string_3_.indexOf('(');
 			int i_5_ = string_3_.indexOf(')', 1 + i_4_);
 			String string_6_;
-			if (i_4_ != -1) {
-				string_6_ = string_3_.substring(0, i_4_);
-			} else {
+			if (i_4_ == -1) {
 				string_6_ = string_3_;
+			} else {
+				string_6_ = string_3_.substring(0, i_4_);
 			}
-			string_6_ = string_6_.trim();
+            string_6_ = string_6_.trim();
 			string_6_ = string_6_.substring(string_6_.lastIndexOf(' ') - -1);
 			string_6_ = string_6_.substring(string_6_.lastIndexOf('\t') + 1);
 			string += string_6_;
-			if ((i_4_ ^ 0xffffffff) != 0 && i_5_ != -1) {
+			if (i_4_ != -1 && i_5_ != -1) {
 				int i_7_ = string_3_.indexOf(".java:", i_4_);
-				if ((i_7_ ^ 0xffffffff) <= -1) {
+				if (i_7_ >= 0) {
 					string += string_3_.substring(5 + i_7_, i_5_);
 				}
 			}
@@ -106,7 +106,7 @@ public class Class240
 		int i_14_ = i_12_ + i_13_;
 		if (bool == false) {
 			int i_15_ = -i_12_ + i;
-			for (int i_16_ = i_13_; (i_14_ ^ 0xffffffff) < (i_16_ ^ 0xffffffff); i_16_++)
+			for (int i_16_ = i_13_; i_16_ < i_14_; i_16_++)
 				Class369.method4086(i_8_, i_9_, i_11_, Class169_Sub4.anIntArrayArray8826[i_16_], 0);
 			int i_17_ = i_11_ + i_12_;
 			int i_18_ = i_8_ + -i_12_;

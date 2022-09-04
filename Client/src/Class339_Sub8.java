@@ -53,8 +53,8 @@ public class Class339_Sub8 extends Class339
 		if (i > 12000) {
 			i_1_ = 4;
 			Class262_Sub15.method3188(18896);
-		} else if ((i ^ 0xffffffff) >= -5001) {
-			if ((i ^ 0xffffffff) < -2001) {
+		} else if (i <= 5000) {
+			if (i > 2000) {
 				Class194_Sub1.method1965((byte) -119);
 				i_1_ = 2;
 			} else {

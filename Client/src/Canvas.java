@@ -38,7 +38,7 @@ public class Canvas extends java.awt.Canvas {
 		int i_1_;
 		if (i_0_ <= 20000) {
 			if (i_0_ <= 10000) {
-				if ((i_0_ ^ 0xffffffff) >= -5001) {
+				if (i_0_ <= 5000) {
 					i_1_ = 1;
 					Node_Sub36.method2752(true, true);
 				} else {

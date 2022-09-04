@@ -22,7 +22,7 @@ public class MapBuffer extends NativeBuffer
 	}
 	
 	public final boolean a() {
-        return (c ^ 0xffffffff) != -1;
+        return c != 0;
     }
 	
 	public final void a(byte[] bs, int i, int i_2_, int i_3_) {

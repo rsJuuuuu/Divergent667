@@ -22,7 +22,7 @@ public class Class337 implements Runnable
 	
 	final Class295 method3902(int i, int i_0_) {
 		anInt4182++;
-		if (aClass295Array4175 == null || i_0_ < 0 || (aClass295Array4175.length ^ 0xffffffff) >= (i_0_ ^ 0xffffffff)) {
+		if (aClass295Array4175 == null || i_0_ < 0 || i_0_ >= aClass295Array4175.length) {
 			return null;
 		}
 		if (i != 3) {
@@ -82,7 +82,7 @@ public class Class337 implements Runnable
 		if (aClass241_4178 == null || aClass241_4178.anInt2953 == 2) {
 			return true;
 		}
-		if ((aClass241_4178.anInt2953 ^ 0xffffffff) != -2) {
+		if (aClass241_4178.anInt2953 != 1) {
 			return false;
 		}
 		if (i > -103) {

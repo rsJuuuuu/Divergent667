@@ -31,7 +31,7 @@ public class Class314
 			Node_Sub10.anInt7079 = 512 * Node_Sub38_Sub38.anInt10490 + 256;
 			Class190.anInt2331 = Node_Sub38_Sub7.method2809(CacheNode_Sub20_Sub1.myPlayerPlane, -29754, Node_Sub10.anInt7079, Class98.anInt5061) - Class194.anInt2370;
 		} else {
-			if ((Class98.anInt5061 ^ 0xffffffff) > (i_0_ ^ 0xffffffff)) {
+			if (i_0_ > Class98.anInt5061) {
 				Class98.anInt5061 += Class169_Sub3.anInt8821 - -((-Class98.anInt5061 + i_0_) * ItemDefinitions.anInt1858 / 1000);
 				if (i_0_ < Class98.anInt5061) {
 					Class98.anInt5061 = i_0_;
@@ -43,27 +43,27 @@ public class Class314
 					Class190.anInt2331 = i_2_;
 				}
 			}
-			if ((i_0_ ^ 0xffffffff) > (Class98.anInt5061 ^ 0xffffffff)) {
+			if (Class98.anInt5061 > i_0_) {
 				Class98.anInt5061 -= Class169_Sub3.anInt8821 + (-i_0_ + Class98.anInt5061) * ItemDefinitions.anInt1858 / 1000;
-				if ((i_0_ ^ 0xffffffff) < (Class98.anInt5061 ^ 0xffffffff)) {
+				if (Class98.anInt5061 < i_0_) {
 					Class98.anInt5061 = i_0_;
 				}
 			}
 			if (Class190.anInt2331 > i_2_) {
 				Class190.anInt2331 -= Class169_Sub3.anInt8821 + (Class190.anInt2331 - i_2_) * ItemDefinitions.anInt1858 / 1000;
-				if ((i_2_ ^ 0xffffffff) < (Class190.anInt2331 ^ 0xffffffff)) {
+				if (Class190.anInt2331 < i_2_) {
 					Class190.anInt2331 = i_2_;
 				}
 			}
-			if ((Node_Sub10.anInt7079 ^ 0xffffffff) > (i_1_ ^ 0xffffffff)) {
+			if (i_1_ > Node_Sub10.anInt7079) {
 				Node_Sub10.anInt7079 += Class169_Sub3.anInt8821 - -((i_1_ - Node_Sub10.anInt7079) * ItemDefinitions.anInt1858 / 1000);
-				if ((i_1_ ^ 0xffffffff) > (Node_Sub10.anInt7079 ^ 0xffffffff)) {
+				if (Node_Sub10.anInt7079 > i_1_) {
 					Node_Sub10.anInt7079 = i_1_;
 				}
 			}
-			if ((Node_Sub10.anInt7079 ^ 0xffffffff) < (i_1_ ^ 0xffffffff)) {
+			if (i_1_ < Node_Sub10.anInt7079) {
 				Node_Sub10.anInt7079 -= ItemDefinitions.anInt1858 * (Node_Sub10.anInt7079 + -i_1_) / 1000 + Class169_Sub3.anInt8821;
-				if ((i_1_ ^ 0xffffffff) < (Node_Sub10.anInt7079 ^ 0xffffffff)) {
+				if (Node_Sub10.anInt7079 < i_1_) {
 					Node_Sub10.anInt7079 = i_1_;
 				}
 			}
@@ -77,10 +77,10 @@ public class Class314
 		int i_6_ = (int) Math.sqrt((double) (i_5_ * i_5_ + i_3_ * i_3_));
 		int i_7_ = (int) (2607.5945876176133 * Math.atan2((double) i_4_, (double) i_6_)) & 0x3fff;
 		int i_8_ = 0x3fff & (int) (-2607.5945876176133 * Math.atan2((double) i_3_, (double) i_5_));
-		if ((i_7_ ^ 0xffffffff) > -1025) {
+		if (i_7_ < 1024) {
 			i_7_ = 1024;
 		}
-		if ((i_7_ ^ 0xffffffff) < -3073) {
+		if (i_7_ > 3072) {
 			i_7_ = 3072;
 		}
 		if (i >= 39) {
@@ -90,7 +90,7 @@ public class Class314
 					OutcommingPacket.anInt4050 = i_7_;
 				}
 			}
-			if ((OutcommingPacket.anInt4050 ^ 0xffffffff) < (i_7_ ^ 0xffffffff)) {
+			if (i_7_ < OutcommingPacket.anInt4050) {
 				OutcommingPacket.anInt4050 -= Node_Sub24.anInt7229 + Node_Sub13.anInt7116 * (OutcommingPacket.anInt4050 + -i_7_ >> 3) / 1000 << 3;
 				if (OutcommingPacket.anInt4050 < i_7_) {
 					OutcommingPacket.anInt4050 = i_7_;
@@ -100,11 +100,11 @@ public class Class314
 			if (i_9_ > 8192) {
 				i_9_ -= 16384;
 			}
-			if ((i_9_ ^ 0xffffffff) > 8191) {
+			if (i_9_ < -8192) {
 				i_9_ += 16384;
 			}
 			i_9_ >>= 3;
-			if ((i_9_ ^ 0xffffffff) < -1) {
+			if (i_9_ > 0) {
 				Class170.anInt2053 += Node_Sub24.anInt7229 - -(Node_Sub13.anInt7116 * i_9_ / 1000) << 3;
 				Class170.anInt2053 &= 0x3fff;
 			}
@@ -120,22 +120,20 @@ public class Class314
 				i_10_ += 16384;
 			}
 			Class48.anInt704 = 0;
-			if (i_10_ < 0 && i_9_ > 0 || (i_10_ ^ 0xffffffff) < -1 && (i_9_ ^ 0xffffffff) > -1) {
+			if (i_10_ < 0 && i_9_ > 0 || i_10_ > 0 && i_9_ < 0) {
 				Class170.anInt2053 = i_8_;
 			}
 		}
 	}
 	
 	private final void method3653(int i, BufferedStream buffer, boolean bool) {
-		if ((i ^ 0xffffffff) != -2) {
-			if (i == 2) {
-				anInt4021 = buffer.readUnsignedShort();
-				anInt4018 = buffer.readUnsignedByte();
-				anInt4023 = buffer.readUnsignedByte();
-			}
-		} else {
+		if (i == 1) {
 			aChar4022 = Class20_Sub1.method294(buffer.readByte(), (byte) 108);
-		}
+		} else if (i == 2) {
+            anInt4021 = buffer.readUnsignedShort();
+            anInt4018 = buffer.readUnsignedByte();
+            anInt4023 = buffer.readUnsignedByte();
+        }
 		if (bool != true) {
 			anInt4023 = -54;
 		}

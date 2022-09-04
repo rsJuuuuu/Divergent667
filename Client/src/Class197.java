@@ -21,12 +21,12 @@ public class Class197
 	
 	final void method1997(int i) {
 		if (aBoolean2420) {
-			if (!aBoolean2414) {
-				aBoolean2420 = false;
-			} else {
+			if (aBoolean2414) {
 				aBoolean2414 = false;
+			} else {
+				aBoolean2420 = false;
 			}
-		} else {
+        } else {
 			aBoolean2414 = true;
 			aBoolean2420 = true;
 		}
@@ -48,7 +48,7 @@ public class Class197
 			int i_5_ = 0;
 			for (;;) {
 				i_5_ = string.indexOf(c, i_5_);
-				if ((i_5_ ^ 0xffffffff) > -1) {
+				if (i_5_ < 0) {
 					break;
 				}
 				i_3_ += i_4_;
@@ -75,7 +75,7 @@ public class Class197
 			anInt2415 = 13;
 		}
 		anInt2421++;
-        return !(i != 3 && (i ^ 0xffffffff) != -6 && i != 6);
+        return !(i != 3 && i != 5 && i != 6);
     }
 	
 	final Class241 method2000(byte b, SignLink signlink) {
@@ -98,40 +98,40 @@ public class Class197
 		while (i_12_ > i_11_) {
 			int i_13_ = bs[i_11_++] & 0xff;
 			int i_14_;
-			if ((i_13_ ^ 0xffffffff) > -129) {
-				if ((i_13_ ^ 0xffffffff) != -1) {
-					i_14_ = i_13_;
-				} else {
+			if (i_13_ < 128) {
+				if (i_13_ == 0) {
 					i_14_ = 65533;
+				} else {
+					i_14_ = i_13_;
 				}
-			} else if ((i_13_ ^ 0xffffffff) <= -193) {
-				if ((i_13_ ^ 0xffffffff) <= -225) {
+            } else if (i_13_ >= 192) {
+				if (i_13_ >= 224) {
 					if (i_13_ >= 240) {
-						if ((i_13_ ^ 0xffffffff) <= -249) {
+						if (i_13_ >= 248) {
 							i_14_ = 65533;
-						} else if ((i_11_ - -2 ^ 0xffffffff) <= (i_12_ ^ 0xffffffff) || (bs[i_11_] & 0xc0 ^ 0xffffffff) != -129 || (0xc0 & bs[i_11_ + 1] ^ 0xffffffff) != -129 || (0xc0 & bs[2 + i_11_]) != 128) {
+						} else if (i_12_ <= i_11_ - -2 || (bs[i_11_] & 0xc0) != 128 || (0xc0 & bs[i_11_ + 1]) != 128 || (0xc0 & bs[2 + i_11_]) != 128) {
 							i_14_ = 65533;
 						} else {
 							i_14_ = 0x3f000 & bs[i_11_++] << 12 | (i_13_ & 0x7) << 18 | 0xfc0 & bs[i_11_++] << 6 | bs[i_11_++] & 0x3f;
-							if (i_14_ >= 65536 && (i_14_ ^ 0xffffffff) >= -1114112) {
+							if (i_14_ >= 65536 && i_14_ <= 1114111) {
 								i_14_ = 65533;
 							} else {
 								i_14_ = 65533;
 							}
 						}
-					} else if ((i_12_ ^ 0xffffffff) >= (i_11_ + 1 ^ 0xffffffff) || (0xc0 & bs[i_11_] ^ 0xffffffff) != -129 || (0xc0 & bs[i_11_ + 1]) != 128) {
+					} else if (i_11_ + 1 >= i_12_ || (0xc0 & bs[i_11_]) != 128 || (0xc0 & bs[i_11_ + 1]) != 128) {
 						i_14_ = 65533;
 					} else {
 						i_14_ = (i_13_ & 0xf) << 12 | bs[i_11_++] << 6 & 0xfc0 | 0x3f & bs[i_11_++];
-						if ((i_14_ ^ 0xffffffff) > -2049) {
+						if (i_14_ < 2048) {
 							i_14_ = 65533;
 						}
 					}
-				} else if ((i_11_ ^ 0xffffffff) <= (i_12_ ^ 0xffffffff) || (0xc0 & bs[i_11_] ^ 0xffffffff) != -129) {
+				} else if (i_12_ <= i_11_ || (0xc0 & bs[i_11_]) != 128) {
 					i_14_ = 65533;
 				} else {
 					i_14_ = 0x7c0 & i_13_ << 6 | bs[i_11_++] & 0x3f;
-					if ((i_14_ ^ 0xffffffff) > -129) {
+					if (i_14_ < 128) {
 						i_14_ = 65533;
 					}
 				}
@@ -149,7 +149,7 @@ public class Class197
 			method1997(2);
 		}
 		if (class197_15_ != null) {
-            return !((class197_15_.id ^ 0xffffffff) != (id ^ 0xffffffff) || !ipadress.equals(class197_15_.ipadress));
+            return !(id != class197_15_.id || !ipadress.equals(class197_15_.ipadress));
         }
 		return false;
 	}

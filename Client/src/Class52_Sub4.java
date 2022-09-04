@@ -54,15 +54,15 @@ public class Class52_Sub4 extends Class52
 			}
 			for (int i_23_ = -i_18_; i_23_ < 0; i_23_++) {
 				int i_24_ = bs[i_0_++] & 0xff;
-				if (i_24_ != 0) {
+				if (i_24_ == 0) {
+					i_1_++;
+				} else {
 					int i_25_ = ((i & 0xff00ff) * i_24_ & ~0xff00ff) + ((i & 0xff00) * i_24_ & 0xff0000) >> 8;
 					i_24_ = 256 - i_24_;
 					int i_26_ = is[i_1_];
 					is[i_1_++] = (((i_26_ & 0xff00ff) * i_24_ & ~0xff00ff) + ((i_26_ & 0xff00) * i_24_ & 0xff0000) >> 8) + i_25_;
-				} else {
-					i_1_++;
 				}
-			}
+            }
 			i_0_ += i_22_ + i_5_;
 			i_1_ += i_22_ + i_4_;
 		}
@@ -79,15 +79,15 @@ public class Class52_Sub4 extends Class52
 		anIntArray5575 = new int[class383s.length];
 		for (int i = 0; i < class383s.length; i++) {
 			Class383 class383 = class383s[i];
-			if (class383.aByteArray4905 != null) {
-				aByteArrayArray5574[i] = class383.aByteArray4905;
-			} else {
+			if (class383.aByteArray4905 == null) {
 				byte[] bs = class383.aByteArray4903;
 				byte[] bs_28_ = aByteArrayArray5574[i] = new byte[bs.length];
 				for (int i_29_ = 0; i_29_ < bs.length; i_29_++)
 					bs_28_[i_29_] = (byte) (bs[i_29_] == 0 ? 0 : -1);
+			} else {
+				aByteArrayArray5574[i] = class383.aByteArray4905;
 			}
-			anIntArray5578[i] = class383.anInt4898;
+            anIntArray5578[i] = class383.anInt4898;
 			anIntArray5575[i] = class383.anInt4902;
 		}
 	}
@@ -140,15 +140,15 @@ public class Class52_Sub4 extends Class52
 		for (int i_50_ = -i_47_; i_50_ < 0; i_50_++) {
 			for (int i_51_ = -i_46_; i_51_ < 0; i_51_++) {
 				int i_52_ = bs[i_44_++] & 0xff;
-				if (i_52_ != 0) {
+				if (i_52_ == 0) {
+					i_45_++;
+				} else {
 					int i_53_ = ((i & 0xff00ff) * i_52_ & ~0xff00ff) + ((i & 0xff00) * i_52_ & 0xff0000) >> 8;
 					i_52_ = 256 - i_52_;
 					int i_54_ = is[i_45_];
 					is[i_45_++] = (((i_54_ & 0xff00ff) * i_52_ & ~0xff00ff) + ((i_54_ & 0xff00) * i_52_ & 0xff0000) >> 8) + i_53_;
-				} else {
-					i_45_++;
 				}
-			}
+            }
 			i_45_ += i_48_;
 			i_44_ += i_49_;
 		}

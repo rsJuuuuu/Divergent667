@@ -101,7 +101,7 @@ public class Class22 {
             node_sub13.aPacket7113.writeByte(5 + stepsCount * 2);
             Node_Sub36.anInt7423++;
         }
-        if ((~type) == -2) {
+        if (type == 1) {
             node_sub13 = FloatBuffer.method2250(-386, Class338.aClass318_4198,
                     Class218.aClass123_2566.anIsaacCipher1571);
             node_sub13.aPacket7113.writeByte(13 + 5 + stepsCount * 2);

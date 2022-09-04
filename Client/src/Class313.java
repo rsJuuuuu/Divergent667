@@ -35,7 +35,7 @@ public class Class313
 			method3649(true, 77, 66, -67);
 		}
 		int i_4_ = Class240.anIntArrayArrayArray2948[i_2_][i_3_][i];
-		if ((-Class359.anInt4465 ^ 0xffffffff) == (i_4_ ^ 0xffffffff)) {
+		if (i_4_ == -Class359.anInt4465) {
 			return false;
 		}
 		if (Class359.anInt4465 == i_4_) {
@@ -58,7 +58,7 @@ public class Class313
 	static final synchronized long method3650(boolean bool) {
 		anInt4012++;
 		long l = System.currentTimeMillis();
-		if ((Node_Sub38_Sub11.aLong10215 ^ 0xffffffffffffffffL) < (l ^ 0xffffffffffffffffL)) {
+		if (l < Node_Sub38_Sub11.aLong10215) {
 			Node_Sub38_Sub33.aLong10441 += -l + Node_Sub38_Sub11.aLong10215;
 		}
 		if (bool != false) {

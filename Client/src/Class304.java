@@ -15,10 +15,10 @@ public class Class304
 			SCENE_CLIP_DATA_PLANES = null;
 		}
 		if (Class52.anInt800 != 0) {
-			if ((i_0_ ^ 0xffffffff) <= -1) {
+			if (i_0_ >= 0) {
 				Class153.anIntArray1948[i_0_] = i;
 			} else {
-				for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > -17; i_2_++)
+				for (int i_2_ = 0; i_2_ < 16; i_2_++)
 					Class153.anIntArray1948[i_2_] = i;
 			}
 		}
@@ -31,7 +31,7 @@ public class Class304
 			SCENE_CLIP_DATA_PLANES = null;
 		}
 		anInt3832++;
-        return !(!((0x70000 & i ^ 0xffffffff) != -1 | Class320_Sub5.method3700(i_4_, (byte) 124, i)) && !Class262_Sub15_Sub1.method3192(i_4_, i, 512));
+        return !(!((0x70000 & i) != 0 | Class320_Sub5.method3700(i_4_, (byte) 124, i)) && !Class262_Sub15_Sub1.method3192(i_4_, i, 512));
     }
 	
 	public static void method3546(byte b) {

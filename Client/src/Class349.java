@@ -98,7 +98,7 @@ public class Class349
 			int i_7_ = aClass137_4316.anInt1706 * anInt4314 + anInt4318;
 			for (int i_8_ = -128; i_8_ < 0; i_8_++) {
 				i = -i + (i << 8);
-				for (int i_9_ = -128; (i_9_ ^ 0xffffffff) > -1; i_9_++) {
+				for (int i_9_ = -128; i_9_ < 0; i_9_++) {
 					if (bs[i_7_++] != 0) {
 						i++;
 					}
@@ -111,20 +111,20 @@ public class Class349
 				anInt4308 = i;
 				int i_10_ = 0;
 				i_7_ = i_6_ * anInt4314 + anInt4318;
-				for (int i_11_ = -128; (i_11_ ^ 0xffffffff) > -1; i_11_++) {
-					for (int i_12_ = -128; (i_12_ ^ 0xffffffff) > -1; i_12_++) {
+				for (int i_11_ = -128; i_11_ < 0; i_11_++) {
+					for (int i_12_ = -128; i_12_ < 0; i_12_++) {
 						if (bs[i_7_] == 0) {
 							int i_13_ = 0;
 							if (bs[-1 + i_7_] != 0) {
 								i_13_++;
 							}
-							if ((bs[i_7_ + 1] ^ 0xffffffff) != -1) {
+							if (bs[i_7_ + 1] != 0) {
 								i_13_++;
 							}
-							if ((bs[-i_6_ + i_7_] ^ 0xffffffff) != -1) {
+							if (bs[-i_6_ + i_7_] != 0) {
 								i_13_++;
 							}
-							if ((bs[i_7_ - -i_6_] ^ 0xffffffff) != -1) {
+							if (bs[i_7_ - -i_6_] != 0) {
 								i_13_++;
 							}
 							bs_5_[i_10_++] = (byte) (17 * i_13_);
@@ -135,12 +135,12 @@ public class Class349
 					}
 					i_7_ += -128 + aClass137_4316.anInt1706;
 				}
-				if (aClass169_Sub2_4310 != null) {
-					aClass169_Sub2_4310.method1775(0, (byte) 122, 6406, 128, 128, aGLToolkit4304.aByteArray6746, false, 0, 0, 0);
-				} else {
+				if (aClass169_Sub2_4310 == null) {
 					aClass169_Sub2_4310 = new Class169_Sub2(aGLToolkit4304, 3553, 6406, 128, 128, false, aGLToolkit4304.aByteArray6746, 6406, false);
 					aClass169_Sub2_4310.method1776(false, 25, false);
 					aClass169_Sub2_4310.method1757(false, true);
+				} else {
+					aClass169_Sub2_4310.method1775(0, (byte) 122, 6406, 128, 128, aGLToolkit4304.aByteArray6746, false, 0, 0, 0);
 				}
 			}
 		}
@@ -155,31 +155,27 @@ public class Class349
 	static final boolean method3988(byte b, int i, int i_15_) {
 		anInt4309++;
 		int i_16_ = -119 % ((b - 6) / 56);
-        return (i_15_ & 0x21 ^ 0xffffffff) != -1;
+        return (i_15_ & 0x21) != 0;
     }
 	
 	static final int method3989(int i, byte b) {
 		anInt4301++;
-		if (i != 6406) {
-			if (i != 6409) {
-				if ((i ^ 0xffffffff) != -32842) {
-					if (i == 6410) {
-						return 2;
-					}
-					if (i == 6407) {
-						return 3;
-					}
-					if (i == 6408) {
-						return 4;
-					}
-				} else {
-					return 1;
-				}
-			} else {
-				return 1;
-			}
-		} else {
+		if (i == 6406) {
 			return 1;
+		} else if (i == 6409) {
+			return 1;
+		} else if (i == 32841) {
+			return 1;
+		} else {
+			if (i == 6410) {
+				return 2;
+			}
+			if (i == 6407) {
+				return 3;
+			}
+			if (i == 6408) {
+				return 4;
+			}
 		}
 		if (b >= -31) {
 			method3985(null, 41, 79, -103);
@@ -206,7 +202,7 @@ public class Class349
 		int i_23_ = 0;
 		int i_24_ = i << i_19_;
 		int i_25_ = i_18_ << i_19_;
-		for (int i_26_ = 0; (i_26_ ^ 0xffffffff) > (i_22_ ^ 0xffffffff); i_26_++) {
+		for (int i_26_ = 0; i_22_ > i_26_; i_26_++) {
 			int i_27_ = i_24_ + glplane.anInt3408 * (i_25_ - -i_26_);
 			for (int i_28_ = 0; i_22_ > i_28_; i_28_++) {
 				short[] ses = glplane.aShortArrayArray7925[i_27_++];
@@ -220,25 +216,25 @@ public class Class349
 			aClass169_Sub2_4310 = null;
 		} else {
 			BufferedStream buffer = new BufferedStream(i_23_ * 2);
-			if (!aGLToolkit4304.aBoolean6736) {
-				for (int i_29_ = 0; (i_22_ ^ 0xffffffff) < (i_29_ ^ 0xffffffff); i_29_++) {
+			if (aGLToolkit4304.aBoolean6736) {
+				for (int i_33_ = 0; i_22_ > i_33_; i_33_++) {
+					int i_34_ = i_24_ + glplane.anInt3408 * (i_33_ + i_25_);
+					for (int i_35_ = 0; i_35_ < i_22_; i_35_++) {
+						short[] ses = glplane.aShortArrayArray7925[i_34_++];
+						if (ses != null) {
+							for (int i_36_ = 0; i_36_ < ses.length; i_36_++)
+								buffer.writeShort(0xffff & ses[i_36_]);
+						}
+					}
+				}
+			} else {
+				for (int i_29_ = 0; i_29_ < i_22_; i_29_++) {
 					int i_30_ = (i_25_ - -i_29_) * glplane.anInt3408 + i_24_;
 					for (int i_31_ = 0; i_22_ > i_31_; i_31_++) {
 						short[] ses = glplane.aShortArrayArray7925[i_30_++];
 						if (ses != null) {
 							for (int i_32_ = 0; ses.length > i_32_; i_32_++)
 								buffer.method2191(-42, ses[i_32_] & 0xffff);
-						}
-					}
-				}
-			} else {
-				for (int i_33_ = 0; i_22_ > i_33_; i_33_++) {
-					int i_34_ = i_24_ + glplane.anInt3408 * (i_33_ + i_25_);
-					for (int i_35_ = 0; (i_22_ ^ 0xffffffff) < (i_35_ ^ 0xffffffff); i_35_++) {
-						short[] ses = glplane.aShortArrayArray7925[i_34_++];
-						if (ses != null) {
-							for (int i_36_ = 0; i_36_ < ses.length; i_36_++)
-								buffer.writeShort(0xffff & ses[i_36_]);
 						}
 					}
 				}

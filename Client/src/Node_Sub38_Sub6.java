@@ -18,9 +18,9 @@ public class Node_Sub38_Sub6 extends Node_Sub38
 		int[] is = aClass146_7460.method1645(27356, i_0_);
 		if (aClass146_7460.aBoolean1819) {
 			int[] is_1_ = this.method2786(i_0_, 0, 0);
-			for (int i_2_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_2_ ^ 0xffffffff); i_2_++) {
+			for (int i_2_ = 0; i_2_ < Class339_Sub7.anInt8728; i_2_++) {
 				int i_3_ = is_1_[i_2_];
-				is[i_2_] = (anInt10134 ^ 0xffffffff) >= (i_3_ ^ 0xffffffff) && (anInt10137 ^ 0xffffffff) <= (i_3_ ^ 0xffffffff) ? 4096 : 0;
+				is[i_2_] = i_3_ >= anInt10134 && i_3_ <= anInt10137 ? 4096 : 0;
 			}
 		}
 		if (i < 107) {
@@ -32,15 +32,13 @@ public class Node_Sub38_Sub6 extends Node_Sub38
 	final void method2780(boolean bool, BufferedStream buffer, int i) {
 		int i_4_ = i;
 		do {
-			if ((i_4_ ^ 0xffffffff) != -1) {
-				if ((i_4_ ^ 0xffffffff) != -2) {
-					break;
-				}
-			} else {
+			if (i_4_ == 0) {
 				anInt10134 = buffer.readUnsignedShort();
 				break;
-			}
-			anInt10137 = buffer.readUnsignedShort();
+			} else if (i_4_ != 1) {
+                break;
+            }
+            anInt10137 = buffer.readUnsignedShort();
 		} while (false);
 		if (bool == false) {
 			anInt10133++;

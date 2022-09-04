@@ -18,7 +18,7 @@ class Class194_Sub1 extends Class194
 		}
 		i = i * (0x7f & i_1_) >> 7;
 		if (i >= 2) {
-			if ((i ^ 0xffffffff) < -127) {
+			if (i > 126) {
 				i = 126;
 			}
 		} else {

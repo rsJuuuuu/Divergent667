@@ -29,7 +29,7 @@ public class Node_Sub37 extends Node
 		if (Class122.anIntArray1556 == null || Class17.anIntArray277 == null) {
 			Class17.anIntArray277 = new int[256];
 			Class122.anIntArray1556 = new int[256];
-			for (int i = 0; (i ^ 0xffffffff) > -257; i++) {
+			for (int i = 0; i < 256; i++) {
 				double d = (double) i / 255.0 * 6.283185307179586;
 				Class122.anIntArray1556[i] = (int) (4096.0 * Math.sin(d));
 				Class17.anIntArray277[i] = (int) (Math.cos(d) * 4096.0);

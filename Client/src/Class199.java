@@ -33,18 +33,18 @@ public class Class199
 	
 	static final void method2007(int i, byte[] bs, int i_3_, int i_4_, int i_5_, byte b) {
 		anInt2434++;
-		if ((i ^ 0xffffffff) > (i_5_ ^ 0xffffffff)) {
+		if (i_5_ > i) {
 			i_3_ += i;
 			i_4_ = -i + i_5_ >> 2;
 			if (b > 92) {
-				while ((--i_4_ ^ 0xffffffff) <= -1) {
+				while (--i_4_ >= 0) {
 					bs[i_3_++] = (byte) 1;
 					bs[i_3_++] = (byte) 1;
 					bs[i_3_++] = (byte) 1;
 					bs[i_3_++] = (byte) 1;
 				}
 				i_4_ = -i + i_5_ & 0x3;
-				while ((--i_4_ ^ 0xffffffff) <= -1)
+				while (--i_4_ >= 0)
 					bs[i_3_++] = (byte) 1;
 			}
 		}
@@ -65,12 +65,10 @@ public class Class199
 			actor.scenePositionXQueue[actor.anInt10904] = i_10_ >> 16;
 			actor.scenePositionYQueue[actor.anInt10904] = Node_Sub30.method2723(65535, i_10_);
 			byte b = 1;
-			if (i_9_ != 0) {
-				if ((i_9_ ^ 0xffffffff) == -3) {
-					b = (byte) 2;
-				}
-			} else {
+			if (i_9_ == 0) {
 				b = (byte) 0;
+			} else if (i_9_ == 2) {
+				b = (byte) 2;
 			}
 			actor.movementTypeQueue[actor.anInt10904] = b;
 			actor.anInt10904++;

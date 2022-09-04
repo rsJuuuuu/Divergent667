@@ -54,7 +54,7 @@ public class Class262_Sub13 extends Class262
 				GLXToolkit.aClass54Array9292 = null;
 			}
 			if (IsaacCipher.aClass54Array1840 != null) {
-				for (int i_2_ = 0; (i_2_ ^ 0xffffffff) > (Class83.anInt5183 ^ 0xffffffff); i_2_++)
+				for (int i_2_ = 0; Class83.anInt5183 > i_2_; i_2_++)
 					IsaacCipher.aClass54Array1840[i_2_] = null;
 				IsaacCipher.aClass54Array1840 = null;
 			}

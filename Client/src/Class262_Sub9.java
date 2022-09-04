@@ -48,27 +48,27 @@ public class Class262_Sub9 extends Class262
 		super(buffer);
 		anInt7759 = buffer.readUnsignedShort();
 		int i = buffer.readUnsignedByte();
-		if ((i & 0x1) != 0) {
-			anInt7758 = buffer.readUnsignedShort();
-			anInt7764 = buffer.readUnsignedShort();
-		} else {
+		if ((i & 0x1) == 0) {
 			anInt7758 = -1;
 			anInt7764 = -1;
-		}
-		if ((0x2 & i ^ 0xffffffff) != -1) {
-			anInt7762 = buffer.readUnsignedShort();
-			anInt7766 = buffer.readUnsignedShort();
 		} else {
+			anInt7758 = buffer.readUnsignedShort();
+			anInt7764 = buffer.readUnsignedShort();
+		}
+		if ((0x2 & i) == 0) {
 			anInt7766 = -1;
 			anInt7762 = -1;
+		} else {
+			anInt7762 = buffer.readUnsignedShort();
+			anInt7766 = buffer.readUnsignedShort();
 		}
-		if ((0x4 & i ^ 0xffffffff) == -1) {
+		if ((0x4 & i) == 0) {
 			anInt7761 = -1;
 		} else {
 			int i_4_ = buffer.readUnsignedShort();
 			int i_5_ = buffer.readUnsignedShort();
 			int i_6_ = i_4_ * 255 / i_5_;
-			if ((i_4_ ^ 0xffffffff) < -1 && (i_6_ ^ 0xffffffff) > -2) {
+			if (i_4_ > 0 && i_6_ < 1) {
 				i_6_ = 1;
 			}
 			anInt7761 = i_6_;

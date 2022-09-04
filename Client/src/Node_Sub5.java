@@ -17,18 +17,16 @@ abstract class Node_Sub5 extends Node
 	static final int skipPlayersCount(Packet packet) {
 		int i_0_ = packet.readBits(2);
 		int i_1_;
-		if (i_0_ != 0) {
-			if (i_0_ == 1) {
-				i_1_ = packet.readBits(5);
-			} else if ((i_0_ ^ 0xffffffff) == -3) {
-				i_1_ = packet.readBits(8);
-			} else {
-				i_1_ = packet.readBits(11);
-			}
-		} else {
+		if (i_0_ == 0) {
 			i_1_ = 0;
-		}
-		return i_1_;
+		} else if (i_0_ == 1) {
+            i_1_ = packet.readBits(5);
+        } else if (i_0_ == 2) {
+            i_1_ = packet.readBits(8);
+        } else {
+            i_1_ = packet.readBits(11);
+        }
+        return i_1_;
 	}
 	
 	public static void method2269(int i) {

@@ -24,8 +24,8 @@ class Node_Sub38_Sub8 extends Node_Sub38
 		if (bool != false) {
 			aFloatArray10162 = null;
 		}
-		boolean bool_1_ = (0x37 & i_0_ ^ 0xffffffff) != -1 ? Class303.method3538(i_0_, -128, i) : Node_Sub41.method2932(-125, i, i_0_);
-		return bool_1_ | (Class278.method3367(i_0_, i, (byte) 87) | (i & 0x10000 ^ 0xffffffff) != -1);
+		boolean bool_1_ = (0x37 & i_0_) != 0 ? Class303.method3538(i_0_, -128, i) : Node_Sub41.method2932(-125, i, i_0_);
+		return bool_1_ | (Class278.method3367(i_0_, i, (byte) 87) | (i & 0x10000) != 0);
 	}
 	
 	int[][] method2778(int i, boolean bool) {
@@ -36,15 +36,15 @@ class Node_Sub38_Sub8 extends Node_Sub38
 			int[] is_3_ = is[1];
 			int[] is_4_ = is[2];
 			int i_5_ = anInt10169 * (Node_Sub38_Sub1.anInt10083 == anInt10172 ? i : i * anInt10172 / Node_Sub38_Sub1.anInt10083);
-			if ((anInt10169 ^ 0xffffffff) == (Class339_Sub7.anInt8728 ^ 0xffffffff)) {
-				for (int i_6_ = 0; (Class339_Sub7.anInt8728 ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++) {
+			if (Class339_Sub7.anInt8728 == anInt10169) {
+				for (int i_6_ = 0; i_6_ < Class339_Sub7.anInt8728; i_6_++) {
 					int i_7_ = anIntArray10165[i_5_++];
 					is_4_[i_6_] = Node_Sub30.method2723(i_7_, 255) << 4;
 					is_3_[i_6_] = Node_Sub30.method2723(4080, i_7_ >> 4);
 					is_2_[i_6_] = Node_Sub30.method2723(4080, i_7_ >> 12);
 				}
 			} else {
-				for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > (Class339_Sub7.anInt8728 ^ 0xffffffff); i_8_++) {
+				for (int i_8_ = 0; Class339_Sub7.anInt8728 > i_8_; i_8_++) {
 					int i_9_ = anInt10169 * i_8_ / Class339_Sub7.anInt8728;
 					int i_10_ = anIntArray10165[i_9_ + i_5_];
 					is_4_[i_8_] = Node_Sub30.method2723(255, i_10_) << 4;
@@ -87,7 +87,7 @@ class Node_Sub38_Sub8 extends Node_Sub38
 		if (anIntArray10165 != null) {
 			return true;
 		}
-		if ((anInt10173 ^ 0xffffffff) <= -1) {
+		if (anInt10173 >= 0) {
 			Class383 class383 = Class230.anInt5209 >= 0 ? Class383.method4194(Class308.aClass302_3909, Class230.anInt5209, anInt10173) : Class383.method4191(Class308.aClass302_3909, anInt10173);
 			class383.method4201();
 			anIntArray10165 = class383.method4195();
@@ -107,7 +107,7 @@ class Node_Sub38_Sub8 extends Node_Sub38
 	final void method2780(boolean bool, BufferedStream buffer, int i) {
 		anInt10164++;
 		if (bool == false) {
-			if ((i ^ 0xffffffff) == -1) {
+			if (i == 0) {
 				anInt10173 = buffer.readUnsignedShort();
 			}
 		}

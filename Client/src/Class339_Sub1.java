@@ -44,9 +44,7 @@ public class Class339_Sub1 extends Class339
 		if (i != 20937) {
 			method3926(72);
 		}
-		if (!aBoolean8637) {
-			aGLToolkit4202.method1472(-96, 0, 770, 5890);
-		} else {
+		if (aBoolean8637) {
 			if (!aBoolean8633) {
 				aGLToolkit4202.method1457(33984, 2);
 				aGLToolkit4202.method1444(-2, null);
@@ -56,8 +54,10 @@ public class Class339_Sub1 extends Class339
 			aGLToolkit4202.method1457(i + 13047, 0);
 			aClass25_8635.method310('\001', (byte) -116);
 			aBoolean8637 = false;
+		} else {
+			aGLToolkit4202.method1472(-96, 0, 770, 5890);
 		}
-		aGLToolkit4202.method1474(126, 8448, 8448);
+        aGLToolkit4202.method1474(126, 8448, 8448);
 	}
 	
 	final void method3917(Class169 class169, int i, int i_2_) {
@@ -87,7 +87,11 @@ public class Class339_Sub1 extends Class339
 		OpenGL.glLoadIdentity();
 		OpenGL.glRotatef(22.5F, 1.0F, 0.0F, 0.0F);
 		OpenGL.glMatrixMode(5888);
-		if (!aBoolean8633) {
+		if (aBoolean8633) {
+			aGLToolkit4202.method1474(126, 7681, 260);
+			aGLToolkit4202.method1464(5890, 770, 0, (byte) -51);
+			aGLToolkit4202.method1472(-103, 0, 770, 34167);
+		} else {
 			aGLToolkit4202.method1474(126, 8448, 7681);
 			aGLToolkit4202.method1464(34168, 768, 0, (byte) -51);
 			aGLToolkit4202.method1457(b ^ 0x84f9, 2);
@@ -95,12 +99,8 @@ public class Class339_Sub1 extends Class339
 			aGLToolkit4202.method1464(34168, 768, 0, (byte) -51);
 			aGLToolkit4202.method1464(34168, 770, 1, (byte) -51);
 			aGLToolkit4202.method1472(-32, 0, 770, 34167);
-		} else {
-			aGLToolkit4202.method1474(126, 7681, 260);
-			aGLToolkit4202.method1464(5890, 770, 0, (byte) -51);
-			aGLToolkit4202.method1472(-103, 0, 770, 34167);
 		}
-		aGLToolkit4202.method1457(b ^ 0x84f9, 0);
+        aGLToolkit4202.method1457(b ^ 0x84f9, 0);
 		aClass25_8635.method309(false);
 		aClass25_8635.method307(1, 4864);
 		aGLToolkit4202.method1457(33984, 1);
@@ -110,7 +110,11 @@ public class Class339_Sub1 extends Class339
 		OpenGL.glMatrixMode(5890);
 		OpenGL.glLoadIdentity();
 		OpenGL.glMatrixMode(5888);
-		if (!aBoolean8633) {
+		if (aBoolean8633) {
+			aGLToolkit4202.method1474(-49, 8448, 8448);
+			aGLToolkit4202.method1464(5890, 768, 0, (byte) -51);
+			aGLToolkit4202.method1472(-44, 0, 770, 5890);
+		} else {
 			aGLToolkit4202.method1474(b ^ ~0x3b, 8448, 8448);
 			aGLToolkit4202.method1464(5890, 768, 0, (byte) -51);
 			aGLToolkit4202.method1457(b ^ 0x84f9, 2);
@@ -118,12 +122,8 @@ public class Class339_Sub1 extends Class339
 			aGLToolkit4202.method1464(5890, 768, 0, (byte) -51);
 			aGLToolkit4202.method1464(34168, 768, 1, (byte) -51);
 			aGLToolkit4202.method1472(-36, 0, 770, 5890);
-		} else {
-			aGLToolkit4202.method1474(-49, 8448, 8448);
-			aGLToolkit4202.method1464(5890, 768, 0, (byte) -51);
-			aGLToolkit4202.method1472(-44, 0, 770, 5890);
 		}
-		aGLToolkit4202.method1457(b + 33927, 0);
+        aGLToolkit4202.method1457(b + 33927, 0);
 		aClass25_8635.method309(false);
 	}
 	
@@ -143,8 +143,8 @@ public class Class339_Sub1 extends Class339
 			byte[][] bs_3_ = new byte[6][4096];
 			byte[][] bs_4_ = new byte[6][4096];
 			int i_5_ = 0;
-			for (int i_6_ = 0; (i_6_ ^ 0xffffffff) > -65; i_6_++) {
-				for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > -65; i_7_++) {
+			for (int i_6_ = 0; i_6_ < 64; i_6_++) {
+				for (int i_7_ = 0; i_7_ < 64; i_7_++) {
 					float f = (float) i_6_ * 2.0F / 64.0F - 1.0F;
 					float f_8_ = -1.0F + (float) i_7_ * 2.0F / 64.0F;
 					float f_9_ = (float) (1.0 / Math.sqrt((double) (f_8_ * f_8_ + 1.0F + f * f)));
@@ -152,36 +152,30 @@ public class Class339_Sub1 extends Class339
 					f_8_ *= f_9_;
 					for (int i_10_ = 0; i_10_ < 6; i_10_++) {
 						float f_11_;
-						if ((i_10_ ^ 0xffffffff) != -1) {
-							if (i_10_ != 1) {
-								if (i_10_ != 2) {
-									if ((i_10_ ^ 0xffffffff) == -4) {
-										f_11_ = -f;
-									} else if (i_10_ == 4) {
-										f_11_ = f_9_;
-									} else {
-										f_11_ = -f_9_;
-									}
-								} else {
-									f_11_ = f;
-								}
-							} else {
-								f_11_ = f_8_;
-							}
-						} else {
+						if (i_10_ == 0) {
 							f_11_ = -f_8_;
+						} else if (i_10_ == 1) {
+							f_11_ = f_8_;
+						} else if (i_10_ == 2) {
+							f_11_ = f;
+						} else if (i_10_ == 3) {
+							f_11_ = -f;
+						} else if (i_10_ == 4) {
+							f_11_ = f_9_;
+						} else {
+							f_11_ = -f_9_;
 						}
-						int i_12_;
+                        int i_12_;
 						int i_13_;
 						int i_14_;
-						if (!(f_11_ > 0.0F)) {
-							i_12_ = i_13_ = i_14_ = 0;
-						} else {
+						if (f_11_ > 0.0F) {
 							i_12_ = (int) (Math.pow((double) f_11_, 96.0) * (double) i);
 							i_13_ = (int) ((double) i * Math.pow((double) f_11_, 36.0));
 							i_14_ = (int) ((double) i * Math.pow((double) f_11_, 12.0));
+						} else {
+							i_12_ = i_13_ = i_14_ = 0;
 						}
-						bs_3_[i_10_][i_5_] = (byte) i_12_;
+                        bs_3_[i_10_][i_5_] = (byte) i_12_;
 						bs_4_[i_10_][i_5_] = (byte) i_13_;
 						bs[i_10_][i_5_] = (byte) i_14_;
 					}

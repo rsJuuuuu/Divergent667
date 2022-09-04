@@ -26,7 +26,7 @@ public class Class156 implements Runnable
 	
 	final boolean method1703(int i, int i_0_) throws IOException {
 		anInt1959++;
-		if (i_0_ <= 0 || (i_0_ ^ 0xffffffff) <= (anInt1957 ^ 0xffffffff)) {
+		if (i_0_ <= 0 || anInt1957 <= i_0_) {
 			throw new IOException();
 		}
 		@SuppressWarnings("unused")
@@ -38,7 +38,7 @@ public class Class156 implements Runnable
 			} else {
 				i_2_ = anInt1960 + -anInt1956;
 			}
-			if ((i_0_ ^ 0xffffffff) < (i_2_ ^ 0xffffffff)) {
+			if (i_2_ < i_0_) {
 				if (anIOException1968 != null) {
 					throw new IOException(anIOException1968.toString());
 				}
@@ -92,14 +92,14 @@ public class Class156 implements Runnable
 					if (anIOException1968 != null) {
 						return;
 					}
-					if ((anInt1956 ^ 0xffffffff) == -1) {
+					if (anInt1956 == 0) {
 						i = -1 + (anInt1957 - anInt1960);
-					} else if ((anInt1960 ^ 0xffffffff) <= (anInt1956 ^ 0xffffffff)) {
+					} else if (anInt1956 <= anInt1960) {
 						i = anInt1957 - anInt1960;
 					} else {
 						i = -1 + anInt1956 + -anInt1960;
 					}
-					if ((i ^ 0xffffffff) < -1) {
+					if (i > 0) {
 						break;
 					}
 					try {
@@ -138,12 +138,12 @@ public class Class156 implements Runnable
 	
 	final int method1708(int i, int i_5_, int i_6_, byte[] bs) throws IOException {
 		anInt1967++;
-		if ((i_5_ ^ 0xffffffff) > -1 || (i_6_ ^ 0xffffffff) > -1 || i_5_ + i_6_ > bs.length) {
+		if (i_5_ < 0 || i_6_ < 0 || i_5_ + i_6_ > bs.length) {
 			throw new IOException();
 		}
 		synchronized (this) {
 			int i_7_;
-			if ((anInt1960 ^ 0xffffffff) <= (anInt1956 ^ 0xffffffff)) {
+			if (anInt1956 <= anInt1960) {
 				i_7_ = anInt1960 - anInt1956;
 			} else {
 				i_7_ = anInt1960 + anInt1957 - anInt1956;
@@ -154,7 +154,7 @@ public class Class156 implements Runnable
 			if (i != 1) {
 				method1706((byte) 78);
 			}
-			if ((i_5_ ^ 0xffffffff) == -1 && anIOException1968 != null) {
+			if (i_5_ == 0 && anIOException1968 != null) {
 				throw new IOException(anIOException1968.toString());
 			}
 			if (anInt1957 >= anInt1956 - -i_5_) {

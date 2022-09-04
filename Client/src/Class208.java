@@ -34,14 +34,14 @@ public class Class208
 	}
 	
 	final void method2047(Component component, int[] is, int i, int i_1_, Point point) {
-		if (is != null) {
+		if (is == null) {
+			component.setCursor(null);
+		} else {
 			BufferedImage bufferedimage = new BufferedImage(i, i_1_, 2);
 			bufferedimage.setRGB(0, 0, i, i_1_, is, 0, i);
 			component.setCursor(component.getToolkit().createCustomCursor(bufferedimage, point, null));
-		} else {
-			component.setCursor(null);
 		}
-	}
+    }
 	
 	Class208() throws Exception {
 		aRobot2481 = new Robot();

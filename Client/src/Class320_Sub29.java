@@ -38,7 +38,7 @@ public class Class320_Sub29 extends Class320 {
 					for (Node_Sub8 node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
 							.method3613(65280); node_sub8 != null; node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
 							.method3620(16776960)) {
-						if ((i_5_ & 0x7fff ^ 0xffffffff) == (node_sub8.anInt7065 ^ 0xffffffff)
+						if (node_sub8.anInt7065 == (i_5_ & 0x7fff)
 								&& node_sub8.anInt7067 == i_6_) {
 							node_sub8.method2160((byte) 39);
 							node_sub8.anInt7067 = i_7_;
@@ -47,10 +47,10 @@ public class Class320_Sub29 extends Class320 {
 							break;
 						}
 					}
-					if ((i_3_ ^ 0xffffffff) <= -1
-							&& (i_1_ ^ 0xffffffff) <= -1
+					if (i_3_ >= 0
+							&& i_1_ >= 0
 							&& Node_Sub54.GAME_SCENE_WDITH > i_3_
-							&& (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (i_1_ ^ 0xffffffff)) {
+							&& i_1_ < Class377_Sub1.GAME_SCENE_HEIGHT) {
 						Node_Sub36.method2750(false, Class50.basePlane, i_1_,
 								i_3_);
 					}
@@ -89,33 +89,33 @@ public class Class320_Sub29 extends Class320 {
 			if (objectdefinition.aShortArray2988 != null) {
 				i_20_ = objectdefinition.aShortArray2988.length;
 			}
-			if ((i_11_ & 0x1 ^ 0xffffffff) != -2) {
+			if ((i_11_ & 0x1) == 1) {
+				Class320_Sub12.method3727(null, (byte) 65, Class50.basePlane,
+						i_10_, i_13_, i_14_);
+			} else {
 				int[] is = null;
-				if ((0x2 & i_11_ ^ 0xffffffff) == -3) {
+				if ((0x2 & i_11_) == 2) {
 					is = new int[i_16_];
-					for (int i_21_ = 0; (i_16_ ^ 0xffffffff) < (i_21_ ^ 0xffffffff); i_21_++)
+					for (int i_21_ = 0; i_21_ < i_16_; i_21_++)
 						is[i_21_] = packet.readUnsignedShort();
 				}
 				short[] ses = null;
-				if ((i_11_ & 0x4 ^ 0xffffffff) == -5) {
+				if ((i_11_ & 0x4) == 4) {
 					ses = new short[i_19_];
-					for (int i_22_ = 0; (i_22_ ^ 0xffffffff) > (i_19_ ^ 0xffffffff); i_22_++)
+					for (int i_22_ = 0; i_19_ > i_22_; i_22_++)
 						ses[i_22_] = (short) packet.readUnsignedShort();
 				}
 				short[] ses_23_ = null;
 				if ((0x8 & i_11_) == 8) {
 					ses_23_ = new short[i_20_];
-					for (int i_24_ = 0; (i_20_ ^ 0xffffffff) < (i_24_ ^ 0xffffffff); i_24_++)
+					for (int i_24_ = 0; i_24_ < i_20_; i_24_++)
 						ses_23_[i_24_] = (short) packet.readUnsignedShort();
 				}
 				Class320_Sub12.method3727(new Class121(Class187.aLong2275++,
 						is, ses, ses_23_), (byte) -126, Class50.basePlane,
 						i_10_, i_13_, i_14_);
-			} else {
-				Class320_Sub12.method3727(null, (byte) 65, Class50.basePlane,
-						i_10_, i_13_, i_14_);
 			}
-		} else if (class257 == Class225.aClass257_2674) {// maybe
+        } else if (class257 == Class225.aClass257_2674) {// maybe
 			int i_25_ = packet.readUnsignedShortLE128();
 			if (i_25_ == 65535) {
 				i_25_ = -1;
@@ -150,15 +150,15 @@ public class Class320_Sub29 extends Class320 {
 				int i_43_ = packet.readUnsignedByte();
 				int i_44_ = packet.readUnsignedShort();
 				if (i_36_ >= 0
-						&& (i_37_ ^ 0xffffffff) <= -1
-						&& (i_36_ ^ 0xffffffff) > (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff)
-						&& (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (i_37_ ^ 0xffffffff)) {
+						&& i_37_ >= 0
+						&& Node_Sub54.GAME_SCENE_WDITH > i_36_
+						&& i_37_ < Class377_Sub1.GAME_SCENE_HEIGHT) {
 					int i_45_ = i_40_ - -1;
 					if (-i_45_ + i_36_ <= Class295.myPlayer.scenePositionXQueue[0]
 							&& i_45_ + i_36_ >= Class295.myPlayer.scenePositionXQueue[0]
 							&& Class295.myPlayer.scenePositionYQueue[0] >= -i_45_
 									+ i_37_
-							&& (i_45_ + i_37_ ^ 0xffffffff) <= (Class295.myPlayer.scenePositionYQueue[0] ^ 0xffffffff)) {
+							&& Class295.myPlayer.scenePositionYQueue[0] <= i_45_ + i_37_) {
 						Class95.method1067(
 								i_43_,
 								i_42_,
@@ -181,10 +181,10 @@ public class Class320_Sub29 extends Class320 {
 				int i_52_ = Node_Sub38_Sub13.anIntArray10232[i_50_];
 				int i_53_ = packet.readUnsignedShort128();
 				if (Class134_Sub1.method1581(Class61.anInt898, -25900)
-						|| (i_47_ ^ 0xffffffff) <= -1
+						|| i_47_ >= 0
 						&& i_48_ >= 0
 						&& Node_Sub54.GAME_SCENE_WDITH > i_47_
-						&& (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (i_48_ ^ 0xffffffff)) {
+						&& i_48_ < Class377_Sub1.GAME_SCENE_HEIGHT) {
 					Class262_Sub19.method3200(i_51_, i_53_, i_52_, i_47_,
 							Class50.basePlane, i_50_, i_48_, false);
 				}
@@ -193,7 +193,7 @@ public class Class320_Sub29 extends Class320 {
 				int i_55_ = Class333.baseX * 2 + ((hash & 0xfe) >> 4);
 				int i_56_ = (0xf & hash) + 2 * Node_Sub21.baseY;
 				int hash2 = packet.readUnsignedByte();
-				boolean bool = (hash2 & 0x1 ^ 0xffffffff) != -1;
+				boolean bool = (hash2 & 0x1) != 0;
 				boolean bool_58_ = (0x2 & hash2) != 0;
 				int i_59_ = !bool_58_ ? -1 : hash2 >> 2;
 				int i_60_ = packet.readByte() + i_55_;
@@ -202,12 +202,12 @@ public class Class320_Sub29 extends Class320 {
 				int i_63_ = packet.readShort();
 				int i_64_ = packet.readUnsignedShort();
 				int i_65_ = packet.readUnsignedByte();
-				if (!bool_58_) {
-					i_65_ *= 4;
-				} else {
+				if (bool_58_) {
 					i_65_ = (byte) i_65_;
+				} else {
+					i_65_ *= 4;
 				}
-				int i_66_ = 4 * packet.readUnsignedByte();
+                int i_66_ = 4 * packet.readUnsignedByte();
 				int i_67_ = packet.readUnsignedShort();
 				int i_68_ = packet.readUnsignedShort();
 				int i_69_ = packet.readUnsignedByte();
@@ -216,13 +216,13 @@ public class Class320_Sub29 extends Class320 {
 					i_69_ = -1;
 				}
 				if (i_55_ >= 0
-						&& (i_56_ ^ 0xffffffff) <= -1
-						&& (i_55_ ^ 0xffffffff) > (Node_Sub54.GAME_SCENE_WDITH * 2 ^ 0xffffffff)
+						&& i_56_ >= 0
+						&& Node_Sub54.GAME_SCENE_WDITH * 2 > i_55_
 						&& i_56_ < Node_Sub54.GAME_SCENE_WDITH * 2
 						&& i_60_ >= 0 && i_61_ >= 0
 						&& 2 * Class377_Sub1.GAME_SCENE_HEIGHT > i_60_
 						&& Class377_Sub1.GAME_SCENE_HEIGHT * 2 > i_61_
-						&& (i_64_ ^ 0xffffffff) != -65536) {
+						&& i_64_ != 65535) {
 					i_60_ = 256 * i_60_;
 					i_70_ <<= 2;
 					i_56_ = 256 * i_56_;
@@ -230,9 +230,9 @@ public class Class320_Sub29 extends Class320 {
 					i_65_ <<= 2;
 					i_66_ <<= 2;
 					i_55_ *= 256;
-					if ((i_62_ ^ 0xffffffff) != -1 && i_59_ != -1) {
+					if (i_62_ != 0 && i_59_ != -1) {
 						Actor actor = null;
-						if ((i_62_ ^ 0xffffffff) <= -1) {
+						if (i_62_ >= 0) {
 							int i_71_ = i_62_ + -1;
 							Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187
 									.method1518(3512, (long) i_71_);
@@ -241,12 +241,12 @@ public class Class320_Sub29 extends Class320 {
 							}
 						} else {
 							int i_72_ = -1 + -i_62_;
-							if (i_72_ != Class166.myPlayerIndex) {
-								actor = Class270_Sub2.LOCAL_PLAYERS[i_72_];
-							} else {
+							if (i_72_ == Class166.myPlayerIndex) {
 								actor = Class295.myPlayer;
+							} else {
+								actor = Class270_Sub2.LOCAL_PLAYERS[i_72_];
 							}
-						}
+                        }
 						if (actor != null) {
 							Class259 class259 = actor.method868((byte) -123);
 							if (class259.anIntArrayArray3273 != null
@@ -284,7 +284,7 @@ public class Class320_Sub29 extends Class320 {
 					boolean bool = i_77_ >= 0
 							&& i_75_ >= 0
 							&& Node_Sub54.GAME_SCENE_WDITH > i_77_
-							&& (i_75_ ^ 0xffffffff) > (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff);
+							&& Class377_Sub1.GAME_SCENE_HEIGHT > i_75_;
 					if (bool
 							|| Class134_Sub1.method1581(Class61.anInt898, i
 									+ -25900)) {
@@ -314,13 +314,13 @@ public class Class320_Sub29 extends Class320 {
 				if (i_82_ >= 0
 						&& i_83_ >= 0
 						&& Node_Sub54.GAME_SCENE_WDITH > i_82_
-						&& (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (i_83_ ^ 0xffffffff)) {
+						&& i_83_ < Class377_Sub1.GAME_SCENE_HEIGHT) {
 					int i_91_ = 1 + i_86_;
 					if (Class295.myPlayer.scenePositionXQueue[0] >= -i_91_
 							+ i_82_
-							&& (i_91_ + i_82_ ^ 0xffffffff) <= (Class295.myPlayer.scenePositionXQueue[0] ^ 0xffffffff)
-							&& (Class295.myPlayer.scenePositionYQueue[0] ^ 0xffffffff) <= (-i_91_
-									+ i_83_ ^ 0xffffffff)
+							&& Class295.myPlayer.scenePositionXQueue[0] <= i_91_ + i_82_
+							&& -i_91_
+                            + i_83_ <= Class295.myPlayer.scenePositionYQueue[0]
 							&& Class295.myPlayer.scenePositionYQueue[0] <= i_83_
 									+ i_91_) {
 						Node_Sub13.method2549(i_87_, i_88_, i_86_
@@ -351,7 +351,7 @@ public class Class320_Sub29 extends Class320 {
 					if (node_sub11.aClass312_7104.method3616(i)) {
 						node_sub11.method2160((byte) 127);
 					}
-					if (i_96_ >= 0 && (i_94_ ^ 0xffffffff) <= -1
+					if (i_96_ >= 0 && i_94_ >= 0
 							&& i_96_ < Node_Sub54.GAME_SCENE_WDITH
 							&& i_94_ < Class377_Sub1.GAME_SCENE_HEIGHT) {
 						Node_Sub36.method2750(false, Class50.basePlane, i_94_,
@@ -372,7 +372,7 @@ public class Class320_Sub29 extends Class320 {
 			} else if (Actor.aClass257_10823 == class257) { //send project
 				int hash = packet.readUnsignedByte();
 				
-				boolean bool = (hash & 0x80 ^ 0xffffffff) != -1;
+				boolean bool = (hash & 0x80) != 0;
 				int i_105_ = Class333.baseX - -(hash >> 3 & 0x7);
 				int i_106_ = (0x7 & hash) + Node_Sub21.baseY;
 				
@@ -390,15 +390,15 @@ public class Class320_Sub29 extends Class320 {
 				if (i_115_ == 255) {
 					i_115_ = -1;
 				}
-				if ((i_105_ ^ 0xffffffff) <= -1
-						&& (i_106_ ^ 0xffffffff) <= -1
-						&& (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) < (i_105_ ^ 0xffffffff)
+				if (i_105_ >= 0
+						&& i_106_ >= 0
+						&& i_105_ < Node_Sub54.GAME_SCENE_WDITH
 						&& i_106_ < Class377_Sub1.GAME_SCENE_HEIGHT
 						&& i_107_ >= 0
 						&& i_108_ >= 0
-						&& (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff) < (i_107_ ^ 0xffffffff)
+						&& i_107_ < Node_Sub54.GAME_SCENE_WDITH
 						&& i_108_ < Class377_Sub1.GAME_SCENE_HEIGHT
-						&& (i_110_ ^ 0xffffffff) != -65536) {
+						&& i_110_ != 65535) {
 					i_108_ = 256 + i_108_ * 512;
 					i_116_ <<= 2;
 					i_111_ <<= 2;
@@ -445,7 +445,7 @@ public class Class320_Sub29 extends Class320 {
 				int i_130_ = packet.readUnsignedShort();
 				boolean bool = i_127_ >= 0
 						&& i_125_ >= 0
-						&& (i_127_ ^ 0xffffffff) > (Node_Sub54.GAME_SCENE_WDITH ^ 0xffffffff)
+						&& Node_Sub54.GAME_SCENE_WDITH > i_127_
 						&& i_125_ < Class377_Sub1.GAME_SCENE_HEIGHT;
 				if (bool || Class134_Sub1.method1581(Class61.anInt898, -25900)) {
 					Node_Sub38_Sub1.method2789(Class50.basePlane, (byte) -108,
@@ -466,10 +466,10 @@ public class Class320_Sub29 extends Class320 {
 				int i_135_ = packet.readUnsignedByte();
 				int i_136_ = packet.readUnsignedShort();
 				int i_137_ = packet.readUnsignedByte();
-				if ((i_132_ ^ 0xffffffff) <= -1
-						&& (i_133_ ^ 0xffffffff) <= -1
+				if (i_132_ >= 0
+						&& i_133_ >= 0
 						&& i_132_ < Node_Sub54.GAME_SCENE_WDITH
-						&& (Class377_Sub1.GAME_SCENE_HEIGHT ^ 0xffffffff) < (i_133_ ^ 0xffffffff)) {
+						&& i_133_ < Class377_Sub1.GAME_SCENE_HEIGHT) {
 					if (i_134_ == -1) {
 						CacheNode_Sub18 cachenode_sub18 = (CacheNode_Sub18) Class20_Sub1.aHashTable5508
 								.method1518(3512,

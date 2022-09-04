@@ -43,7 +43,7 @@ public class Class173
 		Class105.aGLSpriteArray5194 = new GLSprite[anInt2087 + 10];
 		Class290_Sub6.anIntArray8123 = new int[10 + anInt2087];
 		Class311.method3605(glsprites, 0, Class105.aGLSpriteArray5194, 0, anInt2087);
-		for (int i_0_ = 0; (anInt2087 ^ 0xffffffff) < (i_0_ ^ 0xffffffff); i_0_++)
+		for (int i_0_ = 0; i_0_ < anInt2087; i_0_++)
 			Class290_Sub6.anIntArray8123[i_0_] = Class105.aGLSpriteArray5194[i_0_].method1186();
 		for (int i_1_ = anInt2087; i_1_ < Class105.aGLSpriteArray5194.length; i_1_++)
 			Class290_Sub6.anIntArray8123[i_1_] = 12;
@@ -57,96 +57,66 @@ public class Class173
 		}
 		for (int i_5_ = 0; i_5_ < i_4_; i_5_++) {
 			int i_6_ = string.charAt(i_3_ + i_5_);
-			if ((i_6_ ^ 0xffffffff) < -1 && i_6_ < 128 || (i_6_ ^ 0xffffffff) <= -161 && i_6_ <= 255) {
+			if (i_6_ > 0 && i_6_ < 128 || i_6_ >= 160 && i_6_ <= 255) {
 				bs[i_2_ + i_5_] = (byte) i_6_;
-			} else if ((i_6_ ^ 0xffffffff) != -8365) {
-				if ((i_6_ ^ 0xffffffff) != -8219) {
-					if (i_6_ == 402) {
-						bs[i_5_ + i_2_] = (byte) -125;
-					} else if (i_6_ != 8222) {
-						if (i_6_ != 8230) {
-							if (i_6_ == 8224) {
-								bs[i_5_ + i_2_] = (byte) -122;
-							} else if (i_6_ != 8225) {
-								if ((i_6_ ^ 0xffffffff) == -711) {
-									bs[i_2_ - -i_5_] = (byte) -120;
-								} else if (i_6_ != 8240) {
-									if ((i_6_ ^ 0xffffffff) != -353) {
-										if (i_6_ == 8249) {
-											bs[i_2_ - -i_5_] = (byte) -117;
-										} else if ((i_6_ ^ 0xffffffff) != -339) {
-											if (i_6_ != 381) {
-												if (i_6_ == 8216) {
-													bs[i_5_ + i_2_] = (byte) -111;
-												} else if ((i_6_ ^ 0xffffffff) != -8218) {
-													if (i_6_ != 8220) {
-														if ((i_6_ ^ 0xffffffff) != -8222) {
-															if (i_6_ == 8226) {
-																bs[i_5_ + i_2_] = (byte) -107;
-															} else if ((i_6_ ^ 0xffffffff) == -8212) {
-																bs[i_2_ + i_5_] = (byte) -106;
-															} else if (i_6_ != 8212) {
-																if ((i_6_ ^ 0xffffffff) == -733) {
-																	bs[i_2_ - -i_5_] = (byte) -104;
-																} else if (i_6_ != 8482) {
-																	if ((i_6_ ^ 0xffffffff) == -354) {
-																		bs[i_5_ + i_2_] = (byte) -102;
-																	} else if ((i_6_ ^ 0xffffffff) == -8251) {
-																		bs[i_5_ + i_2_] = (byte) -101;
-																	} else if ((i_6_ ^ 0xffffffff) == -340) {
-																		bs[i_2_ + i_5_] = (byte) -100;
-																	} else if (i_6_ != 382) {
-																		if (i_6_ != 376) {
-																			bs[i_2_ + i_5_] = (byte) 63;
-																		} else {
-																			bs[i_5_ + i_2_] = (byte) -97;
-																		}
-																	} else {
-																		bs[i_5_ + i_2_] = (byte) -98;
-																	}
-																} else {
-																	bs[i_5_ + i_2_] = (byte) -103;
-																}
-															} else {
-																bs[i_5_ + i_2_] = (byte) -105;
-															}
-														} else {
-															bs[i_2_ - -i_5_] = (byte) -108;
-														}
-													} else {
-														bs[i_2_ - -i_5_] = (byte) -109;
-													}
-												} else {
-													bs[i_2_ - -i_5_] = (byte) -110;
-												}
-											} else {
-												bs[i_2_ + i_5_] = (byte) -114;
-											}
-										} else {
-											bs[i_2_ + i_5_] = (byte) -116;
-										}
-									} else {
-										bs[i_5_ + i_2_] = (byte) -118;
-									}
-								} else {
-									bs[i_5_ + i_2_] = (byte) -119;
-								}
-							} else {
-								bs[i_5_ + i_2_] = (byte) -121;
-							}
-						} else {
-							bs[i_2_ + i_5_] = (byte) -123;
-						}
-					} else {
-						bs[i_2_ - -i_5_] = (byte) -124;
-					}
-				} else {
-					bs[i_2_ + i_5_] = (byte) -126;
-				}
-			} else {
+			} else if (i_6_ == 8364) {
 				bs[i_5_ + i_2_] = (byte) -128;
-			}
-		}
+			} else if (i_6_ == 8218) {
+                bs[i_2_ + i_5_] = (byte) -126;
+            } else if (i_6_ == 402) {
+                bs[i_5_ + i_2_] = (byte) -125;
+            } else if (i_6_ == 8222) {
+                bs[i_2_ - -i_5_] = (byte) -124;
+            } else if (i_6_ == 8230) {
+                bs[i_2_ + i_5_] = (byte) -123;
+            } else if (i_6_ == 8224) {
+                bs[i_5_ + i_2_] = (byte) -122;
+            } else if (i_6_ == 8225) {
+                bs[i_5_ + i_2_] = (byte) -121;
+            } else if (i_6_ == 710) {
+                bs[i_2_ - -i_5_] = (byte) -120;
+            } else if (i_6_ == 8240) {
+                bs[i_5_ + i_2_] = (byte) -119;
+            } else if (i_6_ == 352) {
+                bs[i_5_ + i_2_] = (byte) -118;
+            } else if (i_6_ == 8249) {
+                bs[i_2_ - -i_5_] = (byte) -117;
+            } else if (i_6_ == 338) {
+                bs[i_2_ + i_5_] = (byte) -116;
+            } else if (i_6_ == 381) {
+                bs[i_2_ + i_5_] = (byte) -114;
+            } else if (i_6_ == 8216) {
+                bs[i_5_ + i_2_] = (byte) -111;
+            } else if (i_6_ == 8217) {
+                bs[i_2_ - -i_5_] = (byte) -110;
+            } else if (i_6_ == 8220) {
+                bs[i_2_ - -i_5_] = (byte) -109;
+            } else if (i_6_ == 8221) {
+                bs[i_2_ - -i_5_] = (byte) -108;
+            } else if (i_6_ == 8226) {
+                bs[i_5_ + i_2_] = (byte) -107;
+            } else if (i_6_ == 8211) {
+                bs[i_2_ + i_5_] = (byte) -106;
+            } else if (i_6_ == 8212) {
+                bs[i_5_ + i_2_] = (byte) -105;
+            } else if (i_6_ == 732) {
+                bs[i_2_ - -i_5_] = (byte) -104;
+            } else if (i_6_ == 8482) {
+                bs[i_5_ + i_2_] = (byte) -103;
+            } else if (i_6_ == 353) {
+                bs[i_5_ + i_2_] = (byte) -102;
+            } else if (i_6_ == 8250) {
+                bs[i_5_ + i_2_] = (byte) -101;
+            } else if (i_6_ == 339) {
+                bs[i_2_ + i_5_] = (byte) -100;
+            } else if (i_6_ == 382) {
+                bs[i_5_ + i_2_] = (byte) -98;
+            } else if (i_6_ == 376) {
+                bs[i_5_ + i_2_] = (byte) -97;
+            } else {
+                bs[i_2_ + i_5_] = (byte) 63;
+            }
+        }
 		return i_4_;
 	}
 	

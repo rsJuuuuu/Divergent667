@@ -30,7 +30,7 @@ class Class150 implements Interface7
 		if (!Class12.aBoolean194 || !Mobile_Sub1.aBoolean10959) {
 			return false;
 		}
-		if ((Class233.anInt2786 ^ 0xffffffff) > -101) {
+		if (Class233.anInt2786 < 100) {
 			return false;
 		}
 		if (!Class313.method3649(true, i_3_, i_0_, i_1_)) {
