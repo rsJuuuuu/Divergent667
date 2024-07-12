@@ -3,32 +3,33 @@
  */
 package jaclib.memory;
 
-public class NativeBuffer implements Buffer, Source
-{
-	private int a = -1;
-	private long b;
-	
-	public void a(byte[] bs, int i, int i_0_, int i_1_) {
-		if (i_0_ < 0 | (bs == null | b == 0L | i < 0 | i + i_1_ > bs.length) | i_0_ - -i_1_ > a) {
-			throw new RuntimeException();
-		}
-		put(b, bs, i, i_0_, i_1_);
-	}
-	
-	protected final void a(long l, int i) {
-		b = l;
-		a = i;
-	}
-	
-	public final long getAddress() {
-		return b;
-	}
-	
-	private final native void put(long l, byte[] bs, int i, int i_2_, int i_3_);
-	
-	private final native void get(long l, byte[] bs, int i, int i_4_, int i_5_);
-	
-	public final int getSize() {
-		return a;
-	}
+import java.util.Objects;
+
+public class NativeBuffer implements Buffer, Source {
+    private int a = -1;
+    private long b;
+
+    public void a(byte[] bs, int i, int i_0_, int i_1_) {
+        if (i_0_ < 0 | (bs == null | b == 0L | i < 0 | i + i_1_ > Objects.requireNonNull(bs).length) | i_0_ + i_1_ > a) {
+            throw new RuntimeException();
+        }
+        put(b, bs, i, i_0_, i_1_);
+    }
+
+    protected final void a(long l, int i) {
+        b = l;
+        a = i;
+    }
+
+    public final long getAddress() {
+        return b;
+    }
+
+    private native void put(long l, byte[] bs, int i, int i_2_, int i_3_);
+
+    private native void get(long l, byte[] bs, int i, int i_4_, int i_5_);
+
+    public final int getSize() {
+        return a;
+    }
 }

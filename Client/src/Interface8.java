@@ -2,6 +2,5 @@
  * Visit http://jode.sourceforge.net/
  */
 
-interface Interface8
-{
+interface Interface8 {
 }

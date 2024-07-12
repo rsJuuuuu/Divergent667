@@ -2,6 +2,5 @@
  * Visit http://jode.sourceforge.net/
  */
 
-interface Interface13_Impl3 extends Interface13
-{
+interface Interface13_Impl3 extends Interface13 {
 }

@@ -3,9 +3,8 @@
  */
 package jaclib.memory;
 
-public interface Source
-{
-	int getSize();
-	
-	long getAddress();
+public interface Source {
+    int getSize();
+
+    long getAddress();
 }

@@ -5,8 +5,8 @@ import java.net.URL;
 import java.util.Properties;
 
 public class Loader extends Applet {
-    private static Properties properties = new Properties();
-    private static JPanel appletPanel = new JPanel();
+    private static final Properties properties = new Properties();
+    private static final JPanel appletPanel = new JPanel();
     static int openInterfaceId = -1;
 
     public static void main(String[] args) throws Exception {

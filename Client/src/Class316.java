@@ -2,24 +2,19 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class316
-{
-	static int anInt4036;
-	static int anInt4037;
-	
-	static final boolean method3661(int i, int i_0_, byte b) {
-		anInt4037++;
-		if (b != 69) {
-			return false;
-		}
+public class Class316 {
+    static int anInt4036;
+    static int anInt4037;
+
+    static boolean method3661(int i, int i_0_) {
+        anInt4037++;
         return (i & 0x180) != 0;
     }
-	
-	static final boolean method3662(boolean bool, char c) {
-		anInt4036++;
-		if (bool != false) {
-			method3662(true, '%');
-		}
-        return !((c < 48 || c > 57) && (c < 65 || c > 90) && (c < 97 || c > 122));
+
+    static boolean isAlphanumeric(char c) {
+        boolean isNumber = c >= 48 && c <= 57;
+        boolean isCapAlpha = c >= 65 && c <= 90;
+        boolean isLowerAlpha = c >= 97 && c <= 122;
+        return isNumber || isCapAlpha || isLowerAlpha;
     }
 }

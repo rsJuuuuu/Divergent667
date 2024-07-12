@@ -2,45 +2,44 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class1
-{
-	protected boolean aBoolean105 = true;
-	protected short[][] aShortArrayArray106;
-	static int anInt107;
-	protected int[] anIntArray108 = null;
-	static int[] anIntArray109 = { 19, 55, 38, 155, 255, 110, 137, 205, 76 };
-	protected int anInt110 = -1;
-	protected boolean aBoolean111;
-	protected int anInt112;
-	protected short[][][] aShortArrayArrayArray113;
-	static int anInt114;
-	static int anInt115 = -1;
-	protected int anInt116;
-	protected int anInt117 = 4;
-	protected int anInt118;
-	protected int[] anIntArray119;
-	protected int anInt120;
-	
-	private final void method163(BufferedStream buffer, int i) {
-		anInt114++;
-		boolean bool = false;
-		for (;;) {
-			int i_0_ = buffer.readUnsignedByte();
-			if (i_0_ == 0) {
-				break;
-			}
-			if (i_0_ == 1) {
-				if (anIntArray119 == null) {
-					anIntArray119 = new int[4];
-					anIntArray108 = new int[4];
-					anInt117 = 4;
-				}
-				bool = true;
-				for (int i_7_ = 0; i_7_ < anIntArray119.length; i_7_++) {
-					anIntArray119[i_7_] = buffer.readShort();
-					anIntArray108[i_7_] = buffer.readShort();
-				}
-			} else if (i_0_ == 2) {
+public class Class1 {
+    protected boolean aBoolean105 = true;
+    protected short[][] aShortArrayArray106;
+    static int anInt107;
+    protected int[] anIntArray108 = null;
+    static int[] anIntArray109 = {19, 55, 38, 155, 255, 110, 137, 205, 76};
+    protected int anInt110 = -1;
+    protected boolean aBoolean111;
+    protected int anInt112;
+    protected short[][][] aShortArrayArrayArray113;
+    static int anInt114;
+    static int anInt115 = -1;
+    protected int anInt116;
+    protected int anInt117 = 4;
+    protected int anInt118;
+    protected int[] anIntArray119;
+    protected int anInt120;
+
+    private void method163(BufferedStream buffer) {
+        anInt114++;
+        boolean bool = false;
+        for (; ; ) {
+            int i_0_ = buffer.readUnsignedByte();
+            if (i_0_ == 0) {
+                break;
+            }
+            if (i_0_ == 1) {
+                if (anIntArray119 == null) {
+                    anIntArray119 = new int[4];
+                    anIntArray108 = new int[4];
+                    anInt117 = 4;
+                }
+                bool = true;
+                for (int i_7_ = 0; i_7_ < anIntArray119.length; i_7_++) {
+                    anIntArray119[i_7_] = buffer.readShort();
+                    anIntArray108[i_7_] = buffer.readShort();
+                }
+            } else if (i_0_ == 2) {
                 anInt110 = buffer.readUnsignedShort();
             } else if (i_0_ == 3) {
                 anInt117 = buffer.readUnsignedByte();
@@ -83,48 +82,43 @@ public class Class1
                 }
             }
         }
-		if (!bool) {
-			if (anIntArray119 == null) {
-				anIntArray108 = new int[4];
-				anIntArray119 = new int[4];
-				anInt117 = 4;
-			}
-			for (int i_8_ = 0; i_8_ < anIntArray119.length; i_8_++) {
-				anIntArray119[i_8_] = 0;
-				anIntArray108[i_8_] = i_8_ * 20;
-			}
-		}
-		if (i != 10200) {
-			method164(null, (byte) -62, -57);
-		}
-	}
-	
-	static final short[] method164(short[] ses, byte b, int i) {
-		anInt107++;
-		short[] ses_9_ = new short[i];
-		if (b > -11) {
-			anIntArray109 = null;
-		}
-		Class311.method3606(ses, 0, ses_9_, 0, i);
-		return ses_9_;
-	}
-	
-	public static void method165(byte b) {
-		if (b < -78) {
-			anIntArray109 = null;
-		}
-	}
-	
-	Class1(Index class302) {
-		aBoolean111 = true;
-		anInt116 = 2;
-		anIntArray119 = null;
-		anInt118 = 3;
-		try {
-			byte[] bs = class302.method3518((byte) 126, 3);
-			method163(new BufferedStream(bs), 10200);
-		} catch (RuntimeException runtimeexception) {
-			throw Class126.method1537(runtimeexception, "aba.<init>(" + (class302 != null ? "{...}" : "null") + ')');
-		}
-	}
+        if (!bool) {
+            if (anIntArray119 == null) {
+                anIntArray108 = new int[4];
+                anIntArray119 = new int[4];
+                anInt117 = 4;
+            }
+            for (int i_8_ = 0; i_8_ < anIntArray119.length; i_8_++) {
+                anIntArray119[i_8_] = 0;
+                anIntArray108[i_8_] = i_8_ * 20;
+            }
+        }
+    }
+
+    static short[] method164(short[] ses, byte b, int i) {
+        anInt107++;
+        short[] ses_9_ = new short[i];
+        if (b > -11) {
+            anIntArray109 = null;
+        }
+        Class311.method3606(ses, 0, ses_9_, 0, i);
+        return ses_9_;
+    }
+
+    public static void method165() {
+        anIntArray109 = null;
+    }
+
+    Class1(Index class302) {
+        aBoolean111 = true;
+        anInt116 = 2;
+        anIntArray119 = null;
+        anInt118 = 3;
+        try {
+            byte[] bs = class302.method3518((byte) 126, 3);
+            method163(new BufferedStream(bs));
+        } catch (RuntimeException runtimeexception) {
+            throw Class126.method1537(runtimeexception, "aba.<init>(" + (class302 != null ? "{...}" : "null") + ')');
+        }
+    }
 }

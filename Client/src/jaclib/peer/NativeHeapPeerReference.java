@@ -3,11 +3,10 @@
  */
 package jaclib.peer;
 
-class NativeHeapPeerReference extends PeerReference
-{
-	protected final native long releasePeer(long l);
-	
-	NativeHeapPeerReference(os var_os, ti var_ti) {
-		super(var_os, var_ti);
-	}
+class NativeHeapPeerReference extends PeerReference {
+    protected final native long releasePeer(long l);
+
+    NativeHeapPeerReference(os var_os, ti var_ti) {
+        super(var_os, var_ti);
+    }
 }

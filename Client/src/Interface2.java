@@ -2,7 +2,6 @@
  * Visit http://jode.sourceforge.net/
  */
 
-interface Interface2
-{
-	void method5(int i);
+interface Interface2 {
+    void method5(int i);
 }

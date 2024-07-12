@@ -3,13 +3,12 @@
  */
 package jaclib.hardware_info;
 
-public class HardwareInfo
-{
-	public static final native String[][] getDXDiagDisplayDevicesProps();
-	
-	public static final native String[] getOpenGLProps();
-	
-	public static final native String[] getDXDiagSystemProps();
-	
-	public static final native int[] getCPUInfo();
+public class HardwareInfo {
+    public static native String[][] getDXDiagDisplayDevicesProps();
+
+    public static native String[] getOpenGLProps();
+
+    public static native String[] getDXDiagSystemProps();
+
+    public static native int[] getCPUInfo();
 }
