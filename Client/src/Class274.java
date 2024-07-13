@@ -246,7 +246,7 @@ public class Class274 implements d {
             }
         }
         if (Class348.anInt4290 > 0) {
-            Class34_Sub1.method382(Class262_Sub15.anAnimableArray7817, 0, Class348.anInt4290 - 1);
+            Class34_Sub1.quicksortAnimables(Class262_Sub15.anAnimableArray7817, 0, Class348.anInt4290 - 1);
             for (int i_32_ = 0; i_32_ < Class348.anInt4290; i_32_++)
                 Class338.method3915(Class262_Sub15.anAnimableArray7817[i_32_], true, bool_13_);
         }

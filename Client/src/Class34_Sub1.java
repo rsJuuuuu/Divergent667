@@ -129,15 +129,11 @@ public class Class34_Sub1 extends Class34 {
         Node_Sub38_Sub8.method2813();
         anInt5521++;
         int i_11_ = Class213.aNode_Sub27_2512.aClass320_Sub3_7298.method3691();
-        do {
-            if (i_11_ == 2) {
-                CacheNode.method2279(Class205.screenHeight, Class360.screenWidth, Class93.aGraphicsToolkit1241);
-                break;
-            } else if (i_11_ != 3) {
-                break;
-            }
+        if (i_11_ == 2) {
+            CacheNode.method2279(Class205.screenHeight, Class360.screenWidth, Class93.aGraphicsToolkit1241);
+        } else if (i_11_ == 3) {
             Class64.method711(Class93.aGraphicsToolkit1241, Class360.screenWidth, Translation.anInt432, Node_Sub36_Sub1.anInt10039, Class205.screenHeight);
-        } while (false);
+        }
         if (Class213.aNode_Sub27_2512.aClass320_Sub3_7298.method3689((byte) 122)) {
             Index.method3535(Node_Sub38_Sub20.aCanvas10309);
         }
@@ -286,26 +282,28 @@ public class Class34_Sub1 extends Class34 {
         return anInt5537;
     }
 
-    static void method382(Animable[] animables, int i, int i_15_) {
-        if (i < i_15_) {
-            int i_16_ = (i + i_15_) / 2;
-            int i_17_ = i;
-            Animable animable = animables[i_16_];
-            animables[i_16_] = animables[i_15_];
-            animables[i_15_] = animable;
-            int i_18_ = animable.anInt5944;
-            for (int i_19_ = i; i_19_ < i_15_; i_19_++) {
-                if (animables[i_19_].anInt5944 > i_18_ + (i_19_ & 0x1)) {
-                    Animable animable_20_ = animables[i_19_];
-                    animables[i_19_] = animables[i_17_];
-                    animables[i_17_++] = animable_20_;
-                }
-            }
-            animables[i_15_] = animables[i_17_];
-            animables[i_17_] = animable;
-            method382(animables, i, i_17_ - 1);
-            method382(animables, i_17_ + 1, i_15_);
+    static void quicksortAnimables(Animable[] animables, int lo, int hi) {
+        if (lo >= hi) {
+            return;
         }
+        int midpoint = (lo + hi) / 2;
+        int i = lo;
+        Animable pivotAnimable = animables[midpoint];
+        animables[midpoint] = animables[hi];
+        animables[hi] = pivotAnimable;
+        int pivot = pivotAnimable.anInt5944;
+        for (int j = lo; j < hi; j++) {
+            // j & 0x1 added to keep partitions balanced when there are a lot of equal elements?
+            if (animables[j].anInt5944 > pivot + (j & 0x1)) {
+                Animable next = animables[j];
+                animables[j] = animables[i];
+                animables[i++] = next;
+            }
+        }
+        animables[hi] = animables[i];
+        animables[i] = pivotAnimable;
+        quicksortAnimables(animables, lo, i - 1);
+        quicksortAnimables(animables, i + 1, hi);
     }
 
     final byte[] method373(int i, byte b) {
