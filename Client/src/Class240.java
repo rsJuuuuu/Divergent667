@@ -19,7 +19,7 @@ public class Class240 {
     protected int anInt2940;
     protected int anInt2941;
     protected byte[] aByteArray2942;
-    static Class329 aClass329_2943 = new Class329("LIVE", "", "", 0);
+    static Class329 aClass329_2943 = new Class329(0);
     protected byte[] aByteArray2944;
     static IncommingPacket aClass192_2945;
     static SignLink aSignLink2946;

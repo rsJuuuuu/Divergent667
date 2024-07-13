@@ -22,7 +22,7 @@ public class Node_Sub38_Sub12 extends Node_Sub38 {
             int i_3_ = 65536 / i_2_;
             int[][][] is_4_ = new int[i_0_][][];
             for (int i_5_ = -anInt10229 + i; i_5_ <= i + anInt10229; i_5_++) {
-                int[][] is_6_ = this.method2777(-104, 0, r_Sub2.anInt11054 & i_5_);
+                int[][] is_6_ = this.method2777(0, r_Sub2.anInt11054 & i_5_);
                 int[][] is_7_ = new int[3][Class339_Sub7.anInt8728];
                 int i_8_ = 0;
                 int i_9_ = 0;

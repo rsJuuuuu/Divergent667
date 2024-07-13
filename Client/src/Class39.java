@@ -54,7 +54,7 @@ public class Class39 {
             if (i == 0) {
                 break;
             }
-            method417(i, 24, buffer);
+            method417(i, buffer);
         }
     }
 
@@ -282,7 +282,7 @@ public class Class39 {
             return null;
         }
         short[] ses_30_ = new short[ses.length];
-        Class311.method3606(ses, 0, ses_30_, 0, ses.length);
+        Class311.method3606(ses, ses_30_, ses.length);
         return ses_30_;
     }
 
@@ -339,51 +339,57 @@ public class Class39 {
         return aHashTable579.method1518(3512, i_36_) != null;
     }
 
-    private void method417(int i, int i_37_, BufferedStream buffer) {
+    private void method417(int i, BufferedStream buffer) {
         anInt576++;
-        if (i == 1) {
-            aChar592 = Class20_Sub1.method294(buffer.readByte(), (byte) 123);
-        } else if (i == 2) {
-            aChar587 = Class20_Sub1.method294(buffer.readByte(), (byte) 127);
-        } else if (i == 3) {
-            aString570 = buffer.readString();
-        } else if (i == 4) {
-            anInt583 = buffer.readInt();
-        } else if (i == 5 || i == 6) {
-            anInt586 = buffer.readUnsignedShort();
-            HashTable hashtable = new HashTable(Class320_Sub19.method3753(anInt586));
-            for (int i_38_ = 0; i_38_ < anInt586; i_38_++) {
-                int i_39_ = buffer.readInt();
-                Node node;
-                if (i == 5) {
-                    node = new Node_Sub18(buffer.readString());
-                } else {
-                    node = new Node_Sub32(buffer.readInt());
+        switch (i) {
+            case 1:
+                aChar592 = Class20_Sub1.method294(buffer.readByte(), (byte) 123);
+                break;
+            case 2:
+                aChar587 = Class20_Sub1.method294(buffer.readByte(), (byte) 127);
+                break;
+            case 3:
+                aString570 = buffer.readString();
+                break;
+            case 4:
+                anInt583 = buffer.readInt();
+                break;
+            case 5:
+            case 6:
+                anInt586 = buffer.readUnsignedShort();
+                HashTable hashtable = new HashTable(Class320_Sub19.method3753(anInt586));
+                for (int i_38_ = 0; i_38_ < anInt586; i_38_++) {
+                    int i_39_ = buffer.readInt();
+                    Node node;
+                    if (i == 5) {
+                        node = new Node_Sub18(buffer.readString());
+                    } else {
+                        node = new Node_Sub32(buffer.readInt());
+                    }
+                    hashtable.method1515(i_39_, node, 24 - 147);
                 }
-                hashtable.method1515(i_39_, node, i_37_ - 147);
-            }
-            anObject589 = hashtable;
-        } else if (i == 7) {
-            int i_40_ = buffer.readUnsignedShort();
-            anInt586 = buffer.readUnsignedShort();
-            String[] strings = new String[i_40_];
-            for (int i_41_ = 0; i_41_ < anInt586; i_41_++) {
-                int i_42_ = buffer.readUnsignedShort();
-                strings[i_42_] = buffer.readString();
-            }
-            anObject589 = strings;
-        } else if (i == 8) {
-            int i_43_ = buffer.readUnsignedShort();
-            anInt586 = buffer.readUnsignedShort();
-            Integer[] integers = new Integer[i_43_];
-            for (int i_44_ = 0; i_44_ < anInt586; i_44_++) {
-                int i_45_ = buffer.readUnsignedShort();
-                integers[i_45_] = buffer.readInt();
-            }
-            anObject589 = integers;
-        }
-        if (i_37_ != 24) {
-            method417(55, -60, null);
+                anObject589 = hashtable;
+                break;
+            case 7:
+                int i_40_ = buffer.readUnsignedShort();
+                anInt586 = buffer.readUnsignedShort();
+                String[] strings = new String[i_40_];
+                for (int i_41_ = 0; i_41_ < anInt586; i_41_++) {
+                    int i_42_ = buffer.readUnsignedShort();
+                    strings[i_42_] = buffer.readString();
+                }
+                anObject589 = strings;
+                break;
+            case 8:
+                int i_43_ = buffer.readUnsignedShort();
+                anInt586 = buffer.readUnsignedShort();
+                Integer[] integers = new Integer[i_43_];
+                for (int i_44_ = 0; i_44_ < anInt586; i_44_++) {
+                    int i_45_ = buffer.readUnsignedShort();
+                    integers[i_45_] = buffer.readInt();
+                }
+                anObject589 = integers;
+                break;
         }
     }
 
@@ -449,7 +455,7 @@ public class Class39 {
         }
     }
 
-    final Node_Sub20 method420(String string, byte b) {
+    final Node_Sub20 method420(String string) {
         anInt585++;
         if (anObject589 == null) {
             return null;

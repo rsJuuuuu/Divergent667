@@ -54,7 +54,7 @@ public class Class46 {
         return Class315.anInt4035 > 0;
     }
 
-    static boolean method470(int i, int i_0_, int i_1_) {
+    static boolean method470(int i_1_) {
         anInt673++;
         return (0x84080 & i_1_) != 0;
     }

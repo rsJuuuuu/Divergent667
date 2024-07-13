@@ -163,9 +163,9 @@ public class Node_Sub38_Sub23 extends Node_Sub38 {
         }
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         aByteArray10341 = Class169_Sub3.method1778(anInt10335);
-        if (i != 7) {
+        if (7 != 7) {
             anInt10340 = 6;
         }
         anInt10330++;

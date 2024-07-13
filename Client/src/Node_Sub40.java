@@ -121,7 +121,7 @@ public class Node_Sub40 extends Node {
 
     static boolean method2929(int i, int i_30_) {
         anInt7507++;
-        return !(!Class46.method470(i, -47, i_30_) && !Node_Sub41.method2932(-97, i_30_, i));
+        return !(!Class46.method470(i_30_) && !Node_Sub41.method2932(-97, i_30_, i));
     }
 
     Node_Sub40(int i, byte[] bs) {

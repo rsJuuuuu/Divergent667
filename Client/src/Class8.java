@@ -29,10 +29,7 @@ public class Class8 implements Interface15_Impl1 {
         return null;
     }
 
-    public final int method57(byte b) {
-        if (b > -56) {
-            aClass372_9085 = null;
-        }
+    public final int method57() {
         return anInt9086;
     }
 

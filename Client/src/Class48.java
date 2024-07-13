@@ -33,7 +33,7 @@ public class Class48 {
     static int anInt717;
     protected int anInt718;
 
-    final void method476(int i) {
+    final void method476() {
         if (anInt718 == -1) {
             if (aBooleanArray703 == null) {
                 anInt718 = 0;
@@ -47,9 +47,6 @@ public class Class48 {
             } else {
                 anInt698 = 2;
             }
-        }
-        if (i != 2) {
-            method476(-82);
         }
         anInt702++;
     }

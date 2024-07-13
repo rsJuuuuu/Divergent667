@@ -9,8 +9,8 @@ public class Class43 {
 
     static String method458(int[] is) {
         anInt664++;
-        StringBuilder stringbuffer = new StringBuilder();
-        int i_0_ = Class173.anInt2087;
+        StringBuilder crownString = new StringBuilder();
+        int crownId = Class173.anInt2087;
         for (int i : is) {
             Class184 class184 = Class146.aClass32_1812.method353(i);
             if (class184.anInt2188 != -1) {
@@ -23,13 +23,13 @@ public class Class43 {
                     }
                 }
                 if (glsprite != null) {
-                    Class105.aGLSpriteArray5194[i_0_] = glsprite;
-                    stringbuffer.append(" <img=").append(i_0_).append(">");
-                    i_0_++;
+                    Class105.aGLSpriteArray5194[crownId] = glsprite;
+                    crownString.append(" <img=").append(crownId).append(">");
+                    crownId++;
                 }
             }
         }
-        return stringbuffer.toString();
+        return crownString.toString();
     }
 
     public static void method459() {

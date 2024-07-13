@@ -5,5 +5,5 @@
 interface Interface12 {
     Class172 method34(byte b);
 
-    int method35(int i);
+    int method35();
 }

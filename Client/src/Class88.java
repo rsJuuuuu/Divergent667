@@ -25,11 +25,8 @@ public class Class88 implements Interface12 {
         aString5274 = null;
     }
 
-    public final int method35(int i) {
+    public final int method35() {
         anInt5276++;
-        if (i >= -4) {
-            method35(118);
-        }
         if (aClass302_5273.method3527(aString5277)) {
             return 100;
         }
@@ -48,8 +45,8 @@ public class Class88 implements Interface12 {
         int i_5_ = i_0_;
         int i_6_ = -i_0_;
         int i_7_ = -1;
-        int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_0_ + i_2_);
-        int i_9_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_0_ + i_2_);
+        int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_0_ + i_2_);
+        int i_9_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, -i_0_ + i_2_);
         Class369.method4086(i_8_, i_1_, i_9_, Class169_Sub4.anIntArrayArray8826[i], 0);
         while (i_5_ > i_4_) {
             i_7_ += 2;
@@ -60,8 +57,8 @@ public class Class88 implements Interface12 {
                 int i_10_ = -i_5_ + i;
                 int i_11_ = i_5_ + i;
                 if (Class384.anInt4906 <= i_11_ && i_10_ <= Node_Sub25_Sub1.anInt9936) {
-                    int i_12_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_2_ + i_4_);
-                    int i_13_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_4_ + i_2_);
+                    int i_12_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_2_ + i_4_);
+                    int i_13_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, -i_4_ + i_2_);
                     if (i_11_ <= Node_Sub25_Sub1.anInt9936) {
                         Class369.method4086(i_12_, i_1_, i_13_, Class169_Sub4.anIntArrayArray8826[i_11_], 0);
                     }
@@ -73,8 +70,8 @@ public class Class88 implements Interface12 {
             int i_14_ = -++i_4_ + i;
             int i_15_ = i_4_ + i;
             if (i_15_ >= Class384.anInt4906 && Node_Sub25_Sub1.anInt9936 >= i_14_) {
-                int i_16_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_2_ + i_5_);
-                int i_17_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_2_ - i_5_);
+                int i_16_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_2_ + i_5_);
+                int i_17_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_2_ - i_5_);
                 if (Node_Sub25_Sub1.anInt9936 >= i_15_) {
                     Class369.method4086(i_16_, i_1_, i_17_, Class169_Sub4.anIntArrayArray8826[i_15_], 0);
                 }

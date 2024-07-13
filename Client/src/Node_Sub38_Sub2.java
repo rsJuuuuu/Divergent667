@@ -21,8 +21,8 @@ public class Node_Sub38_Sub2 extends Node_Sub38 {
         int[][] is = aClass348_7454.method3981(i);
         if (aClass348_7454.aBoolean4300) {
             int[] is_0_ = this.method2786(i, 2);
-            int[][] is_1_ = this.method2777(-114, 0, i);
-            int[][] is_2_ = this.method2777(-109, 1, i);
+            int[][] is_1_ = this.method2777(0, i);
+            int[][] is_2_ = this.method2777(1, i);
             int[] is_3_ = is[0];
             int[] is_4_ = is[1];
             int[] is_5_ = is[2];

@@ -105,7 +105,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9 {
             if (Class320_Sub13.aBoolean8335) {
                 glsprite = Class93.aGraphicsToolkit1241.a(Class383.method4191(class302, i), true);
             } else {
-                glsprite = Class97.method1077(-127, class302.method3518((byte) -126, i));
+                glsprite = Class97.method1077(class302.method3518((byte) -126, i));
             }
             Class315.aClass61_4031.method601(glsprite, 25566, i);
         }

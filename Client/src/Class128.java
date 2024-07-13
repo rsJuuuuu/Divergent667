@@ -338,7 +338,7 @@ public class Class128 {
         index22 = class302;
         if (index22 != null) {
             int i_22_ = index22.method3526() - 1;
-            index22.method3537(-2, i_22_);
+            index22.method3537(i_22_);
         }
     }
 }

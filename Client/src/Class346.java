@@ -36,7 +36,7 @@ public class Class346 {
                     }
                     Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, widget.ihash);
                     if (node_sub2 != null) {
-                        Class290_Sub1.method3424(-23620, node_sub2.interfaceId);
+                        Class290_Sub1.method3424(node_sub2.interfaceId);
                     }
                 }
                 if (widget.type == 6 && widget.anInt4773 != -1) {

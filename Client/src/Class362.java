@@ -11,7 +11,7 @@ public class Class362 {
     static int anInt4495;
     static int anInt4496;
     static int[] anIntArray4497 = new int[2];
-    static Class329 aClass329_4498 = new Class329("INTBETA", "office", "_intbeta", 6);
+    static Class329 aClass329_4498 = new Class329(6);
     static int anInt4499;
     static byte aByte4500;
 
@@ -61,7 +61,7 @@ public class Class362 {
         index17 = class302;
         if (index17 != null) {
             int i_5_ = index17.method3526() - 1;
-            index17.method3537(-2, i_5_);
+            index17.method3537(i_5_);
         }
     }
 

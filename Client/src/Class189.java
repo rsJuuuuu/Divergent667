@@ -117,7 +117,7 @@ abstract class Class189 {
     static short[] method1916(int i, short[] ses) {
         anInt2293++;
         short[] ses_2_ = new short[i];
-        Class311.method3606(ses, 0, ses_2_, 0, i);
+        Class311.method3606(ses, ses_2_, i);
         return ses_2_;
     }
 

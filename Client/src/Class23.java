@@ -13,7 +13,7 @@ public class Class23 {
         Class320_Sub18.aBoolean8375 = false;
         Mobile.aBuffer9128 = null;
         anInt433++;
-        ProducingGraphicsBuffer.method2601(-127);
+        ProducingGraphicsBuffer.method2601();
         Class218.aClass123_2566.sendPacket(127, FloatBuffer.method2250(-386, Class29.aClass318_470, Class218.aClass123_2566.anIsaacCipher1571));
     }
 

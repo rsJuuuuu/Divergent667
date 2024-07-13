@@ -17,15 +17,12 @@ public class Class45 implements Interface12 {
     static int anInt5271;
     static int anInt5272;
 
-    public final int method35(int i) {
+    public final int method35() {
         anInt5263++;
         if (aBoolean5267) {
             return 100;
         }
         int i_0_ = Class37.method401(aString5266);
-        if (i > -4) {
-            method35(54);
-        }
         if (i_0_ >= 0 && i_0_ <= 100) {
             return i_0_;
         }
@@ -55,7 +52,7 @@ public class Class45 implements Interface12 {
 
     final boolean method464() {
         anInt5272++;
-        return aBoolean5267;
+        return !aBoolean5267;
     }
 
     public final Class172 method34(byte b) {

@@ -57,8 +57,8 @@ public class Class97 {
         packet.finishBitAccess();
     }
 
-    static GLSprite method1077(int i, byte[] bs) {
-        if (i > -123) {
+    static GLSprite method1077(byte[] bs) {
+        if (-127 > -123) {
             aClass103_1277 = null;
         }
         anInt1276++;

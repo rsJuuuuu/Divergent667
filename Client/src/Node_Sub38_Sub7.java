@@ -192,8 +192,8 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
         return is;
     }
 
-    final void method2785(int i) {
-        if (i != 7) {
+    final void method2785() {
+        if (7 != 7) {
             method2807(null, 27, null, 76, -2, -58, (byte) 89);
         }
         anInt10142++;

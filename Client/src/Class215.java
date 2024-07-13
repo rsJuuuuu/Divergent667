@@ -134,6 +134,6 @@ public class Class215 {
     Class215(Class353 class353, int i, Index class302, Index class302_8_) {
         aClass302_2541 = class302_8_;
         aClass302_2535 = class302;
-        aClass302_2535.method3537(-2, 36);
+        aClass302_2535.method3537(36);
     }
 }

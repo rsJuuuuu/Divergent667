@@ -49,7 +49,7 @@ public class Class261 {
         }
         node_sub38_sub27.anInt10390 = 4;
         node_sub38_sub27.anInt10382 = 3;
-        node_sub38_sub27.method2785(7);
+        node_sub38_sub27.method2785();
         Class169_Sub1.method1769(256, 64);
         for (int i_6_ = 0; i_6_ < 256; i_6_++)
             node_sub38_sub27.method2880(i_6_, is[i_6_], -52);

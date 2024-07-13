@@ -27,12 +27,9 @@ public class Class51_Sub2 extends Class51 implements Interface15_Impl1 {
         anIntArray9068 = null;
     }
 
-    public final int method57(byte b) {
-        if (b > -56) {
-            anIntArray9068 = null;
-        }
+    public final int method57() {
         anInt9067++;
-        return super.method57((byte) -79);
+        return super.method57();
     }
 
     public final Class372 method55(int i) {

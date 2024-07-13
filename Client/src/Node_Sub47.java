@@ -127,7 +127,7 @@ public class Node_Sub47 extends Node {
         if (i_2_ > 0 && !Class371.method4094(i_2_)) {
             throw new IllegalArgumentException("");
         }
-        int i_6_ = Class349.method3989(6408, (byte) -71);
+        int i_6_ = Class349.method3989(6408);
         int i_7_ = 0;
         int i_8_ = Math.min(i_3_, i_2_);
         int i_9_ = i_3_ >> 1;

@@ -41,13 +41,13 @@ abstract class r extends CacheNode {
         cachenode_sub2.anInt9434 = i;
     }
 
-    static int method2359(String string, byte b, int i, String string_4_) {
+    static int method2359(String string, int i, String string_4_) {
         anInt9583++;
         int i_5_ = string_4_.length();
         int i_6_ = string.length();
         int i_7_ = 0;
         int i_8_ = 0;
-        if (b != -4) {
+        if ((byte) -4 != -4) {
             anIntArray9580 = null;
         }
         char c = '\0';
@@ -79,7 +79,7 @@ abstract class r extends CacheNode {
                 c = GLPlane.method3264(c_10_);
                 c_9_ = GLPlane.method3264(c_11_);
                 c_10_ = Class169.method1755(6272, i, c_10_);
-                c_11_ = Class169.method1755(b + 6276, i, c_11_);
+                c_11_ = Class169.method1755((byte) -4 + 6276, i, c_11_);
                 if (c_11_ != c_10_ && Character.toUpperCase(c_11_) != Character.toUpperCase(c_10_)) {
                     c_10_ = Character.toLowerCase(c_10_);
                     c_11_ = Character.toLowerCase(c_11_);

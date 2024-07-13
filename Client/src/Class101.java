@@ -92,6 +92,6 @@ public class Class101 {
         aClass302_1310 = class302_4_;
         aClass302_1308 = class302;
         int i_5_ = aClass302_1308.method3526() - 1;
-        aClass302_1308.method3537(-2, i_5_);
+        aClass302_1308.method3537(i_5_);
     }
 }

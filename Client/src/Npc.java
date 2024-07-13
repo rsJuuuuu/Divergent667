@@ -248,9 +248,9 @@ public class Npc extends Actor {
         return null;
     }
 
-    final Class59 method869(int i) {
+    final Class59 method869() {
         anInt11111++;
-        if (i != -3109) {
+        if (-3109 != -3109) {
             return null;
         }
         if (aClass59_10861 != null && aClass59_10861.aString877 == null) {
@@ -264,11 +264,8 @@ public class Npc extends Actor {
         return CacheNode_Sub4.aClass1_9466.aBoolean105;
     }
 
-    final int method855(byte b) {
+    final int method855() {
         anInt11108++;
-        if (b >= -48) {
-            method821(117);
-        }
         if (aNpcDefinition11122.anIntArray2827 != null) {
             NpcDefinition npcdefinition = aNpcDefinition11122.method2999(65535, Class24.aClass275_442);
             if (npcdefinition != null && npcdefinition.anInt2814 != -1) {

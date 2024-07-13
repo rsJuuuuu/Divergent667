@@ -20,7 +20,7 @@ public class Class212 implements Interface8 {
         if (i_3_ > 0 && !Class371.method4094(i_3_)) {
             throw new IllegalArgumentException("");
         }
-        int i_4_ = Class349.method3989(i_1_, (byte) -120);
+        int i_4_ = Class349.method3989(i_1_);
         int i_5_ = 0;
         int i_6_ = Math.min(i_3_, i_2_);
         int i_7_ = i_2_ >> 1;
@@ -104,7 +104,7 @@ public class Class212 implements Interface8 {
 
     static void method2054(int i, Actor actor, int i_36_, Actor actor_37_, int i_38_, int i_39_, int i_40_, int i_41_, int i_42_) {
         anInt5129++;
-        int i_43_ = actor_37_.method855((byte) -71);
+        int i_43_ = actor_37_.method855();
         if (i_43_ != -1) {
 
             GLSprite glsprite = (GLSprite) Class262_Sub18.aClass61_7842.method607(i_43_, 0);

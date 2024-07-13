@@ -634,7 +634,7 @@ public class Class84 {
         return i_51_ == 1 + i_53_ && i_46_ <= i_47_ && i_52_ >= i_47_ && (0x20 & clipMasks[-anInt1139 + i_47_][-anInt1135 + i_51_]) == 0 && (0x1 & i_45_) == 0;
     }
 
-    final boolean method989(int i, int i_54_, int i_55_, int i_56_, int i_57_, int i_58_, int i_59_, int i_60_) {
+    final boolean method989(int i, int i_54_, int i_55_, int i_56_, int i_57_, int i_58_, int i_59_) {
         anInt1140++;
         if (i != 1) {
             if (i_58_ >= i_57_ && i_57_ + i - 1 >= i_58_ && i_55_ <= -1 + i_55_ + i) {
@@ -647,7 +647,7 @@ public class Class84 {
         i_55_ -= anInt1135;
         i_58_ -= anInt1139;
         i_56_ -= anInt1135;
-        if (i_60_ != 2883842) {
+        if (2883842 != 2883842) {
             clipMasks = null;
         }
         if (i == 1) {

@@ -75,26 +75,26 @@ public class Class32 {
 
     static ClientScript method356(byte[] bs) {
         anInt513++;
-        ClientScript cachenode_sub9 = new ClientScript();
+        ClientScript cacheNodeSub9 = new ClientScript();
         BufferedStream buffer = new BufferedStream(bs);
         buffer.offset = -2 + buffer.buffer.length;
         int i = buffer.readUnsignedShort();
         int i_9_ = buffer.buffer.length - (2 + i) - 16;
         buffer.offset = i_9_;
         int i_10_ = buffer.readInt();
-        cachenode_sub9.anInt9499 = buffer.readUnsignedShort();
-        cachenode_sub9.anInt9506 = buffer.readUnsignedShort();
-        cachenode_sub9.anInt9502 = buffer.readUnsignedShort();
-        cachenode_sub9.anInt9507 = buffer.readUnsignedShort();
-        cachenode_sub9.anInt9511 = buffer.readUnsignedShort();
-        cachenode_sub9.anInt9512 = buffer.readUnsignedShort();
+        cacheNodeSub9.anInt9499 = buffer.readUnsignedShort();
+        cacheNodeSub9.anInt9506 = buffer.readUnsignedShort();
+        cacheNodeSub9.anInt9502 = buffer.readUnsignedShort();
+        cacheNodeSub9.anInt9507 = buffer.readUnsignedShort();
+        cacheNodeSub9.anInt9511 = buffer.readUnsignedShort();
+        cacheNodeSub9.anInt9512 = buffer.readUnsignedShort();
         int i_11_ = buffer.readUnsignedByte();
         if (i_11_ > 0) {
-            cachenode_sub9.aHashTableArray9503 = new HashTable[i_11_];
+            cacheNodeSub9.aHashTableArray9503 = new HashTable[i_11_];
             for (int i_12_ = 0; i_11_ > i_12_; i_12_++) {
                 int i_13_ = buffer.readUnsignedShort();
                 HashTable hashtable = new HashTable(Class320_Sub19.method3753(i_13_));
-                cachenode_sub9.aHashTableArray9503[i_12_] = hashtable;
+                cacheNodeSub9.aHashTableArray9503[i_12_] = hashtable;
                 while (i_13_-- > 0) {
                     int i_14_ = buffer.readInt();
                     int i_15_ = buffer.readInt();
@@ -103,40 +103,40 @@ public class Class32 {
             }
         }
         buffer.offset = 0;
-        cachenode_sub9.name = buffer.readString2();
-        cachenode_sub9.opcodes = new int[i_10_];
+        cacheNodeSub9.name = buffer.readString2();
+        cacheNodeSub9.opcodes = new int[i_10_];
         int count = 0;
         while (buffer.offset < i_9_) {
             int opcode = buffer.readUnsignedShort();
             if (opcode == 3) {
-                if (cachenode_sub9.stringValues == null) {
-                    cachenode_sub9.stringValues = new String[i_10_];
+                if (cacheNodeSub9.stringValues == null) {
+                    cacheNodeSub9.stringValues = new String[i_10_];
                 }
-                cachenode_sub9.stringValues[count] = buffer.readString().intern();
-                if (cachenode_sub9.stringValues[count].toLowerCase().contains("runescape")) {
-                    cachenode_sub9.stringValues[count] = cachenode_sub9.stringValues[count].replace("RuneScape", Settings.SERVER_NAME).replace("runescape", Settings.SERVER_NAME).replace("Runescape", Settings.SERVER_NAME);
+                cacheNodeSub9.stringValues[count] = buffer.readString().intern();
+                if (cacheNodeSub9.stringValues[count].toLowerCase().contains("runescape")) {
+                    cacheNodeSub9.stringValues[count] = cacheNodeSub9.stringValues[count].replace("RuneScape", Settings.SERVER_NAME).replace("runescape", Settings.SERVER_NAME).replace("Runescape", Settings.SERVER_NAME);
                 }
-                if (cachenode_sub9.stringValues[count].contains("Error connecting to server.")) {
-                    cachenode_sub9.stringValues[count] = cachenode_sub9.stringValues[count].replace("Error connecting to server.", "Error connecting to Divergent.");
+                if (cacheNodeSub9.stringValues[count].contains("Error connecting to server.")) {
+                    cacheNodeSub9.stringValues[count] = cacheNodeSub9.stringValues[count].replace("Error connecting to server.", "Error connecting to Divergent.");
                 }
             } else if (opcode == 54) {
-                if (cachenode_sub9.longValues == null) {
-                    cachenode_sub9.longValues = new long[i_10_];
+                if (cacheNodeSub9.longValues == null) {
+                    cacheNodeSub9.longValues = new long[i_10_];
                 }
-                cachenode_sub9.longValues[count] = buffer.readLong();
+                cacheNodeSub9.longValues[count] = buffer.readLong();
             } else {
-                if (cachenode_sub9.intValues == null) {
-                    cachenode_sub9.intValues = new int[i_10_];
+                if (cacheNodeSub9.intValues == null) {
+                    cacheNodeSub9.intValues = new int[i_10_];
                 }
                 if (opcode < 150 && opcode != 21 && opcode != 38 && opcode != 39) {
-                    cachenode_sub9.intValues[count] = buffer.readInt();
+                    cacheNodeSub9.intValues[count] = buffer.readInt();
                 } else {
-                    cachenode_sub9.intValues[count] = buffer.readUnsignedByte();
+                    cacheNodeSub9.intValues[count] = buffer.readUnsignedByte();
                 }
             }
-            cachenode_sub9.opcodes[count++] = opcode;
+            cacheNodeSub9.opcodes[count++] = opcode;
         }
-        return cachenode_sub9;
+        return cacheNodeSub9;
     }
 
     final void method357() {
@@ -161,7 +161,7 @@ public class Class32 {
     Class32(Class353 class353, int i, Index class302) {
         aClass302_517 = class302;
         if (aClass302_517 != null) {
-            aClass302_517.method3537(-2, 35);
+            aClass302_517.method3537(35);
         }
     }
 }

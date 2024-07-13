@@ -39,7 +39,7 @@ public class Class329 {
                     is[i_5_ * 2] = widget.anInt4809 / 2 + (i_1_ + (i_8_ * (4 * class79.anIntArray1049[i_5_ * 2] + i_4_) + i_7_ * (i + class79.anIntArray1049[2 * i_5_ + 1] * 4) >> 14));
                     is[2 * i_5_ + 1] = -(i_8_ * (i + (class79.anIntArray1049[2 * i_5_ + 1] * 4)) - i_7_ * (i_4_ + (4 * class79.anIntArray1049[2 * i_5_])) >> 14) + i_3_ + widget.anInt4695 / 2;
                 }
-                Class127 class127 = widget.method4145(graphicstoolkit, 1);
+                Class127 class127 = widget.method4145(graphicstoolkit);
                 if (class127 != null) {
                     Class74.method761(graphicstoolkit, is, class79.anInt1084, class127.anIntArray1641, class127.anIntArray1635);
                 }
@@ -140,7 +140,7 @@ public class Class329 {
         aClass256_4122 = null;
     }
 
-    Class329(String string, String string_32_, String string_33_, int i) {
+    Class329(int i) {
         anInt4123 = i;
     }
 }

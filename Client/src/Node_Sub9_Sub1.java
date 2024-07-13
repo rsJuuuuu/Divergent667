@@ -626,12 +626,10 @@ public class Node_Sub9_Sub1 extends Node_Sub9 {
         anInt9629++;
     }
 
-    final synchronized void method2450(byte b) {
+    final synchronized void method2450() {
         for (Node_Sub6 node_sub6 = (Node_Sub6) aHashTable9636.method1516(); node_sub6 != null; node_sub6 = (Node_Sub6) aHashTable9636.method1520(96))
             node_sub6.method2160((byte) 112);
-        if (b > 20) {
-            anInt9695++;
-        }
+        anInt9695++;
     }
 
     private void method2451(int i, int i_69_, byte b) {

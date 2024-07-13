@@ -77,6 +77,6 @@ public class Class180 {
 
     Class180(Class353 class353, int i, Index class302) {
         aClass302_2140 = class302;
-        aClass302_2140.method3537(-2, 26);
+        aClass302_2140.method3537(26);
     }
 }

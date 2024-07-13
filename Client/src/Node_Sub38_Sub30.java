@@ -18,9 +18,9 @@ public class Node_Sub38_Sub30 extends Node_Sub38 {
             int[][] is_2_;
             if (i_1_ > 0) {
                 int i_3_ = i % i_1_;
-                is_2_ = this.method2777(-98, 0, i_3_ * Node_Sub38_Sub1.anInt10083 / i_1_);
+                is_2_ = this.method2777(0, i_3_ * Node_Sub38_Sub1.anInt10083 / i_1_);
             } else {
-                is_2_ = this.method2777(-84, 0, 0);
+                is_2_ = this.method2777(0, 0);
             }
             int[] is_4_ = is_2_[0];
             int[] is_5_ = is_2_[1];

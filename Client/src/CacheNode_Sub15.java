@@ -49,7 +49,7 @@ public class CacheNode_Sub15 extends CacheNode {
         Class312 class312 = new Class312();
         int[] is;
         synchronized (Node_Sub15_Sub11.aClass302_9859) {
-            int i_3_ = Node_Sub15_Sub11.aClass302_9859.method3537(-2, anInt9591);
+            int i_3_ = Node_Sub15_Sub11.aClass302_9859.method3537(anInt9591);
             aClass222Array9595 = new Class222[i_3_];
             is = Node_Sub15_Sub11.aClass302_9859.method3532(anInt9591);
         }
@@ -77,7 +77,7 @@ public class CacheNode_Sub15 extends CacheNode {
         return true;
     }
 
-    static boolean method2379(int i, int i_7_) {
+    static boolean method2379(int i_7_) {
         anInt9593++;
         if (Class169_Sub1.aBooleanArray8788[i_7_]) {
             return true;
@@ -85,12 +85,9 @@ public class CacheNode_Sub15 extends CacheNode {
         if (!Node_Sub38_Sub31.aClass302_10422.method3536(-1, i_7_)) {
             return false;
         }
-        int i_8_ = Node_Sub38_Sub31.aClass302_10422.method3537(i - 7017, i_7_);
+        int i_8_ = Node_Sub38_Sub31.aClass302_10422.method3537(i_7_);
         if (i_8_ == 0) {
             Class169_Sub1.aBooleanArray8788[i_7_] = true;
-            return true;
-        }
-        if (i != 7015) {
             return true;
         }
         if (Class134_Sub3.aWidgetArrayArray9035[i_7_] == null) {
@@ -120,11 +117,8 @@ public class CacheNode_Sub15 extends CacheNode {
 
     }
 
-    final boolean method2381(byte b, int i) {
+    final boolean method2381(int i) {
         anInt9594++;
-        if (b <= 61) {
-            method2379(-47, 72);
-        }
         return aClass222Array9595[i].aBoolean2640;
     }
 

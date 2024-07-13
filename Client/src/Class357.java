@@ -416,15 +416,12 @@ public class Class357 {
         anInt4442 = buffer.readUnsignedByte();
     }
 
-    final int method4034(int i, int i_51_, String string, GLSprite[] glsprites, byte b) {
+    final int method4034(int i, int i_51_, String string, GLSprite[] glsprites) {
         anInt4428++;
         if (i_51_ == 0) {
             i_51_ = anInt4430;
         }
         int i_52_ = method4029(Class330.aStringArray4126, new int[]{i}, -54, glsprites, string);
-        if (b >= -34) {
-            method4032(null, null, 99, 75);
-        }
         int i_53_ = i_51_ * (i_52_ - 1);
         return i_53_ + anInt4434 + anInt4442;
     }

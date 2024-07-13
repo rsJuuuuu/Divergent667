@@ -23,7 +23,7 @@ public class CacheNode_Sub10 extends CacheNode {
     private String[] aStringArray9529;
     static HashTable aHashTable9530 = new HashTable(8);
 
-    final Class151 method2324(int i, int i_0_) {
+    final Class151 method2324(int i_0_) {
         anInt9526++;
 
         if (anIntArray9518 == null || i_0_ < 0 || anIntArray9518.length < i_0_) {
@@ -54,11 +54,8 @@ public class CacheNode_Sub10 extends CacheNode {
         return anIntArrayArray9515[i][i_3_];
     }
 
-    final int method2327(byte b) {
+    final int method2327() {
         anInt9519++;
-        if (b <= 31) {
-            return 39;
-        }
         if (anIntArray9518 == null) {
             return 0;
         }
@@ -79,7 +76,7 @@ public class CacheNode_Sub10 extends CacheNode {
         if (anIntArray9518 != null) {
             for (int i = 0; anIntArray9518.length > i; i++) {
                 stringBuilder.append(aStringArray9529[i]);
-                stringBuilder.append(aClass109_9516.method1126(method2324(-28, i), buffer.method2244(Objects.requireNonNull(Class240.method3028((byte) 9, anIntArray9518[i])).anInt1847), anIntArrayArray9515[i]));
+                stringBuilder.append(aClass109_9516.method1126(method2324(i), buffer.method2244(Objects.requireNonNull(Class240.method3028((byte) 9, anIntArray9518[i])).anInt1847), anIntArrayArray9515[i]));
             }
         }
         //stringBuilder.append(aStringArray9529[-1 + aStringArray9529.length]);
@@ -90,7 +87,7 @@ public class CacheNode_Sub10 extends CacheNode {
         anInt9524++;
         if (anIntArray9518 != null && i >= 118) {
             for (int i_5_ = 0; anIntArray9518.length > i_5_ && is.length > i_5_; i_5_++) {
-                int i_6_ = Objects.requireNonNull(method2324(105, i_5_)).anInt1846;
+                int i_6_ = Objects.requireNonNull(method2324(i_5_)).anInt1846;
                 if (i_6_ > 0) {
                     buffer.method2206(i_6_, is[i_5_]);
                 }

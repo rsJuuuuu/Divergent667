@@ -81,7 +81,7 @@ public class Class278 {
 
     Class278(Class353 class353, int i, Index class302) {
         aClass302_3539 = class302;
-        aClass302_3539.method3537(-2, 29);
+        aClass302_3539.method3537(29);
     }
 
     public static void method3368() {

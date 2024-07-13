@@ -81,7 +81,7 @@ public class Class315 {
         if (aClass302_4026 == null) {
             anInt4024 = 0;
         } else {
-            anInt4024 = aClass302_4026.method3537(-2, 47);
+            anInt4024 = aClass302_4026.method3537(47);
         }
     }
 

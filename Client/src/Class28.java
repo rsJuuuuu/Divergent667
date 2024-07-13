@@ -28,11 +28,8 @@ public class Class28 {
         Node_Sub38_Sub23.method2862(widget, i_8_, i_7_, -8525);
     }
 
-    static void method333(Class37 class37, int i) {
+    static void method333(Class37 class37) {
         anInt468++;
         Class367.aClass37_4540 = class37;
-        if (i != -1) {
-            method333(null, -56);
-        }
     }
 }

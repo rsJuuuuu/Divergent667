@@ -111,7 +111,7 @@ public class Class181 {
     Class181(Class353 class353, int i, Index class302, Index class302_7_) {
         aClass302_2156 = class302_7_;
         index2 = class302;
-        index2.method3537(-2, 3);
+        index2.method3537(3);
     }
 
     static {

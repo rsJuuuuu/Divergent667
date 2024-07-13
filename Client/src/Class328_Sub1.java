@@ -20,7 +20,7 @@ public class Class328_Sub1 extends Class328 {
             Constructor<?> constructor = Class.forName("Class93_Sub1").getDeclaredConstructor(aClass8505 == null ? aClass8505 = method3832() : aClass8505, Boolean.TYPE);
             return (Class93) constructor.newInstance(component, true);
         } catch (Throwable throwable) {
-            return new Class93_Sub2(component, true);
+            return new Class93_Sub2(component);
         }
     }
 

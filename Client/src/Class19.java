@@ -13,12 +13,9 @@ public class Class19 {
         aGLSpriteArray312 = null;
     }
 
-    static void method268(int i, GraphicsToolkit graphicstoolkit, int i_0_, IComponentDefinitions widget, int i_1_) {
-        if (i_0_ != 128) {
-            method268(17, null, -51, null, 40);
-        }
+    static void method268(int i, GraphicsToolkit graphicstoolkit, IComponentDefinitions widget, int i_1_) {
         anInt311++;
-        Class127 class127 = widget.method4145(graphicstoolkit, i_0_ - 127);
+        Class127 class127 = widget.method4145(graphicstoolkit);
         if (class127 != null) {
             aa var_aa = class127.anAa1639;
             graphicstoolkit.KA(i_1_, i, i_1_ + widget.anInt4809, i + widget.anInt4695);
@@ -49,12 +46,12 @@ public class Class19 {
                     int i_10_ = (0x3fff & Class262_Sub15_Sub1.aClass224_10520.anIntArray2668[i_8_]) - Class320_Sub4.gameSceneBaseY;
                     int i_11_ = 4 * i_9_ + 2 - (i_5_ / 128);
                     int i_12_ = 4 * i_10_ - (-2 + (i_4_ / 128));
-                    Class329.method3834(i_12_, i_0_ ^ -248, i_1_, var_aa, graphicstoolkit, Class262_Sub15_Sub1.aClass224_10520.anIntArray2669[i_8_], i, i_11_, widget);
+                    Class329.method3834(i_12_, 128 ^ -248, i_1_, var_aa, graphicstoolkit, Class262_Sub15_Sub1.aClass224_10520.anIntArray2669[i_8_], i, i_11_, widget);
                 }
                 for (int i_13_ = 0; i_13_ < Class283.anInt3590; i_13_++) {
                     int i_14_ = 2 + (Class298.anIntArray3741[i_13_] * 4 - (i_5_ / 128));
                     int i_15_ = Class184.anIntArray2203[i_13_] * 4 + 2 - (i_4_ / 128);
-                    ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(Class281.anIntArray3579[i_13_], i_0_ - 23);
+                    ObjectDefinition objectdefinition = Class186.aClass112_2256.method1145(Class281.anIntArray3579[i_13_], 128 - 23);
                     if (Objects.requireNonNull(objectdefinition).anIntArray2984 != null) {
                         objectdefinition = objectdefinition.method3038(13, Class24.aClass275_442);
                         if (objectdefinition == null || objectdefinition.anInt2994 == -1) {
@@ -63,7 +60,7 @@ public class Class19 {
                     }
                     Class329.method3834(i_15_, -124, i_1_, var_aa, graphicstoolkit, objectdefinition.anInt2994, i, i_14_, widget);
                 }
-                for (Node_Sub11 node_sub11 = (Node_Sub11) Class266.aHashTable3380.method1516(); node_sub11 != null; node_sub11 = (Node_Sub11) Class266.aHashTable3380.method1520(i_0_ ^ 0xe6)) {
+                for (Node_Sub11 node_sub11 = (Node_Sub11) Class266.aHashTable3380.method1516(); node_sub11 != null; node_sub11 = (Node_Sub11) Class266.aHashTable3380.method1520(128 ^ 0xe6)) {
                     int i_16_ = (int) (0x3L & node_sub11.aLong2797 >> 28);
                     if (i_16_ == Class346.anInt4278) {
                         int i_17_ = (int) (node_sub11.aLong2797 & 0x3fffL) - Node_Sub53.gameSceneBaseX;

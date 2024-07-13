@@ -297,10 +297,10 @@ public class Class263 {
         int i_104_ = i_95_ * (i_78_ - 1);
         if (Class384.anInt4906 <= i_71_ && Node_Sub25_Sub1.anInt9936 >= i_71_) {
             int[] is = Class169_Sub4.anIntArrayArray8826[i_71_];
-            int i_105_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_67_ + i);
-            int i_106_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i + i_67_);
-            int i_107_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i - i_77_);
-            int i_108_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i + i_77_);
+            int i_105_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, -i_67_ + i);
+            int i_106_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i + i_67_);
+            int i_107_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i - i_77_);
+            int i_108_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i + i_77_);
             Class369.method4086(i_107_, i_70_, i_105_, is, 0);
             Class369.method4086(i_108_, i_72_, i_107_, is, 0);
             Class369.method4086(i_106_, i_70_, i_108_, is, 0);
@@ -352,11 +352,11 @@ public class Class263 {
             int i_109_ = -(--i_75_) + i_71_;
             int i_110_ = i_71_ + i_75_;
             if (i_110_ >= Class384.anInt4906 && Node_Sub25_Sub1.anInt9936 >= i_109_) {
-                int i_111_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i + i_74_);
-                int i_112_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i - i_74_);
+                int i_111_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i + i_74_);
+                int i_112_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i - i_74_);
                 if (bool) {
-                    int i_113_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i + i_76_);
-                    int i_114_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i - i_76_);
+                    int i_113_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i + i_76_);
+                    int i_114_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i - i_76_);
                     if (Class384.anInt4906 <= i_109_) {
                         int[] is = Class169_Sub4.anIntArrayArray8826[i_109_];
                         Class369.method4086(i_114_, i_70_, i_112_, is, 0);

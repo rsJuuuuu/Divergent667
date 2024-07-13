@@ -11,7 +11,7 @@ public class Class229 {
     static int anInt2727;
     private final Index aClass302_2728;
     static int anInt2729;
-    static Class329 aClass329_2730 = new Class329("WTWIP", "office", "_wip", 3);
+    static Class329 aClass329_2730 = new Class329(3);
     static OutcommingPacket aClass318_2731 = new OutcommingPacket(41, -1);
     static GraphicsToolkit aGraphicsToolkit2732;
     static Class270 aClass270_2733;
@@ -72,7 +72,7 @@ public class Class229 {
         if (aClass302_2728 == null) {
             anInt2723 = 0;
         } else {
-            anInt2723 = aClass302_2728.method3537(-2, 16);
+            anInt2723 = aClass302_2728.method3537(16);
         }
     }
 }

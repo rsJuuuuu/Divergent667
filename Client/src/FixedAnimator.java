@@ -32,7 +32,7 @@ public class FixedAnimator extends Animator {
         Class93_Sub2.aClass302_6049 = null;
         if (Class89.anInt1198 == 0) {
             Node_Sub21.aClass96_7183 = new Class96(Class51.aClass302_5339, Class320_Sub12.aClass302_8326);
-            Class307.aNode_Sub9_Sub1_3902.method2450((byte) 107);
+            Class307.aNode_Sub9_Sub1_3902.method2450();
             Class89.anInt1198 = 1;
         }
         if (Class89.anInt1198 == 1) {

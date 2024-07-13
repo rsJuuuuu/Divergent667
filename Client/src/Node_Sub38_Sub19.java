@@ -221,21 +221,19 @@ public class Node_Sub38_Sub19 extends Node_Sub38 {
         if (!Class93.aGraphicsToolkit1241.b()) {
             bool = true;
         }
-        Class194.method1962(i_29_, i_28_, i_26_, 81, i_27_, bool);
+        Class194.method1962(i_28_, i_26_, 81, i_27_, bool);
     }
 
     final void method2780(boolean bool, BufferedStream buffer, int i) {
         if (!bool) {
             anInt10291++;
-            do {
-                if (i == 0) {
-                    anInt10290 = buffer.readUnsignedShort();
-                    break;
-                } else if (i != 1) {
-                    break;
-                }
-                aBoolean10287 = buffer.readUnsignedByte() == 1;
-            } while (false);
+            if (i == 0) {
+                anInt10290 = buffer.readUnsignedShort();
+                return;
+            } else if (i != 1) {
+                return;
+            }
+            aBoolean10287 = buffer.readUnsignedByte() == 1;
         }
     }
 

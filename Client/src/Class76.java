@@ -97,7 +97,7 @@ public class Class76 {
 
     static void method770(int i_12_, int i_13_) {
         anInt1014++;
-        if (CacheNode_Sub15.method2379(7015, i_13_)) {
+        if (CacheNode_Sub15.method2379(i_13_)) {
             Client.method115(Class134_Sub3.aWidgetArrayArray9035[i_13_], i_12_);
         }
     }
@@ -107,7 +107,7 @@ public class Class76 {
         int i_14_ = i >> 16;
         int i_15_ = i & 0xffff;
         if (Class134_Sub3.aWidgetArrayArray9035[i_14_] == null || Class134_Sub3.aWidgetArrayArray9035[i_14_][i_15_] == null) {
-            boolean bool = CacheNode_Sub15.method2379(7015, i_14_);
+            boolean bool = CacheNode_Sub15.method2379(i_14_);
             if (!bool) {
                 return null;
             }

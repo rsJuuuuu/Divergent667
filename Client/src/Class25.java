@@ -17,13 +17,12 @@ public class Class25 {
     static int anInt451;
     static int anInt452 = 0;
 
-    static void method306(int junk, int sceneX, long l, int sceney) {
+    static void method306(int sceneX, long l, int sceneY) {
         int routeType = (0x7d32b & (int) l) >> 14;
         int calcs = ((int) l & 0x3b48d1) >> 20;
         int objectId = 0x7fffffff & (int) (l >>> 32);
-        if (routeType != 10 && routeType != 11 && routeType != 22) {
-            Class78.method778(calcs, sceney, 0, true, sceneX, 0, routeType, 48, 0);
-        } else {
+
+        if (routeType == 10 || routeType == 11 || routeType == 22) {
             ObjectDefinition objectdefinition = Class186.aClass112_2256
                     .method1145(objectId, 63);
             int sizeX;
@@ -39,7 +38,9 @@ public class Class25 {
             if (calcs != 0) {
                 i_7_ = (0xf & i_7_ << calcs) + (i_7_ >> -calcs + 4);
             }
-            Class78.method778(0, sceney, sizeY, true, sceneX, i_7_, 0, 127, sizeX);
+            Class78.method778(0, sceneY, sizeY, true, sceneX, i_7_, 0, 127, sizeX);
+        }else{
+            Class78.method778(calcs, sceneY, 0, true, sceneX, 0, routeType, 48, 0);
         }
     }
 

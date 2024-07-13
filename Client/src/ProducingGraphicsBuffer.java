@@ -97,29 +97,27 @@ public class ProducingGraphicsBuffer extends GraphicsBuffer implements ImageProd
         }
     }
 
-    static void method2601(int i) {
+    static void method2601() {
         Class18.aHashTable308.method1517(false);
         anInt9886++;
         Class320_Sub16.aClass312_8358.method3614();
         Node_Sub39.aClass369Array7497 = null;
         Class194_Sub1.aClass331Array6894 = null;
-        if (i < -33) {
-            Class121.aClass206Array1529 = null;
-            Class3.anInt5161 = -1;
-            Class246.anInt3108 = 1;
-            Class259.anInt3254 = 0;
-            if (Class186.aBoolean2255) {
-                Class18.aShort310 = StandardPlane.aShort7990;
-                OutcommingPacket.aShort4053 = Node_Sub38_Sub22.aShort10325;
-                Class291.aShort3667 = Node_Sub38_Sub23.aShort10345;
-                Animable_Sub2_Sub2.aShort10750 = Class169.aShort4961;
-                Class186.aBoolean2255 = false;
-            }
-            Class262_Sub5.aClass199Array7732 = null;
-            Class270_Sub1.anInt8034 = 0;
-            ClientScript.aClass216_9498 = null;
-            Class214.aClass262Array2528 = null;
+        Class121.aClass206Array1529 = null;
+        Class3.anInt5161 = -1;
+        Class246.anInt3108 = 1;
+        Class259.anInt3254 = 0;
+        if (Class186.aBoolean2255) {
+            Class18.aShort310 = StandardPlane.aShort7990;
+            OutcommingPacket.aShort4053 = Node_Sub38_Sub22.aShort10325;
+            Class291.aShort3667 = Node_Sub38_Sub23.aShort10345;
+            Animable_Sub2_Sub2.aShort10750 = Class169.aShort4961;
+            Class186.aBoolean2255 = false;
         }
+        Class262_Sub5.aClass199Array7732 = null;
+        Class270_Sub1.anInt8034 = 0;
+        ClientScript.aClass216_9498 = null;
+        Class214.aClass262Array2528 = null;
     }
 
     public final synchronized boolean isConsumer(ImageConsumer imageconsumer) {

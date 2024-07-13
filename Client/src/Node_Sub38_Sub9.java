@@ -131,7 +131,7 @@ public class Node_Sub38_Sub9 extends Node_Sub38 {
         Node_Sub38_Sub7.anInt10153 = Class61.anInt898 = 0;
         aa.anInt101 = 0;
         Mobile.aBuffer9128 = null;
-        ProducingGraphicsBuffer.method2601(-47);
+        ProducingGraphicsBuffer.method2601();
         Class277.anInt3527 = 0;
         Node_Sub53.gameSceneBaseX = 0;
         Class320_Sub4.gameSceneBaseY = 0;
@@ -207,7 +207,7 @@ public class Node_Sub38_Sub9 extends Node_Sub38 {
         anInt10181++;
         int[][] is = aClass348_7454.method3981(i);
         if (aClass348_7454.aBoolean4300) {
-            int[][] is_21_ = this.method2777(-80, 0, i);
+            int[][] is_21_ = this.method2777(0, i);
             int[] is_22_ = is_21_[0];
             int[] is_23_ = is_21_[1];
             int[] is_24_ = is_21_[2];

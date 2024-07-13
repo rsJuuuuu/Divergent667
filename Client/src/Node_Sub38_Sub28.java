@@ -140,9 +140,9 @@ public class Node_Sub38_Sub28 extends Node_Sub38 {
         Class340.anInt4220 = class302.method3519("b12_full", (byte) 54);
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         anInt10395++;
-        if (i != 7) {
+        if (7 != 7) {
             anInt10393 = -7;
         }
         method2886();

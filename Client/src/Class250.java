@@ -87,7 +87,7 @@ public class Class250 {
 
     Class250(Class353 class353, int i, Index class302) {
         aClass302_3177 = class302;
-        aClass302_3177.method3537(-2, 1);
+        aClass302_3177.method3537(1);
         BufferedStream buffer = new BufferedStream(aClass302_3177.method3524(0, 0));
         int i_7_ = buffer.readUnsignedByte();
         if (i_7_ <= 3) {

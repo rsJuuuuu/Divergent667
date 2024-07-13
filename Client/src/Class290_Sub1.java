@@ -42,12 +42,9 @@ public class Class290_Sub1 extends Class290 {
         anInt8054++;
     }
 
-    static void method3424(int i, int i_0_) {
+    static void method3424(int i_0_) {
         anInt8059++;
-        if (CacheNode_Sub15.method2379(i ^ -18213, i_0_)) {
-            if (i != -23620) {
-                method3424(0, -33);
-            }
+        if (CacheNode_Sub15.method2379(i_0_)) {
             Class346.method3975(-18690, -1, Class134_Sub3.aWidgetArrayArray9035[i_0_]);
         }
     }

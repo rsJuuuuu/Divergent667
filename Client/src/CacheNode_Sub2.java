@@ -11,7 +11,7 @@ public class CacheNode_Sub2 extends CacheNode {
     static int anInt9433;
     protected int anInt9434;
     static int anInt9435;
-    static Class329 aClass329_9436 = new Class329("LOCAL", "", "local", 4);
+    static Class329 aClass329_9436 = new Class329(4);
     static int anInt9437;
     static Class357 aClass357_9438;
 

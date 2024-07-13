@@ -81,7 +81,7 @@ public class Node_Sub38_Sub31 extends Node_Sub38 {
             int[] is_5_ = is[2];
             for (int i_6_ = 0; Class339_Sub7.anInt8728 > i_6_; i_6_++) {
                 method2891(i_6_, i);
-                int[][] is_7_ = this.method2777(-95, 0, Node_Sub38_Sub9.anInt10192);
+                int[][] is_7_ = this.method2777(0, Node_Sub38_Sub9.anInt10192);
                 is_3_[i_6_] = is_7_[0][Node_Sub38_Sub3.anInt10102];
                 is_4_[i_6_] = is_7_[1][Node_Sub38_Sub3.anInt10102];
                 is_5_[i_6_] = is_7_[2][Node_Sub38_Sub3.anInt10102];

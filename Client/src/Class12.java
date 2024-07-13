@@ -8,7 +8,6 @@ public class Class12 {
     static int anInt182;
     static int anInt183;
     static int anInt184;
-    private final int anInt185;
     static int anInt186;
     static HashTable aHashTable187;
     private final Class158 aClass158_188 = new Class158();
@@ -19,7 +18,6 @@ public class Class12 {
     static int anInt193;
     static boolean aBoolean194 = true;
     static int anInt195;
-    static int anInt196;
     static IncommingPacket aClass192_197;
     static Class257 aClass257_198;
     static float aFloat199;
@@ -39,7 +37,7 @@ public class Class12 {
         aClass158_188.method1722(true);
         anInt182++;
         aHashTable190.method1517(false);
-        anInt192 = anInt185;
+        anInt192 = 250;
     }
 
     final void method197() {
@@ -84,8 +82,7 @@ public class Class12 {
     }
 
     final int method200() {
-        anInt196++;
-        return anInt185;
+        return 250;
     }
 
     final int method201() {
@@ -102,9 +99,6 @@ public class Class12 {
 
     private void method203(Object object, Interface18 interface18) {
         anInt186++;
-        if (1 > anInt185) {
-            throw new IllegalStateException("s>cs");
-        }
         method195(interface18);
         anInt192 -= 1;
         while (anInt192 < 0) {
@@ -152,13 +146,8 @@ public class Class12 {
     }
 
     Class12() {
-        anInt185 = 250;
         anInt192 = 250;
-        int i_2_;
-        for (i_2_ = 1; i_2_ + i_2_ < 250; i_2_ += i_2_) {
-            /* empty */
-        }
-        aHashTable190 = new HashTable(i_2_);
+        aHashTable190 = new HashTable(128);
     }
 
     static {

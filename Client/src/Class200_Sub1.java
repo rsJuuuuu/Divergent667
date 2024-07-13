@@ -137,7 +137,7 @@ public class Class200_Sub1 extends Class200 implements Interface9 {
                         }
                         break while_96_;
                     } while (false);
-                    if (class84.method989(1, i_35_, targetY, baseY, baseX, targetX, i_41_, 11564 ^ 0x2c2c2e)) {
+                    if (class84.method989(1, i_35_, targetY, baseY, baseX, targetX, i_41_)) {
                         Class315.anInt4033 = baseX;
                         Class219.anInt2623 = baseY;
                         return true;

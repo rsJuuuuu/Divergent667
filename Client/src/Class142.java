@@ -20,7 +20,7 @@ public class Class142 {
 
     Class142(Class353 class353, int i, Index class302) {
         new Class61(64);
-        anInt1760 = class302.method3537(-2, 15);
+        anInt1760 = class302.method3537(15);
     }
 
     static void decodeGlobalPlayerUpdate(Packet packet) {

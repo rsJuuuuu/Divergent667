@@ -14,9 +14,6 @@ public class Node_Sub38_Sub22 extends Node_Sub38 {
     }
 
     final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (bool) {
-            method2780(true, null, 2);
-        }
         if (i == 0) {
             anInt10321 = buffer.readUnsignedShort();
         }

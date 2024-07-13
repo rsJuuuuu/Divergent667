@@ -10,7 +10,7 @@ public class Class379 {
     static int anInt4870;
     static int anInt4871;
     static Class61 aClass61_4872 = new Class61(64);
-    static Class329 aClass329_4873 = new Class329("WTQA", "office", "_qa", 2);
+    static Class329 aClass329_4873 = new Class329(2);
 
     static void method4159(int i, boolean bool) {
         anInt4871++;

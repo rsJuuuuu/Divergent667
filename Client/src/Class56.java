@@ -16,11 +16,8 @@ public class Class56 {
         throw new IllegalStateException();
     }
 
-    static void method563(int i, GraphicsToolkit graphicstoolkit) {
+    static void method563(GraphicsToolkit graphicstoolkit) {
         anInt838++;
-        if (i != -27770) {
-            method564();
-        }
         if (Class295.myPlayer.plane != Class346.anInt4278 && Class175.aClass261ArrayArrayArray2099 != null) {
             if (EntityNode_Sub6.method969(graphicstoolkit, Class295.myPlayer.plane)) {
                 Class346.anInt4278 = Class295.myPlayer.plane;
@@ -40,10 +37,7 @@ public class Class56 {
         Class150_Sub3.anInt8963 = -Class20.anInt343 + i_0_;
     }
 
-    final boolean method566(int i) {
-        if (i < 47) {
-            method563(-98, null);
-        }
+    final boolean method566() {
         anInt840++;
         return Class274.aClass56_4971 == this | Class366.aClass56_4527 == this;
     }

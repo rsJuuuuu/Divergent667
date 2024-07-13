@@ -44,10 +44,10 @@ public class Class122 {
         aClass302_1553 = class302_1_;
         aClass302_1550 = class302;
         if (aClass302_1550 != null) {
-            aClass302_1550.method3537(-2, 0);
+            aClass302_1550.method3537(0);
         }
         if (aClass302_1553 != null) {
-            aClass302_1553.method3537(-2, 0);
+            aClass302_1553.method3537(0);
         }
     }
 }

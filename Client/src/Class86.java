@@ -47,8 +47,8 @@ public class Class86 {
         aClass192_1163 = null;
     }
 
-    final GLSprite method1002(int i, GraphicsToolkit graphicstoolkit, GraphicsToolkit graphicstoolkit_0_, PlayerDefinition playerdefinition, boolean bool, int i_1_, int i_2_, boolean bool_3_, int i_4_, Class52 class52, int i_5_, int i_6_) {
-        if (i_6_ != -16139) {
+    final GLSprite method1002(int i, GraphicsToolkit graphicstoolkit, GraphicsToolkit graphicstoolkit_0_, PlayerDefinition playerdefinition, boolean bool, int i_1_, int i_2_, boolean bool_3_, int i_4_, Class52 class52, int i_5_) {
+        if (-16139 != -16139) {
             aClass61_1176 = null;
         }
         anInt1166++;
@@ -76,7 +76,7 @@ public class Class86 {
         if (bool) {
             glsprite_9_ = graphicstoolkit.method1235(36, 36, 32, is, 7468);
         } else {
-            glsprite_9_ = graphicstoolkit_0_.method1235(36, 36, 32, is, i_6_ ^ -8743);
+            glsprite_9_ = graphicstoolkit_0_.method1235(36, 36, 32, is, -16139 ^ -8743);
         }
         if (!bool) {
             Class296 class296 = new Class296();
@@ -250,7 +250,7 @@ public class Class86 {
             anInt1175 = 0;
         } else {
             int i_18_ = index19.method3526() - 1;
-            anInt1175 = index19.method3537(-2, i_18_) + i_18_ * 256;
+            anInt1175 = index19.method3537(i_18_) + i_18_ * 256;
         }
         if (class353 == Node_Sub38_Sub34.aClass353_10443) {
             aStringArray1184 = new String[]{null, null, Translation.aTranslation_371.getTranslatedString(anInt1161), null, null, Translation.aTranslation_385.getTranslatedString(anInt1161)};

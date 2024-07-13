@@ -13,8 +13,8 @@ public class Node_Sub38_Sub13 extends Node_Sub38 {
     private int anInt10239 = 2048;
     static int anInt10240;
 
-    final void method2785(int i) {
-        if (i != 7) {
+    final void method2785() {
+        if (7 != 7) {
             method2775(69, 15);
         }
         anInt10239 = anInt10237 - anInt10234;
@@ -74,7 +74,7 @@ public class Node_Sub38_Sub13 extends Node_Sub38 {
         anInt10240++;
         int[][] is = aClass348_7454.method3981(i);
         if (aClass348_7454.aBoolean4300) {
-            int[][] is_8_ = this.method2777(-65, 0, i);
+            int[][] is_8_ = this.method2777(0, i);
             int[] is_9_ = is_8_[0];
             int[] is_10_ = is_8_[1];
             int[] is_11_ = is_8_[2];

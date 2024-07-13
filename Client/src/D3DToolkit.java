@@ -826,7 +826,7 @@ public class D3DToolkit extends AbstractToolkit {
         if (i <= 114) {
             j();
         }
-        if (aClass56_6303.method566(108)) {
+        if (aClass56_6303.method566()) {
             aClass336_Sub1_6269.method3884(aFloatArray9195);
         } else {
             aFloatArray9195[3] = 0.0F;

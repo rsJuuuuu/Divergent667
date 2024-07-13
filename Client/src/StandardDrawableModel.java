@@ -2405,7 +2405,7 @@ public class StandardDrawableModel extends DrawableModel {
         } else {
             standarddrawablemodel_609_.aClass347_5828 = null;
         }
-        if (Class46.method470(anInt5896, -10, i)) {
+        if (Class46.method470(i)) {
             if (standarddrawablemodel_607_.aShortArray5802 != null && anInt5813 <= standarddrawablemodel_607_.aShortArray5802.length) {
                 standarddrawablemodel_609_.aShortArray5802 = standarddrawablemodel_607_.aShortArray5802;
             } else {

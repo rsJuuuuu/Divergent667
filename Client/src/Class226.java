@@ -44,7 +44,7 @@ public class Class226 {
             if (aCacheNode_Sub15_2683.method2383(anInt2685, 105)) {
                 anInt2691 |= 0x80;
             }
-            if (aCacheNode_Sub15_2683.method2381((byte) 102, anInt2685)) {
+            if (aCacheNode_Sub15_2683.method2381(anInt2685)) {
                 anInt2691 |= 0x100;
             }
             if (aCacheNode_Sub15_2683.method2382(anInt2685)) {
@@ -54,7 +54,7 @@ public class Class226 {
                 if (aCacheNode_Sub15_2687.method2383(anInt2688, 126)) {
                     anInt2691 |= 0x80;
                 }
-                if (aCacheNode_Sub15_2687.method2381((byte) 120, anInt2688)) {
+                if (aCacheNode_Sub15_2687.method2381(anInt2688)) {
                     anInt2691 |= 0x100;
                 }
                 if (aCacheNode_Sub15_2687.method2382(anInt2688)) {

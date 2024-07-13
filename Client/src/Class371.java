@@ -71,7 +71,7 @@ public class Class371 {
             Class304.SCENE_CLIP_DATA_PLANES[i_1_].method991(-120);
         Node_Sub18.method2606();
         Node_Sub36_Sub2.method2761();
-        Class30.method343(-125);
+        Class30.method343();
         System.gc();
         Class93.aGraphicsToolkit1241.ya();
     }

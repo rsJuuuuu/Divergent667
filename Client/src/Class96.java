@@ -87,7 +87,7 @@ public class Class96 {
         if (aClass302_1264.method3526() == 1) {
             return method1071(i, 0, is);
         }
-        if (aClass302_1264.method3537(-2, i) == 1) {
+        if (aClass302_1264.method3537(i) == 1) {
             return method1071(0, i, is);
         }
         throw new RuntimeException();
@@ -98,7 +98,7 @@ public class Class96 {
         if (aClass302_1260.method3526() == 1) {
             return method1072(is, 0, i);
         }
-        if (aClass302_1260.method3537(-2, i) == 1) {
+        if (aClass302_1260.method3537(i) == 1) {
             return method1072(is, i, 0);
         }
         throw new RuntimeException();

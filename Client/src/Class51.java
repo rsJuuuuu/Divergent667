@@ -62,7 +62,7 @@ abstract class Class51 implements Interface15 {
         return 0L;
     }
 
-    final boolean method516(int i, Source source) {
+    final void method516(int i, Source source) {
         anInt5338++;
         if (anInt5341 < i) {
             method520(76);
@@ -83,7 +83,6 @@ abstract class Class51 implements Interface15 {
             aGLXToolkit5332.anInt6260 += -anInt5329 + i;
         }
         anInt5329 = i;
-        return true;
     }
 
     final boolean method517(MapBuffer mapbuffer) {
@@ -103,10 +102,7 @@ abstract class Class51 implements Interface15 {
         return bool;
     }
 
-    final void method518(int i) {
-        if (i < 18) {
-            anInt5341 = 98;
-        }
+    final void method518() {
         anInt5346++;
         if (aGLXToolkit5332.aBoolean9316) {
             OpenGL.glBindBufferARB(anInt5326, anInt5324);
@@ -156,10 +152,7 @@ abstract class Class51 implements Interface15 {
         return null;
     }
 
-    public int method57(byte b) {
-        if (b >= -56) {
-            return -121;
-        }
+    public int method57() {
         anInt5330++;
         return anInt5329;
     }

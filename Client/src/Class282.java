@@ -14,7 +14,7 @@ public class Class282 {
 
     static void method3385(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, boolean bool, int i_6_) {
         anInt3582++;
-        if (CacheNode_Sub15.method2379(7015, i)) {
+        if (CacheNode_Sub15.method2379(i)) {
             if (!bool) {
                 method3385(-73, 124, 90, 10, 48, 28, -80, false, -91);
             }

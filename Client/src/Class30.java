@@ -30,13 +30,10 @@ public class Class30 {
         aClass103Array494 = null;
     }
 
-    static void method343(int i) {
+    static void method343() {
         anInt493++;
         for (Node_Sub3 node_sub3 = (Node_Sub3) Class56.aHashTable839.method1516(); node_sub3 != null; node_sub3 = (Node_Sub3) Class56.aHashTable839.method1520(73))
             Renderer.method3446(node_sub3.anInt6947);
-        if (i >= -113) {
-            method343(-70);
-        }
     }
 
     static {

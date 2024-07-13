@@ -57,7 +57,7 @@ public class Class13 {
 
     static void method209(boolean bool, int i, int i_3_, int i_4_, int i_5_) {
         anInt204++;
-        if (CacheNode_Sub15.method2379(7015, i)) {
+        if (CacheNode_Sub15.method2379(i)) {
             Class320_Sub9.method3716(true, i_5_, bool, i_4_, Class134_Sub3.aWidgetArrayArray9035[i], -1);
             if (i_3_ > -28) {
                 aClass192_203 = null;
@@ -95,7 +95,7 @@ public class Class13 {
     Class13(Class353 class353, int i, Index class302) {
         aClass302_202 = class302;
         if (aClass302_202 != null) {
-            aClass302_202.method3537(-2, 54);
+            aClass302_202.method3537(54);
         }
     }
 }

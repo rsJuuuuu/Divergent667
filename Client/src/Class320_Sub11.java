@@ -3305,7 +3305,6 @@ public class Class320_Sub11 extends Class320 {
         Class277_Sub1.anInt8052 = 0;
         Class270_Sub2_Sub1.anInt10541 = 0;
         Mobile_Sub3.anInt10781 = 0;
-        Class12.anInt196 = 0;
         Class59.anInt875 = 0;
         StandardDrawableModel.anInt5800 = 0;
         Class42.anInt639 = 0;

@@ -104,7 +104,7 @@ public class Class274 implements d {
     static void method3326(boolean bool, byte[][][] bs, int i, byte b, int i_11_, int i_12_, boolean bool_13_) {
         int i_14_ = bool ? 1 : 0;
         Node_Sub42.anInt7527 = 0;
-        Class348.anInt4290 = 0;
+        Class348.animablesInArray7817 = 0;
         Class359.anInt4465++;
         if ((i_12_ & 0x2) == 0) {
             for (Animable animable = Class303.anAnimableArray3827[i_14_]; animable != null; animable = animable.anAnimable5941) {
@@ -121,7 +121,7 @@ public class Class274 implements d {
                 if (!Class150_Sub1.method1658(animable, bool, bs, i, b)) {
                     method3327(animable);
                     if (animable.anInt5944 != -1) {
-                        Class262_Sub15.anAnimableArray7817[Class348.anInt4290++] = animable;
+                        Class262_Sub15.anAnimableArray7817[Class348.animablesInArray7817++] = animable;
                     }
                 }
             }
@@ -130,7 +130,7 @@ public class Class274 implements d {
                     if (animable.method813(0)) {
                         method3327(animable);
                         if (animable.anInt5944 != -1) {
-                            Class262_Sub15.anAnimableArray7817[Class348.anInt4290++] = animable;
+                            Class262_Sub15.anAnimableArray7817[Class348.animablesInArray7817++] = animable;
                         }
                     } else {
                         method3327(animable);
@@ -146,7 +146,7 @@ public class Class274 implements d {
                         method3327(Node_Sub52.aMobileArray7648[i_15_]);
                         if (Node_Sub52.aMobileArray7648[i_15_].anInt5944 != -1) {
                             if (Node_Sub52.aMobileArray7648[i_15_].method813(0)) {
-                                Class262_Sub15.anAnimableArray7817[Class348.anInt4290++] = Node_Sub52.aMobileArray7648[i_15_];
+                                Class262_Sub15.anAnimableArray7817[Class348.animablesInArray7817++] = Node_Sub52.aMobileArray7648[i_15_];
                             } else {
                                 Class32.anAnimableArray516[Node_Sub42.anInt7527++] = Node_Sub52.aMobileArray7648[i_15_];
                             }
@@ -245,9 +245,9 @@ public class Class274 implements d {
                 }
             }
         }
-        if (Class348.anInt4290 > 0) {
-            Class34_Sub1.quicksortAnimables(Class262_Sub15.anAnimableArray7817, 0, Class348.anInt4290 - 1);
-            for (int i_32_ = 0; i_32_ < Class348.anInt4290; i_32_++)
+        if (Class348.animablesInArray7817 > 0) {
+            Class34_Sub1.quicksortAnimables(Class262_Sub15.anAnimableArray7817, 0, Class348.animablesInArray7817 - 1);
+            for (int i_32_ = 0; i_32_ < Class348.animablesInArray7817; i_32_++)
                 Class338.method3915(Class262_Sub15.anAnimableArray7817[i_32_], true, bool_13_);
         }
     }

@@ -38,7 +38,7 @@ public class Class175 {
             }
             Class132.aClass52_1673.method538(i, i_0_ + 45, "Dynamic: " + Class63.anInt923 + "/" + 5000, -16777216, -256);
             Class132.aClass52_1673.method538(i, i_0_ + 60, "Total Opaque Onscreen: " + Node_Sub42.anInt7527 + "/" + 10000, -16777216, -256);
-            Class132.aClass52_1673.method538(i, i_0_ + 75, "Total Trans Onscreen: " + Class348.anInt4290 + "/" + 5000, -16777216, -256);
+            Class132.aClass52_1673.method538(i, i_0_ + 75, "Total Trans Onscreen: " + Class348.animablesInArray7817 + "/" + 5000, -16777216, -256);
             Class132.aClass52_1673.method538(i, i_0_ + 90, "Occluders: " + (Class167.anInt2033 + NpcDefinition.anInt2885) + " Active: " + Class320_Sub21.anInt8406, -16777216, -256);
             Class132.aClass52_1673.method538(i, i_0_ + 105, "Occluded: Ground:" + ProducingGraphicsBuffer.anInt9880 + " Walls: " + Node_Sub52.anInt7651 + " CPs: " + Class187.anInt2267 + " Pixels: " + Class233.anInt2786, -16777216, -256);
             Class132.aClass52_1673.method538(i, i_0_ + 120, "Occlude Calc Took: " + Node_Sub38_Sub31.aLong10420 / 1000L + "us", -16777216, -256);

@@ -97,6 +97,6 @@ public class Class71 {
 
     Class71(Class353 class353, int i, Index class302) {
         aClass302_951 = class302;
-        anInt956 = aClass302_951.method3537(-2, 4);
+        anInt956 = aClass302_951.method3537(4);
     }
 }

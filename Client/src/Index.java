@@ -157,7 +157,7 @@ public class Index {
         return i_5_ * 100 / i_4_;
     }
 
-    final byte[] method3512(int[] is, int i, int i_8_, int i_9_) {
+    final byte[] method3512(int[] is, int i, int i_9_) {
         anInt3813++;
         if (!method3513(i, i_9_)) {
             return null;
@@ -461,7 +461,7 @@ public class Index {
 
     final byte[] method3524(int i, int i_54_) {
         anInt3784++;
-        return method3512(null, i, -126, i_54_);
+        return method3512(null, i, i_54_);
     }
 
     private boolean method3525(int i) {
@@ -609,10 +609,7 @@ public class Index {
         return anObjectArray3783[i_66_] != null;
     }
 
-    final int method3537(int i, int i_67_) {
-        if (i != -2) {
-            anInt3795 = 123;
-        }
+    final int method3537(int i_67_) {
         anInt3802++;
         if (!method3525(i_67_)) {
             return 0;

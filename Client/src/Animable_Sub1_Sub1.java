@@ -134,19 +134,6 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
 
     public final void method74(GraphicsToolkit graphicstoolkit, int i) {
         anInt10596++;
-        if (i < -46) {
-            r var_r;
-            if (aR10594 == null && aBoolean10595) {
-                Class243 class243 = method828(262144, 20, graphicstoolkit, true);
-                var_r = class243 != null ? class243.aR3072 : null;
-            } else {
-                var_r = aR10594;
-                aR10594 = null;
-            }
-            if (var_r != null) {
-                Class320_Sub30.method3797(var_r, aByte5931, anInt5934, anInt5940, null);
-            }
-        }
     }
 
     public static void method827() {

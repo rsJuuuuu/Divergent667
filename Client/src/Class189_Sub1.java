@@ -13,7 +13,7 @@ public class Class189_Sub1 extends Class189 {
     private byte[][] aByteArrayArray6884 = new byte[10][];
     static int anInt6885;
     private int[] anIntArray6886;
-    static Class329 aClass329_6887 = new Class329("WTRC", "office", "_rc", 1);
+    static Class329 aClass329_6887 = new Class329(1);
     private int anInt6888;
     private final BufferedStream aBuffer6889;
 

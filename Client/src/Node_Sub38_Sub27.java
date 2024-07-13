@@ -219,12 +219,12 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
         return is;
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         anInt10375++;
         aByteArray10371 = Class169_Sub3.method1778(anInt10389);
-        method2884(i - 8);
+        method2884(7 - 8);
         int i_51_ = -1 + anInt10382;
-        if (i == 7) {
+        if (7 == 7) {
             for (/**/; i_51_ >= 1; i_51_--) {
                 short s = aShortArray10386[i_51_];
                 if (s > 8) {

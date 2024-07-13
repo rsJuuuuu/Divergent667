@@ -1449,7 +1449,7 @@ public class FloatBuffer extends BufferedStream {
             return true;
         }
         if (Class188_Sub2_Sub1.aClass192_9356 == class123.incomming_packet) {
-            Class258.method3126(-9821, packet, Class240.aSignLink2946);
+            Class258.method3126(packet, Class240.aSignLink2946);
             class123.incomming_packet = null;
             return true;
         }
@@ -1589,7 +1589,7 @@ public class FloatBuffer extends BufferedStream {
                 i_224_ = -1;
             }
             int i_225_ = packet.readUnsignedByteC();
-            Class40.method432(i_225_, 114, i_224_, i_223_);
+            Class40.method432(i_225_, i_224_, i_223_);
             class123.incomming_packet = null;
             return true;
         }
@@ -2190,7 +2190,7 @@ public class FloatBuffer extends BufferedStream {
             } else {
                 clanchat = Class51.aClanChat5345;
             }
-            class15.method219(0, clanchat);
+            class15.method219(clanchat);
             class123.incomming_packet = null;
             return true;
         }
@@ -2248,7 +2248,7 @@ public class FloatBuffer extends BufferedStream {
                 packet.readString();
             }
             long l = packet.readLong();
-            Class169_Sub4.aString8830 = Class154.method1699(l, 25589);
+            Class169_Sub4.aString8830 = Class154.method1699(l);
             Node_Sub38_Sub34.aByte10445 = packet.readByte();
             int i_321_ = packet.readUnsignedByte();
             if (i_321_ == 255) {

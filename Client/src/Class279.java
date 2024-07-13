@@ -144,7 +144,7 @@ public class Class279 {
         aClass353_3553 = class353;
         if (aClass302_3549 != null) {
             int i_5_ = -1 + aClass302_3549.method3526();
-            aClass302_3549.method3537(-2, i_5_);
+            aClass302_3549.method3537(i_5_);
         }
         if (Node_Sub38_Sub34.aClass353_10443 == aClass353_3553) {
             aStringArray3568 = new String[]{null, null, null, null, null, Translation.aTranslation_385.getTranslatedString(i)};

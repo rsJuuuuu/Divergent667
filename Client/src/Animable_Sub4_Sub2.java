@@ -145,9 +145,6 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19 {
     public final void method74(GraphicsToolkit graphicstoolkit, int i) {
         anInt10812++;
         aClass310_10794.method3587(graphicstoolkit);
-        if (i >= -46) {
-            method817(92);
-        }
     }
 
     final boolean method813(int i) {

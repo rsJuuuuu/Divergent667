@@ -87,7 +87,7 @@ public class Class281 {
 
     Class281(Class353 class353, int i, Index class302, Class363 class363) {
         aClass302_3572 = class302;
-        aClass302_3572.method3537(-2, 32);
+        aClass302_3572.method3537(32);
         aClass363_3578 = class363;
     }
 }

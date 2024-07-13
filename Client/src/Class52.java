@@ -594,7 +594,7 @@ abstract class Class52 {
         if (i_60_ <= 70) {
             method536(98, 77, -16, null, 105, 89, null, null);
         }
-        return method539(i_64_, 2, i_57_, i_59_, null, 0, i, i_58_, i_67_, i_61_, var_aa, i_65_, i_66_, i_63_, i_62_, string);
+        return method539(i_64_, i_57_, i_59_, null, 0, i, i_58_, i_67_, i_61_, var_aa, i_65_, i_66_, i_63_, i_62_, string);
     }
 
     abstract void fa(char c, int i, int i_68_, int i_69_, boolean bool);
@@ -627,13 +627,10 @@ abstract class Class52 {
         }
     }
 
-    final int method539(int i, int i_81_, int i_82_, int i_83_, GLSprite[] glsprites, int i_84_, int i_85_, int i_86_, int i_87_, int i_88_, aa var_aa, int i_89_, int i_90_, int i_91_, int i_92_, String string) {
+    final int method539(int i, int i_82_, int i_83_, GLSprite[] glsprites, int i_84_, int i_85_, int i_86_, int i_87_, int i_88_, aa var_aa, int i_89_, int i_90_, int i_91_, int i_92_, String string) {
         anInt795++;
         if (string == null) {
             return 0;
-        }
-        if (i_81_ != 2) {
-            method539(-69, 108, -103, 49, null, 53, -66, 62, 11, 81, null, -110, -87, -20, 114, null);
         }
         method534(i_82_, i_83_);
         if (i_89_ == 0) {
@@ -654,7 +651,7 @@ abstract class Class52 {
         }
         if (i_84_ > 0 && i_94_ >= i_84_) {
             i_94_ = i_84_;
-            Class9.aStringArray167[i_84_ - 1] = aClass357_789.method4032(Class9.aStringArray167[i_84_ - 1], glsprites, i_90_, i_81_ - 3);
+            Class9.aStringArray167[i_84_ - 1] = aClass357_789.method4032(Class9.aStringArray167[i_84_ - 1], glsprites, i_90_, -1);
         }
         if (i == 3 && i_94_ == 1) {
             i = 1;
@@ -728,7 +725,7 @@ abstract class Class52 {
                 method534(Node_Sub25_Sub4.anInt10011, Node_Sub25_Sub4.anInt10009);
             }
         } catch (Exception exception) {
-            /* empty */
+            exception.printStackTrace();
         }
         anInt797++;
         if (i >= -23) {
@@ -779,10 +776,10 @@ abstract class Class52 {
         Class384.anInt4906 = 0;
     }
 
-    final int method545(int[] is, int i, int i_120_, int[] is_122_, int i_123_, int i_124_, Random random, String string, int i_125_, int i_126_, GLSprite[] glsprites, int i_127_, int i_128_, int i_129_) {
+    final void method545(int[] is, int i, int i_120_, int[] is_122_, int i_123_, int i_124_, Random random, String string, int i_125_, int i_126_, GLSprite[] glsprites, int i_127_, int i_128_, int i_129_) {
         anInt801++;
         if (string == null) {
-            return 0;
+            return;
         }
         random.setSeed(i_127_);
         int i_130_ = 192 + (0x1f & random.nextInt());
@@ -821,7 +818,6 @@ abstract class Class52 {
             is[2] = i_137_;
             is[1] = -aClass357_789.anInt4434 + i_136_;
         }
-        return i_133_;
     }
 
     Class52(GraphicsToolkit graphicstoolkit, Class357 class357) {

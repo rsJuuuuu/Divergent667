@@ -15,7 +15,7 @@ public class Class154 {
         return new Class329[]{Class240.aClass329_2943, Class189_Sub1.aClass329_6887, Class379.aClass329_4873, Class229.aClass329_2730, CacheNode_Sub2.aClass329_9436, CacheNode_Sub11.aClass329_9538, Class362.aClass329_4498};
     }
 
-    static String method1699(long l, int i) {
+    static String method1699(long l) {
         anInt1949++;
         if (l <= 0L || l >= 6582952005840035281L) {
             return null;
@@ -23,7 +23,7 @@ public class Class154 {
         if (l % 37L == 0) {
             return null;
         }
-        if (i != 25589) {
+        if (25589 != 25589) {
             method1698(61);
         }
         int i_0_ = 0;

@@ -170,7 +170,7 @@ class Class169_Sub2 extends Class169 {
         i_55_ = i_54_;
         anInt8794++;
         if (bool) {
-            int i_58_ = Class349.method3989(6406, (byte) -72);
+            int i_58_ = Class349.method3989(6406);
             int i_59_ = i_54_ * i_58_;
             int i_60_ = i_58_ * i_55_;
             byte[] bs_61_ = new byte[i_59_ * i_53_];

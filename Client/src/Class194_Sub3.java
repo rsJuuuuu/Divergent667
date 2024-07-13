@@ -235,7 +235,7 @@ class Class194_Sub3 extends Class194 {
             Class146.aClass32_1812 = new Class32(Class209.aClass353_2483, Class35.language, Class4.index2);
             Class18.aClass37_306 = new Class37(Class262_Sub23.aClass302_7886, Class181.aClass302_2158, Class75.aClass302_1003);
             Class171.aClass278_2062 = new Class278(Class209.aClass353_2483, Class35.language, Class4.index2);
-            CacheNode_Sub6.aClass57_9480 = new Class57(Class209.aClass353_2483, Class35.language, Class4.index2);
+            CacheNode_Sub6.aClass57_9480 = new Class57(Class4.index2);
             Class16.aClass101_228 = new Class101(Class209.aClass353_2483, Class35.language, Node_Sub15_Sub5.aClass302_9805, Class107.aClass302_1364);
             Node_Sub9_Sub4.aClass180_9727 = new Class180(Class209.aClass353_2483, Class35.language, Class4.index2);
             Class382.aClass142_5246 = new Class142(Class209.aClass353_2483, Class35.language, Class4.index2);
@@ -252,7 +252,7 @@ class Class194_Sub3 extends Class194 {
             Class186.aClass112_2256.method1143(Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751() == 0);
             Class24.aClass275_442 = new Class275();
             Class320_Sub12.method3728(0);
-            Class28.method333(Class18.aClass37_306, -1);
+            Class28.method333(Class18.aClass37_306);
             Node_Sub38_Sub9.method2822(CacheNode_Sub5.aClass302_9477);
             Class218.method2077(TemporaryItemDefinition.aD565, Class107.aClass302_1364);
             Class163 class163 = new Class163(Objects.requireNonNull(Class250.aClass302_3179.method3529("huffman", "")));
@@ -302,7 +302,7 @@ class Class194_Sub3 extends Class194 {
             Node_Sub15_Sub5.aClass302_9805.anInt3795 = 2;
         }
         if (Class252.aClass110_3189 == Class110.aClass110_1408) {
-            if (!CacheNode_Sub15.method2379(7015, CacheNode_Sub4.aClass1_9466.anInt120)) {
+            if (!CacheNode_Sub15.method2379(CacheNode_Sub4.aClass1_9466.anInt120)) {
                 return 0;
             }
             boolean bool = true;

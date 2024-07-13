@@ -3,5 +3,5 @@
  */
 
 interface Interface15 {
-    int method57(byte b);
+    int method57();
 }

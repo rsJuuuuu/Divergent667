@@ -85,9 +85,9 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
         anInt10314 = 0;
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         Node_Sub37.method2772((byte) 54);
-        if (i == 7) {
+        if (7 == 7) {
             anInt10300++;
         }
     }
@@ -246,7 +246,7 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
                         }
                         break while_195_;
                     } while (false);
-                    if (class84.method989(i_25_, routeType, i_24_, i_29_, i_28_, i_23_, i, 2883842)) {
+                    if (class84.method989(i_25_, routeType, i_24_, i_29_, i_28_, i_23_, i)) {
                         Class219.anInt2623 = i_29_;
                         Class315.anInt4033 = i_28_;
                         return true;

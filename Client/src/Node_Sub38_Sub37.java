@@ -35,17 +35,17 @@ public class Node_Sub38_Sub37 extends Node_Sub38 {
         anIntArray10477 = new int[]{-is_2_[0] - (-is_1_[0] - is_1_[0]), is_1_[1] + (-is_2_[1] + is_1_[1])};
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         if (anIntArrayArray10476 == null) {
             anIntArrayArray10476 = new int[][]{new int[2], {4096, 4096}};
         }
-        if (i == 7) {
+        if (7 == 7) {
             anInt10472++;
             if (anIntArrayArray10476.length < 2) {
                 throw new RuntimeException("Curve operation requires at least two markers");
             }
             if (anInt10482 == 2) {
-                method2905(i ^ -7);
+                method2905(7 ^ -7);
             }
             Node_Sub37.method2772((byte) 54);
             method2909();

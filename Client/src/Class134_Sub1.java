@@ -302,7 +302,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeInt((int) (l >>> 32));
                     node_sub13.aPacket7113.writeShortLE(interfaceHash + Class320_Sub4.gameSceneBaseY);
                     Class218.aClass123_2566.sendPacket(126, node_sub13);
-                    Class25.method306(-43, i_4_, l, interfaceHash);
+                    Class25.method306(i_4_, l, interfaceHash);
                 }
                 if (i_6_ == 1003 || i_6_ == 1001 || i_6_ == 1006 || i_6_ == 1009 || i_6_ == 1004) {
                     Class262_Sub20.method3204(i_4_, itemId, i_6_);
@@ -410,7 +410,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShortLE(i_4_ + Node_Sub53.gameSceneBaseX);
                     node_sub13.aPacket7113.writeInt((int) (l >>> 32));
                     Class218.aClass123_2566.sendPacket(127, node_sub13);
-                    Class25.method306(-65, i_4_, l, interfaceHash);
+                    Class25.method306(i_4_, l, interfaceHash);
                 }
                 if (Class87.removeWalkHere) {
                     Node_Sub38_Sub23.method2863();

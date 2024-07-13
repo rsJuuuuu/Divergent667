@@ -397,7 +397,7 @@ public class Class195 {
                     Class320_Sub23.aClass123_8432.aPacket1570.method2192(Class121.isaacKeys, 127);
                     Class320_Sub23.aClass123_8432.aPacket1570.offset = 0;
                     Class243.username = Class188_Sub1_Sub1.aString9327 = Class154.method1699
-                            (Class320_Sub23.aClass123_8432.aPacket1570.readLong(), 25589);
+                            (Class320_Sub23.aClass123_8432.aPacket1570.readLong());
                     Class188_Sub1_Sub2.aLong9342 = Class320_Sub23.aClass123_8432.aPacket1570.readLong();
                     Node_Sub38_Sub8.anInt10163 = 8;
                 }

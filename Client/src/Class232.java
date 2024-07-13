@@ -109,7 +109,7 @@ public class Class232 {
             }
             for (Class34_Sub1 class34_sub1 : aClass34_Sub1Array2777) {
                 if (class34_sub1 != null) {
-                    class34_sub1.method380(0);
+                    class34_sub1.method380();
                 }
             }
         }

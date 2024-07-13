@@ -11,10 +11,10 @@ public class Class125 {
 
     static void method1527(int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
         anInt1610++;
-        int i_5_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_3_);
-        int i_6_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 0x376b98ec, i_4_);
-        int i_7_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_0_);
-        int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_1_);
+        int i_5_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_3_);
+        int i_6_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_4_);
+        int i_7_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_0_);
+        int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_1_);
         for (int i_9_ = i_5_; i_6_ >= i_9_; i_9_++)
             Class369.method4086(i_8_, i_2_, i_7_, Class169_Sub4.anIntArrayArray8826[i_9_], 0);
     }

@@ -66,12 +66,9 @@ public class Class51_Sub1 extends Class51 implements Interface15_Impl2 {
         aClass318_9061 = null;
     }
 
-    public final int method57(byte b) {
+    public final int method57() {
         anInt9055++;
-        if (b >= -56) {
-            anInt9064 = -61;
-        }
-        return super.method57((byte) -79);
+        return super.method57();
     }
 
     public final void method38(boolean bool) {

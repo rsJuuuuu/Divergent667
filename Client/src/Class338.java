@@ -281,6 +281,6 @@ public class Class338 {
     Class338(Class353 class353, int i, Index class302, Index class302_34_) {
         aClass302_4193 = class302_34_;
         aClass302_4192 = class302;
-        aClass302_4192.method3537(-2, 34);
+        aClass302_4192.method3537(34);
     }
 }

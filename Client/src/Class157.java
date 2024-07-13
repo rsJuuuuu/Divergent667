@@ -224,7 +224,7 @@ public class Class157 {
             int i_22_ = buffer.readUnsignedByte();
             node_sub38.method2780(false, buffer, i_22_);
         }
-        node_sub38.method2785(7);
+        node_sub38.method2785();
         return node_sub38;
     }
 

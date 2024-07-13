@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Class348 {
     private final int anInt4289;
-    static int anInt4290;
+    static int animablesInArray7817;
     private final int anInt4291;
     private int anInt4292 = -1;
     private int[][][] anIntArrayArrayArray4293;

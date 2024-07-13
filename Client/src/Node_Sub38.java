@@ -45,10 +45,7 @@ abstract class Node_Sub38 extends Node {
         return -1;
     }
 
-    final int[][] method2777(int i, int i_1_, int i_2_) {
-        if (i > -62) {
-            method2778(-94);
-        }
+    final int[][] method2777(int i_1_, int i_2_) {
         anInt7458++;
         if (!aNode_Sub38Array7453[i_1_].aBoolean7463) {
             return aNode_Sub38Array7453[i_1_].method2778(i_2_);
@@ -125,8 +122,8 @@ abstract class Node_Sub38 extends Node {
         return fs_9_;
     }
 
-    void method2785(int i) {
-        if (i != 7) {
+    void method2785() {
+        if (7 != 7) {
             anIntArray7451 = null;
         }
         anInt7456++;

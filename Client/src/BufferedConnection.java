@@ -39,7 +39,7 @@ public class BufferedConnection implements Runnable {
 
     static void method422(int i, int i_0_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
         anInt597++;
-        if (CacheNode_Sub15.method2379(7015, i_7_)) {
+        if (CacheNode_Sub15.method2379(i_7_)) {
             if (Class79.aWidgetArrayArray1082[i_7_] == null) {
                 Client.method121(Class134_Sub3.aWidgetArrayArray9035[i_7_], -1, i_10_, i_2_, i_5_, i, i_6_, i_0_, i_8_, i_3_, i_9_, i_4_);
             } else {

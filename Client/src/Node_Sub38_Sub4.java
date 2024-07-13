@@ -82,10 +82,10 @@ public class Node_Sub38_Sub4 extends Node_Sub38 {
         return is;
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         anInt10112++;
         Node_Sub37.method2772((byte) 54);
-        if (i != 7) {
+        if (7 != 7) {
             anInt10118 = -19;
         }
     }

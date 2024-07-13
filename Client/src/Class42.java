@@ -107,7 +107,7 @@ class Class42 {
         anIntArray645 = null;
     }
 
-    void method449() throws Exception {
+    void method449() {
         anInt640++;
     }
 

@@ -16,11 +16,8 @@ public class Class258 implements Interface12 {
     static int anInt5294;
     static int anInt5295;
 
-    public final int method35(int i) {
+    public final int method35() {
         anInt5292++;
-        if (i >= -4) {
-            method3126(-59, null, null);
-        }
         if (aClass302_5287.method3507(aString5286)) {
             return 100;
         }
@@ -100,9 +97,9 @@ public class Class258 implements Interface12 {
         calculatedScenePositionYs = null;
     }
 
-    static void method3126(int i, BufferedStream buffer, SignLink signlink) {
+    static void method3126(BufferedStream buffer, SignLink signlink) {
         anInt5295++;
-        if (i != -9821) {
+        if (-9821 != -9821) {
             method3124(-43, 56, null, -92, -124, -63, -16, 39);
         }
         Node_Sub53 node_sub53 = new Node_Sub53();
@@ -150,7 +147,7 @@ public class Class258 implements Interface12 {
                     }
                     node_sub53.anIntArray7661[i_27_] = i_28_;
                     node_sub53.anIntArray7660[i_27_] = i_36_;
-                    node_sub53.aClass241Array7657[i_27_] = signlink.method3628(Class260.method3139(string, i + 9872), string_35_, Node_Sub19.method2612(i, -9821));
+                    node_sub53.aClass241Array7657[i_27_] = signlink.method3628(Class260.method3139(string, -9821 + 9872), string_35_, Node_Sub19.method2612(-9821, -9821));
                 }
             } catch (ClassNotFoundException classnotfoundexception) {
                 node_sub53.anIntArray7663[i_27_] = -1;

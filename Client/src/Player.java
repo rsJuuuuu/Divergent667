@@ -154,11 +154,8 @@ public class Player extends Actor {
         return false;
     }
 
-    final int method855(byte b) {
+    final int method855() {
         anInt11161++;
-        if (b > -48) {
-            method869(-126);
-        }
         return -1;
     }
 
@@ -837,8 +834,8 @@ public class Player extends Actor {
         return string;
     }
 
-    final Class59 method869(int i) {
-        if (i != -3109) {
+    final Class59 method869() {
+        if (-3109 != -3109) {
             aBoolean11157 = false;
         }
         anInt11148++;
@@ -849,7 +846,7 @@ public class Player extends Actor {
             if (Class69.anInt943 == 0
                     || Class69.anInt943 == 3
                     || Class69.anInt943 == 1
-                    && Class193.method1955(i + 3109, username)) {
+                    && Class193.method1955(-3109 + 3109, username)) {
                 return aClass59_10861;
             }
         }

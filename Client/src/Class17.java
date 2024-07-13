@@ -23,7 +23,7 @@ public class Class17 {
         Class78.method780(Class174.clientCycle, Class93.aGraphicsToolkit1241);
         anInt280++;
         if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
-            Class290_Sub1.method3424(-23620, Class320_Sub15.WINDOWS_PANE_ID);
+            Class290_Sub1.method3424(Class320_Sub15.WINDOWS_PANE_ID);
         }
         for (int i_1_ = 0; Node_Sub11.anInt7105 > i_1_; i_1_++) {
             if (Class195.aBooleanArray2387[i_1_]) {

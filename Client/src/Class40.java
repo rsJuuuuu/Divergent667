@@ -12,7 +12,7 @@ public class Class40 {
         aGLSprite621 = null;
     }
 
-    static void method432(int i, int i_0_, int i_1_, int i_2_) {
+    static void method432(int i, int i_1_, int i_2_) {
         anInt619++;
         i = i * Class213.aNode_Sub27_2512.aClass320_Sub25_7274.method3776() >> 8;
         if (i_1_ != -1 || Class377_Sub1.aBoolean8775) {
@@ -25,9 +25,6 @@ public class Class40 {
         }
         if (i_1_ != Class313.anInt4013) {
             EntityNode_Sub1.aNode_Sub9_Sub1_5929 = null;
-        }
-        if (i_0_ <= 112) {
-            method432(-89, 11, 106, 125);
         }
         Class313.anInt4013 = i_1_;
     }

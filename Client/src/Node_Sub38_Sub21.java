@@ -28,7 +28,7 @@ public class Node_Sub38_Sub21 extends Node_Sub38 {
         }
         int[] is = aClass146_7460.method1645(i_0_);
         if (aClass146_7460.aBoolean1819) {
-            int[][] is_1_ = this.method2777(-76, 0, i_0_);
+            int[][] is_1_ = this.method2777(0, i_0_);
             int[] is_2_ = is_1_[0];
             int[] is_3_ = is_1_[1];
             int[] is_4_ = is_1_[2];

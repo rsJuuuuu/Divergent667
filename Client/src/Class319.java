@@ -13,7 +13,7 @@ public class Class319 {
     protected short[] aShortArray4062;
 
     static void method3671(int i) {
-        IComponentDefinitions.method4144(0);
+        IComponentDefinitions.method4144();
         if (i != 8) {
             method3671(-95);
         }

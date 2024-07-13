@@ -118,7 +118,7 @@ abstract class Node_Sub23 extends Node {
         String string = null;
         if (Class143.aByteArray1773 != null) {
             BufferedStream buffer = new BufferedStream(Class143.aByteArray1773);
-            string = Class154.method1699(buffer.readLong(), 25589);
+            string = Class154.method1699(buffer.readLong());
             Class188_Sub1_Sub2.aLong9342 = buffer.readLong();
         }
         if (string == null) {

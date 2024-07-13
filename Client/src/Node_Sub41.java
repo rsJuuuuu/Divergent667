@@ -105,7 +105,7 @@ public class Node_Sub41 extends Node {
         if (!CacheNode_Sub11.method2336(i_7_, i_6_)) {
             return false;
         }
-        if (Class46.method470(i_7_, -77, i_6_) | (0x9000 & i_6_) != 0 | Class234.method2150(i_7_, i_6_)) {
+        if (Class46.method470(i_6_) | (0x9000 & i_6_) != 0 | Class234.method2150(i_7_, i_6_)) {
             return true;
         }
         return (0x37 & i_7_) == 0 & (Class278.method3367(i_7_, i_6_, (byte) -119) | (0x2000 & i_6_) != 0 | Class320_Sub9.method3713(122, i_6_, i_7_));

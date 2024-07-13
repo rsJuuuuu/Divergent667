@@ -42,11 +42,11 @@ public class TemporaryItemDefinition {
         anIntArray568[1] = itemdefinition.anInt1897;
         if (itemdefinition.aShortArray1865 != null) {
             modifiedModelColors = new short[itemdefinition.aShortArray1865.length];
-            Class311.method3606(itemdefinition.aShortArray1865, 0, modifiedModelColors, 0, modifiedModelColors.length);
+            Class311.method3606(itemdefinition.aShortArray1865, modifiedModelColors, modifiedModelColors.length);
         }
         if (itemdefinition.modifiedTextureColors != null) {
             modifiedTextureColors = new short[itemdefinition.modifiedTextureColors.length];
-            Class311.method3606(itemdefinition.modifiedTextureColors, 0, modifiedTextureColors, 0, modifiedTextureColors.length);
+            Class311.method3606(itemdefinition.modifiedTextureColors, modifiedTextureColors, modifiedTextureColors.length);
         }
     }
 }

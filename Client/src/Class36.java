@@ -81,7 +81,7 @@ public class Class36 {
     Class36(Index class302) {
         aClass302_541 = class302;
         if (aClass302_541 != null) {
-            aClass302_541.method3537(-2, 11);
+            aClass302_541.method3537(11);
         }
     }
 }

@@ -863,7 +863,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         Class32.anAnimableArray516 = new Animable[10000];
         Node_Sub42.anInt7527 = 0;
         Class262_Sub15.anAnimableArray7817 = new Animable[5000];
-        Class348.anInt4290 = 0;
+        Class348.animablesInArray7817 = 0;
         Node_Sub52.aMobileArray7648 = new Mobile[5000];
         Class63.anInt923 = 0;
         Class139.aBooleanArrayArray1730 = new boolean[Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 + 1][Node_Sub9_Sub1.anInt9656 + Node_Sub9_Sub1.anInt9656 + 1];
@@ -1112,7 +1112,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         if (aClass56_6303 != Class366.aClass56_4527) {
             Class56 class56 = aClass56_6303;
             aClass56_6303 = Class366.aClass56_4527;
-            if (!class56.method566(120)) {
+            if (!class56.method566()) {
                 method1305();
             }
             method1253();
@@ -1368,7 +1368,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     final Interface15_Impl1 method1298(int i_135_) {
         anInt6252++;
-        if (anInterface15_Impl1_6381.method57((byte) -126) < 2 * i_135_) {
+        if (anInterface15_Impl1_6381.method57() < 2 * i_135_) {
             anInterface15_Impl1_6381.method56(-1696, i_135_);
         }
         return anInterface15_Impl1_6381;
@@ -1565,7 +1565,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         aClass336_Sub1_6269.method3888();
         aClass336_Sub1_6270.method3873(aClass336_Sub1_6269, (byte) 117);
         aClass336_Sub1_6268.method3873(aClass336_Sub1_6267, (byte) 127);
-        if (aClass56_6303.method566(48)) {
+        if (aClass56_6303.method566()) {
             method1305();
         }
     }
@@ -1809,7 +1809,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         anInt6190++;
         if (i > 0) System.arraycopy(node_sub29s, 0, aNode_Sub29Array6345, 0, i);
         anInt6358 = i;
-        if (aClass56_6303.method566(79)) {
+        if (aClass56_6303.method566()) {
             method1273(-36);
         }
     }
@@ -1949,7 +1949,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         if (aClass56_6303 != Class54.aClass56_823) {
             Class56 class56 = aClass56_6303;
             aClass56_6303 = Class54.aClass56_823;
-            if (class56.method566(115)) {
+            if (class56.method566()) {
                 method1305();
             }
             method1260();
@@ -2530,7 +2530,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         if (aClass56_6303 != Class274.aClass56_4971) {
             Class56 class56 = aClass56_6303;
             aClass56_6303 = Class274.aClass56_4971;
-            if (!class56.method566(121)) {
+            if (!class56.method566()) {
                 method1305();
             }
             method1256();
@@ -2633,7 +2633,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         if (Class133.aClass56_1686 != aClass56_6303) {
             Class56 class56 = aClass56_6303;
             aClass56_6303 = Class133.aClass56_1686;
-            if (class56.method566(70)) {
+            if (class56.method566()) {
                 method1305();
             }
             aFloatArray6314 = aFloatArray6305;

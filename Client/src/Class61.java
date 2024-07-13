@@ -144,7 +144,7 @@ public class Class61 {
         if (i > anInt902) {
             throw new IllegalStateException("s>cs");
         }
-        method605(l, -13068);
+        method605(l);
         anInt897 -= i;
         while (anInt897 < 0) {
             CacheNode_Sub20 cachenode_sub20 = (CacheNode_Sub20) aClass158_886.method1717(-120);
@@ -156,8 +156,8 @@ public class Class61 {
         cachenode_sub20_sub1.aLong7037 = 0L;
     }
 
-    final void method605(long l, int i) {
-        if (i == -13068) {
+    final void method605(long l) {
+        if (-13068 == -13068) {
             anInt887++;
             CacheNode_Sub20 cachenode_sub20 = (CacheNode_Sub20) aHashTable901.method1518(3512, l);
             method600(cachenode_sub20);

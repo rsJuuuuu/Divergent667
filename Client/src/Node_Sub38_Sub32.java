@@ -90,11 +90,8 @@ public class Node_Sub38_Sub32 extends Node_Sub38 {
         return is;
     }
 
-    static int method2894(int i, int i_15_, int i_16_, int i_17_) {
+    static int method2894(int i, int i_15_, int i_17_) {
         anInt10435++;
-        if (i_16_ != 929798380) {
-            return 77;
-        }
         if (i <= i_17_) {
             return Math.min(i_15_, i_17_);
         }
@@ -126,8 +123,8 @@ public class Node_Sub38_Sub32 extends Node_Sub38 {
         }
     }
 
-    final void method2785(int i) {
-        if (i != 7) {
+    final void method2785() {
+        if (7 != 7) {
             anInt10426 = 8;
         }
         anInt10431++;

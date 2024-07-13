@@ -239,7 +239,7 @@ public class Node_Sub16 extends Node {
                         }
                         break while_100_;
                     } while (false);
-                    if (class84.method989(2, i_28_, i_30_, i_33_, i_32_, i_26_, i_27_, 2883842)) {
+                    if (class84.method989(2, i_28_, i_30_, i_33_, i_32_, i_26_, i_27_)) {
                         Class315.anInt4033 = i_32_;
                         Class219.anInt2623 = i_33_;
                         return true;

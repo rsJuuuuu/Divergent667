@@ -217,7 +217,7 @@ public class GLXToolkit extends AbstractToolkit {
             OpenGL.glPopMatrix();
         }
         anInt9241++;
-        if (aClass56_6303.method566(107)) {
+        if (aClass56_6303.method566()) {
             if (!aBoolean9305) {
                 OpenGL.glLoadMatrixf(aClass336_Sub1_6269.method3884(Node_Sub38_Sub8.aFloatArray10162), 0);
                 aBoolean9305 = true;
@@ -653,7 +653,7 @@ public class GLXToolkit extends AbstractToolkit {
                 int i_34_ = 0;
                 int i_35_ = class51_sub1.method521();
                 long l = class51_sub1.method515();
-                class51_sub1.method518(97);
+                class51_sub1.method518();
                 for (int i_36_ = 0; class207.method2042() > i_36_; i_36_++) {
                     Class126 class126 = class207.method2044(i_36_);
                     if (class126 == Class126.aClass126_1620) {
@@ -1170,7 +1170,7 @@ public class GLXToolkit extends AbstractToolkit {
         }
         Class372 class372 = interface15_impl1.method55(-90);
         Class51_Sub2 class51_sub2 = (Class51_Sub2) interface15_impl1;
-        class51_sub2.method518(118);
+        class51_sub2.method518();
         OpenGL.glDrawElements(i_90_, i_91_, Class136.method1590(class372), class51_sub2.method515() + ((long) i_87_ * class372.anInt4591));
     }
 

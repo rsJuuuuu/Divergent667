@@ -173,7 +173,7 @@ public class Class34_Sub1 extends Class34 {
         return (int) node.aLong2797;
     }
 
-    final void method380(int i) {
+    final void method380() {
         anInt5532++;
         if (aClass312_5544 != null) {
             if (method374() == null) {
@@ -184,7 +184,7 @@ public class Class34_Sub1 extends Class34 {
                 for (Node node = aClass312_5544.method3613(); node != null; node = aClass312_5544.method3620(16776960)) {
                     int i_14_ = (int) node.aLong2797;
                     if (aByteArray5525[i_14_] == 0) {
-                        method383(i_14_, 1, -1);
+                        method383(i_14_, 1);
                     }
                     if (aByteArray5525[i_14_] == 0) {
                         bool = false;
@@ -201,7 +201,7 @@ public class Class34_Sub1 extends Class34 {
                             break;
                         }
                         if (aByteArray5525[anInt5542] == 0) {
-                            method383(anInt5542, 1, -1);
+                            method383(anInt5542, 1);
                         }
                         if (aByteArray5525[anInt5542] == 0) {
                             Node node = new Node();
@@ -221,7 +221,7 @@ public class Class34_Sub1 extends Class34 {
                 for (Node node = aClass312_5544.method3613(); node != null; node = aClass312_5544.method3620(16776960)) {
                     int i_13_ = (int) node.aLong2797;
                     if (aByteArray5525[i_13_] != 1) {
-                        method383(i_13_, 2, -1);
+                        method383(i_13_, 2);
                     }
                     if (aByteArray5525[i_13_] == 1) {
                         node.method2160((byte) 108);
@@ -238,7 +238,7 @@ public class Class34_Sub1 extends Class34 {
                             break;
                         }
                         if (aByteArray5525[anInt5542] != 1) {
-                            method383(anInt5542, 2, i - 1);
+                            method383(anInt5542, 2);
                         }
                         if (aByteArray5525[anInt5542] != 1) {
                             Node node = new Node();
@@ -271,9 +271,6 @@ public class Class34_Sub1 extends Class34 {
                 }
             }
             aLong5547 = 1000L + Class313.method3650();
-        }
-        if (i != 0) {
-            method380(-72);
         }
     }
 
@@ -308,7 +305,7 @@ public class Class34_Sub1 extends Class34 {
 
     final byte[] method373(int i, byte b) {
         anInt5513++;
-        CacheNode_Sub16 cachenode_sub16 = method383(i, 0, -1);
+        CacheNode_Sub16 cachenode_sub16 = method383(i, 0);
         if (cachenode_sub16 == null) {
             return null;
         }
@@ -320,9 +317,9 @@ public class Class34_Sub1 extends Class34 {
         return bs;
     }
 
-    private CacheNode_Sub16 method383(int i, int i_21_, int i_22_) {
+    private CacheNode_Sub16 method383(int i, int i_21_) {
         anInt5516++;
-        if (i_22_ != -1) {
+        if (-1 != -1) {
             return null;
         }
         CacheNode_Sub16 cachenode_sub16 = (CacheNode_Sub16) aHashTable5514.method1518(3512, i);
@@ -352,7 +349,7 @@ public class Class34_Sub1 extends Class34 {
                 if (aByteArray5525[i] != -1) {
                     throw new RuntimeException();
                 }
-                if (aClass266_5535.method3239(i_22_ ^ -256)) {
+                if (aClass266_5535.method3239(-1 ^ -256)) {
                     return null;
                 } else {
                     cachenode_sub16 = aClass266_5535.method3247(anInt5524, i, false, (byte) 2);
@@ -360,7 +357,7 @@ public class Class34_Sub1 extends Class34 {
             } else {
                 throw new RuntimeException();
             }
-            aHashTable5514.method1515(i, cachenode_sub16, i_22_ - 125);
+            aHashTable5514.method1515(i, cachenode_sub16, -1 - 125);
         }
         if (cachenode_sub16.aBoolean9602) {
             return null;
@@ -496,10 +493,10 @@ public class Class34_Sub1 extends Class34 {
                     node.method2160((byte) 98);
                 } else {
                     if (aByteArray5525[i] == 0) {
-                        method383(i, 1, -1);
+                        method383(i, 1);
                     }
                     if (aByteArray5525[i] == -1) {
-                        method383(i, 2, -1);
+                        method383(i, 2);
                     }
                     if (aByteArray5525[i] == 1) {
                         node.method2160((byte) 67);

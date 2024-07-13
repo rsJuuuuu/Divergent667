@@ -71,7 +71,7 @@ public class ClientScriptsExecutor {
     }
 
     static void parseIComponentScript(int i) {
-        if (i != -1 && CacheNode_Sub15.method2379(7015, i)) {
+        if (i != -1 && CacheNode_Sub15.method2379(i)) {
             IComponentDefinitions[] widgets = Class134_Sub3.aWidgetArrayArray9035[i];
             for (IComponentDefinitions widget : widgets) {
                 if (widget.anObjectArray4758 != null) {
@@ -897,7 +897,7 @@ public class ClientScriptsExecutor {
                 int i_51_ = anIntArray3840[--anInt3846];
                 int i_52_ = anIntArray3840[--anInt3846];
                 if (i_52_ >= 1 && i_52_ <= 10) {
-                    Objects.requireNonNull(widget).method4149(i_52_ - 1, i_51_, true);
+                    Objects.requireNonNull(widget).method4149(i_52_ - 1, i_51_);
                 }
                 return;
             }
@@ -1568,7 +1568,7 @@ public class ClientScriptsExecutor {
                     return;
                 }
                 if (i == 3201) {
-                    Class40.method432(255, 113, anIntArray3840[--anInt3846], 50);
+                    Class40.method432(255, anIntArray3840[--anInt3846], 50);
                     return;
                 }
                 if (i == 3202) {
@@ -1583,7 +1583,7 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 3204) {
                     anInt3846 -= 3;
-                    Class40.method432(anIntArray3840[anInt3846 + 1], 120, anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 2]);
+                    Class40.method432(anIntArray3840[anInt3846 + 1], anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 2]);
                     return;
                 }
                 if (i == 3205) {
@@ -1940,7 +1940,7 @@ public class ClientScriptsExecutor {
                     }
                     Class39 class39 = Class328.aClass362_4112.method4051(i_130_);
                     //		throw new RuntimeException();
-                    Node_Sub20 node_sub20 = class39.method420(string, (byte) 118);
+                    Node_Sub20 node_sub20 = class39.method420(string);
                     int i_131_ = 0;
                     if (node_sub20 != null) {
                         i_131_ = node_sub20.anIntArray7177.length;
@@ -1977,7 +1977,7 @@ public class ClientScriptsExecutor {
                     Class39 class39 = Class328.aClass362_4112.method4051(i_138_);
                     //throw new RuntimeException();
                     //throw new RuntimeException();
-                    Node_Sub20 node_sub20 = class39.method420(string, (byte) 119);
+                    Node_Sub20 node_sub20 = class39.method420(string);
                     if (i_139_ < 0 || node_sub20 == null || node_sub20.anIntArray7177.length <= i_139_) {
                         throw new RuntimeException();
                     }
@@ -2710,7 +2710,7 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 4107) {
                     anInt3841 -= 2;
-                    anIntArray3840[anInt3846++] = r.method2359(aStringArray3855[anInt3841 + 1], (byte) -4, Class35.language, aStringArray3855[anInt3841]);
+                    anIntArray3840[anInt3846++] = r.method2359(aStringArray3855[anInt3841 + 1], Class35.language, aStringArray3855[anInt3841]);
                     return;
                 }
                 if (i == 4108) {
@@ -3748,7 +3748,7 @@ public class ClientScriptsExecutor {
                 aClass16_3856 = new Class16();
                 aClass16_3856.anInt231 = anIntArray3840[--anInt3846];
                 aClass16_3856.aCacheNode_Sub10_229 = Node_Sub36_Sub1.aClass109_10035.method1128(aClass16_3856.anInt231);
-                aClass16_3856.anIntArray230 = new int[aClass16_3856.aCacheNode_Sub10_229.method2327((byte) 93)];
+                aClass16_3856.anIntArray230 = new int[aClass16_3856.aCacheNode_Sub10_229.method2327()];
                 return;
             }
             if (i == 5059) {
@@ -3831,14 +3831,14 @@ public class ClientScriptsExecutor {
             }
             if (i == 5066) {
                 int i_363_ = anIntArray3840[--anInt3846];
-                anIntArray3840[anInt3846++] = Node_Sub36_Sub1.aClass109_10035.method1128(i_363_).method2327((byte) 47);
+                anIntArray3840[anInt3846++] = Node_Sub36_Sub1.aClass109_10035.method1128(i_363_).method2327();
                 return;
             }
             if (i == 5067) {
                 anInt3846 -= 2;
                 int i_364_ = anIntArray3840[anInt3846];
                 int i_365_ = anIntArray3840[anInt3846 + 1];
-                int i_366_ = Objects.requireNonNull(Node_Sub36_Sub1.aClass109_10035.method1128(i_364_).method2324(117, i_365_)).anInt1844;
+                int i_366_ = Objects.requireNonNull(Node_Sub36_Sub1.aClass109_10035.method1128(i_364_).method2324(i_365_)).anInt1844;
                 anIntArray3840[anInt3846++] = i_366_;
                 return;
             }
@@ -3862,7 +3862,7 @@ public class ClientScriptsExecutor {
                 int i_372_ = anIntArray3840[anInt3846 + 1];
                 int i_373_ = anIntArray3840[anInt3846 + 2];
                 CacheNode_Sub10 cachenode_sub10 = Node_Sub36_Sub1.aClass109_10035.method1128(i_371_);
-                if (Objects.requireNonNull(cachenode_sub10.method2324(-30, i_372_)).anInt1844 != 0) {
+                if (Objects.requireNonNull(cachenode_sub10.method2324(i_372_)).anInt1844 != 0) {
                     throw new RuntimeException("bad command");
                 }
                 anIntArray3840[anInt3846++] = cachenode_sub10.method2326(i_372_, i_373_);

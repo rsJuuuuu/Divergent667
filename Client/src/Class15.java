@@ -57,16 +57,13 @@ public class Class15 {
         XTEA_KEYS = null;
     }
 
-    final void method219(int i, ClanChat clanchat) {
+    final void method219(ClanChat clanchat) {
         anInt227++;
         if (clanchat.aLong747 != aLong223 || clanchat.anInt757 != anInt226) {
-            throw new RuntimeException("ClanSettingsDelta.applyToClanSettings(): Credentials do not match! Settings.owner:" + Class154.method1699(clanchat.aLong747, i + 25589) + " updateNum:" + clanchat.anInt757 + " delta.owner:" + Class154.method1699(aLong223, 25589) + " updateNum:" + anInt226);
-        }
-        if (i != 0) {
-            method219(119, null);
+            throw new RuntimeException("ClanSettingsDelta.applyToClanSettings(): Credentials do not match! Settings.owner:" + Class154.method1699(clanchat.aLong747) + " updateNum:" + clanchat.anInt757 + " delta.owner:" + Class154.method1699(aLong223) + " updateNum:" + anInt226);
         }
         for (Node_Sub15 node_sub15 = (Node_Sub15) aClass312_222.method3613(); node_sub15 != null; node_sub15 = (Node_Sub15) aClass312_222.method3620(16776960))
-            node_sub15.method2556(clanchat, i + 16);
+            node_sub15.method2556(clanchat, 16);
         clanchat.anInt757++;
     }
 

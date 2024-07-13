@@ -27,8 +27,8 @@ abstract class Class328 {
         int i_18_ = (i_5_ + 1) * i_15_;
         int i_19_ = (i_6_ - 1) * i_14_;
         if (i >= Class384.anInt4906 && Node_Sub25_Sub1.anInt9936 >= i) {
-            int i_20_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_0_ + i_3_);
-            int i_21_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_0_ + i_3_);
+            int i_20_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_0_ + i_3_);
+            int i_21_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, -i_0_ + i_3_);
             Class369.method4086(i_20_, i_4_, i_21_, Class169_Sub4.anIntArrayArray8826[i], 0);
         }
         while (i_6_ > 0) {
@@ -56,8 +56,8 @@ abstract class Class328 {
             int i_22_ = i - i_6_;
             int i_23_ = i + i_6_;
             if (i_23_ >= Class384.anInt4906 && Node_Sub25_Sub1.anInt9936 >= i_22_) {
-                int i_24_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_3_ + i_5_);
-                int i_25_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i_5_ + i_3_);
+                int i_24_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_3_ + i_5_);
+                int i_25_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, -i_5_ + i_3_);
                 if (Class384.anInt4906 <= i_22_) {
                     Class369.method4086(i_24_, i_4_, i_25_, Class169_Sub4.anIntArrayArray8826[i_22_], 0);
                 }
@@ -95,7 +95,7 @@ abstract class Class328 {
         String string = null;
         if (Class143.aByteArray1773 != null) {
             BufferedStream buffer = new BufferedStream(Class143.aByteArray1773);
-            string = Class154.method1699(buffer.readLong(), 25589);
+            string = Class154.method1699(buffer.readLong());
             Class188_Sub1_Sub2.aLong9342 = buffer.readLong();
         }
         if (string == null) {

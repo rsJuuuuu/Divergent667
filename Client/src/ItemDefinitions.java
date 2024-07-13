@@ -548,21 +548,21 @@ public class ItemDefinitions {
         if (anInt1857 != -1) {
             glsprite = aClass86_1868.method1002(1, graphicstoolkit_33_,
                     graphicstoolkit, playerdefinition, true, 0, 10, true, 0,
-                    class52, anInt1887, -16139);
+                    class52, anInt1887);
             if (glsprite == null) {
                 return null;
             }
         } else if (anInt1852 != -1) {
             glsprite = aClass86_1868.method1002(i_34_, graphicstoolkit_33_,
                     graphicstoolkit, playerdefinition, true, i_32_, i_31_,
-                    false, 0, class52, anInt1927, -16139);
+                    false, 0, class52, anInt1927);
             if (glsprite == null) {
                 return null;
             }
         } else if (anInt1928 != -1) {
             glsprite = aClass86_1868.method1002(i_34_, graphicstoolkit_33_,
                     graphicstoolkit, playerdefinition, true, i_32_, i_31_,
-                    false, 0, class52, anInt1891, -16139);
+                    false, 0, class52, anInt1891);
             if (glsprite == null) {
                 return null;
             }

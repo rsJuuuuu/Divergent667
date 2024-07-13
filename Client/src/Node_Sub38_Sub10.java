@@ -27,7 +27,7 @@ public class Node_Sub38_Sub10 extends Node_Sub38 {
                 int i_9_ = Class122.anIntArray1556[i_6_] * i_7_ >> 12;
                 int i_10_ = Class303.anInt3824 & i_5_ + (i_8_ >> 12);
                 int i_11_ = r_Sub2.anInt11054 & (i_9_ >> 12) + i;
-                int[][] is_12_ = this.method2777(-81, 0, i_11_);
+                int[][] is_12_ = this.method2777(0, i_11_);
                 is_2_[i_5_] = is_12_[0][i_10_];
                 is_3_[i_5_] = is_12_[1][i_10_];
                 is_4_[i_5_] = is_12_[2][i_10_];
@@ -89,9 +89,9 @@ public class Node_Sub38_Sub10 extends Node_Sub38 {
         return is;
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         Node_Sub37.method2772((byte) 54);
-        if (i == 7) {
+        if (7 == 7) {
             anInt10199++;
         }
     }

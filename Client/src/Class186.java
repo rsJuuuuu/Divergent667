@@ -116,7 +116,7 @@ public class Class186 {
     Class186(Class353 class353, int i, Index class302, Index class302_7_) {
         aClass302_2251 = class302;
         aClass302_2260 = class302_7_;
-        aClass302_2251.method3537(-2, 46);
+        aClass302_2251.method3537(46);
     }
 
     static {

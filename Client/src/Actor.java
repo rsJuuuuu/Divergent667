@@ -388,7 +388,7 @@ abstract class Actor extends Mobile {
         return i_33_;
     }
 
-    abstract int method855(byte b);
+    abstract int method855();
 
     final void method856(int i) {
         anInt10859++;
@@ -826,7 +826,7 @@ abstract class Actor extends Mobile {
         return false;
     }
 
-    abstract Class59 method869(int i);
+    abstract Class59 method869();
 
     final void method870(GraphicsToolkit graphicstoolkit, byte b, boolean bool, DrawableModel[] drawablemodels, Class336 class336) {
         if (bool) {

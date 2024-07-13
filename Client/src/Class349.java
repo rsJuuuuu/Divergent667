@@ -67,9 +67,9 @@ public class Class349 {
         Class175.aClass261ArrayArrayArray2099[3][i][i_0_] = null;
     }
 
-    static void method3985(IComponentDefinitions widget, int i, int i_3_, int i_4_) {
+    static void method3985(IComponentDefinitions widget, int i, int i_4_) {
         anInt4317++;
-        Class127 class127 = widget.method4145(Class93.aGraphicsToolkit1241, i_3_);
+        Class127 class127 = widget.method4145(Class93.aGraphicsToolkit1241);
         if (class127 != null) {
             Class93.aGraphicsToolkit1241.KA(i, i_4_, i + widget.anInt4809, i_4_ + widget.anInt4695);
             if (Class262_Sub20.anInt7861 >= 3) {
@@ -98,8 +98,7 @@ public class Class349 {
                 }
                 i_7_ += -128 + i_6_;
             }
-            if (aClass169_Sub2_4310 != null && i == anInt4308) {
-            } else {
+            if (aClass169_Sub2_4310 == null || i != anInt4308) {
                 anInt4308 = i;
                 int i_10_ = 0;
                 i_7_ = i_6_ * anInt4314 + anInt4318;
@@ -143,12 +142,12 @@ public class Class349 {
         method3983(anInt4315, anInterface1_4313);
     }
 
-    static boolean method3988(byte b, int i, int i_15_) {
+    static boolean method3988(int i_15_) {
         anInt4309++;
         return (i_15_ & 0x21) != 0;
     }
 
-    static int method3989(int i, byte b) {
+    static int method3989(int i) {
         anInt4301++;
         if (i == 6406) {
             return 1;
@@ -166,9 +165,6 @@ public class Class349 {
             if (i == 6408) {
                 return 4;
             }
-        }
-        if (b >= -31) {
-            method3985(null, 41, 79, -103);
         }
         throw new IllegalArgumentException("");
     }

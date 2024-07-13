@@ -132,9 +132,9 @@ public class Node_Sub6 extends Node {
                                 continue;
                             }
                             if (widget.anInt4814 == Class264.anInt3355 && aa.anInt101 == 0) {
-                                if (widget.method4145(Class93.aGraphicsToolkit1241, 1) != null) {
+                                if (widget.method4145(Class93.aGraphicsToolkit1241) != null) {
                                     CacheNode_Sub16_Sub1.method2387();
-                                    Class19.method268(i_15_, Class93.aGraphicsToolkit1241, 128, widget, i_14_);
+                                    Class19.method268(i_15_, Class93.aGraphicsToolkit1241, widget, i_14_);
                                     Class320_Sub21.aBooleanArray8403[i_13_] = true;
                                     Class93.aGraphicsToolkit1241.KA(i_1_, i_2_, i_6_, i_3_);
                                     if (Class71.aBoolean967) {
@@ -156,8 +156,8 @@ public class Node_Sub6 extends Node {
                                 continue;
                             }
                             if (Class114.anInt1462 == widget.anInt4814) {
-                                if (widget.method4145(Class93.aGraphicsToolkit1241, 1) != null) {
-                                    Class349.method3985(widget, i_14_, 1, i_15_);
+                                if (widget.method4145(Class93.aGraphicsToolkit1241) != null) {
+                                    Class349.method3985(widget, i_14_, i_15_);
                                     Class320_Sub21.aBooleanArray8403[i_13_] = true;
                                     Class93.aGraphicsToolkit1241.KA(i_1_, i_2_, i_6_, i_3_);
                                     if (Class71.aBoolean967) {
@@ -342,7 +342,7 @@ public class Node_Sub6 extends Node {
                                     if (Class204.aBoolean2454) {
                                         Class93.aGraphicsToolkit1241.T(i_14_, i_15_, i_14_ + widget.anInt4809, widget.anInt4695 + i_15_);
                                     }
-                                    class52.method539(widget.anInt4825, 2, i_44_ | -(i_18_ & 0xff) + 255 << 24, widget.aBoolean4710 ? -(0xff & i_18_) + 255 << 24 : -1, Node_Sub52.aGLSpriteArray7655, widget.anInt4767, 0, i_15_, widget.anInt4695, 0, null, widget.anInt4697, widget.anInt4809, i_14_, widget.anInt4835, string);
+                                    class52.method539(widget.anInt4825, i_44_ | -(i_18_ & 0xff) + 255 << 24, widget.aBoolean4710 ? -(0xff & i_18_) + 255 << 24 : -1, Node_Sub52.aGLSpriteArray7655, widget.anInt4767, 0, i_15_, widget.anInt4695, 0, null, widget.anInt4697, widget.anInt4809, i_14_, widget.anInt4835, string);
                                     if (Class204.aBoolean2454) {
                                         Class93.aGraphicsToolkit1241.KA(i_1_, i_2_, i_6_, i_3_);
                                     }
@@ -358,7 +358,7 @@ public class Node_Sub6 extends Node {
                                         } else {
                                             Class357 class357 = Class150_Sub2.method1660((byte) -30, widget.anInt4759, Class93.aGraphicsToolkit1241);
                                             int i_45_ = Objects.requireNonNull(class357).method4030(Node_Sub52.aGLSpriteArray7655, string, widget.anInt4809);
-                                            int i_46_ = class357.method4034(widget.anInt4809, widget.anInt4697, string, Node_Sub52.aGLSpriteArray7655, (byte) -65);
+                                            int i_46_ = class357.method4034(widget.anInt4809, widget.anInt4697, string, Node_Sub52.aGLSpriteArray7655);
                                             if (Class71.aBoolean967) {
                                                 if (bool) {
                                                     Class362.method4053(i_15_, i_15_ + i_46_, i_14_, (byte) -71, i_14_ + i_45_);

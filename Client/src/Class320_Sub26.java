@@ -67,7 +67,7 @@ public class Class320_Sub26 extends Class320 {
         }
         if (Class262_Sub15.anAnimableArray7817 != null) {
             Arrays.fill(Class262_Sub15.anAnimableArray7817, null);
-            Class348.anInt4290 = 0;
+            Class348.animablesInArray7817 = 0;
         }
         if (Class143.aClass326Array1771 != null) {
             for (int i = 0; i < Class188_Sub1_Sub1.anInt9337; i++)

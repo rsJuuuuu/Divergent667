@@ -152,7 +152,7 @@ public class Class112 {
         aBoolean1431 = true;
         if (aClass302_1430 != null) {
             int i_5_ = -1 + aClass302_1430.method3526();
-            aClass302_1430.method3537(-2, i_5_);
+            aClass302_1430.method3537(i_5_);
         }
         if (Node_Sub38_Sub34.aClass353_10443 == class353) {
             aStringArray1438 = new String[]{null, null, null, null, null, Translation.aTranslation_385.getTranslatedString(i)};

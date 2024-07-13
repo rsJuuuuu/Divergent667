@@ -76,10 +76,10 @@ public class Class109 {
         aClass302_1368 = class302;
         aClass302_1375 = class302_0_;
         if (aClass302_1368 != null) {
-            anInt1373 = aClass302_1368.method3537(-2, 1);
+            anInt1373 = aClass302_1368.method3537(1);
         }
         if (aClass302_1375 != null) {
-            anInt1369 = aClass302_1375.method3537(-2, 1);
+            anInt1369 = aClass302_1375.method3537(1);
         }
     }
 }

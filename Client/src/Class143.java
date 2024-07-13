@@ -32,7 +32,7 @@ public class Class143 {
         node_sub38_sub27.anInt10384 = 8;
         node_sub38_sub27.anInt10390 = 8;
         node_sub38_sub27.anInt10382 = 4;
-        node_sub38_sub27.method2785(7);
+        node_sub38_sub27.method2785();
         Class169_Sub1.method1769(1, 2048);
         node_sub38_sub27.method2880(0, is, -92);
         return is;

@@ -440,7 +440,7 @@ public class StandardSprite extends GLSprite {
             method1215(88, -128, -104);
         }
         anInt8917++;
-        return !(!((0x70000 & i_87_) != 0 | Class349.method3988((byte) -104, i_86_, i_87_)) && !OutcommingPacket.method3669(i_87_, (byte) 112, i_86_));
+        return !(!((0x70000 & i_87_) != 0 | Class349.method3988(i_87_)) && !OutcommingPacket.method3669(i_87_, (byte) 112, i_86_));
     }
 
     final void method1188(float f, float f_88_, float f_89_, float f_90_, float f_91_, float f_92_, aa var_aa, int i_93_, int i_94_) {

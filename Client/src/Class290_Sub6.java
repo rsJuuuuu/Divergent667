@@ -62,10 +62,10 @@ public class Class290_Sub6 extends Class290 {
         anInt8121++;
         if (Class118.anInt5405 == 0) {
             Class298.aClass298_3714.method3484(new Class45("jaclib"));
-            if (Class298.aClass298_3714.method3483((byte) -110).method35(-58) != 100) {
+            if (Class298.aClass298_3714.method3483((byte) -110).method35() != 100) {
                 return 1;
             }
-            if (!((Class45) Class298.aClass298_3714.method3483((byte) -125)).method464()) {
+            if (((Class45) Class298.aClass298_3714.method3483((byte) -125)).method464()) {
                 Class158.aClient1983.method96();
             }
             Class118.anInt5405 = 1;
@@ -107,7 +107,7 @@ public class Class290_Sub6 extends Class290 {
             Class298[] class298s = GLToolkit.aClass298Array6403;
             for (Class298 class298 : class298s) {
                 int i_5_ = class298.method3485();
-                int i_6_ = class298.method3483((byte) -127).method35(-34);
+                int i_6_ = class298.method3483((byte) -127).method35();
                 i_3_ += i_6_ * i_5_ / 100;
             }
             Class209.anInt2493 = i_3_;
@@ -122,7 +122,7 @@ public class Class290_Sub6 extends Class290 {
         Class298[] class298s = GLToolkit.aClass298Array6403;
         for (Class298 class298 : class298s) {
             int i_10_ = class298.method3485();
-            int i_11_ = class298.method3483((byte) -106).method35(-13);
+            int i_11_ = class298.method3483((byte) -106).method35();
             i_8_ += i_10_ * i_11_ / 100;
             if (i_11_ < 100) {
                 bool = false;
@@ -130,10 +130,10 @@ public class Class290_Sub6 extends Class290 {
             i_7_ += i_10_;
         }
         if (bool) {
-            if (!((Class45) Class298.aClass298_3717.method3483((byte) -106)).method464()) {
+            if (((Class45) Class298.aClass298_3717.method3483((byte) -106)).method464()) {
                 Class158.aClient1983.method86();
             }
-            if (!((Class45) Class298.aClass298_3720.method3483((byte) -121)).method464()) {
+            if (((Class45) Class298.aClass298_3720.method3483((byte) -121)).method464()) {
                 Class235_Sub1.aBoolean8975 = Class158.aClient1983.method103();
             }
             GLToolkit.aClass298Array6403 = null;

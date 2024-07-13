@@ -53,7 +53,7 @@ public class OutcommingPacket {
             return false;
         }
         anInt4052++;
-        return (Class349.method3988((byte) -111, i_0_, i) | Node_Sub38_Sub4.method2797(i_0_, i) | Class179.method1816(i, -1, i_0_)) & Animable_Sub4_Sub1.method931(i, i_0_);
+        return (Class349.method3988(i) | Node_Sub38_Sub4.method2797(i_0_, i) | Class179.method1816(i, -1, i_0_)) & Animable_Sub4_Sub1.method931(i, i_0_);
     }
 
     public static void method3670() {

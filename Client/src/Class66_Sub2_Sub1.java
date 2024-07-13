@@ -26,8 +26,8 @@ public class Class66_Sub2_Sub1 extends Class66_Sub2 {
     static void method727(int i, int i_7_, int i_8_, int i_10_) {
         anInt10580++;
         if (i >= Class262_Sub4.anInt7722 && i <= za_Sub2.anInt10513) {
-            i_8_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_8_);
-            i_10_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_10_);
+            i_8_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_8_);
+            i_10_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_10_);
             Class50.method511(i_10_, i_8_, i_7_, i);
         }
     }

@@ -121,7 +121,7 @@ public class Class58 {
 
     Class58(Class353 class353, int i, Index class302) {
         aClass302_860 = class302;
-        aClass302_860.method3537(-2, 1);
+        aClass302_860.method3537(1);
     }
 
     final void method580() {

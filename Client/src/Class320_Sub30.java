@@ -79,7 +79,7 @@ public class Class320_Sub30 extends Class320 {
         if (Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751() == 0 && CacheNode_Sub20_Sub1.myPlayerPlane != Class94.anInt1249) {
             Class364.method4057(false, Player.anInt11178, 12, Class277.anInt3527);
         } else {
-            Class56.method563(-27770, Class93.aGraphicsToolkit1241);
+            Class56.method563(Class93.aGraphicsToolkit1241);
             if (Node_Sub36_Sub3.anInt10061 != CacheNode_Sub20_Sub1.myPlayerPlane) {
                 Class46.method471();
             }

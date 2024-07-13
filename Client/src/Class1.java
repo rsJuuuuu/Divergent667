@@ -101,7 +101,7 @@ public class Class1 {
         if (b > -11) {
             anIntArray109 = null;
         }
-        Class311.method3606(ses, 0, ses_9_, 0, i);
+        Class311.method3606(ses, ses_9_, i);
         return ses_9_;
     }
 

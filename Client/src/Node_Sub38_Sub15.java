@@ -142,8 +142,8 @@ public class Node_Sub38_Sub15 extends Node_Sub38 {
         return is;
     }
 
-    final void method2785(int i) {
-        if (i != 7) {
+    final void method2785() {
+        if (7 != 7) {
             method2775(73, -102);
         }
         Node_Sub37.method2772((byte) 54);

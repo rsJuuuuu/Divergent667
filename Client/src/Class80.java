@@ -84,10 +84,7 @@ public class Class80 implements Interface15_Impl2 {
         return aByte9079;
     }
 
-    public final int method57(byte b) {
-        if (b >= -56) {
-            return 17;
-        }
+    public final int method57() {
         return anInt9076;
     }
 

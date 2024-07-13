@@ -267,7 +267,7 @@ public class Node_Sub20 extends Node {
             int i_24_ = -(i_17_ * i_21_) + i_15_ * i_22_ >> 14;
             int i_25_ = class357.method4030(null, string, 100);
             i_23_ -= i_25_ / 2;
-            int i_26_ = class357.method4034(100, 0, string, null, (byte) -35);
+            int i_26_ = class357.method4034(100, 0, string, null);
             if (i_23_ >= -widget.anInt4809 && i_23_ <= widget.anInt4809 && i_24_ >= -widget.anInt4695 && i_24_ <= widget.anInt4695) {
                 class52.method535(i_16_, i_13_, string, var_aa, -i_24_ + (widget.anInt4695 / 2 + (i_16_ - i_14_ - i_26_)), 0, 101, i, 1, widget.anInt4809 / 2 + (i_23_ + i), 0, 0, i_25_, 50);
             }

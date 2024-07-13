@@ -242,8 +242,8 @@ public class Class93_Sub2 extends Class93 implements MouseListener, MouseMotionL
         aClass312_6069.method3614();
     }
 
-    Class93_Sub2(Component component, boolean bool) {
+    Class93_Sub2(Component component) {
         method1059(component);
-        aBoolean6074 = bool;
+        aBoolean6074 = true;
     }
 }

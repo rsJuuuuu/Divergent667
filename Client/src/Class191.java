@@ -20,7 +20,7 @@ public class Class191 {
     static boolean method1944(int i) {
         anInt2346++;
         if (Class3.anInt5161 != i || ClientScript.aClass216_9498 == null) {
-            ProducingGraphicsBuffer.method2601(-85);
+            ProducingGraphicsBuffer.method2601();
             Class3.anInt5161 = i;
             ClientScript.aClass216_9498 = Class216.aClass216_2546;
         }

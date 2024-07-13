@@ -56,7 +56,7 @@ public class ClanChat {
     protected byte[] aByteArray770;
     private int[] anIntArray771;
 
-    final int method486(int i, int i_0_, int i_1_, int i_2_) {
+    final void method486(int i, int i_0_, int i_1_, int i_2_) {
         anInt743++;
         int i_4_ = (1 << i_2_) - 1;
         int i_5_ = i_1_ == 31 ? -1 : -1 + (1 << i_1_ + 1);
@@ -65,11 +65,10 @@ public class ClanChat {
         i &= i_6_;
         int i_7_ = anIntArray754[i_0_];
         if (i == (i_6_ & i_7_)) {
-            return -1;
+            return;
         }
         i_7_ &= ~i_6_;
         anIntArray754[i_0_] = Node_Sub16.method2590(i_7_, i);
-        return i_0_;
     }
 
     private void method487(int i) {

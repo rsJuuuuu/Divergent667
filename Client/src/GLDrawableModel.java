@@ -2193,7 +2193,7 @@ public class GLDrawableModel extends DrawableModel {
         } else {
             gldrawablemodel_505_.aBoolean5599 = true;
         }
-        boolean bool_506_ = Class349.method3988((byte) 72, anInt5653, i_504_);
+        boolean bool_506_ = Class349.method3988(i_504_);
         boolean bool_507_ = Node_Sub38_Sub4.method2797(anInt5653, i_504_);
         boolean bool_508_ = Class179.method1816(i_504_, -1, anInt5653);
         boolean bool_509_ = bool_508_ | (bool_507_ | bool_506_);

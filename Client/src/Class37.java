@@ -35,7 +35,7 @@ public class Class37 {
         if (bs != null) {
             class48.method477(new BufferedStream(bs));
         }
-        class48.method476(2);
+        class48.method476();
         synchronized (aClass61_551) {
             aClass61_551.method601(class48, 25566, i);
             if (b >= -78) {
@@ -154,7 +154,7 @@ public class Class37 {
         aClass302_559 = class302;
         if (aClass302_559 != null) {
             int i_8_ = -1 + aClass302_559.method3526();
-            aClass302_559.method3537(-2, i_8_);
+            aClass302_559.method3537(i_8_);
         }
         Class345.method3971(class302_7_, class302_6_);
     }

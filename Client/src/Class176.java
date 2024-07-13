@@ -40,6 +40,6 @@ public class Class176 {
 
     Class176(Class353 class353, int i, Index class302) {
         aClass302_2101 = class302;
-        anInt2105 = aClass302_2101.method3537(-2, 19);
+        anInt2105 = aClass302_2101.method3537(19);
     }
 }

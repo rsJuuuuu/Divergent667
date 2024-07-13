@@ -94,7 +94,7 @@ public class Class339_Sub7 extends Class339 {
             Class381.method4173(i_2_, i_3_, actor, (byte) -93, i_5_ >> 1, actor.method850((byte) 77), i_1_ >> 1);
             if (Class119.anIntArray1516[0] >= 0) {
                 if (actor.method862()) {
-                    Class59 class59 = actor.method869(-3109);
+                    Class59 class59 = actor.method869();
                     if (class59 != null && Node_Sub36_Sub2.anInt10042 > Node_Sub37.anInt7445) {
                         Node_Sub36_Sub2.anIntArray10052[Node_Sub37.anInt7445] = Class262_Sub15_Sub1.aClass357_10524.method4033(class59.method587(-102)) / 2;
                         Node_Sub36_Sub2.anIntArray10051[Node_Sub37.anInt7445] = Class119.anIntArray1516[0];

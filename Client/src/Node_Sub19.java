@@ -28,19 +28,19 @@ public class Node_Sub19 extends Node {
 
     static void method2608(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
         anInt7158++;
-        int i_5_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_0_);
-        int i_6_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_2_);
-        int i_7_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_3_);
-        int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_1_);
-        int i_9_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_0_ + i);
-        int i_10_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, 929798380, i_2_ - i);
+        int i_5_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_0_);
+        int i_6_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_2_);
+        int i_7_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_3_);
+        int i_8_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_1_);
+        int i_9_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_0_ + i);
+        int i_10_ = Node_Sub38_Sub32.method2894(Class384.anInt4906, Node_Sub25_Sub1.anInt9936, i_2_ - i);
         int i_11_ = i_5_;
         for (/**/; i_11_ < i_9_; i_11_++)
             Class369.method4086(i_8_, i_4_, i_7_, Class169_Sub4.anIntArrayArray8826[i_11_], 0);
         for (int i_12_ = i_6_; i_10_ < i_12_; i_12_--)
             Class369.method4086(i_8_, i_4_, i_7_, Class169_Sub4.anIntArrayArray8826[i_12_], 0);
-        int i_13_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, i_3_ + i);
-        int i_14_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, 929798380, -i + i_1_);
+        int i_13_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, i_3_ + i);
+        int i_14_ = Node_Sub38_Sub32.method2894(Class262_Sub4.anInt7722, za_Sub2.anInt10513, -i + i_1_);
         for (int i_15_ = i_9_; i_10_ >= i_15_; i_15_++) {
             int[] is = Class169_Sub4.anIntArrayArray8826[i_15_];
             Class369.method4086(i_13_, i_4_, i_7_, is, 0);

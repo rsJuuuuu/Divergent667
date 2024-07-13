@@ -90,7 +90,7 @@ class Class194 {
         }
     }
 
-    static void method1962(int i, int i_9_, int i_10_, int i_11_, int i_12_, boolean bool) {
+    static void method1962(int i_9_, int i_10_, int i_11_, int i_12_, boolean bool) {
         anInt2371++;
         if (i_11_ > 13) {
             if (DrawableModel.aFrame907 != null && (i_10_ != 3 || Node_Sub38_Sub15.anInt10263 != i_12_ || Node_Sub10.anInt7083 != i_9_)) {
@@ -98,7 +98,7 @@ class Class194 {
                 DrawableModel.aFrame907 = null;
             }
             if (i_10_ == 3 && DrawableModel.aFrame907 == null) {
-                DrawableModel.aFrame907 = r_Sub2.method2371(0, Class240.aSignLink2946, -28769, i_9_, i_12_, 0);
+                DrawableModel.aFrame907 = r_Sub2.method2371(Class240.aSignLink2946, i_9_, i_12_);
                 if (DrawableModel.aFrame907 != null) {
                     Node_Sub38_Sub15.anInt10263 = i_12_;
                     Node_Sub10.anInt7083 = i_9_;
@@ -106,7 +106,7 @@ class Class194 {
                 }
             }
             if (i_10_ == 3 && DrawableModel.aFrame907 == null) {
-                method1962(i, -1, Class213.aNode_Sub27_2512.aClass320_Sub1_7287.method3678(), 43, -1, true);
+                method1962(-1, Class213.aNode_Sub27_2512.aClass320_Sub1_7287.method3678(), 43, -1, true);
             } else {
                 java.awt.Container container;
                 if (DrawableModel.aFrame907 == null) {

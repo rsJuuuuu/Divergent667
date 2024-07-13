@@ -134,11 +134,11 @@ public class Node_Sub38_Sub11 extends Node_Sub38 {
         anInt10216++;
     }
 
-    final void method2785(int i) {
-        if (i != 7) {
+    final void method2785() {
+        if (7 != 7) {
             method2780(true, null, 83);
         }
-        method2827(i + 25421);
+        method2827(7 + 25421);
         anInt10200++;
     }
 

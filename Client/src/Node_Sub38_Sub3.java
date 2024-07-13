@@ -22,7 +22,7 @@ public class Node_Sub38_Sub3 extends Node_Sub38 {
         anInt10098++;
         int[][] is = aClass348_7454.method3981(i);
         if (aClass348_7454.aBoolean4300) {
-            int[][] is_0_ = this.method2777(-63, 0, i);
+            int[][] is_0_ = this.method2777(0, i);
             int[] is_1_ = is_0_[0];
             int[] is_2_ = is_0_[1];
             int[] is_3_ = is_0_[2];

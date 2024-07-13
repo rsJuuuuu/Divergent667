@@ -125,34 +125,12 @@ public class Class311 {
             objects_6_[i_7_++] = objects[i++];
     }
 
-    static void method3606(short[] ses, int i, short[] ses_9_, int i_10_, int i_11_) {
+    static void method3606(short[] ses, short[] ses_9_, int i_11_) {
+        int i = 0;
+        int i_10_ = 0;
         if (ses == ses_9_) {
-            if (i == i_10_) {
-                return;
-            }
-            if (i_10_ > i && i_10_ < i + i_11_) {
-                i_11_--;
-                i += i_11_;
-                i_10_ += i_11_;
-                i_11_ = i - i_11_;
-                i_11_ += 7;
-                while (i >= i_11_) {
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                    ses_9_[i_10_--] = ses[i--];
-                }
-                i_11_ -= 7;
-                while (i >= i_11_)
-                    ses_9_[i_10_--] = ses[i--];
-                return;
-            }
+            return;
         }
-        i_11_ += i;
         i_11_ -= 7;
         while (i < i_11_) {
             ses_9_[i_10_++] = ses[i++];

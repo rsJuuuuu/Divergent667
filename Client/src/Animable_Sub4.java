@@ -59,7 +59,7 @@ abstract class Animable_Sub4 extends Animable {
             return null;
         }
         OpenGL.glBindProgramARB(i, 0);
-        return new Class50(gltoolkit, i, i_3_);
+        return new Class50(gltoolkit, i_3_);
     }
 
     final boolean method821(int i) {

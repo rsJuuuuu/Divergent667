@@ -8,13 +8,10 @@ public class Class108 implements Interface12 {
     static int anInt5284;
     private final Index aClass302_5285;
 
-    public final int method35(int i) {
+    public final int method35() {
         anInt5282++;
         if (aClass302_5285.method3520()) {
             return 100;
-        }
-        if (i >= -4) {
-            method35(-87);
         }
         return aClass302_5285.method3511(19492);
     }

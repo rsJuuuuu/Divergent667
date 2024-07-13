@@ -346,13 +346,13 @@ public class Node_Sub38_Sub14 extends Node_Sub38 {
         }
     }
 
-    final void method2785(int i) {
+    final void method2785() {
         anInt10246++;
         if (anIntArrayArray10248 == null) {
             method2833(1, (byte) -86);
         }
         method2836();
-        if (i != 7) {
+        if (7 != 7) {
             aWidget10244 = null;
         }
     }

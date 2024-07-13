@@ -90,6 +90,6 @@ public class Class239 {
     Class239(Class353 class353, int i, Index class302, Index class302_2_) {
         aClass302_2918 = class302_2_;
         aClass302_2923 = class302;
-        aClass302_2923.method3537(-2, 33);
+        aClass302_2923.method3537(33);
     }
 }

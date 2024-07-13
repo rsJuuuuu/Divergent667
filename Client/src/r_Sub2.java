@@ -315,36 +315,32 @@ public class r_Sub2 extends r {
         }
     }
 
-    static Frame method2371(int i, SignLink signlink, int i_9_, int i_10_, int i_11_, int i_12_) {
+    static Frame method2371(SignLink signlink, int i_10_, int i_11_) {
+        int i = 0;
         anInt11060++;
-        if (!signlink.method3640(i_9_ + 28892)) {
+        if (!signlink.method3640(-28769 + 28892)) {
             return null;
         }
-        if (i == 0) {
-            Class244[] class244s = Node_Sub38_Sub34.method2901(signlink, true);
-            if (class244s == null) {
-                return null;
-            }
-            boolean bool = false;
-            for (Class244 class244 : class244s) {
-                if (class244.anInt3084 == i_11_ && class244.anInt3078 == i_10_ && (i_12_ == 0 || i_12_ == class244.anInt3077) && (!bool || class244.anInt3079 > i)) {
-                    bool = true;
-                    i = class244.anInt3079;
-                }
-            }
-            if (!bool) {
-                return null;
+        Class244[] class244s = Node_Sub38_Sub34.method2901(signlink, true);
+        if (class244s == null) {
+            return null;
+        }
+        boolean bool = false;
+        for (Class244 class244 : class244s) {
+            if (class244.anInt3084 == i_11_ && class244.anInt3078 == i_10_ && (!bool || class244.anInt3079 > i)) {
+                bool = true;
+                i = class244.anInt3079;
             }
         }
-        Class241 class241 = signlink.method3627(i, i_10_, i_11_, i_12_);
+        if (!bool) {
+            return null;
+        }
+        Class241 class241 = signlink.method3627(i, i_10_, i_11_);
         while (class241.anInt2953 == 0)
             Class262_Sub22.method3208(10L);
         Frame frame = (Frame) class241.anObject2956;
         if (frame == null) {
             return null;
-        }
-        if (i_9_ != -28769) {
-            method2376();
         }
         if (class241.anInt2953 == 2) {
             Node_Sub25_Sub4.method2679(signlink, frame);
@@ -448,7 +444,7 @@ public class r_Sub2 extends r {
                 }
             }
             if (Class144.anIntArray1789[i_26_] != -1 && FileOnDisk.aByteArrayArray1331[i_26_] == null) {
-                FileOnDisk.aByteArrayArray1331[i_26_] = Animable_Sub1_Sub1.aClass302_10618.method3512(Class15.XTEA_KEYS[i_26_], 0, -114, Class144.anIntArray1789[i_26_]);
+                FileOnDisk.aByteArrayArray1331[i_26_] = Animable_Sub1_Sub1.aClass302_10618.method3512(Class15.XTEA_KEYS[i_26_], 0, Class144.anIntArray1789[i_26_]);
                 if (FileOnDisk.aByteArrayArray1331[i_26_] == null) {
                     bool = false;
                     Node_Sub29_Sub2.anInt10015++;
@@ -469,7 +465,7 @@ public class r_Sub2 extends r {
                 }
             }
             if (Class204.anIntArray2460 != null && Class194.aByteArrayArray2373[i_26_] == null && Class204.anIntArray2460[i_26_] != -1) {
-                Class194.aByteArrayArray2373[i_26_] = Animable_Sub1_Sub1.aClass302_10618.method3512(Class15.XTEA_KEYS[i_26_], 0, 118, Class204.anIntArray2460[i_26_]);
+                Class194.aByteArrayArray2373[i_26_] = Animable_Sub1_Sub1.aClass302_10618.method3512(Class15.XTEA_KEYS[i_26_], 0, Class204.anIntArray2460[i_26_]);
                 if (Class194.aByteArrayArray2373[i_26_] == null) {
                     Node_Sub29_Sub2.anInt10015++;
                     bool = false;
@@ -518,7 +514,7 @@ public class r_Sub2 extends r {
                 }
                 CacheNode_Sub16_Sub1.method2387();
                 Node_Sub36_Sub2.method2761();
-                Class30.method343(-126);
+                Class30.method343();
                 boolean bool_33_ = false;
                 if (Class93.aGraphicsToolkit1241.z() && Class213.aNode_Sub27_2512.aClass320_Sub26_7269.method3779() == 2) {
                     for (int i_34_ = 0; i_34_ < Class188_Sub1_Sub1.aByteArrayArray9334.length; i_34_++) {

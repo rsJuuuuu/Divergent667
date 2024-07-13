@@ -56,8 +56,8 @@ public class SignLink implements Runnable {
         return anObject3991;
     }
 
-    final Class241 method3627(int i, int i_0_, int i_2_, int i_3_) {
-        return method3643((i << 16) + i_3_, 6, null, 9, (i_2_ << 16) + i_0_);
+    final Class241 method3627(int i, int i_0_, int i_2_) {
+        return method3643((i << 16) + 0, 6, null, 9, (i_2_ << 16) + i_0_);
     }
 
     final Class241 method3628(Class<?> var_class, String string, int i) {

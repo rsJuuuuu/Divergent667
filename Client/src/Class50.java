@@ -72,7 +72,7 @@ public class Class50 {
         Class315.anInt4034 = Node_Sub10.aString7081.length();
     }
 
-    Class50(GLToolkit gltoolkit, int i, int i_12_) {
+    Class50(GLToolkit gltoolkit, int i_12_) {
         aGLToolkit777 = gltoolkit;
         anInt773 = i_12_;
     }

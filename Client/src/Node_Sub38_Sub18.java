@@ -165,8 +165,8 @@ public class Node_Sub38_Sub18 extends Node_Sub38 {
         while_180_:
         do {
             if (aClass348_7454.aBoolean4300) {
-                int[][] is_17_ = this.method2777(-100, 0, i);
-                int[][] is_18_ = this.method2777(-124, 1, i);
+                int[][] is_17_ = this.method2777(0, i);
+                int[][] is_18_ = this.method2777(1, i);
                 int[] is_19_ = is[0];
                 int[] is_20_ = is[1];
                 int[] is_21_ = is[2];

@@ -10,7 +10,7 @@ public class CacheNode_Sub11 extends CacheNode {
     protected int anInt9535;
     static int anInt9536;
     protected String aString9537;
-    static Class329 aClass329_9538 = new Class329("WTI", "office", "_wti", 5);
+    static Class329 aClass329_9538 = new Class329(5);
     static int anInt9539;
     protected int anInt9540 = 12800;
     protected int anInt9541 = 12800;

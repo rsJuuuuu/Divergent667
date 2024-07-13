@@ -52,7 +52,7 @@ public class Class169_Sub3 extends Class169 {
                 class357 = CacheNode_Sub2.aClass357_9438;
                 class52 = graphicstoolkit.a(class357, Class335.aClass383Array4163, true);
                 int i_5_ = class357.method4030(null, string, 250);
-                int i_6_ = class357.method4034(250, class357.anInt4430, string, null, (byte) -74);
+                int i_6_ = class357.method4034(250, class357.anInt4430, string, null);
                 int i_7_ = Class336_Sub3.aClass383_8624.anInt4897;
                 int i_8_ = 4 + i_7_;
                 i_5_ += i_8_ * 2;
