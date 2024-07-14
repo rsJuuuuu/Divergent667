@@ -27,12 +27,9 @@ public class Class111 {
         }
     }
 
-    static int method1138(String string, byte[] bs, byte b, int i) {
+    static void method1138(String string, byte[] bs) {
+        int i = 0;
         anInt1417++;
-        if (b >= -65) {
-            anInt1418 = -11;
-        }
-        int i_1_ = i;
         int i_2_ = string.length();
         for (int i_3_ = 0; i_2_ > i_3_; i_3_ += 4) {
             int i_4_ = Node_Sub16.method2591(string.charAt(i_3_));
@@ -49,7 +46,6 @@ public class Class111 {
             }
             bs[i++] = (byte) Node_Sub16.method2590(Node_Sub30.method2723(3, i_6_) << 6, i_7_);
         }
-        return i - i_1_;
     }
 
     static synchronized byte[] method1139(int i) {

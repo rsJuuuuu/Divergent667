@@ -447,15 +447,12 @@ public class Class336_Sub1 extends Class336 {
         anInt8545++;
     }
 
-    static int method3887(boolean bool, String string) {
-        if (bool) {
-            return 44;
-        }
+    static int method3887(String string) {
         anInt8514++;
         int i = string.length();
         int i_79_ = 0;
         for (int i_80_ = 0; i > i_80_; i_80_++)
-            i_79_ = -i_79_ + ((i_79_ << 5) + Class26.method312(string.charAt(i_80_), (byte) -114));
+            i_79_ = -i_79_ + ((i_79_ << 5) + Class26.method312(string.charAt(i_80_)));
         return i_79_;
     }
 

@@ -39,7 +39,7 @@ public class Class39 {
         if (aHashTable579 == null) {
             method409();
         }
-        for (Node_Sub42 node_sub42 = (Node_Sub42) aHashTable579.method1518(3512, Class113.method1153(1, string)); node_sub42 != null; node_sub42 = (Node_Sub42) aHashTable579.method1524()) {
+        for (Node_Sub42 node_sub42 = (Node_Sub42) aHashTable579.method1518(3512, Class113.method1153(string)); node_sub42 != null; node_sub42 = (Node_Sub42) aHashTable579.method1524()) {
             if (node_sub42.aString7522.equals(string)) {
                 return true;
             }
@@ -137,7 +137,7 @@ public class Class39 {
                 aHashTable579 = new HashTable(hashtable.method1522(false));
                 HashTable hashtable_27_ = new HashTable(hashtable.method1522(false));
                 for (Node_Sub18 node_sub18 = (Node_Sub18) hashtable.method1516(); node_sub18 != null; node_sub18 = (Node_Sub18) hashtable.method1520(100)) {
-                    long l = Class113.method1153(1, node_sub18.aString7149);
+                    long l = Class113.method1153(node_sub18.aString7149);
                     Node_Sub42 node_sub42;
                     for (node_sub42 = (Node_Sub42) hashtable_27_.method1518(3512, l); node_sub42 != null; node_sub42 = (Node_Sub42) hashtable_27_.method1524()) {
                         if (node_sub42.aString7522.equals(node_sub18.aString7149)) {
@@ -151,7 +151,7 @@ public class Class39 {
                     node_sub42.anInt7521++;
                 }
                 for (Node_Sub18 node_sub18 = (Node_Sub18) hashtable.method1516(); node_sub18 != null; node_sub18 = (Node_Sub18) hashtable.method1520(74)) {
-                    long l = Class113.method1153(1, node_sub18.aString7149);
+                    long l = Class113.method1153(node_sub18.aString7149);
                     Node_Sub20 node_sub20;
                     for (node_sub20 = (Node_Sub20) aHashTable579.method1518(3512, l); node_sub20 != null; node_sub20 = (Node_Sub20) aHashTable579.method1524()) {
                         if (node_sub20.aString7174.equals(node_sub18.aString7149)) {
@@ -178,7 +178,7 @@ public class Class39 {
                 HashTable hashtable = new HashTable(i_23_);
                 for (String s : strings) {
                     if (s != null) {
-                        long l = Class113.method1153(1, s);
+                        long l = Class113.method1153(s);
                         Node_Sub42 node_sub42;
                         for (node_sub42 = (Node_Sub42) hashtable.method1518(3512, l); node_sub42 != null; node_sub42 = (Node_Sub42) hashtable.method1524()) {
                             if (node_sub42.aString7522.equals(s)) {
@@ -195,7 +195,7 @@ public class Class39 {
                 for (int i_25_ = 0; i_25_ < strings.length; i_25_++) {
                     if (strings[i_25_] != null) {
                         String string = strings[i_25_];
-                        long l = Class113.method1153(1, string);
+                        long l = Class113.method1153(string);
                         Node_Sub20 node_sub20;
                         for (node_sub20 = (Node_Sub20) aHashTable579.method1518(3512, l); node_sub20 != null; node_sub20 = (Node_Sub20) aHashTable579.method1524()) {
                             if (node_sub20.aString7174.equals(string)) {
@@ -302,7 +302,7 @@ public class Class39 {
                     node_sub13.aPacket7113.writeShort(Class92.anInt1230);
                     node_sub13.aPacket7113.write128Byte(0);
                     node_sub13.aPacket7113.writeShortLE128(Class46.anInt681);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 65), true, player.scenePositionXQueue[0], 0, -2, player.getSize((byte) 81));
                     bool = true;
                     break;
@@ -464,7 +464,7 @@ public class Class39 {
             method409();
         }
         Node_Sub20 node_sub20;
-        for (node_sub20 = (Node_Sub20) aHashTable579.method1518(3512, Class113.method1153(1, string)); node_sub20 != null; node_sub20 = (Node_Sub20) aHashTable579.method1524()) {
+        for (node_sub20 = (Node_Sub20) aHashTable579.method1518(3512, Class113.method1153(string)); node_sub20 != null; node_sub20 = (Node_Sub20) aHashTable579.method1524()) {
             if (node_sub20.aString7174.equals(string)) {
                 break;
             }

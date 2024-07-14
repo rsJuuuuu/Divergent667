@@ -25,16 +25,16 @@ public class Class46 {
         Class270_Sub2.anInt8036++;
         anInt672++;
         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class167.aClass318_2034, Class218.aClass123_2566.anIsaacCipher1571);
-        Class218.aClass123_2566.sendPacket(127, node_sub13);
+        Class218.aClass123_2566.sendPacket(node_sub13);
         for (Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1516(); node_sub2 != null; node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1520(93)) {
-            if (!node_sub2.method2161(-119)) {
+            if (node_sub2.aNode2799 == null) {
                 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1516();
                 if (node_sub2 == null) {
                     break;
                 }
             }
             if (node_sub2.cliped == 0) {
-                Class243.method3060((byte) 103, true, true, node_sub2);
+                Class243.method3060(true, true, node_sub2);
             }
         }
         if (Node_Sub25_Sub3.aWidget9990 != null) {

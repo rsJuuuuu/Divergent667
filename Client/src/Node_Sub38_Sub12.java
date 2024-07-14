@@ -116,33 +116,28 @@ public class Node_Sub38_Sub12 extends Node_Sub38 {
                 is[i_44_] = i_45_ * i_34_ >> 16;
             }
         }
-        if (i < 107) {
-            method2775(-16, 56);
-        }
         return is;
     }
 
     final void method2780(BufferedStream buffer, int i) {
-        if (!false) {
-            anInt10226++;
-            while_149_:
+        anInt10226++;
+        while_149_:
+        do {
             do {
-                do {
-                    if (i == 0) {
-                        anInt10224 = buffer.readUnsignedByte();
-                        return;
-                    } else if (i != 1) {
-                        if (i == 2) {
-                            break;
-                        }
-                        break while_149_;
-                    }
-                    anInt10229 = buffer.readUnsignedByte();
+                if (i == 0) {
+                    anInt10224 = buffer.readUnsignedByte();
                     return;
-                } while (false);
-                aBoolean7463 = buffer.readUnsignedByte() == 1;
+                } else if (i != 1) {
+                    if (i == 2) {
+                        break;
+                    }
+                    break while_149_;
+                }
+                anInt10229 = buffer.readUnsignedByte();
+                return;
             } while (false);
-        }
+            aBoolean7463 = buffer.readUnsignedByte() == 1;
+        } while (false);
     }
 
     public Node_Sub38_Sub12() {

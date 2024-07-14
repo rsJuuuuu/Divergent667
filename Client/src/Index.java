@@ -68,34 +68,28 @@ public class Index {
         return anArchive3797.anInt291;
     }
 
-    final boolean method3506(String string, boolean bool, String string_1_) {
+    final boolean method3506(String string) {
         anInt3812++;
         if (!method3530()) {
             return false;
         }
         string = string.toLowerCase();
-        string_1_ = string_1_.toLowerCase();
-        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
+        String string_1_ = "";
+        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
         if (i < 0) {
             return false;
         }
-        int i_2_ = anArchive3797.aClass75Array288[i].method766(Class336_Sub1.method3887(false, string_1_));
-        if (i_2_ < 0) {
-            return false;
-        }
-        if (!bool) {
-            anObjectArrayArray3786 = null;
-        }
-        return true;
+        int i_2_ = anArchive3797.aClass75Array288[i].method766(Class336_Sub1.method3887(string_1_));
+        return i_2_ >= 0;
     }
 
     final boolean method3507(String string) {
         anInt3791++;
         int i = method3519("", (byte) 35);
         if (i != -1) {
-            return method3533(false, "", string);
+            return method3533("", string);
         }
-        return method3533(false, string, "");
+        return method3533(string, "");
     }
 
     private void method3508(int i) {
@@ -135,10 +129,7 @@ public class Index {
         throw new RuntimeException();
     }
 
-    final int method3511(int i) {
-        if (i != 19492) {
-            return 48;
-        }
+    final int method3511() {
         anInt3803++;
         if (!method3530()) {
             return 0;
@@ -363,16 +354,13 @@ public class Index {
         return anObjectArray3783[i_48_] != null;
     }
 
-    final boolean method3516(String string, int i) {
+    final boolean method3516(String string) {
         anInt3799++;
         if (!method3530()) {
             return false;
         }
-        if (i >= -72) {
-            aBoolean3819 = true;
-        }
         string = string.toLowerCase();
-        int i_50_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
+        int i_50_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
         return i_50_ >= 0;
     }
 
@@ -407,7 +395,7 @@ public class Index {
             return 19;
         }
         string = string.toLowerCase();
-        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
+        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
         if (!method3525(i)) {
             return -1;
         }
@@ -439,16 +427,13 @@ public class Index {
         anInt3818++;
     }
 
-    final int method3522(byte b, String string) {
+    final int method3522(String string) {
         anInt3789++;
         if (!method3530()) {
             return 0;
         }
-        if (b <= 26) {
-            method3533(true, null, null);
-        }
         string = string.toLowerCase();
-        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
+        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
         return method3509(i);
     }
 
@@ -492,8 +477,8 @@ public class Index {
             return false;
         }
         string = string.toLowerCase();
-        int i_55_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
-        return method3536(-1, i_55_);
+        int i_55_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
+        return method3536(i_55_);
     }
 
     final int method3528(int i) {
@@ -515,11 +500,11 @@ public class Index {
         }
         string = string.toLowerCase();
         string_57_ = string_57_.toLowerCase();
-        int i_58_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
+        int i_58_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
         if (!method3525(i_58_)) {
             return null;
         }
-        int i_59_ = anArchive3797.aClass75Array288[i_58_].method766(Class336_Sub1.method3887(false, string_57_));
+        int i_59_ = anArchive3797.aClass75Array288[i_58_].method766(Class336_Sub1.method3887(string_57_));
         return method3524(i_59_, i_58_);
     }
 
@@ -540,7 +525,7 @@ public class Index {
         anInt3809++;
         if (method3530()) {
             string = string.toLowerCase();
-            int i_60_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(false, string));
+            int i_60_ = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
             method3517(i_60_);
         }
     }
@@ -559,18 +544,18 @@ public class Index {
         return is;
     }
 
-    private boolean method3533(boolean bool, String string, String string_63_) {
+    private boolean method3533(String string, String string_63_) {
         anInt3816++;
         if (!method3530()) {
             return false;
         }
         string = string.toLowerCase();
         string_63_ = string_63_.toLowerCase();
-        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(bool, string));
+        int i = anArchive3797.aClass75_301.method766(Class336_Sub1.method3887(string));
         if (!method3525(i)) {
             return false;
         }
-        int i_64_ = anArchive3797.aClass75Array288[i].method766(Class336_Sub1.method3887(bool, string_63_));
+        int i_64_ = anArchive3797.aClass75Array288[i].method766(Class336_Sub1.method3887(string_63_));
         return method3515(i_64_, i);
     }
 
@@ -594,16 +579,13 @@ public class Index {
         }
     }
 
-    final boolean method3536(int i, int i_66_) {
+    final boolean method3536(int i_66_) {
         anInt3801++;
         if (!method3525(i_66_)) {
             return false;
         }
         if (anObjectArray3783[i_66_] != null) {
             return true;
-        }
-        if (i != -1) {
-            method3511(-127);
         }
         method3508(i_66_);
         return anObjectArray3783[i_66_] != null;

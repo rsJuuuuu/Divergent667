@@ -72,7 +72,7 @@ public class Class370 {
         anInt4569++;
         Node_Sub16 node_sub16 = Class295.method3472(i, bool);
         if (node_sub16 != null) {
-            node_sub16.method2160((byte) 99);
+            node_sub16.method2160();
         }
     }
 
@@ -84,7 +84,7 @@ public class Class370 {
             Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Node_Sub18.aClass318_7151, Objects.requireNonNull(class123).anIsaacCipher1571);
             Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class126.method1536(string));
             node_sub13.aPacket7113.writeString(string);
-            class123.sendPacket(127, node_sub13);
+            class123.sendPacket(node_sub13);
         }
     }
 

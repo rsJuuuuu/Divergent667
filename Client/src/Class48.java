@@ -141,7 +141,7 @@ public class Class48 {
         anInt693++;
         CacheNode_Sub2 cachenode_sub2 = (CacheNode_Sub2) Class72.aClass158_974.method1723();
         if (cachenode_sub2 != null) {
-            cachenode_sub2.method2160((byte) 73);
+            cachenode_sub2.method2160();
             cachenode_sub2.method2275();
             return cachenode_sub2;
         }
@@ -153,7 +153,7 @@ public class Class48 {
             if (cachenode_sub2.method2287() > Class313.method3650()) {
                 return null;
             }
-            cachenode_sub2.method2160((byte) 114);
+            cachenode_sub2.method2160();
             cachenode_sub2.method2275();
         } while ((cachenode_sub2.aLong7037 & -9223372036854775808L) == 0);
         return cachenode_sub2;
@@ -276,7 +276,7 @@ public class Class48 {
         node_sub13.aPacket7113.offset += 7;
         node_sub13.aPacket7113.encryptXteas(is, i_22_, node_sub13.aPacket7113.offset);
         node_sub13.aPacket7113.method2194(node_sub13.aPacket7113.offset - i_21_);
-        Class218.aClass123_2560.sendPacket(126, node_sub13);
+        Class218.aClass123_2560.sendPacket(node_sub13);
         Node_Sub54.anInt7683 = 0;
         Node_Sub36_Sub4.anInt10073 = -3;
         Class51_Sub2.anInt9069 = 0;

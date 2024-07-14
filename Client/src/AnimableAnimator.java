@@ -21,7 +21,7 @@ class AnimableAnimator extends Animator {
         if (Class20.aCacheNode_Sub11_318 != null) {
             if (Node_Sub25_Sub1.anInt9947 < 10) {
                 if (!Class20.aClass302_314.method3527(Class20.aCacheNode_Sub11_318.aString9537)) {
-                    Node_Sub25_Sub1.anInt9947 = r_Sub1.aClass302_11047.method3522((byte) 127, Class20.aCacheNode_Sub11_318.aString9537) / 10;
+                    Node_Sub25_Sub1.anInt9947 = r_Sub1.aClass302_11047.method3522(Class20.aCacheNode_Sub11_318.aString9537) / 10;
                     return;
                 }
                 Class371.method4096();
@@ -100,7 +100,7 @@ class AnimableAnimator extends Animator {
                 Node_Sub24.method2650(true);
                 Node_Sub38_Sub10.method2824();
             } else if (Node_Sub25_Sub1.anInt9947 == 60) {
-                if (Class20.aClass302_314.method3516(Class20.aCacheNode_Sub11_318.aString9537 + "_staticelements", -74)) {
+                if (Class20.aClass302_314.method3516(Class20.aCacheNode_Sub11_318.aString9537 + "_staticelements")) {
                     if (!Class20.aClass302_314.method3527(Class20.aCacheNode_Sub11_318.aString9537 + "_staticelements")) {
                         return;
                     }

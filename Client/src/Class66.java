@@ -86,7 +86,7 @@ abstract class Class66 implements Interface10 {
             Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class235.aClass318_5126, Objects.requireNonNull(class123).anIsaacCipher1571);
             Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class126.method1536(string));
             node_sub13.aPacket7113.writeString(string);
-            class123.sendPacket(127, node_sub13);
+            class123.sendPacket(node_sub13);
         }
     }
 

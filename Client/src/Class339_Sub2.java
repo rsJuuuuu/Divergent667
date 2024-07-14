@@ -73,7 +73,7 @@ public class Class339_Sub2 extends Class339 {
         packet.writeInt(Class326.index30.method3505());
         packet.writeInt(Class262_Sub2.index31.method3505());
         packet.writeInt(Node_Sub15_Sub10.aClass302_9853.method3505());
-        packet.writeInt(Class107.method1124(1403));
+        packet.writeInt(Class171.anInt2066);
         packet.writeInt(Class262_Sub3.method3156(91));
         packet.writeInt(Node_Sub38_Sub38.index36.method3505());
     }

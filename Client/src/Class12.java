@@ -43,7 +43,7 @@ public class Class12 {
     final void method197() {
         for (CacheNode_Sub14 cachenode_sub14 = (CacheNode_Sub14) aClass158_188.method1723(); cachenode_sub14 != null; cachenode_sub14 = (CacheNode_Sub14) aClass158_188.method1721()) {
             if (cachenode_sub14.method2350((byte) -38)) {
-                cachenode_sub14.method2160((byte) 59);
+                cachenode_sub14.method2160();
                 cachenode_sub14.method2275();
                 anInt192 += cachenode_sub14.anInt9574;
             }
@@ -54,7 +54,7 @@ public class Class12 {
     private void method198(CacheNode_Sub14 cachenode_sub14) {
         anInt181++;
         if (cachenode_sub14 != null) {
-            cachenode_sub14.method2160((byte) 72);
+            cachenode_sub14.method2160();
             cachenode_sub14.method2275();
             anInt192 += cachenode_sub14.anInt9574;
         }
@@ -69,11 +69,11 @@ public class Class12 {
                         CacheNode_Sub14 cachenode_sub14_0_ = Node_Sub40.aClass233_7514.method2143(cachenode_sub14);
                         aHashTable190.method1515(cachenode_sub14.aLong2797, cachenode_sub14_0_, -125);
                         Node_Sub38_Sub19.method2847(cachenode_sub14, cachenode_sub14_0_);
-                        cachenode_sub14.method2160((byte) 117);
+                        cachenode_sub14.method2160();
                         cachenode_sub14.method2275();
                     }
                 } else if (cachenode_sub14.method2347(27670) == null) {
-                    cachenode_sub14.method2160((byte) 35);
+                    cachenode_sub14.method2160();
                     cachenode_sub14.method2275();
                     anInt192 += cachenode_sub14.anInt9574;
                 }
@@ -118,7 +118,7 @@ public class Class12 {
             if (cachenode_sub14.anInterface18_9576.method66(28071, interface18)) {
                 Object object = cachenode_sub14.method2347(27670);
                 if (object == null) {
-                    cachenode_sub14.method2160((byte) 100);
+                    cachenode_sub14.method2160();
                     cachenode_sub14.method2275();
                     anInt192 += cachenode_sub14.anInt9574;
                 } else {
@@ -127,7 +127,7 @@ public class Class12 {
                         aHashTable190.method1515(cachenode_sub14.aLong2797, cachenode_sub14_sub2, -124);
                         aClass158_188.method1719(cachenode_sub14_sub2);
                         cachenode_sub14_sub2.aLong7037 = 0L;
-                        cachenode_sub14.method2160((byte) 88);
+                        cachenode_sub14.method2160();
                         cachenode_sub14.method2275();
                     } else {
                         aClass158_188.method1719(cachenode_sub14);

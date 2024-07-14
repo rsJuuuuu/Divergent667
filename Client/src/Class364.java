@@ -76,12 +76,12 @@ public class Class364 {
                             } else {
                                 npc.method879(null);
                                 bool_6_ = true;
-                                node_sub41.method2160((byte) 29);
+                                node_sub41.method2160();
                             }
                         } else {
                             npc.method879(null);
                             bool_6_ = true;
-                            node_sub41.method2160((byte) 29);
+                            node_sub41.method2160();
                         }
                     }
                 }
@@ -112,14 +112,14 @@ public class Class364 {
                 node_sub19.anInt7171 -= i_4_;
                 node_sub19.anInt7161 -= i_5_;
                 if (Class61.anInt898 != 4 && (node_sub19.anInt7171 < 0 || node_sub19.anInt7161 < 0 || Node_Sub54.GAME_SCENE_WDITH <= node_sub19.anInt7171 || node_sub19.anInt7161 >= Class377_Sub1.GAME_SCENE_HEIGHT)) {
-                    node_sub19.method2160((byte) 60);
+                    node_sub19.method2160();
                 }
             }
             for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620()) {
                 node_sub19.anInt7161 -= i_5_;
                 node_sub19.anInt7171 -= i_4_;
                 if (Class61.anInt898 != 4 && (node_sub19.anInt7171 < 0 || node_sub19.anInt7161 < 0 || node_sub19.anInt7171 >= Node_Sub54.GAME_SCENE_WDITH || node_sub19.anInt7161 >= Class377_Sub1.GAME_SCENE_HEIGHT)) {
-                    node_sub19.method2160((byte) 105);
+                    node_sub19.method2160();
                 }
             }
             if (Class61.anInt898 != 4) {
@@ -129,7 +129,7 @@ public class Class364 {
                     int i_19_ = (int) (node_sub11.aLong2797 >> 14 & 0x3fffL);
                     int i_20_ = i_19_ - Class320_Sub4.gameSceneBaseY;
                     if (i_18_ < 0 || i_20_ < 0 || i_18_ >= Node_Sub54.GAME_SCENE_WDITH || Class377_Sub1.GAME_SCENE_HEIGHT <= i_20_) {
-                        node_sub11.method2160((byte) 66);
+                        node_sub11.method2160();
                     }
                 }
             }

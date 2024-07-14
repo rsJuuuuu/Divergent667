@@ -33,13 +33,10 @@ public class Class275 implements Interface17 {
         }
     }
 
-    public final int method64(int i, byte b) {
+    public final int method64(int i) {
         anInt5413++;
         ConfigDefinitions class70 = IOException_Sub1.aClass128_85.getConfigDefinitions(i);
         int i_2_ = class70.anInt950;
-        if (b != -42) {
-            aHashTable5420 = null;
-        }
         int i_3_ = class70.anInt946;
         int i_4_ = class70.anInt948;
         int i_5_ = Class141.anIntArray1750[-i_3_ + i_4_];
@@ -205,10 +202,10 @@ public class Class275 implements Interface17 {
                 if ((0x4000000000000000L & node_sub44.aLong7550) != 0L) {
                     int i_51_ = (int) node_sub44.aLong2797;
                     CONFIG_VALUES[i_51_] = anIntArray5421[i_51_];
-                    node_sub44.method2160((byte) 95);
+                    node_sub44.method2160();
                     return i_51_;
                 }
-                node_sub44.method2160((byte) 115);
+                node_sub44.method2160();
             }
         }
         return -1;

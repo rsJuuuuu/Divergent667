@@ -138,7 +138,7 @@ public class Class326 {
         Packet.method2258();
         Class282.method3386();
         Class215.method2065();
-        Class110.method1129((byte) 110, 5);
+        Class110.method1129();
         Class320_Sub7.method3710();
         Class125.aClass61_1609.method598(5);
         Node_Sub51.aClass61_7628.method598(5);

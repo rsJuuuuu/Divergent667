@@ -130,10 +130,7 @@ public class Class320_Sub26 extends Class320 {
         return !aNode_Sub27_4063.method2697(-100);
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            method3777();
-        }
+    final int method3677() {
         anInt8457++;
         return 1;
     }
@@ -142,14 +139,11 @@ public class Class320_Sub26 extends Class320 {
         super(node_sub27);
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         if (aNode_Sub27_4063.method2697(-117)) {
             anInt4064 = 0;
         }
         anInt8452++;
-        if (b >= -35) {
-            anInt8451 = 67;
-        }
     }
 
     final void method3676(int i) {

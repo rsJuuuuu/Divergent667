@@ -29,7 +29,7 @@ public class Class109 {
         anInt1374++;
         for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620()) {
             if (node_sub19.aBoolean7156) {
-                node_sub19.method2160((byte) 97);
+                node_sub19.method2160();
             } else {
                 node_sub19.aBoolean7159 = true;
                 if (node_sub19.anInt7171 >= 0 && node_sub19.anInt7161 >= 0 && Node_Sub54.GAME_SCENE_WDITH > node_sub19.anInt7171 && node_sub19.anInt7161 < Class377_Sub1.GAME_SCENE_HEIGHT) {
@@ -39,7 +39,7 @@ public class Class109 {
         }
         for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620()) {
             if (node_sub19.aBoolean7156) {
-                node_sub19.method2160((byte) 30);
+                node_sub19.method2160();
             } else {
                 node_sub19.aBoolean7159 = true;
             }

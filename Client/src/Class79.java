@@ -84,7 +84,7 @@ public class Class79 {
             if (anInt1069 == -1) {
                 return true;
             }
-            i = interface17.method64(anInt1069, (byte) -42);
+            i = interface17.method64(anInt1069);
         } else {
             i = interface17.method65(anInt1091);
         }
@@ -96,7 +96,7 @@ public class Class79 {
             if (anInt1048 == -1) {
                 return true;
             } else {
-                i_0_ = interface17.method64(anInt1048, (byte) -42);
+                i_0_ = interface17.method64(anInt1048);
             }
         } else {
             i_0_ = interface17.method65(anInt1044);

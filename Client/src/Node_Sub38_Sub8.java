@@ -101,10 +101,8 @@ class Node_Sub38_Sub8 extends Node_Sub38 {
 
     final void method2780(BufferedStream buffer, int i) {
         anInt10164++;
-        if (!false) {
-            if (i == 0) {
-                anInt10173 = buffer.readUnsignedShort();
-            }
+        if (i == 0) {
+            anInt10173 = buffer.readUnsignedShort();
         }
     }
 

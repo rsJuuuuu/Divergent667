@@ -174,16 +174,13 @@ public class Class119 {
         return aBoolean1480;
     }
 
-    private void method1223(int i, GraphicsToolkit graphicstoolkit) {
-        if (i != 0) {
-            method1223(-82, null);
-        }
+    private void method1223(GraphicsToolkit graphicstoolkit) {
         try {
             Index class302 = Class188_Sub2_Sub2.aClass302_9361;
-            boolean bool = class302.method3536(~i, anInt1501);
+            boolean bool = class302.method3536(anInt1501);
             if (bool) {
                 graphicstoolkit.ZA(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-                Model model = Renderer.method3448(anInt1501, i + 7, Class188_Sub2_Sub2.aClass302_9361);
+                Model model = Renderer.method3448(anInt1501, 7, Class188_Sub2_Sub2.aClass302_9361);
                 aDrawableModel1504 = graphicstoolkit.a(model, 1099776, 0, 255, 1);
                 byte[] bs = aDrawableModel1504.method627();
                 if (bs == null) {
@@ -245,7 +242,7 @@ public class Class119 {
         if (i == 0 || !graphicstoolkit.a()) {
             aDrawableModel1504 = null;
         } else if (aDrawableModel1504 == null && anInt1501 >= 0) {
-            method1223(0, graphicstoolkit);
+            method1223(graphicstoolkit);
         }
         if (aClass119_1499 != null && this != aClass119_1499) {
             aClass119_1499.method1226();

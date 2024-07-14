@@ -86,7 +86,7 @@ public class Class277_Sub1 extends Class277 {
                                     int i_37_ = i_35_ >> 9;
                                     int i_38_ = i_36_ >> 9;
                                     if (i_37_ >= 0 && i_38_ >= 0 && anInt3524 > i_37_ && anInt3521 > i_38_) {
-                                        node_sub29.method2706(4752, i_35_, i_36_, anIntArrayArrayArray3520[class326.anInt4092][i_37_][i_38_] - node_sub29.method2704());
+                                        node_sub29.method2706(i_35_, i_36_, anIntArrayArrayArray3520[class326.anInt4092][i_37_][i_38_] - node_sub29.method2704());
                                         Class370.method4089(class326);
                                     }
                                 }
@@ -650,7 +650,7 @@ public class Class277_Sub1 extends Class277 {
                                     int i_99_ = (i_90_ << 9) + Node_Sub38.method2781(0xfff & node_sub29.method2708(), i_88_, 0xfff & node_sub29.method2705(32311));
                                     i_97_ = i_99_ >> 9;
                                     if (i_96_ >= 0 && i_97_ >= 0 && i_96_ < anInt3524 && anInt3521 > i_97_) {
-                                        node_sub29.method2706(4752, i_98_, i_99_, anIntArrayArrayArray3520[i_89_][i_96_][i_97_] - node_sub29.method2704());
+                                        node_sub29.method2706(i_98_, i_99_, anIntArrayArrayArray3520[i_89_][i_96_][i_97_] - node_sub29.method2704());
                                         Class370.method4089(class326);
                                     }
                                 }
@@ -904,7 +904,7 @@ public class Class277_Sub1 extends Class277 {
                 i = Class67.method733(-99);
                 i_153_ = Class226.method2112();
             }
-            int i_154_ = i + Class106.aClass93_1356.method1050((byte) -117);
+            int i_154_ = i + Class106.aClass93_1356.method1050();
             int i_155_ = Class106.aClass93_1356.method1051() + i_153_;
             i_154_ -= Node_Sub5_Sub2.anInt9412;
             i_155_ -= Class83.anInt5179;

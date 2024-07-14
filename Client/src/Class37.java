@@ -111,11 +111,11 @@ public class Class37 {
             return -1;
         }
         String string_3_ = Class117_Sub1.aString4931 + string_2_;
-        if (!Class239.index30.method3506(string_3_, true, "")) {
+        if (!Class239.index30.method3506(string_3_)) {
             return -1;
         }
         if (!Class239.index30.method3527(string_3_)) {
-            return Class239.index30.method3522((byte) 102, string_3_);
+            return Class239.index30.method3522(string_3_);
         }
         byte[] data = Class239.index30.method3529(string_3_, "");
         File file;

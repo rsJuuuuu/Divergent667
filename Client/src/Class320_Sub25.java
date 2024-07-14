@@ -15,7 +15,7 @@ public class Class320_Sub25 extends Class320 {
         /* empty */
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8447++;
         /* empty */
     }
@@ -37,11 +37,8 @@ public class Class320_Sub25 extends Class320 {
         return anInt4064;
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8449++;
-        if (i != 0) {
-            return 25;
-        }
         return 127;
     }
 

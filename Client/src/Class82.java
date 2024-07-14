@@ -67,7 +67,7 @@ public class Class82 {
         int i_7_ = Class219.anInt2627 - 3;
         int i_8_ = 20;
         Class50.method512(Class362.anInt4492, Class219.anInt2627, Translation.aTranslation_387.getTranslatedString(Class35.language), graphicstoolkit, i_3_ + Client.anInt5481, Node_Sub6.anInt7043 + i_2_, i_8_);
-        int i_9_ = Class106.aClass93_1356.method1050((byte) -45) + i_2_;
+        int i_9_ = Class106.aClass93_1356.method1050() + i_2_;
         int i_10_ = i_3_ + Class106.aClass93_1356.method1051();
         if (Class194_Sub3_Sub1.aBoolean9375) {
             int i_11_ = 0;

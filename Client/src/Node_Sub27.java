@@ -124,7 +124,7 @@ public class Node_Sub27 extends Node {
                 method2689(true, (byte) 97);
             }
         }
-        method2695(108);
+        method2695();
     }
 
     private void method2689(boolean bool, byte b) {
@@ -252,7 +252,7 @@ public class Node_Sub27 extends Node {
         class320.method3674(i_0_);
         if (i > 15) {
             anInt7271++;
-            method2695(112);
+            method2695();
         }
     }
 
@@ -284,13 +284,13 @@ public class Node_Sub27 extends Node {
         return aClass187_7292;
     }
 
-    private void method2695(int i) {
+    private void method2695() {
         anInt7285++;
         try {
             for (Field field : this.getClass().getDeclaredFields()) {
                 if ((aClass7318 == null ? aClass7318 = method2700() : aClass7318).isAssignableFrom(field.getType())) {
                     Class320 class320 = (Class320) field.get(this);
-                    class320.method3673((byte) -72);
+                    class320.method3673();
                 }
             }
         } catch (IllegalAccessException illegalaccessexception) {

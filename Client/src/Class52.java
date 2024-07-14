@@ -82,7 +82,7 @@ abstract class Class52 {
         int i_28_ = 0;
         int i_29_ = string.length();
         for (int i_30_ = 0; i_29_ > i_30_; i_30_++) {
-            char c = (char) (Class26.method312(string.charAt(i_30_), (byte) -81) & 0xff);
+            char c = (char) (Class26.method312(string.charAt(i_30_)) & 0xff);
             if (c == 60) {
                 i_26_ = i_30_;
             } else {
@@ -487,7 +487,7 @@ abstract class Class52 {
         int i_48_ = -1;
         int i_49_ = string.length();
         for (int i_50_ = 0; i_50_ < i_49_; i_50_++) {
-            char c = (char) (0xff & Class26.method312(string.charAt(i_50_), (byte) -54));
+            char c = (char) (0xff & Class26.method312(string.charAt(i_50_)));
             if (c == 60) {
                 i_47_ = i_50_;
             } else {

@@ -13,7 +13,7 @@ public class Class108 implements Interface12 {
         if (aClass302_5285.method3520()) {
             return 100;
         }
-        return aClass302_5285.method3511(19492);
+        return aClass302_5285.method3511();
     }
 
     public final Class172 method34() {

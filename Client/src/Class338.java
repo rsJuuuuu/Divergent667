@@ -204,7 +204,7 @@ public class Class338 {
                 if (node_sub47.aNode_Sub9_Sub2_7556 != null) {
                     node_sub47.aNode_Sub9_Sub2_7556.method2490(i_18_);
                     node_sub47.aNode_Sub9_Sub2_7556.method2496(i_20_);
-                    if (!node_sub47.aNode_Sub9_Sub2_7556.method2161(-122)) {
+                    if (node_sub47.aNode_Sub9_Sub2_7556.aNode2799 == null) {
                         node_sub47.aNode_Sub9_Sub2_7556 = null;
                         node_sub47.aNode_Sub49_7578 = null;
                         node_sub47.aNode_Sub45_Sub1_7575 = null;

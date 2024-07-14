@@ -5,7 +5,6 @@
 import java.util.Random;
 
 public class Node_Sub38_Sub23 extends Node_Sub38 {
-    static int anInt10326;
     private int anInt10327 = 2048;
     static int anInt10328;
     static OutcommingPacket aClass318_10329 = new OutcommingPacket(19, 3);
@@ -38,10 +37,7 @@ public class Node_Sub38_Sub23 extends Node_Sub38 {
         }
     }
 
-    static void method2862(IComponentDefinitions widget, int i, int i_0_, int i_1_) {
-        if (i_1_ != -8525) {
-            method2864();
-        }
+    static void method2862(IComponentDefinitions widget, int i, int i_0_) {
         anInt10336++;
         if (widget.aByte4851 == 0) {
             widget.anInt4762 = widget.anInt4816;
@@ -92,56 +88,29 @@ public class Node_Sub38_Sub23 extends Node_Sub38 {
     }
 
     final void method2780(BufferedStream buffer, int i) {
-        if (!false) {
-            anInt10326++;
-            while_209_:
-            do {
-                while_208_:
-                do {
-                    while_207_:
-                    do {
-                        while_206_:
-                        do {
-                            while_205_:
-                            do {
-                                do {
-                                    if (i == 0) {
-                                        anInt10334 = anInt10340 = buffer.readUnsignedByte();
-                                        return;
-                                    } else if (i != 1) {
-                                        if (i == 2) {
-                                            break;
-                                        } else if (i != 3) {
-                                            if (i == 4) {
-                                                break while_206_;
-                                            } else if (i != 5) {
-                                                if (i == 6) {
-                                                    break while_208_;
-                                                }
-                                                break while_209_;
-                                            }
-                                            break while_207_;
-                                        }
-                                        break while_205_;
-                                    }
-                                    anInt10335 = buffer.readUnsignedByte();
-                                    return;
-                                } while (false);
-                                anInt10327 = buffer.readUnsignedShort();
-                                return;
-                            } while (false);
-                            anInt10333 = buffer.readUnsignedByte();
-                            return;
-                        } while (false);
-                        anInt10332 = buffer.readUnsignedByte();
-                        return;
-                    } while (false);
-                    anInt10334 = buffer.readUnsignedByte();
-                    return;
-                } while (false);
+        switch (i) {
+            case 0:
+                anInt10334 = anInt10340 = buffer.readUnsignedByte();
+                break;
+            case 1:
+                anInt10335 = buffer.readUnsignedByte();
+                break;
+            case 2:
+                anInt10327 = buffer.readUnsignedShort();
+                break;
+            case 3:
+                anInt10333 = buffer.readUnsignedByte();
+                break;
+            case 4:
+                anInt10332 = buffer.readUnsignedByte();
+                break;
+            case 5:
+                anInt10334 = buffer.readUnsignedByte();
+                break;
+            case 6:
                 anInt10340 = buffer.readUnsignedByte();
-            } while (false);
         }
+
     }
 
     static void method2863() {
@@ -172,9 +141,6 @@ public class Node_Sub38_Sub23 extends Node_Sub38 {
     final int[] method2775(int i, int i_3_) {
         anInt10339++;
         int[] is = aClass146_7460.method1645(i_3_);
-        if (i <= 107) {
-            method2862(null, -42, 121, -79);
-        }
         if (aClass146_7460.aBoolean1819) {
             int i_4_ = 2048 + Node_Sub25_Sub1.anIntArray9941[i_3_] * anInt10340;
             int i_5_ = i_4_ >> 12;

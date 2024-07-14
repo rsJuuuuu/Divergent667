@@ -8,31 +8,19 @@ class Node {
     static Class61 aClass61_2795;
     static int anInt2796;
     protected long aLong2797;
-    static int anInt2798;
     protected Node aNode2799;
     protected Node aNode2800;
     static int[][] anIntArrayArray2801 = {{0, 1, 2, 3}, {1, 2, 3, 0}, {1, 2, -1, 0}, {2, 0, -1, 1}, {0, 1, -1, 2}, {1, 2, -1, 0}, {-1, 4, -1, 1}, {-1, 1, 3, -1}, {-1, 0, 2, -1}, {3, 5, 2, 0}, {0, 2, 5, 3}, {0, 2, 3, 5}, {0, 1, 2, 3}};
     static int[] anIntArray2802;
 
-    final void method2160(byte b) {
+    final void method2160() {
         anInt2793++;
         if (aNode2799 != null) {
             aNode2799.aNode2800 = aNode2800;
             aNode2800.aNode2799 = aNode2799;
             aNode2800 = null;
-            if (b < 20) {
-                method2161(-41);
-            }
             aNode2799 = null;
         }
-    }
-
-    final boolean method2161(int i) {
-        anInt2798++;
-        if (i >= -107) {
-            return false;
-        }
-        return aNode2799 != null;
     }
 
     static void method2162(int i, int i_0_, int i_1_, int i_3_, int i_4_, int i_5_, int i_6_) {

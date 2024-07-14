@@ -13,7 +13,6 @@ abstract class Actor extends Mobile {
     protected int[] anIntArray10819 = new int[CacheNode_Sub4.aClass1_9466.anInt117];
     static int anInt10820;
     static int anInt10821;
-    static int anInt10822;
     static Class257 aClass257_10823 = new Class257();
     static int anInt10824;
     static int anInt10825;
@@ -812,7 +811,6 @@ abstract class Actor extends Mobile {
         if (b > -122) {
             return null;
         }
-        anInt10822++;
         int i = method871(0);
         if (i == -1) {
             return Class342.aClass259_4233;

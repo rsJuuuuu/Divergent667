@@ -28,8 +28,8 @@ public class Node_Sub3 extends Node {
         return widget.aWidgetArray4804[i_0_];
     }
 
-    static void method2170(int i, long[] ls, int[] is) {
-        Class125.method1530(-1 + ls.length, is, ls, 0);
+    static void method2170(long[] ls, int[] is) {
+        Class125.quicksort(is, ls, 0, -1 + ls.length);
         anInt6938++;
 
     }

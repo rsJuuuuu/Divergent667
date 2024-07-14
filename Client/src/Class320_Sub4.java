@@ -29,23 +29,17 @@ public class Class320_Sub4 extends Class320 {
         return (0x800 & i_0_) != 0;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8242++;
         if (aNode_Sub27_4063.aClass320_Sub3_7298.method3689((byte) 121) && anInt4064 == 2) {
             anInt4064 = 1;
         }
         if (anInt4064 < 0 || anInt4064 > 2) {
-            anInt4064 = method3677(0);
-        }
-        if (b > -35) {
-            method3694(true);
+            anInt4064 = method3677();
         }
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            method3675(-2, (byte) -51);
-        }
+    final int method3677() {
         anInt8240++;
         return 2;
     }

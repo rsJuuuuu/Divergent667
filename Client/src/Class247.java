@@ -314,7 +314,7 @@ public class Class247 {
         anInt3126++;
         node_sub23.aBoolean7205 = false;
         node_sub23.method2626((byte) -128);
-        node_sub23.method2160((byte) 126);
+        node_sub23.method2160();
         method3078();
     }
 

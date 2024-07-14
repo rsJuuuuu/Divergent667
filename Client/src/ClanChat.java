@@ -184,7 +184,7 @@ public class ClanChat {
                     node_sub18.aString7149 = string;
                     return;
                 }
-                node.method2160((byte) 104);
+                node.method2160();
             }
         }
         aHashTable735.method1515(i, new Node_Sub18(string), -125);
@@ -320,7 +320,7 @@ public class ClanChat {
                     node_sub44.aLong7550 = l;
                     return true;
                 }
-                node.method2160((byte) 113);
+                node.method2160();
             }
         }
         aHashTable735.method1515(i, new Node_Sub44(l), -127);
@@ -410,7 +410,7 @@ public class ClanChat {
                     node_sub32.anInt7381 |= i_20_;
                     return true;
                 }
-                node.method2160((byte) 71);
+                node.method2160();
             }
         }
         aHashTable735.method1515(i_21_, new Node_Sub32(i_20_), -126);
@@ -602,7 +602,7 @@ public class ClanChat {
                     node_sub32.anInt7381 = i;
                     return true;
                 }
-                node.method2160((byte) 95);
+                node.method2160();
             }
         }
         aHashTable735.method1515(i_43_, new Node_Sub32(i), -127);

@@ -49,7 +49,7 @@ public class Node_Sub52 extends Node {
             if (!Class213.aBoolean2510 && Node_Sub38_Sub23.aCacheNode_Sub13_10343 != null) {
                 return Node_Sub38_Sub23.aCacheNode_Sub13_10343.anInt9570;
             }
-            int i = Class106.aClass93_1356.method1050((byte) -39);
+            int i = Class106.aClass93_1356.method1050();
             int i_2_ = Class106.aClass93_1356.method1051();
             if (!Class194_Sub3_Sub1.aBoolean9375) {
                 if (i > Node_Sub6.anInt7043 && Node_Sub6.anInt7043 + Class362.anInt4492 > i) {
@@ -138,7 +138,7 @@ public class Node_Sub52 extends Node {
     static void method2974(CacheNode_Sub13 cachenode_sub13) {
         anInt7656++;
         if (!Class213.aBoolean2510) {
-            cachenode_sub13.method2160((byte) 95);
+            cachenode_sub13.method2160();
             Class315.anInt4035--;
             if (cachenode_sub13.aBoolean9567) {
                 for (CacheNode_Sub4 cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1723(); cachenode_sub4 != null; cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1721()) {

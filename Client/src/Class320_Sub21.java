@@ -55,10 +55,7 @@ public class Class320_Sub21 extends Class320 {
         super(node_sub27);
     }
 
-    final void method3673(byte b) {
-        if (b >= -35) {
-            method3759();
-        }
+    final void method3673() {
         anInt8410++;
     }
 
@@ -75,12 +72,9 @@ public class Class320_Sub21 extends Class320 {
         return 1;
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8413++;
-        if (i != 0) {
-            return -123;
-        }
-        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(i - 13725)).method1881() > 1) {
+        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(0 - 13725)).method1881() > 1) {
             return 4;
         }
         return 2;

@@ -131,11 +131,8 @@ public class Class117_Sub1 extends Class117 implements Interface1 {
         }
     }
 
-    final void method1167(int i) {
+    final void method1167() {
         aGLToolkit1474.method1445(this);
-        if (i != -20931) {
-            aClass94_4924 = null;
-        }
         anInt4929++;
     }
 

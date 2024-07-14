@@ -125,7 +125,7 @@ abstract class Class93 {
         anInt1240++;
     }
 
-    abstract int method1050(byte b);
+    abstract int method1050();
 
     abstract int method1051();
 

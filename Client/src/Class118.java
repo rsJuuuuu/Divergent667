@@ -75,14 +75,11 @@ public class Class118 implements Interface17 {
         return node_sub32.anInt7381;
     }
 
-    public final int method64(int i, byte b) {
+    public final int method64(int i) {
         anInt5408++;
-        Node_Sub32 node_sub32 = (Node_Sub32) Class18.aHashTable308.method1518(b ^ -3474, (long) i | 0x100000000L);
-        if (b != -42) {
-            method1175(null, -67, -10, 88, -118, -60);
-        }
+        Node_Sub32 node_sub32 = (Node_Sub32) Class18.aHashTable308.method1518(3512, (long) i | 0x100000000L);
         if (node_sub32 == null) {
-            return Class24.aClass275_442.method64(i, (byte) -42);
+            return Class24.aClass275_442.method64(i);
         }
         return node_sub32.anInt7381;
     }

@@ -20,13 +20,11 @@ public class Class320_Sub22 extends Class320 {
         super(i, node_sub27);
     }
 
-    final void method3673(byte b) {
-        if (b < -35) {
-            if (anInt4064 < 0 || anInt4064 > 4) {
-                anInt4064 = method3677(0);
-            }
-            anInt8424++;
+    final void method3673() {
+        if (anInt4064 < 0 || anInt4064 > 4) {
+            anInt4064 = method3677();
         }
+        anInt8424++;
     }
 
     final int method3765() {
@@ -64,10 +62,7 @@ public class Class320_Sub22 extends Class320 {
         anInt8422++;
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            return -59;
-        }
+    final int method3677() {
         anInt8420++;
         return 3;
     }

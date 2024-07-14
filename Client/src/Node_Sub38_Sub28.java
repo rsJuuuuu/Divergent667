@@ -26,26 +26,24 @@ public class Node_Sub38_Sub28 extends Node_Sub38 {
     }
 
     final void method2780(BufferedStream buffer, int i) {
-        if (!false) {
-            while_257_:
+        while_257_:
+        do {
             do {
-                do {
-                    if (i == 0) {
-                        anInt10399 = buffer.readUnsignedByte();
-                        break while_257_;
-                    } else if (i != 1) {
-                        if (i == 2) {
-                            break;
-                        }
-                        break while_257_;
-                    }
-                    anInt10392 = buffer.readUnsignedShort();
+                if (i == 0) {
+                    anInt10399 = buffer.readUnsignedByte();
                     break while_257_;
-                } while (false);
-                anInt10393 = buffer.readUnsignedByte();
+                } else if (i != 1) {
+                    if (i == 2) {
+                        break;
+                    }
+                    break while_257_;
+                }
+                anInt10392 = buffer.readUnsignedShort();
+                break while_257_;
             } while (false);
-            anInt10397++;
-        }
+            anInt10393 = buffer.readUnsignedByte();
+        } while (false);
+        anInt10397++;
     }
 
     private void method2886() {

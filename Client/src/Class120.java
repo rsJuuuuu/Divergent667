@@ -48,16 +48,13 @@ public class Class120 {
         } catch (Exception exception) {
             /* empty */
         }
-        do {
-            try {
-                if (fileondisk == null) {
-                    break;
-                }
-                fileondisk.method1098();
-            } catch (Exception exception) {
-                break;
+        try {
+            if (fileondisk == null) {
+                return;
             }
-            break;
-        } while (false);
+            fileondisk.method1098();
+        } catch (Exception exception) {
+            return;
+        }
     }
 }

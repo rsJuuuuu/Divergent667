@@ -15,10 +15,7 @@ public class Class320_Sub19 extends Class320 {
     static int[] anIntArray8392 = new int[2];
     static int anInt8393;
 
-    final int method3677(int i) {
-        if (i != 0) {
-            method3752();
-        }
+    final int method3677() {
         anInt8386++;
         if (aNode_Sub27_4063.method2691(3) != Node_Sub38_Sub34.aClass353_10443 || !aNode_Sub27_4063.method2697(-68)) {
             return 1;
@@ -30,11 +27,8 @@ public class Class320_Sub19 extends Class320 {
         super(i, node_sub27);
     }
 
-    final void method3673(byte b) {
-        if (b > -35) {
-            anInt8388 = -64;
-        }
-        anInt4064 = method3677(0);
+    final void method3673() {
+        anInt4064 = method3677();
         anInt8389++;
     }
 

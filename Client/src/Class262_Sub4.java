@@ -44,7 +44,7 @@ public class Class262_Sub4 extends Class262 {
                 Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class126.method1536(class24.aString437) + 2);
                 node_sub13.aPacket7113.writeShort(i_0_);
                 node_sub13.aPacket7113.writeString(class24.aString437);
-                class123.sendPacket(126, node_sub13);
+                class123.sendPacket(node_sub13);
             }
         }
     }

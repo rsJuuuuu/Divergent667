@@ -51,15 +51,12 @@ public class Class320_Sub12 extends Class320 {
         super(i, node_sub27);
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            method3728(89);
-        }
+    final int method3677() {
         anInt8321++;
         return 2;
     }
 
-    static void method3728(int i) {
+    static void method3728() {
         anInt8317++;
         int i_5_ = 0;
         if (Class213.aNode_Sub27_2512.aClass320_Sub24_7317.method3773() == 1) {
@@ -69,7 +66,7 @@ public class Class320_Sub12 extends Class320 {
             i_5_ |= 0x2;
             i_5_ |= 0x4;
         }
-        if (i == Class213.aNode_Sub27_2512.aClass320_Sub30_7275.method3796(false)) {
+        if (0 == Class213.aNode_Sub27_2512.aClass320_Sub30_7275.method3796(false)) {
             i_5_ |= 0x40;
         }
         Class144_Sub2.method1633(i_5_);
@@ -78,10 +75,10 @@ public class Class320_Sub12 extends Class320 {
         Class366.aClass279_4526.method3377(i_5_);
         Class16.aClass101_228.method1091((byte) -52, i_5_);
         Class26.method313(i_5_);
-        ProducingGraphicsBuffer.method2604(i + 2, i_5_);
-        Class282.method3387(i - 25116, i_5_);
+        ProducingGraphicsBuffer.method2604(0 + 2, i_5_);
+        Class282.method3387(0 - 25116, i_5_);
         Class98.method1081(i_5_);
-        Class243.method3061(i + 7);
+        Class243.method3061(0 + 7);
     }
 
     final void method3676(int i) {
@@ -117,10 +114,7 @@ public class Class320_Sub12 extends Class320 {
         return 1;
     }
 
-    final void method3673(byte b) {
-        if (b >= -35) {
-            aClass251_8324 = null;
-        }
+    final void method3673() {
         if (aNode_Sub27_4063.method2697(-126)) {
             anInt4064 = 0;
         }
@@ -129,7 +123,7 @@ public class Class320_Sub12 extends Class320 {
             anInt4064 = 0;
         }
         if (anInt4064 < 0 || anInt4064 > 2) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
     }
 }

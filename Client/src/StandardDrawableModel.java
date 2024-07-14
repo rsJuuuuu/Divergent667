@@ -348,7 +348,7 @@ public class StandardDrawableModel extends DrawableModel {
             StandardDrawableModel standarddrawablemodel_23_ = this;
             standarddrawablemodel_23_.aBoolean5866 = standarddrawablemodel_23_.aBoolean5866 | (class91 != null && (class91.aByte1211 != 0 || class91.aByte1203 != 0));
         }
-        Node_Sub3.method2170(-52, ls, is);
+        Node_Sub3.method2170(ls, is);
         anIntArray5879 = model.anIntArray2616;
         anInt5902 = model.anInt2599;
         anIntArray5913 = model.anIntArray2574;

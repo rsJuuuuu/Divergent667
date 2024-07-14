@@ -222,7 +222,7 @@ public class PlayerDefinition {
                     if (!bool_32_ && aClass38Array3431 != null && aClass38Array3431[i_30_] != null) {
                         class38 = aClass38Array3431[i_30_];
                     }
-                    if (!class86.method1010(0x3fffffff & i_31_, 14434).method1686(aBoolean3434, class38)) {
+                    if (!class86.method1010(0x3fffffff & i_31_).method1686(aBoolean3434, class38)) {
                         bool_29_ = true;
                     }
                 }
@@ -253,7 +253,7 @@ public class PlayerDefinition {
                         if (!bool_37_ && aClass38Array3431 != null && aClass38Array3431[i_35_] != null) {
                             class38 = aClass38Array3431[i_35_];
                         }
-                        Model model = class86.method1010(0x3fffffff & i_36_, 14434).method1683(class38, aBoolean3434, -114);
+                        Model model = class86.method1010(0x3fffffff & i_36_).method1683(class38, aBoolean3434, -114);
                         if (model != null) {
                             models[i_35_] = model;
                         }
@@ -429,7 +429,7 @@ public class PlayerDefinition {
         if (i == -1) {
             anIntArray3435[i_66_] = 0;
         } else {
-            class86.method1010(i, 14434);
+            class86.method1010(i);
             anIntArray3435[i_66_] = Node_Sub16.method2590(i, 1073741824);
             method3276();
         }
@@ -458,7 +458,7 @@ public class PlayerDefinition {
                     if (aClass38Array3431 != null && aClass38Array3431[i_70_] != null) {
                         class38 = aClass38Array3431[i_70_];
                     }
-                    if (!class86.method1010(0x3fffffff & i_71_, 14434).method1692(class38, aBoolean3434)) {
+                    if (!class86.method1010(0x3fffffff & i_71_).method1692(class38, aBoolean3434)) {
                         bool = true;
                     }
                 } else if ((-2147483648 & i_71_) != 0 && !class181.method1825(0x3fffffff & i_71_, (byte) 109).method3228()) {
@@ -477,7 +477,7 @@ public class PlayerDefinition {
                     if (aClass38Array3431 != null && aClass38Array3431[i_73_] != null) {
                         class38 = aClass38Array3431[i_73_];
                     }
-                    Model model = class86.method1010(i_74_ & 0x3fffffff, 14434).method1685(aBoolean3434, class38);
+                    Model model = class86.method1010(i_74_ & 0x3fffffff).method1685(aBoolean3434, class38);
                     if (model != null) {
                         models[i_72_++] = model;
                     }

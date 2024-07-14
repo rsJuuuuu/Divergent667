@@ -27,23 +27,21 @@ public class Class320_Sub3 extends Class320 {
         return true;
     }
 
-    final void method3673(byte b) {
-        if (b < -35) {
-            anInt8224++;
-            if (method3689((byte) 124)) {
-                if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789() && Class188_Sub2_Sub2.method1911(aNode_Sub27_4063.aClass320_Sub29_7270.method3791())) {
-                    anInt4064 = 1;
-                }
-                if (aNode_Sub27_4063.aClass320_Sub1_7313.method3678() == 1) {
-                    anInt4064 = 1;
-                }
+    final void method3673() {
+        anInt8224++;
+        if (method3689((byte) 124)) {
+            if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789() && Class188_Sub2_Sub2.method1911(aNode_Sub27_4063.aClass320_Sub29_7270.method3791())) {
+                anInt4064 = 1;
             }
-            if (anInt4064 == 3) {
-                anInt4064 = 2;
+            if (aNode_Sub27_4063.aClass320_Sub1_7313.method3678() == 1) {
+                anInt4064 = 1;
             }
-            if (anInt4064 < 0 || anInt4064 > 3) {
-                anInt4064 = method3677(0);
-            }
+        }
+        if (anInt4064 == 3) {
+            anInt4064 = 2;
+        }
+        if (anInt4064 < 0 || anInt4064 > 3) {
+            anInt4064 = method3677();
         }
     }
 
@@ -83,7 +81,7 @@ public class Class320_Sub3 extends Class320 {
         if (i == 3) {
             return 3;
         }
-        if (!(i != 2 && i != 3)) {
+        if (!(i != 2)) {
             return 2;
         }
         return 1;
@@ -98,10 +96,7 @@ public class Class320_Sub3 extends Class320 {
         anInt8228++;
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            aHashTable8234 = null;
-        }
+    final int method3677() {
         anInt8230++;
         return 0;
     }

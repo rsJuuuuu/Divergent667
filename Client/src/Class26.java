@@ -19,7 +19,7 @@ public class Class26 {
         throw new IllegalStateException();
     }
 
-    static byte method312(char c, byte b) {
+    static byte method312(char c) {
         anInt456++;
         byte b_1_;
         if ((c == 0 || c >= 128) && (c < 160 || c > 255)) {
@@ -82,9 +82,6 @@ public class Class26 {
             }
         } else {
             b_1_ = (byte) c;
-        }
-        if (b >= -26) {
-            aClass192_455 = null;
         }
         return b_1_;
     }

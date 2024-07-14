@@ -16,12 +16,9 @@ public class Node_Sub29_Sub1 extends Node_Sub29 {
         super(i, i_0_, i_1_, i_2_, i_3_, f);
     }
 
-    final void method2706(int i, int i_4_, int i_5_, int i_6_) {
+    final void method2706(int i_4_, int i_5_, int i_6_) {
         anInt7342 = i_4_;
         anInt7346 = i_6_;
-        if (i != 4752) {
-            method2706(28, 12, 13, -12);
-        }
         anInt10014++;
         anInt7340 = i_5_;
     }

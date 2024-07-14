@@ -53,7 +53,7 @@ public class Class86 {
         if (glsprite != null) {
             return glsprite;
         }
-        ItemDefinitions itemdefinition = method1010(i_5_, 14434);
+        ItemDefinitions itemdefinition = method1010(i_5_);
         if (i_2_ > 1 && itemdefinition.anIntArray1918 != null) {
             int i_7_ = -1;
             for (int i_8_ = 0; i_8_ < 10; i_8_++) {
@@ -62,7 +62,7 @@ public class Class86 {
                 }
             }
             if (i_7_ != -1) {
-                itemdefinition = method1010(i_7_, 14434);
+                itemdefinition = method1010(i_7_);
             }
         }
         int[] is = itemdefinition.method1682(i_4_, graphicstoolkit_0_, i_2_, i_1_, bool_3_, playerdefinition, graphicstoolkit, class52, i);
@@ -168,14 +168,11 @@ public class Class86 {
 
     public static boolean OLD_ITEMS = true;
 
-    final ItemDefinitions method1010(int i, int i_16_) {
-        if (i_16_ != 14434) {
-            method1006(-81);
-        }
+    final ItemDefinitions method1010(int i) {
         anInt1171++;
         ItemDefinitions itemdefinition;
         synchronized (aClass61_1174) {
-            itemdefinition = (ItemDefinitions) aClass61_1174.method607(i, i_16_ - 14434);
+            itemdefinition = (ItemDefinitions) aClass61_1174.method607(i, 0);
         }
         if (itemdefinition != null) {
             return itemdefinition;
@@ -183,12 +180,12 @@ public class Class86 {
         byte[] bs = null;
         if (OLD_ITEMS && index37 != null)
             synchronized (index37) {
-                bs = index37.method3524(Animator.method236(i), Node_Sub29_Sub2.method2716(0, i));
+                bs = index37.method3524(Animator.method236(i), i >>> 8);
                 //System.out.println(i+", "+bs);
             }
         if (bs == null)
             synchronized (index19) {
-                bs = index19.method3524(Animator.method236(i), Node_Sub29_Sub2.method2716(0, i));
+                bs = index19.method3524(Animator.method236(i), i >>> 8);
             }
         itemdefinition = new ItemDefinitions();
         itemdefinition.anInt1914 = i;
@@ -200,13 +197,13 @@ public class Class86 {
         }
         itemdefinition.method1691();
         if (itemdefinition.anInt1857 != -1) {
-            itemdefinition.method1677(method1010(itemdefinition.anInt1857, 14434), method1010(itemdefinition.anInt1887, 14434));
+            itemdefinition.method1677(method1010(itemdefinition.anInt1857), method1010(itemdefinition.anInt1887));
         }
         if (itemdefinition.anInt1852 != -1) {
-            itemdefinition.method1676(method1010(itemdefinition.anInt1927, 14434), method1010(itemdefinition.anInt1852, 14434));
+            itemdefinition.method1676(method1010(itemdefinition.anInt1927), method1010(itemdefinition.anInt1852));
         }
         if (itemdefinition.anInt1928 != -1) {
-            itemdefinition.method1693(method1010(itemdefinition.anInt1928, i_16_), (byte) -121, method1010(itemdefinition.anInt1891, i_16_));
+            itemdefinition.method1693(method1010(itemdefinition.anInt1928), (byte) -121, method1010(itemdefinition.anInt1891));
         }
         if (!aBoolean1162 && itemdefinition.aBoolean1871) {
             itemdefinition.aString1860 = Translation.aTranslation_368.getTranslatedString(anInt1161);
@@ -220,7 +217,7 @@ public class Class86 {
                 for (Node node = itemdefinition.aHashTable1873.method1516(); node != null; node = itemdefinition.aHashTable1873.method1520(85)) {
                     Class267 class267 = aClass36_1182.method394((int) node.aLong2797, -119);
                     if (class267.aBoolean3442) {
-                        node.method2160((byte) 99);
+                        node.method2160();
                     } else {
                         bool = true;
                     }

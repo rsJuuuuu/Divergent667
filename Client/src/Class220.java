@@ -59,7 +59,7 @@ public class Class220 implements Interface14 {
             aClass192_5321 = null;
         }
         if (Node_Sub44.aClass151_7549 == class151 || class151 == Node_Sub39.aClass151_7493) {
-            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) l, 14434);
+            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) l);
             return itemdefinition.aString1860;
         }
         if (Class35.aClass151_535 == class151 || Class345.aClass151_4267 == class151 || Class150_Sub1.aClass151_8949 == class151) {

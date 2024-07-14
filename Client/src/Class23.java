@@ -14,7 +14,7 @@ public class Class23 {
         Mobile.aBuffer9128 = null;
         anInt433++;
         ProducingGraphicsBuffer.method2601();
-        Class218.aClass123_2566.sendPacket(127, FloatBuffer.method2250(-386, Class29.aClass318_470, Class218.aClass123_2566.anIsaacCipher1571));
+        Class218.aClass123_2566.sendPacket(FloatBuffer.method2250(-386, Class29.aClass318_470, Class218.aClass123_2566.anIsaacCipher1571));
     }
 
     static Class379[] method302() {

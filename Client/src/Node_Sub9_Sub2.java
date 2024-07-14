@@ -76,7 +76,7 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                     anInt9718 = 0;
                 } else {
                     method2498();
-                    this.method2160((byte) 50);
+                    this.method2160();
                     return;
                 }
             }
@@ -85,7 +85,7 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                     anInt9718 = i_7_ - 1;
                 } else {
                     method2498();
-                    this.method2160((byte) 30);
+                    this.method2160();
                     return;
                 }
             }
@@ -200,14 +200,14 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                     if (anInt9718 < 0) {
                         anInt9718 = -1;
                         method2498();
-                        this.method2160((byte) 94);
+                        this.method2160();
                     }
                 } else {
                     method2480(is, i_9_, i_7_, i_4_, 0);
                     if (anInt9718 >= i_7_) {
                         anInt9718 = i_7_;
                         method2498();
-                        this.method2160((byte) 121);
+                        this.method2160();
                     }
                 }
             }
@@ -397,12 +397,12 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
     final synchronized void method2483(int i) {
         if (i == 0) {
             method2485();
-            this.method2160((byte) 45);
+            this.method2160();
         } else if (anInt9711 == 0 && anInt9708 == 0) {
             anInt9715 = 0;
             anInt9716 = 0;
             anInt9707 = 0;
-            this.method2160((byte) 27);
+            this.method2160();
         } else {
             int i_53_ = -anInt9707;
             if (anInt9707 > i_53_) {
@@ -904,7 +904,7 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                 if (anInt9716 == -2147483648) {
                     anInt9716 = 0;
                     anInt9707 = anInt9711 = anInt9708 = 0;
-                    this.method2160((byte) 118);
+                    this.method2160();
                     i = anInt9715;
                 }
                 anInt9715 = 0;
@@ -929,7 +929,7 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                 anInt9718 = 0;
             } else {
                 method2498();
-                this.method2160((byte) 32);
+                this.method2160();
                 return;
             }
         }
@@ -938,7 +938,7 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                 anInt9718 = i_149_ - 1;
             } else {
                 method2498();
-                this.method2160((byte) 90);
+                this.method2160();
                 return;
             }
         }
@@ -1030,12 +1030,12 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
                 if (anInt9718 < 0) {
                     anInt9718 = -1;
                     method2498();
-                    this.method2160((byte) 59);
+                    this.method2160();
                 }
             } else if (anInt9718 >= i_149_) {
                 anInt9718 = i_149_;
                 method2498();
-                this.method2160((byte) 61);
+                this.method2160();
             }
         }
     }
@@ -1126,7 +1126,7 @@ public class Node_Sub9_Sub2 extends Node_Sub9 {
         }
         if (anInt9716 == -2147483648) {
             anInt9716 = 0;
-            this.method2160((byte) 100);
+            this.method2160();
             return true;
         }
         method2477();

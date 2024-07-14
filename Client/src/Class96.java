@@ -77,7 +77,7 @@ public class Class96 {
         if (node_sub45_sub1 == null) {
             return null;
         }
-        node_sub49.method2160((byte) 99);
+        node_sub49.method2160();
         aHashTable1268.method1515(l, node_sub45_sub1, -128);
         return node_sub45_sub1;
     }

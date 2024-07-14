@@ -41,61 +41,61 @@ public class r_Sub1 extends r {
                     Class188_Sub2_Sub1.anInt9350++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Node_Sub42.aClass318_7526, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 2) {
                     Class66_Sub3.anInt9001++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class170.aClass318_2051, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 3) {
                     Class279.anInt3550++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class262_Sub9.aClass318_7765, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 4) {
                     Class385.anInt4912++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class377.aClass318_4663, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 5) {
                     Class270_Sub1.anInt8032++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class368.aClass318_4544, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 6) {
                     Node_Sub27.anInt7286++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class64.aClass318_5048, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 7) {
                     GraphicsBuffer.anInt7144++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class189.aClass318_2295, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 8) {
                     Class235_Sub1.anInt8977++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class371.aClass318_4586, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 9) {
                     Class300.anInt3767++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Node_Sub30.aClass318_7360, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (i_3_ == 10) {
                     Class161.anInt2002++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class379.aClass318_4869, Class218.aClass123_2566.anIsaacCipher1571);
                     Animable_Sub4_Sub1.method927(i_1_, widget.anInt4718, Objects.requireNonNull(node_sub13), i_2_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
             }
         }

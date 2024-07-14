@@ -58,12 +58,9 @@ public class Class117_Sub2 extends Class117 implements Interface9 {
         aShortArrayArrayArray5151 = null;
     }
 
-    final void method1167(int i) {
+    final void method1167() {
         anInt5150++;
-        aGLToolkit1474.method1408(i + 24020, this);
-        if (i != -20931) {
-            method1167(12);
-        }
+        aGLToolkit1474.method1408(this);
     }
 
     static void method1174(int i, byte[][][] bs, int i_3_, int i_4_, int i_5_, int i_6_, GraphicsToolkit graphicstoolkit, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {

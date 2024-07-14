@@ -25,7 +25,7 @@ public class HashTable {
         if (i <= -122) {
             anInt1591++;
             if (node.aNode2799 != null) {
-                node.method2160((byte) 74);
+                node.method2160();
             }
             Node node_0_ = aNodeArray1597[(int) (l & (long) (-1 + anInt1592))];
             node.aNode2800 = node_0_;
@@ -51,7 +51,7 @@ public class HashTable {
                     if (node_1_ == node) {
                         break;
                     }
-                    node_1_.method2160((byte) 125);
+                    node_1_.method2160();
                 }
             }
             anInt1593++;

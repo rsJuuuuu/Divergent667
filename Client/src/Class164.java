@@ -26,7 +26,7 @@ public class Class164 {
                 break;
             }
             node_sub48.anInterface3_7588.w(true);
-            node_sub48.method2160((byte) 108);
+            node_sub48.method2160();
         }
     }
 

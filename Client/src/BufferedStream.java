@@ -314,7 +314,7 @@ class BufferedStream extends Node {
 
     static void method2205(Node node, Node node_38_) {
         if (node_38_.aNode2799 != null) {
-            node_38_.method2160((byte) 31);
+            node_38_.method2160();
         }
         anInt6960++;
         node_38_.aNode2800 = node;

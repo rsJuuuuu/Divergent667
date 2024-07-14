@@ -398,16 +398,13 @@ public class GLToolkit extends GraphicsToolkit {
         anInt6393++;
     }
 
-    final void method1408(int i, Interface9 interface9) {
+    final void method1408(Interface9 interface9) {
         anInt6571++;
         if (anInterface9_6647 != interface9) {
             if (aBoolean6658) {
                 OpenGL.glBindBufferARB(34962, interface9.method24());
             }
             anInterface9_6647 = interface9;
-        }
-        if (i != 3089) {
-            aBoolean6638 = true;
         }
     }
 
@@ -2971,7 +2968,7 @@ public class GLToolkit extends GraphicsToolkit {
         if (class69_321_ == null) {
             OpenGL.glDisableClientState(32884);
         } else {
-            method1408(3089, class69_321_.anInterface9_939);
+            method1408(class69_321_.anInterface9_939);
             OpenGL.glVertexPointer(class69_321_.aByte942, class69_321_.aShort938, anInterface9_6647.method21(23144), anInterface9_6647.method23(28552) + (long) class69_321_.aByte937);
             OpenGL.glEnableClientState(32884);
         }
@@ -2979,21 +2976,21 @@ public class GLToolkit extends GraphicsToolkit {
         if (class69_320_ == null) {
             OpenGL.glDisableClientState(32885);
         } else {
-            method1408(3089, class69_320_.anInterface9_939);
+            method1408(class69_320_.anInterface9_939);
             OpenGL.glNormalPointer(class69_320_.aShort938, anInterface9_6647.method21(23144), anInterface9_6647.method23(28552) + (long) class69_320_.aByte937);
             OpenGL.glEnableClientState(32885);
         }
         if (class69 == null) {
             OpenGL.glDisableClientState(32886);
         } else {
-            method1408(3089, class69.anInterface9_939);
+            method1408(class69.anInterface9_939);
             OpenGL.glColorPointer(class69.aByte942, class69.aShort938, anInterface9_6647.method21(23144), anInterface9_6647.method23(28552) + (long) class69.aByte937);
             OpenGL.glEnableClientState(32886);
         }
         if (class69_322_ == null) {
             OpenGL.glDisableClientState(32888);
         } else {
-            method1408(3089, class69_322_.anInterface9_939);
+            method1408(class69_322_.anInterface9_939);
             OpenGL.glTexCoordPointer(class69_322_.aByte942, class69_322_.aShort938, anInterface9_6647.method21(23144), anInterface9_6647.method23(28552) + (long) class69_322_.aByte937);
             OpenGL.glEnableClientState(32888);
         }

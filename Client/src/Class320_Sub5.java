@@ -53,10 +53,7 @@ public class Class320_Sub5 extends Class320 {
         return i >= 96;
     }
 
-    final void method3673(byte b) {
-        if (b >= -35) {
-            anIntArray8255 = null;
-        }
+    final void method3673() {
         anInt8252++;
         int i = Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1877();
         if (i < 96) {
@@ -69,15 +66,12 @@ public class Class320_Sub5 extends Class320 {
             anInt4064 = 2;
         }
         if (anInt4064 < 0 || anInt4064 > 3) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8244++;
-        if (i != 0) {
-            return -39;
-        }
         return 0;
     }
 

@@ -3581,7 +3581,7 @@ public class PureJavaDrawableModel extends DrawableModel {
             ls[i_854_] = ((long) i_856_ << 32) + (long) i_857_;
             aBoolean5720 |= bool_864_;
         }
-        Node_Sub3.method2170(122, ls, is);
+        Node_Sub3.method2170(ls, is);
         if (model.aClass17Array2621 != null) {
             anInt5762 = model.aClass17Array2621.length;
             aClass209Array5790 = new Class209[anInt5762];

@@ -3,8 +3,6 @@
  */
 
 public class Class125 {
-    static int anInt1606;
-    static int anInt1607;
     static int anInt1608;
     static Class61 aClass61_1609 = new Class61(4);
     static int anInt1610;
@@ -28,41 +26,42 @@ public class Class125 {
         return (i_11_ & 0x800) != 0;
     }
 
-    static void method1530(int i, int[] is, long[] ls, int i_12_) {
-        anInt1606++;
-        if (i > i_12_) {
-            int i_13_ = (i_12_ + i) / 2;
-            int i_14_ = i_12_;
-            long l = ls[i_13_];
-            ls[i_13_] = ls[i];
-            ls[i] = l;
-            int i_15_ = is[i_13_];
-            is[i_13_] = is[i];
-            is[i] = i_15_;
-            int i_16_ = l != 9223372036854775807L ? 1 : 0;
-            for (int i_17_ = i_12_; i > i_17_; i_17_++) {
-                if (l + (long) (i_16_ & i_17_) > ls[i_17_]) {
-                    long l_18_ = ls[i_17_];
-                    ls[i_17_] = ls[i_14_];
-                    ls[i_14_] = l_18_;
-                    int i_19_ = is[i_17_];
-                    is[i_17_] = is[i_14_];
-                    is[i_14_++] = i_19_;
-                }
-            }
-            ls[i] = ls[i_14_];
-            ls[i_14_] = l;
-            is[i] = is[i_14_];
-            is[i_14_] = i_15_;
-            method1530(-1 + i_14_, is, ls, i_12_);
-            method1530(i, is, ls, i_14_ + 1);
+    /**
+     * quicksort algorithm that sorts the array "ints" and array "longs" based on comparison with "longs"
+     **/
+    static void quicksort(int[] ints, long[] longs, int lo, int hi) {
+        if (lo >= hi) {
+            return;
         }
+
+        int midpoint = (lo + hi) / 2;
+        int i = lo;
+        long pivotValue = longs[midpoint];
+        longs[midpoint] = longs[hi];
+        longs[hi] = pivotValue;
+        int pivotIndex = ints[midpoint];
+        ints[midpoint] = ints[hi];
+        ints[hi] = pivotIndex;
+        // for values that aren't the max value, ever other value gets a +1 to comparison
+        // some sort of balancing of partitions?
+        int isNotLongMax = pivotValue != Long.MAX_VALUE ? 1 : 0;
+        for (int j = lo; hi > j; j++) {
+            if (longs[j] < pivotValue + (long) (isNotLongMax & j)) {
+                long next = longs[j];
+                longs[j] = longs[i];
+                longs[i] = next;
+                int nextIndex = ints[j];
+                ints[j] = ints[i];
+                ints[i++] = nextIndex;
+            }
+        }
+        longs[hi] = longs[i];
+        longs[i] = pivotValue;
+        ints[hi] = ints[i];
+        ints[i] = pivotIndex;
+
+        quicksort(ints, longs, lo, -1 + i);
+        quicksort(ints, longs, i + 1, hi);
     }
 
-    static void method1531(int i) {
-        if (i == 2288) {
-            anInt1607++;
-            CacheNode_Sub16.aClass312_9600 = new Class312();
-        }
-    }
 }

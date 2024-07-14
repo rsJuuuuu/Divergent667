@@ -36,11 +36,11 @@ public class Class243 {
         Class385.anInt4913 = i_0_;
     }
 
-    static void method3060(byte b, boolean bool, boolean bool_1_, Node_Sub2 node_sub2) {
+    static void method3060(boolean bool, boolean bool_1_, Node_Sub2 node_sub2) {
         anInt3073++;
         int i = node_sub2.interfaceId;
         int i_2_ = (int) node_sub2.aLong2797;
-        node_sub2.method2160((byte) 55);
+        node_sub2.method2160();
         if (bool_1_) {
             Node_Sub15_Sub6.method2571(i);
         }
@@ -55,7 +55,7 @@ public class Class243 {
         }
         Class303 class303 = new Class303(Class289.aHashTable3630);
         for (Node_Sub2 node_sub2_3_ = (Node_Sub2) class303.method3542(); node_sub2_3_ != null; node_sub2_3_ = (Node_Sub2) class303.method3539()) {
-            if (!node_sub2_3_.method2161(-127)) {
+            if (node_sub2_3_.aNode2799 == null) {
                 node_sub2_3_ = (Node_Sub2) class303.method3542();
                 if (node_sub2_3_ == null) {
                     break;
@@ -64,7 +64,7 @@ public class Class243 {
             if (node_sub2_3_.cliped == 3) {
                 int i_4_ = (int) node_sub2_3_.aLong2797;
                 if (i_4_ >>> 16 == i) {
-                    method3060((byte) 95, bool, true, node_sub2_3_);
+                    method3060(bool, true, node_sub2_3_);
                 }
             }
         }

@@ -507,7 +507,7 @@ public class ObjectDefinition {
                 i_32_ = interface17.method65(anInt3035);
             }
         } else {
-            i_32_ = interface17.method64(anInt3017, (byte) -42);
+            i_32_ = interface17.method64(anInt3017);
         }
         if (i_32_ < 0
                 || i_32_ >= -1 + anIntArray2984.length

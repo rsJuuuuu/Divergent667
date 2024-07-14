@@ -60,7 +60,7 @@ public class Class357 {
         int i_9_ = 0;
         int i_11_ = string.length();
         for (int i_12_ = 0; i_11_ > i_12_; i_12_++) {
-            int i_13_ = 0xff & Class26.method312(string.charAt(i_12_), (byte) -28);
+            int i_13_ = 0xff & Class26.method312(string.charAt(i_12_));
             int i_14_ = 0;
             if (i_13_ == 60) {
                 i_7_ = i_12_;
@@ -266,7 +266,7 @@ public class Class357 {
                     }
                 }
                 if (i_23_ == -1) {
-                    i_25_ += 0xff & aByteArray4427[0xff & Class26.method312(c, (byte) -64)];
+                    i_25_ += 0xff & aByteArray4427[0xff & Class26.method312(c)];
                     if (aByteArrayArray4433 != null && i_24_ != -1) {
                         i_25_ += aByteArrayArray4433[i_24_][c];
                     }
@@ -338,7 +338,7 @@ public class Class357 {
                     }
                 }
                 if (i_31_ == -1) {
-                    i_33_ += 0xff & aByteArray4427[Class26.method312(c, (byte) -42) & 0xff];
+                    i_33_ += 0xff & aByteArray4427[Class26.method312(c) & 0xff];
                     if (aByteArrayArray4433 != null && i_32_ != -1) {
                         i_33_ += aByteArrayArray4433[i_32_][c];
                     }

@@ -67,24 +67,18 @@ public class Class320_Sub27 extends Class320 {
         }
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8462++;
         if (aNode_Sub27_4063.method2691(3) == Class169_Sub4.aClass353_8825) {
             anInt4064 = 2;
         }
         if (anInt4064 < 0 || anInt4064 > 2) {
-            anInt4064 = method3677(0);
-        }
-        if (b >= -35) {
-            aBoolean8465 = true;
+            anInt4064 = method3677();
         }
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8468++;
-        if (i != 0) {
-            method3673((byte) 102);
-        }
         return 1;
     }
 

@@ -4,7 +4,6 @@
 
 public class Class107 {
     static int[] anIntArray1359;
-    static int anInt1360;
     static float aFloat1361;
     static int anInt1362;
     static int[] anIntArray1363 = new int[1];
@@ -12,17 +11,8 @@ public class Class107 {
     protected Interface1 anInterface1_1365;
     static int anInt1366 = 1403;
 
-    static int method1124(int i) {
-        if (i != 1403) {
-            method1124(75);
-        }
-        anInt1360++;
-        return Class171.anInt2066;
-    }
-
     public static void method1125() {
         aClass302_1364 = null;
-
         anIntArray1359 = null;
         anIntArray1363 = null;
     }

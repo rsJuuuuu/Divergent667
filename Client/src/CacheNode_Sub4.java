@@ -33,7 +33,7 @@ public class CacheNode_Sub4 extends CacheNode {
         if (anInt9462 != 0) {
             return i_0_ != method2300();
         }
-        this.method2160((byte) 73);
+        this.method2160();
         this.method2275();
         Class21.anInt355--;
         Class200_Sub2.aClass61_4941.method601(this, 25566, cachenode_sub13.aLong9564);

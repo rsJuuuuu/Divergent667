@@ -71,7 +71,7 @@ public class Class57 {
             i_3_ -= 2;
         }
         byte[] bs = new byte[i_3_];
-        Class111.method1138(string, bs, (byte) -83, 0);
+        Class111.method1138(string, bs);
         return bs;
     }
 

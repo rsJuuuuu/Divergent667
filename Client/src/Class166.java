@@ -64,7 +64,7 @@ public class Class166 implements Interface7 {
             node_sub13.aPacket7113.writeIntV2(Node_Sub15_Sub9.anInt9839);
             node_sub13.aPacket7113.writeShort128(widget.anInt4718);
             node_sub13.aPacket7113.writeShortLE(widget.anInt4687);
-            Class218.aClass123_2566.sendPacket(126, node_sub13);
+            Class218.aClass123_2566.sendPacket(node_sub13);
         }
     }
 }

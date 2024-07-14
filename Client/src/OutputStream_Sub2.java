@@ -41,7 +41,7 @@ public class OutputStream_Sub2 extends OutputStream {
         int[] is = new int[EntityNode_Sub3_Sub1.aClass86_9166.anInt1175];
         int i = 0;
         for (int i_6_ = 0; EntityNode_Sub3_Sub1.aClass86_9166.anInt1175 > i_6_; i_6_++) {
-            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_6_, 14434);
+            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_6_);
             if (itemdefinition.maleWornModelId1 >= 0 || itemdefinition.femaleWornModelId1 >= 0) {
                 is[i++] = i_6_;
             }

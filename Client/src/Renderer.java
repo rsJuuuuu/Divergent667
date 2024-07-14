@@ -19,7 +19,7 @@ public class Renderer {
         if (node_sub3 != null) {
             node_sub3.aClass189_Sub1_6943.method1924();
             Class341.method3960(node_sub3.anInt6947, node_sub3.aBoolean6945, (byte) 115);
-            node_sub3.method2160((byte) 83);
+            node_sub3.method2160();
         }
     }
 

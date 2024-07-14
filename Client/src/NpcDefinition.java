@@ -130,7 +130,7 @@ public class NpcDefinition {
         }
         int i_1_ = -1;
         if (anInt2881 != -1) {
-            i_1_ = interface17.method64(anInt2881, (byte) -42);
+            i_1_ = interface17.method64(anInt2881);
         } else if (anInt2882 != -1) {
             i_1_ = interface17.method65(anInt2882);
         }
@@ -879,7 +879,7 @@ public class NpcDefinition {
                 i = interface17.method65(anInt2882);
             }
         } else {
-            i = interface17.method64(anInt2881, (byte) -42);
+            i = interface17.method64(anInt2881);
         }
         if (i < 0 || i >= -1 + anIntArray2827.length || anIntArray2827[i] == -1) {
             int i_71_ = anIntArray2827[-1 + anIntArray2827.length];

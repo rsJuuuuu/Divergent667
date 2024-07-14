@@ -230,7 +230,7 @@ public class Class78 {
                             if (node_sub11 != null) {
                                 int i_52_ = 0;
                                 for (Node_Sub8 node_sub8 = (Node_Sub8) node_sub11.aClass312_7104.method3622(); node_sub8 != null; node_sub8 = (Node_Sub8) node_sub11.aClass312_7104.method3623()) {
-                                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8.anInt7065, 14434);
+                                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8.anInt7065);
                                     if (Class87.removeWalkHere && entitynode_sub6.anAnimable5990.plane == Class295.myPlayer.plane) {
                                         Class267 class267 = Class324.anInt4087 != -1 ? Class188_Sub2_Sub2.aClass36_9366.method394(Class324.anInt4087, -89) : null;
                                         if ((0x1 & Class200_Sub2.anInt4943) != 0 && (class267 == null || class267.anInt3443 != itemdefinition.method1678(Class324.anInt4087, class267.anInt3443))) {

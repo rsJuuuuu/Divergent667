@@ -33,7 +33,7 @@ abstract class Class117 {
     final void method1165(int i, byte[] bs) {
 
         anInt1468++;
-        method1167(-20931);
+        method1167();
         if (i <= anInt1473) {
             OpenGL.glBufferSubDataARBub(anInt1469, 0, i, bs, 0);
         } else {
@@ -50,7 +50,7 @@ abstract class Class117 {
         cachenode_sub2.aString9428 = string;
     }
 
-    abstract void method1167(int i);
+    abstract void method1167();
 
     static void method1168(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
         anInt1471++;
@@ -108,7 +108,7 @@ abstract class Class117 {
         anInt1473 = i_26_;
         OpenGL.glGenBuffersARB(1, GLXToolkit.anIntArray9221, 0);
         anInt1476 = GLXToolkit.anIntArray9221[0];
-        method1167(-20931);
+        method1167();
         OpenGL.glBufferDataARBub(i, anInt1473, bs, 0, !aBoolean1477 ? 35044 : 35040);
         aGLToolkit1474.anInt6623 += anInt1473;
     }
@@ -120,7 +120,7 @@ abstract class Class117 {
         aBoolean1477 = false;
         OpenGL.glGenBuffersARB(1, GLXToolkit.anIntArray9221, 0);
         anInt1476 = GLXToolkit.anIntArray9221[0];
-        method1167(-20931);
+        method1167();
         OpenGL.glBufferDataARBa(34962, anInt1473, buffer.getAddress(), 35044);
         aGLToolkit1474.anInt6623 += anInt1473;
     }

@@ -50,12 +50,10 @@ public class Class320_Sub2 extends Class320 {
         Class52.anInt800 = 1;
     }
 
-    final void method3673(byte b) {
-        if (b < -35) {
-            anInt8222++;
-            if (anInt4064 < 0 || anInt4064 > 1) {
-                anInt4064 = method3677(0);
-            }
+    final void method3673() {
+        anInt8222++;
+        if (anInt4064 < 0 || anInt4064 > 1) {
+            anInt4064 = method3677();
         }
     }
 
@@ -68,10 +66,7 @@ public class Class320_Sub2 extends Class320 {
         super(node_sub27);
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            return 22;
-        }
+    final int method3677() {
         anInt8217++;
         return 1;
     }

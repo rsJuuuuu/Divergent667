@@ -54,7 +54,7 @@ public class Class348 {
                 Node_Sub21 node_sub21_1_ = (Node_Sub21) aClass312_4299.method3622();
                 node_sub21 = new Node_Sub21(i, Objects.requireNonNull(node_sub21_1_).anInt7181);
                 aNode_Sub21Array4295[node_sub21_1_.anInt7187] = null;
-                node_sub21_1_.method2160((byte) 36);
+                node_sub21_1_.method2160();
             }
             aNode_Sub21Array4295[i] = node_sub21;
         } else {

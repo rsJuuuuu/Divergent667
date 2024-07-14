@@ -159,7 +159,7 @@ class Class194 {
                     Node_Sub29_Sub3.method2717(true);
                 }
                 if (Class218.aClass123_2566.aClass365_1557 != null && Class58.method577(Class151.anInt1843)) {
-                    Class202.method2027(200);
+                    Class202.method2027();
                 }
                 for (int i_13_ = 0; i_13_ < 100; i_13_++)
                     Class195.aBooleanArray2387[i_13_] = true;

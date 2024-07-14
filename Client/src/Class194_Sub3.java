@@ -91,7 +91,7 @@ class Class194_Sub3 extends Class194 {
             int i_4_ = GraphicsToolkit.aClass34_Sub1Array1547[33].method376();
             i_4_ = i_4_ + GraphicsToolkit.aClass34_Sub1Array1547[!Class320_Sub13.aBoolean8335 ? 32 : 34].method376();
             i_4_ += GraphicsToolkit.aClass34_Sub1Array1547[13].method376();
-            i_4_ = i_4_ + (bool ? 100 : Class273.index33.method3511(19492));
+            i_4_ = i_4_ + (bool ? 100 : Class273.index33.method3511());
             if (i_4_ != 400) {
                 return i_4_ / 4;
             }
@@ -251,7 +251,7 @@ class Class194_Sub3 extends Class194 {
             OutputStream_Sub2.method139();
             Class186.aClass112_2256.method1143(Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751() == 0);
             Class24.aClass275_442 = new Class275();
-            Class320_Sub12.method3728(0);
+            Class320_Sub12.method3728();
             Class28.method333(Class18.aClass37_306);
             Node_Sub38_Sub9.method2822(CacheNode_Sub5.aClass302_9477);
             Class218.method2077(TemporaryItemDefinition.aD565, Class107.aClass302_1364);

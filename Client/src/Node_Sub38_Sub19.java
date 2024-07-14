@@ -225,16 +225,14 @@ public class Node_Sub38_Sub19 extends Node_Sub38 {
     }
 
     final void method2780(BufferedStream buffer, int i) {
-        if (!false) {
-            anInt10291++;
-            if (i == 0) {
-                anInt10290 = buffer.readUnsignedShort();
-                return;
-            } else if (i != 1) {
-                return;
-            }
-            aBoolean10287 = buffer.readUnsignedByte() == 1;
+        anInt10291++;
+        if (i == 0) {
+            anInt10290 = buffer.readUnsignedShort();
+            return;
+        } else if (i != 1) {
+            return;
         }
+        aBoolean10287 = buffer.readUnsignedByte() == 1;
     }
 
     final int[][] method2778(int i) {

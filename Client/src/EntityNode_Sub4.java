@@ -61,7 +61,7 @@ public class EntityNode_Sub4 extends EntityNode {
                     }
                 }
             }
-            cachenode_sub5.method2160((byte) 99);
+            cachenode_sub5.method2160();
             anInt5981--;
             if (cachenode_sub5.method2276()) {
                 cachenode_sub5.method2275();

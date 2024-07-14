@@ -286,7 +286,7 @@ public class IComponentDefinitions {
         }
         int[] is = null;
         if (Class134.method1574(cachenode_sub13.anInt9562)) {
-            is = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) cachenode_sub13.aLong9563, 14434)
+            is = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) cachenode_sub13.aLong9563)
                     .anIntArray1926;
         } else if (cachenode_sub13.anInt9569 == -1) {
             if (OutcommingPacket.method3666(cachenode_sub13.anInt9562)) {
@@ -315,8 +315,7 @@ public class IComponentDefinitions {
                 }
             }
         } else {
-            is = EntityNode_Sub3_Sub1.aClass86_9166.method1010(cachenode_sub13.anInt9569,
-                    14434).anIntArray1926;
+            is = EntityNode_Sub3_Sub1.aClass86_9166.method1010(cachenode_sub13.anInt9569).anIntArray1926;
         }
         String string = Mobile.method844(cachenode_sub13, (byte) 126);
         if (is != null) {
@@ -737,9 +736,6 @@ public class IComponentDefinitions {
     }
 
     final void method4149(int i, int i_57_) {
-        if (!true) {
-            method4149(42, 8);
-        }
         anInt4715++;
         if (anIntArray4863 == null || anIntArray4863.length <= i) {
             int[] is = new int[i + 1];
@@ -917,7 +913,7 @@ public class IComponentDefinitions {
             return drawablemodel;
         }
         if (modelType == 4) {
-            ItemDefinitions itemdefinition = class86.method1010(anInt4864, 14434);
+            ItemDefinitions itemdefinition = class86.method1010(anInt4864);
             DrawableModel drawablemodel = itemdefinition.method1689(animator, i, playerdefinition, 10,
                     graphicstoolkit, 75);
             if (drawablemodel == null) {
@@ -957,7 +953,7 @@ public class IComponentDefinitions {
         if (aHashTable4823 != null) {
             Node node = aHashTable4823.method1518(3512, i);
             if (node != null) {
-                node.method2160((byte) 120);
+                node.method2160();
             }
         }
         anInt4713++;

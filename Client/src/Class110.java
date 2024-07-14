@@ -41,12 +41,9 @@ public class Class110 {
     static int anInt1412 = 0;
     /*synthetic*/ static Class<?> aClass1413;
 
-    static void method1129(byte b, int i) {
-        if (b <= 62) {
-            method1129((byte) -96, -70);
-        }
+    static void method1129() {
         anInt1391++;
-        Class105.aClass61_5202.method598(i);
+        Class105.aClass61_5202.method598(5);
     }
 
     private Class110(int i, Translation translation, int i_0_) {

@@ -69,7 +69,7 @@ public class Node_Sub16 extends Node {
             int i_9_ = i_6_;
             boolean bool_10_ = false;
             for (int j : is) {
-                if (j != -1 && !EntityNode_Sub3_Sub1.aClass86_9166.method1010(j, 14434).method1686(bool, null)) {
+                if (j != -1 && !EntityNode_Sub3_Sub1.aClass86_9166.method1010(j).method1686(bool, null)) {
                     bool_10_ = true;
                 }
             }
@@ -79,7 +79,7 @@ public class Node_Sub16 extends Node {
             Model[] models = new Model[is.length];
             for (int i_12_ = 0; i_12_ < is.length; i_12_++) {
                 if (is[i_12_] != -1) {
-                    models[i_12_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(is[i_12_], 14434).method1683(null, bool, Node_Sub19.method2612(1, -52));
+                    models[i_12_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(is[i_12_]).method1683(null, bool, Node_Sub19.method2612(1, -52));
                 }
             }
             if (class259 != null && class259.anIntArrayArray3273 != null) {

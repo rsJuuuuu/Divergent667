@@ -283,7 +283,7 @@ public class Node_Sub38_Sub37 extends Node_Sub38 {
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Node_Sub51.aClass318_7630, Objects.requireNonNull(class123).anIsaacCipher1571);
                         Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class126.method1536(string));
                         node_sub13.aPacket7113.writeString(string);
-                        class123.sendPacket(127, node_sub13);
+                        class123.sendPacket(node_sub13);
                     }
                 }
             }

@@ -4,12 +4,10 @@
 
 public class Class135 {
     static int anInt1689;
-    static int anInt1690;
     static int anInt1691;
     static int anInt1692;
 
     public final String toString() {
-        anInt1690++;
         throw new IllegalStateException();
     }
 

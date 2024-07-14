@@ -12,17 +12,14 @@ public class Class202 {
         anIntArray2448 = null;
     }
 
-    static void method2027(int i) {
-        if (i != 200) {
-            anIntArray2448 = null;
-        }
+    static void method2027() {
         Class214.anInt2513++;
         anInt2447++;
-        Node_Sub13 node_sub13 = FloatBuffer.method2250(i - 586, Class312.aClass318_3976, Class218.aClass123_2566.anIsaacCipher1571);
+        Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class312.aClass318_3976, Class218.aClass123_2566.anIsaacCipher1571);
         Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class188_Sub2_Sub1.getDisplayMode(3));
         node_sub13.aPacket7113.writeShort(Class360.screenWidth);
         node_sub13.aPacket7113.writeShort(Class205.screenHeight);
         node_sub13.aPacket7113.writeByte(Class213.aNode_Sub27_2512.aClass320_Sub13_7283.method3734());
-        Class218.aClass123_2566.sendPacket(i ^ 0xb7, node_sub13);
+        Class218.aClass123_2566.sendPacket(node_sub13);
     }
 }

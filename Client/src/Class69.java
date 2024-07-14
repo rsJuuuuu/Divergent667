@@ -47,7 +47,7 @@ public class Class69 {
         Class204.method2030();
         Class213.aNode_Sub27_2512.method2690(82, 1, Class213.aNode_Sub27_2512.aClass320_Sub18_7303);
         Class213.aNode_Sub27_2512.method2690(93, 3, Class213.aNode_Sub27_2512.aClass320_Sub15_7273);
-        Class320_Sub12.method3728(0);
+        Class320_Sub12.method3728();
         Class120.method1228();
         Class152.aBoolean1942 = true;
     }

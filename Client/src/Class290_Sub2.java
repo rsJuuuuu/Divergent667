@@ -84,9 +84,7 @@ public class Class290_Sub2 extends Class290 {
             anAbstractToolkit3654.method1297(Class55.aClass346_829);
             anAbstractToolkit3654.method1362(0);
         }
-        if (!false) {
-            anInt8068++;
-        }
+        anInt8068++;
     }
 
     final void method3417(boolean bool_3_) {

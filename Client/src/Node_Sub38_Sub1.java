@@ -71,13 +71,13 @@ public class Node_Sub38_Sub1 extends Node_Sub38 {
             Class266.aHashTable3380.method1515(l, node_sub11, -127);
             node_sub11.aClass312_7104.method3625(node_sub8);
         } else {
-            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8.anInt7065, 14434);
+            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8.anInt7065);
             int i_14_ = itemdefinition.anInt1924;
             if (itemdefinition.anInt1892 == 1) {
                 i_14_ *= 1 + node_sub8.anInt7067;
             }
             for (Node_Sub8 node_sub8_15_ = (Node_Sub8) node_sub11.aClass312_7104.method3613(); node_sub8_15_ != null; node_sub8_15_ = (Node_Sub8) node_sub11.aClass312_7104.method3620()) {
-                itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8_15_.anInt7065, (byte) -108 ^ -14346);
+                itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8_15_.anInt7065);
                 int i_16_ = itemdefinition.anInt1924;
                 if (itemdefinition.anInt1892 == 1) {
                     i_16_ *= 1 + node_sub8_15_.anInt7067;

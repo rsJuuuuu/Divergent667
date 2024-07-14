@@ -205,7 +205,7 @@ public class Node_Sub25_Sub3 extends Node_Sub25 {
         int i_9_ = 0;
         for (int i_10_ = 0; node_sub16.anIntArray7137.length > i_10_; i_10_++) {
             if (node_sub16.anIntArray7137[i_10_] >= 0 && EntityNode_Sub3_Sub1.aClass86_9166.anInt1175 > node_sub16.anIntArray7137[i_10_]) {
-                ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub16.anIntArray7137[i_10_], 14434);
+                ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub16.anIntArray7137[i_10_]);
                 int i_11_ = itemdefinition.method1678(i_6_, Class188_Sub2_Sub2.aClass36_9366.method394(i_6_, -78).anInt3443);
                 if (bool) {
                     i_9_ += i_11_ * node_sub16.anIntArray7138[i_10_];

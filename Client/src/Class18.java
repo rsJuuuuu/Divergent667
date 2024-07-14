@@ -23,13 +23,13 @@ public class Class18 {
                 Node_Sub15_Sub6.method2571(Class320_Sub15.WINDOWS_PANE_ID);
             }
             for (Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1516(); node_sub2 != null; node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1520(106)) {
-                if (!node_sub2.method2161(-122)) {
+                if (node_sub2.aNode2799 == null) {
                     node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1516();
                     if (node_sub2 == null) {
                         break;
                     }
                 }
-                Class243.method3060((byte) 61, false, true, node_sub2);
+                Class243.method3060(false, true, node_sub2);
             }
             Class320_Sub15.WINDOWS_PANE_ID = -1;
             Class289.aHashTable3630 = new HashTable(8);

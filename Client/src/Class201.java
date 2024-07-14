@@ -72,7 +72,7 @@ abstract class Class201 {
             if (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791() == 0) {
                 for (Node_Sub30 node_sub30 = (Node_Sub30) Class69.aClass312_940.method3613(); node_sub30 != null; node_sub30 = (Node_Sub30) Class69.aClass312_940.method3620()) {
                     EntityNode_Sub3_Sub1.aClass86_9166.method1002(node_sub30.anInt7358, graphicstoolkit, graphicstoolkit, node_sub30.aBoolean7355 ? Class295.myPlayer.aPlayerDefinition11137 : null, false, node_sub30.anInt7356, node_sub30.anInt7352, false, node_sub30.anInt7354, CacheNode_Sub18.aClass52_9609, node_sub30.anInt7361);
-                    node_sub30.method2160((byte) 52);
+                    node_sub30.method2160();
                 }
                 Class320_Sub21.method3764(-118);
             } else {
@@ -84,7 +84,7 @@ abstract class Class201 {
                 }
                 for (Node_Sub30 node_sub30 = (Node_Sub30) Class69.aClass312_940.method3613(); node_sub30 != null; node_sub30 = (Node_Sub30) Class69.aClass312_940.method3620()) {
                     EntityNode_Sub3_Sub1.aClass86_9166.method1002(node_sub30.anInt7358, Class88.aGraphicsToolkit5280, graphicstoolkit, !node_sub30.aBoolean7355 ? null : Class295.myPlayer.aPlayerDefinition11137, false, node_sub30.anInt7356, node_sub30.anInt7352, false, node_sub30.anInt7354, Class337.aClass52_4181, node_sub30.anInt7361);
-                    node_sub30.method2160((byte) 93);
+                    node_sub30.method2160();
                 }
             }
         }

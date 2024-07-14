@@ -36,7 +36,7 @@ abstract class Node_Sub29 extends Node {
         return anInt7342;
     }
 
-    abstract void method2706(int i, int i_0_, int i_1_, int i_2_);
+    abstract void method2706(int i_0_, int i_1_, int i_2_);
 
     final float method2707() {
         anInt7335++;

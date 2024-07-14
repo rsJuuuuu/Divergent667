@@ -473,7 +473,7 @@ public class r_Sub2 extends r {
             }
         }
         if (Class262_Sub15_Sub1.aClass224_10520 == null) {
-            if (Class92.aCacheNode_Sub11_1233 != null && r_Sub1.aClass302_11047.method3516(Class92.aCacheNode_Sub11_1233.aString9537 + "_staticelements", -73)) {
+            if (Class92.aCacheNode_Sub11_1233 != null && r_Sub1.aClass302_11047.method3516(Class92.aCacheNode_Sub11_1233.aString9537 + "_staticelements")) {
                 if (r_Sub1.aClass302_11047.method3527(Class92.aCacheNode_Sub11_1233.aString9537 + "_staticelements")) {
                     Class262_Sub15_Sub1.aClass224_10520 = Class152.method1695(Class101.aBoolean1313, r_Sub1.aClass302_11047, Class92.aCacheNode_Sub11_1233.aString9537 + "_staticelements");
                 } else {
@@ -641,7 +641,7 @@ public class r_Sub2 extends r {
                     Animable_Sub3.anInt9139++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class169_Sub3.aClass318_8808, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeInt(1057001181);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (Class61.anInt898 == 0) {
                     int i_41_ = (-(Node_Sub54.GAME_SCENE_WDITH >> 4) + Player.anInt11178) / 8;
@@ -667,7 +667,7 @@ public class r_Sub2 extends r {
                     Class48.method478(11, (byte) 105);
                     if (Class218.aClass123_2566.aClass365_1557 != null) {
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class91.aClass318_1220, Class218.aClass123_2566.anIsaacCipher1571);
-                        Class218.aClass123_2566.sendPacket(127, node_sub13);
+                        Class218.aClass123_2566.sendPacket(node_sub13);
                     }
                 }
                 Class365_Sub1.method4070();

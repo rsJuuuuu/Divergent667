@@ -3,7 +3,7 @@
  */
 
 interface Interface17 {
-    int method64(int i, byte b);
+    int method64(int i);
 
     int method65(int i);
 }

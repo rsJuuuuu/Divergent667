@@ -38,9 +38,7 @@ public class Node_Sub38_Sub6 extends Node_Sub38 {
             }
             anInt10137 = buffer.readUnsignedShort();
         } while (false);
-        if (!false) {
-            anInt10133++;
-        }
+        anInt10133++;
     }
 
     public Node_Sub38_Sub6() {

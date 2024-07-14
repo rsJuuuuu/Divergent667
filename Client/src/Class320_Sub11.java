@@ -22,10 +22,7 @@ public class Class320_Sub11 extends Class320 {
         return super.anInt4064;
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            method3724(-40);
-        }
+    final int method3677() {
         anInt8311++;
         return 0;
     }
@@ -42,7 +39,7 @@ public class Class320_Sub11 extends Class320 {
         super(node_sub27);
     }
 
-    static void method3724(int i) {
+    static void method3724() {
         anInt8309++;
         Class4.index2.anInt3795 = 1;
         if (Class151.anInt1843 == 15) {
@@ -735,7 +732,6 @@ public class Class320_Sub11 extends Class320 {
         GameStub.anInt21 = 0;
         Actor.anInt10820 = 0;
         CacheNode_Sub14_Sub2.anInt11038 = 0;
-        Class113.anInt1442 = 0;
         Class206.anInt2466 = 0;
         Class191.anInt2344 = 0;
         ClientScriptsExecutor.anInt3848 = 0;
@@ -864,7 +860,6 @@ public class Class320_Sub11 extends Class320 {
         Class51_Sub1.anInt9060 = 0;
         GLToolkit.anInt6413 = 0;
         Class34_Sub1.anInt5538 = 0;
-        Node_Sub29_Sub2.anInt10016 = 0;
         Class51.anInt5328 = 0;
         Class262_Sub4.anInt7725 = 0;
         Node_Sub38_Sub38.anInt10487 = 0;
@@ -1731,7 +1726,7 @@ public class Class320_Sub11 extends Class320 {
         Class340.anInt4219 = 0;
         Class320_Sub13.anInt8329 = 0;
         AbstractToolkit.anInt6191 = 0;
-        GLToolkit.anInt6526 = i;
+        GLToolkit.anInt6526 = 0;
         Class336_Sub1.anInt8524 = 0;
         Node_Sub51.anInt7629 = 0;
         Class352.anInt4327 = 0;
@@ -2254,7 +2249,6 @@ public class Class320_Sub11 extends Class320 {
         AbstractToolkit.anInt6210 = 0;
         GLToolkit.anInt6411 = 0;
         Class350.anInt5392 = 0;
-        Class125.anInt1606 = 0;
         Class240.anInt2935 = 0;
         Class295.anInt3698 = 0;
         Class237.anInt2905 = 0;
@@ -2736,7 +2730,6 @@ public class Class320_Sub11 extends Class320 {
         IsaacCipher.anInt1837 = 0;
         Class312.anInt3963 = 0;
         Class197.anInt2425 = 0;
-        Class107.anInt1360 = 0;
         Class51_Sub2.anInt9073 = 0;
         AbstractToolkit.anInt6190 = 0;
         Node_Sub9_Sub1.anInt9684 = 0;
@@ -3583,10 +3576,6 @@ public class Class320_Sub11 extends Class320 {
         NpcDefinition.anInt2870 = 0;
         Node_Sub29.anInt7337 = 0;
         Class135.anInt1689 = 0;
-        Class114.anInt1457 = 0;
-        Class125.anInt1607 = 0;
-        Class135.anInt1690 = 0;
-        Actor.anInt10822 = 0;
         Node_Sub23_Sub1.anInt9922 = 0;
         Node_Sub23_Sub1.anInt9919 = 0;
         Class134_Sub3.anInt9025 = 0;
@@ -3842,7 +3831,6 @@ public class Class320_Sub11 extends Class320 {
         GLDrawableModel.anInt5660 = 0;
         GameStub.anInt16 = 0;
         BufferedStream.anInt7011 = 0;
-        Node.anInt2798 = 0;
         Index.anInt3782 = 0;
         GLXToolkit.anInt9269 = 0;
         NpcDefinition.anInt2869 = 0;
@@ -3983,7 +3971,6 @@ public class Class320_Sub11 extends Class320 {
         Class12.anInt183 = 0;
         StandardDrawableModel.anInt5887 = 0;
         Class169_Sub1.anInt8789 = 0;
-        Node_Sub38_Sub23.anInt10326 = 0;
         Node_Sub38_Sub31.anInt10423 = 0;
         GLXToolkit.anInt9295 = 0;
         Class5.anInt132 = 0;
@@ -4286,7 +4273,7 @@ public class Class320_Sub11 extends Class320 {
         Class218.aClass123_2560.method1513();
         Class34.aBoolean531 = true;
         Class51.aBoolean5331 = true;
-        Class125.method1531(i + 2288);
+        CacheNode_Sub16.aClass312_9600 = new Class312();
         Arrays.fill(Class320_Sub24.cachedHintIcons, null);
 
         Class87.removeWalkHere = false;
@@ -4333,13 +4320,13 @@ public class Class320_Sub11 extends Class320 {
             Node_Sub15_Sub6.method2571(Class320_Sub15.WINDOWS_PANE_ID);
         }
         for (Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1516(); node_sub2 != null; node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1520(118)) {
-            if (!node_sub2.method2161(-108)) {
+            if (node_sub2.aNode2799 == null) {
                 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1516();
                 if (node_sub2 == null) {
                     break;
                 }
             }
-            Class243.method3060((byte) -66, false, true, node_sub2);
+            Class243.method3060(false, true, node_sub2);
         }
 
         Class320_Sub15.WINDOWS_PANE_ID = -1;
@@ -4372,11 +4359,11 @@ public class Class320_Sub11 extends Class320 {
         Node_Sub25_Sub1.aBoolean9950 = true;
         Class343.aShortArray4255 = EntityNode_Sub3_Sub1.aShortArray9165 = Class262_Sub19.aShortArray7852 = Class129.aShortArray1665 = new short[256];
         Class173.aString2085 = Translation.aTranslation_389.getTranslatedString(Class35.language);
-        Class213.aNode_Sub27_2512.method2690(i ^ 0x7b, Class213.aNode_Sub27_2512.aClass320_Sub4_7302.method3694(false), Class213.aNode_Sub27_2512.aClass320_Sub4_7304);
+        Class213.aNode_Sub27_2512.method2690(123, Class213.aNode_Sub27_2512.aClass320_Sub4_7302.method3694(false), Class213.aNode_Sub27_2512.aClass320_Sub4_7304);
         Class213.aNode_Sub27_2512.method2690(55, Class213.aNode_Sub27_2512.aClass320_Sub19_7277.method3751(), Class213.aNode_Sub27_2512.aClass320_Sub19_7301);
         Class175.anInt2097 = 0;
         Class281.method3384();
-        Class202.method2027(i ^ 0xc8);
+        Class202.method2027();
         Class117.aNode_Sub7_1472 = null;
         Class359.aLong4466 = 0L;
         Class4.index2.anInt3795 = 2;
@@ -4409,11 +4396,8 @@ public class Class320_Sub11 extends Class320 {
         anInt8308++;
     }
 
-    final void method3673(byte byte0) {
-        if (byte0 > -35) {
-        } else {
-            anInt8307++;
-        }
+    final void method3673() {
+        anInt8307++;
     }
 
 }

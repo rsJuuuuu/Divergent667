@@ -3068,7 +3068,7 @@ public class GLDrawableModel extends DrawableModel {
             GLDrawableModel gldrawablemodel_678_ = this;
             gldrawablemodel_678_.aBoolean5670 = gldrawablemodel_678_.aBoolean5670 | (class91 != null && (class91.aByte1211 != 0 || class91.aByte1203 != 0));
         }
-        Node_Sub3.method2170(-28, ls, is);
+        Node_Sub3.method2170(ls, is);
         anIntArray5637 = model.anIntArray2574;
         anInt5644 = model.anInt2599;
         aShortArray5618 = model.aShortArray2582;

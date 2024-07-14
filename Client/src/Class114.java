@@ -10,7 +10,6 @@ public class Class114 {
     private CacheNode aCacheNode1454;
     static int[][] anIntArrayArray1455 = {{2, 4, 6, 0}, {0, 2, 4, 6}, {0, 2, 4}, {4, 0, 2}, {2, 4, 0}, {0, 2, 4}, {6, 0, 1, 2, 4, 5}, {0, 4, 7, 6}, {4, 7, 6, 0}, {0, 8, 6, 2, 9, 4}, {2, 9, 4, 0, 8, 6}, {2, 11, 4, 6, 10, 0}, {2, 4, 6, 0}};
     static int anInt1456;
-    static int anInt1457;
     static volatile boolean aBoolean1458 = true;
     static int anInt1459;
     static long aLong1460 = 0L;
@@ -24,7 +23,6 @@ public class Class114 {
     }
 
     static GraphicsToolkit method1155(d var_d, Canvas canvas, int i) {
-        anInt1457++;
         return new GLToolkit(canvas, var_d, i);
     }
 

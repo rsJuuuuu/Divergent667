@@ -923,11 +923,9 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     final void method1270(byte b, float f) {
         anInt6157++;
-        if (b < -70) {
-            if (aFloat6363 != f) {
-                aFloat6363 = f;
-                method1359();
-            }
+        if (aFloat6363 != f) {
+            aFloat6363 = f;
+            method1359();
         }
     }
 
@@ -1596,28 +1594,17 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     Class290 method1311(int i_145_) {
         anInt6213++;
-        while_1_:
-        do {
-            while_0_:
-            do {
-                do {
-                    if (i_145_ == 6) {
-                        return new Class290_Sub5(this);
-                    } else if (i_145_ != 1) {
-                        if (i_145_ == 2) {
-                            break;
-                        } else if (i_145_ != 7) {
-                            break while_1_;
-                        }
-                        break while_0_;
-                    }
-                    return new Class290_Sub4(this);
-                } while (false);
-                return new Class290_Sub2(this, aClass5_6247);
-            } while (false);
+        if (i_145_ == 6) {
+            return new Class290_Sub5(this);
+        } else if (i_145_ == 1) {
+            return new Class290_Sub4(this);
+        } else if (i_145_ == 2) {
+            return new Class290_Sub2(this, aClass5_6247);
+        } else if (i_145_ == 7) {
             return new Class290_Sub7(this);
-        } while (false);
-        return new Class290_Sub6(this);
+        } else {
+            return new Class290_Sub6(this);
+        }
     }
 
     final void method1312(Interface13 interface13) {

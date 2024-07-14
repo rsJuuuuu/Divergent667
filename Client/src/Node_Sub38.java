@@ -73,7 +73,6 @@ abstract class Node_Sub38 extends Node {
     }
 
     void method2780(BufferedStream buffer, int i) {
-        anInt7461++;
     }
 
     static int method2781(int i, int i_4_, int i_5_) {

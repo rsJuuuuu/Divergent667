@@ -703,7 +703,7 @@ public class PureJavaToolkit extends GraphicsToolkit {
     final void a(java.awt.Canvas canvas, int i, int i_190_) {
         GraphicsBuffer graphicsbuffer = (GraphicsBuffer) aHashTable6753.method1518(3512, canvas.hashCode());
         if (graphicsbuffer != null) {
-            graphicsbuffer.method2160((byte) 56);
+            graphicsbuffer.method2160();
             graphicsbuffer = Class284.method3391(i_190_, canvas, 38, i);
             aHashTable6753.method1515(canvas.hashCode(), graphicsbuffer, -125);
             if (aCanvas6755 == canvas && aClass64_6771 == null) {
@@ -2423,7 +2423,7 @@ public class PureJavaToolkit extends GraphicsToolkit {
         }
         GraphicsBuffer graphicsbuffer = (GraphicsBuffer) aHashTable6753.method1518(3512, canvas.hashCode());
         if (graphicsbuffer != null) {
-            graphicsbuffer.method2160((byte) 83);
+            graphicsbuffer.method2160();
         }
     }
 

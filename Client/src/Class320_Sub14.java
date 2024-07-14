@@ -12,10 +12,7 @@ public class Class320_Sub14 extends Class320 {
     static int anInt8346;
     static int anInt8347;
 
-    final int method3677(int i) {
-        if (i != 0) {
-            anInt8347 = 112;
-        }
+    final int method3677() {
         anInt8341++;
         return 1;
     }
@@ -61,13 +58,10 @@ public class Class320_Sub14 extends Class320 {
         return 1;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8342++;
         if (anInt4064 != 1 && anInt4064 != 0) {
-            anInt4064 = method3677(0);
-        }
-        if (b > -35) {
-            anInt8347 = -57;
+            anInt4064 = method3677();
         }
     }
 

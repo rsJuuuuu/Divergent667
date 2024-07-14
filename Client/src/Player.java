@@ -474,7 +474,7 @@ public class Player extends Actor {
                         equipIds[i_49_] = Node_Sub16.method2590(1073741824,
                                 i_52_);
                         itemDefinitions[i_49_] = EntityNode_Sub3_Sub1.aClass86_9166
-                                .method1010(i_52_, 14434);
+                                .method1010(i_52_);
                         int i_53_ = itemDefinitions[i_49_].anInt1899;
                         if (i_53_ != 0) {
                             anInt11134 = i_53_;

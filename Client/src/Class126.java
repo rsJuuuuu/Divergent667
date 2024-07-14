@@ -685,7 +685,7 @@ public class Class126 {
                     node_sub13.aPacket7113.writeString(string.substring(3, i_25_));
                     Class194_Sub3.method1975(node_sub13.aPacket7113, string.substring(i_25_));
                     node_sub13.aPacket7113.method2217(-i_24_ + node_sub13.aPacket7113.offset);
-                    class123.sendPacket(126, node_sub13);
+                    class123.sendPacket(node_sub13);
                     return;
                 }
                 if (string.equals("savevarcs")) {
@@ -729,7 +729,7 @@ public class Class126 {
                 }
                 if (string.startsWith("getclientvarpbit")) {
                     int i_27_ = Integer.parseInt(string.substring(17));
-                    Node_Sub7.method2422("varpbit=" + Class24.aClass275_442.method64(i_27_, (byte) -42));
+                    Node_Sub7.method2422("varpbit=" + Class24.aClass275_442.method64(i_27_));
                     return;
                 }
                 if (string.startsWith("getclientvarp")) {
@@ -933,7 +933,7 @@ public class Class126 {
                     node_sub13.aPacket7113.writeByte(!bool ? 0 : 1);
                     node_sub13.aPacket7113.writeByte(bool_11_ ? 1 : 0);
                     node_sub13.aPacket7113.writeString(string);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 if (string.startsWith("fps ") && Node_Sub38_Sub1.aClass329_10086 != Class240.aClass329_2943) {
                     Class384.method4203(Class350.method3998(string.substring(4), -1));
@@ -997,7 +997,7 @@ public class Class126 {
                         Objects.requireNonNull(node_sub13).aPacket7113.writeByte(method1536(string) + 1);
                         node_sub13.aPacket7113.writeString(string);
                         node_sub13.aPacket7113.writeByte(!bool ? 0 : 1);
-                        class123.sendPacket(127, node_sub13);
+                        class123.sendPacket(node_sub13);
                     }
                 }
             }

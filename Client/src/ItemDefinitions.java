@@ -112,7 +112,7 @@ public class ItemDefinitions {
                 }
             }
             if (i_2_ != -1) {
-                return aClass86_1868.method1010(i_2_, 14434);
+                return aClass86_1868.method1010(i_2_);
             }
         }
         return this;
@@ -886,7 +886,7 @@ public class ItemDefinitions {
                 }
             }
             if (i_72_ != -1) {
-                return aClass86_1868.method1010(i_72_, 14434).method1689(
+                return aClass86_1868.method1010(i_72_).method1689(
                         animator, i, playerdefinition, 1, graphicstoolkit, 87);
             }
         }

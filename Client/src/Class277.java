@@ -542,7 +542,7 @@ class Class277 {
                 node_sub13.aPacket7113.writeByte(bool ? 1 : 0);
                 node_sub13.aPacket7113.writeShort(i_135_);
                 node_sub13.aPacket7113.writeString(string);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
             }
         }
     }

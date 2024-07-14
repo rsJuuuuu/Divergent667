@@ -27,7 +27,7 @@ abstract class CacheNode_Sub14 extends CacheNode {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7556);
                     node_sub47.aNode_Sub9_Sub2_7556 = null;
                 }
-                node_sub47.method2160((byte) 98);
+                node_sub47.method2160();
                 break;
             }
         }

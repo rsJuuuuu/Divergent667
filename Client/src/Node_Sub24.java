@@ -240,7 +240,7 @@ public class Node_Sub24 extends Node {
                 if (!class123.aBoolean1580 && class123.aClass365_1557 != null) {
                     Class365.anInt4524++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class224.OUTCOMMING_PACKET_16, class123.anIsaacCipher1571);
-                    class123.sendPacket(126, node_sub13);
+                    class123.sendPacket(node_sub13);
                     try {
                         class123.method1512();
                     } catch (java.io.IOException ioexception) {

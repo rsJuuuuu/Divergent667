@@ -56,15 +56,12 @@ public class Class320_Sub6 extends Class320 {
         return aNode_Sub27_4063.method2691(3) == Node_Sub38_Sub34.aClass353_10443;
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            aClass124_8267 = null;
-        }
+    final int method3677() {
         anInt8257++;
         return 1;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         if (aNode_Sub27_4063.method2691(3) == Node_Sub38_Sub34.aClass353_10443) {
             if (aNode_Sub27_4063.method2697(-106)) {
                 anInt4064 = 0;
@@ -72,12 +69,9 @@ public class Class320_Sub6 extends Class320 {
         } else {
             anInt4064 = 1;
         }
-        if (b > -35) {
-            anObject8265 = null;
-        }
         anInt8258++;
         if (anInt4064 != 0 && anInt4064 != 1) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
     }
 

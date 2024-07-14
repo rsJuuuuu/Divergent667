@@ -49,7 +49,7 @@ abstract class Class377 {
         node_sub13.aPacket7113.writeIntV1(widget.ihash);
         node_sub13.aPacket7113.writeShortLE(widget_1_.anInt4687);
         node_sub13.aPacket7113.writeIntV2(widget_1_.ihash);
-        Class218.aClass123_2566.sendPacket(126, node_sub13);
+        Class218.aClass123_2566.sendPacket(node_sub13);
     }
 
     static void method4125() {

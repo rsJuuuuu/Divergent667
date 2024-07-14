@@ -6,7 +6,6 @@ public class Class113 {
     static float aFloat1439;
     static Class336 aClass336_1440;
     protected int anInt1441 = -1;
-    static int anInt1442;
     protected long[] aLongArray1443;
     protected String[] aStringArray1444;
     static int anInt1445;
@@ -17,28 +16,17 @@ public class Class113 {
     static int anInt1450;
     static int anInt1451;
 
-    static int method1148(boolean bool, int i, int i_0_) {
+    static int method1148(int i_0_) {
         anInt1445++;
-        if (!bool) {
-            return 95;
-        }
+        int i = 96;
         if (i_0_ == -2) {
             return 12345678;
         }
         if (i_0_ == -1) {
-            if (i < 2) {
-                i = 2;
-            } else if (i > 126) {
-                i = 126;
-            }
             return i;
         }
         i = (i_0_ & 0x7f) * i >> 7;
-        if (i >= 2) {
-            if (i > 126) {
-                i = 126;
-            }
-        } else {
+        if (i < 2) {
             i = 2;
         }
         return i + (0xff80 & i_0_);
@@ -102,11 +90,7 @@ public class Class113 {
         /* empty */
     }
 
-    static long method1153(int i, String string) {
-        anInt1442++;
-        if (i != 1) {
-            method1153(79, null);
-        }
+    static long method1153(String string) {
         int i_7_ = string.length();
         long l = 0L;
         for (int i_8_ = 0; i_8_ < i_7_; i_8_++)

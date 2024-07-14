@@ -189,7 +189,7 @@ public class Class34_Sub1 extends Class34 {
                     if (aByteArray5525[i_14_] == 0) {
                         bool = false;
                     } else {
-                        node.method2160((byte) 122);
+                        node.method2160();
                     }
                 }
                 while (anArchive5540.anIntArray295.length > anInt5542) {
@@ -224,7 +224,7 @@ public class Class34_Sub1 extends Class34 {
                         method383(i_13_, 2);
                     }
                     if (aByteArray5525[i_13_] == 1) {
-                        node.method2160((byte) 108);
+                        node.method2160();
                     } else {
                         bool = false;
                     }
@@ -264,7 +264,7 @@ public class Class34_Sub1 extends Class34 {
                         if (!cachenode_sub16.aBoolean9598) {
                             throw new RuntimeException();
                         }
-                        cachenode_sub16.method2160((byte) 121);
+                        cachenode_sub16.method2160();
                     } else {
                         cachenode_sub16.aBoolean9597 = true;
                     }
@@ -313,7 +313,7 @@ public class Class34_Sub1 extends Class34 {
             anInt5537 = 39;
         }
         byte[] bs = cachenode_sub16.method2385();
-        cachenode_sub16.method2160((byte) 100);
+        cachenode_sub16.method2160();
         return bs;
     }
 
@@ -321,7 +321,7 @@ public class Class34_Sub1 extends Class34 {
         anInt5516++;
         CacheNode_Sub16 cachenode_sub16 = (CacheNode_Sub16) aHashTable5514.method1518(3512, i);
         if (cachenode_sub16 != null && i_21_ == 0 && !cachenode_sub16.aBoolean9598 && cachenode_sub16.aBoolean9602) {
-            cachenode_sub16.method2160((byte) 57);
+            cachenode_sub16.method2160();
             cachenode_sub16 = null;
         }
         if (cachenode_sub16 == null) {
@@ -398,12 +398,12 @@ public class Class34_Sub1 extends Class34 {
                     aByteArray5525[i] = (byte) 1;
                 }
                 if (!cachenode_sub16.aBoolean9598) {
-                    cachenode_sub16.method2160((byte) 81);
+                    cachenode_sub16.method2160();
                 }
                 return cachenode_sub16;
             } catch (Exception exception) {
                 aByteArray5525[i] = (byte) -1;
-                cachenode_sub16.method2160((byte) 67);
+                cachenode_sub16.method2160();
                 if (cachenode_sub16.aBoolean9598 && !aClass266_5535.method3244()) {
                     CacheNode_Sub16_Sub1 cachenode_sub16_sub1 = aClass266_5535.method3247(anInt5524, i, true, (byte) 2);
                     aHashTable5514.method1515(i, cachenode_sub16_sub1, -123);
@@ -439,7 +439,7 @@ public class Class34_Sub1 extends Class34 {
         } catch (RuntimeException runtimeexception) {
             //made it request file again instead of crashing
             aClass266_5535.method3233();
-            cachenode_sub16.method2160((byte) 118);
+            cachenode_sub16.method2160();
             if (cachenode_sub16.aBoolean9598 && !aClass266_5535.method3244()) {
                 CacheNode_Sub16_Sub1 cachenode_sub16_sub1 = aClass266_5535.method3247(anInt5524, i, true, (byte) 2);
                 aHashTable5514.method1515(i, cachenode_sub16_sub1, -124);
@@ -463,7 +463,7 @@ public class Class34_Sub1 extends Class34 {
             }
         }
         if (!cachenode_sub16.aBoolean9598) {
-            cachenode_sub16.method2160((byte) 112);
+            cachenode_sub16.method2160();
         }
         return cachenode_sub16;
     }
@@ -487,7 +487,7 @@ public class Class34_Sub1 extends Class34 {
             for (Node node = aClass312_5541.method3613(); node != null; node = aClass312_5541.method3620()) {
                 int i = (int) node.aLong2797;
                 if (i < 0 || i >= anArchive5540.anInt296 || anArchive5540.anIntArray295[i] == 0) {
-                    node.method2160((byte) 98);
+                    node.method2160();
                 } else {
                     if (aByteArray5525[i] == 0) {
                         method383(i, 1);
@@ -496,7 +496,7 @@ public class Class34_Sub1 extends Class34 {
                         method383(i, 2);
                     }
                     if (aByteArray5525[i] == 1) {
-                        node.method2160((byte) 67);
+                        node.method2160();
                     }
                 }
             }

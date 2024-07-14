@@ -18,21 +18,15 @@ public class Class320_Sub24 extends Class320 {
         cachedHintIcons = null;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         if (anInt4064 != 1 && anInt4064 != 0) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
         anInt8437++;
-        if (b > -35) {
-            method3771();
-        }
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8440++;
-        if (i != 0) {
-            return 102;
-        }
         return 1;
     }
 
@@ -101,7 +95,7 @@ public class Class320_Sub24 extends Class320 {
                     Node_Sub38_Sub7.method2810(mobile_sub1, true);
                 }
             } else {
-                cachenode_sub12.method2160((byte) 60);
+                cachenode_sub12.method2160();
                 mobile_sub1.method897();
             }
         }

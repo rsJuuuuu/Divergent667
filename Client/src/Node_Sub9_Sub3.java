@@ -54,7 +54,7 @@ public class Node_Sub9_Sub3 extends Node_Sub9 {
     }
 
     final synchronized void method2514(Node_Sub9 node_sub9) {
-        node_sub9.method2160((byte) 50);
+        node_sub9.method2160();
     }
 
     private void method2515(int i) {
@@ -123,7 +123,7 @@ public class Node_Sub9_Sub3 extends Node_Sub9 {
     }
 
     private void method2519(Node_Sub1 node_sub1) {
-        node_sub1.method2160((byte) 90);
+        node_sub1.method2160();
         node_sub1.method2165();
         Node node = aClass312_9722.aNode3958.aNode2800;
         if (node == aClass312_9722.aNode3958) {

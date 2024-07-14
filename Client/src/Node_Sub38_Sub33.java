@@ -33,9 +33,6 @@ public class Node_Sub38_Sub33 extends Node_Sub38 {
 
     final int[] method2775(int i, int i_11_) {
         anInt10438++;
-        if (i <= 107) {
-            method2775(49, -21);
-        }
         return CacheNode_Sub3.anIntArray9442;
     }
 

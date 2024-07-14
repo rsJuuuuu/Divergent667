@@ -25,7 +25,7 @@ public class CacheNode_Sub15 extends CacheNode {
         }
         if (aByteArrayArray9596 == null) {
             synchronized (Node_Sub15_Sub11.aClass302_9859) {
-                if (!Node_Sub15_Sub11.aClass302_9859.method3536(-1, anInt9591)) {
+                if (!Node_Sub15_Sub11.aClass302_9859.method3536(anInt9591)) {
                     return false;
                 }
                 int[] is = Node_Sub15_Sub11.aClass302_9859.method3532(anInt9591);
@@ -82,7 +82,7 @@ public class CacheNode_Sub15 extends CacheNode {
         if (Class169_Sub1.aBooleanArray8788[i_7_]) {
             return true;
         }
-        if (!Node_Sub38_Sub31.aClass302_10422.method3536(-1, i_7_)) {
+        if (!Node_Sub38_Sub31.aClass302_10422.method3536(i_7_)) {
             return false;
         }
         int i_8_ = Node_Sub38_Sub31.aClass302_10422.method3537(i_7_);

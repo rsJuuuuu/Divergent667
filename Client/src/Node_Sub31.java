@@ -33,7 +33,7 @@ public class Node_Sub31 extends Node {
         Class123 class123 = Class262_Sub23.method3213((byte) -123);
         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Node_Sub18.aClass318_7151, Objects.requireNonNull(class123).anIsaacCipher1571);
         Objects.requireNonNull(node_sub13).aPacket7113.writeByte(0);
-        class123.sendPacket(127, node_sub13);
+        class123.sendPacket(node_sub13);
     }
 
     static Class144_Sub3 method2727(BufferedStream buffer, byte b) {

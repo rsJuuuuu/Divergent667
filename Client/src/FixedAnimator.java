@@ -70,7 +70,7 @@ public class FixedAnimator extends Animator {
         }
         int i_5_ = 0;
         for (int i_6_ = 0; EntityNode_Sub3_Sub1.aClass86_9166.anInt1175 > i_6_; i_6_++) {
-            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_6_, 14434);
+            ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_6_);
             if ((!bool_0_ || itemdefinition.aBoolean1933) && itemdefinition.anInt1857 == -1 && itemdefinition.anInt1852 == -1 && itemdefinition.anInt1928 == -1 && itemdefinition.anInt1877 == 0 && itemdefinition.aString1860.toLowerCase().contains(string)) {
                 if (i_1_ != -1) {
                     if (!bool) {
@@ -99,7 +99,7 @@ public class FixedAnimator extends Animator {
         Node_Sub20.aShortArray7175 = ses;
         String[] strings = new String[Class365_Sub1.anInt8759];
         for (int i_9_ = 0; Class365_Sub1.anInt8759 > i_9_; i_9_++)
-            strings[i_9_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(ses[i_9_], 14434).aString1860;
+            strings[i_9_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(ses[i_9_]).aString1860;
         Class293.method3461(strings, Node_Sub20.aShortArray7175);
         if (b != -50) {
             method257(null, -79);

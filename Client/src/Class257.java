@@ -18,7 +18,7 @@ public class Class257 {
         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Node_Sub36_Sub1.aClass318_10031, Class218.aClass123_2566.anIsaacCipher1571);
         Objects.requireNonNull(node_sub13).aPacket7113.writeIntV2(interfaceHash);
         node_sub13.aPacket7113.writeShortLE128(i);
-        Class218.aClass123_2566.sendPacket(127, node_sub13);
+        Class218.aClass123_2566.sendPacket(node_sub13);
     }
 
     public final String toString() {

@@ -393,12 +393,9 @@ public class Node_Sub29_Sub3 extends Node_Sub29 {
         return bs;
     }
 
-    final void method2706(int i, int i_73_, int i_74_, int i_75_) {
+    final void method2706(int i_73_, int i_74_, int i_75_) {
         anInt7342 = i_73_;
         anInt7340 = i_74_;
-        if (i != 4752) {
-            aShort10026 = (short) -106;
-        }
         anInt10021++;
         anInt7346 = i_75_;
     }

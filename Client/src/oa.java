@@ -260,7 +260,7 @@ public class oa extends GraphicsToolkit implements Interface3 {
         }
         p var_p = (p) aHashTable5007.method1518(3512, canvas.hashCode());
         if (var_p != null) {
-            var_p.method2160((byte) 112);
+            var_p.method2160();
             var_p.method2771();
         }
     }

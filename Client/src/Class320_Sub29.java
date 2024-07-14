@@ -42,7 +42,7 @@ public class Class320_Sub29 extends Class320 {
                             .method3620()) {
                         if (node_sub8.anInt7065 == (i_5_ & 0x7fff)
                                 && node_sub8.anInt7067 == i_6_) {
-                            node_sub8.method2160((byte) 39);
+                            node_sub8.method2160();
                             node_sub8.anInt7067 = i_7_;
                             Node_Sub38_Sub1.method2789(Class50.basePlane,
                                     i_2_, i_4_, node_sub8);
@@ -335,19 +335,19 @@ public class Class320_Sub29 extends Class320 {
             int i_96_ = (i_93_ >> 4 & 0x7) + Class333.baseX;
             int i_97_ = i_96_ + Node_Sub53.gameSceneBaseX;
             Node_Sub11 node_sub11 = (Node_Sub11) Class266.aHashTable3380
-                    .method1518(0xdb8, (long) i_95_ << 14
+                    .method1518(3512, (long) i_95_ << 14
                             | (long) Class50.basePlane << 28 | i_97_);
             if (node_sub11 != null) {
                 for (Node_Sub8 node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
                         .method3613(); node_sub8 != null; node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
                         .method3620()) {
                     if (node_sub8.anInt7065 == (i_92_ & 0x7fff)) {
-                        node_sub8.method2160((byte) 111);
+                        node_sub8.method2160();
                         break;
                     }
                 }
                 if (node_sub11.aClass312_7104.method3616()) {
-                    node_sub11.method2160((byte) 127);
+                    node_sub11.method2160();
                 }
                 if (i_96_ >= 0 && i_94_ >= 0
                         && i_96_ < Node_Sub54.GAME_SCENE_WDITH
@@ -474,7 +474,7 @@ public class Class320_Sub29 extends Class320 {
                                     (long) i_132_ << 16 | i_133_);
                     if (cachenode_sub18 != null) {
                         cachenode_sub18.aMobile_Sub4_9606.method914(-128);
-                        cachenode_sub18.method2160((byte) 123);
+                        cachenode_sub18.method2160();
                     }
                 } else {
                     int i_138_ = 256 + 512 * i_132_;
@@ -518,16 +518,13 @@ public class Class320_Sub29 extends Class320 {
         return anInt4064;
     }
 
-    final void method3673(byte b) {
-        if (b > -35) {
-            aBoolean8486 = false;
-        }
+    final void method3673() {
         if (Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883()) {
             anInt4064 = 0;
         }
         anInt8485++;
         if (anInt4064 < 0 || anInt4064 > 5) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
     }
 
@@ -544,10 +541,7 @@ public class Class320_Sub29 extends Class320 {
         super(node_sub27);
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            return 37;
-        }
+    final int method3677() {
         aBoolean8486 = true;
         anInt8482++;
         if (Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883()) {

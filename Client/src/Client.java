@@ -676,7 +676,7 @@ public class Client extends GameStub {
                 || Class151.anInt1843 == 9 && Class339_Sub2.anInt8653 == 42) {
             Class168.method1754();
         }
-        Class312.method3618(16711680);
+        Class312.method3618();
         if (Class331.aBoolean4129 && Animable_Sub2_Sub1.aLong10630 < Class313.method3650() - 60000L) {
             Class144.method1631((byte) 123);
         }
@@ -709,7 +709,7 @@ public class Client extends GameStub {
                     Class365.anInt4524++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class224.OUTCOMMING_PACKET_16,
                             Class218.aClass123_2560.anIsaacCipher1571);
-                    Class218.aClass123_2560.sendPacket(126, node_sub13);
+                    Class218.aClass123_2560.sendPacket(node_sub13);
                 }
                 try {
                     Class218.aClass123_2560.method1512();
@@ -1916,7 +1916,7 @@ public class Client extends GameStub {
                                  node_sub37
                                          != null; node_sub37 = (Node_Sub37) Class275.aClass312_5419.method3620()) {
                                 if (node_sub37.aBoolean7433) {
-                                    node_sub37.method2160((byte) 50);
+                                    node_sub37.method2160();
                                     node_sub37.aWidget7437.aBoolean4819 = false;
                                 }
                             }
@@ -1936,9 +1936,9 @@ public class Client extends GameStub {
                                         && widget.anInt4718 == -1 && widget.anInt4694 == -1 && !widget.aBoolean4861
                                         && widget.anInt4728 == 0;
                         boolean bool_79_ = false;
-                        if (Class106.aClass93_1356.method1050((byte) -21) + i_77_ >= i_71_
+                        if (Class106.aClass93_1356.method1050() + i_77_ >= i_71_
                                 && Class106.aClass93_1356.method1051() + i_78_ >= i_72_
-                                && Class106.aClass93_1356.method1050((byte) -27) + i_77_ < i_73_
+                                && Class106.aClass93_1356.method1050() + i_77_ < i_73_
                                 && Class106.aClass93_1356.method1051() + i_78_ < i_74_) {
                             if (bool) {
                                 Class127 class127 = widget.method4145(Class93.aGraphicsToolkit1241);
@@ -1946,7 +1946,7 @@ public class Client extends GameStub {
                                         || class127.anInt1637 != widget.anInt4695) {
                                     bool_79_ = true;
                                 } else {
-                                    int i_80_ = Class106.aClass93_1356.method1050((byte) -98) + i_77_ - i_69_;
+                                    int i_80_ = Class106.aClass93_1356.method1050() + i_77_ - i_69_;
                                     int i_81_ = Class106.aClass93_1356.method1051() + i_78_ - i_70_;
                                     if (i_81_ >= 0 && i_81_ < class127.anIntArray1641.length) {
                                         int i_82_ = class127.anIntArray1641[i_81_];
@@ -2187,13 +2187,12 @@ public class Client extends GameStub {
                                             }
                                             Class290_Sub6.anInt8116 = 1;
                                             aa.aBoolean104 = false;
-                                            Node_Sub5_Sub2.anInt9412 = Class106.aClass93_1356.method1050((byte) -95);
+                                            Node_Sub5_Sub2.anInt9412 = Class106.aClass93_1356.method1050();
                                             Class83.anInt5179 = Class106.aClass93_1356.method1051();
                                         }
                                     } else if (bool_83_ && Class290_Sub6.anInt8116 > 0) {
                                         if (Class290_Sub6.anInt8116 == 1 && (Node_Sub5_Sub2.anInt9412
-                                                != Class106.aClass93_1356.method1050(
-                                                (byte) -56)
+                                                != Class106.aClass93_1356.method1050()
                                                 || Class83.anInt5179
                                                 != Class106.aClass93_1356.method1051
                                                 ())) {
@@ -2205,7 +2204,7 @@ public class Client extends GameStub {
                                             aa.aBoolean104 = true;
                                             Node_Sub51.method2968(Class188_Sub2.anInt6869 + (int) (
                                                     (double) (Node_Sub5_Sub2.anInt9412
-                                                            - Class106.aClass93_1356.method1050((byte) -120)) * 2.0
+                                                            - Class106.aClass93_1356.method1050()) * 2.0
                                                             / (double) Class20.aFloat329));
                                             Class103.method1109(false, Class134_Sub2.anInt9021 - (int) (
                                                     (double) (Class83.anInt5179
@@ -2230,7 +2229,7 @@ public class Client extends GameStub {
                                 if (widget.anInt4814 == Class77.anInt1017) {
                                     if (bool_83_) {
                                         Class113.method1151(widget.anInt4809,
-                                                i_77_ + Class106.aClass93_1356.method1050((byte) -39) - i_69_,
+                                                i_77_ + Class106.aClass93_1356.method1050() - i_69_,
                                                 i_78_ + Class106.aClass93_1356.method1051()
                                                         - i_70_, widget.anInt4695);
                                     }
@@ -2257,7 +2256,7 @@ public class Client extends GameStub {
                                 Node_Sub37 node_sub37 = new Node_Sub37();
                                 node_sub37.aBoolean7433 = true;
                                 node_sub37.aWidget7437 = widget;
-                                node_sub37.anInt7439 = i_77_ + Class106.aClass93_1356.method1050((byte) -99) - i_69_;
+                                node_sub37.anInt7439 = i_77_ + Class106.aClass93_1356.method1050() - i_69_;
                                 node_sub37.anInt7430 = i_78_ + Class106.aClass93_1356.method1051() - i_70_;
                                 node_sub37.parameters = widget.anObjectArray4803;
                                 Class275.aClass312_5419.method3625(node_sub37);
@@ -2269,7 +2268,7 @@ public class Client extends GameStub {
                                     node_sub37.aBoolean7433 = true;
                                     node_sub37.aWidget7437 = widget;
                                     node_sub37.anInt7439 =
-                                            i_77_ + Class106.aClass93_1356.method1050((byte) -21) - i_69_;
+                                            i_77_ + Class106.aClass93_1356.method1050() - i_69_;
                                     node_sub37.anInt7430 = i_78_ + Class106.aClass93_1356.method1051() - i_70_;
                                     node_sub37.parameters = widget.anObjectArray4680;
                                     Node_Sub5.aClass312_7028.method3625(node_sub37);
@@ -2279,7 +2278,7 @@ public class Client extends GameStub {
                                 Node_Sub37 node_sub37 = new Node_Sub37();
                                 node_sub37.aBoolean7433 = true;
                                 node_sub37.aWidget7437 = widget;
-                                node_sub37.anInt7439 = i_77_ + Class106.aClass93_1356.method1050((byte) -53) - i_69_;
+                                node_sub37.anInt7439 = i_77_ + Class106.aClass93_1356.method1050() - i_69_;
                                 node_sub37.anInt7430 = i_78_ + Class106.aClass93_1356.method1051() - i_70_;
                                 node_sub37.parameters = widget.anObjectArray4856;
                                 Class275.aClass312_5419.method3625(node_sub37);
@@ -2291,7 +2290,7 @@ public class Client extends GameStub {
                                     node_sub37.aBoolean7433 = true;
                                     node_sub37.aWidget7437 = widget;
                                     node_sub37.anInt7439 =
-                                            i_77_ + Class106.aClass93_1356.method1050((byte) -66) - i_69_;
+                                            i_77_ + Class106.aClass93_1356.method1050() - i_69_;
                                     node_sub37.anInt7430 = i_78_ + Class106.aClass93_1356.method1051() - i_70_;
                                     node_sub37.parameters = widget.anObjectArray4706;
                                     Class275.aClass312_5419.method3625(node_sub37);
@@ -2301,7 +2300,7 @@ public class Client extends GameStub {
                                 Node_Sub37 node_sub37 = new Node_Sub37();
                                 node_sub37.aBoolean7433 = true;
                                 node_sub37.aWidget7437 = widget;
-                                node_sub37.anInt7439 = i_77_ + Class106.aClass93_1356.method1050((byte) -33) - i_69_;
+                                node_sub37.anInt7439 = i_77_ + Class106.aClass93_1356.method1050() - i_69_;
                                 node_sub37.anInt7430 = i_78_ + Class106.aClass93_1356.method1051() - i_70_;
                                 node_sub37.parameters = widget.anObjectArray4834;
                                 Class275.aClass312_5419.method3625(node_sub37);
@@ -2313,7 +2312,7 @@ public class Client extends GameStub {
                                     node_sub37.aBoolean7433 = true;
                                     node_sub37.aWidget7437 = widget;
                                     node_sub37.anInt7439 =
-                                            i_77_ + Class106.aClass93_1356.method1050((byte) -119) - i_69_;
+                                            i_77_ + Class106.aClass93_1356.method1050() - i_69_;
                                     node_sub37.anInt7430 = i_78_ + Class106.aClass93_1356.method1051() - i_70_;
                                     node_sub37.parameters = widget.anObjectArray4818;
                                     Node_Sub5.aClass312_7028.method3625(node_sub37);

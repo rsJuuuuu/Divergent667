@@ -15,13 +15,11 @@ public class Class320_Sub10 extends Class320 {
     static int anInt8305;
     static int anInt8306;
 
-    final void method3673(byte b) {
-        if (b <= -35) {
-            if (anInt4064 != 1 && anInt4064 != 0) {
-                anInt4064 = method3677(0);
-            }
-            anInt8301++;
+    final void method3673() {
+        if (anInt4064 != 1 && anInt4064 != 0) {
+            anInt4064 = method3677();
         }
+        anInt8301++;
     }
 
     final int method3675(int i, byte b) {
@@ -46,10 +44,7 @@ public class Class320_Sub10 extends Class320 {
         return anInt4064;
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            aClass323Array8296 = null;
-        }
+    final int method3677() {
         anInt8297++;
         return 0;
     }

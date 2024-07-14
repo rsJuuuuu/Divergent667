@@ -65,7 +65,7 @@ public class Class146 {
                         Node_Sub50 node_sub50_3_ = (Node_Sub50) aClass312_1801.method3622();
                         node_sub50 = new Node_Sub50(i_2_, Objects.requireNonNull(node_sub50_3_).anInt7626);
                         aNode_Sub50Array1808[node_sub50_3_.anInt7624] = null;
-                        node_sub50_3_.method2160((byte) 75);
+                        node_sub50_3_.method2160();
                     } else {
                         node_sub50 = new Node_Sub50(i_2_, anInt1804);
                         anInt1804++;

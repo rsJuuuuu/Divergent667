@@ -29,14 +29,11 @@ public class Class320_Sub15 extends Class320 {
         anInt4064 = i;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         if (anInt4064 < 0 || anInt4064 > 4) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
         anInt8352++;
-        if (b >= -35) {
-            method3677(-78);
-        }
     }
 
     final int method3738() {
@@ -63,10 +60,7 @@ public class Class320_Sub15 extends Class320 {
         throw new IllegalArgumentException();
     }
 
-    final int method3677(int i) {
-        if (i != 0) {
-            aStringArray8354 = null;
-        }
+    final int method3677() {
         anInt8348++;
         return 0;
     }

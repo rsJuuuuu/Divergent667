@@ -40,7 +40,7 @@ public class Class312 {
     final void method3611(Node node, int i) {
         anInt3962++;
         if (node.aNode2799 != null) {
-            node.method2160((byte) 73);
+            node.method2160();
         }
         node.aNode2800 = aNode3958.aNode2800;
         if (i > -61) {
@@ -77,7 +77,7 @@ public class Class312 {
             if (aNode3958 == node) {
                 break;
             }
-            node.method2160((byte) 50);
+            node.method2160();
         }
         aNode3970 = null;
     }
@@ -115,9 +115,9 @@ public class Class312 {
         }
     }
 
-    static void method3618(int i) {
+    static void method3618() {
         anInt3971++;
-        if (Node_Sub38_Sub5.aBoolean10125 && i == 16711680) {
+        if (Node_Sub38_Sub5.aBoolean10125) {
             while (EntityNode_Sub3_Sub1.anInt9163 < Class180.aClass377_Sub1Array2143.length) {
                 Class377_Sub1 class377_sub1 = Class180.aClass377_Sub1Array2143[EntityNode_Sub3_Sub1.anInt9163];
                 if (class377_sub1 == null || class377_sub1.anInt8779 != -1) {
@@ -144,7 +144,7 @@ public class Class312 {
         if (node == aNode3958) {
             return null;
         }
-        node.method2160((byte) 127);
+        node.method2160();
         if (i >= -64) {
             method3619(16);
         }
@@ -234,7 +234,7 @@ public class Class312 {
 
     final void method3625(Node node) {
         if (node.aNode2799 != null) {
-            node.method2160((byte) 38);
+            node.method2160();
         }
         anInt3964++;
         node.aNode2800 = aNode3958;

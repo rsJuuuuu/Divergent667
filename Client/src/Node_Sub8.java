@@ -48,7 +48,7 @@ public class Node_Sub8 extends Node {
         Class48.method478(11, (byte) 119);
         for (int i_2_ = 0; i_2_ < 100; i_2_++)
             Class195.aBooleanArray2387[i_2_] = true;
-        Class202.method2027(200);
+        Class202.method2027();
         Class359.aLong4466 = 0L;
         Class117.aNode_Sub7_1472 = null;
     }

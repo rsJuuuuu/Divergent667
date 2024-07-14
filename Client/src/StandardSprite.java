@@ -383,7 +383,7 @@ public class StandardSprite extends GLSprite {
                     }
                 }
                 packet.method2190(i_56_);
-                node_sub53.method2160((byte) 66);
+                node_sub53.method2160();
             }
         }
     }

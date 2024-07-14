@@ -76,7 +76,7 @@ public class Node_Sub9_Sub5 extends Node_Sub9 {
                 CacheNode_Sub8 cachenode_sub8 = method2534();
                 if (cachenode_sub8 == null) {
                     if (aBoolean9768) {
-                        this.method2160((byte) 46);
+                        this.method2160();
                         Node_Sub38_Sub16.aClass335_10268.method3852((byte) 121);
                     }
                     break;
@@ -116,7 +116,7 @@ public class Node_Sub9_Sub5 extends Node_Sub9 {
         anInt9748++;
         CacheNode_Sub8 cachenode_sub8 = method2534();
         if (cachenode_sub8 != null) {
-            cachenode_sub8.method2160((byte) 99);
+            cachenode_sub8.method2160();
             anInt9761--;
             anInt9762 = 0;
 
@@ -155,7 +155,7 @@ public class Node_Sub9_Sub5 extends Node_Sub9 {
         if (!aBoolean9759) {
             if (method2534() == null) {
                 if (aBoolean9768) {
-                    this.method2160((byte) 45);
+                    this.method2160();
                     Node_Sub38_Sub16.aClass335_10268.method3852((byte) 110);
                 }
             } else {

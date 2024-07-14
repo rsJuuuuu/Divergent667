@@ -58,7 +58,7 @@ public class Class295 {
                     string = Mobile.method844(cachenode_sub13, (byte) 127);
                     int[] is = null;
                     if (Class134.method1574(cachenode_sub13.anInt9562)) {
-                        is = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) cachenode_sub13.aLong9563, 14434).anIntArray1926;
+                        is = EntityNode_Sub3_Sub1.aClass86_9166.method1010((int) cachenode_sub13.aLong9563).anIntArray1926;
                     } else if (cachenode_sub13.anInt9569 == -1) {
                         if (OutcommingPacket.method3666(cachenode_sub13.anInt9562)) {
                             Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (int) cachenode_sub13.aLong9563);
@@ -82,7 +82,7 @@ public class Class295 {
                             }
                         }
                     } else {
-                        is = EntityNode_Sub3_Sub1.aClass86_9166.method1010(cachenode_sub13.anInt9569, 14434).anIntArray1926;
+                        is = EntityNode_Sub3_Sub1.aClass86_9166.method1010(cachenode_sub13.anInt9569).anIntArray1926;
                     }
                     if (is != null) {
                         string += Class43.method458(is);

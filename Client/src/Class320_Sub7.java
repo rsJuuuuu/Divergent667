@@ -41,23 +41,18 @@ public class Class320_Sub7 extends Class320 {
         return !aNode_Sub27_4063.method2697(-114);
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8272++;
-        if (i != 0) {
-            return 84;
-        }
         return 1;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8276++;
-        if (b < -35) {
-            if (aNode_Sub27_4063.method2697(-79)) {
-                anInt4064 = 0;
-            }
-            if (anInt4064 != 1 && anInt4064 != 0) {
-                anInt4064 = method3677(0);
-            }
+        if (aNode_Sub27_4063.method2697(-79)) {
+            anInt4064 = 0;
+        }
+        if (anInt4064 != 1 && anInt4064 != 0) {
+            anInt4064 = method3677();
         }
     }
 

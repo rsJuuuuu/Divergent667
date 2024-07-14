@@ -61,7 +61,7 @@ public class Class20_Sub1 extends Class20 {
                     Node_Sub38_Sub4.method2799(-125, npc);
                 }
                 npc.method879(null);
-                node_sub41.method2160((byte) 86);
+                node_sub41.method2160();
                 bool = true;
             }
         }

@@ -158,7 +158,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                         if (node_sub13 != null && -i_7_ + node_sub13.aPacket7113.offset >= 240) {
                             break;
                         }
-                        node_sub5_8_.method2160((byte) 50);
+                        node_sub5_8_.method2160();
                         int i_9_ = node_sub5_8_.method2272();
                         if (i_9_ < -1) {
                             i_9_ = -1;
@@ -533,7 +533,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                             Class314.anInt4016++;
                             Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class69.aClass318_941, Class218.aClass123_2566.anIsaacCipher1571);
                             Objects.requireNonNull(node_sub13).aPacket7113.writeIntV2(Class326.anInt4098 | (CacheNode_Sub16_Sub2.anInt11087 << 28 | Class269.anInt3473 << 14));
-                            Class218.aClass123_2566.sendPacket(126, node_sub13);
+                            Class218.aClass123_2566.sendPacket(node_sub13);
                             FileOnDisk.aBoolean1319 = false;
                         }
                         for (; ; ) {
@@ -671,7 +671,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                         if (Class218.aClass123_2566.anInt1579 > 50) {
                             Class365.anInt4524++;
                             Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class224.OUTCOMMING_PACKET_16, Class218.aClass123_2566.anIsaacCipher1571);
-                            Class218.aClass123_2566.sendPacket(126, node_sub13);
+                            Class218.aClass123_2566.sendPacket(node_sub13);
                         }
                         if (Animable_Sub1_Sub2.aBoolean10649) {
                             Animable_Sub1.method824();

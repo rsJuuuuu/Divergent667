@@ -52,8 +52,6 @@ public class Class80 implements Interface15_Impl2 {
             anIDirect3DVertexBuffer9080.a(source, 0, 0, anInt9076, !aBoolean9078 ? 0 : 8192);
             return;
         }
-        if (i_6_ != 1965) {
-        }
     }
 
     public final jaclib.memory.Buffer method40(boolean bool) {

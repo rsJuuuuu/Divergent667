@@ -732,7 +732,7 @@ public class ClientScriptsExecutor {
                     widget.anInt4718 = i_45_;
                     widget.anInt4831 = i_46_;
                     widget.aBoolean4723 = i == 1208 || i == 1209;
-                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_45_, 14434);
+                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_45_);
                     widget.anInt4815 = itemdefinition.anInt1884;
                     widget.anInt4821 = itemdefinition.anInt1869;
                     widget.anInt4682 = itemdefinition.anInt1866;
@@ -1454,7 +1454,7 @@ public class ClientScriptsExecutor {
                     anInt3858++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class262_Sub12.aClass318_7788, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeInt(i_70_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     return;
                 }
                 if (i == 3105) {
@@ -1463,7 +1463,7 @@ public class ClientScriptsExecutor {
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class194_Sub2.aClass318_6897, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeByte(string.length() + 1);
                     node_sub13.aPacket7113.writeString(string);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     return;
                 }
                 if (i == 3106) {
@@ -1472,7 +1472,7 @@ public class ClientScriptsExecutor {
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class71.aClass318_964, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeByte(string.length() + 1);
                     node_sub13.aPacket7113.writeString(string);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     return;
                 }
                 if (i == 3107) {
@@ -1503,7 +1503,7 @@ public class ClientScriptsExecutor {
                     anInt3854++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class116.aClass318_5073, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeShort(i_77_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     return;
                 }
                 if (i == 3111) {
@@ -1512,7 +1512,7 @@ public class ClientScriptsExecutor {
                     int i_79_ = anIntArray3840[anInt3846 + 1];
                     Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, i_78_);
                     if (node_sub2 != null) {
-                        Class243.method3060((byte) 112, true, node_sub2.interfaceId != i_79_, node_sub2);
+                        Class243.method3060(true, node_sub2.interfaceId != i_79_, node_sub2);
                     }
                     Class93.method1047(3, i_79_, i_78_, true);
                     return;
@@ -1522,7 +1522,7 @@ public class ClientScriptsExecutor {
                     int i_80_ = anIntArray3840[anInt3846];
                     Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, i_80_);
                     if (node_sub2 != null && node_sub2.cliped == 3) {
-                        Class243.method3060((byte) 56, true, true, node_sub2);
+                        Class243.method3060(true, true, node_sub2);
                     }
                     return;
                 }
@@ -1550,7 +1550,7 @@ public class ClientScriptsExecutor {
                     anInt3858++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class235.aClass318_5119, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeShort(i_83_);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     return;
                 }
                 if (i == 3117) {
@@ -1558,7 +1558,7 @@ public class ClientScriptsExecutor {
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class188.aClass318_2279, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeByte(string.length() + 1);
                     node_sub13.aPacket7113.writeString(string);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     return;
                 }
             } else if (i < 3300) {
@@ -1823,7 +1823,7 @@ public class ClientScriptsExecutor {
                     return;
                 }
                 if (i == 3342) {
-                    anIntArray3840[anInt3846++] = Class106.aClass93_1356.method1050((byte) -64);
+                    anIntArray3840[anInt3846++] = Class106.aClass93_1356.method1050();
                     return;
                 }
                 if (i == 3343) {
@@ -2863,14 +2863,14 @@ public class ClientScriptsExecutor {
             } else if (i < 4300) {
                 if (i == 4200) {
                     int i_250_ = anIntArray3840[--anInt3846];
-                    aStringArray3855[anInt3841++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_250_, 14434).aString1860;
+                    aStringArray3855[anInt3841++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_250_).aString1860;
                     return;
                 }
                 if (i == 4201) {
                     anInt3846 -= 2;
                     int i_251_ = anIntArray3840[anInt3846];
                     int i_252_ = anIntArray3840[anInt3846 + 1];
-                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_251_, 14434);
+                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_251_);
                     if (i_252_ >= 1 && i_252_ <= 5 && itemdefinition.aStringArray1920[i_252_ - 1] != null) {
                         aStringArray3855[anInt3841++] = itemdefinition.aStringArray1920[i_252_ - 1];
                     } else {
@@ -2883,7 +2883,7 @@ public class ClientScriptsExecutor {
                     anInt3846 -= 2;
                     int i_253_ = anIntArray3840[anInt3846];
                     int i_254_ = anIntArray3840[anInt3846 + 1];
-                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_253_, 14434);
+                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_253_);
                     if (i_254_ >= 1 && i_254_ <= 5 && itemdefinition.aStringArray1901[i_254_ - 1] != null) {
                         aStringArray3855[anInt3841++] = itemdefinition.aStringArray1901[i_254_ - 1];
                     } else {
@@ -2894,17 +2894,17 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 4203) {
                     int i_255_ = anIntArray3840[--anInt3846];
-                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_255_, 14434).anInt1924;
+                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_255_).anInt1924;
                     return;
                 }
                 if (i == 4204) {
                     int i_256_ = anIntArray3840[--anInt3846];
-                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_256_, 14434).anInt1892 == 1 ? 1 : 0;
+                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_256_).anInt1892 == 1 ? 1 : 0;
                     return;
                 }
                 if (i == 4205) {
                     int i_257_ = anIntArray3840[--anInt3846];
-                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_257_, 14434);
+                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_257_);
                     if (itemdefinition.anInt1857 == -1 && itemdefinition.anInt1887 >= 0) {
                         anIntArray3840[anInt3846++] = itemdefinition.anInt1887;
                     } else {
@@ -2915,7 +2915,7 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 4206) {
                     int i_258_ = anIntArray3840[--anInt3846];
-                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_258_, 14434);
+                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_258_);
                     if (itemdefinition.anInt1857 >= 0 && itemdefinition.anInt1887 >= 0) {
                         anIntArray3840[anInt3846++] = itemdefinition.anInt1887;
                     } else {
@@ -2926,7 +2926,7 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 4207) {
                     int i_259_ = anIntArray3840[--anInt3846];
-                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_259_, 14434).aBoolean1871 ? 1 : 0;
+                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_259_).aBoolean1871 ? 1 : 0;
                     return;
                 }
                 if (i == 4208) {
@@ -2935,9 +2935,9 @@ public class ClientScriptsExecutor {
                     int i_261_ = anIntArray3840[anInt3846 + 1];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_261_, -82);
                     if (class267.method3287()) {
-                        aStringArray3855[anInt3841++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_260_, 14434).method1684(class267.aString3450, -32525, i_261_);
+                        aStringArray3855[anInt3841++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_260_).method1684(class267.aString3450, -32525, i_261_);
                     } else {
-                        anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_260_, 14434).method1678(i_261_, class267.anInt3443);
+                        anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_260_).method1678(i_261_, class267.anInt3443);
                         return;
                     }
                     return;
@@ -2946,7 +2946,7 @@ public class ClientScriptsExecutor {
                     anInt3846 -= 2;
                     int i_262_ = anIntArray3840[anInt3846];
                     int i_263_ = anIntArray3840[anInt3846 + 1] - 1;
-                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_262_, 14434);
+                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_262_);
                     if (itemdefinition.anInt1900 == i_263_) {
                         anIntArray3840[anInt3846++] = itemdefinition.anInt1859;
                     } else {
@@ -2982,7 +2982,7 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 4213) {
                     int i_265_ = anIntArray3840[--anInt3846];
-                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_265_, 14434).anInt1879;
+                    anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_265_).anInt1879;
                     return;
                 }
                 if (i == 4214) {
@@ -3087,7 +3087,7 @@ public class ClientScriptsExecutor {
                             int i_282_ = node_sub13.aPacket7113.offset;
                             node_sub13.aPacket7113.writeString(string);
                             node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_282_);
-                            Class218.aClass123_2560.sendPacket(126, node_sub13);
+                            Class218.aClass123_2560.sendPacket(node_sub13);
                             return;
                         }
                         return;
@@ -3216,7 +3216,7 @@ public class ClientScriptsExecutor {
                         aLongArray3851 = class113.aLongArray1443;
                     } else if (command == 25) {
                         int i_293_ = integerPassValues[valueIndex];
-                        anIntArray3840[anInt3846++] = Class24.aClass275_442.method64(i_293_, (byte) -42);
+                        anIntArray3840[anInt3846++] = Class24.aClass275_442.method64(i_293_);
                     } else if (command == 27) {
                         int i_294_ = integerPassValues[valueIndex];
                         Class24.aClass275_442.method3330(anIntArray3840[--anInt3846], i_294_);
@@ -3479,7 +3479,7 @@ public class ClientScriptsExecutor {
                 Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class69.anInt943);
                 node_sub13.aPacket7113.writeByte(za.aClass251_7694.anInt3182);
                 node_sub13.aPacket7113.writeByte(Class50.anInt774);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5002) {
@@ -3503,7 +3503,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeByte(i_320_ - 1);
                 node_sub13.aPacket7113.writeByte(i_321_);
                 node_sub13.aPacket7113.writeString(string_319_);
-                class123.sendPacket(126, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5003) {
@@ -3540,7 +3540,7 @@ public class ClientScriptsExecutor {
                 Class123 class123 = Class262_Sub23.method3213((byte) -64);
                 Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class187.aClass318_2277, Objects.requireNonNull(class123).anIsaacCipher1571);
                 Objects.requireNonNull(node_sub13).aPacket7113.writeByte(i_325_);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5008) {
@@ -3561,7 +3561,7 @@ public class ClientScriptsExecutor {
                     node_sub13.aPacket7113.writeString(string);
                     Class194_Sub3.method1975(node_sub13.aPacket7113, string_326_);
                     node_sub13.aPacket7113.method2194(node_sub13.aPacket7113.offset - i_327_);
-                    class123.sendPacket(127, node_sub13);
+                    class123.sendPacket(node_sub13);
                     return;
                 }
                 return;
@@ -3757,7 +3757,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeShort(aClass16_3856.anInt231);
                 aClass16_3856.aCacheNode_Sub10_229.method2330(node_sub13.aPacket7113, aClass16_3856.anIntArray230, 121);
                 node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_352_);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5060) {
@@ -3771,7 +3771,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeShort(aClass16_3856.anInt231);
                 aClass16_3856.aCacheNode_Sub10_229.method2330(node_sub13.aPacket7113, aClass16_3856.anIntArray230, 126);
                 node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_353_);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5061) {
@@ -3784,7 +3784,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeShort(aClass16_3856.anInt231);
                 aClass16_3856.aCacheNode_Sub10_229.method2330(node_sub13.aPacket7113, aClass16_3856.anIntArray230, 125);
                 node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_354_);
-                class123.sendPacket(126, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5062) {
@@ -3893,7 +3893,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeShort(aClass16_3856.anInt231);
                 aClass16_3856.aCacheNode_Sub10_229.method2330(node_sub13.aPacket7113, aClass16_3856.anIntArray230, 126);
                 node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_375_);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5075) {
@@ -3905,7 +3905,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeShort(aClass16_3856.anInt231);
                 aClass16_3856.aCacheNode_Sub10_229.method2330(node_sub13.aPacket7113, aClass16_3856.anIntArray230, 125);
                 node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_376_);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
         } else if (i < 5200) {
@@ -4176,7 +4176,7 @@ public class ClientScriptsExecutor {
                 if (IComponentDefinitions.aHashTable4827 != null) {
                     Node node = IComponentDefinitions.aHashTable4827.method1518(3512, i_399_);
                     if (node != null && !bool_400_) {
-                        node.method2160((byte) 127);
+                        node.method2160();
                     } else if (node == null && bool_400_) {
                         node = new Node();
                         IComponentDefinitions.aHashTable4827.method1515(i_399_, node, -123);
@@ -4202,7 +4202,7 @@ public class ClientScriptsExecutor {
                 if (CacheNode_Sub10.aHashTable9530 != null) {
                     Node node = CacheNode_Sub10.aHashTable9530.method1518(3512, i_402_);
                     if (node != null && !bool_403_) {
-                        node.method2160((byte) 106);
+                        node.method2160();
                     } else if (node == null && bool_403_) {
                         node = new Node();
                         CacheNode_Sub10.aHashTable9530.method1515(i_402_, node, -123);
@@ -4325,7 +4325,7 @@ public class ClientScriptsExecutor {
                 node_sub13.aPacket7113.writeString(string);
                 node_sub13.aPacket7113.writeString(string_419_);
                 node_sub13.aPacket7113.writeByte(i_420_);
-                class123.sendPacket(127, node_sub13);
+                class123.sendPacket(node_sub13);
                 return;
             }
             if (i == 5401) {
@@ -4901,7 +4901,7 @@ public class ClientScriptsExecutor {
             }
             if (i == 6012) {
                 Class213.aNode_Sub27_2512.method2690(95, anIntArray3840[--anInt3846] == 1 ? 1 : 0, Class213.aNode_Sub27_2512.aClass320_Sub24_7317);
-                Class320_Sub12.method3728(0);
+                Class320_Sub12.method3728();
                 Class120.method1228();
                 Node_Sub38_Sub31.method2893(1);
                 Class269.aBoolean3472 = false;
@@ -5044,7 +5044,7 @@ public class ClientScriptsExecutor {
             if (i == 6034) {
                 Class213.aNode_Sub27_2512.method2690(44, anIntArray3840[--anInt3846] == 1 ? 1 : 0, Class213.aNode_Sub27_2512.aClass320_Sub30_7275);
                 Node_Sub38_Sub31.method2893(1);
-                Class320_Sub12.method3728(0);
+                Class320_Sub12.method3728();
                 Class269.aBoolean3472 = false;
                 return;
             }
@@ -5418,7 +5418,7 @@ public class ClientScriptsExecutor {
                             Class82.aBoolean1122 = true;
                             Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class126.aClass318_1632, Class218.aClass123_2560.anIsaacCipher1571);
                             Objects.requireNonNull(node_sub13).aPacket7113.writeInt(Node_Sub38_Sub17.anInt10274);
-                            Class218.aClass123_2560.sendPacket(127, node_sub13);
+                            Class218.aClass123_2560.sendPacket(node_sub13);
                             anIntArray3840[anInt3846++] = 0;
                             return;
                         }
@@ -6293,7 +6293,7 @@ public class ClientScriptsExecutor {
             node_sub13.aPacket7113.writeByte(moveEffect);
             Class194_Sub3.method1975(node_sub13.aPacket7113, string);
             node_sub13.aPacket7113.method2217(node_sub13.aPacket7113.offset - i_569_);
-            class123.sendPacket(127, node_sub13);
+            class123.sendPacket(node_sub13);
         }
     }
 
@@ -6324,7 +6324,7 @@ public class ClientScriptsExecutor {
                     i_572_ = Class66_Sub1.aWidget8983.anInt4679;
                     i_573_ = Class66_Sub1.aWidget8983.anInt4762;
                 }
-                anIntArray3847[0] = Class106.aClass93_1356.method1050((byte) -25) - i_572_;
+                anIntArray3847[0] = Class106.aClass93_1356.method1050() - i_572_;
                 anIntArray3847[1] = Class106.aClass93_1356.method1051() - i_573_;
             }
             method3555(cachenode_sub9, 200000);

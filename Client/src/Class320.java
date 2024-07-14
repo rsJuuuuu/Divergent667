@@ -7,7 +7,7 @@ abstract class Class320 {
     protected int anInt4064;
     static int anInt4065;
 
-    abstract void method3673(byte b);
+    abstract void method3673();
 
     final void method3674(int i) {
         anInt4065++;
@@ -20,11 +20,11 @@ abstract class Class320 {
 
     abstract void method3676(int i);
 
-    abstract int method3677(int i);
+    abstract int method3677();
 
     Class320(Node_Sub27 node_sub27) {
         aNode_Sub27_4063 = node_sub27;
-        anInt4064 = method3677(0);
+        anInt4064 = method3677();
     }
 
     Class320(int i, Node_Sub27 node_sub27) {

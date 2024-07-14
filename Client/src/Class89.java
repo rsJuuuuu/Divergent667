@@ -36,7 +36,7 @@ public class Class89 {
         Class53.method556(Client.anInt5481 + i_4_, Node_Sub6.anInt7043 + i, Class219.anInt2627, i_5_, graphicstoolkit, Class362.anInt4492);
 
         Class262_Sub4.aClass52_7721.method538(Node_Sub6.anInt7043 + i + 3, Client.anInt5481 - (-i_4_ - 14), Translation.aTranslation_387.getTranslatedString(Class35.language), -1, i_5_);
-        int i_7_ = Class106.aClass93_1356.method1050((byte) -17) + i;
+        int i_7_ = Class106.aClass93_1356.method1050() + i;
         int i_8_ = Class106.aClass93_1356.method1051() + i_4_;
         if (Class194_Sub3_Sub1.aBoolean9375) {
             int i_11_ = 0;

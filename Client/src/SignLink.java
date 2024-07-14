@@ -160,12 +160,11 @@ public class SignLink implements Runnable {
         return method3643(0, 16, string, 9, 0);
     }
 
-    final boolean method3637(File file, byte[] bs) {
+    final void method3637(File file, byte[] bs) {
         try {
             FileOutputStream fileoutputstream = new FileOutputStream(file);
             fileoutputstream.write(bs, 0, bs.length);
             fileoutputstream.close();
-            return true;
         } catch (IOException ioexception) {
             throw new RuntimeException();
         }

@@ -39,7 +39,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                 if (player != null) {
                     int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], player.scenePositionXQueue[0], player.scenePositionYQueue[0], Class295.myPlayer.getSize((byte) 0), -1, true, player.getSize((byte) 0), player.getSize((byte) 0), 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                     Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                    Class218.aClass123_2566.sendPacket(126, packet);
+                    Class218.aClass123_2566.sendPacket(packet);
                     Node_Sub37.anInt7431 = 0;
                     Class93_Sub2.anInt6067 = i_3_;
                     Class270.anInt3475++;
@@ -51,7 +51,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShort(Class92.anInt1230);
                     node_sub13.aPacket7113.write128Byte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                     node_sub13.aPacket7113.writeShortLE128(Class46.anInt681);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 99), true, player.scenePositionXQueue[0], 0, -2, player.getSize((byte) 110));
                 }
             }
@@ -67,7 +67,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                 node_sub13.aPacket7113.writeShort(Class92.anInt1230);
                 node_sub13.aPacket7113.write128Byte(Class175.aClass291_2100.method3450(82) ? 1 : 0);
                 node_sub13.aPacket7113.writeShortLE128(Class46.anInt681);
-                Class218.aClass123_2566.sendPacket(127, node_sub13);
+                Class218.aClass123_2566.sendPacket(node_sub13);
             }
             if (i_6_ == 12) {
                 IComponentDefinitions widget = Node_Sub3.method2169(i_4_, interfaceHash);
@@ -103,7 +103,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                             Node_Sub37.anInt7431 = 0;
                             Class93_Sub2.anInt6067 = i_3_;
                         }
-                        Class218.aClass123_2566.sendPacket(126, node_sub13);
+                        Class218.aClass123_2566.sendPacket(node_sub13);
                         Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, 1);
                     } else {
                         Class331.method3843(Class295.myPlayer.plane, Class320_Sub4.gameSceneBaseY + interfaceHash, Node_Sub53.gameSceneBaseX + i_4_);
@@ -115,33 +115,44 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     ClientScript.method2321(Objects.requireNonNull(Node_Sub25_Sub3.aWidget9990));
                 }
                 OutcommingPacket class318 = null;
-                if (i_6_ == 2) {
-                    class318 = Class228.aClass318_2720;
-                } else if (i_6_ == 22) {
-                    class318 = Class37.aClass318_557;
-                } else if (i_6_ == 52) {
-                    class318 = OutputStream_Sub2.aClass318_93;
-                } else if (i_6_ == 30) {
-                    class318 = Class312.aClass318_3973;
-                } else if (i_6_ == 53) {
-                    class318 = Class359.aClass318_4463;
-                } else if (i_6_ == 9) {
-                    class318 = Class290_Sub4.aClass318_8089;
-                } else if (i_6_ == 51) {
-                    class318 = Node_Sub25_Sub1.aClass318_9953;
-                } else if (i_6_ == 15) {
-                    class318 = Mobile_Sub4.aClass318_10992;
-                } else if (i_6_ == 48) {
-                    class318 = CacheNode_Sub15.aClass318_9590;
-                } else if (i_6_ == 16) {
-                    class318 = Node_Sub38_Sub23.aClass318_10329;
+                switch (i_6_) {
+                    case 2:
+                        class318 = Class228.aClass318_2720;
+                        break;
+                    case 22:
+                        class318 = Class37.aClass318_557;
+                        break;
+                    case 52:
+                        class318 = OutputStream_Sub2.aClass318_93;
+                        break;
+                    case 30:
+                        class318 = Class312.aClass318_3973;
+                        break;
+                    case 53:
+                        class318 = Class359.aClass318_4463;
+                        break;
+                    case 9:
+                        class318 = Class290_Sub4.aClass318_8089;
+                        break;
+                    case 51:
+                        class318 = Node_Sub25_Sub1.aClass318_9953;
+                        break;
+                    case 15:
+                        class318 = Mobile_Sub4.aClass318_10992;
+                        break;
+                    case 48:
+                        class318 = CacheNode_Sub15.aClass318_9590;
+                        break;
+                    case 16:
+                        class318 = Node_Sub38_Sub23.aClass318_10329;
+                        break;
                 }
                 if (class318 != null) {
                     Player player = Class270_Sub2.LOCAL_PLAYERS[itemId];
                     if (player != null) {
                         int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], player.scenePositionXQueue[0], player.scenePositionYQueue[0], Class295.myPlayer.getSize((byte) 0), -1, true, player.getSize((byte) 0), player.getSize((byte) 0), 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                         Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                        Class218.aClass123_2566.sendPacket(126, packet);
+                        Class218.aClass123_2566.sendPacket(packet);
 
                         Node_Sub37.anInt7431 = 0;
                         Class188_Sub1.anInt6852++;
@@ -151,7 +162,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, class318, Class218.aClass123_2566.anIsaacCipher1571);
                         Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class175.aClass291_2100.method3450(82) ? 1 : 0);
                         node_sub13.aPacket7113.writeShort(itemId);
-                        Class218.aClass123_2566.sendPacket(126, node_sub13);
+                        Class218.aClass123_2566.sendPacket(node_sub13);
                         Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 125), true, player.scenePositionXQueue[0], 0, -2, player.getSize((byte) 60));
                     }
                 }
@@ -174,7 +185,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     if (class318_8_ != Class51_Sub1.aClass318_9061) { //droped item examine
                         int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), -1, true, 1, 1, 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                         Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                        Class218.aClass123_2566.sendPacket(126, packet);
+                        Class218.aClass123_2566.sendPacket(packet);
                     }
                     Class163.anInt2014 = i;
                     Node_Sub37.anInt7431 = 0;
@@ -186,7 +197,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                     node_sub13.aPacket7113.writeShort(interfaceHash + Class320_Sub4.gameSceneBaseY);
                     node_sub13.aPacket7113.writeShortLE(Node_Sub53.gameSceneBaseX + i_4_);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class223.method2104(interfaceHash, i_4_);
                 }
                 if (i_6_ == 11) {
@@ -201,7 +212,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class144_Sub4.aClass318_6847, Class218.aClass123_2566.anIsaacCipher1571);
                         Objects.requireNonNull(node_sub13).aPacket7113.writeShortLE128(interfaceHash + Class320_Sub4.gameSceneBaseY);
                         node_sub13.aPacket7113.writeShortLE(Node_Sub53.gameSceneBaseX + i_4_);
-                        Class218.aClass123_2566.sendPacket(126, node_sub13);
+                        Class218.aClass123_2566.sendPacket(node_sub13);
                     }
                 }
                 if (i_6_ == 18) {
@@ -232,7 +243,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         if (currentPacket != Class66_Sub2_Sub1.aClass318_10581) {//examine
                             int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], npc.scenePositionXQueue[0], npc.scenePositionYQueue[0], Class295.myPlayer.getSize((byte) 0), -1, true, npc.getSize((byte) 0), npc.getSize((byte) 0), 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                             Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                            Class218.aClass123_2566.sendPacket(126, packet);
+                            Class218.aClass123_2566.sendPacket(packet);
                         }
 
                         Class260.anInt5228++;
@@ -242,7 +253,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, currentPacket, Class218.aClass123_2566.anIsaacCipher1571);
                         Objects.requireNonNull(node_sub13).aPacket7113.writeByte128(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                         node_sub13.aPacket7113.writeShort128(itemId);
-                        Class218.aClass123_2566.sendPacket(126, node_sub13);
+                        Class218.aClass123_2566.sendPacket(node_sub13);
                         Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 76), true, npc.scenePositionXQueue[0], 0, -2, npc.getSize((byte) 103));
                     }
                 }
@@ -266,9 +277,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         int routeType = (0x7d32b & (int) l) >> 14;
                         int rotation = ((int) l & 0x3b48d1) >> 20;
                         int objectId = 0x7fffffff & (int) (l >>> 32);
-                        if (routeType != 10 && routeType != 11 && routeType != 22) {
-                            steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), routeType, true, 0, 0, 0, rotation, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
-                        } else {
+                        if (routeType == 10 || routeType == 11 || routeType == 22) {
                             ObjectDefinition objectdefinition = Class186.aClass112_2256
                                     .method1145(objectId, 63);
                             int sizeX;
@@ -285,9 +294,11 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                                 i_8_ = (0xf & i_8_ << rotation) + (i_8_ >> -rotation + 4);
                             }
                             steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), 0, true, sizeX, sizeY, i_8_, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
+                        } else {
+                            steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), routeType, true, 0, 0, 0, rotation, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                         }
                         Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                        Class218.aClass123_2566.sendPacket(126, packet);
+                        Class218.aClass123_2566.sendPacket(packet);
                     }
 
 
@@ -301,7 +312,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShort128(Node_Sub53.gameSceneBaseX + i_4_);
                     node_sub13.aPacket7113.writeInt((int) (l >>> 32));
                     node_sub13.aPacket7113.writeShortLE(interfaceHash + Class320_Sub4.gameSceneBaseY);
-                    Class218.aClass123_2566.sendPacket(126, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class25.method306(i_4_, l, interfaceHash);
                 }
                 if (i_6_ == 1003 || i_6_ == 1001 || i_6_ == 1006 || i_6_ == 1009 || i_6_ == 1004) {
@@ -319,7 +330,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeIntV1(Node_Sub15_Sub9.anInt9839);
                     node_sub13.aPacket7113.writeShort128(Class320_Sub4.gameSceneBaseY + interfaceHash);
                     node_sub13.aPacket7113.writeShort(Class46.anInt681);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, 1);
                 }
                 if (i_6_ == 17) {
@@ -336,7 +347,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShortLE(Class46.anInt681);
                     node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                     node_sub13.aPacket7113.writeShortLE(itemId);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class223.method2104(interfaceHash, i_4_);
                 }
                 if (i_6_ == 23) {
@@ -346,7 +357,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         if (null != Class66_Sub2_Sub1.aClass318_10581) {//examine
                             int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], npc.scenePositionXQueue[0], npc.scenePositionYQueue[0], Class295.myPlayer.getSize((byte) 0), -1, true, npc.getSize((byte) 0), npc.getSize((byte) 0), 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                             Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                            Class218.aClass123_2566.sendPacket(126, packet);
+                            Class218.aClass123_2566.sendPacket(packet);
                         }
                         Node_Sub37.anInt7431 = 0;
                         Class122.anInt1552++;
@@ -359,7 +370,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         node_sub13.aPacket7113.writeShortLE(itemId);
                         node_sub13.aPacket7113.writeIntV2(Node_Sub15_Sub9.anInt9839);
                         node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
-                        Class218.aClass123_2566.sendPacket(127, node_sub13);
+                        Class218.aClass123_2566.sendPacket(node_sub13);
                         Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 44), true, npc.scenePositionXQueue[0], 0, -2, npc.getSize((byte) 50));
                     }
                 }
@@ -377,9 +388,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     int routeType = (0x7d32b & (int) l) >> 14;
                     int rotation = ((int) l & 0x3b48d1) >> 20;
                     int objectId = 0x7fffffff & (int) (l >>> 32);
-                    if (routeType != 10 && routeType != 11 && routeType != 22) {
-                        steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), routeType, true, 0, 0, 0, rotation, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
-                    } else {
+                    if (routeType == 10 || routeType == 11 || routeType == 22) {
                         ObjectDefinition objectdefinition = Class186.aClass112_2256
                                 .method1145(objectId, 63);
                         int sizeX;
@@ -396,9 +405,11 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                             i_8_ = (0xf & i_8_ << rotation) + (i_8_ >> -rotation + 4);
                         }
                         steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), 0, true, sizeX, sizeY, i_8_, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
+                    } else {
+                        steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), routeType, true, 0, 0, 0, rotation, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                     }
                     Node_Sub13 packet = Translation.createWalkPacket(steps, 0);
-                    Class218.aClass123_2566.sendPacket(126, packet);
+                    Class218.aClass123_2566.sendPacket(packet);
 
 
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, EntityNode_Sub3_Sub1.aClass318_9159, Class218.aClass123_2566.anIsaacCipher1571);
@@ -409,7 +420,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShortLE128(Class92.anInt1230);
                     node_sub13.aPacket7113.writeShortLE(i_4_ + Node_Sub53.gameSceneBaseX);
                     node_sub13.aPacket7113.writeInt((int) (l >>> 32));
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                     Class25.method306(i_4_, l, interfaceHash);
                 }
                 if (Class87.removeWalkHere) {

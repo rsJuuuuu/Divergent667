@@ -39,7 +39,7 @@ public class OutcommingPacket {
             Mobile_Sub4 mobile_sub4 = cachenode_sub18.aMobile_Sub4_9606;
             mobile_sub4.method912();
             if (mobile_sub4.method917()) {
-                cachenode_sub18.method2160((byte) 101);
+                cachenode_sub18.method2160();
                 mobile_sub4.method914(-95);
             } else if (Class175.aClass261ArrayArrayArray2099 != null && mobile_sub4.method909()) {
                 Node_Sub38_Sub7.method2810(mobile_sub4, true);

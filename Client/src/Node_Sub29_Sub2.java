@@ -4,7 +4,6 @@
 
 public class Node_Sub29_Sub2 extends Node_Sub29 {
     static int anInt10015 = 0;
-    static int anInt10016;
     static int anInt10017;
     static int anInt10018;
     static int anInt10019;
@@ -30,22 +29,11 @@ public class Node_Sub29_Sub2 extends Node_Sub29 {
         super(i, i_0_, i_1_, i_2_, i_3_, f);
     }
 
-    final void method2706(int i, int i_4_, int i_5_, int i_6_) {
-        if (i != 4752) {
-            method2716(61, -81);
-        }
+    final void method2706(int i_4_, int i_5_, int i_6_) {
         anInt10019++;
         anInt7340 = i_5_;
         anInt7342 = i_4_;
         anInt7346 = i_6_;
-    }
-
-    static int method2716(int i, int i_7_) {
-        anInt10016++;
-        if (i != 0) {
-            anInt10015 = -93;
-        }
-        return i_7_ >>> 8;
     }
 
     final void method2712(float f) {

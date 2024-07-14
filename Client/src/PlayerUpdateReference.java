@@ -36,7 +36,7 @@ public class PlayerUpdateReference {
                 Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7556);
                 node_sub47.aNode_Sub9_Sub2_7556 = null;
             }
-            node_sub47.method2160((byte) 43);
+            node_sub47.method2160();
         }
         if (bool) {
             for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620()) {
@@ -44,14 +44,14 @@ public class PlayerUpdateReference {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
                     node_sub47.aNode_Sub9_Sub2_7568 = null;
                 }
-                node_sub47.method2160((byte) 112);
+                node_sub47.method2160();
             }
             for (Node_Sub47 node_sub47 = (Node_Sub47) Class320_Sub3.aHashTable8234.method1516(); node_sub47 != null; node_sub47 = (Node_Sub47) Class320_Sub3.aHashTable8234.method1520(124)) {
                 if (node_sub47.aNode_Sub9_Sub2_7568 != null) {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
                     node_sub47.aNode_Sub9_Sub2_7568 = null;
                 }
-                node_sub47.method2160((byte) 34);
+                node_sub47.method2160();
             }
         }
     }

@@ -25,8 +25,8 @@ public class Class320_Sub9 extends Class320 {
         return (0x10000 & i_0_) != 0;
     }
 
-    final void method3673(byte b) {
-        anInt4064 = method3677(0);
+    final void method3673() {
+        anInt4064 = method3677();
         anInt8288++;
     }
 
@@ -151,11 +151,8 @@ public class Class320_Sub9 extends Class320 {
         }
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8293++;
-        if (i != 0) {
-            return -28;
-        }
         if (!aNode_Sub27_4063.method2697(-66)) {
             return 0;
         }
@@ -174,7 +171,7 @@ public class Class320_Sub9 extends Class320 {
             IComponentDefinitions widget = widgets[i_14_];
             if (widget != null && i_13_ == widget.parentId) {
                 Node_Sub39.method2921(bool_11_, i_12_, i, widget);
-                Node_Sub38_Sub23.method2862(widget, i, i_12_, -8525);
+                Node_Sub38_Sub23.method2862(widget, i, i_12_);
                 if (-widget.anInt4809 + widget.anInt4735 < widget.anInt4817) {
                     widget.anInt4817 = -widget.anInt4809 + widget.anInt4735;
                 }

@@ -21,7 +21,7 @@ public class Class150_Sub3_Sub1 extends Class150_Sub3 {
 
         for (Node node = Class156.aHashTable1964.method1516(); node != null; node = Class156.aHashTable1964.method1520(107)) {
             if ((long) i == (node.aLong2797 >> 48 & 0xffffL)) {
-                node.method2160((byte) 96);
+                node.method2160();
             }
         }
         anInt10575++;

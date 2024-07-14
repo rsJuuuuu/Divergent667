@@ -159,11 +159,8 @@ public class Class93_Sub2 extends Class93 implements MouseListener, MouseMotionL
         }
     }
 
-    final int method1050(byte b) {
+    final int method1050() {
         anInt6061++;
-        if (b >= -5) {
-            mouseEntered(null);
-        }
         return anInt6057;
     }
 

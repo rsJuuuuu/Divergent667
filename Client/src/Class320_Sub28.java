@@ -27,13 +27,10 @@ public class Class320_Sub28 extends Class320 {
         }
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8476++;
-        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(i ^ -13725)).method1877() < 96) {
+        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(0 ^ -13725)).method1877() < 96) {
             return 0;
-        }
-        if (i != 0) {
-            method3673((byte) -52);
         }
         return 2;
     }
@@ -79,16 +76,13 @@ public class Class320_Sub28 extends Class320 {
         return anInt4064;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8477++;
         if (Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1877() < 96) {
             anInt4064 = 0;
         }
-        if (b >= -35) {
-            anInt8469 = -126;
-        }
         if (anInt4064 < 0 || anInt4064 > 2) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
     }
 }

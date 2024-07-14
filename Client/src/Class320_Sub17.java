@@ -28,11 +28,8 @@ public class Class320_Sub17 extends Class320 {
         anInt8367++;
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8370++;
-        if (i != 0) {
-            return 105;
-        }
         return 1;
     }
 
@@ -52,12 +49,9 @@ public class Class320_Sub17 extends Class320 {
         }
     }
 
-    final void method3673(byte b) {
-        if (b > -35) {
-            aClass192_8368 = null;
-        }
+    final void method3673() {
         if (anInt4064 != 1 && anInt4064 != 0) {
-            anInt4064 = method3677(0);
+            anInt4064 = method3677();
         }
         anInt8366++;
     }

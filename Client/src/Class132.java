@@ -101,7 +101,7 @@ public class Class132 {
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, class318, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeByte(0);
                     node_sub13.aPacket7113.writeShort(is[i_3_]);
-                    Class218.aClass123_2566.sendPacket(127, node_sub13);
+                    Class218.aClass123_2566.sendPacket(node_sub13);
                 }
                 bool = true;
                 break;

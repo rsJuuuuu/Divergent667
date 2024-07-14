@@ -16,11 +16,8 @@ public class Class320_Sub8 extends Class320 {
         anInt4064 = i;
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8279++;
-        if (i != 0) {
-            anInt8281 = 27;
-        }
         return 1;
     }
 
@@ -45,13 +42,10 @@ public class Class320_Sub8 extends Class320 {
         super(i, node_sub27);
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         anInt8280++;
         if (anInt4064 != 1 && anInt4064 != 0) {
-            anInt4064 = method3677(0);
-        }
-        if (b > -35) {
-            method3673((byte) -33);
+            anInt4064 = method3677();
         }
     }
 }

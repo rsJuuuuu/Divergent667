@@ -75,24 +75,18 @@ public class Class320_Sub16 extends Class320 {
         return 2;
     }
 
-    final int method3677(int i) {
+    final int method3677() {
         anInt8364++;
-        if (i != 0) {
-            method3675(16, (byte) 82);
-        }
         return 1;
     }
 
-    final void method3673(byte b) {
+    final void method3673() {
         if (anInt4064 != 0 && aNode_Sub27_4063.aClass320_Sub23_7290.method3770() != 1) {
             anInt4064 = 0;
         }
         anInt8359++;
         if (anInt4064 < 0 || anInt4064 > 1) {
-            anInt4064 = method3677(0);
-        }
-        if (b >= -35) {
-            aClass312_8358 = null;
+            anInt4064 = method3677();
         }
     }
 }

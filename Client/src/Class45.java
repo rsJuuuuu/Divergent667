@@ -38,7 +38,7 @@ public class Class45 implements Interface12 {
                 Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
                 node_sub47.aNode_Sub9_Sub2_7568 = null;
             }
-            node_sub47.method2160((byte) 66);
+            node_sub47.method2160();
         }
     }
 

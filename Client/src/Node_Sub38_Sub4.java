@@ -35,7 +35,7 @@ public class Node_Sub38_Sub4 extends Node_Sub38 {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
                     node_sub47.aNode_Sub9_Sub2_7568 = null;
                 }
-                node_sub47.method2160((byte) 86);
+                node_sub47.method2160();
                 break;
             }
         }
@@ -97,24 +97,22 @@ public class Node_Sub38_Sub4 extends Node_Sub38 {
 
     final void method2780(BufferedStream buffer, int i) {
         anInt10110++;
-        if (!false) {
-            while_7_:
+        while_7_:
+        do {
             do {
-                do {
-                    if (i == 0) {
-                        anInt10114 = buffer.readUnsignedByte();
-                        return;
-                    } else if (i != 1) {
-                        if (i == 3) {
-                            break;
-                        }
-                        break while_7_;
-                    }
-                    anInt10113 = buffer.readUnsignedByte();
+                if (i == 0) {
+                    anInt10114 = buffer.readUnsignedByte();
                     return;
-                } while (false);
-                anInt10109 = buffer.readUnsignedByte();
+                } else if (i != 1) {
+                    if (i == 3) {
+                        break;
+                    }
+                    break while_7_;
+                }
+                anInt10113 = buffer.readUnsignedByte();
+                return;
             } while (false);
-        }
+            anInt10109 = buffer.readUnsignedByte();
+        } while (false);
     }
 }

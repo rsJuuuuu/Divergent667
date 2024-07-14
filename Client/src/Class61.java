@@ -36,7 +36,7 @@ public class Class61 {
             if (object == null) {
                 CacheNode_Sub20 cachenode_sub20_1_ = cachenode_sub20;
                 cachenode_sub20 = (CacheNode_Sub20) aHashTable901.method1520(67);
-                cachenode_sub20_1_.method2160((byte) 27);
+                cachenode_sub20_1_.method2160();
                 cachenode_sub20_1_.method2275();
                 anInt897 += cachenode_sub20_1_.anInt9627;
             } else {
@@ -66,11 +66,11 @@ public class Class61 {
                         CacheNode_Sub20 cachenode_sub20_3_ = Node_Sub34.aClass115_7410.method1160(cachenode_sub20);
                         aHashTable901.method1515(cachenode_sub20.aLong2797, cachenode_sub20_3_, -126);
                         Node_Sub38_Sub19.method2847(cachenode_sub20, cachenode_sub20_3_);
-                        cachenode_sub20.method2160((byte) 62);
+                        cachenode_sub20.method2160();
                         cachenode_sub20.method2275();
                     }
                 } else if (cachenode_sub20.method2409() == null) {
-                    cachenode_sub20.method2160((byte) 82);
+                    cachenode_sub20.method2160();
                     cachenode_sub20.method2275();
                     anInt897 += cachenode_sub20.anInt9627;
                 }
@@ -93,7 +93,7 @@ public class Class61 {
     private void method600(CacheNode_Sub20 cachenode_sub20) {
         anInt900++;
         if (cachenode_sub20 != null) {
-            cachenode_sub20.method2160((byte) 86);
+            cachenode_sub20.method2160();
             cachenode_sub20.method2275();
             anInt897 += cachenode_sub20.anInt9627;
         }
@@ -113,7 +113,7 @@ public class Class61 {
         }
         for (CacheNode_Sub20 cachenode_sub20 = (CacheNode_Sub20) aClass158_886.method1723(); cachenode_sub20 != null; cachenode_sub20 = (CacheNode_Sub20) aClass158_886.method1721()) {
             if (cachenode_sub20.method2411()) {
-                cachenode_sub20.method2160((byte) 78);
+                cachenode_sub20.method2160();
                 cachenode_sub20.method2275();
                 anInt897 += cachenode_sub20.anInt9627;
             }
@@ -129,7 +129,7 @@ public class Class61 {
             if (object == null) {
                 CacheNode_Sub20 cachenode_sub20_4_ = cachenode_sub20;
                 cachenode_sub20 = (CacheNode_Sub20) aHashTable901.method1520(93);
-                cachenode_sub20_4_.method2160((byte) 61);
+                cachenode_sub20_4_.method2160();
                 cachenode_sub20_4_.method2275();
                 anInt897 += cachenode_sub20_4_.anInt9627;
             } else {
@@ -177,7 +177,7 @@ public class Class61 {
         }
         Object object = cachenode_sub20.method2409();
         if (object == null) {
-            cachenode_sub20.method2160((byte) 100);
+            cachenode_sub20.method2160();
             cachenode_sub20.method2275();
             anInt897 += cachenode_sub20.anInt9627;
             return null;
@@ -187,7 +187,7 @@ public class Class61 {
             aHashTable901.method1515(cachenode_sub20.aLong2797, cachenode_sub20_sub1, -125);
             aClass158_886.method1719(cachenode_sub20_sub1);
             cachenode_sub20_sub1.aLong7037 = 0L;
-            cachenode_sub20.method2160((byte) 94);
+            cachenode_sub20.method2160();
             cachenode_sub20.method2275();
         } else {
             aClass158_886.method1719(cachenode_sub20);

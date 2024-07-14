@@ -15,7 +15,7 @@ public class Node_Sub34 extends Node {
     static void method2741() {
         anInt7408++;
         if (Class320_Sub15.WINDOWS_PANE_ID != -1) {
-            int i = Class106.aClass93_1356.method1050((byte) -85);
+            int i = Class106.aClass93_1356.method1050();
             int i_0_ = Class106.aClass93_1356.method1051();
             Node_Sub5 node_sub5 = (Node_Sub5) GraphicsToolkit.aClass312_1545.method3613();
             if (node_sub5 != null) {

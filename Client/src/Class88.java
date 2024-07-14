@@ -30,7 +30,7 @@ public class Class88 implements Interface12 {
         if (aClass302_5273.method3527(aString5277)) {
             return 100;
         }
-        return aClass302_5273.method3522((byte) 33, aString5277);
+        return aClass302_5273.method3522(aString5277);
     }
 
     public final Class172 method34() {

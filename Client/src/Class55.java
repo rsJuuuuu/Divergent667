@@ -29,7 +29,7 @@ public class Class55 {
         node_sub13.aPacket7113.offset += 7;
         node_sub13.aPacket7113.encryptXteas(is, i_0_, node_sub13.aPacket7113.offset);
         node_sub13.aPacket7113.method2194(-i + node_sub13.aPacket7113.offset);
-        Class218.aClass123_2560.sendPacket(127, node_sub13);
+        Class218.aClass123_2560.sendPacket(node_sub13);
         Node_Sub36_Sub4.anInt10073 = -3;
         Class51_Sub2.anInt9069 = 0;
         Class4.anInt124 = 1;

@@ -73,7 +73,7 @@ public class Class123 {
                 }
                 aBuffer1566.writeBytes(node_sub13.anInt7114, node_sub13.aPacket7113.buffer, 0);
                 anInt1567 -= node_sub13.anInt7114;
-                node_sub13.method2160((byte) 36);
+                node_sub13.method2160();
                 node_sub13.aPacket7113.method2202();
                 node_sub13.method2547(false);
             }
@@ -91,15 +91,12 @@ public class Class123 {
         }
     }
 
-    final void sendPacket(int i, Node_Sub13 node_sub13) {
+    final void sendPacket(Node_Sub13 node_sub13) {
         anInt1559++;
         aClass312_1558.method3625(node_sub13);
         node_sub13.anInt7114 = node_sub13.aPacket7113.offset;
         node_sub13.aPacket7113.offset = 0;
         anInt1567 += node_sub13.anInt7114;
-        if (i <= 125) {
-            method1510(57);
-        }
     }
 
     public Class123() {

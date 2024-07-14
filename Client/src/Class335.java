@@ -26,11 +26,11 @@ public class Class335 {
         anInt4162++;
         if (anInt4169 == 0) {
             CacheNode cachenode_0_ = aClass158_4171.method1717(-97);
-            Objects.requireNonNull(cachenode_0_).method2160((byte) 118);
+            Objects.requireNonNull(cachenode_0_).method2160();
             cachenode_0_.method2275();
             if (aCacheNode4166 == cachenode_0_) {
                 cachenode_0_ = aClass158_4171.method1717(-108);
-                Objects.requireNonNull(cachenode_0_).method2160((byte) 66);
+                Objects.requireNonNull(cachenode_0_).method2160();
                 cachenode_0_.method2275();
             }
         } else {
@@ -63,7 +63,7 @@ public class Class335 {
         }
         CacheNode cachenode = (CacheNode) Objects.requireNonNull(aHashTable4170).method1518(3512, l);
         if (cachenode != null) {
-            cachenode.method2160((byte) 37);
+            cachenode.method2160();
             cachenode.method2275();
             anInt4169++;
         }

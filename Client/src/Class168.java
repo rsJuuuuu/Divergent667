@@ -26,7 +26,7 @@ public class Class168 {
         for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
             int i = cachenode_sub13.anInt9562;
             if (i < 1000) {
-                cachenode_sub13.method2160((byte) 78);
+                cachenode_sub13.method2160();
                 if (i == 21 || i == 60 || i == 23 || i == 17 || i == 44 || i == 4 || i == 18) {
                     Class130.aClass312_1670.method3625(cachenode_sub13);
                 } else {
@@ -54,7 +54,7 @@ public class Class168 {
         }
         if (Class213.aBoolean2510) {
             if (i == -1) {
-                int i_0_ = Class106.aClass93_1356.method1050((byte) -62);
+                int i_0_ = Class106.aClass93_1356.method1050();
                 int i_1_ = Class106.aClass93_1356.method1051();
                 boolean bool_2_ = false;
                 if (Class73.aCacheNode_Sub4_988 != null) {

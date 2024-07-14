@@ -321,7 +321,7 @@ public class Class195 {
                     } else {
                         node_sub13.aPacket7113.writeByte(Plane.aClass133_3406.packetId);
                     }
-                    Class320_Sub23.aClass123_8432.sendPacket(126, node_sub13);
+                    Class320_Sub23.aClass123_8432.sendPacket(node_sub13);
                     Class320_Sub23.aClass123_8432.method1512();
                     Node_Sub38_Sub8.anInt10163 = 3;
                 }
@@ -483,7 +483,7 @@ public class Class195 {
                         packet.encryptXteas(Class121.isaacKeys, i_41_, packet.offset);
                         packet.method2194(-i_40_ + packet.offset);
                     }
-                    Class320_Sub23.aClass123_8432.sendPacket(126, node_sub13);
+                    Class320_Sub23.aClass123_8432.sendPacket(node_sub13);
                     Class320_Sub23.aClass123_8432.method1512();
                     Class320_Sub23.aClass123_8432.anIsaacCipher1571 = new IsaacCipher(Class121.isaacKeys);
                     for (int i_42_ = 0; i_42_ < 4; i_42_++)
@@ -553,7 +553,7 @@ public class Class195 {
                     Packet packet = node_sub13.aPacket7113;
                     packet.method2266(Class320_Sub23.aClass123_8432.anIsaacCipher1571, -47);
                     packet.method2262(1, Plane.aClass133_3417.packetId);
-                    Class320_Sub23.aClass123_8432.sendPacket(127, node_sub13);
+                    Class320_Sub23.aClass123_8432.sendPacket(node_sub13);
                     Class320_Sub23.aClass123_8432.method1512();
                     Node_Sub38_Sub8.anInt10163 = 9;
                 } else if (Node_Sub38_Sub8.anInt10163 == 12) {
@@ -750,7 +750,7 @@ public class Class195 {
                             int i_46_ = Class320_Sub23.aClass123_8432.anInt1581;
                             Node_Sub38_Sub8.anInt10163 = 0;
                             Animable_Sub2.method836(2);
-                            Class320_Sub11.method3724(0);
+                            Class320_Sub11.method3724();
                             Class97.decodeLswp(Class320_Sub23.aClass123_8432.aPacket1570);
                             Player.anInt11178 = -1;
                             if (Class320_Sub23.aClass123_8432.incomming_packet == Class156.aClass192_1962) {

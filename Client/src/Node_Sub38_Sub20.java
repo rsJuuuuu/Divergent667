@@ -23,54 +23,32 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
     private int anInt10314;
 
     final void method2780(BufferedStream buffer, int i) {
-        while_191_:
-        do {
-            while_190_:
-            do {
-                while_189_:
-                do {
-                    while_188_:
-                    do {
-                        while_187_:
-                        do {
-                            do {
-                                if (i == 0) {
-                                    anInt10312 = buffer.readUnsignedShort();
-                                    break while_191_;
-                                } else if (i != 1) {
-                                    if (i == 2) {
-                                        break;
-                                    } else if (i != 3) {
-                                        if (i == 4) {
-                                            break while_188_;
-                                        } else if (i != 5) {
-                                            if (i == 6) {
-                                                break while_190_;
-                                            }
-                                            break while_191_;
-                                        }
-                                        break while_189_;
-                                    }
-                                    break while_187_;
-                                }
-                                anInt10314 = buffer.readUnsignedShort();
-                                break while_191_;
-                            } while (false);
-                            anInt10307 = buffer.readUnsignedShort();
-                            break while_191_;
-                        } while (false);
-                        anInt10311 = buffer.readUnsignedShort();
-                        break while_191_;
-                    } while (false);
-                    anInt10306 = buffer.readUnsignedShort();
-                    break while_191_;
-                } while (false);
-                anInt10303 = buffer.readUnsignedShort();
-                break while_191_;
-            } while (false);
-            anInt10299 = buffer.readUnsignedShort();
-        } while (false);
         anInt10304++;
+        switch (i) {
+            case 0:
+                anInt10312 = buffer.readUnsignedShort();
+                break;
+            case 1:
+                anInt10314 = buffer.readUnsignedShort();
+                break;
+            case 2:
+                anInt10307 = buffer.readUnsignedShort();
+                break;
+            case 3:
+                anInt10311 = buffer.readUnsignedShort();
+                break;
+            case 4:
+                anInt10306 = buffer.readUnsignedShort();
+                break;
+            case 5:
+                anInt10303 = buffer.readUnsignedShort();
+                break;
+            case 6:
+                anInt10299 = buffer.readUnsignedShort();
+                break;
+            default:
+                break;
+        }
     }
 
     public Node_Sub38_Sub20() {

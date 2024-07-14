@@ -23,7 +23,7 @@ public class Class356 {
         GameStub.method101();
         Class173.method1800(Node_Sub52.aGLSpriteArray7655);
         Class320_Sub21.method3764(-95);
-        Class320_Sub12.method3728(0);
+        Class320_Sub12.method3728();
         if (Class151.anInt1843 == 3) {
             Class48.method478(4, (byte) 122);
         } else if (Class151.anInt1843 == 7) {

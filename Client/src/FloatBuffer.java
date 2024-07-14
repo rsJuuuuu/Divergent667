@@ -132,7 +132,7 @@ public class FloatBuffer extends BufferedStream {
             InputStream_Sub2.method129();
             Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, i_3_);
             if (node_sub2 != null) {
-                Class243.method3060((byte) -91, false, true, node_sub2);
+                Class243.method3060(false, true, node_sub2);
             }
             if (Node_Sub25_Sub3.aWidget9990 != null) {
                 ClientScript.method2321(Node_Sub25_Sub3.aWidget9990);
@@ -1058,7 +1058,7 @@ public class FloatBuffer extends BufferedStream {
             int i_140_ = packet.readIntV2();
             InputStream_Sub2.method129();
             Class161.method1731(i_140_, i_139_, i_138_);
-            ItemDefinitions itemDefinitions = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_138_, 14434);
+            ItemDefinitions itemDefinitions = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_138_);
             Class126.method1535(itemDefinitions.anInt1884, itemDefinitions.anInt1874, 110, i_140_, itemDefinitions
                     .anInt1869);
             Class279.method3371(itemDefinitions.anInt1866, i_140_, itemDefinitions.anInt1875, itemDefinitions
@@ -1245,7 +1245,7 @@ public class FloatBuffer extends BufferedStream {
                     }
                 } else {
                     node_sub35_165_ = new InterfaceSettings(node_sub35.settingsHash, i_163_);
-                    node_sub35.method2160((byte) 56);
+                    node_sub35.method2160();
                 }
                 Class156.aHashTable1964.method1515(l, node_sub35_165_, -127);
             }
@@ -1412,7 +1412,7 @@ public class FloatBuffer extends BufferedStream {
                                 (3512, (long) i_193_ << 16 | i_194_);
                         if (cachenode_sub18 != null) {
                             cachenode_sub18.aMobile_Sub4_9606.method914(-110);
-                            cachenode_sub18.method2160((byte) 29);
+                            cachenode_sub18.method2160();
                         }
                     } else {
                         int i_195_ = 512 * i_193_ + 256;
@@ -1463,11 +1463,11 @@ public class FloatBuffer extends BufferedStream {
             Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, i_201_);
             Node_Sub2 node_sub2_202_ = (Node_Sub2) Class289.aHashTable3630.method1518(3512, i_200_);
             if (node_sub2_202_ != null) {
-                Class243.method3060((byte) -22, false,
+                Class243.method3060(false,
                         node_sub2 == null || node_sub2_202_.cliped != node_sub2.cliped, node_sub2_202_);
             }
             if (node_sub2 != null) {
-                node_sub2.method2160((byte) 52);
+                node_sub2.method2160();
                 Class289.aHashTable3630.method1515(i_200_, node_sub2, -127);
             }
             IComponentDefinitions widget = Class76.method771(i_201_);
@@ -1492,7 +1492,7 @@ public class FloatBuffer extends BufferedStream {
             InputStream_Sub2.method129();
             Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, i_204_);
             if (node_sub2 != null) {
-                Class243.method3060((byte) -73, false, node_sub2.cliped != i_203_, node_sub2);
+                Class243.method3060(false, node_sub2.cliped != i_203_, node_sub2);
             }
             Class93.method1047(i_205_, i_203_, i_204_, false);
             class123.incomming_packet = null;
@@ -1692,7 +1692,7 @@ public class FloatBuffer extends BufferedStream {
                 int i_246_ = -Class320_Sub4.gameSceneBaseY + i_245_;
                 if (Class50.basePlane == i_242_ && i_244_ >= Class333.baseX && 8 + Class333.baseX > i_244_
                         && i_246_ >= Node_Sub21.baseY && Node_Sub21.baseY + 8 > i_246_) {
-                    node_sub11.method2160((byte) 121);
+                    node_sub11.method2160();
                     if (i_244_ >= 0 && i_246_ >= 0 && Node_Sub54.GAME_SCENE_WDITH > i_244_
                             && Class377_Sub1.GAME_SCENE_HEIGHT > i_246_) {
                         Node_Sub36.method2750(Class50.basePlane, i_246_, i_244_);
@@ -1914,7 +1914,7 @@ public class FloatBuffer extends BufferedStream {
             Node_Sub13 node_sub13 = method2250(-386, Class66.aClass318_5167, class123.anIsaacCipher1571);
             Objects.requireNonNull(node_sub13).aPacket7113.writeInt(i_273_);
             node_sub13.aPacket7113.writeInt(i_274_);
-            class123.sendPacket(127, node_sub13);
+            class123.sendPacket(node_sub13);
             class123.incomming_packet = null;
             return true;
         }
@@ -2111,7 +2111,7 @@ public class FloatBuffer extends BufferedStream {
                     }
                 } else {
                     node_sub35_302_ = new InterfaceSettings(settingsHash, node_sub35.anInt7413);
-                    node_sub35.method2160((byte) 75);
+                    node_sub35.method2160();
                 }
                 Class156.aHashTable1964.method1515(l, node_sub35_302_, -128);
             }

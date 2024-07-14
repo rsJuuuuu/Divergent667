@@ -21,7 +21,7 @@ abstract class Animable_Sub1 extends Animable {
         anInt9104++;
         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, Class239.aClass318_2929, Class218.aClass123_2566.anIsaacCipher1571);
         Objects.requireNonNull(node_sub13).aPacket7113.writeInt(Class175.anInt2097);
-        Class218.aClass123_2566.sendPacket(127, node_sub13);
+        Class218.aClass123_2566.sendPacket(node_sub13);
     }
 
     final boolean method815(byte b, GraphicsToolkit graphicstoolkit) {

@@ -76,7 +76,7 @@ public class Node_Sub6 extends Node {
                             continue;
                         }
                         if (Class99.aBoolean1282 && Class180.aBoolean2135) {
-                            int i_19_ = i_16_ + Class106.aClass93_1356.method1050((byte) -93);
+                            int i_19_ = i_16_ + Class106.aClass93_1356.method1050();
                             int i_20_ = i_17_ + Class106.aClass93_1356.method1051();
                             i_20_ -= Class83.anInt5179;
                             i_19_ -= Node_Sub5_Sub2.anInt9412;
@@ -320,7 +320,7 @@ public class Node_Sub6 extends Node {
                                     int i_44_ = widget.anInt4754;
                                     String string = widget.aString4790;
                                     if (widget.anInt4718 != -1) {
-                                        ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(widget.anInt4718, 14434);
+                                        ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(widget.anInt4718);
                                         string = itemdefinition.aString1860;
                                         if (string == null) {
                                             string = "null";
@@ -470,7 +470,7 @@ public class Node_Sub6 extends Node {
                                         }
                                     }
                                 } else {
-                                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(widget.anInt4718, 14434);
+                                    ItemDefinitions itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(widget.anInt4718);
                                     itemdefinition = itemdefinition.method1674(widget.anInt4831);
                                     drawablemodel = itemdefinition.method1689(widget.anAnimator4755, 2048, widget.aBoolean4723 ? Class295.myPlayer.aPlayerDefinition11137 : null, 1, Class93.aGraphicsToolkit1241, 100);
                                     if (drawablemodel == null) {
