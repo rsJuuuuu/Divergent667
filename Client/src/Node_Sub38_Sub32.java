@@ -19,11 +19,8 @@ public class Node_Sub38_Sub32 extends Node_Sub38 {
     static int anInt10435;
     static int anInt10436;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10429++;
-        if (bool) {
-            method2780(false, null, 34);
-        }
         while_263_:
         do {
             do {
@@ -124,9 +121,6 @@ public class Node_Sub38_Sub32 extends Node_Sub38 {
     }
 
     final void method2785() {
-        if (7 != 7) {
-            anInt10426 = 8;
-        }
         anInt10431++;
         method2896((byte) -119);
     }

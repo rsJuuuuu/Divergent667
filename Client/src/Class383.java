@@ -48,7 +48,7 @@ public class Class383 {
         buffer.offset = bs.length - 7 - i * 8 - (i_4_ - 1) * 3;
         int[] is = new int[i_4_];
         for (int i_10_ = 1; i_10_ < i_4_; i_10_++) {
-            is[i_10_] = buffer.read24BitInteger();
+            is[i_10_] = buffer.readInt24();
             if (is[i_10_] == 0) {
                 is[i_10_] = 1;
             }
@@ -142,7 +142,7 @@ public class Class383 {
     }
 
     static Class383 method4191(Index class302, int i) {
-        byte[] bs = class302.method3518((byte) -127, i);
+        byte[] bs = class302.method3518(i);
         if (bs == null) {
             return null;
         }
@@ -395,7 +395,7 @@ public class Class383 {
     }
 
     static Class383[] method4199(Index class302, int i) {
-        byte[] bs = class302.method3518((byte) 4, i);
+        byte[] bs = class302.method3518(i);
         if (bs == null) {
             return null;
         }

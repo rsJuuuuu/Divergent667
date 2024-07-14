@@ -115,7 +115,7 @@ class Class277 {
         }
     }
 
-    private void method3340(int i, GraphicsToolkit graphicstoolkit, int[][] is, Plane plane, Plane plane_26_, Plane plane_27_) {
+    private void method3340(int i, int[][] is, Plane plane, Plane plane_26_, Plane plane_27_) {
         for (int i_28_ = 0; i_28_ < anInt3524; i_28_++) {
             for (int i_29_ = 0; i_29_ < anInt3521; i_29_++) {
                 if (Class256.anInt3237 == -1 || Class369.method4085(i_29_, Class256.anInt3237, i_28_, i)) {
@@ -259,7 +259,7 @@ class Class277 {
         anInt3511++;
     }
 
-    private void method3341(int i, Class289 class289, byte[][] bs, int i_75_, int i_77_, int i_78_, int i_79_, GraphicsToolkit graphicstoolkit, int i_80_, boolean[] bools, Class236 class236, byte[][] bs_81_, byte[][] bs_82_) {
+    private void method3341(int i, Class289 class289, byte[][] bs, int i_75_, int i_77_, int i_78_, int i_79_, GraphicsToolkit graphicstoolkit, int i_80_, boolean[] bools, byte[][] bs_81_, byte[][] bs_82_) {
         anInt3533++;
         boolean[] bools_83_ = class289 != null && class289.aBoolean3643 ? Class250.aBooleanArrayArray3168[i] : Node_Sub33.aBooleanArrayArray7406[i];
         if (i_80_ > 0) {
@@ -270,7 +270,7 @@ class Class277 {
                     if (class289_85_.anInt3631 != -1 && class289_85_.aBoolean3643) {
                         byte b = bs_81_[i_77_ - 1][-1 + i_80_];
                         int i_86_ = bs[-1 + i_77_][i_80_ - 1] * 2 + 4 & 0x7;
-                        int i_87_ = Class382.method4179(class289_85_, (byte) -125, graphicstoolkit);
+                        int i_87_ = Class382.method4179(class289_85_, graphicstoolkit);
                         if (GLPlane.aBooleanArrayArray7950[b][i_86_]) {
                             Class188_Sub1_Sub1.anIntArray9339[0] = class289_85_.anInt3631;
                             Class262_Sub10.anIntArray7773[0] = i_87_;
@@ -289,7 +289,7 @@ class Class277 {
                     if (class289_89_.anInt3631 != -1 && class289_89_.aBoolean3643) {
                         byte b = bs_81_[1 + i_77_][-1 + i_80_];
                         int i_90_ = 0x7 & 2 * bs[1 + i_77_][i_80_ - 1] + 6;
-                        int i_91_ = Class382.method4179(class289_89_, (byte) -120, graphicstoolkit);
+                        int i_91_ = Class382.method4179(class289_89_, graphicstoolkit);
                         if (GLPlane.aBooleanArrayArray7950[b][i_90_]) {
                             Class188_Sub1_Sub1.anIntArray9339[2] = class289_89_.anInt3631;
                             Class262_Sub10.anIntArray7773[2] = i_91_;
@@ -310,7 +310,7 @@ class Class277 {
                     if (class289_93_.anInt3631 != -1 && class289_93_.aBoolean3643) {
                         byte b = bs_81_[i_77_ - 1][1 + i_80_];
                         int i_94_ = 0x7 & 2 * bs[i_77_ - 1][1 + i_80_] + 2;
-                        int i_95_ = Class382.method4179(class289_93_, (byte) -15, graphicstoolkit);
+                        int i_95_ = Class382.method4179(class289_93_, graphicstoolkit);
                         if (GLPlane.aBooleanArrayArray7950[b][i_94_]) {
                             Class188_Sub1_Sub1.anIntArray9339[6] = class289_93_.anInt3631;
                             Class262_Sub10.anIntArray7773[6] = i_95_;
@@ -329,7 +329,7 @@ class Class277 {
                     if (class289_97_.anInt3631 != -1 && class289_97_.aBoolean3643) {
                         byte b = bs_81_[1 + i_77_][1 + i_80_];
                         int i_98_ = -(-(2 * bs[1 + i_77_][1 + i_80_])) & 0x7;
-                        int i_99_ = Class382.method4179(class289_97_, (byte) -128, graphicstoolkit);
+                        int i_99_ = Class382.method4179(class289_97_, graphicstoolkit);
                         if (GLPlane.aBooleanArrayArray7950[b][i_98_]) {
                             Class188_Sub1_Sub1.anIntArray9339[4] = class289_97_.anInt3631;
                             Class262_Sub10.anIntArray7773[4] = i_99_;
@@ -352,7 +352,7 @@ class Class277 {
                     if (class289_101_.aBoolean3643) {
                         int i_103_ = 2;
                         int i_104_ = i_102_ * 2 + 4;
-                        int i_105_ = Class382.method4179(class289_101_, (byte) -123, graphicstoolkit);
+                        int i_105_ = Class382.method4179(class289_101_, graphicstoolkit);
                         for (int i_106_ = 0; i_106_ < 3; i_106_++) {
                             i_103_ = 0x7 & i_103_;
                             i_104_ &= 0x7;
@@ -390,7 +390,7 @@ class Class277 {
                     if (class289_108_.aBoolean3643) {
                         int i_110_ = 4;
                         int i_111_ = 2 + i_109_ * 2;
-                        int i_112_ = Class382.method4179(class289_108_, (byte) 16, graphicstoolkit);
+                        int i_112_ = Class382.method4179(class289_108_, graphicstoolkit);
                         for (int i_113_ = 0; i_113_ < 3; i_113_++) {
                             i_110_ &= 0x7;
                             i_111_ = 0x7 & i_111_;
@@ -428,7 +428,7 @@ class Class277 {
                     if (class289_115_.aBoolean3643) {
                         int i_117_ = 6;
                         int i_118_ = 2 * i_116_ + 4;
-                        int i_119_ = Class382.method4179(class289_115_, (byte) -125, graphicstoolkit);
+                        int i_119_ = Class382.method4179(class289_115_, graphicstoolkit);
                         for (int i_120_ = 0; i_120_ < 3; i_120_++) {
                             i_117_ = 0x7 & i_117_;
                             i_118_ = 0x7 & i_118_;
@@ -466,7 +466,7 @@ class Class277 {
                     if (class289_122_.aBoolean3643) {
                         int i_124_ = 4;
                         int i_125_ = 2 * i_123_ + 6;
-                        int i_126_ = Class382.method4179(class289_122_, (byte) -126, graphicstoolkit);
+                        int i_126_ = Class382.method4179(class289_122_, graphicstoolkit);
                         for (int i_127_ = 0; i_127_ < 3; i_127_++) {
                             i_125_ &= 0x7;
                             i_124_ = 0x7 & i_124_;
@@ -495,7 +495,7 @@ class Class277 {
             }
         }
         if (class289 != null) {
-            int i_128_ = Class382.method4179(class289, (byte) -128, graphicstoolkit);
+            int i_128_ = Class382.method4179(class289, graphicstoolkit);
             if (class289.aBoolean3643) {
                 for (int i_129_ = 0; i_129_ < 8; i_129_++) {
                     int i_130_ = -(i_78_ * 2) + i_129_ & 0x7;
@@ -699,7 +699,7 @@ class Class277 {
             if (Class382.aBoolean5254) {
                 method3348(i == 0 ? plane_147_ : null, is, i != 0 ? null : plane, Class320_Sub10.aPlaneArray8300[i], graphicstoolkit, i);
             } else {
-                method3340(i, graphicstoolkit, is, i == 0 ? plane_147_ : null, Class320_Sub10.aPlaneArray8300[i], i == 0 ? plane : null);
+                method3340(i, is, i == 0 ? plane_147_ : null, Class320_Sub10.aPlaneArray8300[i], i == 0 ? plane : null);
             }
             aByteArrayArrayArray3537[i] = null;
             aByteArrayArrayArray3528[i] = null;
@@ -866,7 +866,7 @@ class Class277 {
                             Class136.anIntArray1695[i_196_] = 1;
                         }
                         boolean[] bools_197_ = class289 != null && class289.aBoolean3643 ? Class250.aBooleanArrayArray3168[b] : Node_Sub33.aBooleanArrayArray7406[b];
-                        method3341(b, class289, bs_174_, anInt3524, i_177_, i_183_, anInt3521, graphicstoolkit, i_179_, bools, class236, bs, bs_176_);
+                        method3341(b, class289, bs_174_, anInt3524, i_177_, i_183_, anInt3521, graphicstoolkit, i_179_, bools, bs, bs_176_);
                         boolean bool_198_ = class289 != null && class289.anInt3629 != class289.anInt3631;
                         if (!bool_198_) {
                             for (int i_199_ = 0; i_199_ < 8; i_199_++) {
@@ -979,7 +979,7 @@ class Class277 {
                                 i_221_ = class289.anInt3632;
                                 i_219_ = class289.anInt3631;
                                 i_220_ = class289.anInt3640;
-                                int i_222_ = Class382.method4179(class289, (byte) -31, graphicstoolkit);
+                                int i_222_ = Class382.method4179(class289, graphicstoolkit);
                                 for (int i_223_ = 0; i_223_ < i_204_; i_223_++) {
                                     int i_225_;
                                     if (!bools[-i_183_ & 0x3] || i_208_ != is_201_[0]) {

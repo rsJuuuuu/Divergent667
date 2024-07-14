@@ -3,7 +3,7 @@
  */
 
 interface Interface12 {
-    Class172 method34(byte b);
+    Class172 method34();
 
     int method35();
 }

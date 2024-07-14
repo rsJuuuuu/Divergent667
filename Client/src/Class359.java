@@ -73,7 +73,7 @@ public class Class359 {
         anInt4460++;
     }
 
-    Class359(Class353 class353, int i, Index class302) {
+    Class359(Index class302) {
         aClass302_4458 = class302;
         aClass302_4458.method3537(31);
     }

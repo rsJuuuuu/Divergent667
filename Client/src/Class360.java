@@ -117,7 +117,7 @@ public class Class360 implements Runnable {
 
     static Node_Sub6 method4043(Index class302, int i) {
         anInt4473++;
-        byte[] bs = class302.method3518((byte) -124, i);
+        byte[] bs = class302.method3518(i);
         if (bs == null) {
             return null;
         }

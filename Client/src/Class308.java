@@ -56,7 +56,7 @@ public class Class308 {
         return widget_1_;
     }
 
-    Class308(Class353 class353, int i, Index class302) {
+    Class308(Index class302) {
         aClass302_3906 = class302;
         aClass302_3906.method3537(5);
     }

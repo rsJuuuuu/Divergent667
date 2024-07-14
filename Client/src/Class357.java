@@ -40,12 +40,12 @@ public class Class357 {
         return 0xff & aByteArray4427[i];
     }
 
-    final int method4028(String string, GLSprite[] glsprites, byte b, int i) {
+    final int method4028(String string, GLSprite[] glSprites, int i) {
         anInt4438++;
-        return method4029(Class330.aStringArray4126, new int[]{i}, -110, glsprites, string);
+        return method4029(Class330.aStringArray4126, new int[]{i}, glSprites, string);
     }
 
-    final int method4029(String[] strings, int[] is, int i, GLSprite[] glsprites, String string) {
+    final int method4029(String[] strings, int[] is, GLSprite[] glSprites, String string) {
         anInt4431++;
         if (string == null) {
             return 0;
@@ -139,10 +139,10 @@ public class Class357 {
                             i_14_ += aByteArrayArray4433[i_8_][174];
                         }
                         i_8_ = 174;
-                    } else if (string_16_.startsWith("img=") && glsprites != null) {
+                    } else if (string_16_.startsWith("img=") && glSprites != null) {
                         try {
                             int i_17_ = Class350.method3998(string_16_.substring(4), -1);
-                            i_14_ += glsprites[i_17_].method1197();
+                            i_14_ += glSprites[i_17_].method1197();
                             i_8_ = -1;
                         } catch (Exception exception) {
                             /* empty */
@@ -197,7 +197,7 @@ public class Class357 {
 
     final int method4030(GLSprite[] glsprites, String string, int i_18_) {
         anInt4443++;
-        int i_19_ = method4029(Class330.aStringArray4126, new int[]{i_18_}, 92, glsprites, string);
+        int i_19_ = method4029(Class330.aStringArray4126, new int[]{i_18_}, glsprites, string);
         int i_20_ = 0;
         for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {
             int i_22_ = method4031(119, glsprites, Class330.aStringArray4126[i_21_]);
@@ -277,13 +277,13 @@ public class Class357 {
         return i_25_;
     }
 
-    final String method4032(String string, GLSprite[] glsprites, int i, int i_30_) {
+    final String method4032(String string, GLSprite[] glsprites, int i) {
         anInt4440++;
         if (method4031(104, glsprites, string) <= i) {
             return string;
         }
         i -= method4031(103, null, "...");
-        int i_31_ = i_30_;
+        int i_31_ = -1;
         int i_32_ = -1;
         int i_33_ = 0;
         int i_34_ = string.length();
@@ -323,7 +323,7 @@ public class Class357 {
                         default:
                             if (string_37_.startsWith("img=") && glsprites != null) {
                                 try {
-                                    int i_38_ = Class350.method3998(string_37_.substring(4), i_30_);
+                                    int i_38_ = Class350.method3998(string_37_.substring(4), -1);
                                     i_33_ += glsprites[i_38_].method1197();
                                     i_32_ = -1;
                                     if (i < i_33_) {
@@ -421,7 +421,7 @@ public class Class357 {
         if (i_51_ == 0) {
             i_51_ = anInt4430;
         }
-        int i_52_ = method4029(Class330.aStringArray4126, new int[]{i}, -54, glsprites, string);
+        int i_52_ = method4029(Class330.aStringArray4126, new int[]{i}, glsprites, string);
         int i_53_ = i_51_ * (i_52_ - 1);
         return i_53_ + anInt4434 + anInt4442;
     }

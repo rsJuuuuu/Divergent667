@@ -17,7 +17,7 @@ class Class169_Sub2 extends Class169 {
     protected int anInt8803;
     static Class257 aClass257_8804 = new Class257();
     private int anInt8805 = -1;
-    static Class170 aClass170_8806 = new Class170(2, 2);
+    static Class170 aClass170_8806 = new Class170(2);
 
     Class169_Sub2(GLToolkit gltoolkit, int i, int i_0_, int i_1_, int i_2_, boolean bool, byte[] bs, int i_3_, boolean bool_4_) {
         super(gltoolkit, i, i_0_, i_1_ * i_2_, bool);
@@ -119,7 +119,7 @@ class Class169_Sub2 extends Class169 {
         }
         aGLToolkit4947.method1444(-2, this);
         if (anInt4951 != 34037 && bool && i_31_ == 0) {
-            Class258.method3124(anInt8795, anInt4951, is, 32993, anInt4950, anInt8803, 1, aGLToolkit4947.anInt6740);
+            Class258.method3124(anInt8795, anInt4951, is, anInt4950, anInt8803, aGLToolkit4947.anInt6740);
             this.method1766((byte) 126, true);
         } else {
             OpenGL.glPixelStorei(3314, i_31_);

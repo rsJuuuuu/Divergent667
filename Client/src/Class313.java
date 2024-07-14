@@ -13,7 +13,7 @@ public class Class313 {
         return bool | bool_0_;
     }
 
-    static void method3648(int i) {
+    static void method3648() {
         Class229.aGraphicsToolkit2732.xa((0.7F + (float) Class213.aNode_Sub27_2512.aClass320_Sub22_7299.method3765() * 0.1F) * Node_Sub25.aFloat7236);
         anInt4014++;
         Class229.aGraphicsToolkit2732.ZA(Class320_Sub20.anInt8402, CacheNode_Sub16_Sub2.aFloat11082, Class363.aFloat4502, (float) (Class181.anInt2145 << 2), (float) (Class134_Sub2.anInt9022 << 2), (float) (Class173.anInt2089 << 2));

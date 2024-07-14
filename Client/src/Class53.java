@@ -10,6 +10,6 @@ public class Class53 {
         graphicstoolkit.method1239(i_4_, i_1_, i, i_0_, i_2_);
         anInt808++;
         graphicstoolkit.method1239(-2 + i_4_, 16, 1 + i, 1 + i_0_, -16777216);
-        graphicstoolkit.method1234(18 + i, -16777216, i_4_ - 2, i_1_ - 19, (byte) -78, 1 + i_0_);
+        graphicstoolkit.method1234(18 + i, -16777216, i_4_ - 2, i_1_ - 19, 1 + i_0_);
     }
 }

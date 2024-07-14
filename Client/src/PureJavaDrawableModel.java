@@ -901,19 +901,15 @@ public class PureJavaDrawableModel extends DrawableModel {
         Class336_Sub2 class336_sub2 = (Class336_Sub2) class336;
         if (aClass300Array5782 != null) {
             for (Class300 class300 : aClass300Array5782) {
-                Class300 class300_239_ = class300;
-                if (class300.aClass300_3763 != null) {
-                    class300_239_ = class300.aClass300_3763;
-                }
-                class300_239_.anInt3769 = (int) (class336_sub2.aFloat8583 + (class336_sub2.aFloat8580 * (float) anIntArray5748[class300.anInt3764] + class336_sub2.aFloat8571 * (float) anIntArray5772[class300.anInt3764] + class336_sub2.aFloat8566 * (float) anIntArray5717[class300.anInt3764]));
-                class300_239_.anInt3751 = (int) (class336_sub2.aFloat8579 + (class336_sub2.aFloat8578 * (float) anIntArray5748[class300.anInt3764] + class336_sub2.aFloat8561 * (float) anIntArray5772[class300.anInt3764] + class336_sub2.aFloat8558 * (float) anIntArray5717[class300.anInt3764]));
-                class300_239_.anInt3753 = (int) (class336_sub2.aFloat8589 + (class336_sub2.aFloat8577 * (float) anIntArray5748[class300.anInt3764] + class336_sub2.aFloat8567 * (float) anIntArray5772[class300.anInt3764] + class336_sub2.aFloat8584 * (float) anIntArray5717[class300.anInt3764]));
-                class300_239_.anInt3766 = (int) (class336_sub2.aFloat8583 + (class336_sub2.aFloat8580 * (float) anIntArray5748[class300.anInt3757] + class336_sub2.aFloat8571 * (float) anIntArray5772[class300.anInt3757] + class336_sub2.aFloat8566 * (float) anIntArray5717[class300.anInt3757]));
-                class300_239_.anInt3756 = (int) (class336_sub2.aFloat8579 + (class336_sub2.aFloat8578 * (float) anIntArray5748[class300.anInt3757] + class336_sub2.aFloat8561 * (float) anIntArray5772[class300.anInt3757] + class336_sub2.aFloat8558 * (float) anIntArray5717[class300.anInt3757]));
-                class300_239_.anInt3758 = (int) (class336_sub2.aFloat8589 + (class336_sub2.aFloat8577 * (float) anIntArray5748[class300.anInt3757] + class336_sub2.aFloat8567 * (float) anIntArray5772[class300.anInt3757] + class336_sub2.aFloat8584 * (float) anIntArray5717[class300.anInt3757]));
-                class300_239_.anInt3761 = (int) (class336_sub2.aFloat8583 + (class336_sub2.aFloat8580 * (float) anIntArray5748[class300.anInt3754] + class336_sub2.aFloat8571 * (float) anIntArray5772[class300.anInt3754] + class336_sub2.aFloat8566 * (float) anIntArray5717[class300.anInt3754]));
-                class300_239_.anInt3752 = (int) (class336_sub2.aFloat8579 + (class336_sub2.aFloat8578 * (float) anIntArray5748[class300.anInt3754] + class336_sub2.aFloat8561 * (float) anIntArray5772[class300.anInt3754] + class336_sub2.aFloat8558 * (float) anIntArray5717[class300.anInt3754]));
-                class300_239_.anInt3771 = (int) (class336_sub2.aFloat8589 + (class336_sub2.aFloat8577 * (float) anIntArray5748[class300.anInt3754] + class336_sub2.aFloat8567 * (float) anIntArray5772[class300.anInt3754] + class336_sub2.aFloat8584 * (float) anIntArray5717[class300.anInt3754]));
+                class300.anInt3769 = (int) (class336_sub2.aFloat8583 + (class336_sub2.aFloat8580 * (float) anIntArray5748[class300.anInt3764] + class336_sub2.aFloat8571 * (float) anIntArray5772[class300.anInt3764] + class336_sub2.aFloat8566 * (float) anIntArray5717[class300.anInt3764]));
+                class300.anInt3751 = (int) (class336_sub2.aFloat8579 + (class336_sub2.aFloat8578 * (float) anIntArray5748[class300.anInt3764] + class336_sub2.aFloat8561 * (float) anIntArray5772[class300.anInt3764] + class336_sub2.aFloat8558 * (float) anIntArray5717[class300.anInt3764]));
+                class300.anInt3753 = (int) (class336_sub2.aFloat8589 + (class336_sub2.aFloat8577 * (float) anIntArray5748[class300.anInt3764] + class336_sub2.aFloat8567 * (float) anIntArray5772[class300.anInt3764] + class336_sub2.aFloat8584 * (float) anIntArray5717[class300.anInt3764]));
+                class300.anInt3766 = (int) (class336_sub2.aFloat8583 + (class336_sub2.aFloat8580 * (float) anIntArray5748[class300.anInt3757] + class336_sub2.aFloat8571 * (float) anIntArray5772[class300.anInt3757] + class336_sub2.aFloat8566 * (float) anIntArray5717[class300.anInt3757]));
+                class300.anInt3756 = (int) (class336_sub2.aFloat8579 + (class336_sub2.aFloat8578 * (float) anIntArray5748[class300.anInt3757] + class336_sub2.aFloat8561 * (float) anIntArray5772[class300.anInt3757] + class336_sub2.aFloat8558 * (float) anIntArray5717[class300.anInt3757]));
+                class300.anInt3758 = (int) (class336_sub2.aFloat8589 + (class336_sub2.aFloat8577 * (float) anIntArray5748[class300.anInt3757] + class336_sub2.aFloat8567 * (float) anIntArray5772[class300.anInt3757] + class336_sub2.aFloat8584 * (float) anIntArray5717[class300.anInt3757]));
+                class300.anInt3761 = (int) (class336_sub2.aFloat8583 + (class336_sub2.aFloat8580 * (float) anIntArray5748[class300.anInt3754] + class336_sub2.aFloat8571 * (float) anIntArray5772[class300.anInt3754] + class336_sub2.aFloat8566 * (float) anIntArray5717[class300.anInt3754]));
+                class300.anInt3752 = (int) (class336_sub2.aFloat8579 + (class336_sub2.aFloat8578 * (float) anIntArray5748[class300.anInt3754] + class336_sub2.aFloat8561 * (float) anIntArray5772[class300.anInt3754] + class336_sub2.aFloat8558 * (float) anIntArray5717[class300.anInt3754]));
+                class300.anInt3771 = (int) (class336_sub2.aFloat8589 + (class336_sub2.aFloat8577 * (float) anIntArray5748[class300.anInt3754] + class336_sub2.aFloat8567 * (float) anIntArray5772[class300.anInt3754] + class336_sub2.aFloat8584 * (float) anIntArray5717[class300.anInt3754]));
             }
         }
         if (aClass218Array5764 != null) {

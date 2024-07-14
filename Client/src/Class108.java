@@ -16,7 +16,7 @@ public class Class108 implements Interface12 {
         return aClass302_5285.method3511(19492);
     }
 
-    public final Class172 method34(byte b) {
+    public final Class172 method34() {
         anInt5284++;
 
         return Class172.aClass172_2077;

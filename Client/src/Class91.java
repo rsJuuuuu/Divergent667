@@ -263,7 +263,7 @@ public class Class91 {
     static void method1033(int i, int i_46_, int i_47_, int i_48_, int i_49_) {
         anInt1224++;
         if (0 != Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776() && i_48_ != 0 && Class23.anInt434 < 50 && i_47_ != -1) {
-            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 1, i_47_, i_48_, i_46_, i_49_, 0, i, null);
+            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 1, i_47_, i_48_, i_46_, i_49_, 0, i);
         }
     }
 

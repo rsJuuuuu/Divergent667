@@ -50,7 +50,7 @@ public class Class295 {
         if ((Class315.anInt4035 >= 2 || Class87.removeWalkHere) && Class58.aWidget861 == null) {
             String string;
             if (!Class87.removeWalkHere || Class315.anInt4035 >= 2) {
-                if (!Class116.aBoolean5072 || !Class175.aClass291_2100.method3450(-46, 81) || Class315.anInt4035 <= 2) {
+                if (!Class116.aBoolean5072 || !Class175.aClass291_2100.method3450(81) || Class315.anInt4035 <= 2) {
                     CacheNode_Sub13 cachenode_sub13 = Node_Sub38_Sub23.aCacheNode_Sub13_10343;
                     if (cachenode_sub13 == null) {
                         return;
@@ -110,7 +110,7 @@ public class Class295 {
         }
     }
 
-    static int method3471(byte b) {
+    static int method3471() {
         anInt3693++;
         return Class243.aClass340_3069.method3959();
     }

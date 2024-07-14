@@ -18,7 +18,7 @@ public class Node_Sub20 extends Node {
 
     static GraphicsToolkit method2613(int i, Index class302, d var_d, Canvas canvas) {
         anInt7176++;
-        if (!Class352.method4012(80)) {
+        if (Class352.method4012()) {
             throw new RuntimeException("");
         }
         if (!Node_Sub38_Sub2.method2793("jaggl")) {
@@ -59,7 +59,7 @@ public class Node_Sub20 extends Node {
             }
             for (int i = 0; i < actor.aClass165Array10886.length; i++) {
                 if (actor.aClass165Array10886[i].graphicsId != -1 && actor.aClass165Array10886[i].anAnimator2026.method242()) {
-                    Class195 class195 = Class16.aClass101_228.method1090(-121, actor.aClass165Array10886[i].graphicsId);
+                    Class195 class195 = Class16.aClass101_228.method1090(actor.aClass165Array10886[i].graphicsId);
                     if (class195.aBoolean2402 && class195.anInt2394 != -1) {
                         Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -95);
                         if (actor.anInt10900 > 0 && class48.anInt698 == 0) {

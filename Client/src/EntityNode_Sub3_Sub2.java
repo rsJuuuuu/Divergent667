@@ -6,7 +6,6 @@ class EntityNode_Sub3_Sub2 extends EntityNode_Sub3 {
     static int anInt9167;
     static float aFloat9168 = 0.25F;
     protected boolean aBoolean9169;
-    protected byte aByte9170 = 5;
     protected int anInt9171;
     protected int anInt9172;
     protected int anInt9173;

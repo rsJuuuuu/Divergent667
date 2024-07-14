@@ -118,10 +118,7 @@ public class Node_Sub38_Sub16 extends Node_Sub38 {
         super(1, false);
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (bool) {
-            method2840(111);
-        }
+    final void method2780(BufferedStream buffer, int i) {
         if (i == 0) {
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         }

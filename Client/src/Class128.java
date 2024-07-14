@@ -28,7 +28,7 @@ public class Class128 {
         anInt1649++;
     }
 
-    static void method1544(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
+    static void method1544(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_8_) {
         anInt1653++;
         if (i_3_ >= 1 && i >= 1 && i_3_ <= -2 + Node_Sub54.GAME_SCENE_WDITH && i <= -2 + Class377_Sub1.GAME_SCENE_HEIGHT) {
             int i_9_ = i_6_;
@@ -42,7 +42,7 @@ public class Class128 {
             if (i_8_ >= 0) {
                 int i_10_ = Class213.aNode_Sub27_2512.aClass320_Sub6_7267.method3701();
                 Class213.aNode_Sub27_2512.method2690(108, 1, Class213.aNode_Sub27_2512.aClass320_Sub6_7267);
-                Node_Sub38_Sub1.aClass277_Sub1_10084.method3352(i_1_, i_8_, Class304.SCENE_CLIP_DATA_PLANES[i_6_], i, Class93.aGraphicsToolkit1241, i_3_, i_2_, -102, i_9_, i_6_, i_4_);
+                Node_Sub38_Sub1.aClass277_Sub1_10084.method3352(i_1_, i_8_, Class304.SCENE_CLIP_DATA_PLANES[i_6_], i, Class93.aGraphicsToolkit1241, i_3_, i_2_, i_9_, i_6_, i_4_);
                 Class213.aNode_Sub27_2512.method2690(33, i_10_, Class213.aNode_Sub27_2512.aClass320_Sub6_7267);
             }
         }
@@ -334,7 +334,7 @@ public class Class128 {
         }
     }
 
-    Class128(Class353 class353, int i, Index class302) {
+    Class128(Index class302) {
         index22 = class302;
         if (index22 != null) {
             int i_22_ = index22.method3526() - 1;

@@ -41,7 +41,7 @@ public class Node_Sub31 extends Node {
         if (b != 120) {
             method2727(null, (byte) -7);
         }
-        return new Class144_Sub3(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.read24BitInteger(), buffer.readUnsignedByte());
+        return new Class144_Sub3(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readInt24(), buffer.readUnsignedByte());
     }
 
     final boolean method2728(int i, int i_2_) {

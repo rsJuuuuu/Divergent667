@@ -22,7 +22,7 @@ public class Class262_Sub14 extends Class262 {
             method3148(-1);
         }
         anInt7809++;
-        Class105.method1116(anInt7808, anInt7814, anInt7812, (byte) -119, 0, anInt7811, false);
+        Class105.method1116(anInt7808, anInt7814, anInt7812, 0, anInt7811, false);
     }
 
     Class262_Sub14(BufferedStream buffer) {

@@ -172,7 +172,7 @@ public class Index {
                 }
             }
         }
-        byte[] bs = Class320_Sub15.method3739((byte) -48, false, anObjectArrayArray3786[i_9_][i]);
+        byte[] bs = Class320_Sub15.method3739(false, anObjectArrayArray3786[i_9_][i]);
         if (anInt3795 == 1) {
             anObjectArrayArray3786[i_9_][i] = null;
             if (anArchive3797.anIntArray285[i_9_] == 1) {
@@ -230,9 +230,9 @@ public class Index {
         }
         byte[] bs;
         if (is == null || is[0] == 0 && is[1] == 0 && is[2] == 0 && is[3] == 0) {
-            bs = Class320_Sub15.method3739((byte) 126, false, anObjectArray3783[i_13_]);
+            bs = Class320_Sub15.method3739(false, anObjectArray3783[i_13_]);
         } else {
-            bs = Class320_Sub15.method3739((byte) 127, true, anObjectArray3783[i_13_]);
+            bs = Class320_Sub15.method3739(true, anObjectArray3783[i_13_]);
             BufferedStream buffer = new BufferedStream(bs);
             buffer.method2231(is, buffer.buffer.length);
         }
@@ -381,7 +381,7 @@ public class Index {
         aClass34_3804.method368(i_51_);
     }
 
-    final byte[] method3518(byte b, int i) {
+    final byte[] method3518(int i) {
         anInt3790++;
         if (!method3530()) {
             return null;

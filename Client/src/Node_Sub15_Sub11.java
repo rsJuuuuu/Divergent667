@@ -18,7 +18,7 @@ public class Node_Sub15_Sub11 extends Node_Sub15 {
             if (Class20.aFloat329 < Class20.aFloat327) {
                 Class20.aFloat327 = Class20.aFloat329;
             }
-            Class207.method2039(48);
+            Class207.method2039();
             Class20.anInt328 = (int) Class20.aFloat327 >> 1;
             Class20.aByteArrayArrayArray332 = Node_Sub29_Sub3.method2719(Class20.anInt328);
         } else if (Class20.aFloat327 > Class20.aFloat329) {
@@ -26,7 +26,7 @@ public class Node_Sub15_Sub11 extends Node_Sub15 {
             if (Class20.aFloat329 > Class20.aFloat327) {
                 Class20.aFloat327 = Class20.aFloat329;
             }
-            Class207.method2039(93);
+            Class207.method2039();
             Class20.anInt328 = (int) Class20.aFloat327 >> 1;
             Class20.aByteArrayArrayArray332 = Node_Sub29_Sub3.method2719(Class20.anInt328);
         }
@@ -45,7 +45,7 @@ public class Node_Sub15_Sub11 extends Node_Sub15 {
                 Class262_Sub4.anInt7730 = -1;
             }
             Class327.anInt5360 -= -i_2_;
-            Class207.method2039(8);
+            Class207.method2039();
         }
         if (Class168.anInt2044 > 0) {
             Node_Sub15_Sub4.anInt9800--;
@@ -58,7 +58,7 @@ public class Node_Sub15_Sub11 extends Node_Sub15 {
             Node_Sub38_Sub19.anInt10296 = -1;
         }
         if (Class336_Sub1.aBoolean8543 && Node_Sub43.aClass312_7541 != null) {
-            for (Node_Sub31 node_sub31 = (Node_Sub31) Node_Sub43.aClass312_7541.method3613(); node_sub31 != null; node_sub31 = (Node_Sub31) Node_Sub43.aClass312_7541.method3620(16776960)) {
+            for (Node_Sub31 node_sub31 = (Node_Sub31) Node_Sub43.aClass312_7541.method3613(); node_sub31 != null; node_sub31 = (Node_Sub31) Node_Sub43.aClass312_7541.method3620()) {
                 Class79 class79 = Class20.aClass215_322.method2069((byte) 113, node_sub31.aNode_Sub14_7375.anInt7128);
                 if (node_sub31.method2728(i, i_0_)) {
                     if (class79.aStringArray1065 != null) {
@@ -93,24 +93,19 @@ public class Node_Sub15_Sub11 extends Node_Sub15 {
         }
     }
 
-    final void method2556(ClanChat clanchat, int i) {
-        if (i == 16) {
-            anInt9857++;
-            clanchat.method509(anInt9854, anInt9860);
-        }
+    final void method2556(ClanChat clanchat) {
+        anInt9857++;
+        clanchat.method509(anInt9854, anInt9860);
     }
 
     public static void method2581() {
         aClass302_9859 = null;
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9858++;
         anInt9860 = buffer.readInt();
         anInt9854 = buffer.readInt();
-        if (i != 29147) {
-            method2554(23, null);
-        }
     }
 
     Node_Sub15_Sub11() {

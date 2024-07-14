@@ -14,11 +14,9 @@ public class Node_Sub15_Sub10 extends Node_Sub15 {
     static int anInt9852;
     static Index aClass302_9853;
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         anInt9844++;
-        if (i == 16) {
-            clanchat.method486(anInt9845, anInt9846, anInt9847, anInt9848);
-        }
+        clanchat.method486(anInt9845, anInt9846, anInt9847, anInt9848);
     }
 
     static int method2578(byte b) {
@@ -32,15 +30,12 @@ public class Node_Sub15_Sub10 extends Node_Sub15 {
         aClass192_9849 = null;
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9852++;
         anInt9846 = buffer.readUnsignedShort();
         anInt9845 = buffer.readInt();
         anInt9848 = buffer.readUnsignedByte();
         anInt9847 = buffer.readUnsignedByte();
-        if (i != 29147) {
-            aBoolean9850 = true;
-        }
     }
 
     Node_Sub15_Sub10() {

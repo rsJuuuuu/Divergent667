@@ -51,10 +51,10 @@ public class Class321 {
         }
         Class257.aFloat3243 += Node_Sub36_Sub1.aFloat10038 * (float) l / 6.0F;
         Node_Sub12.aFloat5450 += (float) l * Class291.aFloat3666 / 6.0F;
-        Class169_Sub4.method1787((byte) 12);
+        Class169_Sub4.method1787();
     }
 
-    static boolean method3800(int i, int i_6_) {
+    static boolean method3800(int i) {
         anInt4070++;
         return (i & 0x34) != 0;
     }

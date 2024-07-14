@@ -89,6 +89,6 @@ public class Node_Sub28 extends Node {
         }
         Node_Sub12.aFloat5450 += Class291.aFloat3666 * (float) l / 40.0F * 8.0F;
         Class257.aFloat3243 += Node_Sub36_Sub1.aFloat10038 * (float) l / 40.0F * 8.0F;
-        Class169_Sub4.method1787((byte) -78);
+        Class169_Sub4.method1787();
     }
 }

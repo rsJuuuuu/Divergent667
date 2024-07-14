@@ -78,6 +78,6 @@ public class Node_Sub3 extends Node {
 
     static String method2172(BufferedStream buffer) {
         anInt6944++;
-        return Class207.method2040(buffer, 32767, -24709);
+        return Class207.method2040(buffer);
     }
 }

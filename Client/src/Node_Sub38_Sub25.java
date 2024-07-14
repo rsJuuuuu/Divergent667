@@ -19,7 +19,7 @@ public class Node_Sub38_Sub25 extends Node_Sub38 {
         if (cachenode_sub9 != null) {
             return cachenode_sub9;
         }
-        byte[] bs = Class21.aClass302_357.method3518((byte) -128, Class21.aClass302_357.method3528(i_2_));
+        byte[] bs = Class21.aClass302_357.method3518(Class21.aClass302_357.method3528(i_2_));
         if (bs != null) {
             if (bs.length <= 1) {
                 return null;
@@ -41,7 +41,7 @@ public class Node_Sub38_Sub25 extends Node_Sub38 {
         if (cachenode_sub9 != null) {
             return cachenode_sub9;
         }
-        bs = Class21.aClass302_357.method3518((byte) -127, Class21.aClass302_357.method3528(i_2_));
+        bs = Class21.aClass302_357.method3518(Class21.aClass302_357.method3528(i_2_));
         if (bs != null) {
             if (bs.length <= 1) {
                 return null;
@@ -60,7 +60,7 @@ public class Node_Sub38_Sub25 extends Node_Sub38 {
         if (cachenode_sub9 != null) {
             return cachenode_sub9;
         }
-        bs = Class21.aClass302_357.method3518((byte) 71, Class21.aClass302_357.method3528(i_2_));
+        bs = Class21.aClass302_357.method3518(Class21.aClass302_357.method3528(i_2_));
         if (bs != null) {
             if (bs.length <= 1) {
                 return null;

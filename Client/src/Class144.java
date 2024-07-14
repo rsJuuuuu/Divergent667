@@ -33,7 +33,7 @@ abstract class Class144 {
                     Class330.anIntArrayArrayArray4128[i_2_][i_3_][i_4_] = -1;
             }
         }
-        for (Node_Sub28 node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3613(); node_sub28 != null; node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3620(16776960)) {
+        for (Node_Sub28 node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3613(); node_sub28 != null; node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3620()) {
             int i_5_ = node_sub28.anInt7323;
             boolean bool = (i_5_ & 0x1) == 1;
             int i_6_ = node_sub28.anInt7325 >> 3;
@@ -88,7 +88,7 @@ abstract class Class144 {
         Class204.anIntArray2460 = null;
         Class320_Sub18.aByteArrayArray8378 = new byte[i_21_][];
         i_21_ = 0;
-        for (Node_Sub28 node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3613(); node_sub28 != null; node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3620(16776960)) {
+        for (Node_Sub28 node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3613(); node_sub28 != null; node_sub28 = (Node_Sub28) Class320_Sub16.aClass312_8358.method3620()) {
             int i_22_ = node_sub28.anInt7325 >>> 3;
             int i_23_ = node_sub28.anInt7326 >>> 3;
             int i_24_ = node_sub28.anInt7320 + i_22_;
@@ -124,15 +124,15 @@ abstract class Class144 {
         Class364.method4057(false, Node_Sub54.GAME_SCENE_WDITH >> 4, 12, Class377_Sub1.GAME_SCENE_HEIGHT >> 4);
     }
 
-    abstract void method1629(int i, int i_30_, int i_31_);
+    abstract void method1629(int i, int i_31_);
 
-    abstract void method1630(int i, int i_32_, int i_33_);
+    abstract void method1630(int i, int i_33_);
 
     static void method1631(byte b) {
         anInt1784++;
         FileOnDisk fileondisk = null;
         try {
-            fileondisk = SignLink.method3633(-15, "2");
+            fileondisk = SignLink.method3633();
             if (b < 114) {
                 aClass192_1786 = null;
             }

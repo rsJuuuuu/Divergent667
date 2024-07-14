@@ -38,8 +38,8 @@ public class EntityNode_Sub4 extends EntityNode {
 
     final void method955(GraphicsToolkit graphicstoolkit) {
         aClass198_5977.aClass87_2429.method1011();
-        for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113((byte) 112); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(82))
-            entitynode_sub7.method976(aLong5968, graphicstoolkit);
+        for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113(); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(82))
+            entitynode_sub7.method976(graphicstoolkit);
     }
 
     public static void method956() {
@@ -51,7 +51,7 @@ public class EntityNode_Sub4 extends EntityNode {
         for (int i = 0; i < 8; i++)
             aBooleanArray5966[i] = false;
         while_138_:
-        for (CacheNode_Sub5 cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3613(); cachenode_sub5 != null; cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3620(16776960)) {
+        for (CacheNode_Sub5 cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3613(); cachenode_sub5 != null; cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3620()) {
             if (class218s != null) {
                 for (int i = 0; i < class218s.length; i++) {
                     if (cachenode_sub5.aClass218_9476 == class218s[i] || cachenode_sub5.aClass218_9476 == class218s[i].aClass218_2561) {
@@ -109,10 +109,10 @@ public class EntityNode_Sub4 extends EntityNode {
         for (int i = 0; i < 32; i++)
             aBooleanArray5971[i] = false;
         while_140_:
-        for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113((byte) 125); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(117)) {
+        for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113(); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(117)) {
             if (class300s != null) {
                 for (int i = 0; i < class300s.length; i++) {
-                    if (entitynode_sub7.aClass300_6003 == class300s[i] || entitynode_sub7.aClass300_6003 == class300s[i].aClass300_3763) {
+                    if (entitynode_sub7.aClass300_6003 == class300s[i] || entitynode_sub7.aClass300_6003 == null) {
                         aBooleanArray5971[i] = true;
                         entitynode_sub7.method977((byte) 107);
                         entitynode_sub7.aBoolean6012 = false;
@@ -144,7 +144,7 @@ public class EntityNode_Sub4 extends EntityNode {
 
     final void method961() {
         aBoolean5972 = true;
-        for (CacheNode_Sub5 cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3613(); cachenode_sub5 != null; cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3620(16776960)) {
+        for (CacheNode_Sub5 cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3613(); cachenode_sub5 != null; cachenode_sub5 = (CacheNode_Sub5) aClass312_5976.method3620()) {
             if (cachenode_sub5.aClass249_9473.anInt3160 == 1) {
                 cachenode_sub5.method2275();
             }
@@ -177,13 +177,13 @@ public class EntityNode_Sub4 extends EntityNode {
         }
         int i = (int) (l - aLong5968);
         if (aBoolean5980) {
-            for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113((byte) 112); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(127)) {
+            for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113(); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(127)) {
                 for (int i_0_ = 0; i_0_ < entitynode_sub7.aClass355_6011.anInt4358; i_0_++)
                     entitynode_sub7.method974(1, !aBoolean5969, l, graphicstoolkit);
             }
             aBoolean5980 = false;
         }
-        for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113((byte) 108); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(72))
+        for (EntityNode_Sub7 entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1113(); entitynode_sub7 != null; entitynode_sub7 = (EntityNode_Sub7) aClass103_5967.method1108(72))
             entitynode_sub7.method974(i, !aBoolean5969, l, graphicstoolkit);
         aLong5968 = l;
         return true;
@@ -215,7 +215,7 @@ public class EntityNode_Sub4 extends EntityNode {
         aBoolean5978 = bool;
     }
 
-    final void method967(int i, int i_1_, int i_2_, int i_3_, int i_4_) {
+    final void method967(int i) {
         anInt5979 = i;
     }
 

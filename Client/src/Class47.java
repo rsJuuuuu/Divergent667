@@ -40,7 +40,7 @@ public class Class47 {
         if (node_sub43.aLong2797 != aLong687 || aLong684 != node_sub43.aLong7537) {
             throw new RuntimeException("ClanChannelDelta.applyToClanChannel(): Credentials do not match! cc.clanHash:" + node_sub43.aLong2797 + " updateNum:" + node_sub43.aLong7537 + " delta.clanHash:" + aLong687 + " updateNum:" + aLong684);
         }
-        for (Node_Sub36 node_sub36 = (Node_Sub36) aClass312_686.method3613(); node_sub36 != null; node_sub36 = (Node_Sub36) aClass312_686.method3620(16776960))
+        for (Node_Sub36 node_sub36 = (Node_Sub36) aClass312_686.method3613(); node_sub36 != null; node_sub36 = (Node_Sub36) aClass312_686.method3620())
             node_sub36.method2751(node_sub43);
         node_sub43.aLong7537++;
     }

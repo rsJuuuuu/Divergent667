@@ -57,7 +57,7 @@ class Class230 implements Interface10 {
         aClass42_5208 = null;
     }
 
-    public void method27(boolean bool, int i) {
+    public void method27(boolean bool) {
         anInt5206++;
         if (bool) {
             int i_7_ = aClass235_5213.aClass379_5118.method4160(-107, Node_Sub38_Sub12.anInt10225, aGLSprite5211.method1197()) + aClass235_5213.anInt5124;

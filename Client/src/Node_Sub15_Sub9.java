@@ -28,23 +28,17 @@ public class Node_Sub15_Sub9 extends Node_Sub15 {
         anInterface6_9843 = null;
     }
 
-    final void method2556(ClanChat clanchat, int i) {
-        if (i != 16) {
-            anInt9839 = 120;
-        }
+    final void method2556(ClanChat clanchat) {
         clanchat.method504(anInt9837, anInt9840, anInt9835, anInt9834);
         anInt9833++;
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9836++;
         anInt9834 = buffer.readInt();
         anInt9835 = buffer.readInt();
         anInt9840 = buffer.readUnsignedByte();
         anInt9837 = buffer.readUnsignedByte();
-        if (i != 29147) {
-            method2554(120, null);
-        }
     }
 
     Node_Sub15_Sub9() {

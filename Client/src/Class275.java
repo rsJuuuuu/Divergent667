@@ -5,7 +5,6 @@
 public class Class275 implements Interface17 {
     static int anInt5412;
     static int anInt5413;
-    static int anInt5414;
     static int anInt5415;
     static int anInt5416;
     protected int[] CONFIG_VALUES;
@@ -73,7 +72,7 @@ public class Class275 implements Interface17 {
         method3328(-45, i_7_, (~i_10_) & CONFIG_VALUES[i_7_] | i_10_ & i << i_8_);
     }
 
-    public final int method65(int value, int i_11_) {
+    public final int method65(int value) {
         return CONFIG_VALUES[value];
     }
 
@@ -194,10 +193,10 @@ public class Class275 implements Interface17 {
             i = 0;
         }
         i_49_ <<= i_47_;
-        method3335((byte) -97, i_46_, i << i_47_ & i_49_ | anIntArray5421[i_46_] & (~i_49_));
+        method3335(i_46_, i << i_47_ & i_49_ | anIntArray5421[i_46_] & (~i_49_));
     }
 
-    final int method3334(int i, boolean bool) {
+    final int method3334(boolean bool) {
         anInt5424++;
         long l = Class313.method3650();
         Node_Sub44 node_sub44 = !bool ? (Node_Sub44) aHashTable5420.method1520(95) : (Node_Sub44) aHashTable5420.method1516();
@@ -215,7 +214,7 @@ public class Class275 implements Interface17 {
         return -1;
     }
 
-    final void method3335(byte b, int i, int i_52_) {
+    final void method3335(int i, int i_52_) {
         anInt5415++;
         anIntArray5421[i] = i_52_;
         Node_Sub44 node_sub44 = (Node_Sub44) aHashTable5420.method1518(3512, i);

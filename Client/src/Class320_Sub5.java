@@ -110,11 +110,8 @@ public class Class320_Sub5 extends Class320 {
         return 1;
     }
 
-    static boolean method3700(int i, byte b, int i_1_) {
+    static boolean method3700(int i_1_) {
         anInt8245++;
-        if (b <= 122) {
-            method3700(-11, (byte) -127, 7);
-        }
         return (0x21 & i_1_) != 0;
     }
 }

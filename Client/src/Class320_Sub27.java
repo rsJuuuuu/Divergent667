@@ -36,7 +36,7 @@ public class Class320_Sub27 extends Class320 {
             class261.anAnimable_Sub2_3314 = animable_sub2;
             class261.anAnimable_Sub2_3308 = animable_sub2_2_;
             int i_3_ = Class320_Sub10.aPlaneArray8300 == Class368.aPlaneArray4548 ? 1 : 0;
-            if (animable_sub2.method814((byte) 91)) {
+            if (animable_sub2.method814()) {
                 if (animable_sub2.method813(0)) {
                     animable_sub2.anAnimable5941 = SeekableFile.anAnimableArray3884[i_3_];
                     SeekableFile.anAnimableArray3884[i_3_] = animable_sub2;
@@ -50,7 +50,7 @@ public class Class320_Sub27 extends Class320 {
                 Node_Sub36.anAnimableArray7429[i_3_] = animable_sub2;
             }
             if (animable_sub2_2_ != null) {
-                if (animable_sub2_2_.method814((byte) 84)) {
+                if (animable_sub2_2_.method814()) {
                     if (animable_sub2_2_.method813(0)) {
                         animable_sub2_2_.anAnimable5941 = SeekableFile.anAnimableArray3884[i_3_];
                         SeekableFile.anAnimableArray3884[i_3_] = animable_sub2_2_;

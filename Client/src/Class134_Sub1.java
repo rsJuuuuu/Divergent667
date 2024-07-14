@@ -49,10 +49,10 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     Objects.requireNonNull(node_sub13).aPacket7113.writeShortLE(itemId);
                     node_sub13.aPacket7113.writeIntLE(Node_Sub15_Sub9.anInt9839);
                     node_sub13.aPacket7113.writeShort(Class92.anInt1230);
-                    node_sub13.aPacket7113.write128Byte(!Class175.aClass291_2100.method3450(93, 82) ? 0 : 1);
+                    node_sub13.aPacket7113.write128Byte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                     node_sub13.aPacket7113.writeShortLE128(Class46.anInt681);
                     Class218.aClass123_2566.sendPacket(126, node_sub13);
-                    Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 99), true, player.scenePositionXQueue[0], 0, -2, 32, player.getSize((byte) 110));
+                    Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 99), true, player.scenePositionXQueue[0], 0, -2, player.getSize((byte) 110));
                 }
             }
             if (i_6_ == 4) {
@@ -65,7 +65,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                 Objects.requireNonNull(node_sub13).aPacket7113.writeShortLE(Class295.myPlayer.index);
                 node_sub13.aPacket7113.writeIntLE(Node_Sub15_Sub9.anInt9839);
                 node_sub13.aPacket7113.writeShort(Class92.anInt1230);
-                node_sub13.aPacket7113.write128Byte(Class175.aClass291_2100.method3450(-34, 82) ? 1 : 0);
+                node_sub13.aPacket7113.write128Byte(Class175.aClass291_2100.method3450(82) ? 1 : 0);
                 node_sub13.aPacket7113.writeShortLE128(Class46.anInt681);
                 Class218.aClass123_2566.sendPacket(127, node_sub13);
             }
@@ -83,7 +83,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                 }
             } else {
                 if (i_6_ == 58) {
-                    if (Class339_Sub7.rights <= 0 || !Class175.aClass291_2100.method3450(119, 82) || !Class175.aClass291_2100.method3450(107, 81)) {
+                    if (Class339_Sub7.rights <= 0 || !Class175.aClass291_2100.method3450(82) || !Class175.aClass291_2100.method3450(81)) {
                         int steps = Class275.calculateRoute(Class295.myPlayer.scenePositionXQueue[0], Class295.myPlayer.scenePositionYQueue[0], i_4_, interfaceHash, Class295.myPlayer.getSize((byte) 0), -4, true, 1, 1, 0, 0, Class304.SCENE_CLIP_DATA_PLANES[Class295.myPlayer.plane], Class328_Sub1.calculatedScenePositionXs, Class258.calculatedScenePositionYs);
                         Node_Sub13 node_sub13 = Translation.createWalkPacket(steps, itemId);
                         if (itemId == 1) {
@@ -104,7 +104,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                             Class93_Sub2.anInt6067 = i_3_;
                         }
                         Class218.aClass123_2566.sendPacket(126, node_sub13);
-                        Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, -107, 1);
+                        Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, 1);
                     } else {
                         Class331.method3843(Class295.myPlayer.plane, Class320_Sub4.gameSceneBaseY + interfaceHash, Node_Sub53.gameSceneBaseX + i_4_);
                     }
@@ -112,7 +112,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                 if (i_6_ == 10 && Node_Sub25_Sub3.aWidget9990 == null) {
                     Class257.sendDialogueContinuePacket(i_4_, interfaceHash);
                     Node_Sub25_Sub3.aWidget9990 = Node_Sub3.method2169(i_4_, interfaceHash);
-                    ClientScript.method2321(-1, Objects.requireNonNull(Node_Sub25_Sub3.aWidget9990));
+                    ClientScript.method2321(Objects.requireNonNull(Node_Sub25_Sub3.aWidget9990));
                 }
                 OutcommingPacket class318 = null;
                 if (i_6_ == 2) {
@@ -149,10 +149,10 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         Node_Sub38_Sub28.anInt10403 = 2;
                         Class93_Sub2.anInt6067 = i_3_;
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, class318, Class218.aClass123_2566.anIsaacCipher1571);
-                        Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class175.aClass291_2100.method3450(-42, 82) ? 1 : 0);
+                        Objects.requireNonNull(node_sub13).aPacket7113.writeByte(Class175.aClass291_2100.method3450(82) ? 1 : 0);
                         node_sub13.aPacket7113.writeShort(itemId);
                         Class218.aClass123_2566.sendPacket(126, node_sub13);
-                        Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 125), true, player.scenePositionXQueue[0], 0, -2, 127, player.getSize((byte) 60));
+                        Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 125), true, player.scenePositionXQueue[0], 0, -2, player.getSize((byte) 60));
                     }
                 }
                 OutcommingPacket class318_8_ = null;
@@ -183,14 +183,14 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     Class282.anInt3587++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, class318_8_, Class218.aClass123_2566.anIsaacCipher1571);
                     Objects.requireNonNull(node_sub13).aPacket7113.writeShort128(itemId);
-                    node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(94, 82) ? 0 : 1);
+                    node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                     node_sub13.aPacket7113.writeShort(interfaceHash + Class320_Sub4.gameSceneBaseY);
                     node_sub13.aPacket7113.writeShortLE(Node_Sub53.gameSceneBaseX + i_4_);
                     Class218.aClass123_2566.sendPacket(126, node_sub13);
                     Class223.method2104(interfaceHash, i_4_);
                 }
                 if (i_6_ == 11) {
-                    if (Class339_Sub7.rights > 0 && Class175.aClass291_2100.method3450(-121, 82) && Class175.aClass291_2100.method3450(111, 81)) {
+                    if (Class339_Sub7.rights > 0 && Class175.aClass291_2100.method3450(82) && Class175.aClass291_2100.method3450(81)) {
                         Class331.method3843(Class295.myPlayer.plane, Class320_Sub4.gameSceneBaseY + interfaceHash, Node_Sub53.gameSceneBaseX + i_4_);
                     } else {
                         Node_Sub37.anInt7431 = 0;
@@ -240,10 +240,10 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         Class163.anInt2014 = i;
                         Node_Sub37.anInt7431 = 0;
                         Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, currentPacket, Class218.aClass123_2566.anIsaacCipher1571);
-                        Objects.requireNonNull(node_sub13).aPacket7113.writeByte128(!Class175.aClass291_2100.method3450(85, 82) ? 0 : 1);
+                        Objects.requireNonNull(node_sub13).aPacket7113.writeByte128(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                         node_sub13.aPacket7113.writeShort128(itemId);
                         Class218.aClass123_2566.sendPacket(126, node_sub13);
-                        Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 76), true, npc.scenePositionXQueue[0], 0, -2, 116, npc.getSize((byte) 103));
+                        Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 76), true, npc.scenePositionXQueue[0], 0, -2, npc.getSize((byte) 103));
                     }
                 }
                 OutcommingPacket class318_10_ = null;
@@ -297,7 +297,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     Class93_Sub2.anInt6067 = i_3_;
                     Class317.anInt4039++;
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, class318_10_, Class218.aClass123_2566.anIsaacCipher1571);
-                    Objects.requireNonNull(node_sub13).aPacket7113.writeByte128(Class175.aClass291_2100.method3450(99, 82) ? 1 : 0);
+                    Objects.requireNonNull(node_sub13).aPacket7113.writeByte128(Class175.aClass291_2100.method3450(82) ? 1 : 0);
                     node_sub13.aPacket7113.writeShort128(Node_Sub53.gameSceneBaseX + i_4_);
                     node_sub13.aPacket7113.writeInt((int) (l >>> 32));
                     node_sub13.aPacket7113.writeShortLE(interfaceHash + Class320_Sub4.gameSceneBaseY);
@@ -320,7 +320,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShort128(Class320_Sub4.gameSceneBaseY + interfaceHash);
                     node_sub13.aPacket7113.writeShort(Class46.anInt681);
                     Class218.aClass123_2566.sendPacket(127, node_sub13);
-                    Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, -107, 1);
+                    Class78.method778(0, interfaceHash, 1, true, i_4_, 0, -4, 1);
                 }
                 if (i_6_ == 17) {
                     Node_Sub38_Sub28.anInt10403 = 2;
@@ -334,7 +334,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     node_sub13.aPacket7113.writeShortLE128(Class92.anInt1230);
                     node_sub13.aPacket7113.writeIntV2(Node_Sub15_Sub9.anInt9839);
                     node_sub13.aPacket7113.writeShortLE(Class46.anInt681);
-                    node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(125, 82) ? 0 : 1);
+                    node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                     node_sub13.aPacket7113.writeShortLE(itemId);
                     Class218.aClass123_2566.sendPacket(127, node_sub13);
                     Class223.method2104(interfaceHash, i_4_);
@@ -358,13 +358,13 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                         node_sub13.aPacket7113.writeShortLE(Class92.anInt1230);
                         node_sub13.aPacket7113.writeShortLE(itemId);
                         node_sub13.aPacket7113.writeIntV2(Node_Sub15_Sub9.anInt9839);
-                        node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(-40, 82) ? 0 : 1);
+                        node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
                         Class218.aClass123_2566.sendPacket(127, node_sub13);
-                        Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 44), true, npc.scenePositionXQueue[0], 0, -2, -91, npc.getSize((byte) 50));
+                        Class78.method778(0, npc.scenePositionYQueue[0], npc.getSize((byte) 44), true, npc.scenePositionXQueue[0], 0, -2, npc.getSize((byte) 50));
                     }
                 }
                 if (i_6_ == 20 || i_6_ == 1002) {
-                    r_Sub1.method2364(-54, interfaceHash, i_4_, cachenode_sub13.aString9558, itemId);
+                    r_Sub1.method2364(interfaceHash, i_4_, cachenode_sub13.aString9558, itemId);
                 }
                 if (i_6_ == 60) {
                     Class93_Sub2.anInt6067 = i_3_;
@@ -402,7 +402,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
 
 
                     Node_Sub13 node_sub13 = FloatBuffer.method2250(-386, EntityNode_Sub3_Sub1.aClass318_9159, Class218.aClass123_2566.anIsaacCipher1571);
-                    Objects.requireNonNull(node_sub13).aPacket7113.writeByteC(Class175.aClass291_2100.method3450(-61, 82) ? 1 : 0);
+                    Objects.requireNonNull(node_sub13).aPacket7113.writeByteC(Class175.aClass291_2100.method3450(82) ? 1 : 0);
                     node_sub13.aPacket7113.writeShortLE(Class320_Sub4.gameSceneBaseY + interfaceHash);
                     node_sub13.aPacket7113.writeShortLE(Class46.anInt681);
                     node_sub13.aPacket7113.writeIntLE(Node_Sub15_Sub9.anInt9839);
@@ -416,7 +416,7 @@ public class Class134_Sub1 extends Class134 implements Interface13_Impl3 {
                     Node_Sub38_Sub23.method2863();
                 }
                 if (Class41.aWidget622 != null && GLPlane.anInt7937 == 0) {
-                    ClientScript.method2321(-1, Class41.aWidget622);
+                    ClientScript.method2321(Class41.aWidget622);
                 }
             }
         }

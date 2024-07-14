@@ -30,7 +30,7 @@ abstract class Class117 {
         aNode_Sub7_1472 = null;
     }
 
-    final void method1165(byte b, int i, byte[] bs) {
+    final void method1165(int i, byte[] bs) {
 
         anInt1468++;
         method1167(-20931);

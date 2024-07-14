@@ -25,7 +25,7 @@ public class CacheNode_Sub4 extends CacheNode {
         return -1;
     }
 
-    final boolean method2301(int i, CacheNode_Sub13 cachenode_sub13) {
+    final boolean method2301(CacheNode_Sub13 cachenode_sub13) {
         anInt9461++;
         int i_0_ = method2300();
         cachenode_sub13.method2275();
@@ -48,7 +48,7 @@ public class CacheNode_Sub4 extends CacheNode {
             java.awt.Canvas canvas = new java.awt.Canvas();
             canvas.setSize(100, 100);
             bool = true;
-            graphicstoolkit = Class262_Sub9.method3171(null, (byte) 122, null, 0, canvas, 0);
+            graphicstoolkit = Class262_Sub9.method3171(null, null, 0, canvas, 0);
         }
         long l = Class313.method3650();
         int i = 0;

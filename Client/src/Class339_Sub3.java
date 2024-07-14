@@ -41,7 +41,7 @@ public class Class339_Sub3 extends Class339 {
             aClass25_8658 = new Class25(gltoolkit, 2);
             aClass25_8658.method307(0);
             aGLToolkit4202.method1457(33984, 1);
-            aGLToolkit4202.method1474(127, 7681, 34165);
+            aGLToolkit4202.method1474(7681, 34165);
             aGLToolkit4202.method1464(34168, 770, 2);
             aGLToolkit4202.method1472(-126, 0, 34167);
             OpenGL.glTexGeni(8192, 9472, 34066);
@@ -54,7 +54,7 @@ public class Class339_Sub3 extends Class339 {
             aClass25_8658.method309();
             aClass25_8658.method307(1);
             aGLToolkit4202.method1457(33984, 1);
-            aGLToolkit4202.method1474(126, 8448, 8448);
+            aGLToolkit4202.method1474(8448, 8448);
             aGLToolkit4202.method1464(34166, 770, 2);
             aGLToolkit4202.method1472(-123, 0, 5890);
             OpenGL.glDisable(3168);
@@ -81,7 +81,7 @@ public class Class339_Sub3 extends Class339 {
         if (i != 20937) {
             method3918(95);
         }
-        aGLToolkit4202.method1474(127, 8448, 8448);
+        aGLToolkit4202.method1474(8448, 8448);
         aBoolean8657 = false;
     }
 
@@ -117,7 +117,7 @@ public class Class339_Sub3 extends Class339 {
         anInt8661++;
         if (i_11_ == -28289) {
             aGLToolkit4202.method1444(-2, class169);
-            aGLToolkit4202.method1434((byte) -126, i);
+            aGLToolkit4202.method1434(i);
         }
     }
 
@@ -133,8 +133,8 @@ public class Class339_Sub3 extends Class339 {
         aClass26_8664 = null;
     }
 
-    final void method3920(boolean bool) {
-        aGLToolkit4202.method1474(-62, 7681, 8448);
+    final void method3920() {
+        aGLToolkit4202.method1474(7681, 8448);
         anInt8662++;
     }
 }

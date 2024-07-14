@@ -57,14 +57,12 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
         return (short) (i_16_ >> 4 << 7 | i_12_ << 10 | i_15_);
     }
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         anInt9781++;
-        if (i == 16) {
-            clanchat.method488(aString9776, aLong9778, 0);
-        }
+        clanchat.method488(aString9776, aLong9778, 0);
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9782++;
         if (buffer.readUnsignedByte() != 255) {
             buffer.offset--;
@@ -82,7 +80,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
         anInt9783++;
         Node_Sub41.aClass114_7519 = new Class114();
         Class51_Sub2.anInt9070 = 0;
-        for (EntityNode_Sub4 entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1113((byte) -114); entitynode_sub4 != null; entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1108(74))
+        for (EntityNode_Sub4 entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1113(); entitynode_sub4 != null; entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1108(74))
             entitynode_sub4.method961();
     }
 

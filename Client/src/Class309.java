@@ -5,7 +5,7 @@
 public class Class309 {
     static int anInt3917;
 
-    static void method3586(int i) {
+    static void method3586() {
         anInt3917++;
         if (Class109.anInt1367 != -1 && Class203.anInt2452 != -1) {
             int i_0_ = Node_Sub6.anInt7056 + ((Class221.anInt2633 - Node_Sub6.anInt7056) * Class141.anInt1758 >> 16);

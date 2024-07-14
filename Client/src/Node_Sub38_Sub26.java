@@ -21,12 +21,9 @@ public class Node_Sub38_Sub26 extends Node_Sub38 {
         anInt10369++;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         if (i == 0) {
-            method2873(buffer.read24BitInteger());
-        }
-        if (bool) {
-            anIntArray10370 = null;
+            method2873(buffer.readInt24());
         }
         anInt10361++;
     }
@@ -73,7 +70,7 @@ public class Node_Sub38_Sub26 extends Node_Sub38 {
             }
             byte[] bs_9_ = new byte[i_8_];
             if (i == 1) {
-                Class90.method1023(bs_9_, i_8_, bs, i_7_);
+                Class90.method1023(bs_9_, i_8_, bs);
             } else {
                 synchronized (Class262_Sub11.aClass271_7779) {
                     Class262_Sub11.aClass271_7779.method3311(buffer, bs_9_);

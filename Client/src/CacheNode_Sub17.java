@@ -56,7 +56,7 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2 {
     }
 
     protected final void finalize() throws Throwable {
-        method2398((byte) 16);
+        method2398();
         anInt8849++;
         super.finalize();
     }
@@ -86,8 +86,7 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2 {
         return buffer;
     }
 
-    final void method2398(byte b) {
-
+    final void method2398() {
         if (anInt8838 > 0) {
             aGLToolkit8836.method1426(anInt8838, anInt8833);
             anInt8838 = 0;

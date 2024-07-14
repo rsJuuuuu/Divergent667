@@ -23,7 +23,7 @@ public class Class125 {
         aClass61_1609 = null;
     }
 
-    static boolean method1529(int i_10_, int i_11_) {
+    static boolean method1529(int i_11_) {
         anInt1608++;
         return (i_11_ & 0x800) != 0;
     }

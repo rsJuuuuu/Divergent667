@@ -119,7 +119,7 @@ public class Class262_Sub11 extends Class262 {
                 i_27_ = Class89.method1019(class48.anIntArray690[i], class48.anIntArray692[i]);
             }
             if (class48.aBoolean699) {
-                Class105.method1116(i_24_, i_26_, i_27_, (byte) 57, 0, 255, false);
+                Class105.method1116(i_24_, i_26_, i_27_, 0, 255, false);
             } else {
                 Class91.method1033(i_27_, 0, i_24_, i_26_, 255);
             }

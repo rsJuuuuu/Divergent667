@@ -26,7 +26,7 @@ abstract class Class290 {
         anInt3651++;
     }
 
-    void method3413(int i) {
+    void method3413() {
 
         anInt3650++;
     }
@@ -39,7 +39,7 @@ abstract class Class290 {
         anInt3649++;
     }
 
-    abstract void method3417(boolean bool, boolean bool_2_);
+    abstract void method3417(boolean bool_2_);
 
     static void method3418(Mobile mobile, boolean bool) {
         for (int i = mobile.aShort9119; i <= mobile.aShort9130; i++) {
@@ -80,11 +80,8 @@ abstract class Class290 {
         anAbstractToolkit3654 = abstracttoolkit;
     }
 
-    void method3421(boolean bool) {
+    void method3421() {
         anInt3648++;
-        if (bool) {
-            method3422(74, true);
-        }
     }
 
     abstract void method3422(int i, boolean bool);

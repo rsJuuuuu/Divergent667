@@ -34,7 +34,7 @@ public class Class171 {
         return class49.aClass52_721;
     }
 
-    final void method1793(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
+    final void method1793(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
         anInt2067 = i_8_;
         anInt2065 = i_3_;
         anInt2069 = i_7_ * i_7_;
@@ -46,9 +46,6 @@ public class Class171 {
         anInt2063 = i_11_ + anInt2060;
         anInt2059 = i_10_ + anInt2060;
         anInt2061 = i_5_ + anInt2067;
-        if (i_6_ > -35) {
-            method1792(true, false, -33, 54, null);
-        }
     }
 
     public static void method1794() {
@@ -56,16 +53,13 @@ public class Class171 {
         anIntArray2070 = null;
     }
 
-    final boolean method1795(int i, byte b, int i_12_, int i_13_) {
+    final boolean method1795(int i, int i_12_, int i_13_) {
         anInt2064++;
         if (anInt2059 > i_13_ || anInt2063 < i_13_) {
             return false;
         }
         if (i < anInt2072 || i > anInt2073) {
             return false;
-        }
-        if (b < 105) {
-            method1793(87, 15, -33, 83, -55, -120, -79, 45, -10, -121, 6);
         }
         if (i_12_ < anInt2068 || i_12_ > anInt2061) {
             return false;

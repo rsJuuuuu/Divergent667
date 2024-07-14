@@ -12,14 +12,11 @@ public class Class207 {
     static int anInt2479;
     static int anInt2480;
 
-    static void method2039(int i) {
+    static void method2039() {
         if (Class94.anInt1250 < 0) {
             Class262_Sub4.anInt7730 = -1;
             Class150_Sub3.anInt8963 = -1;
             Class94.anInt1250 = 0;
-        }
-        if (i <= 5) {
-            method2040(null, 31, 8);
         }
         anInt2477++;
         if (Class20.anInt345 < Class94.anInt1250) {
@@ -39,18 +36,15 @@ public class Class207 {
         }
     }
 
-    static String method2040(BufferedStream buffer, int i, int i_0_) {
+    static String method2040(BufferedStream buffer) {
         anInt2480++;
         try {
             int i_1_ = buffer.readSmart();
-            if (i_1_ > i) {
-                i_1_ = i;
+            if (i_1_ > 32767) {
+                i_1_ = 32767;
             }
             byte[] bs = new byte[i_1_];
-            buffer.offset += Class342.aClass163_4236.method1735(bs, -1, buffer.buffer, i_1_, buffer.offset, 0);
-            if (i_0_ != -24709) {
-                method2040(null, -44, 108);
-            }
+            buffer.offset += Class342.aClass163_4236.method1735(bs, buffer.buffer, i_1_, buffer.offset);
             return Class184.method1846(0, bs, i_1_, (byte) -109);
         } catch (Exception exception) {
             return "Cabbage";

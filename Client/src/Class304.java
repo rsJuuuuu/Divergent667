@@ -27,7 +27,7 @@ public class Class304 {
 
     static boolean method3545(int i, int i_4_) {
         anInt3832++;
-        return !(!((0x70000 & i) != 0 | Class320_Sub5.method3700(i_4_, (byte) 124, i)) && !Class262_Sub15_Sub1.method3192(i_4_, i, 512));
+        return !(!((0x70000 & i) != 0 | Class320_Sub5.method3700(i)) && !Class262_Sub15_Sub1.method3192(i_4_, i, 512));
     }
 
     public static void method3546() {

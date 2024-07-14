@@ -63,10 +63,7 @@ public class Class320_Sub10 extends Class320 {
         aPlaneArray8300 = null;
     }
 
-    static boolean method3720(int i, int i_0_, int i_1_) {
-        if (i != 50560) {
-            method3720(33, 110, 2);
-        }
+    static boolean method3720(int i_0_) {
         anInt8302++;
         return (0xc580 & i_0_) != 0;
     }

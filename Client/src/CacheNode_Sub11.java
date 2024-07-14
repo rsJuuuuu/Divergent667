@@ -27,7 +27,7 @@ public class CacheNode_Sub11 extends CacheNode {
 
     final void method2334(int i_0_, int i_1_, int[] is) {
         anInt9551++;
-        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620(16776960)) {
+        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620()) {
             if (node_sub52.method2977(i_0_, (byte) -20, i_1_)) {
                 node_sub52.method2970(is, i_0_, i_1_);
                 return;
@@ -35,10 +35,9 @@ public class CacheNode_Sub11 extends CacheNode {
         }
     }
 
-    final boolean method2335(byte b, int i, int i_2_) {
-
+    final boolean method2335(int i, int i_2_) {
         anInt9539++;
-        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620(16776960)) {
+        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620()) {
             if (node_sub52.method2977(i, (byte) -76, i_2_)) {
                 return true;
             }
@@ -46,14 +45,14 @@ public class CacheNode_Sub11 extends CacheNode {
         return false;
     }
 
-    static boolean method2336(int i_4_, int i_5_) {
+    static boolean method2336(int i_5_) {
         anInt9536++;
         return (0x800 & i_5_) != 0;
     }
 
     final boolean method2337(int[] is, int i_6_, int i_7_, int i_8_) {
         anInt9533++;
-        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620(16776960)) {
+        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620()) {
             if (node_sub52.method2975(i_6_, i_7_, i_8_)) {
                 node_sub52.method2970(is, i_8_, i_6_);
                 return true;
@@ -74,7 +73,7 @@ public class CacheNode_Sub11 extends CacheNode {
         anInt9541 = 12800;
         anInt9540 = 12800;
         anInt9531 = 0;
-        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620(16776960)) {
+        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620()) {
             if (anInt9540 > node_sub52.anInt7646) {
                 anInt9540 = node_sub52.anInt7646;
             }
@@ -92,7 +91,7 @@ public class CacheNode_Sub11 extends CacheNode {
 
     final boolean method2340(int i, int i_9_, int[] is) {
         anInt9532++;
-        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620(16776960)) {
+        for (Node_Sub52 node_sub52 = (Node_Sub52) aClass312_9549.method3613(); node_sub52 != null; node_sub52 = (Node_Sub52) aClass312_9549.method3620()) {
             if (node_sub52.method2973(i, i_9_)) {
                 node_sub52.method2976(i_9_, is, i);
                 return true;

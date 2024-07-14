@@ -224,8 +224,8 @@ public class Node_Sub38_Sub19 extends Node_Sub38 {
         Class194.method1962(i_28_, i_26_, 81, i_27_, bool);
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (!bool) {
+    final void method2780(BufferedStream buffer, int i) {
+        if (!false) {
             anInt10291++;
             if (i == 0) {
                 anInt10290 = buffer.readUnsignedShort();

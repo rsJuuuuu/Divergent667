@@ -108,14 +108,14 @@ public class Class364 {
                     class223.anInt2662 -= 512 * i_4_;
                 }
             }
-            for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620(16776960)) {
+            for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620()) {
                 node_sub19.anInt7171 -= i_4_;
                 node_sub19.anInt7161 -= i_5_;
                 if (Class61.anInt898 != 4 && (node_sub19.anInt7171 < 0 || node_sub19.anInt7161 < 0 || Node_Sub54.GAME_SCENE_WDITH <= node_sub19.anInt7171 || node_sub19.anInt7161 >= Class377_Sub1.GAME_SCENE_HEIGHT)) {
                     node_sub19.method2160((byte) 60);
                 }
             }
-            for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620(16776960)) {
+            for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620()) {
                 node_sub19.anInt7161 -= i_5_;
                 node_sub19.anInt7171 -= i_4_;
                 if (Class61.anInt898 != 4 && (node_sub19.anInt7171 < 0 || node_sub19.anInt7161 < 0 || node_sub19.anInt7171 >= Node_Sub54.GAME_SCENE_WDITH || node_sub19.anInt7161 >= Class377_Sub1.GAME_SCENE_HEIGHT)) {
@@ -156,10 +156,10 @@ public class Class364 {
                 Class98.anInt5061 -= i_4_ * 512;
                 Class10.anInt174 -= i_5_;
                 if (Math.abs(i_4_) > Node_Sub54.GAME_SCENE_WDITH || Class377_Sub1.GAME_SCENE_HEIGHT < Math.abs(i_5_)) {
-                    Class120.method1228(-97);
+                    Class120.method1228();
                 }
             }
-            Class281.method3384((byte) -83);
+            Class281.method3384();
             Node_Sub18.method2606();
             Class20_Sub1.aHashTable5508.method1517(false);
             Class270.aClass312_3477.method3614();

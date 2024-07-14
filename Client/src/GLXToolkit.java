@@ -212,7 +212,7 @@ public class GLXToolkit extends AbstractToolkit {
         return anInt9319;
     }
 
-    private void method1397(byte b) {
+    private void method1397() {
         if (aBoolean9313) {
             OpenGL.glPopMatrix();
         }
@@ -343,7 +343,7 @@ public class GLXToolkit extends AbstractToolkit {
         }
         anInt9290++;
         aBoolean9305 = false;
-        method1397((byte) 121);
+        method1397();
     }
 
     final Interface15_Impl1 method1346(boolean bool) {
@@ -455,7 +455,7 @@ public class GLXToolkit extends AbstractToolkit {
             aBoolean9316 = false;
         }
         anInt9268++;
-        method1397((byte) -22);
+        method1397();
     }
 
     static byte[] generateWhirpoolHash(byte b, byte[] bs, int i, int i_18_) {
@@ -821,7 +821,7 @@ public class GLXToolkit extends AbstractToolkit {
         anInt9210++;
     }
 
-    final Interface13_Impl1 method1291(Class68 class68, Class372 class372, int i, int i_45_, int i_46_) {
+    final Interface13_Impl1 method1291(Class68 class68, Class372 class372, int i, int i_45_) {
         anInt9240++;
         if (!aBoolean9320 && (!Class371.method4094(i_45_) || !Class371.method4094(i))) {
             if (!aBoolean9317) {
@@ -976,7 +976,7 @@ public class GLXToolkit extends AbstractToolkit {
                 throw new RuntimeException("");
             }
             String string = OpenGL.glGetString(7938);
-            String[] strings = Class106.method1120((byte) -73, string.replace('.', ' '), ' ');
+            String[] strings = Class106.method1120(string.replace('.', ' '), ' ');
             if (strings.length >= 2) {
                 try {
                     int i_74_ = Class350.method3998(strings[0], -1);
@@ -1020,7 +1020,7 @@ public class GLXToolkit extends AbstractToolkit {
                 int i_76_ = 0;
                 boolean bool = false;
                 boolean bool_77_ = false;
-                String[] strings_78_ = Class106.method1120((byte) 78, aString9323.replace('/', ' '), ' ');
+                String[] strings_78_ = Class106.method1120(aString9323.replace('/', ' '), ' ');
                 for (String s : strings_78_) {
                     String string_80_ = s;
                     try {
@@ -1168,7 +1168,7 @@ public class GLXToolkit extends AbstractToolkit {
             i_91_ = i_89_;
             i_90_ = 0;
         }
-        Class372 class372 = interface15_impl1.method55(-90);
+        Class372 class372 = interface15_impl1.method55();
         Class51_Sub2 class51_sub2 = (Class51_Sub2) interface15_impl1;
         class51_sub2.method518();
         OpenGL.glDrawElements(i_90_, i_91_, Class136.method1590(class372), class51_sub2.method515() + ((long) i_87_ * class372.anInt4591));

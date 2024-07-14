@@ -28,7 +28,7 @@ abstract class Class262 {
             Class88.anObject5281 = Class135.method1588(bs);
         }
         Class167 class167 = gltoolkit.aClass167_6607;
-        if (class167.method1751(82) && Node_Sub6.anObject7050 == null) {
+        if (class167.method1751() && Node_Sub6.anObject7050 == null) {
             byte[] bs = Class320_Sub20.method3756(new Class328_Sub1());
             Node_Sub6.anObject7050 = Class135.method1588(bs);
         }

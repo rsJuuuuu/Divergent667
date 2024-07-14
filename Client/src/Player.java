@@ -159,7 +159,7 @@ public class Player extends Actor {
         return -1;
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit,
+    final void method816(int i, boolean bool,
                          int i_14_, byte b, int i_15_, Animable animable) {
         if (b >= 101) {
             anInt11133++;
@@ -238,7 +238,7 @@ public class Player extends Actor {
             anInt5934 = i_28_ * 256 + 512 * scenePositionXQueue[0];
             anInt5940 = 512 * scenePositionYQueue[0] + (i_28_ * 256);
             if (Class295.myPlayer == this) {
-                Class120.method1228(-125);
+                Class120.method1228();
             }
             if (anEntityNode_Sub4_10902 != null) {
                 anEntityNode_Sub4_10902.method965();
@@ -254,7 +254,7 @@ public class Player extends Actor {
         throw new IllegalStateException();
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt11171++;
         if (aPlayerDefinition11137 == null
                 || !method890(2048, -112, graphicstoolkit)) {
@@ -290,9 +290,9 @@ public class Player extends Actor {
                         240, aDrawableModelArray10909[0], anInt10862, 0,
                         anInt10832, 1, graphicstoolkit, 160,
                         animator_32_ != null ? animator_32_ : animator,
-                        anInt10872, i_29_, 0);
+                        anInt10872, 0);
                 if (drawablemodel != null) {
-                    entitynode_sub6 = Class345.method3972(true, (byte) 72,
+                    entitynode_sub6 = Class345.method3972(true,
                             aDrawableModelArray10909.length + 1);
                     aBoolean10903 = true;
                     graphicstoolkit.C(false);
@@ -388,7 +388,7 @@ public class Player extends Actor {
         class336.method3860(i_29_);
         class336.method3863(anInt5934, -anInt10849 + anInt5937 - 5, anInt5940);
         if (entitynode_sub6 == null) {
-            entitynode_sub6 = Class345.method3972(true, (byte) 103,
+            entitynode_sub6 = Class345.method3972(true,
                     aDrawableModelArray10909.length);
         }
         this.method870(graphicstoolkit, (byte) 45, false,
@@ -534,7 +534,7 @@ public class Player extends Actor {
         int i_60_ = anInt11164;
         anInt11164 = stream.readUnsignedByte();
         if (anInt11164 == 0) {
-            Class45.method462((byte) 69, this);
+            Class45.method462(this);
         } else {
             int i_61_ = anInt11167;
             int i_62_ = anInt11172;
@@ -582,7 +582,7 @@ public class Player extends Actor {
         }
         if (anAnimator10860.method245(-128) && aBoolean10867) {
             Class259 class259 = this.method868((byte) -123);
-            if (!Objects.requireNonNull(class259).method3130(anAnimator10860.method250((byte) -60),
+            if (!Objects.requireNonNull(class259).method3130(anAnimator10860.method250(),
                     (byte) -127)) {
                 anAnimator10860.method249(true, -1);
                 aBoolean10867 = false;
@@ -835,9 +835,6 @@ public class Player extends Actor {
     }
 
     final Class59 method869() {
-        if (-3109 != -3109) {
-            aBoolean11157 = false;
-        }
         anInt11148++;
         if (aClass59_10861 != null) {
             if (aClass59_10861.aString877 == null) {
@@ -846,7 +843,7 @@ public class Player extends Actor {
             if (Class69.anInt943 == 0
                     || Class69.anInt943 == 3
                     || Class69.anInt943 == 1
-                    && Class193.method1955(-3109 + 3109, username)) {
+                    && Class193.method1955(username)) {
                 return aClass59_10861;
             }
         }
@@ -862,7 +859,7 @@ public class Player extends Actor {
         anInt11143++;
         for (Class165 class165 : aClass165Array10886) {
             if (class165.graphicsId != -1) {
-                Class195 class195 = Class16.aClass101_228.method1090(96, class165.graphicsId);
+                Class195 class195 = Class16.aClass101_228.method1090(class165.graphicsId);
                 if (class195.aBoolean2402
                         && class195.anInt2394 != -1
                         && Class18.aClass37_306.method395(class195.anInt2394,

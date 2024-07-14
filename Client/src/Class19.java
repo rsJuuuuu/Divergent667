@@ -40,7 +40,7 @@ public class Class19 {
                 int i_6_ = -(Node_Sub54.GAME_SCENE_WDITH * 2) + 208 + (48 + i_5_ / 128);
                 int i_7_ = -(i_4_ / 128) + 4 * Class377_Sub1.GAME_SCENE_HEIGHT + 48 - (Class377_Sub1.GAME_SCENE_HEIGHT - 104) * 2;
                 Class10.aGLSprite172.method1179((float) i_1_ + (float) widget.anInt4809 / 2.0F, (float) widget.anInt4695 / 2.0F + (float) i, (float) i_6_, (float) i_7_, i_3_, i_2_ << 2, var_aa, i_1_, i);
-                for (Node_Sub32 node_sub32 = (Node_Sub32) Node_Sub47.aClass312_7558.method3613(); node_sub32 != null; node_sub32 = (Node_Sub32) Node_Sub47.aClass312_7558.method3620(16776960)) {
+                for (Node_Sub32 node_sub32 = (Node_Sub32) Node_Sub47.aClass312_7558.method3613(); node_sub32 != null; node_sub32 = (Node_Sub32) Node_Sub47.aClass312_7558.method3620()) {
                     int i_8_ = node_sub32.anInt7381;
                     int i_9_ = (Class262_Sub15_Sub1.aClass224_10520.anIntArray2668[i_8_] >> 14 & 0x3fff) - Node_Sub53.gameSceneBaseX;
                     int i_10_ = (0x3fff & Class262_Sub15_Sub1.aClass224_10520.anIntArray2668[i_8_]) - Class320_Sub4.gameSceneBaseY;

@@ -44,7 +44,7 @@ class Class66_Sub2 extends Class66 {
         super(class302, class302_6_, class150_sub3);
     }
 
-    final void method721(int i, boolean bool, int i_8_) {
+    final void method721(int i, int i_8_) {
         anInt8995++;
         int i_9_ = i + aGLSprite8992.method1197();
         int i_11_ = i + (aClass150_5171.anInt5086 - aGLSprite8990.method1197());

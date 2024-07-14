@@ -49,7 +49,7 @@ public class Class247 {
     private boolean method3075() {
         if (aBoolean3139) {
             if (aCacheNode_Sub17_3137 != null) {
-                aCacheNode_Sub17_3137.method2398((byte) 127);
+                aCacheNode_Sub17_3137.method2398();
                 aCacheNode_Sub17_3137 = null;
             }
             if (aClass169_Sub2_3135 != null) {
@@ -71,7 +71,7 @@ public class Class247 {
         anInt3116++;
         if (aBoolean3134) {
             if (aCacheNode_Sub17_3138 != null) {
-                aCacheNode_Sub17_3138.method2398((byte) 124);
+                aCacheNode_Sub17_3138.method2398();
                 aCacheNode_Sub17_3138 = null;
             }
             if (aClass169_Sub2Array3132[0] != null) {
@@ -146,7 +146,7 @@ public class Class247 {
                 int i = 16384;
                 aGLToolkit3121.method1479(aClass382_3128);
                 aClass382_3109.method4186();
-                aClass382_3128.method4183(0, (byte) 16);
+                aClass382_3128.method4183(0);
                 if (aBoolean3140) {
                     i |= 0x100;
                 }
@@ -156,18 +156,18 @@ public class Class247 {
             }
             aGLToolkit3121.method1461();
             aGLToolkit3121.method1460(0);
-            aGLToolkit3121.method1434((byte) 69, 1);
+            aGLToolkit3121.method1434(1);
             aGLToolkit3121.la();
             int i = 0;
             int i_0_ = 1;
             Node_Sub23 node_sub23;
             for (Node_Sub23 node_sub23_1_ = (Node_Sub23) aClass312_3112.method3613(); node_sub23_1_ != null; node_sub23_1_ = node_sub23) {
-                node_sub23 = (Node_Sub23) aClass312_3112.method3620(16776960);
+                node_sub23 = (Node_Sub23) aClass312_3112.method3620();
                 int i_2_ = node_sub23_1_.method2623();
                 for (int i_3_ = 0; i_3_ < i_2_; i_3_++) {
                     node_sub23_1_.method2629(aClass169_Sub2_3135, aClass169_Sub2Array3132[i], i_3_);
                     if (node_sub23 != null || i_3_ != -1 + i_2_) {
-                        aClass382_3128.method4183(i_0_, (byte) 7);
+                        aClass382_3128.method4183(i_0_);
                         OpenGL.glBegin(7);
                         OpenGL.glTexCoord2f(0.0F, (float) anInt3113);
                         OpenGL.glMultiTexCoord2f(33985, 0.0F, 1.0F);
@@ -233,7 +233,7 @@ public class Class247 {
         boolean bool = false;
         int i_4_ = 0;
         int i_5_ = 0;
-        for (Node_Sub23 node_sub23 = (Node_Sub23) aClass312_3112.method3613(); node_sub23 != null; node_sub23 = (Node_Sub23) aClass312_3112.method3620(16776960)) {
+        for (Node_Sub23 node_sub23 = (Node_Sub23) aClass312_3112.method3613(); node_sub23 != null; node_sub23 = (Node_Sub23) aClass312_3112.method3620()) {
             int i_6_ = node_sub23.method2630();
             if (i_4_ < i_6_) {
                 i_4_ = i_6_;
@@ -303,7 +303,7 @@ public class Class247 {
             aBoolean3110 = true;
             anInt3111 = i_11_;
             aGLToolkit3121.method1410(aClass382_3129);
-            aClass382_3129.method4183(0, (byte) 121);
+            aClass382_3129.method4183(0);
             aGLToolkit3121.method1465(anInt3113 - (-anInt3119 + aGLToolkit3121.anInt6567), -anInt3111);
             return true;
         }

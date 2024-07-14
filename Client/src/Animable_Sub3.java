@@ -37,14 +37,14 @@ abstract class Animable_Sub3 extends Animable {
         return Class139.aBooleanArrayArray1730[-Class216.anInt2551 + ((anInt5934 >> Class36.anInt549) + Node_Sub9_Sub1.anInt9656)][Node_Sub9_Sub1.anInt9656 - EntityNode_Sub7.anInt6013 + (anInt5940 >> Class36.anInt549)];
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_0_, byte b, int i_1_, Animable animable) {
+    final void method816(int i, boolean bool, int i_0_, byte b, int i_1_, Animable animable) {
         if (b >= 101) {
             anInt9140++;
             throw new IllegalStateException();
         }
     }
 
-    static void method918(byte b) {
+    static void method918() {
 
         if (Class240.aSignLink2946.aBoolean3985) {
             Class201.anInt2446 = 96;
@@ -103,7 +103,7 @@ abstract class Animable_Sub3 extends Animable {
         aClass124_9135 = null;
     }
 
-    static void method921(int i, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
+    static void method921(int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
         anInt9133++;
         int i_13_ = -i_10_ + i_8_;
         int i_14_ = i_9_ - i_12_;
@@ -115,9 +115,6 @@ abstract class Animable_Sub3 extends Animable {
         } else if (i_14_ == 0) {
             Class155.method1701(i_8_, i_12_, i_11_, i_10_);
             return;
-        }
-        if (i != 1048576) {
-            method918((byte) -120);
         }
         int i_15_ = (i_14_ << 12) / i_13_;
         int i_16_ = i_12_ - (i_10_ * i_15_ >> 12);

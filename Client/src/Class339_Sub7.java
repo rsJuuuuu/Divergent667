@@ -34,7 +34,7 @@ public class Class339_Sub7 extends Class339 {
     final void method3917(Class169 class169, int i, int i_0_) {
         if (!aBoolean8727) {
             aGLToolkit4202.method1444(-2, class169);
-            aGLToolkit4202.method1434((byte) -78, i);
+            aGLToolkit4202.method1434(i);
         }
         if (i_0_ != -28289) {
             anInt8728 = -121;
@@ -91,12 +91,12 @@ public class Class339_Sub7 extends Class339 {
                     continue;
                 }
             }
-            Class381.method4173(i_2_, i_3_, actor, (byte) -93, i_5_ >> 1, actor.method850((byte) 77), i_1_ >> 1);
+            Class381.method4173(actor, actor.method850((byte) 77));
             if (Class119.anIntArray1516[0] >= 0) {
                 if (actor.method862()) {
                     Class59 class59 = actor.method869();
                     if (class59 != null && Node_Sub36_Sub2.anInt10042 > Node_Sub37.anInt7445) {
-                        Node_Sub36_Sub2.anIntArray10052[Node_Sub37.anInt7445] = Class262_Sub15_Sub1.aClass357_10524.method4033(class59.method587(-102)) / 2;
+                        Node_Sub36_Sub2.anIntArray10052[Node_Sub37.anInt7445] = Class262_Sub15_Sub1.aClass357_10524.method4033(class59.method587()) / 2;
                         Node_Sub36_Sub2.anIntArray10051[Node_Sub37.anInt7445] = Class119.anIntArray1516[0];
                         Node_Sub36_Sub2.anIntArray10050[Node_Sub37.anInt7445] = Class119.anIntArray1516[1];
                         Node_Sub36_Sub2.aClass59Array10044[Node_Sub37.anInt7445] = class59;
@@ -154,7 +154,7 @@ public class Class339_Sub7 extends Class339 {
                     Class93.aGraphicsToolkit1241.T(xCoord, yCoord, fillLength + xCoord, yCoord + height);
                     glsprite_14_.setPosition(xCoord, yCoord);
                     Class93.aGraphicsToolkit1241.KA(i_4_, i, i_1_ + i_4_, i + i_5_);
-                    Class362.method4053(yCoord, height + yCoord, xCoord, (byte) 90, greenHpBar.method1197() + xCoord);
+                    Class362.method4053(yCoord, height + yCoord, xCoord, greenHpBar.method1197() + xCoord);
                 }
                 yCoord -= 2;
                 if (!actor.aBoolean10826) {
@@ -202,7 +202,7 @@ public class Class339_Sub7 extends Class339 {
                         Class93.aGraphicsToolkit1241.T(i_25_, yCoord, i_22_ + i_25_, yCoord + i_24_);
                         glsprite_18_.setPosition(i_25_, yCoord);
                         Class93.aGraphicsToolkit1241.KA(i_4_, i, i_4_ + i_1_, i + i_5_);
-                        Class362.method4053(yCoord, i_24_ + yCoord, i_25_, (byte) 56, glsprite.method1197() + i_25_);
+                        Class362.method4053(yCoord, i_24_ + yCoord, i_25_, glsprite.method1197() + i_25_);
                         yCoord -= 2;
                     }
                     if (npcdefinition == null) {
@@ -211,21 +211,21 @@ public class Class339_Sub7 extends Class339 {
                             GLSprite glsprite = Class238.aGLSpriteArray2912[player.skullId];
                             yCoord -= glsprite.getYOffset();
                             glsprite.setPosition(Class119.anIntArray1516[0] + i_4_ - 12, yCoord);
-                            Class362.method4053(yCoord, glsprite.method1186() + yCoord, Class119.anIntArray1516[0] + (i_4_ - 12), (byte) 107, Class119.anIntArray1516[0] + (i_4_ - 12) + glsprite.method1197());
+                            Class362.method4053(yCoord, glsprite.method1186() + yCoord, Class119.anIntArray1516[0] + (i_4_ - 12), Class119.anIntArray1516[0] + (i_4_ - 12) + glsprite.method1197());
                             yCoord -= 2;
                         }
                         if (player.prayIconId != -1) {
                             GLSprite glsprite = ReferenceTable.aGLSpriteArray284[player.prayIconId];
                             yCoord -= glsprite.getYOffset();
                             glsprite.setPosition(i_4_ + Class119.anIntArray1516[0] - 12, yCoord);
-                            Class362.method4053(yCoord, yCoord + glsprite.method1186(), Class119.anIntArray1516[0] + (i_4_ - 12), (byte) -27, -12 + (Class119.anIntArray1516[0] + i_4_) + glsprite.method1197());
+                            Class362.method4053(yCoord, yCoord + glsprite.method1186(), Class119.anIntArray1516[0] + (i_4_ - 12), -12 + (Class119.anIntArray1516[0] + i_4_) + glsprite.method1197());
                             yCoord -= 2;
                         }
                     } else if (npcdefinition.anInt2806 >= 0 && ReferenceTable.aGLSpriteArray284.length > npcdefinition.anInt2806) {
                         GLSprite glsprite = ReferenceTable.aGLSpriteArray284[npcdefinition.anInt2806];
                         yCoord -= glsprite.getYOffset();
                         glsprite.setPosition(i_4_ + Class119.anIntArray1516[0] - (glsprite.method1193() >> 1), yCoord);
-                        Class362.method4053(yCoord, glsprite.method1186() + yCoord, i_4_ + Class119.anIntArray1516[0] - (glsprite.method1193() >> 1), (byte) -48, Class119.anIntArray1516[0] + (i_4_ - (glsprite.method1193() >> 1) + glsprite.method1197()));
+                        Class362.method4053(yCoord, glsprite.method1186() + yCoord, i_4_ + Class119.anIntArray1516[0] - (glsprite.method1193() >> 1), Class119.anIntArray1516[0] + (i_4_ - (glsprite.method1193() >> 1) + glsprite.method1197()));
                         yCoord -= 2;
                     }
                 }
@@ -239,7 +239,7 @@ public class Class339_Sub7 extends Class339 {
                                 i_26_ = glsprite.getYOffset();
                             }
                             glsprite.setPosition(-12 + Class119.anIntArray1516[0] + i_4_, yCoord - glsprite.getYOffset());
-                            Class362.method4053(yCoord - glsprite.getYOffset(), yCoord - glsprite.getYOffset() + glsprite.method1186(), -12 + (i_4_ + Class119.anIntArray1516[0]), (byte) 126, Class119.anIntArray1516[0] + (i_4_ - 12) + glsprite.method1197());
+                            Class362.method4053(yCoord - glsprite.getYOffset(), yCoord - glsprite.getYOffset() + glsprite.method1186(), -12 + (i_4_ + Class119.anIntArray1516[0]), Class119.anIntArray1516[0] + (i_4_ - 12) + glsprite.method1197());
                         }
                     }
                 } else {
@@ -260,7 +260,7 @@ public class Class339_Sub7 extends Class339 {
                             }
                             if (bool_30_) {
                                 glsprite.setPosition(-12 + (Class119.anIntArray1516[0] + i_4_), -glsprite.getYOffset() + yCoord);
-                                Class362.method4053(-glsprite.getYOffset() + yCoord, -glsprite.getYOffset() + (yCoord + glsprite.method1186()), i_4_ + Class119.anIntArray1516[0] - 12, (byte) 118, i_4_ + Class119.anIntArray1516[0] - (12 - glsprite.method1197()));
+                                Class362.method4053(-glsprite.getYOffset() + yCoord, -glsprite.getYOffset() + (yCoord + glsprite.method1186()), i_4_ + Class119.anIntArray1516[0] - 12, i_4_ + Class119.anIntArray1516[0] - (12 - glsprite.method1197()));
                             }
                         }
                     }
@@ -296,7 +296,7 @@ public class Class339_Sub7 extends Class339 {
                             actor.anIntArray10829[i_32_] = -1;
                         } else {
                             int i_39_ = actor.method850((byte) 85) / 2;
-                            Class381.method4173(i_2_, i_3_, actor, (byte) -99, i_5_ >> 1, i_39_, i_1_ >> 1);
+                            Class381.method4173(actor, i_39_);
                             if (Class119.anIntArray1516[0] > -1) {
                                 Class119.anIntArray1516[0] += CacheNode_Sub4.aClass1_9466.anIntArray119[i_32_];
                                 Class119.anIntArray1516[1] += CacheNode_Sub4.aClass1_9466.anIntArray108[i_32_];
@@ -410,7 +410,7 @@ public class Class339_Sub7 extends Class339 {
                                 int i_77_ = class255.anInt3235;
                                 if (i_77_ >= 0) {
                                     Class52 class52_78_ = Class171.method1792(true, true, i_77_, -116, Class93.aGraphicsToolkit1241);
-                                    Class357 class357_79_ = Class150_Sub2.method1660((byte) 126, i_77_, Class93.aGraphicsToolkit1241);
+                                    Class357 class357_79_ = Class150_Sub2.method1660(i_77_, Class93.aGraphicsToolkit1241);
                                     if (class52_78_ != null && class357_79_ != null) {
                                         class357 = class357_79_;
                                         class52 = class52_78_;
@@ -420,7 +420,7 @@ public class Class339_Sub7 extends Class339 {
                                     i_77_ = class255_37_.anInt3235;
                                     if (i_77_ >= 0) {
                                         Class52 class52_80_ = Class171.method1792(true, true, i_77_, -112, Class93.aGraphicsToolkit1241);
-                                        Class357 class357_81_ = Class150_Sub2.method1660((byte) -81, i_77_, Class93.aGraphicsToolkit1241);
+                                        Class357 class357_81_ = Class150_Sub2.method1660(i_77_, Class93.aGraphicsToolkit1241);
                                         if (class52_80_ != null && class357_81_ != null) {
                                             class357_76_ = class357_81_;
                                             class52_75_ = class52_80_;
@@ -593,7 +593,7 @@ public class Class339_Sub7 extends Class339 {
                                         class52_75_.method538(i_100_ + i_105_, i_112_, string, 0, class255_37_.anInt3229 | -16777216);
                                     }
                                 }
-                                Class362.method4053(i_107_, i_108_ + 1, i_105_, (byte) -118, i_89_ + i_105_);
+                                Class362.method4053(i_107_, i_108_ + 1, i_105_, i_89_ + i_105_);
                             }
                         }
                     }
@@ -637,7 +637,7 @@ public class Class339_Sub7 extends Class339 {
                 }
             }
             Node_Sub36_Sub2.anIntArray10050[i_127_] = i_129_;
-            String string = Node_Sub36_Sub2.aClass59Array10044[i_127_].method587(70);
+            String string = Node_Sub36_Sub2.aClass59Array10044[i_127_].method587();
             int i_133_ = Class262_Sub15_Sub1.aClass357_10524.method4033(string);
             int i_134_ = i_128_ + i_4_;
             int i_135_ = i_129_ + i - Class262_Sub15_Sub1.aClass357_10524.anInt4434;
@@ -750,7 +750,7 @@ public class Class339_Sub7 extends Class339 {
                 i_134_ -= i_133_ >> 1;
                 i_136_ -= i_133_ >> 1;
             }
-            Class362.method4053(i_135_, 1 + i_137_, i_134_, (byte) -110, i_136_ + 1);
+            Class362.method4053(i_135_, 1 + i_137_, i_134_, i_136_ + 1);
         }
     }
 
@@ -796,7 +796,7 @@ public class Class339_Sub7 extends Class339 {
         }
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8725++;
     }
 

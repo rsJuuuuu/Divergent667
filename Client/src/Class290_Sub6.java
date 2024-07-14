@@ -27,7 +27,7 @@ public class Class290_Sub6 extends Class290 {
         super(abstracttoolkit);
     }
 
-    final void method3417(boolean bool, boolean bool_1_) {
+    final void method3417(boolean bool_1_) {
         if (!bool_1_) {
             anInt8120++;
         }

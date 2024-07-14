@@ -43,7 +43,7 @@ public class Node_Sub49 extends Node {
             class302.method3510(i);
             return null;
         }
-        byte[] bs = class302.method3518((byte) -126, i);
+        byte[] bs = class302.method3518(i);
         if (bs == null) {
             return null;
         }

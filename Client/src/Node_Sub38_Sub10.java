@@ -46,7 +46,7 @@ public class Node_Sub38_Sub10 extends Node_Sub38 {
         Translation.anInt431 = 0;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         do {
             if (i == 0) {
                 anInt10195 = buffer.readUnsignedShort() << 4;
@@ -56,9 +56,6 @@ public class Node_Sub38_Sub10 extends Node_Sub38 {
             }
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         } while (false);
-        if (bool) {
-            aClass302_10197 = null;
-        }
         anInt10193++;
     }
 
@@ -91,9 +88,7 @@ public class Node_Sub38_Sub10 extends Node_Sub38 {
 
     final void method2785() {
         Node_Sub37.method2772((byte) 54);
-        if (7 == 7) {
-            anInt10199++;
-        }
+        anInt10199++;
     }
 
     public static void method2825() {

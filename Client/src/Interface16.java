@@ -13,5 +13,5 @@ interface Interface16 {
 
     void method62(int i);
 
-    void method63(boolean bool, byte b);
+    void method63();
 }

@@ -92,7 +92,7 @@ public class Node_Sub38_Sub5 extends Node_Sub38 {
         return is;
     }
 
-    static void method2802(int i, boolean bool, int i_14_, int i_15_, int i_16_) {
+    static void method2802(int i, boolean bool, int i_14_, int i_15_) {
         if (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791() == 0) {
             Class262_Sub23.method3212(false);
         } else {
@@ -104,12 +104,9 @@ public class Node_Sub38_Sub5 extends Node_Sub38 {
         IOException_Sub1.anInt84 = i_14_;
         Class262_Sub8.anInt7756 = i_15_;
         Class20.method282(i);
-        if (i_16_ != -11493) {
-            aBoolean10125 = false;
-        }
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         while_10_:
         do {
             while_9_:
@@ -140,14 +137,11 @@ public class Node_Sub38_Sub5 extends Node_Sub38 {
                 anInt10121 = buffer.readUnsignedShort();
                 break while_10_;
             } while (false);
-            int i_18_ = buffer.read24BitInteger();
+            int i_18_ = buffer.readInt24();
             anIntArray10127[1] = Node_Sub30.method2723(i_18_ >> 4, 4080);
             anIntArray10127[2] = Node_Sub30.method2723(i_18_, 255) >> 12;
             anIntArray10127[0] = Node_Sub30.method2723(i_18_, 16711680) << 4;
         } while (false);
-        if (bool) {
-            method2802(-43, false, 13, 77, 8);
-        }
         anInt10119++;
     }
 

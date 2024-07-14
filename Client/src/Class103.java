@@ -33,18 +33,6 @@ public class Class103 {
         return entitynode;
     }
 
-    final int method1107(int i) {
-        anInt1337++;
-        int i_0_ = 0;
-        EntityNode entitynode = anEntityNode1335.anEntityNode1126;
-        if (i != -1) {
-            return -128;
-        }
-        for (/**/; anEntityNode1335 != entitynode; entitynode = entitynode.anEntityNode1126)
-            i_0_++;
-        return i_0_;
-    }
-
     public Class103() {
         anEntityNode1335.anEntityNode1124 = anEntityNode1335;
         anEntityNode1335.anEntityNode1126 = anEntityNode1335;
@@ -72,7 +60,7 @@ public class Class103 {
             method1109(true, -44);
         }
         Class150_Sub3.anInt8963 = -1;
-        Class207.method2039(81);
+        Class207.method2039();
     }
 
     final void method1110(EntityNode entitynode) {
@@ -112,7 +100,7 @@ public class Class103 {
         anEntityNode1341 = null;
     }
 
-    final EntityNode method1113(byte b) {
+    final EntityNode method1113() {
         anInt1343++;
         EntityNode entitynode = anEntityNode1335.anEntityNode1126;
         if (entitynode == anEntityNode1335) {

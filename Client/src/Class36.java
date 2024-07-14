@@ -22,7 +22,7 @@ public class Class36 {
         anInt544++;
     }
 
-    static boolean method390(int i) {
+    static boolean method390() {
         anInt547++;
         if (Class52.anInt800 != 0) {
             return true;

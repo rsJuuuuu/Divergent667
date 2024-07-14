@@ -5,7 +5,7 @@
 public class Node_Sub38_Sub22 extends Node_Sub38 {
     private int anInt10321 = 4096;
     static int anInt10322;
-    static Class353 aClass353_10323 = new Class353("game3", "Game 3", 2);
+    static Class353 aClass353_10323 = new Class353("game3", 2);
     static int anInt10324;
     static short aShort10325;
 
@@ -13,7 +13,7 @@ public class Node_Sub38_Sub22 extends Node_Sub38 {
         super(1, true);
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         if (i == 0) {
             anInt10321 = buffer.readUnsignedShort();
         }

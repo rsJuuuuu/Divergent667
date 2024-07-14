@@ -62,7 +62,7 @@ public class Class119 {
         }
     }
 
-    final void method1217(int i, int i_12_, byte b) {
+    final void method1217(int i, int i_12_) {
         anInt1482++;
         anInt1506 = anInt1489 + (i - anInt1489) * i_12_ / 255;
     }
@@ -81,7 +81,7 @@ public class Class119 {
                     int[] is = class91.anInt1226 == 2 ? Class376.aD4661.method8(0.7F, anInt1491, anInt1507, false, false, anInt1507) : Class376.aD4661.method11(anInt1507, false, anInt1507, anInt1491, (byte) 0, 0.7F);
                     anInt1481 = is[0];
                     anInt1495 = is[is.length - 1];
-                    aGLSprite1490 = graphicstoolkit.method1235(anInt1507, anInt1507, anInt1507, is, 7468);
+                    aGLSprite1490 = graphicstoolkit.method1235(anInt1507, anInt1507, anInt1507, is);
                 }
                 int i_26_ = i_25_ != 255 ? 1 : class91.anInt1226 != 2 ? 0 : 1;
                 if (i_26_ == 1 && bool) {
@@ -127,7 +127,7 @@ public class Class119 {
             method1221(i_21_, i_22_, i_23_, i, graphicstoolkit);
         }
         for (int i_32_ = anInt1492 - 1; i_32_ >= 0; i_32_--)
-            aClass182Array1484[i_32_].method1838(graphicstoolkit, i_20_, i_24_, i_18_, i_15_, i_23_, i_21_, anInt1512, anInt1493, anInt1488, i_25_);
+            aClass182Array1484[i_32_].method1838(graphicstoolkit, i_18_, i_15_, anInt1512, anInt1493, anInt1488, i_25_);
         graphicstoolkit.ya();
     }
 
@@ -204,7 +204,7 @@ public class Class119 {
         return aClass119_1499;
     }
 
-    final boolean method1225(int i, int i_50_, int i_51_, GraphicsToolkit graphicstoolkit) {
+    final boolean method1225(int i, int i_51_, GraphicsToolkit graphicstoolkit) {
         if (i_51_ != anInt1494) {
             anInt1494 = i_51_;
             int i_52_ = Class215.method2072(i_51_);
@@ -249,7 +249,7 @@ public class Class119 {
         }
         if (aClass119_1499 != null && this != aClass119_1499) {
             aClass119_1499.method1226();
-            bool |= aClass119_1499.method1225(i, -95, i_51_, graphicstoolkit);
+            bool |= aClass119_1499.method1225(i, i_51_, graphicstoolkit);
         }
         return bool;
     }

@@ -29,7 +29,7 @@ class Class194_Sub1 extends Class194 {
         return i + (i_1_ & 0xff80);
     }
 
-    static void method1965(byte b) {
+    static void method1965() {
         Class213.aNode_Sub27_2512.method2690(82, 1, Class213.aNode_Sub27_2512.aClass320_Sub19_7277);
         anInt6890++;
         Class213.aNode_Sub27_2512.method2690(28, 1, Class213.aNode_Sub27_2512.aClass320_Sub19_7301);
@@ -43,9 +43,6 @@ class Class194_Sub1 extends Class194 {
         Class213.aNode_Sub27_2512.method2690(119, 0, Class213.aNode_Sub27_2512.aClass320_Sub12_7282);
         Class213.aNode_Sub27_2512.method2690(76, 0, Class213.aNode_Sub27_2512.aClass320_Sub30_7275);
         Class213.aNode_Sub27_2512.method2690(71, 0, Class213.aNode_Sub27_2512.aClass320_Sub24_7317);
-        if (b >= -91) {
-            method1966(null);
-        }
         Class213.aNode_Sub27_2512.method2690(39, 0, Class213.aNode_Sub27_2512.aClass320_Sub26_7269);
         Class213.aNode_Sub27_2512.method2690(78, 0, Class213.aNode_Sub27_2512.aClass320_Sub16_7316);
         Class213.aNode_Sub27_2512.method2690(115, 0, Class213.aNode_Sub27_2512.aClass320_Sub13_7284);
@@ -58,14 +55,14 @@ class Class194_Sub1 extends Class194 {
         Class213.aNode_Sub27_2512.method2690(121, 2, Class213.aNode_Sub27_2512.aClass320_Sub18_7303);
         Class213.aNode_Sub27_2512.method2690(105, 2, Class213.aNode_Sub27_2512.aClass320_Sub15_7273);
         Class320_Sub12.method3728(0);
-        Class120.method1228(-109);
+        Class120.method1228();
         Class152.aBoolean1942 = true;
     }
 
     static Class144_Sub2 method1966(BufferedStream buffer) {
         anInt6895++;
 
-        return new Class144_Sub2(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.read24BitInteger(), buffer.read24BitInteger(), buffer.readUnsignedByte());
+        return new Class144_Sub2(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readInt24(), buffer.readInt24(), buffer.readUnsignedByte());
     }
 
     public static void method1967() {

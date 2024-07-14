@@ -19,25 +19,20 @@ public class Node_Sub15_Sub7 extends Node_Sub15 {
         aClass26_9827 = null;
     }
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         anInt9820++;
         clanchat.method488(aString9823, aLong9826, anInt9825);
-        if (i != 16) {
-            aString9823 = null;
-        }
     }
 
-    final void method2554(int i, BufferedStream buffer) {
-        if (i == 29147) {
-            if (buffer.readUnsignedByte() != 255) {
-                buffer.offset--;
-                aLong9826 = buffer.readLong();
-            }
-            anInt9824++;
-            aString9823 = buffer.readString2();
-            anInt9825 = buffer.readUnsignedShort();
-            //System.out.println("memberhash:" + aLong9826 + " membername:" + aString9823);
+    final void method2554(BufferedStream buffer) {
+        if (buffer.readUnsignedByte() != 255) {
+            buffer.offset--;
+            aLong9826 = buffer.readLong();
         }
+        anInt9824++;
+        aString9823 = buffer.readString2();
+        anInt9825 = buffer.readUnsignedShort();
+        //System.out.println("memberhash:" + aLong9826 + " membername:" + aString9823);
     }
 
     Node_Sub15_Sub7() {

@@ -19,12 +19,12 @@ public class Class193 implements Runnable {
     static int anInt2368 = 1407;
     static int anInt2369;
 
-    static boolean method1955(int i, String string) {
+    static boolean method1955(String string) {
         anInt2366++;
         if (string == null) {
             return false;
         }
-        for (int i_0_ = i; i_0_ < Node_Sub38_Sub14.anInt10242; i_0_++) {
+        for (int i_0_ = 0; i_0_ < Node_Sub38_Sub14.anInt10242; i_0_++) {
             if (string.equalsIgnoreCase(Class262_Sub12.aStringArray7793[i_0_])) {
                 return true;
             }

@@ -57,7 +57,7 @@ public class GLPlane extends Plane {
     private float[][] aFloatArrayArray7957;
 
     final void method3252(int i, int i_0_, int i_1_, boolean[][] bools, boolean bool, int i_2_) {
-        method3262(bool, bools, 123, i, -1, i_1_, i_0_, i_2_);
+        method3262(bool, bools, 123, i, -1, i_1_, i_0_);
         anInt7941++;
     }
 
@@ -148,7 +148,7 @@ public class GLPlane extends Plane {
                 aGLToolkit7926.method1451(true);
                 aGLToolkit7926.method1430((byte) 62);
             }
-            aGLToolkit7926.method1482((byte) -47, aClass69_7952, aClass69_7953, aClass69_7945, aClass69_7954);
+            aGLToolkit7926.method1482(aClass69_7952, aClass69_7953, aClass69_7945, aClass69_7954);
             if (aGLToolkit7926.aFloatBuffer6661.buffer.length >= 2 * anInt7919) {
                 aGLToolkit7926.aFloatBuffer6661.offset = 0;
             } else {
@@ -191,7 +191,7 @@ public class GLPlane extends Plane {
             }
             if (i_22_ > 0) {
                 Class200_Sub2 class200_sub2 = new Class200_Sub2(aGLToolkit7926, floatbuffer.buffer, floatbuffer.offset);
-                aGLToolkit7926.method1477((byte) 101, 0, class200_sub2, i_22_);
+                aGLToolkit7926.method1477(0, class200_sub2, i_22_);
             }
         }
     }
@@ -568,7 +568,7 @@ public class GLPlane extends Plane {
         return aClass137_7931.method1597(i_124_, var_r, i_125_);
     }
 
-    GLPlane(GLToolkit gltoolkit, int i, int i_126_, int i_127_, int i_128_, int[][] is, int[][] is_129_) {
+    GLPlane(GLToolkit gltoolkit, int i_126_, int i_127_, int i_128_, int[][] is, int[][] is_129_) {
         super(i_127_, i_128_, 512, is);
         aGLToolkit7926 = gltoolkit;
         aByteArrayArray7951 = new byte[i_127_ + 1][i_128_ + 1];
@@ -654,10 +654,10 @@ public class GLPlane extends Plane {
 
     final void method3259(int i, int i_149_, int i_150_, boolean[][] bools, boolean bool, int i_151_, int i_152_) {
         anInt7930++;
-        method3262(bool, bools, 113, i, i_151_, i_150_, i_149_, i_152_);
+        method3262(bool, bools, 113, i, i_151_, i_150_, i_149_);
     }
 
-    private void method3262(boolean bool, boolean[][] bools, int i, int i_153_, int i_154_, int i_155_, int i_156_, int i_157_) {
+    private void method3262(boolean bool, boolean[][] bools, int i, int i_153_, int i_154_, int i_155_, int i_156_) {
         anInt7923++;
         if (aNode_Sub33Array7955 != null) {
             int i_158_ = 1 + i_155_ + i_155_;
@@ -699,7 +699,7 @@ public class GLPlane extends Plane {
             if (i_154_ == -1) {
                 aGLToolkit7926.method1470();
             } else {
-                aGLToolkit7926.method1407((byte) -111, (float) i_154_);
+                aGLToolkit7926.method1407((float) i_154_);
                 aGLToolkit7926.method1421();
             }
             aGLToolkit7926.method1451((anInt7911 & 0x7) != 0);
@@ -713,10 +713,10 @@ public class GLPlane extends Plane {
                 aGLToolkit7926.method1460(128);
                 aGLToolkit7926.method1489(-2);
                 aGLToolkit7926.method1444(-2, aGLToolkit7926.aClass169_Sub2_6683);
-                aGLToolkit7926.method1474(-43, 7681, 8448);
+                aGLToolkit7926.method1474(7681, 8448);
                 aGLToolkit7926.method1464(34166, 770, 0);
                 aGLToolkit7926.method1472(-116, 0, 34167);
-                for (Node node = aClass312_7914.method3613(); node != null; node = aClass312_7914.method3620(16776960)) {
+                for (Node node = aClass312_7914.method3613(); node != null; node = aClass312_7914.method3620()) {
                     Node_Sub26 node_sub26 = (Node_Sub26) node;
                     node_sub26.method2685(i_153_, bools, i_155_, i_156_);
                 }
@@ -728,7 +728,7 @@ public class GLPlane extends Plane {
             if (aClass137_7931 != null) {
                 OpenGL.glPushMatrix();
                 OpenGL.glTranslatef(0.0F, -1.0f, 0.0F);
-                aGLToolkit7926.method1482((byte) -77, null, null, aClass69_7945, aClass69_7954);
+                aGLToolkit7926.method1482(null, null, aClass69_7945, aClass69_7954);
                 aClass137_7931.method1596(i_153_, bool, i_156_, bools, i_155_);
                 OpenGL.glPopMatrix();
             }

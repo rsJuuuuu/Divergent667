@@ -78,7 +78,7 @@ public class Class55 {
     }
 
     final void method561(BufferedStream buffer) {
-        anInt831 = buffer.read24BitInteger();
+        anInt831 = buffer.readInt24();
         anInt828++;
         anInt832 = buffer.readUnsignedShort();
         anInterface7Array825 = new Interface7[buffer.readUnsignedByte()];

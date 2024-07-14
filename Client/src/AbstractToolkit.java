@@ -329,7 +329,6 @@ abstract class AbstractToolkit extends GraphicsToolkit {
     protected Class213 aClass213_6385;
     private Class213 aClass213_6386;
     protected boolean aBoolean6387;
-    private int anInt6388;
     /*synthetic*/ static Class<?> aClass6389;
 
     final void k(int i) {
@@ -511,7 +510,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     final int M() {
         anInt6108++;
-        return anInt6388;
+        return 0;
     }
 
     private void method1253() {
@@ -632,7 +631,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         method1310();
         anInt6224++;
         if (aClass290_6281 != null) {
-            aClass290_6281.method3421(false);
+            aClass290_6281.method3421();
         }
     }
 
@@ -823,7 +822,6 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         Class36.anInt549 = 9;
         Class179.anInt2129 = 1 << Class36.anInt549;
         Class135.anInt1692 = Class179.anInt2129 >> 1;
-        Math.sqrt(Class135.anInt1692 * Class135.anInt1692 + Class135.anInt1692 * Class135.anInt1692);
         Class159.anInt1995 = 4;
         Class328.anInt4115 = i_80_;
         Node_Sub50.anInt7623 = i_81_;
@@ -988,7 +986,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     void u() {
         if (!aBoolean6322) {
-            for (Node node = aClass312_6088.method3613(); node != null; node = aClass312_6088.method3620(16776960))
+            for (Node node = aClass312_6088.method3613(); node != null; node = aClass312_6088.method3620())
                 ((za_Sub2) node).method2995();
             Enumeration<Canvas> enumeration = aHashtable6094.keys();
             while (enumeration.hasMoreElements()) {
@@ -1078,7 +1076,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         anInterface15_Impl2_6384 = method1380(false);
         anInterface15_Impl2_6384.method37(12, 3096, -12093);
         for (int i = 0; i < 4; i++) {
-            jaclib.memory.Buffer buffer = anInterface15_Impl2_6384.method40(-17, true);
+            jaclib.memory.Buffer buffer = anInterface15_Impl2_6384.method40(true);
             if (buffer != null) {
                 Stream stream = method1324(buffer);
                 stream.a(0.0F);
@@ -1099,7 +1097,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
                     }
                 }
                 stream.c();
-                if (anInterface15_Impl2_6384.method39(-104)) {
+                if (anInterface15_Impl2_6384.method39()) {
                     break;
                 }
             }
@@ -1253,7 +1251,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         return aClass336_Sub1Array6327[anInt6284];
     }
 
-    abstract Interface13_Impl1 method1291(Class68 class68, Class372 class372, int i, int i_117_, int i_118_);
+    abstract Interface13_Impl1 method1291(Class68 class68, Class372 class372, int i, int i_117_);
 
     final void U(int i, int i_119_, int i_120_, int i_121_, int i_122_) {
         anInt6169++;
@@ -1340,7 +1338,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         anInt6076++;
         GLSprite glsprite;
         if (class383.anInt4897 == 0 || class383.anInt4900 == 0) {
-            glsprite = this.method1235(1, 1, 1, new int[1], 7468);
+            glsprite = this.method1235(1, 1, 1, new int[1]);
         } else {
             int[] is = new int[class383.anInt4897 * class383.anInt4900];
             int i = 0;
@@ -1360,7 +1358,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
                     }
                 }
             }
-            glsprite = this.method1235(class383.anInt4897, class383.anInt4897, class383.anInt4900, is, 7468);
+            glsprite = this.method1235(class383.anInt4897, class383.anInt4897, class383.anInt4900, is);
         }
         Objects.requireNonNull(glsprite).method1178(class383.anInt4902, class383.anInt4898, class383.anInt4901, class383.anInt4899);
         return glsprite;
@@ -1404,7 +1402,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         anInterface15_Impl2_6375 = method1380(false);
         anInterface15_Impl2_6375.method37(28, 140, -12093);
         for (int i_136_ = 0; i_136_ < 4; i_136_++) {
-            jaclib.memory.Buffer buffer = anInterface15_Impl2_6375.method40(113, true);
+            jaclib.memory.Buffer buffer = anInterface15_Impl2_6375.method40(true);
             if (buffer != null) {
                 Stream stream = method1324(buffer);
                 if (Stream.b()) {
@@ -1481,7 +1479,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
                     stream.b(0.0F);
                 }
                 stream.c();
-                if (anInterface15_Impl2_6375.method39(123)) {
+                if (anInterface15_Impl2_6375.method39()) {
                     break;
                 }
             }
@@ -1525,7 +1523,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         aBoolean6297 = false;
         anInt6206++;
         if (aClass290_6281 != null) {
-            aClass290_6281.method3413(49);
+            aClass290_6281.method3413();
         }
         method1293(124);
     }
@@ -1668,14 +1666,14 @@ abstract class AbstractToolkit extends GraphicsToolkit {
             } else {
                 aClass290_6281 = aClass290Array6369[i & 0x7fffffff];
                 aClass290_6281.method3422(-127, bool_149_);
-                aClass290_6281.method3417(bool_149_, false);
+                aClass290_6281.method3417(false);
                 aClass290_6281.method3415(true, i_147_, i_148_);
             }
             anInt6349 = i_147_;
             anInt6291 = i_148_;
             anInt6354 = i;
         } else if (anInt6354 != 0) {
-            aClass290Array6369[anInt6354 & 0x7fffffff].method3417(bool_149_, false);
+            aClass290Array6369[anInt6354 & 0x7fffffff].method3417(false);
             if (i_147_ != anInt6349 || anInt6291 != i_148_) {
                 aClass290Array6369[0x7fffffff & anInt6354].method3415(true, i_147_, i_148_);
                 anInt6291 = i_148_;
@@ -1887,7 +1885,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         method1301();
         method1355();
         method1280();
-        aClass287_6353.method3399(this);
+        aClass287_6353.method3399();
     }
 
     final boolean s() {
@@ -2062,10 +2060,10 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     abstract void method1337();
 
-    final void X(int i) {
+    final void X() {
         anInt6105++;
         anInt6350 = 0;
-        for (/**/; i > 1; i >>= 1)
+        for (int i = 32; i > 1; i >>= 1)
             anInt6350++;
         anInt6320 = 1 << anInt6350;
     }
@@ -2084,8 +2082,8 @@ abstract class AbstractToolkit extends GraphicsToolkit {
         method1336(-16777216);
         aClass336_Sub1_6262.method3877(0.0F, (float) anInt6124, (float) anInt6239);
         method1266((byte) 110);
-        aClass336_Sub1Array6327[0].method3877(1.0F, interface13_impl1.method49((float) anInt6124, (byte) -51), interface13_impl1.method45((float) anInt6239, -101));
-        aClass336_Sub1Array6327[0].method3875(0.0F, interface13_impl1.method49((float) -i_214_, (byte) -48), interface13_impl1.method45((float) -i_213_, 92));
+        aClass336_Sub1Array6327[0].method3877(1.0F, interface13_impl1.method49((float) anInt6124, (byte) -51), interface13_impl1.method45((float) anInt6239));
+        aClass336_Sub1Array6327[0].method3875(0.0F, interface13_impl1.method49((float) -i_214_, (byte) -48), interface13_impl1.method45((float) -i_213_));
         aClass346Array6343[0] = BufferedConnection.aClass346_615;
         method1257();
         method1283();
@@ -2226,7 +2224,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     final void q() {
         if (aClass307_6290 != null) {
-            aClass307_6290.method3580((byte) 120);
+            aClass307_6290.method3580();
         }
         anInt6176++;
     }
@@ -2426,7 +2424,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
             aClass336_Sub1Array6327[i_244_] = new Class336_Sub1();
         }
         aNode_Sub29Array6345 = new Node_Sub29[anInt6367 - 2];
-        anInterface13_6357 = method1291(Class99.aClass68_1290, Class372.aClass372_4594, 1, 1, -93);
+        anInterface13_6357 = method1291(Class99.aClass68_1290, Class372.aClass372_4594, 1, 1);
         a(new za_Sub2(262144));
         aClass213_6373 = method1372((byte) -122, new Class207[]{new Class207(new Class126[]{Class126.aClass126_1620, Class126.aClass126_1628})});
         aClass213_6383 = method1372((byte) -123, new Class207[]{new Class207(new Class126[]{Class126.aClass126_1620, Class126.aClass126_1626})});
@@ -2669,7 +2667,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
 
     private boolean method1381(float f, float f_264_, float f_265_, float f_266_) {
         anInt6115++;
-        jaclib.memory.Buffer buffer = anInterface15_Impl2_6376.method40(-18, true);
+        jaclib.memory.Buffer buffer = anInterface15_Impl2_6376.method40(true);
         if (buffer == null) {
             return false;
         }
@@ -2690,7 +2688,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
             stream.b((float) 0.0);
         }
         stream.c();
-        return anInterface15_Impl2_6376.method39(-53);
+        return anInterface15_Impl2_6376.method39();
     }
 
     final int JA(int i, int i_268_, int i_269_, int i_270_, int i_271_, int i_272_) {
@@ -2738,7 +2736,7 @@ abstract class AbstractToolkit extends GraphicsToolkit {
             throw new IllegalArgumentException();
         }
         if (aClass307_6290 != null) {
-            aClass307_6290.method3580((byte) 124);
+            aClass307_6290.method3580();
         }
         anInt6368 = i;
     }

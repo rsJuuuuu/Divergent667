@@ -5,20 +5,19 @@
 public class Class142 {
     static int[] anIntArray1759 = new int[2];
     protected int anInt1760;
-    static int anInt1761;
     static int anInt1763;
 
     public static void method1619() {
         anIntArray1759 = null;
     }
 
-    static void method1620(boolean bool, int i, int i_0_, int i_1_, String string) {
+    static void method1620(boolean bool, int i_0_, int i_1_, String string) {
         anInt1763++;
 
         FixedAnimator.method258(false, (byte) -50, bool, i_0_, i_1_, string, null);
     }
 
-    Class142(Class353 class353, int i, Index class302) {
+    Class142(Index class302) {
         new Class61(64);
         anInt1760 = class302.method3537(15);
     }

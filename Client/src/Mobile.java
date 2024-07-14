@@ -11,7 +11,6 @@ abstract class Mobile extends Animable {
     static int[][] anIntArrayArray9122 = new int[6][];
     static int anInt9123;
     protected short aShort9124;
-    static int anInt9125;
     static int anInt9126;
     protected byte aByte9127;
     static BufferedStream aBuffer9128;
@@ -147,8 +146,7 @@ abstract class Mobile extends Animable {
         return cachenode_sub13.aString9560;
     }
 
-    void method845(int i) {
-        anInt9125++;
+    void method845() {
     }
 
     public static void method846() {

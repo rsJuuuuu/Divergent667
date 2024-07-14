@@ -67,7 +67,7 @@ public class Class281 {
         return class259;
     }
 
-    static void method3384(byte b) {
+    static void method3384() {
         anInt3580++;
         CacheNode_Sub4 cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1723();
         for (/**/; cachenode_sub4 != null; cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1721()) {
@@ -85,7 +85,7 @@ public class Class281 {
         Class213.aBoolean2510 = false;
     }
 
-    Class281(Class353 class353, int i, Index class302, Class363 class363) {
+    Class281(Index class302, Class363 class363) {
         aClass302_3572 = class302;
         aClass302_3572.method3537(32);
         aClass363_3578 = class363;

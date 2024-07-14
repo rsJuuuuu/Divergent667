@@ -110,7 +110,7 @@ public class Class339_Sub9 extends Class339 {
         aClass25_8752.method307(0);
         aGLToolkit4202.method1457(33984, 1);
         aGLToolkit4202.method1428(-16777216, (byte) 86);
-        aGLToolkit4202.method1474(-120, 7681, 260);
+        aGLToolkit4202.method1474(7681, 260);
         aGLToolkit4202.method1472(-97, 0, 34166);
         aGLToolkit4202.method1457(33984, 0);
         OpenGL.glBindProgramARB(34336, aClass50_8747.anInt773);
@@ -121,7 +121,7 @@ public class Class339_Sub9 extends Class339 {
         OpenGL.glMatrixMode(5890);
         OpenGL.glLoadIdentity();
         OpenGL.glMatrixMode(5888);
-        aGLToolkit4202.method1434((byte) -90, 0);
+        aGLToolkit4202.method1434(0);
         aGLToolkit4202.method1472(-108, 0, 5890);
         aGLToolkit4202.method1457(33984, 0);
         OpenGL.glBindProgramARB(34336, 0);
@@ -170,13 +170,13 @@ public class Class339_Sub9 extends Class339 {
     final void method3917(Class169 class169, int i, int i_11_) {
         aGLToolkit4202.method1444(-2, class169);
         anInt8748++;
-        aGLToolkit4202.method1434((byte) 73, i);
+        aGLToolkit4202.method1434(i);
         if (i_11_ != -28289) {
             method3947();
         }
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8750++;
     }
 }

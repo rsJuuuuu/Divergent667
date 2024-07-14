@@ -24,7 +24,7 @@ public class Class258 implements Interface12 {
         return 0;
     }
 
-    static void method3124(int i, int i_0_, int[] is, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+    static void method3124(int i, int i_0_, int[] is, int i_2_, int i_3_, int i_5_) {
         anInt5294++;
         if (i > 0 && !Class371.method4094(i)) {
             throw new IllegalArgumentException("");
@@ -32,20 +32,14 @@ public class Class258 implements Interface12 {
         if (i_3_ > 0 && !Class371.method4094(i_3_)) {
             throw new IllegalArgumentException("");
         }
-        if (i_1_ != 32993) {
-            throw new IllegalArgumentException("");
-        }
         int i_6_ = 0;
         int i_7_ = Math.min(i_3_, i);
         int i_8_ = i >> 1;
-        if (i_4_ != 1) {
-            calculatedScenePositionYs = null;
-        }
         int i_9_ = i_3_ >> 1;
         int[] is_10_ = is;
         int[] is_11_ = new int[i_9_ * i_8_];
         for (; ; ) {
-            OpenGL.glTexImage2Di(i_0_, i_6_, i_2_, i, i_3_, 0, i_1_, i_5_, is_10_, 0);
+            OpenGL.glTexImage2Di(i_0_, i_6_, i_2_, i, i_3_, 0, 32993, i_5_, is_10_, 0);
             if (i_7_ <= 1) {
                 break;
             }
@@ -99,9 +93,6 @@ public class Class258 implements Interface12 {
 
     static void method3126(BufferedStream buffer, SignLink signlink) {
         anInt5295++;
-        if (-9821 != -9821) {
-            method3124(-43, 56, null, -92, -124, -63, -16, 39);
-        }
         Node_Sub53 node_sub53 = new Node_Sub53();
         node_sub53.anInt7658 = buffer.readUnsignedByte();
         node_sub53.anInt7665 = buffer.readInt();
@@ -134,8 +125,8 @@ public class Class258 implements Interface12 {
                         @SuppressWarnings("rawtypes")
                         Class[] var_classes = new Class[i_30_];
                         for (int i_34_ = 0; i_34_ < i_30_; i_34_++)
-                            var_classes[i_34_] = Class260.method3139(strings[i_34_], 51);
-                        node_sub53.aClass241Array7664[i_27_] = signlink.method3638(Class260.method3139(string, 51), var_classes, string_29_);
+                            var_classes[i_34_] = Class260.method3139(strings[i_34_]);
+                        node_sub53.aClass241Array7664[i_27_] = signlink.method3638(Class260.method3139(string), var_classes, string_29_);
                         node_sub53.aByteArrayArrayArray7659[i_27_] = bs;
                     }
                 } else {
@@ -147,7 +138,7 @@ public class Class258 implements Interface12 {
                     }
                     node_sub53.anIntArray7661[i_27_] = i_28_;
                     node_sub53.anIntArray7660[i_27_] = i_36_;
-                    node_sub53.aClass241Array7657[i_27_] = signlink.method3628(Class260.method3139(string, -9821 + 9872), string_35_, Node_Sub19.method2612(-9821, -9821));
+                    node_sub53.aClass241Array7657[i_27_] = signlink.method3628(Class260.method3139(string), string_35_, Node_Sub19.method2612(-9821, -9821));
                 }
             } catch (ClassNotFoundException classnotfoundexception) {
                 node_sub53.anIntArray7663[i_27_] = -1;
@@ -170,7 +161,7 @@ public class Class258 implements Interface12 {
         Class44.aGraphicsToolkit668.DA(Class178.anInt2119, Class343.anInt4252, Class99.anInt1280, Class320_Sub30.anInt8495);
     }
 
-    public final Class172 method34(byte b) {
+    public final Class172 method34() {
 
         anInt5288++;
         return Class172.aClass172_2078;

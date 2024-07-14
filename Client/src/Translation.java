@@ -110,7 +110,7 @@ public class Translation {
         //walk
         Objects.requireNonNull(node_sub13).aPacket7113.writeShortLE128(Node_Sub53.gameSceneBaseX);
         node_sub13.aPacket7113.writeShortLE128(Class320_Sub4.gameSceneBaseY);
-        node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(99, 82) ? 0 : 1);
+        node_sub13.aPacket7113.writeByte(!Class175.aClass291_2100.method3450(82) ? 0 : 1);
         for (int c = stepsCount - 1; c >= 0; c--) {
             node_sub13.aPacket7113.writeByte(Node_Sub39.routeFinderXArray[c]);
             node_sub13.aPacket7113.writeByte(Class339_Sub6.routeFinderYArray[c]);

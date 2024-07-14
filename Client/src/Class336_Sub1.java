@@ -256,7 +256,7 @@ public class Class336_Sub1 extends Class336 {
         aFloat8530 = class336_sub1_37_.aFloat8530;
     }
 
-    final void method3880(float f, byte b, float f_38_, float f_39_, float f_40_, float f_41_, float f_43_, float f_45_) {
+    final void method3880(float f, float f_38_, float f_39_, float f_40_, float f_41_, float f_43_, float f_45_) {
         aFloat8521 = 0.0F;
         aFloat8544 = f_38_;
         aFloat8538 = f_45_;
@@ -279,7 +279,7 @@ public class Class336_Sub1 extends Class336 {
         is[1] = (int) (aFloat8538 * (float) i_46_ + (float) i * aFloat8544 + (float) i_47_ * aFloat8535 + aFloat8521);
     }
 
-    final float[] method3881(byte b, float[] fs) {
+    final float[] method3881(float[] fs) {
         fs[7] = aFloat8521;
         fs[14] = 0.0F;
         fs[8] = aFloat8547;
@@ -524,7 +524,7 @@ public class Class336_Sub1 extends Class336 {
         is[2] = (int) ((float) i_89_ * aFloat8508 + aFloat8547 * (float) i + aFloat8556 * (float) i_90_);
     }
 
-    final void method3889(float f, byte b, float f_91_) {
+    final void method3889(float f, float f_91_) {
         anInt8554++;
         aFloat8529 *= f_91_;
         aFloat8547 *= (float) 1.0;
@@ -557,7 +557,7 @@ public class Class336_Sub1 extends Class336 {
         aFloat8556 = class336_sub1_93_.aFloat8556;
     }
 
-    final void method3890(float f, float[] fs, float f_94_, float f_95_, byte b) {
+    final void method3890(float f, float[] fs, float f_94_, float f_95_) {
         fs[2] = f_95_ * aFloat8556 + (aFloat8508 * f_94_ + f * aFloat8547);
         fs[0] = aFloat8529 * f_95_ + (aFloat8530 * f + f_94_ * aFloat8531);
         anInt8541++;

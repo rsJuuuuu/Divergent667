@@ -135,7 +135,7 @@ public class Class320_Sub6 extends Class320 {
             class261.anAnimable_Sub4_3315 = animable_sub4;
             class261.anAnimable_Sub4_3319 = animable_sub4_20_;
             int i_21_ = Class320_Sub10.aPlaneArray8300 == Class368.aPlaneArray4548 ? 1 : 0;
-            if (animable_sub4.method814((byte) 126)) {
+            if (animable_sub4.method814()) {
                 if (animable_sub4.method813(0)) {
                     animable_sub4.anAnimable5941 = SeekableFile.anAnimableArray3884[i_21_];
                     SeekableFile.anAnimableArray3884[i_21_] = animable_sub4;
@@ -149,7 +149,7 @@ public class Class320_Sub6 extends Class320 {
                 Node_Sub36.anAnimableArray7429[i_21_] = animable_sub4;
             }
             if (animable_sub4_20_ != null) {
-                if (animable_sub4_20_.method814((byte) 108)) {
+                if (animable_sub4_20_.method814()) {
                     if (animable_sub4_20_.method813(0)) {
                         animable_sub4_20_.anAnimable5941 = SeekableFile.anAnimableArray3884[i_21_];
                         SeekableFile.anAnimableArray3884[i_21_] = animable_sub4_20_;

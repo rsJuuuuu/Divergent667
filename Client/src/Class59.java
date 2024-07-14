@@ -67,7 +67,7 @@ public class Class59 {
         return actor.method854();
     }
 
-    final String method587(int i) {
+    final String method587() {
         anInt878++;
         return aString877;
     }

@@ -7,7 +7,7 @@ import jaggl.OpenGL;
 public class Class169_Sub4 extends Class169 {
     static int anInt8822;
     static int anInt8823;
-    static Class353 aClass353_8825 = new Class353("stellardawn", "Stellar Dawn", 1);
+    static Class353 aClass353_8825 = new Class353("stellardawn", 1);
     static int[][] anIntArrayArray8826;
     static int anInt8827;
     static int anInt8828;
@@ -51,7 +51,7 @@ public class Class169_Sub4 extends Class169 {
         IComponentDefinitions.aHashTable4827.method1517(false);
     }
 
-    static void method1787(byte b) {
+    static void method1787() {
         anInt8828++;
         int i = 1024;
         int i_2_ = 3072;
@@ -64,14 +64,14 @@ public class Class169_Sub4 extends Class169 {
         if (Class257.aFloat3243 < (float) i) {
             Class257.aFloat3243 = (float) i;
         }
-        for (/**/; Node_Sub12.aFloat5450 >= 16384.0F; Node_Sub12.aFloat5450 -= 16384.0F) {
-            /* empty */
+        while (Node_Sub12.aFloat5450 >= 16384.0F) {
+            Node_Sub12.aFloat5450 -= 16384.0F;
         }
         if ((float) i_2_ < Class257.aFloat3243) {
             Class257.aFloat3243 = (float) i_2_;
         }
-        for (/**/; Node_Sub12.aFloat5450 < 0.0F; Node_Sub12.aFloat5450 += 16384.0F) {
-            /* empty */
+        while (Node_Sub12.aFloat5450 < 0.0F) {
+            Node_Sub12.aFloat5450 += 16384.0F;
         }
         int i_3_ = Mobile_Sub4.anInt10987 >> 9;
         int i_4_ = Class25.anInt444 >> 9;

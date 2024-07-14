@@ -19,7 +19,7 @@ public class Class200_Sub1 extends Class200 implements Interface9 {
 
     static void method2013(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
         if (i_6_ == i_5_ && i == i_4_ && i_3_ == i_7_ && i_1_ == i_2_) {
-            Animable_Sub3.method921(1048576, i_7_, i_1_, i_6_, i_0_, i);
+            Animable_Sub3.method921(i_7_, i_1_, i_6_, i_0_, i);
         } else {
             int i_8_ = i_6_;
             int i_9_ = i;
@@ -46,7 +46,7 @@ public class Class200_Sub1 extends Class200 implements Interface9 {
                 int i_30_ = i_21_ * i_22_;
                 int i_31_ = (i_27_ + (i_25_ + i_29_) >> 12) + i_6_;
                 int i_32_ = i + (i_28_ + (i_26_ + i_30_) >> 12);
-                Animable_Sub3.method921(1048576, i_31_, i_32_, i_8_, i_0_, i_9_);
+                Animable_Sub3.method921(i_31_, i_32_, i_8_, i_0_, i_9_);
                 i_8_ = i_31_;
                 i_9_ = i_32_;
             }
@@ -123,7 +123,7 @@ public class Class200_Sub1 extends Class200 implements Interface9 {
                                 }
                                 break while_96_;
                             } while (false);
-                            if (class84.method984(1, targetY, (byte) -98, 1, baseX, targetX, i_42_, i_34_, baseY, i)) {
+                            if (class84.method984(1, targetY, 1, baseX, targetX, i_42_, i_34_, baseY, i)) {
                                 Class219.anInt2623 = baseY;
                                 Class315.anInt4033 = baseX;
                                 return true;
@@ -226,7 +226,7 @@ public class Class200_Sub1 extends Class200 implements Interface9 {
         anInt5144 = i;
     }
 
-    public final int method24(int i) {
+    public final int method24() {
         anInt5138++;
         return 0;
     }

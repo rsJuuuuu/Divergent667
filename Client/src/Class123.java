@@ -12,7 +12,7 @@ public class Class123 {
     static int anInt1561;
     static IncommingPacket aClass192_1562 = new IncommingPacket(57, -2);
     static int anInt1563;
-    static Class129 aClass129_1564 = new Class129("WIP", 2);
+    static Class129 aClass129_1564 = new Class129(2);
     protected Class241 aClass241_1565;
     private final BufferedStream aBuffer1566;
     private int anInt1567 = 0;

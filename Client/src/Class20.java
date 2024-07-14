@@ -434,7 +434,7 @@ class Class20 {
                     if (class103 != null) {
                         int i_106_ = (i_104_ + (anInt354 >> 6)) * 64;
                         int i_107_ = (i_105_ + (anInt343 >> 6)) * 64;
-                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113((byte) -118); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(106)) {
+                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113(); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(106)) {
                             int i_108_ = i_106_ + entitynode_sub9.aByte6029 - anInt354 - anInt349;
                             int i_109_ = i_107_ + entitynode_sub9.aByte6031 - anInt343 - anInt352;
                             int i_110_ = (i * i_108_ >> 16) + anInt344;
@@ -452,7 +452,7 @@ class Class20 {
                     if (class103 != null) {
                         int i_116_ = (i_114_ + (anInt354 >> 6)) * 64;
                         int i_117_ = (i_115_ + (anInt343 >> 6)) * 64;
-                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113((byte) 127); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(94)) {
+                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113(); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(94)) {
                             int i_118_ = i_116_ + entitynode_sub9.aByte6029 - anInt354 - anInt349;
                             int i_119_ = i_117_ + entitynode_sub9.aByte6031 - anInt343 - anInt352;
                             int i_120_ = (i * i_118_ >> 16) + anInt344;
@@ -729,7 +729,7 @@ class Class20 {
                 for (int i_175_ = 0; i_175_ < aClass103ArrayArrayArray353[0][0].length; i_175_++) {
                     Class103 class103 = aClass103ArrayArrayArray353[i][i_174_][i_175_];
                     if (class103 != null) {
-                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113((byte) -44); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(124)) {
+                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113(); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(124)) {
                             if (entitynode_sub9.aShortArray6025 != null) {
                                 for (int i_176_ = 0; i_176_ < entitynode_sub9.aShortArray6025.length; i_176_++) {
                                     ObjectDefinition objectdefinition = aClass112_319.method1145(entitynode_sub9.aShortArray6025[i_176_] & 0xffff, 126);
@@ -758,7 +758,7 @@ class Class20 {
     static Class158 method286(int i, int i_178_) {
         Class158 class158 = new Class158();
         for (CacheNode_Sub11 cachenode_sub11 = (CacheNode_Sub11) aHashTable316.method1516(); cachenode_sub11 != null; cachenode_sub11 = (CacheNode_Sub11) aHashTable316.method1520(101)) {
-            if (cachenode_sub11.aBoolean9544 && cachenode_sub11.method2335((byte) 88, i, i_178_)) {
+            if (cachenode_sub11.aBoolean9544 && cachenode_sub11.method2335(i, i_178_)) {
                 class158.method1719(cachenode_sub11);
             }
         }
@@ -794,7 +794,7 @@ class Class20 {
 
     static CacheNode_Sub11 method288(int i, int i_179_) {
         for (CacheNode_Sub11 cachenode_sub11 = (CacheNode_Sub11) aHashTable316.method1516(); cachenode_sub11 != null; cachenode_sub11 = (CacheNode_Sub11) aHashTable316.method1520(115)) {
-            if (cachenode_sub11.aBoolean9544 && cachenode_sub11.method2335((byte) 119, i, i_179_)) {
+            if (cachenode_sub11.aBoolean9544 && cachenode_sub11.method2335(i, i_179_)) {
                 return cachenode_sub11;
             }
         }
@@ -858,7 +858,7 @@ class Class20 {
                 for (int i_202_ = 0; i_202_ < aClass103ArrayArrayArray353[i_200_][0].length; i_202_++) {
                     Class103 class103 = aClass103ArrayArrayArray353[i_200_][i_201_][i_202_];
                     if (class103 != null) {
-                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113((byte) 98); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(117))
+                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113(); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(117))
                             bs[i_201_ * 64 + entitynode_sub9.aByte6029 + (i_202_ * 64 + entitynode_sub9.aByte6031) * anInt345] = (byte) entitynode_sub9.anInt6027;
                     }
                 }
@@ -868,7 +868,7 @@ class Class20 {
                 for (int i_204_ = 0; i_204_ < aClass103ArrayArrayArray353[i_200_][0].length; i_204_++) {
                     Class103 class103 = aClass103ArrayArrayArray353[i_200_][i_203_][i_204_];
                     if (class103 != null) {
-                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113((byte) 124); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(109)) {
+                        for (EntityNode_Sub9 entitynode_sub9 = (EntityNode_Sub9) class103.method1113(); entitynode_sub9 != null; entitynode_sub9 = (EntityNode_Sub9) class103.method1108(109)) {
                             int i_205_ = i_203_ * 64 + entitynode_sub9.aByte6029 + (i_204_ * 64 + entitynode_sub9.aByte6031) * anInt345;
                             entitynode_sub9.anInt6027 = (aByteArray335[i_205_] & 0xff) << 16 | aShortArray338[i_205_] & 0xffff;
                             if (entitynode_sub9.anInt6027 != 0) {
@@ -893,7 +893,7 @@ class Class20 {
     }
 
     private static Class312 method292(GraphicsToolkit graphicstoolkit, int i, int i_209_) {
-        for (Node_Sub14 node_sub14 = (Node_Sub14) aClass312_331.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) aClass312_331.method3620(16776960))
+        for (Node_Sub14 node_sub14 = (Node_Sub14) aClass312_331.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) aClass312_331.method3620())
             method283(graphicstoolkit, node_sub14, i, i_209_);
         return aClass312_331;
     }

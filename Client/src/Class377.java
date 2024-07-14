@@ -29,7 +29,7 @@ abstract class Class377 {
         aClass379_4675 = null;
     }
 
-    final boolean method4122(int i) {
+    final boolean method4122() {
         anInt4665++;
         return (anInt4673 & 0x4) != 0;
     }
@@ -89,7 +89,7 @@ abstract class Class377 {
         /* empty */
     }
 
-    static boolean method4127(int i, int i_7_) {
+    static boolean method4127() {
         anInt4672++;
         return false;
     }

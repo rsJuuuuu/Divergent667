@@ -53,7 +53,7 @@ public class Node_Sub36_Sub2 extends Node_Sub36 {
         Class42.aClass181_643.method1827();
         Class186.aClass112_2256.method1142(118);
         Class366.aClass279_4526.method3370((byte) -40);
-        EntityNode_Sub3_Sub1.aClass86_9166.method1000((byte) -48);
+        EntityNode_Sub3_Sub1.aClass86_9166.method1000();
         Class18.aClass37_306.method398();
         Class16.aClass101_228.method1095();
         IOException_Sub1.aClass128_85.method1552((byte) 101);

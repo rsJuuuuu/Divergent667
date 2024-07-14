@@ -24,7 +24,7 @@ public class CacheNode_Sub19 extends CacheNode {
         }
         anInt9613++;
         Node_Sub38_Sub35.aD10455 = var_d;
-        for (Node_Sub38 nodeSub38 : aNode_Sub38Array9618) nodeSub38.method2782(i, i_0_, false);
+        for (Node_Sub38 nodeSub38 : aNode_Sub38Array9618) nodeSub38.method2782(i, i_0_);
         Class169_Sub1.method1769(i, i_0_);
         float[] fs = new float[4 * i_0_ * i];
         int i_2_ = 0;
@@ -106,7 +106,7 @@ public class CacheNode_Sub19 extends CacheNode {
         Class308.aClass302_3909 = class302;
         Node_Sub38_Sub35.aD10455 = var_d;
         anInt9615++;
-        for (Node_Sub38 nodeSub38 : aNode_Sub38Array9618) nodeSub38.method2782(i_13_, i, false);
+        for (Node_Sub38 nodeSub38 : aNode_Sub38Array9618) nodeSub38.method2782(i_13_, i);
         Class385.method4205(d);
         Class169_Sub1.method1769(i_13_, i);
         int[] is = new int[i * i_13_];
@@ -197,7 +197,7 @@ public class CacheNode_Sub19 extends CacheNode {
         Node_Sub38_Sub35.aD10455 = var_d;
         Class308.aClass302_3909 = class302;
         anInt9620++;
-        for (Node_Sub38 nodeSub38 : aNode_Sub38Array9618) nodeSub38.method2782(i, i_34_, false);
+        for (Node_Sub38 nodeSub38 : aNode_Sub38Array9618) nodeSub38.method2782(i, i_34_);
         Class385.method4205(d);
         Class169_Sub1.method1769(i, i_34_);
         int[] is = new int[i * i_34_];
@@ -269,18 +269,6 @@ public class CacheNode_Sub19 extends CacheNode {
         }
         for (Node_Sub38 node_sub38 : aNode_Sub38Array9618) node_sub38.method2787(115);
         return is;
-    }
-
-    public CacheNode_Sub19() {
-        anIntArray9616 = new int[0];
-        anIntArray9614 = new int[0];
-        aNode_Sub38_9617 = new Node_Sub38_Sub17(0);
-        aNode_Sub38_9617.anInt7450 = 1;
-        aNode_Sub38_9619 = new Node_Sub38_Sub17();
-        aNode_Sub38_9619.anInt7450 = 1;
-        aNode_Sub38_9611 = new Node_Sub38_Sub17();
-        aNode_Sub38_9611.anInt7450 = 1;
-        aNode_Sub38Array9618 = new Node_Sub38[]{aNode_Sub38_9619, aNode_Sub38_9611, aNode_Sub38_9617};
     }
 
     CacheNode_Sub19(BufferedStream buffer) {

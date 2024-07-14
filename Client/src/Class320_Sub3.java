@@ -31,7 +31,7 @@ public class Class320_Sub3 extends Class320 {
         if (b < -35) {
             anInt8224++;
             if (method3689((byte) 124)) {
-                if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789() && !Class188_Sub2_Sub2.method1911(aNode_Sub27_4063.aClass320_Sub29_7270.method3791())) {
+                if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789() && Class188_Sub2_Sub2.method1911(aNode_Sub27_4063.aClass320_Sub29_7270.method3791())) {
                     anInt4064 = 1;
                 }
                 if (aNode_Sub27_4063.aClass320_Sub1_7313.method3678() == 1) {
@@ -52,7 +52,7 @@ public class Class320_Sub3 extends Class320 {
         if (b <= 118) {
             aBoolean8235 = false;
         }
-        return Class187.method1882(-37, anInt4064);
+        return !(anInt4064 != 2 && anInt4064 != 3);
     }
 
     Class320_Sub3(Node_Sub27 node_sub27) {
@@ -72,8 +72,8 @@ public class Class320_Sub3 extends Class320 {
         if (b != 54) {
             return -54;
         }
-        if (Class187.method1882(-84, i)) {
-            if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789() && !Class188_Sub2_Sub2.method1911(aNode_Sub27_4063.aClass320_Sub29_7270.method3791())) {
+        if (!(i != 2 && i != 3)) {
+            if (aNode_Sub27_4063.aClass320_Sub29_7270.method3789() && Class188_Sub2_Sub2.method1911(aNode_Sub27_4063.aClass320_Sub29_7270.method3791())) {
                 return 3;
             }
             if (aNode_Sub27_4063.aClass320_Sub1_7313.method3678() == 1) {
@@ -83,7 +83,7 @@ public class Class320_Sub3 extends Class320 {
         if (i == 3) {
             return 3;
         }
-        if (Class187.method1882(-128, i)) {
+        if (!(i != 2 && i != 3)) {
             return 2;
         }
         return 1;

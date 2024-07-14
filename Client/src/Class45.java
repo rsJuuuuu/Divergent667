@@ -30,7 +30,7 @@ public class Class45 implements Interface12 {
         return 100;
     }
 
-    static void method462(byte b, Player player) {
+    static void method462(Player player) {
         anInt5268++;
         Node_Sub47 node_sub47 = (Node_Sub47) Class320_Sub3.aHashTable8234.method1518(3512, player.index);
         if (node_sub47 != null) {
@@ -55,7 +55,7 @@ public class Class45 implements Interface12 {
         return !aBoolean5267;
     }
 
-    public final Class172 method34(byte b) {
+    public final Class172 method34() {
         anInt5271++;
         return Class172.aClass172_2080;
     }
@@ -87,7 +87,7 @@ public class Class45 implements Interface12 {
                     if (Class218.aClass123_2560.aClass241_1565.anInt2953 != 1) {
                         return;
                     }
-                    Class218.aClass123_2560.aClass365_1557 = CacheNode_Sub6.method2311((Socket) Class218.aClass123_2560.aClass241_1565.anObject2956, (byte) -87);
+                    Class218.aClass123_2560.aClass365_1557 = CacheNode_Sub6.method2311((Socket) Class218.aClass123_2560.aClass241_1565.anObject2956);
                     Class218.aClass123_2560.aClass241_1565 = null;
                     Class218.aClass123_2560.method1512();
                     Class4.anInt124 = 4;

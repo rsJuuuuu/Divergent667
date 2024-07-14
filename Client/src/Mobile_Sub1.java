@@ -101,7 +101,7 @@ public class Mobile_Sub1 extends Mobile {
         return null;
     }
 
-    final void method845(int i) {
+    final void method845() {
         aShort9119 = aShort9130 = (short) (int) (aDouble10957 / 512.0);
         anInt10954++;
         aShort9120 = aShort9124 = (short) (int) (aDouble10921 / 512.0);
@@ -115,16 +115,16 @@ public class Mobile_Sub1 extends Mobile {
         throw new IllegalStateException();
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_6_, byte b, int i_7_, Animable animable) {
+    final void method816(int i, boolean bool, int i_6_, byte b, int i_7_, Animable animable) {
         if (b >= 101) {
             anInt10918++;
             throw new IllegalStateException();
         }
     }
 
-    private DrawableModel method896(int i, GraphicsToolkit graphicstoolkit, int i_8_) {
+    private DrawableModel method896(int i, GraphicsToolkit graphicstoolkit) {
         anInt10952++;
-        Class195 class195 = Class16.aClass101_228.method1090(116, anInt10948);
+        Class195 class195 = Class16.aClass101_228.method1090(anInt10948);
         return class195.method1989(anAnimator10955, (byte) 2, i, graphicstoolkit);
     }
 
@@ -201,7 +201,7 @@ public class Mobile_Sub1 extends Mobile {
         }
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10936++;
         return false;
     }
@@ -221,7 +221,7 @@ public class Mobile_Sub1 extends Mobile {
         }
         if (anEntityNode_Sub4_10943 != null) {
             anEntityNode_Sub4_10943.method952(graphicstoolkit, Class174.clientCycle, class300s, class218s);
-            anEntityNode_Sub4_10943.method967(plane, aShort9119, aShort9130, aShort9120, aShort9124);
+            anEntityNode_Sub4_10943.method967(plane);
         }
     }
 
@@ -243,7 +243,7 @@ public class Mobile_Sub1 extends Mobile {
             aClass104_10947 = null;
         }
         anInt10949++;
-        DrawableModel drawablemodel = method896(0, graphicstoolkit, i + 75);
+        DrawableModel drawablemodel = method896(0, graphicstoolkit);
         if (drawablemodel != null) {
             Class336 class336 = graphicstoolkit.A();
             class336.method3865(anInt10931);
@@ -255,9 +255,9 @@ public class Mobile_Sub1 extends Mobile {
         }
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10945++;
-        DrawableModel drawablemodel = method896(2048, graphicstoolkit, 46);
+        DrawableModel drawablemodel = method896(2048, graphicstoolkit);
         if (drawablemodel == null) {
             return null;
         }
@@ -266,7 +266,7 @@ public class Mobile_Sub1 extends Mobile {
         class336.method3856(anInt10919);
         class336.method3863((int) aDouble10957, (int) aDouble10925, (int) aDouble10921);
         method899(graphicstoolkit, class336, drawablemodel);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(false, (byte) -118, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(false, 1);
         if (Node_Sub15_Sub10.aBoolean9850) {
             drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
         } else {
@@ -335,7 +335,7 @@ public class Mobile_Sub1 extends Mobile {
         anInt10934 = i_28_;
         anInt10933 = i_26_;
         anInt10937 = i_27_;
-        int i_32_ = Class16.aClass101_228.method1090(-111, anInt10948).anInt2394;
+        int i_32_ = Class16.aClass101_228.method1090(anInt10948).anInt2394;
         anAnimator10955 = new AnimableAnimator(this);
         anAnimator10955.method249(true, i_32_);
     }

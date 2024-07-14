@@ -25,7 +25,7 @@ public class Node_Sub38_Sub9 extends Node_Sub38 {
     static boolean aBoolean10191;
     static int anInt10192;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         while_88_:
         do {
             do {
@@ -44,9 +44,6 @@ public class Node_Sub38_Sub9 extends Node_Sub38 {
             anInt10175 = (buffer.readByte() << 12) / 100;
         } while (false);
         anInt10187++;
-        if (bool) {
-            anInt10182 = -61;
-        }
     }
 
     public Node_Sub38_Sub9() {
@@ -144,7 +141,7 @@ public class Node_Sub38_Sub9 extends Node_Sub38 {
         Class12.aHashTable187.method1517(false);
         Node_Sub32.cachedNPCcsCount = 0;
         Class266.aHashTable3380.method1517(false);
-        Class368.method4080((byte) 125);
+        Class368.method4080();
         Class175.anInt2097 = 0;
         Class24.aClass275_442.method3329();
         Class51.aClanChat5345 = null;

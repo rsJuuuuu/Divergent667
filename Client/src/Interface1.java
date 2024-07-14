@@ -7,7 +7,7 @@ interface Interface1 {
 
     int method2(int i);
 
-    int method3(byte b);
+    int method3();
 
     void method4(int i, int i_0_, byte[] bs, int i_1_);
 }

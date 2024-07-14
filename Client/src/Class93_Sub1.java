@@ -26,7 +26,7 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
     }
 
     public final synchronized void mouseReleased(MouseEvent mouseevent) {
-        int i = method1055(mouseevent, (byte) 123);
+        int i = method1055(mouseevent);
         if ((anInt6037 & i) == 0) {
             i = anInt6037;
         }
@@ -63,7 +63,7 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
         }
     }
 
-    final Node_Sub5 method1048(byte b) {
+    final Node_Sub5 method1048() {
         return (Node_Sub5) aClass312_6033.method3619(-83);
     }
 
@@ -75,7 +75,7 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
         aComponent6041.addMouseWheelListener(this);
     }
 
-    private int method1055(MouseEvent mouseevent, byte b) {
+    private int method1055(MouseEvent mouseevent) {
         if (mouseevent.getButton() == 1) {
             if (mouseevent.isMetaDown()) {
                 return 4;
@@ -144,7 +144,7 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
     }
 
     public final synchronized void mousePressed(MouseEvent mouseevent) {
-        int i = method1055(mouseevent, (byte) -79);
+        int i = method1055(mouseevent);
         if (i == 1) {
             method1052(mouseevent.getY(), mouseevent.getX(), 0, mouseevent.getClickCount());
         } else if (i == 4) {
@@ -189,7 +189,7 @@ public class Class93_Sub1 extends Class93 implements MouseListener, MouseMotionL
 
     final boolean method1044(int i) {
         if (i <= 27) {
-            method1055(null, (byte) -101);
+            method1055(null);
         }
         return (anInt6034 & 0x2) != 0;
     }

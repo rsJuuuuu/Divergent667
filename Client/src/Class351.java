@@ -17,10 +17,10 @@ public class Class351 {
         if (i < 45) {
             aHashtable4323 = null;
         }
-        return method4004((byte) 91, aString4321, anInt4322, string);
+        return method4004((byte) 91, aString4321, string);
     }
 
-    public static File method4004(byte b, String string, int i, String string_0_) {
+    public static File method4004(byte b, String string, String string_0_) {
         if (!aBoolean4319) {
             throw new RuntimeException("");
         }

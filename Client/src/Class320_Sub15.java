@@ -15,7 +15,7 @@ public class Class320_Sub15 extends Class320 {
     final int method3675(int i, byte b) {
         anInt8353++;
         if (b != 54) {
-            method3739((byte) -14, true, null);
+            method3739(true, null);
         }
         return 1;
     }
@@ -44,7 +44,7 @@ public class Class320_Sub15 extends Class320 {
         return anInt4064;
     }
 
-    static byte[] method3739(byte b, boolean bool, Object object) {
+    static byte[] method3739(boolean bool, Object object) {
         anInt8351++;
         if (object == null) {
             return null;

@@ -82,7 +82,7 @@ public class Node_Sub33 extends Node {
         }
         if (0 < i_1_) {
             aClass200_Sub2_7387.method4(5123, floatbuffer.offset, floatbuffer.buffer, 2712);
-            aGLToolkit7407.method1482((byte) -108, aClass69_7386, aGLPlane7390.aClass69_7953, aGLPlane7390.aClass69_7945, aGLPlane7390.aClass69_7954);
+            aGLToolkit7407.method1482(aClass69_7386, aGLPlane7390.aClass69_7953, aGLPlane7390.aClass69_7945, aGLPlane7390.aClass69_7954);
             aGLToolkit7407.method1458(anInt7400, (aGLPlane7390.anInt7911 & 0x7) != 0, (aGLPlane7390.anInt7911 & 0x8) != 0);
             if (aGLToolkit7407.aBoolean6676) {
                 aGLToolkit7407.EA(2147483647, anInt7401, anInt7403, anInt7392);
@@ -91,8 +91,8 @@ public class Node_Sub33 extends Node {
             OpenGL.glPushMatrix();
             OpenGL.glScalef(1.0F / aFloat7389, 1.0F / aFloat7389, 1.0F);
             OpenGL.glMatrixMode(5888);
-            aGLToolkit7407.method1482((byte) -29, aClass69_7386, aGLPlane7390.aClass69_7953, aGLPlane7390.aClass69_7945, aGLPlane7390.aClass69_7954);
-            aGLToolkit7407.method1477((byte) 105, 0, aClass200_Sub2_7387, i_1_);
+            aGLToolkit7407.method1482(aClass69_7386, aGLPlane7390.aClass69_7953, aGLPlane7390.aClass69_7945, aGLPlane7390.aClass69_7954);
+            aGLToolkit7407.method1477(0, aClass200_Sub2_7387, i_1_);
             OpenGL.glMatrixMode(5890);
             OpenGL.glPopMatrix();
             OpenGL.glMatrixMode(5888);

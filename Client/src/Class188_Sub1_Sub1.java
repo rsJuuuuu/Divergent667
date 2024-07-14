@@ -42,10 +42,10 @@ public class Class188_Sub1_Sub1 extends Class188_Sub1 {
             method1894(-122, (byte) 40, -50);
         }
         anInt9328++;
-        return Class262_Sub16.method3193(i_3_, i, (byte) 111) & Class179.method1817(i_3_, i);
+        return Class262_Sub16.method3193(i_3_, i, (byte) 111) & Class179.method1817(i);
     }
 
-    static void method1895(int moveLocalX, boolean bool, int speed2, byte b, int moveZ, int moveLocalY, int speed1) {
+    static void method1895(int moveLocalX, boolean bool, int speed2, int moveZ, int moveLocalY, int speed1) {
         Class194.anInt2370 = moveZ;
 
         Class169_Sub3.anInt8821 = speed2;
@@ -65,7 +65,7 @@ public class Class188_Sub1_Sub1 extends Class188_Sub1 {
     final byte[] method1896() {
         aByteArray9335 = new byte[524288];
         anInt9332++;
-        this.method1884((byte) -108);
+        this.method1884();
         return aByteArray9335;
     }
 

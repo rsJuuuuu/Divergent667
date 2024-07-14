@@ -36,7 +36,7 @@ public class Class117_Sub2 extends Class117 implements Interface9 {
         return 0L;
     }
 
-    public final int method24(int i) {
+    public final int method24() {
         anInt5152++;
         return anInt1476;
     }
@@ -87,7 +87,7 @@ public class Class117_Sub2 extends Class117 implements Interface9 {
     }
 
     public final void method22(byte[] bs, int i, int i_13_, byte b) {
-        this.method1165((byte) 110, i, bs);
+        this.method1165(i, bs);
         anInt5149++;
         if (b != 74) {
             aBuffer5154 = null;

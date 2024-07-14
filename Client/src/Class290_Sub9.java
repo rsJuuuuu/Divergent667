@@ -30,7 +30,7 @@ public class Class290_Sub9 extends Class290 {
         if (anIDirect3DVertexShader8151 != null) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8149.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = aD3DToolkit8149.method1378();
-            idirect3ddevice.a(0, class336_sub1.method3881((byte) -122, aFloatArray8150));
+            idirect3ddevice.a(0, class336_sub1.method3881(aFloatArray8150));
         }
         if (i <= 10) {
             anIDirect3DVertexShader8151 = null;
@@ -47,7 +47,7 @@ public class Class290_Sub9 extends Class290 {
             aFloatArray8150 = null;
         }
         method3410(46);
-        method3421(false);
+        method3421();
         method3412();
         method3416();
     }
@@ -63,9 +63,9 @@ public class Class290_Sub9 extends Class290 {
         }
     }
 
-    final void method3417(boolean bool, boolean bool_2_) {
+    final void method3417(boolean bool_2_) {
         if (bool_2_) {
-            method3421(false);
+            method3421();
         }
         anAbstractToolkit3654.method1318(Class236.aClass94_2898, Class385.aClass94_4911);
     }
@@ -104,10 +104,7 @@ public class Class290_Sub9 extends Class290 {
     final void method3419(Interface13 interface13, int i) {
     }
 
-    final void method3421(boolean bool) {
-        if (bool) {
-            aClass5_8152 = null;
-        }
+    final void method3421() {
         if (anIDirect3DVertexShader8151 != null) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8149.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1290();
@@ -124,18 +121,18 @@ public class Class290_Sub9 extends Class290 {
         }
     }
 
-    final void method3413(int i) {
+    final void method3413() {
         if (anIDirect3DVertexShader8151 != null) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8149.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = aD3DToolkit8149.method1378();
-            idirect3ddevice.a(0, class336_sub1.method3881((byte) -120, aFloatArray8150));
+            idirect3ddevice.a(0, class336_sub1.method3881(aFloatArray8150));
         }
 
     }
 
     final boolean method3414(byte b) {
         if (b >= -45) {
-            method3417(true, true);
+            method3417(true);
         }
         return anIDirect3DVertexShader8151 != null;
     }

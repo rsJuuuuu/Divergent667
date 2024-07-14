@@ -12,7 +12,7 @@ public class Node_Sub8 extends Node {
     static int anInt7071;
 
     static void method2423() {
-        for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+        for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
             if (Class251.method3101(cachenode_sub13.anInt9562)) {
                 Node_Sub52.method2974(cachenode_sub13);
             }
@@ -31,7 +31,7 @@ public class Node_Sub8 extends Node {
         Class320_Sub23.aClass123_8432.anInt1581 = 0;
         Node_Sub19.anInt7163 = 0;
         Class320_Sub23.aClass123_8432.aClass192_1574 = null;
-        Class281.method3384((byte) -73);
+        Class281.method3384();
         Class320_Sub29.method3790();
         for (int i_0_ = 0; i_0_ < 2048; i_0_++)
             Class270_Sub2.LOCAL_PLAYERS[i_0_] = null;

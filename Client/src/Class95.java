@@ -13,7 +13,7 @@ public class Class95 {
     protected int anInt1258;
     protected int anInt1259;
 
-    static void method1066(int i) {
+    static void method1066() {
         anInt1255++;
         if (Class61.anInt898 != -1 && Node_Sub38_Sub7.anInt10153 != -1) {
             if (Class61.anInt898 == 1 || Class61.anInt898 == 3 || Node_Sub38_Sub7.anInt10153 != Class61.anInt898 && (Class61.anInt898 == 0 || Node_Sub38_Sub7.anInt10153 == 0)) {
@@ -28,7 +28,7 @@ public class Class95 {
     static void method1067(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         anInt1257++;
         if (Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776() != 0 && i_3_ != 0 && Class23.anInt434 < 50 && i_2_ != -1) {
-            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 1, i_2_, i_3_, i_1_, i, i_5_, i_4_, null);
+            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 1, i_2_, i_3_, i_1_, i, i_5_, i_4_);
         }
     }
 

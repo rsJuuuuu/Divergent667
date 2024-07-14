@@ -59,10 +59,10 @@ public class FixedAnimator extends Animator {
         String string_4_ = null;
         if (i_1_ != -1) {
             Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_1_, -119);
-            if (!class267.method3287((byte) 112) == bool) {
+            if (!class267.method3287() == bool) {
                 return;
             }
-            if (class267.method3287((byte) 110)) {
+            if (class267.method3287()) {
                 string_4_ = class267.aString3450;
             } else {
                 i_3_ = class267.anInt3443;
@@ -100,7 +100,7 @@ public class FixedAnimator extends Animator {
         String[] strings = new String[Class365_Sub1.anInt8759];
         for (int i_9_ = 0; Class365_Sub1.anInt8759 > i_9_; i_9_++)
             strings[i_9_] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(ses[i_9_], 14434).aString1860;
-        Class293.method3461(strings, Node_Sub20.aShortArray7175, 127);
+        Class293.method3461(strings, Node_Sub20.aShortArray7175);
         if (b != -50) {
             method257(null, -79);
         }

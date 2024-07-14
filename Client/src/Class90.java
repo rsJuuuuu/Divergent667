@@ -5,7 +5,7 @@
 public class Class90 {
     private static Class231 aClass231_1201 = new Class231();
 
-    static int method1023(byte[] bs, int i, byte[] bs_0_, int i_1_) {
+    static void method1023(byte[] bs, int i, byte[] bs_0_) {
         synchronized (aClass231_1201) {
             aClass231_1201.aByteArray2745 = bs_0_;
             aClass231_1201.anInt2744 = 9;
@@ -20,7 +20,6 @@ public class Class90 {
             i -= aClass231_1201.anInt2760;
             aClass231_1201.aByteArray2745 = null;
             aClass231_1201.aByteArray2752 = null;
-            return i;
         }
     }
 

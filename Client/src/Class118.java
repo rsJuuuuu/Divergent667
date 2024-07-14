@@ -65,12 +65,12 @@ public class Class118 implements Interface17 {
         /* empty */
     }
 
-    public final int method65(int i, int i_15_) {
+    public final int method65(int i) {
 
         anInt5409++;
         Node_Sub32 node_sub32 = (Node_Sub32) Class18.aHashTable308.method1518(3512, i);
         if (node_sub32 == null) {
-            return Class24.aClass275_442.method65(i, -107);
+            return Class24.aClass275_442.method65(i);
         }
         return node_sub32.anInt7381;
     }

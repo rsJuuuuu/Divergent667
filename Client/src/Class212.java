@@ -123,9 +123,9 @@ public class Class212 implements Interface8 {
             i_45_ += 18 * (i_42_ % 4);
             glsprite.setPosition(i_44_, i_45_);
             if (actor_37_ == actor) {
-                Class93.aGraphicsToolkit1241.method1234(i_45_ - 1, -256, 18, 18, (byte) 93, -1 + i_44_);
+                Class93.aGraphicsToolkit1241.method1234(i_45_ - 1, -256, 18, 18, -1 + i_44_);
             }
-            Class362.method4053(-1 + i_45_, i_45_ + 18, i_44_ - 1, (byte) -92, i_44_ + 18);
+            Class362.method4053(-1 + i_45_, i_45_ + 18, i_44_ - 1, i_44_ + 18);
             EntityNode_Sub1 entitynode_sub1 = Node_Sub14.method2552();
             entitynode_sub1.anInt5922 = i_44_;
             entitynode_sub1.anActor5925 = actor_37_;

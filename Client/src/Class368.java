@@ -5,7 +5,6 @@
 public class Class368 {
     static int anInt4543;
     static OutcommingPacket aClass318_4544 = new OutcommingPacket(81, 8);
-    static int anInt4545;
     static int anInt4546;
     static int anInt4547;
     static Plane[] aPlaneArray4548;
@@ -92,7 +91,7 @@ public class Class368 {
 
     }
 
-    static void method4080(byte b) {
+    static void method4080() {
         int i = 0;
         for (/**/; i < 5; i++)
             Plane.aBooleanArray3401[i] = false;

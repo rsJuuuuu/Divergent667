@@ -15,27 +15,22 @@ public class Node_Sub15_Sub6 extends Node_Sub15 {
     private byte aByte9818;
     private byte aByte9819;
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         clanchat.aBoolean750 = aBoolean9814;
         anInt9815++;
         clanchat.aByte748 = aByte9811;
         clanchat.aByte738 = aByte9819;
-        if (i != 16) {
-            aClass192_9816 = null;
-        }
         clanchat.aByte724 = aByte9812;
         clanchat.aByte751 = aByte9818;
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         aBoolean9814 = buffer.readUnsignedByte() == 1;
         anInt9817++;
-        if (i == 29147) {
-            aByte9818 = buffer.readByte();
-            aByte9811 = buffer.readByte();
-            aByte9819 = buffer.readByte();
-            aByte9812 = buffer.readByte();
-        }
+        aByte9818 = buffer.readByte();
+        aByte9811 = buffer.readByte();
+        aByte9819 = buffer.readByte();
+        aByte9812 = buffer.readByte();
     }
 
     static void method2571(int i) {

@@ -48,7 +48,7 @@ public class Class15 {
                 }
                 node_sub15 = new Node_Sub15_Sub3();
             }
-            node_sub15.method2554(29147, buffer);
+            node_sub15.method2554(buffer);
             aClass312_222.method3625(node_sub15);
         }
     }
@@ -59,11 +59,11 @@ public class Class15 {
 
     final void method219(ClanChat clanchat) {
         anInt227++;
-        if (clanchat.aLong747 != aLong223 || clanchat.anInt757 != anInt226) {
-            throw new RuntimeException("ClanSettingsDelta.applyToClanSettings(): Credentials do not match! Settings.owner:" + Class154.method1699(clanchat.aLong747) + " updateNum:" + clanchat.anInt757 + " delta.owner:" + Class154.method1699(aLong223) + " updateNum:" + anInt226);
+        if (0 != aLong223 || clanchat.anInt757 != anInt226) {
+            throw new RuntimeException("ClanSettingsDelta.applyToClanSettings(): Credentials do not match! Settings.owner:" + Class154.method1699(0) + " updateNum:" + clanchat.anInt757 + " delta.owner:" + Class154.method1699(aLong223) + " updateNum:" + anInt226);
         }
-        for (Node_Sub15 node_sub15 = (Node_Sub15) aClass312_222.method3613(); node_sub15 != null; node_sub15 = (Node_Sub15) aClass312_222.method3620(16776960))
-            node_sub15.method2556(clanchat, 16);
+        for (Node_Sub15 node_sub15 = (Node_Sub15) aClass312_222.method3613(); node_sub15 != null; node_sub15 = (Node_Sub15) aClass312_222.method3620())
+            node_sub15.method2556(clanchat);
         clanchat.anInt757++;
     }
 

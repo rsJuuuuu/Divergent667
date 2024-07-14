@@ -20,16 +20,16 @@ public class Class105 implements Interface10 {
 
     public final void method26(int i) {
         if (i != 99) {
-            method1116(54, -63, -111, (byte) 24, -8, -127, false);
+            method1116(54, -63, -111, -8, -127, false);
         }
         anInt5195++;
         Class357 class357 = Class129.method1553(-1, aClass98_5192.anInt5054, aClass302_5196);
         aClass52_5201 = Class93.aGraphicsToolkit1241.a(class357, Class383.method4199(aClass302_5200, aClass98_5192.anInt5054), true);
     }
 
-    static void method1116(int i, int i_0_, int i_1_, byte b, int i_2_, int i_3_, boolean voice) {
+    static void method1116(int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean voice) {
         if ((voice ? Class213.aNode_Sub27_2512.aClass320_Sub25_7276.method3776() : Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776()) != 0 && i_0_ != 0 && Class23.anInt434 < 50 && i != -1) {
-            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78(voice ? (byte) 3 : (byte) 2, i, i_0_, i_2_, i_3_, 0, i_1_, null);
+            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78(voice ? (byte) 3 : (byte) 2, i, i_0_, i_2_, i_3_, 0, i_1_);
         }
         anInt5198++;
     }
@@ -48,7 +48,7 @@ public class Class105 implements Interface10 {
         anObject5203 = null;
     }
 
-    public final void method27(boolean bool, int i) {
+    public final void method27(boolean bool) {
         anInt5197++;
         if (bool) {
             int i_6_ = aClass98_5192.aClass379_5066.method4160(-108, Node_Sub38_Sub12.anInt10225, aClass98_5192.anInt5062) + aClass98_5192.anInt5065;

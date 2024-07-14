@@ -142,8 +142,8 @@ public class Node_Sub26 extends Node {
                     int i_38_ = i_35_ - i_34_;
                     if (-i_33_ < i_37_ && i_37_ < i_33_ && -i_33_ < i_38_ && i_38_ < i_33_ && bools[i_37_ + i_33_][i_38_ + i_33_]) {
                         aGLToolkit7240.method1428((int) (aNode_Sub29_7247.method2707() * 255.0F) << 24, (byte) 30);
-                        aGLToolkit7240.method1482((byte) 127, aClass69_7248, null, aClass69_7244, null);
-                        aGLToolkit7240.method1477((byte) 85, 0, anInterface1_7256, anInt7243);
+                        aGLToolkit7240.method1482(aClass69_7248, null, aClass69_7244, null);
+                        aGLToolkit7240.method1477(0, anInterface1_7256, anInt7243);
                         return;
                     }
                 }

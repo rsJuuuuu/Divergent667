@@ -27,7 +27,7 @@ public class Class109 {
 
     static void method1127() {
         anInt1374++;
-        for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620(16776960)) {
+        for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620()) {
             if (node_sub19.aBoolean7156) {
                 node_sub19.method2160((byte) 97);
             } else {
@@ -37,7 +37,7 @@ public class Class109 {
                 }
             }
         }
-        for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620(16776960)) {
+        for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620()) {
             if (node_sub19.aBoolean7156) {
                 node_sub19.method2160((byte) 30);
             } else {
@@ -70,7 +70,7 @@ public class Class109 {
         return cachenode_sub10;
     }
 
-    Class109(int i, Index class302, Index class302_0_, Interface14 interface14) {
+    Class109(Index class302, Index class302_0_, Interface14 interface14) {
         aClass61_1370 = new Class61(64);
         anInterface14_1376 = interface14;
         aClass302_1368 = class302;

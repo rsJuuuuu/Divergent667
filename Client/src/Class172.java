@@ -23,7 +23,7 @@ public class Class172 {
         anInt2075++;
         int i_0_ = player.anInt11153;
         Class259 class259 = player.method868((byte) -127);
-        int i_1_ = player.anAnimator10860.method250((byte) -53);
+        int i_1_ = player.anAnimator10860.method250();
         if (-1 == i_1_ || player.aBoolean10867) {
             i_0_ = player.anInt11167;
         } else if (i_1_ == Objects.requireNonNull(class259).anInt3252 || class259.anInt3271 == i_1_ || class259.anInt3293 == i_1_ || class259.anInt3270 == i_1_) {

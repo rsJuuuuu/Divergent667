@@ -12,7 +12,7 @@ public class Class265_Sub1 extends Class265 implements Interface13_Impl3 {
     private int anInt7900;
 
     Class265_Sub1(D3DToolkit d3dtoolkit, Class68 class68, byte[] bs) {
-        super(d3dtoolkit, class68, Class372.aClass372_4594, false, 262144);
+        super(d3dtoolkit, class68, Class372.aClass372_4594, false);
         int anInt7899 = 16;
         anInt7900 = 128;
         int anInt7897 = 128;

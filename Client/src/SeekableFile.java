@@ -205,7 +205,7 @@ public class SeekableFile {
 
     static boolean method3571(int i, int i_21_) {
         anInt3889++;
-        return !(!((0x70000 & i_21_) != 0 | Class321.method3800(i_21_, i)) && !Class262_Sub15_Sub1.method3192(i, i_21_, 512));
+        return !(!((0x70000 & i_21_) != 0 | Class321.method3800(i_21_)) && !Class262_Sub15_Sub1.method3192(i, i_21_, 512));
     }
 
     private void method3572() throws IOException {

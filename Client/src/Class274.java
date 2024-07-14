@@ -23,14 +23,14 @@ public class Class274 implements d {
     static GLSprite aGLSprite4981;
     private Index aClass302_4982;
 
-    private CacheNode_Sub19 method3322(int i, byte b) {
+    private CacheNode_Sub19 method3322(int i) {
         anInt4972++;
         CacheNode cachenode = aClass335_4979.method3849(i);
         if (cachenode != null) {
             return (CacheNode_Sub19) cachenode;
         }
 
-        byte[] bs = aClass302_4966.method3518((byte) -128, i);
+        byte[] bs = aClass302_4966.method3518(i);
         if (bs == null) {
             return null;
         }
@@ -44,13 +44,10 @@ public class Class274 implements d {
         if (b != 0) {
             aClass302_4966 = null;
         }
-        return Objects.requireNonNull(method3322(i_2_, (byte) 115)).method2405(aClass302_4982, f, aClass91Array4967[i_2_].aBoolean1216, this, bool, i_1_, i, b);
+        return Objects.requireNonNull(method3322(i_2_)).method2405(aClass302_4982, f, aClass91Array4967[i_2_].aBoolean1216, this, bool, i_1_, i, b);
     }
 
     public final int method6(int i) {
-        if (i < 84) {
-            anInt4976 = 79;
-        }
         anInt4970++;
         return anInt4976;
     }
@@ -74,7 +71,7 @@ public class Class274 implements d {
 
     public final boolean method7(int i, int i_7_) {
         anInt4969++;
-        CacheNode_Sub19 cachenode_sub19 = method3322(i_7_, (byte) 81);
+        CacheNode_Sub19 cachenode_sub19 = method3322(i_7_);
         if (i != 9900) {
             aClass91Array4967 = null;
         }
@@ -264,7 +261,7 @@ public class Class274 implements d {
         if (b >= -109) {
             method3325(true, -60, -92, -10);
         }
-        return Objects.requireNonNull(method3322(i_33_, (byte) -69)).method2400((byte) -114, i, this, aClass302_4982, aClass91Array4967[i_33_].aBoolean1216, i_34_);
+        return Objects.requireNonNull(method3322(i_33_)).method2400((byte) -114, i, this, aClass302_4982, aClass91Array4967[i_33_].aBoolean1216, i_34_);
     }
 
     public final int[] method8(float f, int i, int i_35_, boolean bool, boolean bool_36_, int i_37_) {
@@ -272,7 +269,7 @@ public class Class274 implements d {
             aClass124_4975 = null;
         }
         anInt4968++;
-        return Objects.requireNonNull(method3322(i, (byte) -103)).method2402(i_35_, f, aClass91Array4967[i].aBoolean1216, i_37_, this, aClass302_4982);
+        return Objects.requireNonNull(method3322(i)).method2402(i_35_, f, aClass91Array4967[i].aBoolean1216, i_37_, this, aClass302_4982);
     }
 
     Class274(Index class302, Index class302_38_, Index class302_39_) {

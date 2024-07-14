@@ -7,10 +7,7 @@ public class Class154 {
     static int anInt1950;
     static IncommingPacket aClass192_1951 = new IncommingPacket(19, 8);
 
-    static Class329[] method1698(int i) {
-        if (i < 9) {
-            return null;
-        }
+    static Class329[] method1698() {
         anInt1950++;
         return new Class329[]{Class240.aClass329_2943, Class189_Sub1.aClass329_6887, Class379.aClass329_4873, Class229.aClass329_2730, CacheNode_Sub2.aClass329_9436, CacheNode_Sub11.aClass329_9538, Class362.aClass329_4498};
     }
@@ -23,22 +20,19 @@ public class Class154 {
         if (l % 37L == 0) {
             return null;
         }
-        if (25589 != 25589) {
-            method1698(61);
-        }
         int i_0_ = 0;
         long l_1_ = l;
         while (l_1_ != 0L) {
             l_1_ /= 37L;
             i_0_++;
         }
-        StringBuilder stringbuffer = new StringBuilder(i_0_);
+        StringBuilder stringBuilder = new StringBuilder(i_0_);
         while (l != 0L) {
             long l_2_ = l;
             l /= 37L;
-            stringbuffer.append(Class174.aCharArray2095[(int) (-(l * 37L) + l_2_)]);
+            stringBuilder.append(Class174.aCharArray2095[(int) (-(l * 37L) + l_2_)]);
         }
-        return stringbuffer.reverse().toString();
+        return stringBuilder.reverse().toString();
     }
 
     public static void method1700() {

@@ -20,28 +20,15 @@ public class ClientScript extends CacheNode {
     static boolean aBoolean9510 = false;
     protected int anInt9511;
     protected int anInt9512;
-    static int anInt9513;
 
-    static void method2321(int i, IComponentDefinitions widget) {
+    static void method2321(IComponentDefinitions widget) {
         if (widget.anInt4824 == Node_Sub12.anInt5453) {
             Class195.aBooleanArray2387[widget.anInt4703] = true;
         }
         anInt9509++;
-        if (i != -1) {
-            method2321(122, null);
-        }
-    }
-
-    static boolean method2322(int i, int i_0_, int i_1_) {
-        if (i < 41) {
-            return false;
-        }
-        anInt9513++;
-        return (0x400 & i_0_) != 0;
     }
 
     public static void method2323() {
-
         aClass216_9498 = null;
     }
 }

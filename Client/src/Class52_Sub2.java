@@ -14,10 +14,10 @@ public class Class52_Sub2 extends Class52 {
         aGLToolkit5563.method1417();
         aGLToolkit5563.method1444(-2, aClass169_Sub2_Sub1_5565);
         if (aBoolean5564 || bool) {
-            aGLToolkit5563.method1474(126, 8448, 7681);
+            aGLToolkit5563.method1474(8448, 7681);
             aGLToolkit5563.method1464(34168, 768, 0);
         } else {
-            aGLToolkit5563.method1474(127, 7681, 7681);
+            aGLToolkit5563.method1474(7681, 7681);
         }
         OpenGL.glColor4ub((byte) (i_1_ >> 16), (byte) (i_1_ >> 8), (byte) i_1_, (byte) (i_1_ >> 24));
         OpenGL.glTranslatef((float) i, (float) i_0_, 0.0F);
@@ -34,14 +34,14 @@ public class Class52_Sub2 extends Class52 {
         aGLToolkit5563.method1417();
         aGLToolkit5563.method1444(-2, aClass169_Sub2_Sub1_5565);
         if (aBoolean5564 || bool) {
-            aGLToolkit5563.method1474(-122, 8448, 7681);
+            aGLToolkit5563.method1474(8448, 7681);
             aGLToolkit5563.method1464(34168, 768, 0);
         } else {
-            aGLToolkit5563.method1474(127, 7681, 7681);
+            aGLToolkit5563.method1474(7681, 7681);
         }
         aGLToolkit5563.method1457(33984, 1);
         aGLToolkit5563.method1444(-2, class169_sub2_sub1);
-        aGLToolkit5563.method1474(126, 8448, 7681);
+        aGLToolkit5563.method1474(8448, 7681);
         aGLToolkit5563.method1464(34168, 768, 0);
         OpenGL.glTexGeni(8192, 9472, 9216);
         OpenGL.glTexGeni(8193, 9472, 9216);
@@ -58,7 +58,7 @@ public class Class52_Sub2 extends Class52 {
         OpenGL.glDisable(3168);
         OpenGL.glDisable(3169);
         aGLToolkit5563.method1464(5890, 768, 0);
-        aGLToolkit5563.method1474(-95, 8448, 8448);
+        aGLToolkit5563.method1474(8448, 8448);
         aGLToolkit5563.method1444(-2, null);
         aGLToolkit5563.method1457(33984, 0);
         if (aBoolean5564 || bool) {

@@ -25,8 +25,8 @@ public class Node_Sub38_Sub28 extends Node_Sub38 {
         aClass192_10402 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (!bool) {
+    final void method2780(BufferedStream buffer, int i) {
+        if (!false) {
             while_257_:
             do {
                 do {
@@ -142,9 +142,6 @@ public class Node_Sub38_Sub28 extends Node_Sub38 {
 
     final void method2785() {
         anInt10395++;
-        if (7 != 7) {
-            anInt10393 = -7;
-        }
         method2886();
     }
 

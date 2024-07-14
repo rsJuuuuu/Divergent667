@@ -49,7 +49,7 @@ public class Class140 {
         if (i_2_ == 1) {
             anInt1740 = buffer.readUnsignedShort();
         } else if (i_2_ == 2) {
-            anInt1737 = buffer.read24BitInteger();
+            anInt1737 = buffer.readInt24();
         } else if (i_2_ == 3) {
             aBoolean1741 = true;
         } else if (i_2_ == 4) {

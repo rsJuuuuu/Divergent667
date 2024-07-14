@@ -38,7 +38,7 @@ abstract class Node_Sub36 extends Node {
                     do {
                         Node_Sub8 node_sub8_4_;
                         do {
-                            node_sub8_4_ = (Node_Sub8) node_sub11.aClass312_7104.method3620(16776960);
+                            node_sub8_4_ = (Node_Sub8) node_sub11.aClass312_7104.method3620();
                             if (node_sub8_4_ == null) {
                                 break while_204_;
                             }
@@ -46,7 +46,7 @@ abstract class Node_Sub36 extends Node {
                         animable_sub3_sub1.anInt11005 = node_sub8_4_.anInt7067;
                         animable_sub3_sub1.anInt11010 = node_sub8_4_.anInt7065;
                         for (; ; ) {
-                            Node_Sub8 node_sub8_5_ = (Node_Sub8) node_sub11.aClass312_7104.method3620(16776960);
+                            Node_Sub8 node_sub8_5_ = (Node_Sub8) node_sub11.aClass312_7104.method3620();
                             if (node_sub8_5_ == null) {
                                 break;
                             }
@@ -100,7 +100,7 @@ abstract class Node_Sub36 extends Node {
         Class213.aNode_Sub27_2512.method2690(110, 2, Class213.aNode_Sub27_2512.aClass320_Sub18_7303);
         Class213.aNode_Sub27_2512.method2690(92, 1, Class213.aNode_Sub27_2512.aClass320_Sub15_7273);
         Class320_Sub12.method3728(0);
-        Class120.method1228(-125);
+        Class120.method1228();
         Class152.aBoolean1942 = true;
     }
 

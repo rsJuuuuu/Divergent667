@@ -26,7 +26,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9 {
         anInt9730++;
         aNode_Sub9_Sub3_9740.method2426(i);
         while_260_:
-        for (Node_Sub10 node_sub10 = (Node_Sub10) aClass312_9739.method3613(); node_sub10 != null; node_sub10 = (Node_Sub10) aClass312_9739.method3620(16776960)) {
+        for (Node_Sub10 node_sub10 = (Node_Sub10) aClass312_9739.method3613(); node_sub10 != null; node_sub10 = (Node_Sub10) aClass312_9739.method3620()) {
             if (!aNode_Sub9_Sub1_9734.method2444(node_sub10, (byte) 103)) {
                 int i_0_ = i;
                 while (node_sub10.anInt7077 < i_0_) {
@@ -87,7 +87,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9 {
         anInt9738++;
         Node_Sub10 node_sub10;
         do {
-            node_sub10 = (Node_Sub10) aClass312_9739.method3620(16776960);
+            node_sub10 = (Node_Sub10) aClass312_9739.method3620();
             if (node_sub10 == null) {
                 return null;
             }
@@ -105,7 +105,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9 {
             if (Class320_Sub13.aBoolean8335) {
                 glsprite = Class93.aGraphicsToolkit1241.a(Class383.method4191(class302, i), true);
             } else {
-                glsprite = Class97.method1077(class302.method3518((byte) -126, i));
+                glsprite = Class97.method1077(class302.method3518(i));
             }
             Class315.aClass61_4031.method601(glsprite, 25566, i);
         }
@@ -173,7 +173,7 @@ public class Node_Sub9_Sub4 extends Node_Sub9 {
         anInt9729++;
         aNode_Sub9_Sub3_9740.method2427(is, i, i_14_);
         while_262_:
-        for (Node_Sub10 node_sub10 = (Node_Sub10) aClass312_9739.method3613(); node_sub10 != null; node_sub10 = (Node_Sub10) aClass312_9739.method3620(16776960)) {
+        for (Node_Sub10 node_sub10 = (Node_Sub10) aClass312_9739.method3613(); node_sub10 != null; node_sub10 = (Node_Sub10) aClass312_9739.method3620()) {
             if (!aNode_Sub9_Sub1_9734.method2444(node_sub10, (byte) -99)) {
                 int i_15_ = i;
                 int i_16_ = i_14_;

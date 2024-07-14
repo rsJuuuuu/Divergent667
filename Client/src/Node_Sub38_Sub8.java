@@ -23,7 +23,7 @@ class Node_Sub38_Sub8 extends Node_Sub38 {
     static boolean method2812(int i, int i_0_) {
         anInt10167++;
         boolean bool_1_ = (0x37 & i_0_) != 0 ? Class303.method3538(i_0_, -128, i) : Node_Sub41.method2932(-125, i, i_0_);
-        return bool_1_ | (Class278.method3367(i_0_, i, (byte) 87) | (i & 0x10000) != 0);
+        return bool_1_ | (Class278.method3367(i) | (i & 0x10000) != 0);
     }
 
     int[][] method2778(int i) {
@@ -99,9 +99,9 @@ class Node_Sub38_Sub8 extends Node_Sub38 {
         anIntArray10165 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10164++;
-        if (!bool) {
+        if (!false) {
             if (i == 0) {
                 anInt10173 = buffer.readUnsignedShort();
             }

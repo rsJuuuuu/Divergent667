@@ -33,12 +33,12 @@ public class Class339_Sub2 extends Class339 {
         aClass379_8641 = null;
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8651++;
-        aGLToolkit4202.method1474(126, 8448, 260);
+        aGLToolkit4202.method1474(8448, 260);
     }
 
-    static void method3928(int i, Packet packet) {
+    static void method3928(Packet packet) {
         anInt8648++;
         packet.writeInt(Class181.aClass302_2158.method3505());
         packet.writeInt(Class75.aClass302_1003.method3505());
@@ -141,7 +141,7 @@ public class Class339_Sub2 extends Class339 {
                 aGLToolkit4202.method1438((byte) 81, 1.0F, 0.0F);
                 aGLToolkit4202.method1457(33984, 0);
             }
-            aGLToolkit4202.method1474(127, 8448, 8448);
+            aGLToolkit4202.method1474(8448, 8448);
             OpenGL.glMatrixMode(5890);
             OpenGL.glPopMatrix();
             OpenGL.glMatrixMode(5888);
@@ -167,7 +167,7 @@ public class Class339_Sub2 extends Class339 {
         anInt8640++;
         aClass25_8644.method307(0);
         aGLToolkit4202.method1457(33984, 1);
-        aGLToolkit4202.method1474(-12, 260, 7681);
+        aGLToolkit4202.method1474(260, 7681);
         aGLToolkit4202.method1464(34168, 768, 0);
         OpenGL.glTexGeni(8192, 9472, 9216);
         OpenGL.glEnable(3168);
@@ -183,7 +183,7 @@ public class Class339_Sub2 extends Class339 {
         aClass25_8644.method309();
         aClass25_8644.method307(1);
         aGLToolkit4202.method1457(33984, 1);
-        aGLToolkit4202.method1474(126, 8448, 8448);
+        aGLToolkit4202.method1474(8448, 8448);
         aGLToolkit4202.method1464(5890, 768, 0);
         OpenGL.glDisable(3168);
         aGLToolkit4202.method1457(33984, 0);

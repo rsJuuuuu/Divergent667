@@ -48,13 +48,13 @@ public class Mobile_Sub4 extends Mobile {
         }
         if (anEntityNode_Sub4_10965 != null) {
             anEntityNode_Sub4_10965.method952(graphicstoolkit, Class174.clientCycle, class300s, class218s);
-            anEntityNode_Sub4_10965.method967(plane, aShort9119, aShort9130, aShort9120, aShort9124);
+            anEntityNode_Sub4_10965.method967(plane);
         }
     }
 
     private DrawableModel method908(int i_0_, GraphicsToolkit graphicstoolkit, int i_1_) {
         anInt10984++;
-        Class195 class195 = Class16.aClass101_228.method1090(-81, i_0_);
+        Class195 class195 = Class16.aClass101_228.method1090(i_0_);
         Plane plane = Node_Sub38_Sub37.aPlaneArray10466[this.plane];
         Plane plane_2_ = aByte5931 < 3 ? Node_Sub38_Sub37.aPlaneArray10466[1 + aByte5931] : null;
         if (anAnimator10968 == null || anAnimator10968.method238(-18)) {
@@ -171,7 +171,7 @@ public class Mobile_Sub4 extends Mobile {
         anInt10991 = 0;
         gfxId = i;
         anInt10976 = i_16_;
-        Class195 class195 = Class16.aClass101_228.method1090(-122, gfxId);
+        Class195 class195 = Class16.aClass101_228.method1090(gfxId);
         int i_17_ = class195.anInt2394;
         if (i_17_ != -1) {
             anAnimator10968 = new AnimableAnimator(this);
@@ -212,7 +212,7 @@ public class Mobile_Sub4 extends Mobile {
         String[] strings = new String[Class365_Sub1.anInt8759];
         for (int i_26_ = 0; i_26_ < Class365_Sub1.anInt8759; i_26_++)
             strings[i_26_] = Node_Sub36_Sub1.aClass109_10035.method1128(ses[i_26_]).method2332();
-        Class293.method3461(strings, Node_Sub20.aShortArray7175, -43);
+        Class293.method3461(strings, Node_Sub20.aShortArray7175);
     }
 
     final void method914(int i) {
@@ -233,7 +233,7 @@ public class Mobile_Sub4 extends Mobile {
         return null;
     }
 
-    static void method915(int i, Class54 class54, GraphicsToolkit graphicstoolkit) {
+    static void method915(int i, Class54 class54) {
         anInt10971++;
         if (Class290_Sub11.anIntArray8180 != null && i <= class54.aByte824) {
             for (int i_28_ = 0; i_28_ < Class290_Sub11.anIntArray8180.length; i_28_++) {
@@ -378,15 +378,15 @@ public class Mobile_Sub4 extends Mobile {
         }
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_44_, byte b, int i_45_, Animable animable) {
+    final void method816(int i, boolean bool, int i_44_, byte b, int i_45_, Animable animable) {
         if (b < 101) {
-            method807(35, null);
+            method807(null);
         }
         anInt10962++;
         throw new IllegalStateException();
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10990++;
         DrawableModel drawablemodel = method908(gfxId, graphicstoolkit, (anInt10976 == 0 ? 0 : 5) | 0x800);
         if (drawablemodel == null) {
@@ -398,7 +398,7 @@ public class Mobile_Sub4 extends Mobile {
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
         method907(class336, drawablemodel, graphicstoolkit);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(false, (byte) 99, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(false, 1);
         if (Node_Sub15_Sub10.aBoolean9850) {
             drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
         } else {
@@ -418,7 +418,7 @@ public class Mobile_Sub4 extends Mobile {
         return entitynode_sub6;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10966++;
         return false;
     }

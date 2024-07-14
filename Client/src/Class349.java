@@ -27,7 +27,7 @@ public class Class349 {
         if (i != 0) {
             method3986();
             aGLToolkit4304.method1444(-2, aClass169_Sub2_4310);
-            aGLToolkit4304.method1477((byte) 117, 0, interface1, i);
+            aGLToolkit4304.method1477(0, interface1, i);
         }
     }
 

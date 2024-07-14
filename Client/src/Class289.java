@@ -64,7 +64,7 @@ public class Class289 {
     private void method3409(BufferedStream buffer, int i) {
         anInt3639++;
         if (i == 1) {
-            anInt3631 = Node_Sub15_Sub12.method2582(buffer.read24BitInteger());
+            anInt3631 = Node_Sub15_Sub12.method2582(buffer.readInt24());
         } else if (i == 2) {
             anInt3640 = buffer.readUnsignedByte();
         } else if (i == 3) {
@@ -75,7 +75,7 @@ public class Class289 {
         } else if (i == 5) {
             aBoolean3636 = false;
         } else if (i == 7) {
-            anInt3629 = Node_Sub15_Sub12.method2582(buffer.read24BitInteger());
+            anInt3629 = Node_Sub15_Sub12.method2582(buffer.readInt24());
         } else if (i == 8) {
             aClass71_3635.anInt961 = anInt3637;
         } else if (i == 9) {
@@ -87,7 +87,7 @@ public class Class289 {
         } else if (i == 12) {
             aBoolean3643 = true;
         } else if (i == 13) {
-            anInt3646 = buffer.read24BitInteger();
+            anInt3646 = buffer.readInt24();
         } else if (i == 14) {
             anInt3634 = buffer.readUnsignedByte() << 2;
         } else if (i == 16) {

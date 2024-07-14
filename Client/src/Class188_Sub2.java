@@ -7,7 +7,6 @@ class Class188_Sub2 extends Class188 {
     static int anInt6867;
     static boolean aBoolean6868 = false;
     static int anInt6869;
-    private byte[] aByteArray6870;
     private int anInt6871;
     static int anInt6872;
     static int anInt6873;
@@ -125,16 +124,13 @@ class Class188_Sub2 extends Class188 {
             anIntArray6874[i_48_] = (short) (int) (Math.pow((float) 0.45, i_48_) * 4096.0);
     }
 
-    final void method1886(int i) {
-        if (i != 4096) {
-            anInt6878 = -80;
-        }
+    final void method1886() {
         anInt6878 = Math.abs(anInt6878);
         anInt6867++;
         if (anInt6878 >= 4096) {
             anInt6878 = 4095;
         }
-        method1905((byte) -11, anInt6871++, (byte) (anInt6878 >> 4));
+        method1905(anInt6871++, (byte) (anInt6878 >> 4));
         anInt6878 = 0;
     }
 
@@ -154,11 +150,7 @@ class Class188_Sub2 extends Class188 {
         aClass68_6875 = null;
     }
 
-    void method1905(byte b, int i, byte b_51_) {
-        aByteArray6870[anInt6871++] = (byte) (127 + (Node_Sub30.method2723(b_51_, 255) >> 1));
-        anInt6872++;
-        if (b != -11) {
-            method1886(33);
-        }
+    void method1905(int i, byte b_51_) {
+        throw new IndexOutOfBoundsException();
     }
 }

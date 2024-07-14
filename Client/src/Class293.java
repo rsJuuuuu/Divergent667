@@ -9,7 +9,7 @@ public class Class293 {
     static int anInt3683;
     static int anInt3684;
 
-    static void method3461(String[] strings, short[] ses, int i) {
+    static void method3461(String[] strings, short[] ses) {
         Class225.method2108(strings.length - 1, ses, 0, strings, -25575);
         anInt3680++;
     }

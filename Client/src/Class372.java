@@ -38,7 +38,7 @@ public class Class372 {
         anInt4587++;
         if (actor.anIntArray10817 != null) {
             int i_1_ = actor.anIntArray10817[1 + i_0_];
-            if (actor.anAnimator10876.method250((byte) -126) != i_1_) {
+            if (actor.anAnimator10876.method250() != i_1_) {
                 actor.anAnimator10876.method234(actor.anAnimator10876.method223(), i_1_);
                 actor.anInt10900 = actor.anInt10904;
             }

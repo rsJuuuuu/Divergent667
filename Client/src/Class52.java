@@ -642,7 +642,7 @@ abstract class Class52 {
         } else {
             is_93_ = new int[]{i_90_};
         }
-        int i_94_ = aClass357_789.method4029(Class9.aStringArray167, is_93_, -78, glsprites, string);
+        int i_94_ = aClass357_789.method4029(Class9.aStringArray167, is_93_, glsprites, string);
         if (i_84_ == -1) {
             i_84_ = i_87_ / i_89_;
             if (i_84_ <= 0) {
@@ -651,7 +651,7 @@ abstract class Class52 {
         }
         if (i_84_ > 0 && i_94_ >= i_84_) {
             i_94_ = i_84_;
-            Class9.aStringArray167[i_84_ - 1] = aClass357_789.method4032(Class9.aStringArray167[i_84_ - 1], glsprites, i_90_, -1);
+            Class9.aStringArray167[i_84_ - 1] = aClass357_789.method4032(Class9.aStringArray167[i_84_ - 1], glsprites, i_90_);
         }
         if (i == 3 && i_94_ == 1) {
             i = 1;
@@ -760,7 +760,7 @@ abstract class Class52 {
         }
     }
 
-    final void method543(byte b, int i, String string, int i_113_, int i_114_, int i_115_) {
+    final void method543(int i, String string, int i_113_, int i_114_, int i_115_) {
         anInt802++;
         if (string != null) {
             method534(i_113_, i_114_);

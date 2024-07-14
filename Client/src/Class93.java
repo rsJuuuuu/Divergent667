@@ -73,15 +73,15 @@ abstract class Class93 {
         Node_Sub11.method2543(i_9_);
         IComponentDefinitions widget = Class76.method771(i_10_);
         if (widget != null) {
-            ClientScript.method2321(-1, widget);
+            ClientScript.method2321(widget);
         }
         if (Node_Sub25_Sub3.aWidget9990 != null) {
-            ClientScript.method2321(-1, Node_Sub25_Sub3.aWidget9990);
+            ClientScript.method2321(Node_Sub25_Sub3.aWidget9990);
             Node_Sub25_Sub3.aWidget9990 = null;
         }
         Node_Sub8.method2423();
         if (widget != null) {
-            Class270_Sub1.method3300(widget, (byte) -38, !bool);
+            Class270_Sub1.method3300(widget, !bool);
         }
         if (!bool) {
             ClientScriptsExecutor.parseIComponentScript(i_9_);
@@ -92,7 +92,7 @@ abstract class Class93 {
         return node_sub2;
     }
 
-    abstract Node_Sub5 method1048(byte b);
+    abstract Node_Sub5 method1048();
 
     static void method1049(int[] is, int i, int[] is_12_, int i_13_) {
         if (i_13_ < i) {

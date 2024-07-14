@@ -31,9 +31,9 @@ public class Class184 {
 
     private void method1845(int i, BufferedStream buffer) {
         if (i == 1) {
-            aString2211 = buffer.method2180((byte) 99);
+            aString2211 = buffer.method2180();
         } else if (i == 2) {
-            aString2202 = buffer.method2180((byte) 125);
+            aString2202 = buffer.method2180();
         } else if (i == 3) {
             int i_1_ = buffer.readUnsignedByte();
             int[][] anIntArrayArray2208 = new int[i_1_][3];
@@ -114,7 +114,7 @@ public class Class184 {
                 }
                 for (int i_7_ = 0; i_5_ > i_7_; i_7_++) {
                     boolean bool = buffer.readUnsignedByte() == 1;
-                    int i_8_ = buffer.read24BitInteger();
+                    int i_8_ = buffer.readInt24();
                     Node node;
                     if (bool) {
                         node = new Node_Sub18(buffer.readString());

@@ -80,7 +80,7 @@ public class Node_Sub10 extends Node {
         /* empty */
     }
 
-    final void method2541(int i) {
+    final void method2541() {
         aNode_Sub9_Sub2_7095 = null;
         anInt7089++;
         aClass240_7094 = null;

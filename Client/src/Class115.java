@@ -8,7 +8,7 @@ abstract class Class115 {
     static IncommingPacket aClass192_1466 = new IncommingPacket(23, 6);
     static IncommingPacket aClass192_1467 = new IncommingPacket(35, 2);
 
-    static void method1159(int i) {
+    static void method1159() {
         Class290_Sub7.anIntArray8131 = null;
         Class212.anIntArray5128 = null;
         anInt1464++;
@@ -16,9 +16,6 @@ abstract class Class115 {
         Animable_Sub3.anIntArray9142 = null;
         Class190.anIntArray2328 = null;
         Class217.aBoolean2552 = false;
-        if (i > -120) {
-            method1159(52);
-        }
     }
 
     abstract CacheNode_Sub20 method1160(CacheNode_Sub20 cachenode_sub20);

@@ -41,7 +41,7 @@ public class EntityNode_Sub6 extends EntityNode {
         }
         int[] is = new int[262144];
         Arrays.fill(is, -16777216);
-        Class10.aGLSprite172 = graphicstoolkit.method1235(512, 512, 512, is, 7468);
+        Class10.aGLSprite172 = graphicstoolkit.method1235(512, 512, 512, is);
         Class55.method562();
         int i_8_ = 238 + (int) (Math.random() * 20.0) + (-10 + (-10 + (238 + (int) (Math.random() * 20.0)) << 8) + (-10 + ((int) (20.0 * Math.random()) + 238) << 16)) | -16777216;
         int i_9_ = (-10 + (int) (Math.random() * 20.0) + 238 | -1643839744) << 16;

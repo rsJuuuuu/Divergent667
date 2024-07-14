@@ -57,7 +57,7 @@ public class Class290_Sub3 extends Class290 {
         return aBoolean8083;
     }
 
-    final void method3417(boolean bool, boolean bool_9_) {
+    final void method3417(boolean bool_9_) {
         if (!bool_9_) {
             anInt8081++;
         }

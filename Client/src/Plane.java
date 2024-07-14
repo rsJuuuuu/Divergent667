@@ -119,7 +119,7 @@ abstract class Plane {
             Class219.anInt2627 = (Node_Sub38_Sub5.aBoolean10130 ? 26 : 22) + Class21.anInt355 * 16;
             i_58_ = 21 + Class21.anInt355 * 16;
         } else {
-            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
                 int i_60_ = Node_Sub19.method2609((byte) 110, cachenode_sub13);
                 if (i_57_ < i_60_) {
                     i_57_ = i_60_;
@@ -170,19 +170,19 @@ abstract class Plane {
 
     static {
         aBooleanArray3401 = new boolean[5];
-        aClass133_3406 = new Class133(14, 0);
-        aClass133_3409 = new Class133(15, 4);
-        aClass133_3411 = new Class133(16, -2);
-        aClass133_3412 = new Class133(17, 0);
-        aClass133_3413 = new Class133(19, -2);
-        aClass133_3414 = new Class133(22, -2);
-        aClass133_3415 = new Class133(23, 4);
-        aClass133_3416 = new Class133(24, -1);
-        aClass133_3417 = new Class133(26, 0);
-        aClass133_3418 = new Class133(27, 0);
-        aClass133_3419 = new Class133(28, -2);
-        aClass133_3420 = new Class133(29, -2);
-        aClass133_3421 = new Class133(30, -2);
+        aClass133_3406 = new Class133(14);
+        aClass133_3409 = new Class133(15);
+        aClass133_3411 = new Class133(16);
+        aClass133_3412 = new Class133(17);
+        aClass133_3413 = new Class133(19);
+        aClass133_3414 = new Class133(22);
+        aClass133_3415 = new Class133(23);
+        aClass133_3416 = new Class133(24);
+        aClass133_3417 = new Class133(26);
+        aClass133_3418 = new Class133(27);
+        aClass133_3419 = new Class133(28);
+        aClass133_3420 = new Class133(29);
+        aClass133_3421 = new Class133(30);
         aClass133Array3422 = new Class133[32];
         Class133[] class133s = Class320_Sub11.method3723();
         for (Class133 class133 : class133s) aClass133Array3422[class133.packetId] = class133;

@@ -20,10 +20,7 @@ public class Class188_Sub2_Sub1 extends Class188_Sub2 {
         super();
     }
 
-    final void method1905(byte b, int i, byte b_0_) {
-        if (b != -11) {
-            aByteArray9351 = null;
-        }
+    final void method1905(int i, byte b_0_) {
         anInt9355++;
         b_0_ = (byte) ((b_0_ >> 1 & 0x7f) + 127);
         int i_1_ = i * 2;
@@ -70,7 +67,7 @@ public class Class188_Sub2_Sub1 extends Class188_Sub2 {
     final byte[] method1909() {
         aByteArray9351 = new byte[524288];
         anInt9358++;
-        this.method1884((byte) 53);
+        this.method1884();
         return aByteArray9351;
     }
 

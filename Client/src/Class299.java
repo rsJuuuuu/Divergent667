@@ -23,10 +23,8 @@ public class Class299 {
         return anInt3749 - 1;
     }
 
-    private void method3488(GraphicsToolkit graphicstoolkit, String string, int[] is, int i, int i_0_, int i_1_, boolean bool) {
-        if (i_1_ == 0) {
-            bool = false;
-        }
+    private void method3488(String string, int i, int i_0_, int i_1_) {
+        boolean bool = i_1_ != 0;
         i_1_ |= -16777216;
         for (int i_2_ = 0; i_2_ < string.length(); i_2_++) {
             int i_3_ = anIntArray3747[string.charAt(i_2_)];
@@ -55,25 +53,12 @@ public class Class299 {
         int i_8_ = method3490(string) / 2;
         graphicstoolkit.K(anIntArray3748);
         if (i - i_8_ <= anIntArray3748[2] && i + i_8_ >= anIntArray3748[0] && i_6_ - anInt3743 <= anIntArray3748[3] && i_6_ + anInt3749 >= anIntArray3748[1]) {
-            method3488(graphicstoolkit, string, anIntArray3748, i - i_8_, i_6_, i_7_, true);
+            method3488(string, i - i_8_, i_6_, i_7_);
         }
     }
 
-    private void method3492(GraphicsToolkit graphicstoolkit, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
+    private void method3492(GraphicsToolkit graphicstoolkit, Font font, FontMetrics fontmetrics, char c, int i) {
         int i_9_ = fontmetrics.charWidth(c);
-        int i_10_ = i_9_;
-        if (bool) {
-            try {
-                if (c == '/') {
-                    bool = false;
-                }
-                if (c == 'f' || c == 't' || c == 'w' || c == 'v' || c == 'k' || c == 'x' || c == 'y' || c == 'A' || c == 'V' || c == 'W') {
-                    i_9_++;
-                }
-            } catch (Exception exception) {
-                /* empty */
-            }
-        }
         int i_11_ = fontmetrics.getMaxAscent();
         int i_12_ = fontmetrics.getMaxAscent() + fontmetrics.getMaxDescent();
         int i_13_ = fontmetrics.getHeight();
@@ -84,9 +69,6 @@ public class Class299 {
         graphics.setColor(Color.white);
         graphics.setFont(font);
         graphics.drawString(String.valueOf(c), 0, i_11_);
-        if (bool) {
-            graphics.drawString(String.valueOf(c), 1, i_11_);
-        }
         int[] is = new int[i_9_ * i_12_];
         PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i_9_, i_12_, is, 0, i_9_);
         try {
@@ -114,8 +96,8 @@ public class Class299 {
         }
         anInt3743 = i_11_ - i_14_;
         anInt3749 = i_13_;
-        anIntArray3745[i] = i_10_;
-        aGLSpriteArray3746[i] = graphicstoolkit.method1235(i_9_, i_9_, i_12_, is, 7468);
+        anIntArray3745[i] = i_9_;
+        aGLSpriteArray3746[i] = graphicstoolkit.method1235(i_9_, i_9_, i_12_, is);
     }
 
     public static void method3493() {
@@ -128,7 +110,7 @@ public class Class299 {
         Font font = new Font("Helvetica", Font.BOLD, i);
         FontMetrics fontmetrics = component.getFontMetrics(font);
         for (int i_19_ = 0; i_19_ < anInt3744; i_19_++)
-            method3492(graphicstoolkit, font, fontmetrics, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\u00a3$%^&*()-_=+[{]};:'@#~,<.>/?\\| \u00c4\u00cb\u00cf\u00d6\u00dc\u00e4\u00eb\u00ef\u00f6\u00fc\u00ff\u00df\u00c1\u00c0\u00c9\u00c8\u00cd\u00cc\u00d3\u00d2\u00da\u00d9\u00e1\u00e0\u00e9\u00e8\u00ed\u00ec\u00f3\u00f2\u00fa\u00f9\u00c2\u00ca\u00ce\u00d4\u00db\u00e2\u00ea\u00ee\u00f4\u00fb\u00c6\u00e6\u00e3\u00c3\u00f5\u00d5\u00e7\u00c7".charAt(i_19_), i_19_, false);
+            method3492(graphicstoolkit, font, fontmetrics, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\u00a3$%^&*()-_=+[{]};:'@#~,<.>/?\\| \u00c4\u00cb\u00cf\u00d6\u00dc\u00e4\u00eb\u00ef\u00f6\u00fc\u00ff\u00df\u00c1\u00c0\u00c9\u00c8\u00cd\u00cc\u00d3\u00d2\u00da\u00d9\u00e1\u00e0\u00e9\u00e8\u00ed\u00ec\u00f3\u00f2\u00fa\u00f9\u00c2\u00ca\u00ce\u00d4\u00db\u00e2\u00ea\u00ee\u00f4\u00fb\u00c6\u00e6\u00e3\u00c3\u00f5\u00d5\u00e7\u00c7".charAt(i_19_), i_19_);
     }
 
     static {

@@ -15,7 +15,7 @@ public class Class80 implements Interface15_Impl2 {
     private final D3DToolkit aD3DToolkit9081;
     private boolean aBoolean9082 = false;
 
-    public final boolean method39(int i) {
+    public final boolean method39() {
         if (aBoolean9082 && lh.a((byte) 96, anIDirect3DVertexBuffer9080.Unlock())) {
             aBoolean9082 = false;
             return true;
@@ -42,22 +42,21 @@ public class Class80 implements Interface15_Impl2 {
             anInt9077 = anInt9076;
         }
         if (i_2_ != -12093) {
-            method39(46);
+            method39();
         }
         return anIDirect3DVertexBuffer9080 != null;
     }
 
-    public final boolean method36(int i, int i_5_, Source source, int i_6_) {
+    public final void method36(int i, int i_5_, Source source, int i_6_) {
         if (method37(i, i_5_, -12093)) {
-            return anIDirect3DVertexBuffer9080.a(source, 0, 0, anInt9076, !aBoolean9078 ? 0 : 8192);
+            anIDirect3DVertexBuffer9080.a(source, 0, 0, anInt9076, !aBoolean9078 ? 0 : 8192);
+            return;
         }
         if (i_6_ != 1965) {
-            return false;
         }
-        return false;
     }
 
-    public final jaclib.memory.Buffer method40(int i, boolean bool) {
+    public final jaclib.memory.Buffer method40(boolean bool) {
         if (null == anIDirect3DVertexBuffer9080) {
             return null;
         }

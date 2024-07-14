@@ -17,7 +17,7 @@ public class Class124 {
         anInt1604++;
         if (Class252.aClass110_3189 != null) {
             Class243.aClass340_3069 = new Class340();
-            Class243.aClass340_3069.method3954(Class252.aClass110_3189.anInt1383, Class252.aClass110_3189.aTranslation_1379.getTranslatedString(Class35.language), Class252.aClass110_3189, -93, Class43.aLong663);
+            Class243.aClass340_3069.method3954(Class252.aClass110_3189.anInt1383, Class252.aClass110_3189.aTranslation_1379.getTranslatedString(Class35.language), Class252.aClass110_3189, Class43.aLong663);
             Class132.aThread1677 = new Thread(Class243.aClass340_3069, "");
             if (i <= 31) {
                 aClass192_1605 = null;

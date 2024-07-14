@@ -5,31 +5,19 @@
 public class Node_Sub15_Sub1 extends Node_Sub15 {
     static int anInt9769;
     static int anInt9770;
-    static int anInt9771;
     static int anInt9772;
     private int anInt9773;
     private long aLong9774;
 
-    static boolean method2557(int i, int i_1_) {
-        anInt9771++;
-        return (0x400 & i_1_) != 0;
-    }
-
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         anInt9770++;
-        if (i != 16) {
-            aLong9774 = -38L;
-        }
         clanchat.method499(anInt9773, aLong9774);
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9769++;
         anInt9773 = buffer.readInt();
         aLong9774 = buffer.readLong();
-        if (i != 29147) {
-            aLong9774 = 79L;
-        }
     }
 
     static void method2558() {

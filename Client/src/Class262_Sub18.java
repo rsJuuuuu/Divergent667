@@ -13,9 +13,9 @@ public class Class262_Sub18 extends Class262 {
     private final int anInt7847;
     private final int anInt7848;
     static Class335 aClass335_7849 = new Class335(16);
-    static Class170 aClass170_7850 = new Class170(5, 1);
+    static Class170 aClass170_7850 = new Class170(1);
 
-    static int method3198(String string) {
+    static int method3198() {
         anInt7843++;
         return -1;
     }
@@ -42,7 +42,7 @@ public class Class262_Sub18 extends Class262 {
             anInt7841 = -102;
         }
         Class221.anInt2633 = anInt7848;
-        Class309.method3586(117);
+        Class309.method3586();
         Class320_Sub18.aBoolean8375 = true;
     }
 

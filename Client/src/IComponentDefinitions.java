@@ -43,7 +43,6 @@ public class IComponentDefinitions {
     static int anInt4713;
     protected int anInt4714;
     static int anInt4715;
-    static int anInt4716;
     private short[] aShortArray4717;
     protected int anInt4718;
     protected int anInt4719;
@@ -66,7 +65,6 @@ public class IComponentDefinitions {
     static int anInt4736;
     static int anInt4737;
     protected boolean aBoolean4738;
-    static int anInt4739;
     protected Object[] anObjectArray4740;
     protected byte aByte4741;
     protected Object[] anObjectArray4742;
@@ -139,7 +137,6 @@ public class IComponentDefinitions {
     protected int anInt4809;
     protected int anInt4810;
     protected int anInt4811;
-    protected int[] anIntArray4812;
     protected int anInt4813;
     protected int anInt4814;
     protected int anInt4815;
@@ -180,7 +177,6 @@ public class IComponentDefinitions {
     protected int anInt4850;
     protected byte aByte4851;
     protected Object[] anObjectArray4852;
-    static int anInt4853;
     protected Object[] anObjectArray4854;
     static int anInt4855;
     protected Object[] anObjectArray4856;
@@ -229,7 +225,7 @@ public class IComponentDefinitions {
             class383.method4193(anInt4796 | -16777216);
         }
         glsprite = graphicstoolkit.a(class383, true);
-        Class252.aClass61_3190.method604(l, glsprite, glsprite.method1193() * glsprite.getYOffset() * 4, 98);
+        Class252.aClass61_3190.method604(l, glsprite, glsprite.method1193() * glsprite.getYOffset() * 4);
         return glsprite;
     }
 
@@ -281,7 +277,7 @@ public class IComponentDefinitions {
         return objects;
     }
 
-    static void method4139(GraphicsToolkit graphicstoolkit, int i, int i_5_, int i_6_, int i_7_, int i_8_,
+    static void method4139(int i, int i_7_, int i_8_,
                            CacheNode_Sub13 cachenode_sub13, int i_9_, int i_10_, int i_11_, int i_12_) {
         anInt4766++;
         if (i_12_ > i_11_ && i_12_ < i + i_11_
@@ -486,7 +482,7 @@ public class IComponentDefinitions {
             anInt4754 = stream.readInt();
             aBoolean4721 = stream.readUnsignedByte() == 1;
         }
-        int i_20_ = stream.read24BitInteger();
+        int i_20_ = stream.readInt24();
         int i_21_ = stream.readUnsignedByte();
         if (i_21_ != 0) {
             aByteArray4806 = new byte[11];
@@ -561,14 +557,14 @@ public class IComponentDefinitions {
         if (newInt >= 0) {
             int i_33_ = stream.readUnsignedByte();
             for (int i_34_ = 0; i_33_ > i_34_; i_34_++) {
-                int i_35_ = stream.read24BitInteger();
+                int i_35_ = stream.readInt24();
                 int i_36_ = stream.readInt();
                 aHashTable4823.method1515(i_35_, new Node_Sub32(i_36_), -128);
             }
             int i_37_ = stream.readUnsignedByte();
             for (int i_38_ = 0; i_38_ < i_37_; i_38_++) {
-                int i_39_ = stream.read24BitInteger();
-                String string = stream.method2180((byte) 92);
+                int i_39_ = stream.readInt24();
+                String string = stream.method2180();
                 aHashTable4823.method1515(i_39_, new Node_Sub18(string), -124);
             }
         }
@@ -618,13 +614,13 @@ public class IComponentDefinitions {
         anInt4736++;
         try {
             if (Class52.anInt800 == 1) {
-                int i_43_ = Class307.aNode_Sub9_Sub1_3902.method2471(15);
+                int i_43_ = Class307.aNode_Sub9_Sub1_3902.method2471();
                 if (i_43_ > 0 && Class307.aNode_Sub9_Sub1_3902.method2445((byte) -116)) {
                     i_43_ -= Class107.anInt1362;
                     if (i_43_ < 0) {
                         i_43_ = 0;
                     }
-                    Class307.aNode_Sub9_Sub1_3902.method2439(0 ^ -12651, i_43_);
+                    Class307.aNode_Sub9_Sub1_3902.method2439(i_43_);
                     return;
                 }
                 Class307.aNode_Sub9_Sub1_3902.method2435();
@@ -640,13 +636,13 @@ public class IComponentDefinitions {
             if (Class52.anInt800 != 3) {
                 return;
             }
-            int i_44_ = Class307.aNode_Sub9_Sub1_3902.method2471(0 + 15);
+            int i_44_ = Class307.aNode_Sub9_Sub1_3902.method2471();
             if (i_44_ < Class17.anInt282 && Class307.aNode_Sub9_Sub1_3902.method2445((byte) -84)) {
                 i_44_ += Class339_Sub8.anInt8733;
                 if (Class17.anInt282 < i_44_) {
                     i_44_ = Class17.anInt282;
                 }
-                Class307.aNode_Sub9_Sub1_3902.method2439(-12651, i_44_);
+                Class307.aNode_Sub9_Sub1_3902.method2439(i_44_);
             } else {
                 Class339_Sub8.anInt8733 = 0;
                 Class52.anInt800 = 0;

@@ -26,7 +26,7 @@ public class Class191 {
         }
 
         if (Class216.aClass216_2546 == ClientScript.aClass216_9498) {
-            byte[] bs = Node_Sub15_Sub10.aClass302_9853.method3518((byte) 113, i);
+            byte[] bs = Node_Sub15_Sub10.aClass302_9853.method3518(i);
             if (bs == null) {
                 return false;
             }

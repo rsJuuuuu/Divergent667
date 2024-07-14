@@ -467,7 +467,7 @@ public class ItemDefinitions {
                 boolean bool_25_ = buffer
                         .readUnsignedByte() == 1;
                 int i_26_ = buffer
-                        .read24BitInteger();
+                        .readInt24();
                 Node node;
                 if (bool_25_) {
                     node = new Node_Sub18(
@@ -503,19 +503,19 @@ public class ItemDefinitions {
                 if (aByteArray1882 == null
                         || aByteArray1882.length <= i_35_) {
                     model.method2089(aShortArray1856[i_35_],
-                            aShortArray1865[i_35_], -126);
+                            aShortArray1865[i_35_]);
                 } else {
                     model.method2089(
                             aShortArray1856[i_35_],
-                            Class129.aShortArray1665[0xff & aByteArray1882[i_35_]],
-                            -89);
+                            Class129.aShortArray1665[0xff & aByteArray1882[i_35_]]
+                    );
                 }
             }
         }
         if (originalTextureColors != null) {
             for (int i_36_ = 0; i_36_ < originalTextureColors.length; i_36_++)
                 model.method2087(originalTextureColors[i_36_],
-                        modifiedTextureColors[i_36_], -78);
+                        modifiedTextureColors[i_36_]);
         }
         if (playerdefinition != null) {
             for (int i_37_ = 0; i_37_ < 10; i_37_++) {
@@ -523,8 +523,8 @@ public class ItemDefinitions {
                     if (Class117_Sub2.aShortArrayArrayArray5151[i_37_][i_38_].length > playerdefinition.anIntArray3430[i_37_]) {
                         model.method2089(
                                 Class45.aShortArrayArray5265[i_37_][i_38_],
-                                Class117_Sub2.aShortArrayArrayArray5151[i_37_][i_38_][playerdefinition.anIntArray3430[i_37_]],
-                                -60);
+                                Class117_Sub2.aShortArrayArrayArray5151[i_37_][i_38_][playerdefinition.anIntArray3430[i_37_]]
+                        );
                     }
                 }
             }
@@ -608,7 +608,7 @@ public class ItemDefinitions {
         if (i_32_ != 0) {
             method1688(i_32_, is);
         }
-        Objects.requireNonNull(graphicstoolkit_33_.method1235(36, 36, 32, is, 7468))
+        Objects.requireNonNull(graphicstoolkit_33_.method1235(36, 36, 32, is))
                 .setPosition(0, 0);
         if (anInt1857 == -1) {
             if (anInt1852 != -1) {
@@ -693,12 +693,12 @@ public class ItemDefinitions {
         }
         if (!bool
                 && (anInt1931 != 0 || anInt1930 != 0 || anInt1895 != 0)) {
-            model.method2082(anInt1931, anInt1930, -102, anInt1895);
+            model.method2082(anInt1931, anInt1930, anInt1895);
         }
         if (bool
                 && (anInt1890 != 0
                 || anInt1893 != 0 || anInt1916 != 0)) {
-            model.method2082(anInt1890, anInt1893, 96, anInt1916);
+            model.method2082(anInt1890, anInt1893, anInt1916);
         }
         if (aShortArray1856 != null) {
             short[] ses;
@@ -708,7 +708,7 @@ public class ItemDefinitions {
                 ses = class38.modifiedModelColors;
             }
             for (int i_52_ = 0; i_52_ < aShortArray1856.length; i_52_++)
-                model.method2089(aShortArray1856[i_52_], ses[i_52_], 76);
+                model.method2089(aShortArray1856[i_52_], ses[i_52_]);
         }
         if (originalTextureColors != null) {
             short[] ses;
@@ -718,7 +718,7 @@ public class ItemDefinitions {
                 ses = class38.modifiedTextureColors;
             }
             for (int i_53_ = 0; i_53_ < originalTextureColors.length; i_53_++)
-                model.method2087(originalTextureColors[i_53_], ses[i_53_], -84);
+                model.method2087(originalTextureColors[i_53_], ses[i_53_]);
         }
         if (i >= -34) {
             return null;
@@ -786,7 +786,7 @@ public class ItemDefinitions {
                 ses = class38.modifiedModelColors;
             }
             for (int i_58_ = 0; aShortArray1856.length > i_58_; i_58_++)
-                model.method2089(aShortArray1856[i_58_], ses[i_58_], 115);
+                model.method2089(aShortArray1856[i_58_], ses[i_58_]);
         }
         if (originalTextureColors != null) {
             short[] ses;
@@ -796,13 +796,12 @@ public class ItemDefinitions {
                 ses = class38.modifiedTextureColors;
             }
             for (int i_59_ = 0; i_59_ < originalTextureColors.length; i_59_++)
-                model.method2087(originalTextureColors[i_59_], ses[i_59_], 101);
+                model.method2087(originalTextureColors[i_59_], ses[i_59_]);
         }
         return model;
     }
 
-    final boolean method1686(boolean bool, TemporaryItemDefinition class38,
-                             int i) {
+    final boolean method1686(boolean bool, TemporaryItemDefinition class38) {
         anInt1885++;
         int i_60_;
         int i_61_;

@@ -52,13 +52,13 @@ public class Class13 {
             return false;
         }
         anInt211++;
-        return !(!(Class179.method1816(i_1_, i_2_ - 1, i) | (0x70000 & i_1_) != 0) && !OutcommingPacket.method3669(i_1_, (byte) 120, i));
+        return !(!(Class179.method1816(i_1_) | (0x70000 & i_1_) != 0) && !OutcommingPacket.method3669(i_1_, (byte) 120, i));
     }
 
     static void method209(boolean bool, int i, int i_3_, int i_4_, int i_5_) {
         anInt204++;
         if (CacheNode_Sub15.method2379(i)) {
-            Class320_Sub9.method3716(true, i_5_, bool, i_4_, Class134_Sub3.aWidgetArrayArray9035[i], -1);
+            Class320_Sub9.method3716(i_5_, bool, i_4_, Class134_Sub3.aWidgetArrayArray9035[i], -1);
             if (i_3_ > -28) {
                 aClass192_203 = null;
             }
@@ -92,7 +92,7 @@ public class Class13 {
         }
     }
 
-    Class13(Class353 class353, int i, Index class302) {
+    Class13(Index class302) {
         aClass302_202 = class302;
         if (aClass302_202 != null) {
             aClass302_202.method3537(54);

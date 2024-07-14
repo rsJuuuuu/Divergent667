@@ -64,7 +64,7 @@ public class Class93_Sub2 extends Class93 implements MouseListener, MouseMotionL
     final boolean method1040(int i) {
         anInt6052++;
         if (i >= -78) {
-            method1048((byte) 60);
+            method1048();
         }
         return (anInt6065 & 0x4) != 0;
     }
@@ -196,7 +196,7 @@ public class Class93_Sub2 extends Class93 implements MouseListener, MouseMotionL
         anInt6054++;
     }
 
-    final Node_Sub5 method1048(byte b) {
+    final Node_Sub5 method1048() {
         anInt6062++;
         return (Node_Sub5) aClass312_6047.method3619(-119);
     }

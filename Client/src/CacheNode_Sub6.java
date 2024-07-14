@@ -15,7 +15,7 @@ public class CacheNode_Sub6 extends CacheNode {
     static int anInt9484;
     static int anInt9485;
 
-    static Class365 method2311(Socket socket, byte b) throws IOException {
+    static Class365 method2311(Socket socket) throws IOException {
         anInt9478++;
         return new Class365_Sub1(socket);
     }
@@ -25,7 +25,7 @@ public class CacheNode_Sub6 extends CacheNode {
 
     }
 
-    static String method2313(byte b, long l) {
+    static String method2313(long l) {
         anInt9481++;
         if (l <= 0 || l >= 6582952005840035281L) {
             return null;

@@ -33,7 +33,7 @@ public class Class3 implements Interface10 {
         return true;
     }
 
-    public final void method27(boolean bool, int i) {
+    public final void method27(boolean bool) {
 
         anInt5160++;
         if (bool) {

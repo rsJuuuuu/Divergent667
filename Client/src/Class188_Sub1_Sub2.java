@@ -17,11 +17,8 @@ public class Class188_Sub1_Sub2 extends Class188_Sub1 {
     static int anInt9348;
     static int anInt9349;
 
-    static void method1897(int i, int[][] is) {
+    static void method1897(int[][] is) {
         anInt9343++;
-        if (i != 1) {
-            method1897(116, null);
-        }
         Class169_Sub4.anIntArrayArray8826 = is;
     }
 
@@ -32,7 +29,7 @@ public class Class188_Sub1_Sub2 extends Class188_Sub1 {
     final byte[] method1898() {
         anInt9347++;
         aByteArray9340 = new byte[524288];
-        this.method1884((byte) 77);
+        this.method1884();
         return aByteArray9340;
     }
 

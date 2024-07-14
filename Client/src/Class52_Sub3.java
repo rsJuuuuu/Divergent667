@@ -53,7 +53,7 @@ public class Class52_Sub3 extends Class52 {
                 if (bool) {
                     method549(aByteArrayArray5568[c], aPureJavaToolkit5571.anIntArray6787, i_1_, i_10_, i_7_, i_4_, i_5_, i_8_, i_9_, i, i_0_, anIntArray5572[c], var_aa, i_2_, i_3_);
                 } else {
-                    method548(aByteArrayArray5568[c], aPureJavaToolkit5571.anIntArray6787, anIntArray5569, i_1_, i_10_, i_7_, i_4_, i_5_, i_8_, i_9_, i, i_0_, anIntArray5572[c], var_aa, i_2_, i_3_);
+                    method548(aByteArrayArray5568[c], aPureJavaToolkit5571.anIntArray6787, anIntArray5569, i_10_, i_7_, i_4_, i_5_, i_8_, i_9_, i, i_0_, anIntArray5572[c], var_aa, i_2_, i_3_);
                 }
             }
         }
@@ -137,7 +137,7 @@ public class Class52_Sub3 extends Class52 {
         }
     }
 
-    private void method548(byte[] bs, int[] is, int[] is_36_, int i, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, aa var_aa, int i_46_, int i_47_) {
+    private void method548(byte[] bs, int[] is, int[] is_36_, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, aa var_aa, int i_46_, int i_47_) {
         aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
         int[] is_48_ = var_aa_Sub1.anIntArray5487;
         int[] is_49_ = var_aa_Sub1.anIntArray5488;

@@ -36,7 +36,7 @@ public class Class324 {
                 class323.aBoolean4076 = player.aBoolean11157;
                 class323.aBoolean4082 = player.aBoolean11135;
                 if (player.anInt11164 > 0) {
-                    Class45.method462((byte) 49, player);
+                    Class45.method462(player);
                 }
                 Class270_Sub2.LOCAL_PLAYERS[playerIndex] = null;
                 if (packet.readBits(1) != 0) { // and updates if needed

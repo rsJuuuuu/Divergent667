@@ -93,7 +93,6 @@ public class Class320_Sub11 extends Class320 {
         Class382.anInt5255 = 0;
         GLDrawableModel.anInt5606 = 0;
         Animator.anInt271 = 0;
-        BufferedStream.anInt6980 = 0;
         Class156.anInt1959 = 0;
         Node_Sub38_Sub27.anInt10380 = 0;
         Node_Sub25_Sub4.anInt10001 = 0;
@@ -399,7 +398,6 @@ public class Class320_Sub11 extends Class320 {
         Class339_Sub9.anInt8751 = 0;
         BufferedStream.anInt6963 = 0;
         StandardDrawableModel.anInt5801 = 0;
-        BufferedStream.anInt7015 = 0;
         Class320_Sub25.anInt8447 = 0;
         Node_Sub29_Sub1.anInt10013 = 0;
         Node_Sub16.anInt7134 = 0;
@@ -459,11 +457,9 @@ public class Class320_Sub11 extends Class320 {
         Class181.anInt2148 = 0;
         Class82.anInt1118 = 0;
         Class86.anInt1166 = 0;
-        BufferedStream.anInt7024 = 0;
         GLToolkit.anInt6491 = 0;
         GLSprite_Sub1.anInt8856 = 0;
         Class66.anInt5166 = 0;
-        Mobile.anInt9125 = 0;
         Class320_Sub16.anInt8365 = 0;
         BufferedStream.anInt6998 = 0;
         Node_Sub12.anInt5460 = 0;
@@ -502,7 +498,6 @@ public class Class320_Sub11 extends Class320 {
         Mobile_Sub4.anInt10974 = 0;
         Class320_Sub16.anInt8363 = 0;
         Class278.anInt3538 = 0;
-        BufferedStream.anInt6955 = 0;
         Class277.anInt3515 = 0;
         Class144_Sub3.anInt6824 = 0;
         AbstractToolkit.anInt6122 = 0;
@@ -522,7 +517,6 @@ public class Class320_Sub11 extends Class320 {
         Node_Sub30.anInt7359 = 0;
         Model.anInt2592 = 0;
         Class382.anInt5245 = 0;
-        Actor.anInt10839 = 0;
         InterfaceSettings.anInt7417 = 0;
         AbstractToolkit.anInt6123 = 0;
         Class15.anInt227 = 0;
@@ -547,7 +541,6 @@ public class Class320_Sub11 extends Class320 {
         Renderer.anInt3659 = 0;
         Class193.anInt2359 = 0;
         Class278.anInt3544 = 0;
-        Class275.anInt5414 = 0;
         ItemDefinitions.anInt1881 = 0;
         Class110.anInt1388 = 0;
         Index.anInt3809 = 0;
@@ -562,7 +555,6 @@ public class Class320_Sub11 extends Class320 {
         Class239.anInt2922 = 0;
         Mobile_Sub3.anInt10783 = 0;
         Animable_Sub4_Sub1.anInt10700 = 0;
-        BufferedStream.anInt6956 = 0;
         Class320_Sub16.anInt8356 = 0;
         Class106.anInt1352 = 0;
         Class320_Sub29.anInt8484 = 0;
@@ -980,7 +972,6 @@ public class Class320_Sub11 extends Class320 {
         Class12.anInt195 = 0;
         BufferedConnection.anInt607 = 0;
         AbstractToolkit.anInt6085 = 0;
-        Class339_Sub5.anInt8681 = 0;
         Node_Sub38_Sub17.anInt10272 = 0;
         Class52.anInt787 = 0;
         Animable_Sub3_Sub1.anInt11006 = 0;
@@ -1007,7 +998,6 @@ public class Class320_Sub11 extends Class320 {
         BufferedConnection.anInt598 = 0;
         GameStub.anInt41 = 0;
         Class315.anInt4029 = 0;
-        IComponentDefinitions.anInt4739 = 0;
         Class103.anInt1343 = 0;
         Class320_Sub1.anInt8211 = 0;
         Class339_Sub3.anInt8661 = 0;
@@ -1016,7 +1006,6 @@ public class Class320_Sub11 extends Class320 {
         Class320_Sub26.anInt8458 = 0;
         Class336_Sub1.anInt8552 = 0;
         Class230_Sub1.anInt9011 = 0;
-        Class316.anInt4036 = 0;
         Class257.anInt3247 = 0;
         Class61.anInt890 = 0;
         Class359.anInt4461 = 0;
@@ -1081,7 +1070,6 @@ public class Class320_Sub11 extends Class320 {
         Node_Sub54.anInt7682 = 0;
         GLXToolkit.anInt9263 = 0;
         Class32.anInt510 = 0;
-        BufferedStream.anInt6997 = 0;
         MainFile.anInt138 = 0;
         Class365_Sub1.anInt8761 = 0;
         Translation.anInt361 = 0;
@@ -1139,7 +1127,6 @@ public class Class320_Sub11 extends Class320 {
         Class134.anInt5305 = 0;
         InputStream_Sub2.anInt80 = 0;
         GLToolkit.anInt6448 = 0;
-        BufferedStream.anInt6992 = 0;
         Class169_Sub4.anInt8827 = 0;
         Class67.anInt929 = 0;
         PlayerUpdateReference.anInt4078 = 0;
@@ -1180,7 +1167,6 @@ public class Class320_Sub11 extends Class320 {
         Class187.anInt2268 = 0;
         Class320_Sub22.anInt8414 = 0;
         Class95.anInt1256 = 0;
-        BufferedStream.anInt6966 = 0;
         GLToolkit.anInt6564 = 0;
         GraphicsToolkit.anInt1540 = 0;
         Npc.anInt11110 = 0;
@@ -1215,7 +1201,6 @@ public class Class320_Sub11 extends Class320 {
         Player.anInt11177 = 0;
         Class293.anInt3683 = 0;
         Class93_Sub2.anInt6050 = 0;
-        BufferedStream.anInt6996 = 0;
         AbstractToolkit.anInt6213 = 0;
         Class113.anInt1446 = 0;
         Class320_Sub21.anInt8404 = 0;
@@ -1246,7 +1231,6 @@ public class Class320_Sub11 extends Class320 {
         Class262_Sub6.anInt7744 = 0;
         StandardDrawableModel.anInt5799 = 0;
         Class141.anInt1747 = 0;
-        BufferedStream.anInt7013 = 0;
         Model.anInt2581 = 0;
         Node_Sub38_Sub14.anInt10251 = 0;
         Class371.anInt4577 = 0;
@@ -1417,7 +1401,6 @@ public class Class320_Sub11 extends Class320 {
         ObjectDefinition.anInt2978 = 0;
         Class156.anInt1970 = 0;
         Class47.anInt682 = 0;
-        BufferedStream.anInt6953 = 0;
         Class266.anInt3374 = 0;
         Class380.anInt4886 = 0;
         StandardDrawableModel.anInt5870 = 0;
@@ -1441,8 +1424,6 @@ public class Class320_Sub11 extends Class320 {
         Class28.anInt467 = 0;
         Class158.anInt1991 = 0;
         StandardPlane.anInt8014 = 0;
-        CacheNode_Sub8.anInt9494 = 0;
-        BufferedStream.anInt6961 = 0;
         Class320_Sub14.anInt8341 = 0;
         AbstractToolkit.anInt6078 = 0;
         Class42.anInt637 = 0;
@@ -1554,7 +1535,6 @@ public class Class320_Sub11 extends Class320 {
         Actor.anInt10847 = 0;
         Class315.anInt4030 = 0;
         Animator.anInt262 = 0;
-        IComponentDefinitions.anInt4716 = 0;
         Class96.anInt1265 = 0;
         Class239.anInt2917 = 0;
         Class200_Sub1.anInt5143 = 0;
@@ -1654,7 +1634,6 @@ public class Class320_Sub11 extends Class320 {
         Animable_Sub2_Sub2.anInt10739 = 0;
         ClanChat.anInt767 = 0;
         Class300.anInt3767 = 0;
-        BufferedStream.anInt6983 = 0;
         Node_Sub15_Sub8.anInt9829 = 0;
         ObjectDefinition.anInt3043 = 0;
         CacheNode_Sub3.anInt9439 = 0;
@@ -1689,7 +1668,6 @@ public class Class320_Sub11 extends Class320 {
         Node_Sub9_Sub1.anInt9653 = 0;
         Node_Sub6.anInt7042 = 0;
         Class232.anInt2776 = 0;
-        BufferedStream.anInt6957 = 0;
         Class259.anInt3251 = 0;
         GLDrawableModel.anInt5702 = 0;
         Class93.anInt1246 = 0;
@@ -1739,7 +1717,6 @@ public class Class320_Sub11 extends Class320 {
         Class42.anInt646 = 0;
         GLXToolkit.anInt9242 = 0;
         Class129.anInt1667 = 0;
-        BufferedStream.anInt7004 = 0;
         Class270_Sub2_Sub1.anInt10545 = 0;
         Node_Sub38_Sub12.anInt10231 = 0;
         Class336_Sub1.anInt8525 = 0;
@@ -1813,7 +1790,6 @@ public class Class320_Sub11 extends Class320 {
         StandardDrawableModel.anInt5849 = 0;
         Class247.anInt3120 = 0;
         Node_Sub38_Sub8.anInt10167 = 0;
-        BufferedStream.anInt7016 = 0;
         StandardDrawableModel.anInt5806 = 0;
         Class339_Sub9.anInt8756 = 0;
         GLToolkit.anInt6528 = 0;
@@ -1862,7 +1838,6 @@ public class Class320_Sub11 extends Class320 {
         IncommingPacket.anInt2356 = 0;
         Class320_Sub6.anInt8259 = 0;
         Class339_Sub1.anInt8632 = 0;
-        BufferedStream.anInt6973 = 0;
         Node_Sub42.anInt7520 = 0;
         GLToolkit.anInt6575 = 0;
         Class169.anInt4963 = 0;
@@ -1893,7 +1868,6 @@ public class Class320_Sub11 extends Class320 {
         Class163.anInt2008 = 0;
         StandardSprite.anInt8930 = 0;
         Class186.anInt2252 = 0;
-        BufferedStream.anInt7017 = 0;
         Class55.anInt830 = 0;
         Class336_Sub2.anInt8573 = 0;
         GLSprite_Sub1.anInt8863 = 0;
@@ -1930,7 +1904,6 @@ public class Class320_Sub11 extends Class320 {
         Class282.anInt3586 = 0;
         Class154.anInt1949 = 0;
         Class350.anInt5402 = 0;
-        Class97.anInt1274 = 0;
         Class326.anInt4095 = 0;
         Class10.anInt170 = 0;
         Class262_Sub5.anInt7738 = 0;
@@ -1968,7 +1941,6 @@ public class Class320_Sub11 extends Class320 {
         Class291_Sub1.anInt8189 = 0;
         Class254.anInt3207 = 0;
         Class87.anInt1192 = 0;
-        BufferedStream.anInt6974 = 0;
         Node_Sub9_Sub1.anInt9696 = 0;
         Class349.anInt4301 = 0;
         GLToolkit.anInt6590 = 0;
@@ -1983,7 +1955,6 @@ public class Class320_Sub11 extends Class320 {
         Class96.anInt1266 = 0;
         Npc.anInt11108 = 0;
         Class170.anInt2050 = 0;
-        CacheNode_Sub8.anInt9492 = 0;
         CacheNode_Sub10.anInt9519 = 0;
         Class286.anInt3601 = 0;
         CacheNode_Sub10.anInt9514 = 0;
@@ -2031,7 +2002,6 @@ public class Class320_Sub11 extends Class320 {
         Class295.anInt3700 = 0;
         Class104.anInt1348 = 0;
         Class58.anInt858 = 0;
-        BufferedStream.anInt6954 = 0;
         Class189.anInt2320 = 0;
         ClanChat.anInt726 = 0;
         Node_Sub38.anInt7449 = 0;
@@ -2128,7 +2098,6 @@ public class Class320_Sub11 extends Class320 {
         Class382.anInt5242 = 0;
         Node_Sub23_Sub1.anInt9902 = 0;
         Animable_Sub4_Sub1.anInt10691 = 0;
-        IComponentDefinitions.anInt4853 = 0;
         Class296.anInt5438 = 0;
         Class262_Sub5.anInt7734 = 0;
         AbstractToolkit.anInt6242 = 0;
@@ -2191,7 +2160,6 @@ public class Class320_Sub11 extends Class320 {
         Class320_Sub30.anInt8498 = 0;
         Class290_Sub11.anInt8177 = 0;
         Class275.anInt5426 = 0;
-        BufferedStream.anInt6989 = 0;
         Animable_Sub2_Sub1.anInt10627 = 0;
         StandardDrawableModel.anInt5894 = 0;
         Animable_Sub2_Sub1.anInt10624 = 0;
@@ -2398,7 +2366,6 @@ public class Class320_Sub11 extends Class320 {
         StandardDrawableModel.anInt5837 = 0;
         Class277.anInt3529 = 0;
         Node_Sub29_Sub2.anInt10017 = 0;
-        BufferedStream.anInt7005 = 0;
         Class339_Sub8.anInt8732 = 0;
         Class235.anInt5121 = 0;
         Node_Sub28.anInt7333 = 0;
@@ -2443,7 +2410,6 @@ public class Class320_Sub11 extends Class320 {
         EntityNode_Sub6.anInt5989 = 0;
         Class336_Sub1.anInt8516 = 0;
         Node_Sub38_Sub24.anInt10349 = 0;
-        BufferedStream.anInt6969 = 0;
         Animable_Sub4_Sub2.anInt10802 = 0;
         AbstractToolkit.anInt6245 = 0;
         Node_Sub10.anInt7089 = 0;
@@ -2475,7 +2441,6 @@ public class Class320_Sub11 extends Class320 {
         Node_Sub38_Sub6.anInt10133 = 0;
         Class320_Sub8.anInt8280 = 0;
         Class117_Sub1.anInt4927 = 0;
-        BufferedStream.anInt7009 = 0;
         Class128.anInt1654 = 0;
         Node_Sub38.anInt7467 = 0;
         Node_Sub19.anInt7172 = 0;
@@ -2528,7 +2493,6 @@ public class Class320_Sub11 extends Class320 {
         Class66_Sub1.anInt8986 = 0;
         Class336_Sub1.anInt8513 = 0;
         AbstractToolkit.anInt6161 = 0;
-        CacheNode_Sub14_Sub2.anInt11032 = 0;
         GLToolkit.anInt6533 = 0;
         Node_Sub9_Sub1.anInt9692 = 0;
         Node_Sub20.anInt7180 = 0;
@@ -2543,7 +2507,6 @@ public class Class320_Sub11 extends Class320 {
         Class266.anInt3368 = 0;
         Class144_Sub1.anInt6809 = 0;
         Class270_Sub1.anInt8031 = 0;
-        Class187.anInt2274 = 0;
         GLDrawableModel.anInt5587 = 0;
         Class329.anInt4121 = 0;
         Class381.anInt4892 = 0;
@@ -2847,7 +2810,6 @@ public class Class320_Sub11 extends Class320 {
         AbstractToolkit.anInt6139 = 0;
         CacheNode_Sub14_Sub2.anInt11035 = 0;
         AbstractToolkit.anInt6160 = 0;
-        Class284.anInt3594 = 0;
         Class327.anInt5358 = 0;
         GLXToolkit.anInt9297 = 0;
         Class169_Sub3.anInt8815 = 0;
@@ -2905,13 +2867,11 @@ public class Class320_Sub11 extends Class320 {
         GLToolkit.anInt6551 = 0;
         Class279.anInt3551 = 0;
         Node_Sub38_Sub8.anInt10164 = 0;
-        BufferedStream.anInt7021 = 0;
         Class277.anInt3514 = 0;
         Class336_Sub1.anInt8519 = 0;
         GraphicsToolkit.anInt1544 = 0;
         Node_Sub25_Sub3.anInt9960 = 0;
         Class320_Sub8.anInt8284 = 0;
-        BufferedStream.anInt6959 = 0;
         GLDrawableModel.anInt5661 = 0;
         Class140.anInt1732 = 0;
         Class320_Sub3.anInt8227 = 0;
@@ -2921,7 +2881,6 @@ public class Class320_Sub11 extends Class320 {
         Class320_Sub12.anInt8321 = 0;
         Class239.anInt2927 = 0;
         Class167.anInt2038 = 0;
-        ClientScript.anInt9513 = 0;
         Class262_Sub2.anInt7709 = 0;
         DrawableModel.anInt919 = 0;
         GLToolkit.anInt6568 = 0;
@@ -2933,10 +2892,8 @@ public class Class320_Sub11 extends Class320 {
         Class251.anInt3183 = 0;
         Class51.anInt5346 = 0;
         Class348.anInt4298 = 0;
-        BufferedStream.anInt7006 = 0;
         Class247.anInt3125 = 0;
         Node_Sub39.anInt7471 = 0;
-        Class142.anInt1761 = 0;
         Node_Sub5_Sub2.anInt9417 = 0;
         Class66_Sub2_Sub1.anInt10579 = 0;
         Animable_Sub4.anInt9150 = 0;
@@ -2983,7 +2940,6 @@ public class Class320_Sub11 extends Class320 {
         Class336_Sub1.anInt8526 = 0;
         Node_Sub38_Sub37.anInt10478 = 0;
         Class320_Sub9.anInt8294 = 0;
-        BufferedStream.anInt6972 = 0;
         Class327.anInt5349 = 0;
         Node_Sub38_Sub26.anInt10362 = 0;
         Class340.anInt4208 = 0;
@@ -2998,7 +2954,6 @@ public class Class320_Sub11 extends Class320 {
         Class380.anInt4890 = 0;
         ClientScript.anInt9509 = 0;
         Node_Sub15_Sub6.anInt9817 = 0;
-        Class187.anInt2270 = 0;
         Node_Sub38_Sub13.anInt10233 = 0;
         Class103.anInt1338 = 0;
         Class212.anInt5132 = 0;
@@ -3012,7 +2967,6 @@ public class Class320_Sub11 extends Class320 {
         Class87.anInt1188 = 0;
         Class291_Sub1.anInt8194 = 0;
         Class290_Sub11.anInt8167 = 0;
-        BufferedStream.anInt6993 = 0;
         Class290_Sub2.anInt8067 = 0;
         Node_Sub15_Sub6.anInt9815 = 0;
         Animable_Sub1_Sub1.anInt10591 = 0;
@@ -3028,7 +2982,6 @@ public class Class320_Sub11 extends Class320 {
         Class134_Sub3.anInt9027 = 0;
         Class119.anInt1513 = 0;
         FloatBuffer.anInt9380 = 0;
-        BufferedStream.anInt6978 = 0;
         Node_Sub38_Sub9.anInt10189 = 0;
         IComponentDefinitions.anInt4729 = 0;
         Class339_Sub7.anInt8721 = 0;
@@ -3046,7 +2999,6 @@ public class Class320_Sub11 extends Class320 {
         Class118.anInt5409 = 0;
         Class320_Sub27.anInt8462 = 0;
         CacheNode_Sub7.anInt9486 = 0;
-        Node_Sub15_Sub1.anInt9771 = 0;
         Class264.anInt3354 = 0;
         Class44.anInt666 = 0;
         Node_Sub38_Sub10.anInt10198 = 0;
@@ -3055,19 +3007,16 @@ public class Class320_Sub11 extends Class320 {
         Node_Sub24.anInt7216 = 0;
         BufferedStream.anInt7022 = 0;
         GLXToolkit.anInt9273 = 0;
-        BufferedStream.anInt6965 = 0;
         Node_Sub25_Sub1.anInt9940 = 0;
         Class326.anInt4111 = 0;
         Node_Sub38_Sub11.anInt10200 = 0;
         Class223.anInt2665 = 0;
         Class220.anInt5320 = 0;
         Animable_Sub1_Sub2.anInt10651 = 0;
-        BufferedStream.anInt6982 = 0;
         Node_Sub36.anInt7425 = 0;
         Animable_Sub3.anInt9139 = 0;
         Index.anInt3813 = 0;
         Class340.anInt4212 = 0;
-        GameStub.anInt36 = 0;
         Class17.anInt281 = 0;
         Class42.anInt640 = 0;
         Class144.anInt1783 = 0;
@@ -3232,7 +3181,6 @@ public class Class320_Sub11 extends Class320 {
         Class320_Sub29.anInt8482 = 0;
         AbstractToolkit.anInt6250 = 0;
         Node_Sub38_Sub11.anInt10212 = 0;
-        BufferedStream.anInt7007 = 0;
         Index.anInt3791 = 0;
         Node_Sub38_Sub18.anInt10276 = 0;
         StandardDrawableModel.anInt5882 = 0;
@@ -3265,7 +3213,6 @@ public class Class320_Sub11 extends Class320 {
         AbstractToolkit.anInt6222 = 0;
         Class93.anInt1240 = 0;
         GLToolkit.anInt6541 = 0;
-        Class368.anInt4545 = 0;
         Class103.anInt1340 = 0;
         Class150_Sub2.anInt8956 = 0;
         Class199.anInt2431 = 0;
@@ -3332,7 +3279,6 @@ public class Class320_Sub11 extends Class320 {
         GLXToolkit.anInt9280 = 0;
         Node_Sub10.anInt7097 = 0;
         Node_Sub15_Sub2.anInt9782 = 0;
-        BufferedStream.anInt6952 = 0;
         za.anInt7695 = 0;
         Class66_Sub1.anInt8985 = 0;
         AbstractToolkit.anInt6087 = 0;
@@ -3359,7 +3305,6 @@ public class Class320_Sub11 extends Class320 {
         Class339_Sub9.anInt8745 = 0;
         Class298.anInt3710 = 0;
         Class178.anInt2122 = 0;
-        BufferedStream.anInt6984 = 0;
         Class45.anInt5268 = 0;
         GLToolkit.anInt6465 = 0;
         Class145.anInt1792 = 0;
@@ -3452,7 +3397,6 @@ public class Class320_Sub11 extends Class320 {
         Class234.anInt2788 = 0;
         EntityNode_Sub7.anInt6001 = 0;
         Class303.anInt3830 = 0;
-        BufferedStream.anInt6971 = 0;
         Class200_Sub2.anInt4934 = 0;
         Class163.anInt2009 = 0;
         Class93_Sub2.anInt6056 = 0;
@@ -3571,7 +3515,6 @@ public class Class320_Sub11 extends Class320 {
         Class189.anInt2302 = 0;
         BufferedStream.anInt7010 = 0;
         Class25.anInt448 = 0;
-        EntityNode_Sub3.anInt5962 = 0;
         Class320_Sub2.anInt8217 = 0;
         Class52.anInt796 = 0;
         Node_Sub25_Sub4.anInt9999 = 0;
@@ -3873,7 +3816,6 @@ public class Class320_Sub11 extends Class320 {
         GLXToolkit.anInt9214 = 0;
         Class270_Sub1_Sub1.anInt10532 = 0;
         Node_Sub16.anInt7130 = 0;
-        Class85.anInt1156 = 0;
         Node_Sub27.anInt7278 = 0;
         Node_Sub38_Sub27.anInt10381 = 0;
         CacheNode_Sub14_Sub2.anInt11031 = 0;
@@ -3899,7 +3841,6 @@ public class Class320_Sub11 extends Class320 {
         AbstractToolkit.anInt6152 = 0;
         GLDrawableModel.anInt5660 = 0;
         GameStub.anInt16 = 0;
-        BufferedStream.anInt6994 = 0;
         BufferedStream.anInt7011 = 0;
         Node.anInt2798 = 0;
         Index.anInt3782 = 0;
@@ -3951,7 +3892,6 @@ public class Class320_Sub11 extends Class320 {
         Class349.anInt4312 = 0;
         StandardDrawableModel.anInt5793 = 0;
         Class66_Sub2_Sub1.anInt10577 = 0;
-        BufferedStream.anInt6987 = 0;
         Node_Sub29_Sub2.anInt10020 = 0;
         Node_Sub12.anInt5449 = 0;
         Node_Sub38_Sub9.anInt10181 = 0;
@@ -4151,7 +4091,6 @@ public class Class320_Sub11 extends Class320 {
         GLToolkit.anInt6515 = 0;
         Class320_Sub2.anInt8218 = 0;
         GLXToolkit.anInt9217 = 0;
-        BufferedStream.anInt6991 = 0;
         Class320_Sub3.anInt8232 = 0;
         Class290.anInt3651 = 0;
         GLToolkit.anInt6549 = 0;
@@ -4163,7 +4102,6 @@ public class Class320_Sub11 extends Class320 {
         BufferedConnection.anInt611 = 0;
         CacheNode_Sub5.anInt9467 = 0;
         Class384.anInt4907 = 0;
-        BufferedStream.anInt7018 = 0;
         Canvas.anInt68 = 0;
         Node_Sub25_Sub3.anInt9984 = 0;
         Class370.anInt4571 = 0;
@@ -4430,14 +4368,14 @@ public class Class320_Sub11 extends Class320 {
             Class188_Sub1.SKILL_XP[l1] = 0;
         }
 
-        Class120.method1228(-114);
+        Class120.method1228();
         Node_Sub25_Sub1.aBoolean9950 = true;
         Class343.aShortArray4255 = EntityNode_Sub3_Sub1.aShortArray9165 = Class262_Sub19.aShortArray7852 = Class129.aShortArray1665 = new short[256];
         Class173.aString2085 = Translation.aTranslation_389.getTranslatedString(Class35.language);
         Class213.aNode_Sub27_2512.method2690(i ^ 0x7b, Class213.aNode_Sub27_2512.aClass320_Sub4_7302.method3694(false), Class213.aNode_Sub27_2512.aClass320_Sub4_7304);
         Class213.aNode_Sub27_2512.method2690(55, Class213.aNode_Sub27_2512.aClass320_Sub19_7277.method3751(), Class213.aNode_Sub27_2512.aClass320_Sub19_7301);
         Class175.anInt2097 = 0;
-        Class281.method3384((byte) 79);
+        Class281.method3384();
         Class202.method2027(i ^ 0xc8);
         Class117.aNode_Sub7_1472 = null;
         Class359.aLong4466 = 0L;

@@ -126,7 +126,7 @@ public class Class37 {
         }
         if (data != null && file != null) {
             boolean bool_4_ = true;
-            byte[] bs_5_ = Class337.method3904((byte) -104, file);
+            byte[] bs_5_ = Class337.method3904(file);
             if (bs_5_ != null && data.length == bs_5_.length) {
                 for (int i = 0; i < bs_5_.length; i++) {
                     if (bs_5_[i] != data[i]) {

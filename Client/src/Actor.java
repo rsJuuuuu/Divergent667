@@ -30,7 +30,6 @@ abstract class Actor extends Mobile {
     static int anInt10836;
     static int anInt10837;
     protected int faceEntity;
-    static int anInt10839;
     static int anInt10840;
     static int anInt10841;
     protected int hpPercentage;
@@ -133,7 +132,7 @@ abstract class Actor extends Mobile {
             if (class165.graphicsId == -1 || class165.anAnimator2026.method242()) {
                 aDrawableModelArray10909[i_4_ + 1] = null;
             } else {
-                Class195 class195 = Class16.aClass101_228.method1090(86, class165.graphicsId);
+                Class195 class195 = Class16.aClass101_228.method1090(class165.graphicsId);
                 boolean bool = class195.aByte2381 == 3 && (i_2_ != 0 || i_0_ != 0);
                 int i_5_ = i;
                 if (bool) {
@@ -203,7 +202,7 @@ abstract class Actor extends Mobile {
         }
     }
 
-    final void method845(int i) {
+    final void method845() {
         anInt10865++;
         int i_14_ = (-1 + anInt10851 << 8) + 240;
         aShort9120 = (short) (-i_14_ + anInt5940 >> 9);
@@ -572,7 +571,7 @@ abstract class Actor extends Mobile {
         int i_60_ = class165.graphicsId;
         do {
             if (id != -1 && i_60_ != -1) {
-                Class195 class195 = Class16.aClass101_228.method1090(-120, id);
+                Class195 class195 = Class16.aClass101_228.method1090(id);
                 if (i_60_ == id) {
                     if (class195.aBoolean2402 && class195.anInt2394 != -1) {
                         Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -88);
@@ -586,7 +585,7 @@ abstract class Actor extends Mobile {
                         return;
                     }
                 } else {
-                    Class195 class195_62_ = Class16.aClass101_228.method1090(-96, i_60_);
+                    Class195 class195_62_ = Class16.aClass101_228.method1090(i_60_);
                     if (class195.anInt2394 != -1 && class195_62_.anInt2394 != -1) {
                         Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -97);
                         Class48 class48_63_ = Class18.aClass37_306.method395(class195_62_.anInt2394, (byte) -116);
@@ -598,7 +597,7 @@ abstract class Actor extends Mobile {
             }
         } while (false);
         int i_64_ = 0;
-        if (id != -1 && !Class16.aClass101_228.method1090(-107, id).aBoolean2402) {
+        if (id != -1 && !Class16.aClass101_228.method1090(id).aBoolean2402) {
             i_64_ = 2;
         }
         class165.anInt2027 = rotation;
@@ -608,7 +607,7 @@ abstract class Actor extends Mobile {
         if (id != -1 && bool) {
             i_64_ = 1;
         }
-        class165.anAnimator2026.method228(id == -1 ? -1 : Class16.aClass101_228.method1090(72, id).anInt2394, settings & 0xffff, i_64_, false);
+        class165.anAnimator2026.method228(id == -1 ? -1 : Class16.aClass101_228.method1090(id).anInt2394, settings & 0xffff, i_64_, false);
     }
 
     final void method861(int i_65_) {
@@ -821,7 +820,7 @@ abstract class Actor extends Mobile {
         return InputStream_Sub2.aClass281_83.method3383((byte) 119, i);
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10846++;
         return false;
     }
@@ -898,7 +897,7 @@ abstract class Actor extends Mobile {
             method866(null, null, (byte) 57);
         }
         if (anEntityNode_Sub4_10902 != null) {
-            anEntityNode_Sub4_10902.method967(plane, aShort9119, aShort9130, aShort9120, aShort9124);
+            anEntityNode_Sub4_10902.method967(plane);
         }
     }
 

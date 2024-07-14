@@ -16,7 +16,7 @@ public class Class40 {
         anInt619++;
         i = i * Class213.aNode_Sub27_2512.aClass320_Sub25_7274.method3776() >> 8;
         if (i_1_ != -1 || Class377_Sub1.aBoolean8775) {
-            if (i_1_ != -1 && (i_1_ != Class313.anInt4013 || !Class36.method390(-122)) && i != 0 && !Class377_Sub1.aBoolean8775) {
+            if (i_1_ != -1 && (i_1_ != Class313.anInt4013 || !Class36.method390()) && i != 0 && !Class377_Sub1.aBoolean8775) {
                 CacheNode_Sub14_Sub2.method2354(SeekableFile.index6, i, i_1_, i_2_);
                 EntityNode_Sub7.method979();
             }

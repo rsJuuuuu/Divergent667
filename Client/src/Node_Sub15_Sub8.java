@@ -8,17 +8,14 @@ public class Node_Sub15_Sub8 extends Node_Sub15 {
     private int anInt9831 = -1;
     static int anInt9832;
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         anInt9830++;
         clanchat.method496(anInt9831);
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9831 = buffer.readUnsignedShort();
         anInt9829++;
-        if (i != 29147) {
-            method2575(109, -92, 120);
-        }
     }
 
     static void method2575(int i, int i_0_, int i_1_) {

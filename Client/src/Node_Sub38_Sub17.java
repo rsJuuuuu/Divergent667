@@ -13,11 +13,8 @@ public class Node_Sub38_Sub17 extends Node_Sub38 {
         this(4096);
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10273++;
-        if (bool) {
-            method2842(false);
-        }
         if (i == 0) {
             anInt10271 = (buffer.readUnsignedByte() << 12) / 255;
         }

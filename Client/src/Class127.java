@@ -16,18 +16,18 @@ public class Class127 {
     protected int anInt1645;
     static Index index22;
 
-    static void drawHintIcons(int i_2_, int i_3_, int i_4_, int i_5_) {
+    static void drawHintIcons(int i_3_, int i_4_) {
         anInt1640++;
         Class223[] class223s = Class320_Sub24.cachedHintIcons;
         for (Class223 class223 : class223s) {
             if (class223 != null && class223.anInt2654 == 2) {
-                Animable_Sub1.method826(2 * class223.anInt2657, class223.anInt2662, i_2_ >> 1, class223.anInt2653, class223.anInt2661, i_5_ >> 1);
+                Animable_Sub1.method826(2 * class223.anInt2657, class223.anInt2662, class223.anInt2653, class223.anInt2661);
                 if (Class119.anIntArray1516[0] > -1 && Class174.clientCycle % 20 < 10) {
                     GLSprite glsprite = Class19.aGLSpriteArray312[class223.anInt2659];
                     int i_7_ = -12 + (i_4_ + Class119.anIntArray1516[0]);
                     int i_8_ = Class119.anIntArray1516[1] + i_3_ - 28;
                     glsprite.setPosition(i_7_, i_8_);
-                    Class362.method4053(i_8_, glsprite.method1186() + i_8_, i_7_, (byte) -118, glsprite.method1197() + i_7_);
+                    Class362.method4053(i_8_, glsprite.method1186() + i_8_, i_7_, glsprite.method1197() + i_7_);
                 }
             }
         }
@@ -59,7 +59,7 @@ public class Class127 {
         Class377_Sub1.aBoolean8775 = false;
         EntityNode_Sub7.method979();
         PlayerUpdateReference.method3808(true);
-        Class160.method1730(97);
+        Class160.method1730();
         Class169_Sub4.method1786();
         Node_Sub38_Sub9.method2820();
         if (bool) {

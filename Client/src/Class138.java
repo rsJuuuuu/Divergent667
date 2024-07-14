@@ -41,13 +41,13 @@ public class Class138 {
         }
         IComponentDefinitions widget = Class134_Sub3.aWidgetArrayArray9035[i_1_][i_2_];
         if (i_0_ != -1 || widget.type != 0) {
-            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
                 if (cachenode_sub13.anInt9568 == i_0_ && widget.ihash == cachenode_sub13.anInt9561 && (cachenode_sub13.anInt9562 == 18 || cachenode_sub13.anInt9562 == 1002 || cachenode_sub13.anInt9562 == 12 || cachenode_sub13.anInt9562 == 20 || cachenode_sub13.anInt9562 == 10)) {
                     return true;
                 }
             }
         } else {
-            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
                 if (cachenode_sub13.anInt9562 == 18 || cachenode_sub13.anInt9562 == 1002 || cachenode_sub13.anInt9562 == 12 || cachenode_sub13.anInt9562 == 20 || cachenode_sub13.anInt9562 == 10) {
                     for (IComponentDefinitions widget_3_ = Class76.method771(cachenode_sub13.anInt9561); widget_3_ != null; widget_3_ = Class295.method3468((byte) -120, widget_3_)) {
                         if (widget_3_.ihash == widget.ihash) {

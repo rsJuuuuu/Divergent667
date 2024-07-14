@@ -40,7 +40,7 @@ public class Class66_Sub1 extends Class66 {
         }
     }
 
-    final void method721(int i, boolean bool, int i_6_) {
+    final void method721(int i, int i_6_) {
         anInt8982++;
         int i_8_ = this.method720() * aClass150_5171.anInt5086 / 10000;
         Class93.aGraphicsToolkit1241.aa(i, 2 + i_6_, i_8_, aClass150_5171.anInt5081 - 2, ((Class150_Sub2) aClass150_5171).anInt8959, 0);

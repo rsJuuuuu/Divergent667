@@ -20,7 +20,7 @@ abstract class Class188 {
     private final int anInt2290;
     static Class124 aClass124_2291 = new Class124(12);
 
-    final void method1884(byte b) {
+    final void method1884() {
         anInt2283++;
         int[] is = new int[128];
         int[] is_2_ = new int[128];
@@ -102,7 +102,7 @@ abstract class Class188 {
                         int i_42_ = ((-i_39_ + i_40_) * i_26_ >> 12) + i_39_;
                         method1887((i_27_ * (-i_41_ + i_42_) >> 12) + i_41_, i_11_);
                     }
-                    method1886(4096);
+                    method1886();
                 }
             }
         }
@@ -115,7 +115,7 @@ abstract class Class188 {
             aShortArray2284[i_43_] = (short) (int) Math.pow(2.0, i_43_);
     }
 
-    abstract void method1886(int i);
+    abstract void method1886();
 
     abstract void method1887(int i, int i_44_);
 

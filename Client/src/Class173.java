@@ -25,10 +25,10 @@ public class Class173 {
 
     static void method1799(boolean bool, String string) {
         anInt2082++;
-        Class142.method1620(bool, -61, -1, -1, string);
+        Class142.method1620(bool, -1, -1, string);
     }
 
-    static void method1800(byte b, GLSprite[] glsprites) {
+    static void method1800(GLSprite[] glsprites) {
 
         anInt2087 = glsprites.length;
         anInt2084++;

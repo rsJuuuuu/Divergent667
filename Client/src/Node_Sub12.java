@@ -59,7 +59,7 @@ public class Node_Sub12 extends Node implements Interface21 {
         return aChar5458;
     }
 
-    public final int method78(int i) {
+    public final int method78() {
 
         anInt5449++;
         return anInt5462;

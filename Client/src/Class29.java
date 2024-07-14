@@ -276,7 +276,7 @@ public class Class29 {
         }
         if (aFloatBuffer476.offset != 0) {
             anInterface9_482.method22(aFloatBuffer476.buffer, aFloatBuffer476.offset, 24, (byte) 74);
-            gltoolkit.method1482((byte) 111, aClass69_483, null, aClass69_480, aClass69_484);
+            gltoolkit.method1482(aClass69_483, null, aClass69_480, aClass69_484);
             gltoolkit.method1441(aFloatBuffer476.offset / 24);
         }
     }
@@ -294,7 +294,7 @@ public class Class29 {
     private void method338(int i, GLToolkit gltoolkit) {
         anInt481++;
         Node_Sub37.aFloat7446 = gltoolkit.aFloat6737;
-        gltoolkit.method1407((byte) 120, (float) i);
+        gltoolkit.method1407((float) i);
         gltoolkit.method1421();
         OpenGL.glDisable(16384);
         OpenGL.glDisable(16385);

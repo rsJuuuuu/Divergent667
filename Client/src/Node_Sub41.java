@@ -3,7 +3,7 @@
  */
 
 public class Node_Sub41 extends Node {
-    static Class129 aClass129_7515 = new Class129("RC", 1);
+    static Class129 aClass129_7515 = new Class129(1);
     static int anInt7516;
     static int anInt7517;
     protected Npc aNpc7518;
@@ -102,12 +102,12 @@ public class Node_Sub41 extends Node {
         if (i > -59) {
             method2932(111, -62, 11);
         }
-        if (!CacheNode_Sub11.method2336(i_7_, i_6_)) {
+        if (!CacheNode_Sub11.method2336(i_6_)) {
             return false;
         }
         if (Class46.method470(i_6_) | (0x9000 & i_6_) != 0 | Class234.method2150(i_7_, i_6_)) {
             return true;
         }
-        return (0x37 & i_7_) == 0 & (Class278.method3367(i_7_, i_6_, (byte) -119) | (0x2000 & i_6_) != 0 | Class320_Sub9.method3713(122, i_6_, i_7_));
+        return (0x37 & i_7_) == 0 & (Class278.method3367(i_6_) | (0x2000 & i_6_) != 0 | Class320_Sub9.method3713(i_6_));
     }
 }

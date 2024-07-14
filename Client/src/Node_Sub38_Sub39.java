@@ -11,7 +11,7 @@ public class Node_Sub38_Sub39 extends Node_Sub38 {
     static IncommingPacket aClass192_10499 = new IncommingPacket(122, 10);
     static Index aClass302_10500;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         while_269_:
         do {
             do {
@@ -30,9 +30,6 @@ public class Node_Sub38_Sub39 extends Node_Sub38 {
             anInt10496 = buffer.readUnsignedShort();
         } while (false);
         anInt10494++;
-        if (bool) {
-            method2917();
-        }
     }
 
     public static void method2917() {

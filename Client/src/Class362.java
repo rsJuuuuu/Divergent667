@@ -17,7 +17,7 @@ public class Class362 {
 
     static String method4049(String string) {
         anInt4490++;
-        String string_1_ = CacheNode_Sub6.method2313((byte) 126, Animable_Sub2_Sub2.method843(string, -120));
+        String string_1_ = CacheNode_Sub6.method2313(Animable_Sub2_Sub2.method843(string, -120));
         if (string_1_ == null) {
             string_1_ = "";
         }
@@ -57,7 +57,7 @@ public class Class362 {
         cachenode_sub2.method2291();
     }
 
-    Class362(Class353 class353, int i, Index class302) {
+    Class362(Index class302) {
         index17 = class302;
         if (index17 != null) {
             int i_5_ = index17.method3526() - 1;
@@ -65,7 +65,7 @@ public class Class362 {
         }
     }
 
-    static void method4053(int i, int i_6_, int i_7_, byte b, int i_8_) {
+    static void method4053(int i, int i_6_, int i_7_, int i_8_) {
         anInt4499++;
         if (Class320_Sub20.anInt8397 == 1) {
             int i_9_ = i_7_ / StandardSprite.anInt8946;

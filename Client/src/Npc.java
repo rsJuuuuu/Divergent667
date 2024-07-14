@@ -60,7 +60,7 @@ public class Npc extends Actor {
         anInt11126 = 1;
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_0_, byte b, int i_1_, Animable animable) {
+    final void method816(int i, boolean bool, int i_0_, byte b, int i_1_, Animable animable) {
         anInt11112++;
         if (b <= 101) {
             method880((byte) 99);
@@ -106,7 +106,7 @@ public class Npc extends Actor {
         Class63.anInt923 = 0;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt11101++;
         if (aNpcDefinition11122 == null || !method875(2048, graphicstoolkit)) {
             return null;
@@ -129,9 +129,9 @@ public class Npc extends Actor {
         if (Class213.aNode_Sub27_2512.aClass320_Sub7_7308.method3708() == 1 && Objects.requireNonNull(npcdefinition).aBoolean2875 && Objects.requireNonNull(class259).aBoolean3267) {
             Animator animator = !anAnimator10876.method245(-126) || !anAnimator10876.method242() ? null : anAnimator10876;
             Animator animator_11_ = anAnimator10860.method245(-128) && (!aBoolean10867 || animator == null) ? anAnimator10860 : null;
-            DrawableModel drawablemodel = CacheNode_Sub14_Sub2.method2356(0xff & aNpcDefinition11122.aByte2868, aDrawableModelArray10909[0], anInt10862, aNpcDefinition11122.aShort2871 & 0xffff, anInt10832, aNpcDefinition11122.anInt2811, graphicstoolkit, 0xff & aNpcDefinition11122.aByte2877, animator_11_ != null ? animator_11_ : animator, anInt10872, i_9_, aNpcDefinition11122.aShort2863 & 0xffff);
+            DrawableModel drawablemodel = CacheNode_Sub14_Sub2.method2356(0xff & aNpcDefinition11122.aByte2868, aDrawableModelArray10909[0], anInt10862, aNpcDefinition11122.aShort2871 & 0xffff, anInt10832, aNpcDefinition11122.anInt2811, graphicstoolkit, 0xff & aNpcDefinition11122.aByte2877, animator_11_ != null ? animator_11_ : animator, anInt10872, aNpcDefinition11122.aShort2863 & 0xffff);
             if (drawablemodel != null) {
-                entitynode_sub6 = Class345.method3972(method881(75), (byte) -71, aDrawableModelArray10909.length + 1);
+                entitynode_sub6 = Class345.method3972(method881(75), aDrawableModelArray10909.length + 1);
                 aBoolean10903 = true;
                 graphicstoolkit.C(false);
                 if (Node_Sub15_Sub10.aBoolean9850) {
@@ -145,7 +145,7 @@ public class Npc extends Actor {
         class336.method3860(i_9_);
         class336.method3863(anInt5934, -anInt10849 + anInt5937 - 5, anInt5940);
         if (entitynode_sub6 == null) {
-            entitynode_sub6 = Class345.method3972(method881(-20), (byte) -76, aDrawableModelArray10909.length);
+            entitynode_sub6 = Class345.method3972(method881(-20), aDrawableModelArray10909.length);
         }
         this.method870(graphicstoolkit, (byte) 45, false, aDrawableModelArray10909, class336);
         if (Node_Sub15_Sub10.aBoolean9850) {
@@ -250,9 +250,6 @@ public class Npc extends Actor {
 
     final Class59 method869() {
         anInt11111++;
-        if (-3109 != -3109) {
-            return null;
-        }
         if (aClass59_10861 != null && aClass59_10861.aString877 == null) {
             return null;
         }
@@ -314,7 +311,7 @@ public class Npc extends Actor {
             }
             for (Class165 class165 : aClass165Array10886) {
                 if (class165.graphicsId != -1) {
-                    Class195 class195 = Class16.aClass101_228.method1090(103, class165.graphicsId);
+                    Class195 class195 = Class16.aClass101_228.method1090(class165.graphicsId);
                     if (class195.aBoolean2402 && class195.anInt2394 != -1 && Class18.aClass37_306.method395(class195.anInt2394, (byte) -102).anInt718 == 1) {
                         class165.anAnimator2026.method249(true, -1);
                         class165.graphicsId = -1;
@@ -347,7 +344,7 @@ public class Npc extends Actor {
         }
         for (Class165 class165 : aClass165Array10886) {
             if (class165.graphicsId != -1) {
-                Class195 class195 = Class16.aClass101_228.method1090(-110, class165.graphicsId);
+                Class195 class195 = Class16.aClass101_228.method1090(class165.graphicsId);
                 if (class195.aBoolean2402 && class195.anInt2394 != -1 && Class18.aClass37_306.method395(class195.anInt2394, (byte) -83).anInt718 == 1) {
                     class165.anAnimator2026.method249(true, -1);
                     class165.graphicsId = -1;

@@ -79,10 +79,10 @@ public class Node_Sub39 extends Node {
         buffer.writeByte(anInt7478);
         buffer.writeByte(anInt7491);
         buffer.writeByte(anInt7468);
-        buffer.writeJagString(aString7487, 30);
-        buffer.writeJagString(aString7476, -109);
-        buffer.writeJagString(aString7483, 79);
-        buffer.writeJagString(aString7469, -120);
+        buffer.writeJagString(aString7487);
+        buffer.writeJagString(aString7476);
+        buffer.writeJagString(aString7483);
+        buffer.writeJagString(aString7469);
         buffer.writeByte(anInt7492);
         buffer.writeShort(anInt7495);
     }

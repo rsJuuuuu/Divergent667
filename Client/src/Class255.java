@@ -110,7 +110,7 @@ public class Class255 {
         if (i == 1) {
             anInt3235 = buffer.readUnsignedShort();
         } else if (i == 2) {
-            anInt3229 = buffer.read24BitInteger();
+            anInt3229 = buffer.readInt24();
         } else if (i == 3) {
             anInt3221 = buffer.readUnsignedShort();
         } else if (i == 4) {
@@ -122,7 +122,7 @@ public class Class255 {
         } else if (i == 7) {
             anInt3223 = buffer.readShort();
         } else if (i == 8) {
-            aString3222 = buffer.method2180((byte) 101);
+            aString3222 = buffer.method2180();
         } else if (i == 9) {
             anInt3231 = buffer.readUnsignedShort();
         } else if (i == 10) {

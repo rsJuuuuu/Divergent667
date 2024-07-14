@@ -38,7 +38,7 @@ public class Class260 implements Interface10 {
         throw new IllegalArgumentException();
     }
 
-    public final void method27(boolean bool, int i) {
+    public final void method27(boolean bool) {
 
         anInt5224++;
         Class295 class295 = aClass337_5227.method3902(aClass205_5219.anInt5114);
@@ -71,7 +71,7 @@ public class Class260 implements Interface10 {
         aClass77_5225 = null;
     }
 
-    static Class<?> method3139(String string, int i) throws ClassNotFoundException {
+    static Class<?> method3139(String string) throws ClassNotFoundException {
         anInt5229++;
         if (string.equals("B")) {
             return Byte.TYPE;
@@ -90,9 +90,6 @@ public class Class260 implements Interface10 {
         }
         if (string.equals("F")) {
             return Float.TYPE;
-        }
-        if (i != 51) {
-            aClass77_5225 = null;
         }
         if (string.equals("D")) {
             return Double.TYPE;
@@ -135,7 +132,7 @@ public class Class260 implements Interface10 {
     public final boolean method25(int i) {
         anInt5226++;
         if (i != 421) {
-            method27(true, 15);
+            method27(true);
         }
         return aClass337_5227.method3905();
     }

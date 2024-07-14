@@ -72,7 +72,7 @@ public class Class134_Sub4 extends Class134 implements Interface13_Impl1 {
         }
     }
 
-    public final float method45(float f, int i) {
+    public final float method45(float f) {
         anInt9050++;
 
         return f / (float) anInt9037;

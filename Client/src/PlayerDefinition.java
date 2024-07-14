@@ -222,7 +222,7 @@ public class PlayerDefinition {
                     if (!bool_32_ && aClass38Array3431 != null && aClass38Array3431[i_30_] != null) {
                         class38 = aClass38Array3431[i_30_];
                     }
-                    if (!class86.method1010(0x3fffffff & i_31_, 14434).method1686(aBoolean3434, class38, 110)) {
+                    if (!class86.method1010(0x3fffffff & i_31_, 14434).method1686(aBoolean3434, class38)) {
                         bool_29_ = true;
                     }
                 }
@@ -280,7 +280,7 @@ public class PlayerDefinition {
                                 models[i_38_].method2085(i_44_, i_42_, -120, i_43_);
                             }
                             if (i_39_ != 0 || i_40_ != 0 || i_41_ != 0) {
-                                models[i_38_].method2082(i_39_, i_40_, 105, i_41_);
+                                models[i_38_].method2082(i_39_, i_40_, i_41_);
                             }
                         }
                     }

@@ -26,7 +26,7 @@ public class Node_Sub25_Sub4 extends Node_Sub25 {
     private int anInt10007;
     static int anInt10008;
     static int anInt10009 = 0;
-    static Class353 aClass353_10010 = new Class353("game4", "Game 4", 3);
+    static Class353 aClass353_10010 = new Class353("game4", 3);
     static int anInt10011 = 0;
 
     final float method2678() {
@@ -124,6 +124,6 @@ public class Node_Sub25_Sub4 extends Node_Sub25 {
     }
 
     static {
-        new Class353("game5", "Game 5", 4);
+        new Class353("game5", 4);
     }
 }

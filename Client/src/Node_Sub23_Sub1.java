@@ -61,7 +61,7 @@ public class Node_Sub23_Sub1 extends Node_Sub23 {
 
     static boolean method2640(int i, int i_1_) {
         anInt9918++;
-        for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+        for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
             if (OutcommingPacket.method3666(cachenode_sub13.anInt9562) && cachenode_sub13.aLong9563 == (long) i) {
                 return true;
             }
@@ -100,7 +100,7 @@ public class Node_Sub23_Sub1 extends Node_Sub23 {
             aGLToolkit7197.method1410(aClass382_9905);
             aClass382_9905.method4181(aClass169_Sub2_9925, 0);
             aClass382_9905.method4181(aClass169_Sub2_9924, 1);
-            aClass382_9905.method4183(0, (byte) 124);
+            aClass382_9905.method4183(0);
             if (!aClass382_9905.method4180()) {
                 aGLToolkit7197.method1436(aClass382_9905, (byte) 60);
                 return false;
@@ -125,7 +125,7 @@ public class Node_Sub23_Sub1 extends Node_Sub23 {
         if (aClass169_Sub2Array9921 == null) {
             aGLToolkit7197.method1444(-2, class169_sub2_3_);
             aGLToolkit7197.method1410(aClass382_9905);
-            aClass382_9905.method4183(0, (byte) 16);
+            aClass382_9905.method4183(0);
             OpenGL.glViewport(0, 0, 256, 256);
             long l = aClass145_9903.aLong1795;
             OpenGL.glUseProgramObjectARB(l);
@@ -185,7 +185,7 @@ public class Node_Sub23_Sub1 extends Node_Sub23 {
             aGLToolkit7197.method1436(aClass382_9906, (byte) 41);
             aGLToolkit7197.method1444(-2, aClass169_Sub2Array9921[-1 + i_7_]);
             aGLToolkit7197.method1410(aClass382_9905);
-            aClass382_9905.method4183(0, (byte) 124);
+            aClass382_9905.method4183(0);
             OpenGL.glViewport(0, 0, 256, 256);
             long l = aClass145_9915.aLong1795;
             OpenGL.glUseProgramObjectARB(l);
@@ -202,7 +202,7 @@ public class Node_Sub23_Sub1 extends Node_Sub23 {
             OpenGL.glVertex2i(0, 1);
             OpenGL.glEnd();
         }
-        aClass382_9905.method4183(1, (byte) 127);
+        aClass382_9905.method4183(1);
         aGLToolkit7197.method1444(-2, aClass169_Sub2_9925);
         long l = aClass145_9911.aLong1795;
         OpenGL.glUseProgramObjectARB(l);
@@ -218,7 +218,7 @@ public class Node_Sub23_Sub1 extends Node_Sub23 {
         OpenGL.glTexCoord2f(0.0F, 1.0F);
         OpenGL.glVertex2i(0, 1);
         OpenGL.glEnd();
-        aClass382_9905.method4183(0, (byte) 122);
+        aClass382_9905.method4183(0);
         aGLToolkit7197.method1444(-2, aClass169_Sub2_9924);
         OpenGL.glUniform3fARB(OpenGL.glGetUniformLocationARB(l, "step"), 0.0F, 0.00390625F, 0.0F);
         OpenGL.glBegin(7);

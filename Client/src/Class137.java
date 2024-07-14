@@ -80,7 +80,7 @@ public class Class137 {
         aGLToolkit1714.method1451(false);
         aGLToolkit1714.method1415(false);
         aGLToolkit1714.method1489(-2);
-        aGLToolkit1714.method1434((byte) 104, 1);
+        aGLToolkit1714.method1434(1);
         aGLToolkit1714.method1460(1);
         float f = 1.0F / (float) (aGLToolkit1714.anInt6606 * 128);
         if (bool) {

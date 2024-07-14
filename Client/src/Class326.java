@@ -90,7 +90,7 @@ public class Class326 {
         return Class141.aCalendar1756.get(Calendar.YEAR);
     }
 
-    static String method3818(long l, int i) {
+    static String method3818(long l) {
         anInt4101++;
         Node_Sub43.method2941(l);
         int i_4_ = Class141.aCalendar1756.get(Calendar.DATE);

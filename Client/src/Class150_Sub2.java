@@ -31,7 +31,7 @@ public class Class150_Sub2 extends Class150 {
         return Class46.aClass170_680;
     }
 
-    static Class357 method1660(byte b, int i, GraphicsToolkit graphicstoolkit) {
+    static Class357 method1660(int i, GraphicsToolkit graphicstoolkit) {
 
         anInt8957++;
         Class49 class49 = Class268.method3290(true, graphicstoolkit, true, i);

@@ -30,7 +30,6 @@ public class ClanChat {
     private int anInt744;
     static int anInt745;
     static int anInt746;
-    protected long aLong747;
     protected byte aByte748;
     protected int anInt749 = -1;
     protected boolean aBoolean750;
@@ -221,7 +220,7 @@ public class ClanChat {
         }
     }
 
-    static boolean method494(int i, int i_11_) {
+    static boolean method494(int i) {
         anInt728++;
         return (0x800 & i) != 0;
     }
@@ -615,12 +614,5 @@ public class ClanChat {
         aString763 = null;
         anInt765 = -1;
         method505(buffer);
-    }
-
-
-    private ClanChat() {
-        anInt744 = 0;
-        aString763 = null;
-        anInt765 = -1;
     }
 }

@@ -70,7 +70,7 @@ class AnimableAnimator extends Animator {
                 }
                 Class20.anInt328 = (int) Class20.aFloat327 >> 1;
                 Class20.aByteArrayArrayArray332 = Node_Sub29_Sub3.method2719(Class20.anInt328);
-                Class207.method2039(80);
+                Class207.method2039();
                 Class20.method279();
                 Node_Sub43.aClass312_7541 = new Class312();
                 Class20.anInt323 += (int) (5.0 * Math.random()) - 2;

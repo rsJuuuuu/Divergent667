@@ -164,7 +164,7 @@ public class EntityNode_Sub7 extends EntityNode {
                     } else {
                         EntityNode_Sub3_Sub2_Sub1 entitynode_sub3_sub2_sub1 = Class284.anEntityNode_Sub3_Sub2_Sub1Array3596[Animable_Sub3_Sub1.anInt11012];
                         Animable_Sub3_Sub1.anInt11012 = 1 + Animable_Sub3_Sub1.anInt11012 & 0x3ff;
-                        entitynode_sub3_sub2_sub1.method950(this, i_37_, i_38_, i_39_, i_16_, i_18_, i_17_, i_40_, i_41_, i_43_, i_42_, i_44_, aClass355_6011.aBoolean4373, aClass355_6011.aBoolean4365);
+                        entitynode_sub3_sub2_sub1.method950(this, i_37_, i_38_, i_39_, i_16_, i_18_, i_17_, i_40_, i_41_, i_43_, i_42_, i_44_, aClass355_6011.aBoolean4365);
                     }
                 }
             }
@@ -187,8 +187,8 @@ public class EntityNode_Sub7 extends EntityNode {
             aClass143_6005.anInt1765 = aClass300_6003.anInt3752;
         }
         anInt6004 = 0;
-        for (EntityNode_Sub3_Sub2_Sub1 entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1113((byte) 105); entitynode_sub3_sub2_sub1 != null; entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1108(115)) {
-            entitynode_sub3_sub2_sub1.method948(l, i);
+        for (EntityNode_Sub3_Sub2_Sub1 entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1113(); entitynode_sub3_sub2_sub1 != null; entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1108(115)) {
+            entitynode_sub3_sub2_sub1.method948(i);
             anInt6004++;
         }
         Class280.anInt3570 += anInt6004;
@@ -199,10 +199,10 @@ public class EntityNode_Sub7 extends EntityNode {
         aClass192_6008 = null;
     }
 
-    final void method976(long l, GraphicsToolkit graphicstoolkit) {
+    final void method976(GraphicsToolkit graphicstoolkit) {
         anInt6000++;
-        for (EntityNode_Sub3_Sub2_Sub1 entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1113((byte) 116); entitynode_sub3_sub2_sub1 != null; entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1108(98))
-            entitynode_sub3_sub2_sub1.method949(graphicstoolkit, l);
+        for (EntityNode_Sub3_Sub2_Sub1 entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1113(); entitynode_sub3_sub2_sub1 != null; entitynode_sub3_sub2_sub1 = (EntityNode_Sub3_Sub2_Sub1) aClass103_6006.method1108(98))
+            entitynode_sub3_sub2_sub1.method949(graphicstoolkit);
     }
 
     final void method977(byte b) {

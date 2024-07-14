@@ -352,16 +352,13 @@ public class Node_Sub38_Sub14 extends Node_Sub38 {
             method2833(1, (byte) -86);
         }
         method2836();
-        if (7 != 7) {
-            aWidget10244 = null;
-        }
     }
 
     public static void method2837() {
         aWidget10244 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10250++;
         if (i == 0) {
             int i_17_ = buffer.readUnsignedByte();
@@ -376,9 +373,6 @@ public class Node_Sub38_Sub14 extends Node_Sub38 {
             } else {
                 method2833(i_17_, (byte) -96);
             }
-        }
-        if (bool) {
-            anIntArrayArray10248 = null;
         }
     }
 

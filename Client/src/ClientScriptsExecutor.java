@@ -178,7 +178,7 @@ public class ClientScriptsExecutor {
                 } else {
                     aWidget3849 = widget_11_;
                 }
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 151) {
@@ -191,14 +191,14 @@ public class ClientScriptsExecutor {
                 }
                 IComponentDefinitions widget_12_ = Class76.method771(widget.ihash);
                 Objects.requireNonNull(widget_12_).aWidgetArray4804[widget.anInt4687] = null;
-                ClientScript.method2321(-1, widget_12_);
+                ClientScript.method2321(widget_12_);
                 return;
             }
             if (i == 152) {
                 IComponentDefinitions widget = Class76.method771(anIntArray3840[--anInt3846]);
                 Objects.requireNonNull(widget).aWidgetArray4804 = null;
                 widget.aWidgetArray4793 = null;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 200) {
@@ -333,7 +333,7 @@ public class ClientScriptsExecutor {
                 }
                 widget.aByte4720 = (byte) i_27_;
                 widget.aByte4851 = (byte) i_28_;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 Class28.method332(widget);
                 if (widget.anInt4687 == -1) {
                     Class224.method2105(widget.ihash);
@@ -360,10 +360,10 @@ public class ClientScriptsExecutor {
                 }
                 widget.aByte4750 = (byte) i_29_;
                 widget.aByte4741 = (byte) i_30_;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 Class28.method332(widget);
                 if (widget.type == 0) {
-                    Class270_Sub1.method3300(widget, (byte) -116, false);
+                    Class270_Sub1.method3300(widget, false);
                 }
                 return;
             }
@@ -371,7 +371,7 @@ public class ClientScriptsExecutor {
                 boolean bool_31_ = anIntArray3840[--anInt3846] == 1;
                 if (Objects.requireNonNull(widget).hidden != bool_31_) {
                     widget.hidden = bool_31_;
-                    ClientScript.method2321(-1, widget);
+                    ClientScript.method2321(widget);
                 }
                 if (widget.anInt4687 == -1) {
                     EntityNode_Sub7.method978(widget.ihash);
@@ -382,10 +382,10 @@ public class ClientScriptsExecutor {
                 anInt3846 -= 2;
                 Objects.requireNonNull(widget).anInt4792 = anIntArray3840[anInt3846];
                 widget.anInt4700 = anIntArray3840[anInt3846 + 1];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 Class28.method332(widget);
                 if (widget.type == 0) {
-                    Class270_Sub1.method3300(widget, (byte) -121, false);
+                    Class270_Sub1.method3300(widget, false);
                 }
                 return;
             }
@@ -417,7 +417,7 @@ public class ClientScriptsExecutor {
                 if (widget.anInt4734 < 0) {
                     widget.anInt4734 = 0;
                 }
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Node_Sub33.method2733(widget.ihash);
                 }
@@ -425,7 +425,7 @@ public class ClientScriptsExecutor {
             }
             if (i == 1101) {
                 Objects.requireNonNull(widget).anInt4754 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Class339.method3916(widget.ihash);
                 }
@@ -433,24 +433,24 @@ public class ClientScriptsExecutor {
             }
             if (i == 1102) {
                 Objects.requireNonNull(widget).aBoolean4769 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1103) {
                 Objects.requireNonNull(widget).anInt4757 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1104) {
                 Objects.requireNonNull(widget).anInt4752 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1105) {
                 int i_32_ = anIntArray3840[--anInt3846];
                 if (Objects.requireNonNull(widget).anInt4820 != i_32_) {
                     widget.anInt4820 = i_32_;
-                    ClientScript.method2321(-1, widget);
+                    ClientScript.method2321(widget);
                 }
                 if (widget.anInt4687 == -1) {
                     Class194_Sub3_Sub1.method1979(widget.ihash);
@@ -459,18 +459,18 @@ public class ClientScriptsExecutor {
             }
             if (i == 1106) {
                 Objects.requireNonNull(widget).anInt4728 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1107) {
                 Objects.requireNonNull(widget).aBoolean4861 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1108) {
                 Objects.requireNonNull(widget).modelType = 1;
                 widget.anInt4864 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Class52.method528(widget.ihash);
                 }
@@ -484,7 +484,7 @@ public class ClientScriptsExecutor {
                 widget.anInt4821 = anIntArray3840[anInt3846 + 3];
                 widget.anInt4682 = anIntArray3840[anInt3846 + 4];
                 widget.anInt4787 = anIntArray3840[anInt3846 + 5];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Class46.method468(widget.ihash);
                     Node_Sub36_Sub4.method2766(widget.ihash, 122);
@@ -503,7 +503,7 @@ public class ClientScriptsExecutor {
                         widget.anAnimator4755.method249(true, i_33_);
                     }
                     widget.anInt4773 = i_33_;
-                    ClientScript.method2321(-1, widget);
+                    ClientScript.method2321(widget);
                 }
                 if (widget.anInt4687 == -1) {
                     Player.method892(widget.ihash);
@@ -512,14 +512,14 @@ public class ClientScriptsExecutor {
             }
             if (i == 1111) {
                 Objects.requireNonNull(widget).aBoolean4707 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1112) {
                 String string = aStringArray3855[--anInt3841];
                 if (!string.equals(Objects.requireNonNull(widget).aString4790)) {
                     widget.aString4790 = string;
-                    ClientScript.method2321(-1, widget);
+                    ClientScript.method2321(widget);
                 }
                 if (widget.anInt4687 == -1) {
                     Class339_Sub8.method3944(12000, widget.ihash);
@@ -528,7 +528,7 @@ public class ClientScriptsExecutor {
             }
             if (i == 1113) {
                 Objects.requireNonNull(widget).anInt4759 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Node_Sub25_Sub1.method2657(widget.ihash);
                 }
@@ -539,52 +539,52 @@ public class ClientScriptsExecutor {
                 Objects.requireNonNull(widget).anInt4835 = anIntArray3840[anInt3846];
                 widget.anInt4825 = anIntArray3840[anInt3846 + 1];
                 widget.anInt4697 = anIntArray3840[anInt3846 + 2];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1115) {
                 Objects.requireNonNull(widget).aBoolean4710 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1116) {
                 Objects.requireNonNull(widget).anInt4744 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1117) {
                 Objects.requireNonNull(widget).anInt4796 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1118) {
                 Objects.requireNonNull(widget).aBoolean4732 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1119) {
                 Objects.requireNonNull(widget).aBoolean4743 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1120) {
                 anInt3846 -= 2;
                 Objects.requireNonNull(widget).anInt4735 = anIntArray3840[anInt3846];
                 widget.anInt4691 = anIntArray3840[anInt3846 + 1];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.type == 0) {
-                    Class270_Sub1.method3300(widget, (byte) 63, false);
+                    Class270_Sub1.method3300(widget, false);
                 }
                 return;
             }
             if (i == 1122) {
                 Objects.requireNonNull(widget).aBoolean4738 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1123) {
                 Objects.requireNonNull(widget).anInt4787 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Class46.method468(widget.ihash);
                 }
@@ -593,19 +593,19 @@ public class ClientScriptsExecutor {
             if (i == 1124) {
                 int i_34_ = anIntArray3840[--anInt3846];
                 Objects.requireNonNull(widget).aBoolean4721 = i_34_ == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1125) {
                 anInt3846 -= 2;
                 Objects.requireNonNull(widget).anInt4709 = anIntArray3840[anInt3846];
                 widget.anInt4797 = anIntArray3840[anInt3846 + 1];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1126) {
                 Objects.requireNonNull(widget).anInt4767 = anIntArray3840[--anInt3846];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1127) {
@@ -638,7 +638,7 @@ public class ClientScriptsExecutor {
                 if ((Objects.requireNonNull(widget).type == 5 || i != 1129) && (widget.type == 4 || i != 1130)) {
                     if (widget.anInt4694 != i_38_) {
                         widget.anInt4694 = i_38_;
-                        ClientScript.method2321(-1, widget);
+                        ClientScript.method2321(widget);
                     }
                     if (widget.anInt4687 == -1) {
                         Class47.method475(widget.ihash);
@@ -654,7 +654,7 @@ public class ClientScriptsExecutor {
                 short s_40_ = (short) anIntArray3840[anInt3846 + 2];
                 if (i_39_ >= 0 && i_39_ < 5) {
                     Objects.requireNonNull(widget).method4158(s_40_, i_39_, s);
-                    ClientScript.method2321(-1, widget);
+                    ClientScript.method2321(widget);
                     if (widget.anInt4687 == -1) {
                         Node_Sub23_Sub1.method2637(widget.ihash, i_39_, false);
                     }
@@ -669,7 +669,7 @@ public class ClientScriptsExecutor {
                 short s_42_ = (short) anIntArray3840[anInt3846 + 2];
                 if (i_41_ >= 0 && i_41_ < 5) {
                     Objects.requireNonNull(widget).method4140(s, -43, i_41_, s_42_);
-                    ClientScript.method2321(-1, widget);
+                    ClientScript.method2321(widget);
                     if (widget.anInt4687 == -1) {
                         Class368.method4081(widget.ihash, i_41_);
                     }
@@ -679,7 +679,7 @@ public class ClientScriptsExecutor {
             }
             if (i == 1133) {
                 Objects.requireNonNull(widget).aBoolean4832 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Class362.method4052(widget.ihash);
                 }
@@ -700,7 +700,7 @@ public class ClientScriptsExecutor {
             }
             if (i == 1135) {
                 Objects.requireNonNull(widget).aBoolean4782 = anIntArray3840[--anInt3846] == 1;
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 if (widget.anInt4687 == -1) {
                     Node_Sub6.method2417(widget.ihash);
                 }
@@ -714,7 +714,7 @@ public class ClientScriptsExecutor {
             } else {
                 widget = bool ? aWidget3865 : aWidget3849;
             }
-            ClientScript.method2321(-1, Objects.requireNonNull(widget));
+            ClientScript.method2321(Objects.requireNonNull(widget));
             if (i == 1200 || i == 1205 || i == 1208 || i == 1209 || i == 1212 || i == 1213) {
                 anInt3846 -= 2;
                 int i_45_ = anIntArray3840[anInt3846];
@@ -796,14 +796,14 @@ public class ClientScriptsExecutor {
                 widget.anInt4724 = anIntArray3840[anInt3846 + 1];
                 widget.anInt4794 = anIntArray3840[anInt3846 + 2];
                 widget.anInt4760 = anIntArray3840[anInt3846 + 3];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1207) {
                 anInt3846 -= 2;
                 widget.anInt4826 = anIntArray3840[anInt3846];
                 widget.anInt4764 = anIntArray3840[anInt3846 + 1];
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
                 return;
             }
             if (i == 1210) {
@@ -1163,7 +1163,7 @@ public class ClientScriptsExecutor {
                 if (i == 1613) {
                     int i_61_ = anIntArray3840[--anInt3846];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_61_, -79);
-                    if (class267.method3287((byte) 110)) {
+                    if (class267.method3287()) {
                         aStringArray3855[anInt3841++] = widget.method4141(class267.aString3450, i_61_);
                     } else {
                         anIntArray3840[anInt3846++] = widget.method4156(class267.anInt3443, i_61_);
@@ -1593,12 +1593,12 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 3206) {
                     anInt3846 -= 4;
-                    Class105.method1116(anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 1], 256, (byte) -65, anIntArray3840[anInt3846 + 2], anIntArray3840[anInt3846 + 3], false);
+                    Class105.method1116(anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 1], 256, anIntArray3840[anInt3846 + 2], anIntArray3840[anInt3846 + 3], false);
                     return;
                 }
                 if (i == 3207) {
                     anInt3846 -= 4;
-                    Class105.method1116(anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 1], 256, (byte) 61, anIntArray3840[anInt3846 + 2], anIntArray3840[anInt3846 + 3], true);
+                    Class105.method1116(anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 1], 256, anIntArray3840[anInt3846 + 2], anIntArray3840[anInt3846 + 3], true);
                     return;
                 }
                 if (i == 3208) {
@@ -1608,7 +1608,7 @@ public class ClientScriptsExecutor {
                 }
                 if (i == 3209) {
                     anInt3846 -= 5;
-                    Class105.method1116(anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 1], anIntArray3840[anInt3846 + 4], (byte) 96, anIntArray3840[anInt3846 + 2], anIntArray3840[anInt3846 + 3], false);
+                    Class105.method1116(anIntArray3840[anInt3846], anIntArray3840[anInt3846 + 1], anIntArray3840[anInt3846 + 4], anIntArray3840[anInt3846 + 2], anIntArray3840[anInt3846 + 3], false);
                     return;
                 }
             } else if (i < 3400) {
@@ -2066,7 +2066,7 @@ public class ClientScriptsExecutor {
                     if (string.startsWith("<img=0>") || string.startsWith("<img=1>")) {
                         string = string.substring(7);
                     }
-                    anIntArray3840[anInt3846++] = Class193.method1955(0, string) ? 1 : 0;
+                    anIntArray3840[anInt3846++] = Class193.method1955(string) ? 1 : 0;
                     return;
                 }
                 if (i == 3610) {
@@ -2719,7 +2719,7 @@ public class ClientScriptsExecutor {
                     int i_227_ = anIntArray3840[anInt3846];
                     int i_228_ = anIntArray3840[anInt3846 + 1];
                     Class357 class357 = Class44.method461(i_228_, AnimableAnimator_Sub1.aClass302_9091);
-                    anIntArray3840[anInt3846++] = Objects.requireNonNull(class357).method4028(string, Node_Sub52.aGLSpriteArray7655, (byte) -46, i_227_);
+                    anIntArray3840[anInt3846++] = Objects.requireNonNull(class357).method4028(string, Node_Sub52.aGLSpriteArray7655, i_227_);
                     return;
                 }
                 if (i == 4109) {
@@ -2934,7 +2934,7 @@ public class ClientScriptsExecutor {
                     int i_260_ = anIntArray3840[anInt3846];
                     int i_261_ = anIntArray3840[anInt3846 + 1];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_261_, -82);
-                    if (class267.method3287((byte) 99)) {
+                    if (class267.method3287()) {
                         aStringArray3855[anInt3841++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_260_, 14434).method1684(class267.aString3450, -32525, i_261_);
                     } else {
                         anIntArray3840[anInt3846++] = EntityNode_Sub3_Sub1.aClass86_9166.method1010(i_260_, 14434).method1678(i_261_, class267.anInt3443);
@@ -2991,7 +2991,7 @@ public class ClientScriptsExecutor {
                     int i_266_ = anIntArray3840[anInt3846];
                     int i_267_ = anIntArray3840[anInt3846 + 1];
                     int i_268_ = anIntArray3840[anInt3846 + 2];
-                    Class142.method1620(i_266_ == 1, 117, i_268_, i_267_, string);
+                    Class142.method1620(i_266_ == 1, i_268_, i_267_, string);
                     anIntArray3840[anInt3846++] = Class365_Sub1.anInt8759;
                     return;
                 }
@@ -3012,7 +3012,7 @@ public class ClientScriptsExecutor {
                     int i_272_ = anIntArray3840[anInt3846];
                     int i_273_ = anIntArray3840[anInt3846 + 1];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_273_, -121);
-                    if (class267.method3287((byte) -88)) {
+                    if (class267.method3287()) {
                         aStringArray3855[anInt3841++] = Class366.aClass279_4526.getNPCDefinitions(i_272_).method3005(class267.aString3450, i_273_);
                     } else {
                         anIntArray3840[anInt3846++] = Class366.aClass279_4526.getNPCDefinitions(i_272_).method3009(66, i_273_, class267.anInt3443);
@@ -3026,7 +3026,7 @@ public class ClientScriptsExecutor {
                     int i_274_ = anIntArray3840[anInt3846];
                     int i_275_ = anIntArray3840[anInt3846 + 1];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_275_, -89);
-                    if (class267.method3287((byte) -50)) {
+                    if (class267.method3287()) {
                         aStringArray3855[anInt3841++] = Objects.requireNonNull(Class186.aClass112_2256.method1145(i_274_, 46)).method3034(class267.aString3450, i_275_, false);
                     } else {
                         anIntArray3840[anInt3846++] = Objects.requireNonNull(Class186.aClass112_2256.method1145(i_274_, 59)).method3053(class267.anInt3443, 53, i_275_);
@@ -3040,7 +3040,7 @@ public class ClientScriptsExecutor {
                     int i_276_ = anIntArray3840[anInt3846];
                     int i_277_ = anIntArray3840[anInt3846 + 1];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_277_, -121);
-                    if (class267.method3287((byte) -78)) {
+                    if (class267.method3287()) {
                         aStringArray3855[anInt3841++] = Node_Sub9_Sub4.aClass180_9727.method1821(i_276_).method2284(i_277_, class267.aString3450);
                     } else {
                         anIntArray3840[anInt3846++] = Node_Sub9_Sub4.aClass180_9727.method1821(i_276_).method2282(class267.anInt3443, i_277_);
@@ -3151,10 +3151,6 @@ public class ClientScriptsExecutor {
                 }
             }
         }
-    }
-
-    static void method3554(int i, boolean bool) {
-        /* empty */
     }
 
     private static void method3555(ClientScript cachenode_sub9, int maxSteps) {
@@ -3444,7 +3440,7 @@ public class ClientScriptsExecutor {
                         if (command >= 10000) {
                             break;
                         }
-                        method3557(command, bool);
+                        method3557(command);
                     }
                 }
             }
@@ -3463,7 +3459,7 @@ public class ClientScriptsExecutor {
         executeScript(node_sub37, 200000);
     }
 
-    private static void method3557(int i, boolean bool) {
+    private static void method3557(int i) {
         if (i < 5100) {
             if (i == 5000) {
                 anIntArray3840[anInt3846++] = Class69.anInt943;
@@ -3549,7 +3545,7 @@ public class ClientScriptsExecutor {
             }
             if (i == 5008) {
                 String string = aStringArray3855[--anInt3841];
-                method3562(string, i);
+                method3562(string);
                 return;
             }
             if (i == 5009) {
@@ -3680,12 +3676,12 @@ public class ClientScriptsExecutor {
             }
             if (i == 5050) {
                 int i_340_ = anIntArray3840[--anInt3846];
-                aStringArray3855[anInt3841++] = Class42.aClass122_631.method1508((byte) -18, i_340_).aString9443;
+                aStringArray3855[anInt3841++] = Class42.aClass122_631.method1508(i_340_).aString9443;
                 return;
             }
             if (i == 5051) {
                 int i_341_ = anIntArray3840[--anInt3846];
-                CacheNode_Sub3 cachenode_sub3 = Class42.aClass122_631.method1508((byte) 90, i_341_);
+                CacheNode_Sub3 cachenode_sub3 = Class42.aClass122_631.method1508(i_341_);
                 if (cachenode_sub3.anIntArray9445 == null) {
                     anIntArray3840[anInt3846++] = 0;
                 } else {
@@ -3698,14 +3694,14 @@ public class ClientScriptsExecutor {
                 anInt3846 -= 2;
                 int i_342_ = anIntArray3840[anInt3846];
                 int i_343_ = anIntArray3840[anInt3846 + 1];
-                CacheNode_Sub3 cachenode_sub3 = Class42.aClass122_631.method1508((byte) 107, i_342_);
+                CacheNode_Sub3 cachenode_sub3 = Class42.aClass122_631.method1508(i_342_);
                 int i_344_ = cachenode_sub3.anIntArray9445[i_343_];
                 anIntArray3840[anInt3846++] = i_344_;
                 return;
             }
             if (i == 5053) {
                 int i_345_ = anIntArray3840[--anInt3846];
-                CacheNode_Sub3 cachenode_sub3 = Class42.aClass122_631.method1508((byte) -105, i_345_);
+                CacheNode_Sub3 cachenode_sub3 = Class42.aClass122_631.method1508(i_345_);
                 if (cachenode_sub3.anIntArray9448 == null) {
                     anIntArray3840[anInt3846++] = 0;
                 } else {
@@ -3718,7 +3714,7 @@ public class ClientScriptsExecutor {
                 anInt3846 -= 2;
                 int i_346_ = anIntArray3840[anInt3846];
                 int i_347_ = anIntArray3840[anInt3846 + 1];
-                anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508((byte) 99, i_346_).anIntArray9448[i_347_];
+                anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508(i_346_).anIntArray9448[i_347_];
                 return;
             }
             if (i == 5055) {
@@ -3795,14 +3791,14 @@ public class ClientScriptsExecutor {
                 anInt3846 -= 2;
                 int i_355_ = anIntArray3840[anInt3846];
                 int i_356_ = anIntArray3840[anInt3846 + 1];
-                anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508((byte) -51, i_355_).aCharArray9444[i_356_];
+                anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508(i_355_).aCharArray9444[i_356_];
                 return;
             }
             if (i == 5063) {
                 anInt3846 -= 2;
                 int i_357_ = anIntArray3840[anInt3846];
                 int i_358_ = anIntArray3840[anInt3846 + 1];
-                anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508((byte) 111, i_357_).aCharArray9452[i_358_];
+                anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508(i_357_).aCharArray9452[i_358_];
                 return;
             }
             if (i == 5064) {
@@ -3812,7 +3808,7 @@ public class ClientScriptsExecutor {
                 if (i_360_ == -1) {
                     anIntArray3840[anInt3846++] = -1;
                 } else {
-                    anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508((byte) -128, i_359_).method2298((char) i_360_);
+                    anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508(i_359_).method2298((char) i_360_);
                     return;
                 }
                 return;
@@ -3824,7 +3820,7 @@ public class ClientScriptsExecutor {
                 if (i_362_ == -1) {
                     anIntArray3840[anInt3846++] = -1;
                 } else {
-                    anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508((byte) 101, i_361_).method2297((char) i_362_);
+                    anIntArray3840[anInt3846++] = Class42.aClass122_631.method1508(i_361_).method2297((char) i_362_);
                     return;
                 }
                 return;
@@ -3914,7 +3910,7 @@ public class ClientScriptsExecutor {
             }
         } else if (i < 5200) {
             if (i == 5100) {
-                if (Class175.aClass291_2100.method3450(104, 86)) {
+                if (Class175.aClass291_2100.method3450(86)) {
                     anIntArray3840[anInt3846++] = 1;
                 } else {
                     anIntArray3840[anInt3846++] = 0;
@@ -3923,7 +3919,7 @@ public class ClientScriptsExecutor {
                 return;
             }
             if (i == 5101) {
-                if (Class175.aClass291_2100.method3450(-67, 82)) {
+                if (Class175.aClass291_2100.method3450(82)) {
                     anIntArray3840[anInt3846++] = 1;
                 } else {
                     anIntArray3840[anInt3846++] = 0;
@@ -3932,7 +3928,7 @@ public class ClientScriptsExecutor {
                 return;
             }
             if (i == 5102) {
-                if (Class175.aClass291_2100.method3450(97, 81)) {
+                if (Class175.aClass291_2100.method3450(81)) {
                     anIntArray3840[anInt3846++] = 1;
                 } else {
                     anIntArray3840[anInt3846++] = 0;
@@ -3950,7 +3946,7 @@ public class ClientScriptsExecutor {
                 return;
             }
             if (i == 5205) {
-                Node_Sub38_Sub5.method2802(anIntArray3840[--anInt3846], false, -1, -1, -11493);
+                Node_Sub38_Sub5.method2802(anIntArray3840[--anInt3846], false, -1, -1);
                 return;
             }
             if (i == 5206) {
@@ -4017,8 +4013,7 @@ public class ClientScriptsExecutor {
                     anIntArray3840[anInt3846++] = -1;
                 } else {
                     anIntArray3840[anInt3846++] = node_sub14.anInt7128;
-                    int i_380_ = node_sub14.anInt7121 << 28 | node_sub14.anInt7125 + Class20.anInt354 << 14 | node_sub14.anInt7120 + Class20.anInt343;
-                    anIntArray3840[anInt3846++] = i_380_;
+                    anIntArray3840[anInt3846++] = node_sub14.anInt7125 + Class20.anInt354 << 14 | node_sub14.anInt7120 + Class20.anInt343;
                     return;
                 }
                 return;
@@ -4030,7 +4025,7 @@ public class ClientScriptsExecutor {
                     anIntArray3840[anInt3846++] = -1;
                 } else {
                     anIntArray3840[anInt3846++] = node_sub14.anInt7128;
-                    int i_381_ = node_sub14.anInt7121 << 28 | node_sub14.anInt7125 + Class20.anInt354 << 14 | node_sub14.anInt7120 + Class20.anInt343;
+                    int i_381_ = node_sub14.anInt7125 + Class20.anInt354 << 14 | node_sub14.anInt7120 + Class20.anInt343;
                     anIntArray3840[anInt3846++] = i_381_;
                     return;
                 }
@@ -4109,7 +4104,7 @@ public class ClientScriptsExecutor {
                 anInt3846 -= 2;
                 int i_390_ = anIntArray3840[anInt3846];
                 int i_391_ = anIntArray3840[anInt3846 + 1];
-                Node_Sub38_Sub5.method2802(i_390_, false, i_391_ & 0x3fff, i_391_ >> 14 & 0x3fff, -11493);
+                Node_Sub38_Sub5.method2802(i_390_, false, i_391_ & 0x3fff, i_391_ >> 14 & 0x3fff);
                 return;
             }
             if (i == 5224) {
@@ -4158,7 +4153,7 @@ public class ClientScriptsExecutor {
                 anInt3846 -= 2;
                 int i_396_ = anIntArray3840[anInt3846];
                 int i_397_ = anIntArray3840[anInt3846 + 1];
-                Node_Sub38_Sub5.method2802(i_396_, true, i_397_ & 0x3fff, i_397_ >> 14 & 0x3fff, -11493);
+                Node_Sub38_Sub5.method2802(i_396_, true, i_397_ & 0x3fff, i_397_ >> 14 & 0x3fff);
                 return;
             }
             if (i == 5228) {
@@ -4544,7 +4539,7 @@ public class ClientScriptsExecutor {
                 int i_438_ = anIntArray3840[anInt3846 + 1];
                 int i_439_ = anIntArray3840[anInt3846 + 2];
                 int i_440_ = anIntArray3840[anInt3846 + 3];
-                Class188_Sub1_Sub1.method1895((i_437_ >> 14 & 0x3fff) - Node_Sub53.gameSceneBaseX, false, i_439_, (byte) 103, i_438_ << 2, (i_437_ & 0x3fff) - Class320_Sub4.gameSceneBaseY, i_440_);
+                Class188_Sub1_Sub1.method1895((i_437_ >> 14 & 0x3fff) - Node_Sub53.gameSceneBaseX, false, i_439_, i_438_ << 2, (i_437_ & 0x3fff) - Class320_Sub4.gameSceneBaseY, i_440_);
                 return;
             }
             if (i == 5501) {
@@ -4586,7 +4581,7 @@ public class ClientScriptsExecutor {
                 return;
             }
             if (i == 5503) {
-                Class368.method4080((byte) 115);
+                Class368.method4080();
                 return;
             }
             if (i == 5504) {
@@ -4907,7 +4902,7 @@ public class ClientScriptsExecutor {
             if (i == 6012) {
                 Class213.aNode_Sub27_2512.method2690(95, anIntArray3840[--anInt3846] == 1 ? 1 : 0, Class213.aNode_Sub27_2512.aClass320_Sub24_7317);
                 Class320_Sub12.method3728(0);
-                Class120.method1228(-108);
+                Class120.method1228();
                 Node_Sub38_Sub31.method2893(1);
                 Class269.aBoolean3472 = false;
                 return;
@@ -5631,7 +5626,7 @@ public class ClientScriptsExecutor {
                     int i_501_ = anIntArray3840[anInt3846];
                     int i_502_ = anIntArray3840[anInt3846 + 1];
                     int i_503_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(123, i_501_ << 16 | i_502_, i_503_, "", 1);
+                    r_Sub1.method2364(i_501_ << 16 | i_502_, i_503_, "", 1);
                     return;
                 }
                 if (i == 6708) {
@@ -5639,7 +5634,7 @@ public class ClientScriptsExecutor {
                     int i_504_ = anIntArray3840[anInt3846];
                     int i_505_ = anIntArray3840[anInt3846 + 1];
                     int i_506_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(125, i_504_ << 16 | i_505_, i_506_, "", 2);
+                    r_Sub1.method2364(i_504_ << 16 | i_505_, i_506_, "", 2);
                     return;
                 }
                 if (i == 6709) {
@@ -5647,7 +5642,7 @@ public class ClientScriptsExecutor {
                     int i_507_ = anIntArray3840[anInt3846];
                     int i_508_ = anIntArray3840[anInt3846 + 1];
                     int i_509_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(-113, i_507_ << 16 | i_508_, i_509_, "", 3);
+                    r_Sub1.method2364(i_507_ << 16 | i_508_, i_509_, "", 3);
                     return;
                 }
                 if (i == 6710) {
@@ -5655,7 +5650,7 @@ public class ClientScriptsExecutor {
                     int i_510_ = anIntArray3840[anInt3846];
                     int i_511_ = anIntArray3840[anInt3846 + 1];
                     int i_512_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(127, i_510_ << 16 | i_511_, i_512_, "", 4);
+                    r_Sub1.method2364(i_510_ << 16 | i_511_, i_512_, "", 4);
                     return;
                 }
                 if (i == 6711) {
@@ -5663,7 +5658,7 @@ public class ClientScriptsExecutor {
                     int i_513_ = anIntArray3840[anInt3846];
                     int i_514_ = anIntArray3840[anInt3846 + 1];
                     int i_515_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(-101, i_513_ << 16 | i_514_, i_515_, "", 5);
+                    r_Sub1.method2364(i_513_ << 16 | i_514_, i_515_, "", 5);
                     return;
                 }
                 if (i == 6712) {
@@ -5671,7 +5666,7 @@ public class ClientScriptsExecutor {
                     int i_516_ = anIntArray3840[anInt3846];
                     int i_517_ = anIntArray3840[anInt3846 + 1];
                     int i_518_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(-11, i_516_ << 16 | i_517_, i_518_, "", 6);
+                    r_Sub1.method2364(i_516_ << 16 | i_517_, i_518_, "", 6);
                     return;
                 }
                 if (i == 6713) {
@@ -5679,7 +5674,7 @@ public class ClientScriptsExecutor {
                     int i_519_ = anIntArray3840[anInt3846];
                     int i_520_ = anIntArray3840[anInt3846 + 1];
                     int i_521_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(-91, i_519_ << 16 | i_520_, i_521_, "", 7);
+                    r_Sub1.method2364(i_519_ << 16 | i_520_, i_521_, "", 7);
                     return;
                 }
                 if (i == 6714) {
@@ -5687,7 +5682,7 @@ public class ClientScriptsExecutor {
                     int i_522_ = anIntArray3840[anInt3846];
                     int i_523_ = anIntArray3840[anInt3846 + 1];
                     int i_524_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(124, i_522_ << 16 | i_523_, i_524_, "", 8);
+                    r_Sub1.method2364(i_522_ << 16 | i_523_, i_524_, "", 8);
                     return;
                 }
                 if (i == 6715) {
@@ -5695,7 +5690,7 @@ public class ClientScriptsExecutor {
                     int i_525_ = anIntArray3840[anInt3846];
                     int i_526_ = anIntArray3840[anInt3846 + 1];
                     int i_527_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(123, i_525_ << 16 | i_526_, i_527_, "", 9);
+                    r_Sub1.method2364(i_525_ << 16 | i_526_, i_527_, "", 9);
                     return;
                 }
                 if (i == 6716) {
@@ -5703,7 +5698,7 @@ public class ClientScriptsExecutor {
                     int i_528_ = anIntArray3840[anInt3846];
                     int i_529_ = anIntArray3840[anInt3846 + 1];
                     int i_530_ = anIntArray3840[anInt3846 + 2];
-                    r_Sub1.method2364(4, i_528_ << 16 | i_529_, i_530_, "", 10);
+                    r_Sub1.method2364(i_528_ << 16 | i_529_, i_530_, "", 10);
                     return;
                 }
                 if (i == 6717) {
@@ -5752,7 +5747,7 @@ public class ClientScriptsExecutor {
                     int i_538_ = anIntArray3840[anInt3846];
                     int i_539_ = anIntArray3840[anInt3846 + 1];
                     Class267 class267 = Class188_Sub2_Sub2.aClass36_9366.method394(i_539_, -86);
-                    if (class267.method3287((byte) -97)) {
+                    if (class267.method3287()) {
                         aStringArray3855[anInt3841++] = Class304.aClass215_3834.method2069((byte) 106, i_538_).method785(i_539_, class267.aString3450);
                     } else {
                         anIntArray3840[anInt3846++] = Class304.aClass215_3834.method2069((byte) 116, i_538_).method786(0, class267.anInt3443, i_539_);
@@ -5860,7 +5855,7 @@ public class ClientScriptsExecutor {
                     return;
                 }
                 if (i == 7003) {
-                    Class194_Sub1.method1965((byte) -95);
+                    Class194_Sub1.method1965();
                     Class243.method3061(7);
                     Node_Sub38_Sub31.method2893(1);
                     Class269.aBoolean3472 = false;
@@ -6177,7 +6172,7 @@ public class ClientScriptsExecutor {
         return string;
     }
 
-    private static void method3562(String string, int i) {
+    private static void method3562(String string) {
         if (Class339_Sub7.rights != 0 || (!Node_Sub38_Sub18.aBoolean10282 || Class24.aBoolean436) && !Class290_Sub11.aBoolean8175) {
             String string_566_ = string.toLowerCase();
             int colorEffect = 0;

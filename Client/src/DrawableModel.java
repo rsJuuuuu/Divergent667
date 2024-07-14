@@ -270,7 +270,7 @@ abstract class DrawableModel {
 
     abstract void method630(Class336 class336, int i, boolean bool);
 
-    final void method631(int i, int i_97_, CacheNode_Sub15 cachenode_sub15) {
+    final void method631(int i, CacheNode_Sub15 cachenode_sub15) {
         anInt915++;
         if (i != -1) {
             method629();

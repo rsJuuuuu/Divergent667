@@ -55,7 +55,7 @@ public class Class8 implements Interface15_Impl1 {
         }
     }
 
-    public final Class372 method55(int i) {
+    public final Class372 method55() {
 
         return aClass372_9085;
     }

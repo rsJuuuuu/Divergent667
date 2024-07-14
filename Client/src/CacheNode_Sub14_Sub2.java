@@ -5,7 +5,6 @@
 public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14 {
     static int anInt11030;
     static int anInt11031;
-    static int anInt11032;
     static int anInt11033;
     private final Object anObject11034;
     static int anInt11035;
@@ -17,7 +16,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14 {
 
     final boolean method2350(byte b) {
         if (b != -38) {
-            method2356(91, null, -4, -4, 103, 0, null, 12, null, -56, -61, 29);
+            method2356(91, null, -4, -4, 103, 0, null, 12, null, -56, 29);
         }
         anInt11030++;
         return false;
@@ -42,7 +41,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14 {
         if (i != 0) {
             method2352(-85, -123, -8);
         }
-        return !(!(Class144_Sub2.method1634(i_1_, i_0_) | (0x60000 & i_0_) != 0) && !GraphicsBuffer.method2596(i_0_, i_1_));
+        return !(!(Class144_Sub2.method1634(i_0_) | (0x60000 & i_0_) != 0) && !GraphicsBuffer.method2596(i_0_, i_1_));
     }
 
     static void method2353(BufferedStream buffer) {
@@ -78,7 +77,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14 {
             Class61.aNode_Sub9_Sub1_885 = null;
             CacheNode_Sub6.anInt9485 = i_7_;
             Class101.anInt1306 = 0;
-            Class107.anInt1362 = Class307.aNode_Sub9_Sub1_3902.method2471(15) / i_8_;
+            Class107.anInt1362 = Class307.aNode_Sub9_Sub1_3902.method2471() / i_8_;
             if (Class107.anInt1362 < 1) {
                 Class107.anInt1362 = 1;
             }
@@ -98,7 +97,7 @@ public class CacheNode_Sub14_Sub2 extends CacheNode_Sub14 {
         }
     }
 
-    static DrawableModel method2356(int i, DrawableModel drawablemodel, int i_12_, int i_13_, int i_14_, int i_15_, GraphicsToolkit graphicstoolkit, int i_16_, Animator animator, int i_17_, int i_18_, int i_19_) {
+    static DrawableModel method2356(int i, DrawableModel drawablemodel, int i_12_, int i_13_, int i_14_, int i_15_, GraphicsToolkit graphicstoolkit, int i_16_, Animator animator, int i_17_, int i_19_) {
         anInt11038++;
         if (drawablemodel == null) {
             return null;

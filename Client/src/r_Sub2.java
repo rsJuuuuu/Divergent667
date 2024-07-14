@@ -318,7 +318,7 @@ public class r_Sub2 extends r {
     static Frame method2371(SignLink signlink, int i_10_, int i_11_) {
         int i = 0;
         anInt11060++;
-        if (!signlink.method3640(-28769 + 28892)) {
+        if (signlink.method3640()) {
             return null;
         }
         Class244[] class244s = Node_Sub38_Sub34.method2901(signlink, true);
@@ -391,7 +391,7 @@ public class r_Sub2 extends r {
             i = Class275.anInt5412;
             i_22_ = Class320_Sub23.anInt8431;
         } else {
-            Class186.method1870((byte) 69, actor);
+            Class186.method1870(actor);
         }
         if (actor.anInt5934 < 512 || actor.anInt5940 < 512 || actor.anInt5934 >= Node_Sub54.GAME_SCENE_WDITH * 512 - 512 || Class377_Sub1.GAME_SCENE_HEIGHT * 512 - 512 <= actor.anInt5940) {
             actor.anAnimator10876.method249(true, -1);
@@ -596,7 +596,7 @@ public class r_Sub2 extends r {
                 }
                 Node_Sub24.method2650(true);
                 Node_Sub38_Sub1.aClass277_Sub1_10084.method3346(Class93.aGraphicsToolkit1241, bool_33_ ? Class368.aPlaneArray4548[0] : null, null);
-                Node_Sub38_Sub1.aClass277_Sub1_10084.method3356(false, Class93.aGraphicsToolkit1241);
+                Node_Sub38_Sub1.aClass277_Sub1_10084.method3356(false);
                 Node_Sub24.method2650(true);
                 if (bool_33_) {
                     Node_Sub38_Sub17.method2842(true);
@@ -609,11 +609,11 @@ public class r_Sub2 extends r {
                     Node_Sub36_Sub2.method2761();
                     Node_Sub24.method2650(true);
                     Class270_Sub1.aClass277_Sub1_8028.method3346(Class93.aGraphicsToolkit1241, null, Node_Sub38_Sub37.aPlaneArray10466[0]);
-                    Class270_Sub1.aClass277_Sub1_8028.method3356(true, Class93.aGraphicsToolkit1241);
+                    Class270_Sub1.aClass277_Sub1_8028.method3356(true);
                     Node_Sub24.method2650(true);
                     Node_Sub38_Sub17.method2842(false);
                 }
-                Class115.method1159(-122);
+                Class115.method1159();
                 int i_37_ = Node_Sub38_Sub1.aClass277_Sub1_10084.anInt8046;
                 if (i_37_ > CacheNode_Sub20_Sub1.myPlayerPlane) {
                     i_37_ = CacheNode_Sub20_Sub1.myPlayerPlane;

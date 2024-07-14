@@ -193,7 +193,7 @@ public class Client extends GameStub {
                     Class230.method2127("modewhat");
                     break;
             }
-            Class35.language = Class262_Sub18.method3198(strings[4]);
+            Class35.language = Class262_Sub18.method3198();
             if (Class35.language == -1) {
                 if (strings[4].equals("english")) {
                     Class35.language = 0;
@@ -225,7 +225,7 @@ public class Client extends GameStub {
             Class170.anInt2056 = 0;
             Class380.anInt4877 = 0;
             Mobile_Sub1.aBoolean10961 = false;
-            Class64.aBoolean5046 = Class262_Sub17.aBoolean7833 = true;
+            Class64.aBoolean5046 = true;
             Class252.aBoolean3188 = false;
             Node_Sub38_Sub18.aString10283 = null;
             Class178.anInt2118 = Class209.aClass353_2483.anInt4344;
@@ -245,7 +245,7 @@ public class Client extends GameStub {
         }
     }
 
-    final synchronized void method93(int i) {
+    final synchronized void method93() {
         anInt5470++;
         if (Class96.anApplet1270 != null && Node_Sub38_Sub20.aCanvas10309 == null
                 && !Class240.aSignLink2946.aBoolean3985) {
@@ -261,7 +261,7 @@ public class Client extends GameStub {
                 /* empty */
             }
         }
-        super.method93(-52);
+        super.method93();
     }
 
     static void method107() {
@@ -276,7 +276,7 @@ public class Client extends GameStub {
             } else if (player.aBoolean11131) {
                 player.anInt10857 = -1;
             } else {
-                player.method845(89);
+                player.method845();
                 if (player.aShort9119 < 0 || player.aShort9120 < 0 || player.aShort9130 >= Node_Sub54.GAME_SCENE_WDITH
                         || player.aShort9124 >= Class377_Sub1.GAME_SCENE_HEIGHT) {
                     player.anInt10857 = -1;
@@ -314,7 +314,7 @@ public class Client extends GameStub {
             if (!npc.method873((byte) 66) || !npc.aNpcDefinition11122.method3010(Class24.aClass275_442)) {
                 npc.anInt10857 = -1;
             } else {
-                npc.method845(-94);
+                npc.method845();
                 if (npc.aShort9119 < 0 || npc.aShort9120 < 0 || npc.aShort9130 >= Node_Sub54.GAME_SCENE_WDITH
                         || npc.aShort9124 >= Class377_Sub1.GAME_SCENE_HEIGHT) {
                     npc.anInt10857 = -1;
@@ -610,7 +610,7 @@ public class Client extends GameStub {
             if (Class320_Sub22.anInt8415 == 2) {
                 Class314.method3652(70);
             } else {
-                Class309.method3586(0x69);
+                Class309.method3586();
             }
             if (Class98.anInt5061 >> 9 < 14 || Class98.anInt5061 >> 9 >= -14 + Node_Sub54.GAME_SCENE_WDITH
                     || Node_Sub10.anInt7079 >> 9 < 14
@@ -681,7 +681,7 @@ public class Client extends GameStub {
             Class144.method1631((byte) 123);
         }
         for (EntityNode_Sub3_Sub1 entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1113(
-                (byte) 120);
+        );
              entitynode_sub3_sub1
                      != null; entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1108(104)) {
             if (Class313.method3650() / 1000L - 5L > (long) entitynode_sub3_sub1.anInt9162) {
@@ -1339,7 +1339,7 @@ public class Client extends GameStub {
         return widget.aNode_Sub35_4840;
     }
 
-    static void method114(byte b, CacheNode_Sub13 cachenode_sub13) {
+    static void method114(CacheNode_Sub13 cachenode_sub13) {
         anInt5475++;
         if (cachenode_sub13 != null) {
             Class368.aClass312_4549.method3625(cachenode_sub13);
@@ -1370,7 +1370,7 @@ public class Client extends GameStub {
                 }
             }
             if (cachenode_sub4.method2303(cachenode_sub13)) {
-                GLSprite_Sub1.method1205(cachenode_sub4, (byte) 83);
+                GLSprite_Sub1.method1205(cachenode_sub4);
             }
         }
     }
@@ -1566,14 +1566,14 @@ public class Client extends GameStub {
                         if (!Class190.aBooleanArray2326[i]) {
                             if (!Class320_Sub21.aBooleanArray8403[i]) {
                                 Class93.aGraphicsToolkit1241.method1234(rectangle.y, -16711936, rectangle.width,
-                                        rectangle.height, (byte) -69, rectangle.x);
+                                        rectangle.height, rectangle.x);
                             } else {
                                 Class93.aGraphicsToolkit1241.method1234(rectangle.y, -65536, rectangle.width,
-                                        rectangle.height, (byte) -57, rectangle.x);
+                                        rectangle.height, rectangle.x);
                             }
                         } else {
                             Class93.aGraphicsToolkit1241.method1234(rectangle.y, -65281, rectangle.width,
-                                    rectangle.height, (byte) 108, rectangle.x);
+                                    rectangle.height, rectangle.x);
                         }
                     }
                 }
@@ -1691,8 +1691,8 @@ public class Client extends GameStub {
             if (Class144_Sub1.aClass232_6802 != null) {
                 Class144_Sub1.aClass232_6802.method2140();
             }
-            Class319.method3671(8);
-            Class194_Sub3_Sub1.method1982(0);
+            Class319.method3671();
+            Class194_Sub3_Sub1.method1982();
             Class175.aClass291_2100.method3452();
             Class106.aClass93_1356.method1038();
             if (Class93.aGraphicsToolkit1241 != null) {
@@ -1723,8 +1723,8 @@ public class Client extends GameStub {
                 }
             }
             Class339_Sub8.anInt8739 = 0;
-            for (Node_Sub5 node_sub5 = Class106.aClass93_1356.method1048((byte) -55);
-                 node_sub5 != null; node_sub5 = Class106.aClass93_1356.method1048((byte) -89)) {
+            for (Node_Sub5 node_sub5 = Class106.aClass93_1356.method1048();
+                 node_sub5 != null; node_sub5 = Class106.aClass93_1356.method1048()) {
                 int i_55_ = node_sub5.method2267();
                 if (i_55_ == -1) {
                     Node_Sub38_Sub35.aClass312_10452.method3625(node_sub5);
@@ -1914,7 +1914,7 @@ public class Client extends GameStub {
                         if (widget.aBoolean4858 && i_66_ >= i_71_ && i_67_ >= i_72_ && i_66_ < i_73_ && i_67_ < i_74_) {
                             for (Node_Sub37 node_sub37 = (Node_Sub37) Class275.aClass312_5419.method3613();
                                  node_sub37
-                                         != null; node_sub37 = (Node_Sub37) Class275.aClass312_5419.method3620(16776960)) {
+                                         != null; node_sub37 = (Node_Sub37) Class275.aClass312_5419.method3620()) {
                                 if (node_sub37.aBoolean7433) {
                                     node_sub37.method2160((byte) 50);
                                     node_sub37.aWidget7437.aBoolean4819 = false;
@@ -1996,21 +1996,21 @@ public class Client extends GameStub {
                         }
                         if (widget.aByteArray4806 != null && !GLXToolkit.method1401()) {
                             for (int i_88_ = 0; i_88_ < widget.aByteArray4806.length; i_88_++) {
-                                if (!Class175.aClass291_2100.method3450(84, widget.aByteArray4806[i_88_])) {
+                                if (!Class175.aClass291_2100.method3450(widget.aByteArray4806[i_88_])) {
                                     if (widget.anIntArray4772 != null) {
                                         widget.anIntArray4772[i_88_] = 0;
                                     }
                                 } else if (widget.anIntArray4772 == null
                                         || Class174.clientCycle >= widget.anIntArray4772[i_88_]) {
                                     byte b = widget.aByteArray4733[i_88_];
-                                    if (b == 0 || ((b & 0x8) == 0 || !Class175.aClass291_2100.method3450(110, 86)
-                                            && !Class175.aClass291_2100.method3450(-51, 82)
-                                            && !Class175.aClass291_2100.method3450(-72, 81))
-                                            && ((b & 0x2) == 0 || Class175.aClass291_2100.method3450(-43, 86))
-                                            && ((b & 0x1) == 0 || Class175.aClass291_2100.method3450(-79, 82))
-                                            && ((b & 0x4) == 0 || Class175.aClass291_2100.method3450(121, 81))) {
+                                    if (b == 0 || ((b & 0x8) == 0 || !Class175.aClass291_2100.method3450(86)
+                                            && !Class175.aClass291_2100.method3450(82)
+                                            && !Class175.aClass291_2100.method3450(81))
+                                            && ((b & 0x2) == 0 || Class175.aClass291_2100.method3450(86))
+                                            && ((b & 0x1) == 0 || Class175.aClass291_2100.method3450(82))
+                                            && ((b & 0x4) == 0 || Class175.aClass291_2100.method3450(81))) {
                                         if (i_88_ < 10) {
-                                            r_Sub1.method2364(-73, widget.ihash, -1, "", i_88_ + 1);
+                                            r_Sub1.method2364(widget.ihash, -1, "", i_88_ + 1);
                                         } else if (i_88_ == 10) {
                                             Node_Sub38_Sub23.method2863();
                                             InterfaceSettings node_sub35 = method113(widget);
@@ -2073,7 +2073,7 @@ public class Client extends GameStub {
                                     Class324.aWidget4085 = widget;
                                     if (Class245.aClass119_3085 != null) {
                                         Class245.aClass119_3085.method1225
-                                                (Class213.aNode_Sub27_2512.aClass320_Sub2_7272.method3686(), 51,
+                                                (Class213.aNode_Sub27_2512.aClass320_Sub2_7272.method3686(),
                                                         widget.anInt4695, Class93.aGraphicsToolkit1241);
                                     }
                                     if (widget.anInt4814 == Class200_Sub1.anInt5146) {
@@ -2081,7 +2081,7 @@ public class Client extends GameStub {
                                                 && i_67_ < i_74_) {
                                             Class78.method776(i_65_, i_64_, Class93.aGraphicsToolkit1241);
                                             for (EntityNode_Sub1 entitynode_sub1 = (EntityNode_Sub1)
-                                                    Class82.aClass103_1120.method1113((byte) 112);
+                                                    Class82.aClass103_1120.method1113();
                                                  entitynode_sub1
                                                          != null; entitynode_sub1 = (EntityNode_Sub1)
                                                     Class82.aClass103_1120.method1108(94)) {
@@ -2175,7 +2175,7 @@ public class Client extends GameStub {
                                             int[] is = new int[3];
                                             cachenode_sub11.method2340(i_105_, i_104_, is);
                                             if (is != null) {
-                                                if (Class175.aClass291_2100.method3450(118, 82)
+                                                if (Class175.aClass291_2100.method3450(82)
                                                         && Class339_Sub7.rights > 0) {
                                                     Class331.method3843(is[0], is[2], is[1]);
                                                     continue;
@@ -2441,26 +2441,10 @@ public class Client extends GameStub {
                                 widget.anInt4810 = Class197.anInt2423;
                             }
                             if (widget.anObjectArray4857 != null && Class377.anInt4664 > widget.anInt4780) {
-                                if (widget.anIntArray4812 == null || Class377.anInt4664 - widget.anInt4780 > 32) {
-                                    Node_Sub37 node_sub37 = new Node_Sub37();
-                                    node_sub37.aWidget7437 = widget;
-                                    node_sub37.parameters = widget.anObjectArray4857;
-                                    Class275.aClass312_5419.method3625(node_sub37);
-                                } else {
-                                    while_21_:
-                                    for (int i_121_ = widget.anInt4780; i_121_ < Class377.anInt4664; i_121_++) {
-                                        int i_122_ = Class143.anIntArray1764[i_121_ & 0x1f];
-                                        for (int i_123_ = 0; i_123_ < widget.anIntArray4812.length; i_123_++) {
-                                            if (widget.anIntArray4812[i_123_] == i_122_) {
-                                                Node_Sub37 node_sub37 = new Node_Sub37();
-                                                node_sub37.aWidget7437 = widget;
-                                                node_sub37.parameters = widget.anObjectArray4857;
-                                                Class275.aClass312_5419.method3625(node_sub37);
-                                                break while_21_;
-                                            }
-                                        }
-                                    }
-                                }
+                                Node_Sub37 node_sub37 = new Node_Sub37();
+                                node_sub37.aWidget7437 = widget;
+                                node_sub37.parameters = widget.anObjectArray4857;
+                                Class275.aClass312_5419.method3625(node_sub37);
                                 widget.anInt4780 = Class377.anInt4664;
                             }
                             if (Class381.anInt4894 > widget.anInt4783 && widget.anObjectArray4740 != null) {
@@ -2527,7 +2511,7 @@ public class Client extends GameStub {
                         }
                         if (widget.type == 5 && widget.anInt4848 != -1) {
                             widget.method4157(CacheNode_Sub6.aClass57_9480, Class171.aClass278_2062)
-                                    .method1225(Class213.aNode_Sub27_2512.aClass320_Sub2_7272.method3686(), 83,
+                                    .method1225(Class213.aNode_Sub27_2512.aClass320_Sub2_7272.method3686(),
                                             widget.anInt4695, Class93.aGraphicsToolkit1241);
                         }
                         Class286.method3395(widget);
@@ -2758,7 +2742,7 @@ public class Client extends GameStub {
                 Class178.anInt2118 = 0;
             }
             if (Integer.parseInt(Objects.requireNonNull(this.getParameter("sitesettings_member"))) == 1) {
-                Class64.aBoolean5046 = Class262_Sub17.aBoolean7833 = true;
+                Class64.aBoolean5046 = true;
             }
             String string_147_ = this.getParameter("frombilling");
             if (string_147_ != null && string_147_.equals("true")) {

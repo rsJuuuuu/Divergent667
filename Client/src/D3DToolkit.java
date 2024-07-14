@@ -54,7 +54,7 @@ public class D3DToolkit extends AbstractToolkit {
     private IDirect3D anIDirect3D9204;
     private int anInt9205 = 0;
 
-    final Interface13_Impl1 method1291(Class68 class68, Class372 class372, int i, int i_0_, int i_1_) {
+    final Interface13_Impl1 method1291(Class68 class68, Class372 class372, int i, int i_0_) {
         return new Class265_Sub3(this, class68, class372, i_0_, i);
     }
 
@@ -346,7 +346,7 @@ public class D3DToolkit extends AbstractToolkit {
             if (method1387(aD3DPRESENT_PARAMETERS9178, anInt9194, anIDirect3D9204, anInt9182, anInt6319)) {
                 int i_38_ = anIDirect3DDevice9199.Reset(aD3DPRESENT_PARAMETERS9178);
                 if (lh.a((byte) 95, i_38_)) {
-                    class322.method3805(anIDirect3DDevice9199.c(), anIDirect3DDevice9199.b(0), (byte) 106);
+                    class322.method3805(anIDirect3DDevice9199.c(), anIDirect3DDevice9199.b(0));
                     method1325();
                     method1326(false);
                     return true;

@@ -63,7 +63,7 @@ public class Class251 {
             }
             if (!Class194_Sub1.aBoolean6892) {
                 if (Class320_Sub20.anInt8397 == 1) {
-                    Class169_Sub3.method1782(127);
+                    Class169_Sub3.method1782();
                 }
                 int i_20_ = -Class186.anInt2261 + i;
                 int i_21_ = i_1_ - Class82.anInt1111;
@@ -163,7 +163,7 @@ public class Class251 {
                         i_51_ = i_46_;
                     }
                     Class103 class103 = Class7.aClass179_157.aClass103_2124;
-                    for (EntityNode_Sub6 entitynode_sub6 = (EntityNode_Sub6) class103.method1113((byte) 115); entitynode_sub6 != null; entitynode_sub6 = (EntityNode_Sub6) class103.method1108(109)) {
+                    for (EntityNode_Sub6 entitynode_sub6 = (EntityNode_Sub6) class103.method1113(); entitynode_sub6 != null; entitynode_sub6 = (EntityNode_Sub6) class103.method1108(109)) {
                         EntityNode_Sub5[] entitynode_sub5s = entitynode_sub6.anEntityNode_Sub5Array5995;
                         boolean bool_52_ = true;
                         for (EntityNode_Sub5 entitynode_sub5 : entitynode_sub5s) {
@@ -222,13 +222,13 @@ public class Class251 {
                         Class44.aGraphicsToolkit668.KA(0, i_51_, CacheNode_Sub15.anInt9589, i_51_ + i_50_);
                         Class44.aGraphicsToolkit668.ya();
                         Class44.aGraphicsToolkit668.GA(Node_Sub43.anInt7539);
-                        Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, i_8_, 1, false);
+                        Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, bool, i_8_, 1, false);
                     }
                     if (i_45_ > 0) {
                         Class44.aGraphicsToolkit668.KA(i_44_, i_48_, i_45_ + i_44_, i_49_ + i_48_);
                         Class44.aGraphicsToolkit668.ya();
                         Class44.aGraphicsToolkit668.GA(Node_Sub43.anInt7539);
-                        Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, i_8_, 1, false);
+                        Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, bool, i_8_, 1, false);
                     }
                     Class44.aGraphicsToolkit668.la();
                     Node_Sub38_Sub7.method2805();
@@ -287,7 +287,7 @@ public class Class251 {
                 Class320_Sub10.aDouble8299 = 0.0;
                 Class7.aClass179_157.method1815();
                 Class320_Sub5.method3695(Class7.aClass179_157);
-                Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, i_8_, 1, false);
+                Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, bool, i_8_, 1, false);
                 Node_Sub38_Sub7.method2805();
                 Class194_Sub1.aBoolean6892 = false;
                 if (Class320_Sub20.anInt8397 == 0) {
@@ -321,7 +321,7 @@ public class Class251 {
                 Class44.aGraphicsToolkit668.DA(Class118.anInt5404, Class320_Sub23.anInt8433, Class30.anInt491, Class320_Sub10.anInt8303);
                 Class44.aGraphicsToolkit668.KA(Node_Sub38_Sub1.anInt10075, Class166.anInt5100, Node_Sub38_Sub1.anInt10075 + Animable_Sub1_Sub2.anInt10668, Class148.anInt1825 + Class166.anInt5100);
             }
-            Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, i_8_, Class320_Sub20.anInt8397 != 2 ? 2 : 0, 1 == Class320_Sub20.anInt8397);
+            Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, bool, i_8_, Class320_Sub20.anInt8397 != 2 ? 2 : 0, 1 == Class320_Sub20.anInt8397);
             Class44.aGraphicsToolkit668.la();
             Class44.aGraphicsToolkit668.DA(i_14_, i_15_, i_16_, i_17_);
         }
@@ -335,7 +335,7 @@ public class Class251 {
         boolean forceRefresh = packet.readUnsigned128Byte() == 1;
         Class61.anInt898 = packet.readUnsigned128Byte();
         int gameSceneBaseRegionX = packet.readUnsignedShortLE();
-        Class95.method1066(62);
+        Class95.method1066();
         Animable_Sub2.updateGameSceneSize(mapSize);
         packet.initBitAccess();
         for (int i_71_ = 0; i_71_ < 4; i_71_++) {

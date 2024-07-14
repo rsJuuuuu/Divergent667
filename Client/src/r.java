@@ -47,9 +47,6 @@ abstract class r extends CacheNode {
         int i_6_ = string.length();
         int i_7_ = 0;
         int i_8_ = 0;
-        if ((byte) -4 != -4) {
-            anIntArray9580 = null;
-        }
         char c = '\0';
         char c_9_ = '\0';
         while_224_:
@@ -78,8 +75,8 @@ abstract class r extends CacheNode {
                 }
                 c = GLPlane.method3264(c_10_);
                 c_9_ = GLPlane.method3264(c_11_);
-                c_10_ = Class169.method1755(6272, i, c_10_);
-                c_11_ = Class169.method1755((byte) -4 + 6276, i, c_11_);
+                c_10_ = Class169.method1755(c_10_);
+                c_11_ = Class169.method1755(c_11_);
                 if (c_11_ != c_10_ && Character.toUpperCase(c_11_) != Character.toUpperCase(c_10_)) {
                     c_10_ = Character.toLowerCase(c_10_);
                     c_11_ = Character.toLowerCase(c_11_);
@@ -88,7 +85,7 @@ abstract class r extends CacheNode {
                     }
                 }
             }
-            return Class320_Sub22.method3766((byte) 119, i, c_10_) - Class320_Sub22.method3766((byte) 101, i, c_11_);
+            return Class320_Sub22.method3766((byte) 119, c_10_) - Class320_Sub22.method3766((byte) 101, c_11_);
         } while (false);
         int i_12_ = Math.min(i_5_, i_6_);
         for (int i_13_ = 0; i_13_ < i_12_; i_13_++) {
@@ -104,7 +101,7 @@ abstract class r extends CacheNode {
                 c_14_ = Character.toLowerCase(c_14_);
                 c_15_ = Character.toLowerCase(c_15_);
                 if (c_15_ != c_14_) {
-                    return Class320_Sub22.method3766((byte) 106, i, c_14_) - Class320_Sub22.method3766((byte) 109, i, c_15_);
+                    return Class320_Sub22.method3766((byte) 106, c_14_) - Class320_Sub22.method3766((byte) 109, c_15_);
                 }
             }
         }
@@ -116,7 +113,7 @@ abstract class r extends CacheNode {
             char c_18_ = string_4_.charAt(i_17_);
             char c_19_ = string.charAt(i_17_);
             if (c_18_ != c_19_) {
-                return Class320_Sub22.method3766((byte) 103, i, c_18_) - Class320_Sub22.method3766((byte) 105, i, c_19_);
+                return Class320_Sub22.method3766((byte) 103, c_18_) - Class320_Sub22.method3766((byte) 105, c_19_);
             }
         }
         return 0;

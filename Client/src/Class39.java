@@ -303,7 +303,7 @@ public class Class39 {
                     node_sub13.aPacket7113.write128Byte(0);
                     node_sub13.aPacket7113.writeShortLE128(Class46.anInt681);
                     Class218.aClass123_2566.sendPacket(127, node_sub13);
-                    Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 65), true, player.scenePositionXQueue[0], 0, -2, 105, player.getSize((byte) 81));
+                    Class78.method778(0, player.scenePositionYQueue[0], player.getSize((byte) 65), true, player.scenePositionXQueue[0], 0, -2, player.getSize((byte) 81));
                     bool = true;
                     break;
                 }

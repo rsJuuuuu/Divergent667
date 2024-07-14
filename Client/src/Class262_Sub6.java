@@ -21,12 +21,12 @@ public class Class262_Sub6 extends Class262 {
         anInt7742++;
         Class369 class369 = Node_Sub39.aClass369Array7497[anInt7747];
         if (i >= -102) {
-            method3164(-55, false, (byte) -71);
+            method3164(-55, false);
         }
         Class110.method1131(class369.anInt4557, class369.anInt4563, class369.anInt4556, anInt7746, class369.anInt4560, class369.anInt4552, Class248.anIntArray3145[class369.anInt4556]);
     }
 
-    static void method3164(int key, boolean bool, byte b) {
+    static void method3164(int key, boolean bool) {
         anInt7744++;
         Node_Sub16 node_sub16 = Class295.method3472(key, bool);
         if (node_sub16 != null) {
@@ -44,13 +44,13 @@ public class Class262_Sub6 extends Class262 {
         aClass124_7745 = null;
     }
 
-    static void drawTileStrings(int i, int i_3_, int i_5_, int i_6_) {
+    static void drawTileStrings(int i_5_, int i_6_) {
         anInt7743++;
-        for (TileMessage entitynode_sub2 = (TileMessage) Class226.aClass103_2684.method1113((byte) 122); entitynode_sub2 != null; entitynode_sub2 = (TileMessage) Class226.aClass103_2684.method1108(88)) {
+        for (TileMessage entitynode_sub2 = (TileMessage) Class226.aClass103_2684.method1113(); entitynode_sub2 != null; entitynode_sub2 = (TileMessage) Class226.aClass103_2684.method1108(88)) {
             if (Class174.clientCycle >= entitynode_sub2.completeCycle) {
                 entitynode_sub2.method803();
             } else {
-                Animable_Sub1.method826(2 * entitynode_sub2.height, (entitynode_sub2.x << 9) + 256, i >> 1, (entitynode_sub2.y << 9) + 256, entitynode_sub2.plane, i_3_ >> 1);
+                Animable_Sub1.method826(2 * entitynode_sub2.height, (entitynode_sub2.x << 9) + 256, (entitynode_sub2.y << 9) + 256, entitynode_sub2.plane);
                 Class262_Sub4.aClass52_7721.method537(0, (byte) 111, Class119.anIntArray1516[0] + i_6_, entitynode_sub2.message, Class119.anIntArray1516[1] + i_5_, entitynode_sub2.anInt5951 | -16777216);
             }
         }

@@ -17,7 +17,7 @@ public class Class101 {
     protected int anInt1312;
     static boolean aBoolean1313 = false;
 
-    final Class195 method1090(int i, int i_0_) {
+    final Class195 method1090(int i_0_) {
         anInt1307++;
         Class195 class195;
         synchronized (aClass61_1302) {
@@ -88,7 +88,7 @@ public class Class101 {
         }
     }
 
-    Class101(Class353 class353, int i, Index class302, Index class302_4_) {
+    Class101(Index class302, Index class302_4_) {
         aClass302_1310 = class302_4_;
         aClass302_1308 = class302;
         int i_5_ = aClass302_1308.method3526() - 1;

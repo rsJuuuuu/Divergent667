@@ -51,6 +51,6 @@ public class Class262_Sub15_Sub1 extends Class262_Sub15 {
         if (i_4_ != 512) {
             aClass357_10524 = null;
         }
-        return (Class320_Sub5.method3700(i, (byte) 125, i_3_) | Node_Sub38_Sub26.method2877(i, i_3_, 118) | Class321.method3800(i_3_, i)) & Class85.method999(i, i_3_, (byte) -72);
+        return (Class320_Sub5.method3700(i_3_) | Node_Sub38_Sub26.method2877(i, i_3_, 118) | Class321.method3800(i_3_)) & (i_3_ & 0x800) != 0;
     }
 }

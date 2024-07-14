@@ -422,7 +422,7 @@ public class ObjectDefinition {
                 boolean bool = buffer
                         .readUnsignedByte() == 1;
                 int i_16_ = buffer
-                        .read24BitInteger();
+                        .readInt24();
                 Node node;
                 if (bool) {
                     node = new Node_Sub18(
@@ -475,7 +475,7 @@ public class ObjectDefinition {
             class261.anAnimable_Sub1_3317 = animable_sub1;
             int i_31_ = Class320_Sub10.aPlaneArray8300 == Class368.aPlaneArray4548 ? 1
                     : 0;
-            if (animable_sub1.method814((byte) -52)) {
+            if (animable_sub1.method814()) {
                 if (animable_sub1.method813(0)) {
                     animable_sub1.anAnimable5941 = SeekableFile.anAnimableArray3884[i_31_];
                     SeekableFile.anAnimableArray3884[i_31_] = animable_sub1;
@@ -504,7 +504,7 @@ public class ObjectDefinition {
         }
         if (anInt3017 == -1) {
             if (anInt3035 != -1) {
-                i_32_ = interface17.method65(anInt3035, -3);
+                i_32_ = interface17.method65(anInt3035);
             }
         } else {
             i_32_ = interface17.method64(anInt3017, (byte) -42);

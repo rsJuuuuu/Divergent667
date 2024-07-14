@@ -17,7 +17,7 @@ abstract class CacheNode_Sub14 extends CacheNode {
 
     static void method2348(int i, int i_1_, int i_2_, ObjectDefinition objectdefinition) {
         anInt9577++;
-        for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620(16776960)) {
+        for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620()) {
             if (node_sub47.anInt7560 == i_2_ && node_sub47.anInt7569 == i << 9 && i_1_ << 9 == node_sub47.anInt7563 && node_sub47.anObjectDefinition7562.objectId == objectdefinition.objectId) {
                 if (node_sub47.aNode_Sub9_Sub2_7568 != null) {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
@@ -58,10 +58,10 @@ abstract class CacheNode_Sub14 extends CacheNode {
                 if (Class20_Sub1.aClass343_5509.aClass119_4238 != Class44.aClass119_670) {
                     if (Class44.aClass119_670 == null) {
                         Class245.aClass119_3085 = Class20_Sub1.aClass343_5509.aClass119_4238;
-                        Class245.aClass119_3085.method1217(0, i_5_, (byte) -127);
+                        Class245.aClass119_3085.method1217(0, i_5_);
                     } else {
                         Class245.aClass119_3085 = Class44.aClass119_670;
-                        Class245.aClass119_3085.method1217(255, i_5_, (byte) 85);
+                        Class245.aClass119_3085.method1217(255, i_5_);
                     }
                 }
             } else {

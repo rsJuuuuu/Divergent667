@@ -23,7 +23,7 @@ abstract class Animable extends EntityNode {
 
     abstract boolean method806();
 
-    abstract EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit);
+    abstract EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit);
 
     final int method808(Node_Sub29[] node_sub29s, int i_0_, int i_1_) {
         anInt5939++;
@@ -54,11 +54,11 @@ abstract class Animable extends EntityNode {
 
     abstract boolean method813(int i);
 
-    abstract boolean method814(byte b);
+    abstract boolean method814();
 
     abstract boolean method815(byte b, GraphicsToolkit graphicstoolkit);
 
-    abstract void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_7_, byte b, int i_8_, Animable animable_9_);
+    abstract void method816(int i, boolean bool, int i_7_, byte b, int i_8_, Animable animable_9_);
 
     abstract int method817(int i);
 

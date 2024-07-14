@@ -15,7 +15,7 @@ public class Class346 {
 
     static boolean method3973(int i, int i_1_) {
         anInt4273++;
-        return !(!Class377.method4127(i_1_, i) && !Class153.method1697(i_1_, i));
+        return !(!Class377.method4127() && !Class153.method1697(i_1_, i));
     }
 
     static GraphicsToolkit method3974(int i, int i_2_, d var_d, int i_3_, java.awt.Canvas canvas) {

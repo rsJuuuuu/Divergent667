@@ -59,7 +59,7 @@ public class Class340 implements Runnable {
         aLong4222 = Class313.method3650();
     }
 
-    final synchronized void method3954(int i, String string, Class110 class110, int i_0_, long l) {
+    final synchronized void method3954(int i, String string, Class110 class110, long l) {
         anInt4230 = i;
         aClass110_4223 = class110;
         aLong4225 = l;
@@ -110,7 +110,7 @@ public class Class340 implements Runnable {
                 try {
                     anInt4229++;
                     if (anInterface16_4216 instanceof Class350) {
-                        anInterface16_4216.method63(aBoolean4206, (byte) -113);
+                        anInterface16_4216.method63();
                     } else {
                         long l_4_ = Class313.method3650();
                         if (Class93.aGraphicsToolkit1241 != null && anInterface16_4228 != null && anInterface16_4228.method60(66) != 0 && -(long) anInterface16_4228.method60(36) + l_4_ <= aLong4222) {
@@ -122,12 +122,12 @@ public class Class340 implements Runnable {
                             Class93.aGraphicsToolkit1241.GA(0);
                             GLSprite glsprite = Class93.aGraphicsToolkit1241.a(Class360.screenWidth, Class205.screenHeight, true);
                             Class93.aGraphicsToolkit1241.method1245(glsprite);
-                            anInterface16_4228.method63(true, (byte) -95);
+                            anInterface16_4228.method63();
                             Class93.aGraphicsToolkit1241.v();
                             glsprite.method1191(0, 0, 0, i_5_, 1);
                             Class93.aGraphicsToolkit1241.method1245(glsprite);
                             Class93.aGraphicsToolkit1241.GA(0);
-                            anInterface16_4216.method63(true, (byte) -63);
+                            anInterface16_4216.method63();
                             Class93.aGraphicsToolkit1241.v();
                             glsprite.method1191(0, 0, 0, i, 1);
                         } else {
@@ -142,7 +142,8 @@ public class Class340 implements Runnable {
                                     Class93.aGraphicsToolkit1241.GA(0);
                                 }
                             }
-                            anInterface16_4216.method63(aBoolean4206 || Class93.aGraphicsToolkit1241 != null && Class93.aGraphicsToolkit1241.B(), (byte) -123);
+                            boolean bool = aBoolean4206 || Class93.aGraphicsToolkit1241 != null && Class93.aGraphicsToolkit1241.B();
+                            anInterface16_4216.method63();
                         }
                         try {
                             if (Class93.aGraphicsToolkit1241 != null && !(anInterface16_4216 instanceof Class350)) {

@@ -33,13 +33,13 @@ public class Class270_Sub2_Sub2 extends Class270_Sub2 {
             }
             CacheNode_Sub18.aGraphicsToolkit9607.EA(Node_Sub38_Sub37.aPlaneArray10466[0].method3260(animable.anInt5940, -123, animable.anInt5934), Class320_Sub2.method3684(i, i_1_), Class184.method1844(i, i_1_), Class117_Sub2.method1172(i, i_1_));
         }
-        EntityNode_Sub6 entitynode_sub6 = animable.method807(-99, CacheNode_Sub18.aGraphicsToolkit9607);
+        EntityNode_Sub6 entitynode_sub6 = animable.method807(CacheNode_Sub18.aGraphicsToolkit9607);
         if (entitynode_sub6 != null) {
             if (animable.aBoolean5945) {
                 EntityNode_Sub5[] entitynode_sub5s = entitynode_sub6.anEntityNode_Sub5Array5995;
                 for (EntityNode_Sub5 entitynode_sub5 : entitynode_sub5s) {
                     if (entitynode_sub5.aBoolean5987) {
-                        Class362.method4053(entitynode_sub5.anInt5986 - entitynode_sub5.anInt5983, entitynode_sub5.anInt5984 + entitynode_sub5.anInt5983, entitynode_sub5.anInt5985 - entitynode_sub5.anInt5983, (byte) -54, entitynode_sub5.anInt5982 + entitynode_sub5.anInt5983);
+                        Class362.method4053(entitynode_sub5.anInt5986 - entitynode_sub5.anInt5983, entitynode_sub5.anInt5984 + entitynode_sub5.anInt5983, entitynode_sub5.anInt5985 - entitynode_sub5.anInt5983, entitynode_sub5.anInt5982 + entitynode_sub5.anInt5983);
                     }
                 }
             }

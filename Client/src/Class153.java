@@ -19,6 +19,6 @@ public class Class153 {
 
     static boolean method1697(int i_0_, int i_1_) {
         anInt1944++;
-        return Class377.method4127(i_0_, i_1_) & ClanChat.method494(i_1_, i_0_);
+        return Class377.method4127() & ClanChat.method494(i_1_);
     }
 }

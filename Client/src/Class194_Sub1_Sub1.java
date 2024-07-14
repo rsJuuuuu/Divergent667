@@ -21,24 +21,24 @@ public class Class194_Sub1_Sub1 extends Class194_Sub1 {
                 for (Class261 class261 : s) {
                     if (class261 != null) {
                         if (class261.anAnimable_Sub1_3317 instanceof Interface19) {
-                            ((Interface19) class261.anAnimable_Sub1_3317).method69(-108);
+                            ((Interface19) class261.anAnimable_Sub1_3317).method69();
                         }
                         if (class261.anAnimable_Sub4_3315 instanceof Interface19) {
-                            ((Interface19) class261.anAnimable_Sub4_3315).method69(68);
+                            ((Interface19) class261.anAnimable_Sub4_3315).method69();
                         }
                         if (class261.anAnimable_Sub4_3319 instanceof Interface19) {
-                            ((Interface19) class261.anAnimable_Sub4_3319).method69(-116);
+                            ((Interface19) class261.anAnimable_Sub4_3319).method69();
                         }
                         if (class261.anAnimable_Sub2_3314 instanceof Interface19) {
-                            ((Interface19) class261.anAnimable_Sub2_3314).method69(95);
+                            ((Interface19) class261.anAnimable_Sub2_3314).method69();
                         }
                         if (class261.anAnimable_Sub2_3308 instanceof Interface19) {
-                            ((Interface19) class261.anAnimable_Sub2_3308).method69(-113);
+                            ((Interface19) class261.anAnimable_Sub2_3308).method69();
                         }
                         for (Class256 class256 = class261.aClass256_3312; class256 != null; class256 = class256.aClass256_3238) {
                             Mobile mobile = class256.aMobile3239;
                             if (mobile instanceof Interface19) {
-                                ((Interface19) mobile).method69(-117);
+                                ((Interface19) mobile).method69();
                             }
                         }
                     }

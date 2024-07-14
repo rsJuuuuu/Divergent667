@@ -81,7 +81,7 @@ public class oa extends GraphicsToolkit implements Interface3 {
     final void e(int i) {
         Class164.method1740();
         d(i);
-        for (ya var_ya = (ya) aClass312_4991.method3613(); var_ya != null; var_ya = (ya) aClass312_4991.method3620(16776960))
+        for (ya var_ya = (ya) aClass312_4991.method3613(); var_ya != null; var_ya = (ya) aClass312_4991.method3620())
             var_ya.r();
     }
 
@@ -328,7 +328,7 @@ public class oa extends GraphicsToolkit implements Interface3 {
 
     final native void Q(int i, int i_111_, int i_112_, int i_113_, int i_114_, int i_115_, byte[] bs, int i_116_, int i_117_);
 
-    final native void X(int i);
+    final native void X();
 
     final void d() {
         /* empty */
@@ -514,10 +514,6 @@ public class oa extends GraphicsToolkit implements Interface3 {
         return aClass336_5006;
     }
 
-    private Object OA() {
-        return new ba(this);
-    }
-
     final native void U(int i, int i_191_, int i_192_, int i_193_, int i_194_);
 
     final native int I();
@@ -591,7 +587,7 @@ public class oa extends GraphicsToolkit implements Interface3 {
             aYa4998 = null;
             aClass336_5004 = null;
             aHashTable5007.method1517(false);
-            for (ya var_ya = (ya) aClass312_4991.method3613(); var_ya != null; var_ya = (ya) aClass312_4991.method3620(16776960))
+            for (ya var_ya = (ya) aClass312_4991.method3613(); var_ya != null; var_ya = (ya) aClass312_4991.method3620())
                 var_ya.ga();
             aClass312_4991.method3614();
             FA();

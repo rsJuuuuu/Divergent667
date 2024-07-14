@@ -150,9 +150,6 @@ abstract class Class189 {
 
     private boolean method1919(int i) {
         anInt2323++;
-        if (i <= 124) {
-            method1927();
-        }
         if (aNode_Sub25_Sub1_2310 != null) {
             return !(aNode_Sub25_Sub3_2316.method2677() && !(method1928(124) > aNode_Sub25_Sub3_2316.method2676(94)));
         }
@@ -257,7 +254,7 @@ abstract class Class189 {
         }
     }
 
-    final void method1924(byte b) {
+    final void method1924() {
         anInt2306++;
         if (!aBoolean2299) {
             for (Node_Sub25 node_sub25 = (Node_Sub25) aHashTable2298.method1516(); node_sub25 != null; node_sub25 = (Node_Sub25) aHashTable2298.method1520(121)) {
@@ -268,9 +265,6 @@ abstract class Class189 {
             anOggPage2294.a();
             anOggSyncState2322.a();
             aBoolean2299 = true;
-            if (b < 58) {
-                anOggPacket2324 = null;
-            }
         }
     }
 
@@ -427,7 +421,7 @@ abstract class Class189 {
                 if (aNode_Sub25_Sub3_2316.anOggStreamState7235.packetOut() == 1) {
                     aNode_Sub25_Sub3_2316.method2652(85, anOggPacket2324);
                 } else {
-                    method1924((byte) 66);
+                    method1924();
                     break;
                 }
             }

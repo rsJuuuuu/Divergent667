@@ -42,7 +42,7 @@ public class Node_Sub13 extends Node {
 
     static void method2549(int i, int i_3_, int i_4_, int i_6_, int i_7_, int i_8_) {
         if ((Class213.aNode_Sub27_2512.aClass320_Sub25_7295.method3776()) != 0 && i != 0 && Class23.anInt434 < 50 && i_8_ != -1) {
-            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 2, i_8_, i, i_3_, i_7_, i_4_, i_6_, null);
+            Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78((byte) 2, i_8_, i, i_3_, i_7_, i_4_, i_6_);
         }
         anInt7108++;
     }

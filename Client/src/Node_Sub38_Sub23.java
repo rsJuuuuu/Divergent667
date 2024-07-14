@@ -91,8 +91,8 @@ public class Node_Sub38_Sub23 extends Node_Sub38 {
         anInt10335 = 0;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (!bool) {
+    final void method2780(BufferedStream buffer, int i) {
+        if (!false) {
             anInt10326++;
             while_209_:
             do {
@@ -158,16 +158,13 @@ public class Node_Sub38_Sub23 extends Node_Sub38 {
             Class87.removeWalkHere = false;
             Class92.anInt1230 = -1;
             if (widget != null) {
-                ClientScript.method2321(-1, widget);
+                ClientScript.method2321(widget);
             }
         }
     }
 
     final void method2785() {
         aByteArray10341 = Class169_Sub3.method1778(anInt10335);
-        if (7 != 7) {
-            anInt10340 = 6;
-        }
         anInt10330++;
         method2861();
     }

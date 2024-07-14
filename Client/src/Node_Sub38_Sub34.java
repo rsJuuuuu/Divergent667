@@ -4,7 +4,7 @@
 
 public class Node_Sub38_Sub34 extends Node_Sub38 {
     static int anInt10442;
-    static Class353 aClass353_10443 = new Class353(Settings.SERVER_NAME.toLowerCase(), Settings.SERVER_NAME, 0);
+    static Class353 aClass353_10443 = new Class353(Settings.SERVER_NAME.toLowerCase(), 0);
     static int anInt10444;
     static byte aByte10445;
     static int anInt10446;
@@ -37,7 +37,7 @@ public class Node_Sub38_Sub34 extends Node_Sub38 {
 
     static Class244[] method2901(SignLink signlink, boolean bool) {
         anInt10446++;
-        if (!signlink.method3640(122)) {
+        if (signlink.method3640()) {
             return new Class244[0];
         }
         Class241 class241 = signlink.method3634();

@@ -13,7 +13,7 @@ public class Node_Sub38_Sub18 extends Node_Sub38 {
     static boolean aBoolean10282 = false;
     static String aString10283 = null;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10281++;
         do {
             if (i == 0) {
@@ -24,9 +24,6 @@ public class Node_Sub38_Sub18 extends Node_Sub38 {
             }
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         } while (false);
-        if (bool) {
-            aClass192_10277 = null;
-        }
     }
 
     final int[] method2775(int i, int i_1_) {
@@ -377,7 +374,7 @@ public class Node_Sub38_Sub18 extends Node_Sub38 {
             Class46.anInt681 = widget.anInt4687;
             Class239.anInt2928 = widget.anInt4839;
             Class200_Sub2.anInt4943 = i;
-            ClientScript.method2321(-1, widget);
+            ClientScript.method2321(widget);
         }
     }
 

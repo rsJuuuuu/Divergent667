@@ -83,7 +83,7 @@ public class Class290_Sub1 extends Class290 {
         }
     }
 
-    final void method3417(boolean bool, boolean bool_3_) {
+    final void method3417(boolean bool_3_) {
         anInt8055++;
         anAbstractToolkit3654.method1318(Class236.aClass94_2898, Class117_Sub1.aClass94_4924);
         if (bool_3_) {

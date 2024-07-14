@@ -3,7 +3,7 @@
  */
 
 public class Class356 {
-    static Class170 aClass170_4425 = new Class170(8, 1);
+    static Class170 aClass170_4425 = new Class170(1);
     static int anInt4426;
 
     public static void method4023() {
@@ -19,9 +19,9 @@ public class Class356 {
         Class88.method1016();
         Class300.method3497(Class93.aGraphicsToolkit1241);
         Class320_Sub21.method3760(Class93.aGraphicsToolkit1241);
-        Class130.method1557((byte) -122, Node_Sub38_Sub39.aClass302_10500, Class93.aGraphicsToolkit1241);
+        Class130.method1557(Node_Sub38_Sub39.aClass302_10500, Class93.aGraphicsToolkit1241);
         GameStub.method101();
-        Class173.method1800((byte) -16, Node_Sub52.aGLSpriteArray7655);
+        Class173.method1800(Node_Sub52.aGLSpriteArray7655);
         Class320_Sub21.method3764(-95);
         Class320_Sub12.method3728(0);
         if (Class151.anInt1843 == 3) {

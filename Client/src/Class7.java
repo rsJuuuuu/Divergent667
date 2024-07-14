@@ -39,7 +39,7 @@ public class Class7 {
         } else if (i == 5) {
             anInt151 = buffer.readUnsignedShort();
         } else if (i == 6) {
-            anInt159 = buffer.read24BitInteger();
+            anInt159 = buffer.readInt24();
         } else if (i == 7) {
             anInt155 = buffer.readShort();
             anInt161 = buffer.readShort();

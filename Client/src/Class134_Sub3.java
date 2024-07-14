@@ -57,7 +57,7 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1 {
         return false;
     }
 
-    public final float method45(float f, int i) {
+    public final float method45(float f) {
 
         anInt9036++;
         return f;
@@ -108,25 +108,25 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1 {
         if (i_22_ < Class328.anInt4115) {
             Class261 class261 = Class175.aClass261ArrayArrayArray2099[i][i_22_ + 1][i_23_];
             if (class261 != null && class261.anAnimable_Sub1_3317 != null && class261.anAnimable_Sub1_3317.method821(0)) {
-                animable.method816(0, true, CacheNode_Sub18.aGraphicsToolkit9607, 0, (byte) 108, Class179.anInt2129, class261.anAnimable_Sub1_3317);
+                animable.method816(0, true, 0, (byte) 108, Class179.anInt2129, class261.anAnimable_Sub1_3317);
             }
         }
         if (i_23_ < Class328.anInt4115) {
             Class261 class261 = Class175.aClass261ArrayArrayArray2099[i][i_22_][i_23_ + 1];
             if (class261 != null && class261.anAnimable_Sub1_3317 != null && class261.anAnimable_Sub1_3317.method821(0)) {
-                animable.method816(0, true, CacheNode_Sub18.aGraphicsToolkit9607, Class179.anInt2129, (byte) 118, 0, class261.anAnimable_Sub1_3317);
+                animable.method816(0, true, Class179.anInt2129, (byte) 118, 0, class261.anAnimable_Sub1_3317);
             }
         }
         if (i_22_ < Class328.anInt4115 && i_23_ < Node_Sub50.anInt7623) {
             Class261 class261 = Class175.aClass261ArrayArrayArray2099[i][i_22_ + 1][i_23_ + 1];
             if (class261 != null && class261.anAnimable_Sub1_3317 != null && class261.anAnimable_Sub1_3317.method821(0)) {
-                animable.method816(0, true, CacheNode_Sub18.aGraphicsToolkit9607, Class179.anInt2129, (byte) 122, Class179.anInt2129, class261.anAnimable_Sub1_3317);
+                animable.method816(0, true, Class179.anInt2129, (byte) 122, Class179.anInt2129, class261.anAnimable_Sub1_3317);
             }
         }
         if (i_22_ < Class328.anInt4115 && i_23_ > 0) {
             Class261 class261 = Class175.aClass261ArrayArrayArray2099[i][i_22_ + 1][i_23_ - 1];
             if (class261 != null && class261.anAnimable_Sub1_3317 != null && class261.anAnimable_Sub1_3317.method821(0)) {
-                animable.method816(0, true, CacheNode_Sub18.aGraphicsToolkit9607, -Class179.anInt2129, (byte) 121, Class179.anInt2129, class261.anAnimable_Sub1_3317);
+                animable.method816(0, true, -Class179.anInt2129, (byte) 121, Class179.anInt2129, class261.anAnimable_Sub1_3317);
             }
         }
     }
@@ -154,7 +154,7 @@ public class Class134_Sub3 extends Class134 implements Interface13_Impl1 {
             OpenGL.glPixelStorei(3314, i_24_);
         }
         if (i_26_ != -15178) {
-            method45(1.0271162F, -71);
+            method45(1.0271162F);
         }
         OpenGL.glTexSubImage2Dub(anInt5296, 0, i_28_, i_27_, i_29_, i_25_, Node_Sub36.method2753(class68), 5121, bs, i);
         if (i_29_ != i_24_) {

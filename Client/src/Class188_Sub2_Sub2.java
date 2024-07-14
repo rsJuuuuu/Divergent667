@@ -14,7 +14,7 @@ public class Class188_Sub2_Sub2 extends Class188_Sub2 {
 
     static boolean method1911(int i) {
         anInt9363++;
-        return !(i != 0 && i != 2);
+        return i != 0 && i != 2;
     }
 
     public static void method1912() {
@@ -22,10 +22,7 @@ public class Class188_Sub2_Sub2 extends Class188_Sub2 {
         aClass36_9366 = null;
     }
 
-    final void method1905(byte b, int i, byte b_1_) {
-        if (b != -11) {
-            method1905((byte) 56, -69, (byte) -6);
-        }
+    final void method1905(int i, byte b_1_) {
         anInt9365++;
         b_1_ = (byte) (127 + (0x7f & b_1_ >> 1));
         int i_2_ = 2 * i;
@@ -36,11 +33,11 @@ public class Class188_Sub2_Sub2 extends Class188_Sub2 {
     final byte[] method1913() {
         anInt9364++;
         aByteArray9362 = new byte[524288];
-        this.method1884((byte) -97);
+        this.method1884();
         return aByteArray9362;
     }
 
-    static String method1914(String string, int i) {
+    static String method1914(String string) {
         anInt9359++;
         String string_6_ = null;
         int i_7_ = string.indexOf("--> ");

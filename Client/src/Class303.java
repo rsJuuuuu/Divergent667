@@ -20,7 +20,7 @@ public class Class303 {
             anInt3831 = 77;
         }
         anInt3829++;
-        return GraphicsBuffer.method2598(i_1_, i) & (Class278.method3367(i, i_1_, (byte) 12) | (0x2000 & i_1_) != 0 | Class320_Sub9.method3713(110, i_1_, i));
+        return GraphicsBuffer.method2598(i_1_, i) & (Class278.method3367(i_1_) | (0x2000 & i_1_) != 0 | Class320_Sub9.method3713(i_1_));
     }
 
     final Node method3539() {
@@ -66,14 +66,14 @@ public class Class303 {
                     Class307.aNode_Sub9_Sub1_3902.method2456();
                     if (Class339_Sub8.anInt8733 <= 0) {
                         Class52.anInt800 = 0;
-                        Class307.aNode_Sub9_Sub1_3902.method2439(-12651, Class17.anInt282);
+                        Class307.aNode_Sub9_Sub1_3902.method2439(Class17.anInt282);
                         for (int i = 0; Class153.anIntArray1948.length > i; i++) {
                             Class307.aNode_Sub9_Sub1_3902.method2449(Class153.anIntArray1948[i], i);
                             Class153.anIntArray1948[i] = 255;
                         }
                     } else {
                         Class52.anInt800 = 3;
-                        Class307.aNode_Sub9_Sub1_3902.method2439(-12651, Math.min(Class17.anInt282, Class339_Sub8.anInt8733));
+                        Class307.aNode_Sub9_Sub1_3902.method2439(Math.min(Class17.anInt282, Class339_Sub8.anInt8733));
                         for (int i = 0; i < Class153.anIntArray1948.length; i++) {
                             Class307.aNode_Sub9_Sub1_3902.method2449(Class153.anIntArray1948[i], i);
                             Class153.anIntArray1948[i] = 255;

@@ -42,7 +42,7 @@ public class Class350 implements Interface16 {
     private int anInt5388;
     private boolean aBoolean5389;
     private Image anImage5390;
-    static Class170 aClass170_5391 = new Class170(6, 1);
+    static Class170 aClass170_5391 = new Class170(1);
     static int anInt5392;
     private int anInt5393;
     static int anInt5394;
@@ -70,7 +70,7 @@ public class Class350 implements Interface16 {
         return 0;
     }
 
-    private int method3991(byte b, int i) {
+    private int method3991(int i) {
         anInt5392++;
         if (aBoolean5372) {
             return (Class205.screenHeight - i) / 2;
@@ -93,10 +93,7 @@ public class Class350 implements Interface16 {
         return Class151.anInt1843 >= 1;
     }
 
-    private int method3994(int i, int i_3_) {
-        if (i != -24768) {
-            return -96;
-        }
+    private int method3994(int i_3_) {
         anInt5365++;
         if (aBoolean5370) {
             return (Class360.screenWidth - i_3_) / 2;
@@ -209,7 +206,7 @@ public class Class350 implements Interface16 {
         return 100;
     }
 
-    public final void method63(boolean bool, byte b) {
+    public final void method63() {
         if (!aBoolean5389) {
             if (Class96.anApplet1270 == null) {
                 aBoolean5389 = true;
@@ -226,9 +223,6 @@ public class Class350 implements Interface16 {
             method3996();
         } else {
             Graphics graphics = Node_Sub38_Sub20.aCanvas10309.getGraphics();
-            if (b > -61) {
-                method3994(-65, -87);
-            }
             if (graphics == null) {
                 Node_Sub38_Sub20.aCanvas10309.repaint();
             } else {
@@ -246,12 +240,12 @@ public class Class350 implements Interface16 {
                     int i_16_ = anImage5383.getHeight(null);
                     int i_17_ = anImage5398.getHeight(null);
                     int i_18_ = anImage5386.getHeight(null);
-                    graphics_12_.drawImage(anImage5383, method3994(-24768, i_13_) + anInt5366 - anInt5379 / 2, method3991((byte) -121, i_16_) + anInt5384, null);
+                    graphics_12_.drawImage(anImage5383, method3994(i_13_) + anInt5366 - anInt5379 / 2, method3991(i_16_) + anInt5384, null);
                     int i_19_ = i_13_ + (-(anInt5379 / 2) + anInt5366);
                     int i_20_ = anInt5379 / 2 + anInt5366;
                     for (int i_21_ = i_19_; i_21_ <= i_20_; i_21_ += i_15_)
-                        graphics_12_.drawImage(anImage5386, method3994(-24768, i_13_) + anInt5366 + i_21_, method3991((byte) -116, i_18_) + anInt5384, null);
-                    graphics_12_.drawImage(anImage5398, method3994(-24768, i_14_) + anInt5366 + anInt5379 / 2, method3991((byte) -128, i_17_) + anInt5384, null);
+                        graphics_12_.drawImage(anImage5386, method3994(i_13_) + anInt5366 + i_21_, method3991(i_18_) + anInt5384, null);
+                    graphics_12_.drawImage(anImage5398, method3994(i_14_) + anInt5366 + anInt5379 / 2, method3991(i_17_) + anInt5384, null);
                     int i_22_ = anImage5390.getWidth(null);
                     int i_23_ = anImage5390.getHeight(null);
                     int i_24_ = anImage5375.getWidth(null);
@@ -262,8 +256,8 @@ public class Class350 implements Interface16 {
                     int i_29_ = anImage5378.getWidth(null);
                     int i_30_ = anImage5374.getWidth(null);
                     int i_31_ = anImage5377.getWidth(null);
-                    int i_32_ = method3994(-24768, anInt5371) + anInt5387;
-                    int i_33_ = method3991((byte) 18, anInt5393) + anInt5388;
+                    int i_32_ = method3994(anInt5371) + anInt5387;
+                    int i_33_ = method3991(anInt5393) + anInt5388;
                     graphics_12_.drawImage(anImage5390, i_32_, i_33_ + ((-i_23_ + anInt5393) / 2), null);
                     graphics_12_.drawImage(anImage5375, i_32_ + (anInt5371 - i_24_), i_33_ + (anInt5393 - i_25_) / 2, null);
                     if (anImage5400 == null) {
@@ -279,7 +273,7 @@ public class Class350 implements Interface16 {
                         Image image = Node_Sub38_Sub20.aCanvas10309.createImage(i_37_, -i_26_ - i_28_ + anInt5393);
                         int i_38_ = image.getWidth(null);
                         Graphics graphics_39_ = image.getGraphics();
-                        int i_40_ = anInt5385 * Class295.method3471((byte) -34) / 10 % i_30_;
+                        int i_40_ = anInt5385 * Class295.method3471() / 10 % i_30_;
                         for (int i_41_ = i_40_ - i_30_; i_38_ > i_41_; i_41_ += i_30_)
                             graphics_39_.drawImage(anImage5374, i_41_, 0, null);
                         graphics_34_.drawImage(image, 0, i_28_, null);

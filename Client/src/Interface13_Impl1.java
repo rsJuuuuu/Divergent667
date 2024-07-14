@@ -7,7 +7,7 @@ interface Interface13_Impl1 extends Interface13 {
 
     int method44(int i);
 
-    float method45(float f, int i);
+    float method45(float f);
 
     int method46(byte b);
 

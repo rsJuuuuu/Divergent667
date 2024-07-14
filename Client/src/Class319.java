@@ -12,11 +12,8 @@ public class Class319 {
     protected short[] aShortArray4061;
     protected short[] aShortArray4062;
 
-    static void method3671(int i) {
+    static void method3671() {
         IComponentDefinitions.method4144();
-        if (i != 8) {
-            method3671(-95);
-        }
         anInt4055++;
         CacheNode_Sub16_Sub1.method2387();
     }

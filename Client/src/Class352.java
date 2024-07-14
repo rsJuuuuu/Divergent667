@@ -23,7 +23,7 @@ public class Class352 {
     static int anInt4339;
     static int anInt4340;
 
-    private void method4006(BufferedStream buffer, int i, int i_0_) {
+    private void method4006(BufferedStream buffer, int i_0_) {
         anInt4337++;
         if (i_0_ == 1) {
             anInt4330 = buffer.readUnsignedShort();
@@ -52,7 +52,7 @@ public class Class352 {
             if (i_1_ == 0) {
                 break;
             }
-            method4006(buffer, i, i_1_);
+            method4006(buffer, i_1_);
         }
         anInt4333++;
     }
@@ -77,7 +77,7 @@ public class Class352 {
         int i_6_ = 0x3fff & -actor.aClass99_10893.anInt1281 + actor.anInt10889;
         if (i == -1) {
             if (i_6_ == 0 && actor.anInt10877 <= 25) {
-                if (!actor.aBoolean10867 || !Objects.requireNonNull(class259).method3130(animator.method250((byte) -58), (byte) -127)) {
+                if (!actor.aBoolean10867 || !Objects.requireNonNull(class259).method3130(animator.method250(), (byte) -127)) {
                     animator.method249(true, Objects.requireNonNull(class259).method3128());
                     actor.aBoolean10867 = animator.method245(-127);
                 }
@@ -87,7 +87,7 @@ public class Class352 {
             } else if (i_3_ > 0 && Objects.requireNonNull(class259).anInt3274 != -1) {
                 animator.method249(true, class259.anInt3274);
                 actor.aBoolean10867 = false;
-            } else if (!actor.aBoolean10867 || !Objects.requireNonNull(class259).method3130(animator.method250((byte) -48), (byte) -128)) {
+            } else if (!actor.aBoolean10867 || !Objects.requireNonNull(class259).method3130(animator.method250(), (byte) -128)) {
                 animator.method249(true, Objects.requireNonNull(class259).method3128());
                 actor.aBoolean10867 = actor.anAnimator10860.method245(-124);
             }
@@ -222,12 +222,12 @@ public class Class352 {
         }
     }
 
-    static boolean method4012(int i) {
+    static boolean method4012() {
         anInt4340++;
         if (!Node_Sub38_Sub2.method2793("jaclib")) {
-            return false;
+            return true;
         }
-        return Node_Sub38_Sub2.method2793("hw3d");
+        return !Node_Sub38_Sub2.method2793("hw3d");
     }
 
     static void drawNPCOptions(boolean hideOptions, Npc npc) {

@@ -95,7 +95,7 @@ public class Class226 {
                 Class320_Sub21.aBooleanArray8403[i_6_] = true;
             }
         }
-        Class362.method4053(i_2_, i_4_ + i_2_, i, (byte) 102, i + i_3_);
+        Class362.method4053(i_2_, i_4_ + i_2_, i, i + i_3_);
         if (i_5_ >= -105) {
             method2114(65, 4, 96, -103, -52);
         }

@@ -18,7 +18,7 @@ public class Class51_Sub1 extends Class51 implements Interface15_Impl2 {
     static int anInt9063;
     static int anInt9064 = -1;
 
-    public final boolean method39(int i) {
+    public final boolean method39() {
         anInt9063++;
         return super.method517(aGLXToolkit5332.aMapBuffer9314);
     }
@@ -38,14 +38,13 @@ public class Class51_Sub1 extends Class51 implements Interface15_Impl2 {
         return aByte9059;
     }
 
-    public final boolean method36(int i, int i_3_, Source source, int i_4_) {
+    public final void method36(int i, int i_3_, Source source, int i_4_) {
         anInt9057++;
         if (i_4_ != 1965) {
-            return false;
+            return;
         }
         aByte9059 = (byte) i;
         super.method516(i_3_, source);
-        return true;
     }
 
     Class51_Sub1(GLXToolkit glxtoolkit, boolean bool) {
@@ -76,7 +75,7 @@ public class Class51_Sub1 extends Class51 implements Interface15_Impl2 {
         super.method38(bool);
     }
 
-    public final jaclib.memory.Buffer method40(int i, boolean bool) {
+    public final jaclib.memory.Buffer method40(boolean bool) {
         anInt9058++;
         return super.method519(bool, aGLXToolkit5332.aMapBuffer9314);
     }

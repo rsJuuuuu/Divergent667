@@ -68,15 +68,12 @@ abstract class Node_Sub38 extends Node {
         boolean bool = EntityNode_Sub3_Sub1.aClass86_9166.method1007(widget.aBoolean4723 ? Class295.myPlayer.aPlayerDefinition11137 : null, (byte) 96, graphicstoolkit, widget.anInt4714, widget.anInt4718, widget.anInt4744, widget.anInt4831, -16777216 | widget.anInt4796) == null;
         if (bool) {
             Class69.aClass312_940.method3625(new Node_Sub30(widget.anInt4718, widget.anInt4831, widget.anInt4744, widget.anInt4796 | -16777216, widget.anInt4714, widget.aBoolean4723));
-            ClientScript.method2321(-1, widget);
+            ClientScript.method2321(widget);
         }
     }
 
-    void method2780(boolean bool, BufferedStream buffer, int i) {
+    void method2780(BufferedStream buffer, int i) {
         anInt7461++;
-        if (bool) {
-            method2784(true, null, 33);
-        }
     }
 
     static int method2781(int i, int i_4_, int i_5_) {
@@ -94,11 +91,8 @@ abstract class Node_Sub38 extends Node {
         return i_5_;
     }
 
-    void method2782(int i, int i_7_, boolean bool) {
+    void method2782(int i, int i_7_) {
         anInt7465++;
-        if (bool) {
-            anIntArray7451 = null;
-        }
         int i_8_ = anInt7450 == 255 ? i : anInt7450;
         if (aBoolean7463) {
             aClass146_7460 = new Class146(i_8_, i, i_7_);
@@ -112,10 +106,7 @@ abstract class Node_Sub38 extends Node {
         return -1;
     }
 
-    static float[] method2784(boolean bool, float[] fs, int i) {
-        if (bool) {
-            return null;
-        }
+    static float[] method2784(float[] fs, int i) {
         anInt7455++;
         float[] fs_9_ = new float[i];
         Class311.method3603(fs, 0, fs_9_, 0, i);
@@ -123,9 +114,6 @@ abstract class Node_Sub38 extends Node {
     }
 
     void method2785() {
-        if (7 != 7) {
-            anIntArray7451 = null;
-        }
         anInt7456++;
     }
 

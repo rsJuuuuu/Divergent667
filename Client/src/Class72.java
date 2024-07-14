@@ -16,7 +16,7 @@ public class Class72 {
     protected boolean aBoolean978;
     protected int anInt979;
 
-    Class72(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, boolean bool, boolean bool_8_, int i_9_) {
+    Class72(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_7_, boolean bool_8_, int i_9_) {
         anInt976 = i_9_;
         aShort970 = (short) i_5_;
         anInt979 = i_2_;

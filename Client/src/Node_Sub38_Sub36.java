@@ -12,7 +12,7 @@ public class Node_Sub38_Sub36 extends Node_Sub38 {
     static long aLong10462;
     static int anInt10463;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         while_266_:
         do {
             while_265_:
@@ -38,9 +38,6 @@ public class Node_Sub38_Sub36 extends Node_Sub38 {
             anInt10461 = buffer.readUnsignedShort();
         } while (false);
         anInt10463++;
-        if (bool) {
-            method2904(-90, null);
-        }
     }
 
     public Node_Sub38_Sub36() {

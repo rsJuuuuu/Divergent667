@@ -31,15 +31,16 @@ public class Class163 {
 
     static Class144_Sub4 method1734(BufferedStream buffer) {
         anInt2007++;
-        return new Class144_Sub4(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.read24BitInteger(), buffer.readUnsignedByte());
+        return new Class144_Sub4(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readInt24(), buffer.readUnsignedByte());
     }
 
-    final int method1735(byte[] bs, int i, byte[] bs_0_, int i_1_, int i_2_, int i_3_) {
+    final int method1735(byte[] bs, byte[] bs_0_, int i_1_, int i_2_) {
+        int i = -1;
+        int i_3_ = 0;
         anInt2009++;
         if (i == (~i_1_)) {
             return 0;
         }
-        i_1_ += i_3_;
         int i_4_ = 0;
         int i_5_ = i_2_;
         for (; ; ) {

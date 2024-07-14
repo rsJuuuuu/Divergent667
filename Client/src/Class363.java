@@ -52,16 +52,13 @@ public class Class363 {
     }
 
     Class363(Index class302) {
-        byte[] bs = class302.method3518((byte) 57, 6);
+        byte[] bs = class302.method3518(6);
         method4055(new BufferedStream(bs));
         if (anIntArray4508 == null) {
             throw new RuntimeException("");
         }
     }
 
-    protected Class363() {
-        anIntArray4508 = new int[0];
-    }
 
     static {
         for (int i = 0; i < 256; i++) {

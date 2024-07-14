@@ -51,7 +51,7 @@ public class Class158 {
         cachenode.aCacheNode7035.aCacheNode7036 = cachenode;
     }
 
-    final int method1720(byte b) {
+    final int method1720() {
         anInt1986++;
         int i = 0;
         CacheNode cachenode = aCacheNode1984.aCacheNode7035;
@@ -104,7 +104,7 @@ public class Class158 {
         return cachenode;
     }
 
-    static Class169_Sub2_Sub1 method1724(int i, int i_3_, int i_4_, byte b, int i_5_, GLToolkit gltoolkit) {
+    static Class169_Sub2_Sub1 method1724(int i, int i_3_, int i_4_, int i_5_, GLToolkit gltoolkit) {
         anInt1989++;
         if (!gltoolkit.aBoolean6652 && (!Class371.method4094(i_4_) || !Class371.method4094(i_3_))) {
             if (!gltoolkit.aBoolean6649) {

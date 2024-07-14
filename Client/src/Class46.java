@@ -12,7 +12,7 @@ public class Class46 {
     static int anInt677;
     protected String aString678;
     static int anInt679;
-    static Class170 aClass170_680 = new Class170(1, 2);
+    static Class170 aClass170_680 = new Class170(2);
     static int anInt681 = -1;
 
     public static void method466() {
@@ -38,7 +38,7 @@ public class Class46 {
             }
         }
         if (Node_Sub25_Sub3.aWidget9990 != null) {
-            ClientScript.method2321(-1, Node_Sub25_Sub3.aWidget9990);
+            ClientScript.method2321(Node_Sub25_Sub3.aWidget9990);
             Node_Sub25_Sub3.aWidget9990 = null;
         }
     }

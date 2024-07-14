@@ -80,11 +80,11 @@ public class Class266 {
 
     final int method3236() {
         anInt3375++;
-        return aClass158_3384.method1720((byte) -122) + aClass158_3386.method1720((byte) 20);
+        return aClass158_3384.method1720() + aClass158_3386.method1720();
     }
 
     static void method3237(GraphicsToolkit graphicstoolkit) {
-        for (EntityNode_Sub4 entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1113((byte) -45); entitynode_sub4 != null; entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1108(65)) {
+        for (EntityNode_Sub4 entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1113(); entitynode_sub4 != null; entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1108(65)) {
             if (entitynode_sub4.aBoolean5978) {
                 entitynode_sub4.method955(graphicstoolkit);
             }
@@ -254,10 +254,7 @@ public class Class266 {
         }
     }
 
-    final boolean method3239(int i) {
-        if (i != 255) {
-            return false;
-        }
+    final boolean method3239() {
         anInt3376++;
         return method3246((byte) 121) >= 20;
     }
@@ -368,7 +365,7 @@ public class Class266 {
             return -110;
         }
         Class259 class259 = npc.method868((byte) -124);
-        int i_16_ = npc.anAnimator10860.method250((byte) 81);
+        int i_16_ = npc.anAnimator10860.method250();
         if (i_16_ == -1 || npc.aBoolean10867) {
             i_15_ = npcdefinition.anInt2812;
         } else if (Objects.requireNonNull(class259).anInt3252 != i_16_ && class259.anInt3271 != i_16_ && i_16_ != class259.anInt3293 && class259.anInt3270 != i_16_) {
@@ -398,7 +395,7 @@ public class Class266 {
         if (b < 31) {
             return -79;
         }
-        return aClass158_3387.method1720((byte) 86) + aClass158_3388.method1720((byte) -95);
+        return aClass158_3387.method1720() + aClass158_3388.method1720();
     }
 
     final CacheNode_Sub16_Sub1 method3247(int i, int i_17_, boolean bool, byte b_18_) {

@@ -34,7 +34,7 @@ public class Class339_Sub6 extends Class339 {
         if (class169 == null) {
             if (!aBoolean8705) {
                 aGLToolkit4202.method1444(-2, aGLToolkit4202.aClass169_Sub2_6683);
-                aGLToolkit4202.method1434((byte) 119, 1);
+                aGLToolkit4202.method1434(1);
                 aGLToolkit4202.method1464(34168, 768, 0);
                 aGLToolkit4202.method1472(i_0_ ^ 0x6ecb, 0, 34168);
                 aBoolean8705 = true;
@@ -46,7 +46,7 @@ public class Class339_Sub6 extends Class339 {
                 aBoolean8705 = false;
             }
             aGLToolkit4202.method1444(i_0_ ^ 0x6e81, class169);
-            aGLToolkit4202.method1434((byte) 116, i);
+            aGLToolkit4202.method1434(i);
         }
         if (i_0_ != -28289) {
             anInt8694 = 24;
@@ -58,7 +58,7 @@ public class Class339_Sub6 extends Class339 {
         anInt8714++;
         aGLToolkit4202.method1457(33984, 1);
         aGLToolkit4202.method1444(i - 2, aClass169_Sub2_8711);
-        aGLToolkit4202.method1474(126, 7681, 34165);
+        aGLToolkit4202.method1474(7681, 34165);
         aGLToolkit4202.method1464(34166, 768, i);
         aGLToolkit4202.method1464(5890, 770, 2);
         aGLToolkit4202.method1472(-57, 0, 34168);
@@ -81,7 +81,7 @@ public class Class339_Sub6 extends Class339 {
         }
         aGLToolkit4202.method1457(i ^ 0xd509, 1);
         aGLToolkit4202.method1444(-2, null);
-        aGLToolkit4202.method1474(126, 8448, 8448);
+        aGLToolkit4202.method1474(8448, 8448);
         aGLToolkit4202.method1464(5890, 768, 0);
         aGLToolkit4202.method1464(34166, 770, 2);
         aGLToolkit4202.method1472(-63, 0, 5890);
@@ -96,7 +96,7 @@ public class Class339_Sub6 extends Class339 {
         }
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8702++;
     }
 

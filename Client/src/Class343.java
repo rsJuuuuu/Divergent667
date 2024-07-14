@@ -132,7 +132,7 @@ public class Class343 {
 
     static boolean method3967(int i, int i_13_) {
         anInt4243++;
-        return !(!((0x40000 & i) != 0 | Class320_Sub7.method3711((byte) 76, i, i_13_)) && !Class110.method1135(i, i_13_));
+        return !(!((0x40000 & i) != 0 | Class320_Sub7.method3711(i)) && !Class110.method1135(i, i_13_));
     }
 
     final boolean method3968(Class343 class343_15_) {

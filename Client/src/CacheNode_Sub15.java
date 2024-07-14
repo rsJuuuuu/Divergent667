@@ -59,7 +59,7 @@ public class CacheNode_Sub15 extends CacheNode {
             buffer.offset = 1;
             int i_5_ = buffer.readUnsignedShort();
             Node_Sub40 node_sub40 = null;
-            for (Node_Sub40 node_sub40_6_ = (Node_Sub40) class312.method3613(); node_sub40_6_ != null; node_sub40_6_ = (Node_Sub40) class312.method3620(16776960)) {
+            for (Node_Sub40 node_sub40_6_ = (Node_Sub40) class312.method3613(); node_sub40_6_ != null; node_sub40_6_ = (Node_Sub40) class312.method3620()) {
                 if (node_sub40_6_.anInt7506 == i_5_) {
                     node_sub40 = node_sub40_6_;
                     break;
@@ -67,7 +67,7 @@ public class CacheNode_Sub15 extends CacheNode {
             }
             if (node_sub40 == null) {
                 synchronized (Class145.aClass302_1799) {
-                    node_sub40 = new Node_Sub40(i_5_, Class145.aClass302_1799.method3518((byte) -126, i_5_));
+                    node_sub40 = new Node_Sub40(i_5_, Class145.aClass302_1799.method3518(i_5_));
                 }
                 class312.method3625(node_sub40);
             }

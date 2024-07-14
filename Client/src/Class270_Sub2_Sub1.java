@@ -57,16 +57,16 @@ public class Class270_Sub2_Sub1 extends Class270_Sub2 {
         aGLToolkit10544.method1489(-2);
         aGLToolkit10544.method1457(33984, 1);
         aGLToolkit10544.method1422(0.0F, 0.0F, f, 0.0F);
-        aGLToolkit10544.method1474(-85, 34165, 34165);
+        aGLToolkit10544.method1474(34165, 34165);
         aGLToolkit10544.method1444(-2, class169_sub1);
         aGLToolkit10544.method1457(33984, 0);
-        aGLToolkit10544.method1434((byte) 62, 1);
+        aGLToolkit10544.method1434(1);
         aGLToolkit10544.method1444(-2, class169_sub1_12_);
         aGLToolkit10544.method1410(class382);
         for (int i = 0; i < 6; i++) {
             int i_13_ = 34069 + i;
             class382.method4182(aClass169_Sub1_10542, i_13_);
-            class382.method4183(0, (byte) -99);
+            class382.method4183(0);
             if (!class382.method4180()) {
                 bool = false;
                 break;
@@ -181,7 +181,7 @@ public class Class270_Sub2_Sub1 extends Class270_Sub2 {
         aGLToolkit10544.method1436(class382, (byte) 21);
         aGLToolkit10544.method1457(33984, 1);
         aGLToolkit10544.method1444(-2, null);
-        aGLToolkit10544.method1474(-9, 8448, 8448);
+        aGLToolkit10544.method1474(8448, 8448);
         aGLToolkit10544.method1457(33984, 0);
         aGLToolkit10544.method1444(-2, null);
         OpenGL.glPopAttrib();

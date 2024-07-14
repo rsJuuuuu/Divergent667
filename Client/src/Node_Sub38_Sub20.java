@@ -22,10 +22,7 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
     static int anInt10313;
     private int anInt10314;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (bool) {
-            anInt10298 = -73;
-        }
+    final void method2780(BufferedStream buffer, int i) {
         while_191_:
         do {
             while_190_:
@@ -87,9 +84,7 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
 
     final void method2785() {
         Node_Sub37.method2772((byte) 54);
-        if (7 == 7) {
-            anInt10300++;
-        }
+        anInt10300++;
     }
 
     public static void method2852() {
@@ -232,7 +227,7 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
                                 }
                                 break while_195_;
                             } while (false);
-                            if (class84.method984(i_25_, i_24_, (byte) -93, i_25_, i_28_, i_23_, i_22_, i_27_, i_29_, i_19_)) {
+                            if (class84.method984(i_25_, i_24_, i_25_, i_28_, i_23_, i_22_, i_27_, i_29_, i_19_)) {
                                 Class219.anInt2623 = i_29_;
                                 Class315.anInt4033 = i_28_;
                                 return true;
@@ -391,7 +386,7 @@ public class Node_Sub38_Sub20 extends Node_Sub38 {
         boolean forceRefresh = packet.readUnsignedByte() == 1;
         int gameSceneBaseRegionX = packet.readUnsignedShortLE();
         int gameSceneBaseRegionY = packet.readUnsignedShort();
-        Class95.method1066(-111);
+        Class95.method1066();
         Animable_Sub2.updateGameSceneSize(gameSceneSize);
         int i_50_ = (Class218.aClass123_2566.anInt1581 - packet.offset) / 16;
         //System.out.println(gameSceneBaseRegionX+", "+gameSceneBaseRegionY+", "+gameSceneSize+", "+i_50_);

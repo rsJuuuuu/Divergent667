@@ -173,7 +173,7 @@ public class BufferedConnection implements Runnable {
             if (i_18_ == 0) {
                 if (animable == Class295.myPlayer) {
                     if (class48.aBoolean699) {
-                        Class105.method1116(i_15_, i_16_, i_19_, (byte) 97, 0, i_20_, false);
+                        Class105.method1116(i_15_, i_16_, i_19_, 0, i_20_, false);
                     } else {
                         Class91.method1033(i_19_, 0, i_15_, i_16_, i_20_);
                     }
@@ -182,7 +182,7 @@ public class BufferedConnection implements Runnable {
                 int i_21_ = animable.anInt5934 - 256 >> 9;
                 int i_22_ = -256 + animable.anInt5940 >> 9;
                 int i_23_ = animable == Class295.myPlayer ? 0 : i_18_ + (i_22_ << 8) + ((i_21_ << 16) + (animable.plane << 24));
-                Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78(class48.aBoolean699 ? (byte) 2 : (byte) 1, i_15_, i_16_, 0, i_20_, i_23_, i_19_, animable);
+                Node_Sub38_Sub19.aClass78Array10284[Class23.anInt434++] = new Class78(class48.aBoolean699 ? (byte) 2 : (byte) 1, i_15_, i_16_, 0, i_20_, i_23_, i_19_);
             }
         }
     }

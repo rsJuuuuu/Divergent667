@@ -11,7 +11,7 @@ public class Class151 {
     protected int anInt1846;
     protected int anInt1847;
 
-    static void method1671(int i, int i_0_, int i_1_, int i_2_, byte[][][] bs, int[] is, int[] is_3_, int[] is_4_, int[] is_5_, int[] is_6_, int i_7_, byte b, int i_8_, int i_9_, boolean bool, int i_11_, int i_12_, boolean bool_13_) {
+    static void method1671(int i, int i_0_, int i_1_, int i_2_, byte[][][] bs, int[] is, int[] is_3_, int[] is_4_, int[] is_5_, int[] is_6_, int i_7_, byte b, boolean bool, int i_11_, int i_12_, boolean bool_13_) {
         Mobile_Sub1.aBoolean10959 = true;
         Class239.aBoolean2932 = CacheNode_Sub18.aGraphicsToolkit9607.e() > 0;
         Class307.aBoolean3898 = true;
@@ -86,7 +86,7 @@ public class Class151 {
         Class266.method3237(CacheNode_Sub18.aGraphicsToolkit9607);
         if (!Node_Sub36_Sub3.aClass179_10058.aBoolean2130) {
             Class103 class103 = Node_Sub36_Sub3.aClass179_10058.aClass103_2124;
-            for (EntityNode_Sub6 entitynode_sub6 = (EntityNode_Sub6) class103.method1113((byte) 108); entitynode_sub6 != null; entitynode_sub6 = (EntityNode_Sub6) class103.method1108(61)) {
+            for (EntityNode_Sub6 entitynode_sub6 = (EntityNode_Sub6) class103.method1113(); entitynode_sub6 != null; entitynode_sub6 = (EntityNode_Sub6) class103.method1108(61)) {
                 entitynode_sub6.method803();
                 Class148.method1650(entitynode_sub6);
             }

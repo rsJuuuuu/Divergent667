@@ -43,7 +43,7 @@ public class Class89 {
             for (CacheNode_Sub4 cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1723(); cachenode_sub4 != null; cachenode_sub4 = (CacheNode_Sub4) Class184.aClass158_2189.method1721()) {
                 int i_12_ = i_4_ + Client.anInt5481 + (31 + i_11_ * 16);
                 if (cachenode_sub4.anInt9462 == 1) {
-                    IComponentDefinitions.method4139(graphicstoolkit, Class362.anInt4492, Class219.anInt2627, Client.anInt5481 + i_4_, i_12_, -256, (CacheNode_Sub13) cachenode_sub4.aClass158_9457.aCacheNode1984.aCacheNode7035, -1, i_8_, i + Node_Sub6.anInt7043, i_7_);
+                    IComponentDefinitions.method4139(Class362.anInt4492, i_12_, -256, (CacheNode_Sub13) cachenode_sub4.aClass158_9457.aCacheNode1984.aCacheNode7035, -1, i_8_, i + Node_Sub6.anInt7043, i_7_);
                 } else {
                     Node_Sub40.method2924(i_8_, Class362.anInt4492, i_12_, -256, graphicstoolkit, i_7_, -1, Client.anInt5481 + i_4_, i + Node_Sub6.anInt7043, Class219.anInt2627, cachenode_sub4);
                 }
@@ -56,16 +56,16 @@ public class Class89 {
                 for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class73.aCacheNode_Sub4_988.aClass158_9457.method1723(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class73.aCacheNode_Sub4_988.aClass158_9457.method1721()) {
                     int i_13_ = i_11_ * 16 + ReferenceTable.anInt286 + 31;
                     i_11_++;
-                    IComponentDefinitions.method4139(graphicstoolkit, CacheNode.anInt7033, Class18.anInt309, ReferenceTable.anInt286, i_13_, -256, cachenode_sub13, -1, i_8_, Class367.anInt4539, i_7_);
+                    IComponentDefinitions.method4139(CacheNode.anInt7033, i_13_, -256, cachenode_sub13, -1, i_8_, Class367.anInt4539, i_7_);
                 }
                 Class226.method2114(Class367.anInt4539, ReferenceTable.anInt286, CacheNode.anInt7033, Class18.anInt309, -107);
             }
         } else {
             int i_9_ = 0;
-            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+            for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
                 int i_10_ = (Class315.anInt4035 + (-1 - i_9_)) * 16 + (i_4_ + (Client.anInt5481 + 31));
                 i_9_++;
-                IComponentDefinitions.method4139(graphicstoolkit, Class362.anInt4492, Class219.anInt2627, Client.anInt5481 + i_4_, i_10_, -256, cachenode_sub13, -1, i_8_, i + Node_Sub6.anInt7043, i_7_);
+                IComponentDefinitions.method4139(Class362.anInt4492, i_10_, -256, cachenode_sub13, -1, i_8_, i + Node_Sub6.anInt7043, i_7_);
             }
         }
         Class226.method2114(i + Node_Sub6.anInt7043, i_4_ + Client.anInt5481, Class362.anInt4492, Class219.anInt2627, -123);
@@ -85,7 +85,7 @@ public class Class89 {
             }
         }
         CacheNode_Sub14.method2349();
-        Class313.method3648(-97);
+        Class313.method3648();
         Class363.method4054();
         Class239.method3022();
     }

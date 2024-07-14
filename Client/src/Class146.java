@@ -19,15 +19,13 @@ public class Class146 {
     private final int anInt1811;
     static Class32 aClass32_1812;
     static SignLink aSignLink1813;
-    static boolean aBoolean1814;
     static Class10 aClass10_1815;
     static boolean aBoolean1816 = false;
     static int anInt1817;
     static int anInt1818;
     protected boolean aBoolean1819;
 
-    final int[][] method1642(byte b) {
-
+    final int[][] method1642() {
         anInt1818++;
         if (anInt1807 != anInt1811) {
             throw new RuntimeException("Can only retrieve a full image cache");

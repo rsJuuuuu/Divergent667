@@ -20,12 +20,12 @@ abstract class Class66 implements Interface10 {
     static ClanChat aClanChat5176;
     static String aString5177 = null;
 
-    public final void method27(boolean bool, int i) {
+    public final void method27(boolean bool) {
         anInt5173++;
         int i_0_ = aClass150_5171.aClass379_5079.method4160(-123, Node_Sub38_Sub12.anInt10225, aClass150_5171.anInt5086) + aClass150_5171.anInt5092;
         int i_1_ = aClass150_5171.aClass77_5087.method775(Class257.anInt3244, aClass150_5171.anInt5081) + aClass150_5171.anInt5080;
         method719(bool, i_0_, (byte) -16, i_1_);
-        method721(i_0_, bool, i_1_);
+        method721(i_0_, i_1_);
         String string = Class243.aClass340_3069.method3957((byte) 62);
         if (Class313.method3650() - aLong5164 > 10000L) {
             string += " (" + Class243.aClass340_3069.method3949().method1130() + ")";
@@ -67,7 +67,7 @@ abstract class Class66 implements Interface10 {
         return i_5_;
     }
 
-    abstract void method721(int i, boolean bool, int i_10_);
+    abstract void method721(int i, int i_10_);
 
     public void method26(int i) {
         anInt5166++;

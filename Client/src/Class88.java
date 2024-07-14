@@ -33,7 +33,7 @@ public class Class88 implements Interface12 {
         return aClass302_5273.method3522((byte) 33, aString5277);
     }
 
-    public final Class172 method34(byte b) {
+    public final Class172 method34() {
         anInt5279++;
 
         return Class172.aClass172_2079;

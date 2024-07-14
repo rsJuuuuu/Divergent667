@@ -64,7 +64,7 @@ public class Class320_Sub24 extends Class320 {
 
     static void method3774() {
         anInt8436++;
-        for (CacheNode_Sub12 cachenode_sub12 = (CacheNode_Sub12) Class270.aClass312_3477.method3613(); cachenode_sub12 != null; cachenode_sub12 = (CacheNode_Sub12) Class270.aClass312_3477.method3620(16776960)) {
+        for (CacheNode_Sub12 cachenode_sub12 = (CacheNode_Sub12) Class270.aClass312_3477.method3613(); cachenode_sub12 != null; cachenode_sub12 = (CacheNode_Sub12) Class270.aClass312_3477.method3620()) {
             Mobile_Sub1 mobile_sub1 = cachenode_sub12.aMobile_Sub1_9554;
             if (Class174.clientCycle <= mobile_sub1.anInt10923) {
                 if (mobile_sub1.anInt10958 <= Class174.clientCycle) {

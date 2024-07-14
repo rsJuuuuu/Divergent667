@@ -9,7 +9,7 @@ interface Interface21 {
 
     char method77(int i);
 
-    int method78(int i);
+    int method78();
 
     int method79(boolean bool);
 }

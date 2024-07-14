@@ -111,7 +111,7 @@ public class Class290_Sub11 extends Class290 {
         }
     }
 
-    final void method3417(boolean bool, boolean bool_4_) {
+    final void method3417(boolean bool_4_) {
         anInt8177++;
         if (bool_4_) {
             anInt8181 = -44;

@@ -7,5 +7,5 @@ interface Interface10 {
 
     void method26(int i);
 
-    void method27(boolean bool, int i);
+    void method27(boolean bool);
 }

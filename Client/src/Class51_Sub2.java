@@ -32,7 +32,7 @@ public class Class51_Sub2 extends Class51 implements Interface15_Impl1 {
         return super.method57();
     }
 
-    public final Class372 method55(int i) {
+    public final Class372 method55() {
         anInt9073++;
         return aClass372_9071;
     }

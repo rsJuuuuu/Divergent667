@@ -47,9 +47,9 @@ public class Class1 {
                 anIntArray119 = new int[anInt117];
             } else if (i_0_ != 4) {
                 if (i_0_ == 5) {
-                    anInt120 = buffer.read24BitInteger();
+                    anInt120 = buffer.readInt24();
                 } else if (i_0_ == 6) {
-                    anInt112 = buffer.read24BitInteger();
+                    anInt112 = buffer.readInt24();
                 } else if (i_0_ == 7) {
                     aShortArrayArrayArray113 = new short[10][4][];
                     aShortArrayArray106 = new short[10][4];
@@ -115,7 +115,7 @@ public class Class1 {
         anIntArray119 = null;
         anInt118 = 3;
         try {
-            byte[] bs = class302.method3518((byte) 126, 3);
+            byte[] bs = class302.method3518(3);
             method163(new BufferedStream(bs));
         } catch (RuntimeException runtimeexception) {
             throw Class126.method1537(runtimeexception, "aba.<init>(" + (class302 != null ? "{...}" : "null") + ')');

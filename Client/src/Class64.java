@@ -26,7 +26,7 @@ public class Class64 implements Interface6 {
     static void method710(int i) {
         anInt5035++;
         if (Class52.anInt800 == 0) {
-            Class307.aNode_Sub9_Sub1_3902.method2439(-12651, i);
+            Class307.aNode_Sub9_Sub1_3902.method2439(i);
         } else {
             Class17.anInt282 = i;
         }

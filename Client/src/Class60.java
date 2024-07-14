@@ -27,7 +27,7 @@ public class Class60 {
                 if (class383 == null) {
                     i_0_ = -1;
                 } else {
-                    Class240.aSignLink2946.method3645(class383.method4196(), (byte) 121, class383.method4195(), Node_Sub38_Sub20.aCanvas10309, new Point(class364.anInt4511, class364.anInt4519), class383.method4190());
+                    Class240.aSignLink2946.method3645(class383.method4196(), class383.method4195(), Node_Sub38_Sub20.aCanvas10309, new Point(class364.anInt4511, class364.anInt4519), class383.method4190());
                     Node_Sub38_Sub23.anInt10346 = i_0_;
                 }
             }
@@ -35,7 +35,7 @@ public class Class60 {
                 method594(71, 117);
             }
             if (i_0_ == -1 && Node_Sub38_Sub23.anInt10346 != -1) {
-                Class240.aSignLink2946.method3645(-1, (byte) -18, null, Node_Sub38_Sub20.aCanvas10309, new Point(), -1);
+                Class240.aSignLink2946.method3645(-1, null, Node_Sub38_Sub20.aCanvas10309, new Point(), -1);
                 Node_Sub38_Sub23.anInt10346 = -1;
             }
         }

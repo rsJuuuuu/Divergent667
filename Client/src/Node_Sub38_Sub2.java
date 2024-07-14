@@ -82,13 +82,10 @@ public class Node_Sub38_Sub2 extends Node_Sub38 {
         anIntArray10096 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10093++;
         if (i == 0) {
             aBoolean7463 = buffer.readUnsignedByte() == 1;
-        }
-        if (bool) {
-            anIntArray10096 = null;
         }
     }
 

@@ -55,8 +55,6 @@ public class CacheNode_Sub8 extends CacheNode {
 
     protected short[][] aShortArrayArray9491;
     static int anInt9493 = -1;
-    static int anInt9492 = -1;
-    static int anInt9494 = -1;
     protected double aDouble9495;
 
 }

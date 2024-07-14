@@ -15,7 +15,7 @@ public class Class129 {
 
     static Class357 method1553(int i, int i_0_, Index class302) {
         anInt1667++;
-        byte[] bs = class302.method3518((byte) 118, i_0_);
+        byte[] bs = class302.method3518(i_0_);
         if (bs == null) {
             return null;
         }
@@ -67,7 +67,7 @@ public class Class129 {
         throw new IllegalStateException();
     }
 
-    Class129(String string, int i) {
+    Class129(int i) {
         anInt1662 = i;
     }
 

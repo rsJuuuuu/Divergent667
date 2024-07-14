@@ -23,26 +23,22 @@ public class Class144_Sub1 extends Class144 {
         anInt6801 = i_2_;
     }
 
-    final void method1629(int i, int i_6_, int i_7_) {
+    final void method1629(int i, int i_7_) {
         anInt6803++;
         int i_8_ = i_7_ * anInt6807 >> 12;
         int i_9_ = anInt6810 * i_7_ >> 12;
-        if (i_6_ == -12850) {
-            int i_10_ = i * anInt6805 >> 12;
-            int i_11_ = anInt6801 * i >> 12;
-            Class97.method1080(i_11_, anInt1787, anInt1788, i_9_, i_10_, i_8_);
-        }
+        int i_10_ = i * anInt6805 >> 12;
+        int i_11_ = anInt6801 * i >> 12;
+        Class97.method1080(i_11_, anInt1787, anInt1788, i_9_, i_10_, i_8_);
     }
 
-    final void method1630(int i, int i_12_, int i_13_) {
+    final void method1630(int i, int i_13_) {
         anInt6809++;
-        if (i_12_ == -1) {
-            int i_14_ = anInt6807 * i_13_ >> 12;
-            int i_15_ = i_13_ * anInt6810 >> 12;
-            int i_16_ = i * anInt6805 >> 12;
-            int i_17_ = i * anInt6801 >> 12;
-            Node.method2162(anInt1785, i_15_, anInt1787, i_12_ + 32022, i_16_, i_17_, i_14_, anInt1788);
-        }
+        int i_14_ = anInt6807 * i_13_ >> 12;
+        int i_15_ = i_13_ * anInt6810 >> 12;
+        int i_16_ = i * anInt6805 >> 12;
+        int i_17_ = i * anInt6801 >> 12;
+        Node.method2162(anInt1785, i_15_, anInt1787, i_16_, i_17_, i_14_, anInt1788);
     }
 
     public static void method1632() {

@@ -17,7 +17,7 @@ abstract class GraphicsBuffer extends Node {
 
     static boolean method2596(int i_1_, int i_2_) {
         anInt7143++;
-        return Class144_Sub2.method1634(i_2_, i_1_) & Node_Sub9_Sub4.method2522(0, i_1_, i_2_);
+        return Class144_Sub2.method1634(i_1_) & Node_Sub9_Sub4.method2522(0, i_1_, i_2_);
     }
 
     abstract void method2597(int i, int i_3_, int i_4_, Graphics graphics, int i_5_, int i_6_, int i_7_);

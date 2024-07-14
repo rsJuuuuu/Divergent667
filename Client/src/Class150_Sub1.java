@@ -29,7 +29,7 @@ public class Class150_Sub1 extends Class150 {
         aClass151_8949 = null;
     }
 
-    static void method1656(int i, int i_0_, int i_2_, int i_3_) {
+    static void method1656() {
         anInt8948++;
         int i_4_ = Class93_Sub2.anInt6067;
         int i_5_ = Class163.anInt2014;
@@ -40,12 +40,12 @@ public class Class150_Sub1 extends Class150 {
         if (Node_Sub38_Sub28.anInt10403 == 1) {
             GLSprite glsprite = Node_Sub15_Sub7.aGLSpriteArray9828[Node_Sub37.anInt7431 / 100];
             glsprite.setPosition(i_4_ - 8, -8 + i_5_);
-            Class362.method4053(-8 + i_5_, i_5_ - 8 + glsprite.method1186(), i_4_ - 8, (byte) -79, glsprite.method1197() - 8 + i_4_);
+            Class362.method4053(-8 + i_5_, i_5_ - 8 + glsprite.method1186(), i_4_ - 8, glsprite.method1197() - 8 + i_4_);
         }
         if (Node_Sub38_Sub28.anInt10403 == 2) {
             GLSprite glsprite = Node_Sub15_Sub7.aGLSpriteArray9828[Node_Sub37.anInt7431 / 100 + 4];
             glsprite.setPosition(i_4_ - 8, -8 + i_5_);
-            Class362.method4053(i_5_ - 8, glsprite.method1186() + (-8 + i_5_), i_4_ - 8, (byte) 56, glsprite.method1197() + i_4_ - 8);
+            Class362.method4053(i_5_ - 8, glsprite.method1186() + (-8 + i_5_), i_4_ - 8, glsprite.method1197() + i_4_ - 8);
         }
         Mobile_Sub4.method911();
     }
@@ -54,7 +54,7 @@ public class Class150_Sub1 extends Class150 {
         Class175.aClass291_2100.method3453();
         anInt8954++;
         Class106.aClass93_1356.method1045();
-        Class158.aClient1983.method93(-94);
+        Class158.aClient1983.method93();
         Node_Sub38_Sub20.aCanvas10309.setBackground(Color.black);
         Node_Sub38_Sub23.anInt10346 = -1;
         Class175.aClass291_2100 = Class361.method4047(Node_Sub38_Sub20.aCanvas10309);
@@ -96,7 +96,7 @@ public class Class150_Sub1 extends Class150 {
         return true;
     }
 
-    Class150_Sub1(Class379 class379, Class77 class77, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_) {
+    Class150_Sub1(Class379 class379, Class77 class77, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_19_, int i_20_) {
         super(class379, class77, i, i_12_, i_13_, i_14_, i_15_, i_16_, i_17_);
         anInt8950 = i_20_;
         anInt8951 = i_19_;

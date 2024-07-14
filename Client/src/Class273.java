@@ -41,7 +41,7 @@ public class Class273 {
 
         EntityNode entitynode;
         synchronized (aClass103_3486) {
-            entitynode = aClass103_3486.method1113((byte) 107);
+            entitynode = aClass103_3486.method1113();
             Objects.requireNonNull(entitynode).method803();
             anInt3495--;
         }

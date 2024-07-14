@@ -101,9 +101,9 @@ public class Class61 {
 
     final void method601(Object object, int i, long l) {
         anInt892++;
-        method604(l, object, 1, 79);
+        method604(l, object, 1);
         if (i != 25566) {
-            method604(-34L, null, 104, 85);
+            method604(-34L, null, 104);
         }
     }
 
@@ -139,7 +139,7 @@ public class Class61 {
         return null;
     }
 
-    final void method604(long l, Object object, int i, int i_5_) {
+    final void method604(long l, Object object, int i) {
         anInt891++;
         if (i > anInt902) {
             throw new IllegalStateException("s>cs");
@@ -157,11 +157,9 @@ public class Class61 {
     }
 
     final void method605(long l) {
-        if (-13068 == -13068) {
-            anInt887++;
-            CacheNode_Sub20 cachenode_sub20 = (CacheNode_Sub20) aHashTable901.method1518(3512, l);
-            method600(cachenode_sub20);
-        }
+        anInt887++;
+        CacheNode_Sub20 cachenode_sub20 = (CacheNode_Sub20) aHashTable901.method1518(3512, l);
+        method600(cachenode_sub20);
     }
 
     public static void method606() {

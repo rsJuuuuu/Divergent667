@@ -104,7 +104,7 @@ public class Model {
         }
     }
 
-    final void method2082(int i, int i_12_, int i_13_, int i_14_) {
+    final void method2082(int i, int i_12_, int i_14_) {
         anInt2571++;
         for (int i_16_ = 0; anInt2599 > i_16_; i_16_++) {
             anIntArray2616[i_16_] += i;
@@ -452,13 +452,13 @@ public class Model {
                     if (anInt2614 < 14) {
                         anIntArray2588[i_87_] = buffer_26_.readUnsignedShort();
                     } else {
-                        anIntArray2588[i_87_] = buffer_26_.read24BitInteger();
+                        anIntArray2588[i_87_] = buffer_26_.readInt24();
                     }
                     anIntArray2593[i_87_] = buffer_26_.readUnsignedShort();
                 } else {
-                    anIntArray2603[i_87_] = buffer_26_.read24BitInteger();
-                    anIntArray2588[i_87_] = buffer_26_.read24BitInteger();
-                    anIntArray2593[i_87_] = buffer_26_.read24BitInteger();
+                    anIntArray2603[i_87_] = buffer_26_.readInt24();
+                    anIntArray2588[i_87_] = buffer_26_.readInt24();
+                    anIntArray2593[i_87_] = buffer_26_.readInt24();
                 }
                 aByteArray2609[i_87_] = buffer_27_.readByte();
                 aByteArray2585[i_87_] = buffer_28_.readByte();
@@ -471,15 +471,15 @@ public class Model {
                 if (anInt2614 < 15) {
                     anIntArray2603[i_87_] = buffer_26_.readUnsignedShort();
                     if (anInt2614 == 14) {
-                        anIntArray2588[i_87_] = buffer_26_.read24BitInteger();
+                        anIntArray2588[i_87_] = buffer_26_.readInt24();
                     } else {
                         anIntArray2588[i_87_] = buffer_26_.readUnsignedShort();
                     }
                     anIntArray2593[i_87_] = buffer_26_.readUnsignedShort();
                 } else {
-                    anIntArray2603[i_87_] = buffer_26_.read24BitInteger();
-                    anIntArray2588[i_87_] = buffer_26_.read24BitInteger();
-                    anIntArray2593[i_87_] = buffer_26_.read24BitInteger();
+                    anIntArray2603[i_87_] = buffer_26_.readInt24();
+                    anIntArray2588[i_87_] = buffer_26_.readInt24();
+                    anIntArray2593[i_87_] = buffer_26_.readInt24();
                 }
                 aByteArray2609[i_87_] = buffer_27_.readByte();
                 aByteArray2585[i_87_] = buffer_28_.readByte();
@@ -496,13 +496,13 @@ public class Model {
                     if (anInt2614 < 14) {
                         anIntArray2588[i_87_] = buffer_26_.readUnsignedShort();
                     } else {
-                        anIntArray2588[i_87_] = buffer_26_.read24BitInteger();
+                        anIntArray2588[i_87_] = buffer_26_.readInt24();
                     }
                     anIntArray2593[i_87_] = buffer_26_.readUnsignedShort();
                 } else {
-                    anIntArray2603[i_87_] = buffer_26_.read24BitInteger();
-                    anIntArray2588[i_87_] = buffer_26_.read24BitInteger();
-                    anIntArray2593[i_87_] = buffer_26_.read24BitInteger();
+                    anIntArray2603[i_87_] = buffer_26_.readInt24();
+                    anIntArray2588[i_87_] = buffer_26_.readInt24();
+                    anIntArray2593[i_87_] = buffer_26_.readInt24();
                 }
                 aByteArray2609[i_87_] = buffer_27_.readByte();
                 aByteArray2585[i_87_] = buffer_28_.readByte();
@@ -603,7 +603,7 @@ public class Model {
         return (byte) anInt2611++;
     }
 
-    final void method2087(short s, short s_125_, int i) {
+    final void method2087(short s, short s_125_) {
         anInt2596++;
         if (aShortArray2587 != null) {
             int i_126_ = 0;
@@ -642,7 +642,7 @@ public class Model {
         return is_130_;
     }
 
-    final void method2089(short s, short s_134_, int i) {
+    final void method2089(short s, short s_134_) {
         anInt2618++;
         int i_135_ = 0;
         for (/**/; anInt2572 > i_135_; i_135_++) {

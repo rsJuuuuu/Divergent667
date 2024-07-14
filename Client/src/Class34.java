@@ -142,7 +142,7 @@ abstract class Class34 {
             if (actor.aClass165Array10886[i].graphicsId != -1) {
                 Animator animator_24_ = actor.aClass165Array10886[i].anAnimator2026;
                 if (animator_24_.method242()) {
-                    Class195 class195 = Class16.aClass101_228.method1090(-121, actor.aClass165Array10886[i].graphicsId);
+                    Class195 class195 = Class16.aClass101_228.method1090(actor.aClass165Array10886[i].graphicsId);
                     Class48 class48 = animator_24_.method243();
                     if (class195.aBoolean2402) {
                         if (class48.anInt698 == 3) {

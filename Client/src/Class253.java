@@ -24,7 +24,7 @@ public class Class253 {
         if (i_0_ >= -114) {
             aLongArray3193 = null;
         }
-        return Class219.method2094() & Class125.method1529(i_1_, i);
+        return Class219.method2094() & Class125.method1529(i);
     }
 
     final void method3104(int i, int i_2_, String string, String string_3_, int i_4_, String string_5_, String string_6_, String string_7_) {

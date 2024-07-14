@@ -93,7 +93,7 @@ public class Class169_Sub1 extends Class169 {
         aGLToolkit4947.method1444(-2, this);
         if (bool) {
             for (int i_15_ = 0; i_15_ < 6; i_15_++)
-                Class258.method3124(i_13_, i_15_ + 34069, is[i_15_], 32993, anInt4950, i_13_, 1, aGLToolkit4947.anInt6740);
+                Class258.method3124(i_13_, i_15_ + 34069, is[i_15_], anInt4950, i_13_, aGLToolkit4947.anInt6740);
         } else {
             for (int i_14_ = 0; i_14_ < 6; i_14_++)
                 OpenGL.glTexImage2Di(34069 + i_14_, 0, anInt4950, i_13_, i_13_, 0, 32993, aGLToolkit4947.anInt6740, is[i_14_], 0);

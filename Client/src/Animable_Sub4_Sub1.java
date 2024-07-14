@@ -45,7 +45,7 @@ public class Animable_Sub4_Sub1 extends Animable_Sub4 implements Interface19 {
         return aByte10698;
     }
 
-    static void method927(int i, int i_0_, int i_1_, Node_Sub13 node_sub13, int i_2_) {
+    static void method927(int i, int i_0_, Node_Sub13 node_sub13, int i_2_) {
         anInt10681++;
         node_sub13.aPacket7113.writeIntV2(i);
         node_sub13.aPacket7113.writeShortLE128(i_0_);
@@ -64,7 +64,7 @@ public class Animable_Sub4_Sub1 extends Animable_Sub4 implements Interface19 {
         return class243.aDrawableModel3064;
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         anInt10692++;
         if (aDrawableModel10696 != null) {
             aDrawableModel10696.method617();
@@ -129,7 +129,7 @@ public class Animable_Sub4_Sub1 extends Animable_Sub4 implements Interface19 {
         }
         anInt10685++;
         if (aClass171_10701 == null) {
-            aClass171_10701 = Class167.method1752(0, anInt5937, anInt5934, method928(0, graphicstoolkit), anInt5940);
+            aClass171_10701 = Class167.method1752(anInt5937, anInt5934, method928(0, graphicstoolkit), anInt5940);
         }
         return aClass171_10701;
     }
@@ -217,12 +217,12 @@ public class Animable_Sub4_Sub1 extends Animable_Sub4 implements Interface19 {
         }
     }
 
-    static boolean method931(int i, int i_18_) {
+    static boolean method931(int i) {
         anInt10674++;
         return (0x800 & i) != 0;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10697++;
         if (aDrawableModel10696 == null) {
             return true;
@@ -254,14 +254,14 @@ public class Animable_Sub4_Sub1 extends Animable_Sub4 implements Interface19 {
         return aByte10686;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10682++;
         if (aDrawableModel10696 == null) {
             return null;
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934 + aShort9145, anInt5937, aShort9147 + anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10702, (byte) 111, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10702, 1);
         if (Node_Sub15_Sub10.aBoolean9850) {
             aDrawableModel10696.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
         } else {

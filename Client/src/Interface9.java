@@ -9,5 +9,5 @@ interface Interface9 {
 
     long method23(int i);
 
-    int method24(int i);
+    int method24();
 }

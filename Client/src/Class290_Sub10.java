@@ -26,8 +26,8 @@ public class Class290_Sub10 extends Class290 {
             anAbstractToolkit3654.method1362(0);
             anAbstractToolkit3654.method1312(aClass5_8156.anInterface13_Impl3_129);
             aBoolean8155 = true;
-            method3413(-124);
-            method3421(false);
+            method3413();
+            method3421();
             method3412();
             method3416();
             idirect3ddevice.b(1, -anAbstractToolkit3654.aFloatArray6292[0], -anAbstractToolkit3654.aFloatArray6292[1], -anAbstractToolkit3654.aFloatArray6292[2], 0.0F);
@@ -35,16 +35,16 @@ public class Class290_Sub10 extends Class290 {
             idirect3ddevice.b(3, 96.0F + Math.abs(anAbstractToolkit3654.aFloatArray6292[1]) * 928.0F, 0.0F, 0.0F, 0.0F);
         }
         if (i > -84) {
-            method3413(29);
+            method3413();
         }
     }
 
-    final void method3413(int i) {
+    final void method3413() {
         if (aBoolean8155) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8158.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = aD3DToolkit8158.method1342();
             Class336_Sub1 class336_sub1_0_ = aD3DToolkit8158.method1378();
-            idirect3ddevice.a(0, class336_sub1_0_.method3881((byte) -104, aFloatArray8159));
+            idirect3ddevice.a(0, class336_sub1_0_.method3881(aFloatArray8159));
             idirect3ddevice.a(4, class336_sub1.method3885(aFloatArray8159));
         }
 
@@ -69,14 +69,14 @@ public class Class290_Sub10 extends Class290 {
         if (aBoolean8155) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8158.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = aD3DToolkit8158.method1378();
-            idirect3ddevice.a(0, class336_sub1.method3881((byte) -117, aFloatArray8159));
+            idirect3ddevice.a(0, class336_sub1.method3881(aFloatArray8159));
         }
         if (i < 10) {
             aBoolean8153 = false;
         }
     }
 
-    final void method3417(boolean bool, boolean bool_2_) {
+    final void method3417(boolean bool_2_) {
         if (bool_2_) {
             anIDirect3DVertexShader8157 = null;
         }
@@ -95,7 +95,7 @@ public class Class290_Sub10 extends Class290 {
             idirect3ddevice.b(5, f_6_, 0.0F, 0.0F, 0.0F);
         }
         if (!bool) {
-            method3413(-43);
+            method3413();
         }
     }
 
@@ -142,14 +142,11 @@ public class Class290_Sub10 extends Class290 {
         return aBoolean8153;
     }
 
-    final void method3421(boolean bool) {
+    final void method3421() {
         if (aBoolean8155) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8158.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1290();
             idirect3ddevice.SetVertexShaderConstantF(12, class336_sub1.method3891(aFloatArray8159), 2);
-        }
-        if (bool) {
-            aD3DToolkit8158 = null;
         }
     }
 }

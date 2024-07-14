@@ -25,7 +25,7 @@ public class Class336_Sub3 extends Class336 {
     static int anInt8610;
     static int anInt8611;
     static int anInt8612;
-    static Class170 aClass170_8613 = new Class170(3, 2);
+    static Class170 aClass170_8613 = new Class170(2);
     static int anInt8614;
     protected float aFloat8615;
     static int anInt8616;
@@ -367,17 +367,17 @@ public class Class336_Sub3 extends Class336 {
                                     Animable_Sub2 animable_sub2 = class261.anAnimable_Sub2_3314;
                                     Animable_Sub2 animable_sub2_69_ = class261.anAnimable_Sub2_3308;
                                     if (animable_sub2 != null && animable_sub2.method821(0)) {
-                                        animable.method816(i_68_, bool, CacheNode_Sub18.aGraphicsToolkit9607, (i_67_ - i_58_) * Class179.anInt2129 + (1 - i_60_) * Class135.anInt1692, (byte) 110, (i_66_ - i_57_) * Class179.anInt2129 + (1 - i_59_) * Class135.anInt1692, animable_sub2);
+                                        animable.method816(i_68_, bool, (i_67_ - i_58_) * Class179.anInt2129 + (1 - i_60_) * Class135.anInt1692, (byte) 110, (i_66_ - i_57_) * Class179.anInt2129 + (1 - i_59_) * Class135.anInt1692, animable_sub2);
                                     }
                                     if (animable_sub2_69_ != null && animable_sub2_69_.method821(0)) {
-                                        animable.method816(i_68_, bool, CacheNode_Sub18.aGraphicsToolkit9607, (i_67_ - i_58_) * Class179.anInt2129 + (1 - i_60_) * Class135.anInt1692, (byte) 115, (i_66_ - i_57_) * Class179.anInt2129 + (1 - i_59_) * Class135.anInt1692, animable_sub2_69_);
+                                        animable.method816(i_68_, bool, (i_67_ - i_58_) * Class179.anInt2129 + (1 - i_60_) * Class135.anInt1692, (byte) 115, (i_66_ - i_57_) * Class179.anInt2129 + (1 - i_59_) * Class135.anInt1692, animable_sub2_69_);
                                     }
                                     for (Class256 class256 = class261.aClass256_3312; class256 != null; class256 = class256.aClass256_3238) {
                                         Mobile mobile = class256.aMobile3239;
                                         if (mobile != null && mobile.method821(0) && (i_66_ == mobile.aShort9119 || i_66_ == i_61_) && (i_67_ == mobile.aShort9120 || i_67_ == i_63_)) {
                                             int i_70_ = mobile.aShort9130 - mobile.aShort9119 + 1;
                                             int i_71_ = mobile.aShort9124 - mobile.aShort9120 + 1;
-                                            animable.method816(i_68_, bool, CacheNode_Sub18.aGraphicsToolkit9607, (mobile.aShort9120 - i_58_) * Class179.anInt2129 + (i_71_ - i_60_) * Class135.anInt1692, (byte) 114, (mobile.aShort9119 - i_57_) * Class179.anInt2129 + (i_70_ - i_59_) * Class135.anInt1692, mobile);
+                                            animable.method816(i_68_, bool, (mobile.aShort9120 - i_58_) * Class179.anInt2129 + (i_71_ - i_60_) * Class135.anInt1692, (byte) 114, (mobile.aShort9119 - i_57_) * Class179.anInt2129 + (i_70_ - i_59_) * Class135.anInt1692, mobile);
                                         }
                                     }
                                 }

@@ -21,7 +21,7 @@ public class Class320_Sub4 extends Class320 {
         anInt8236++;
     }
 
-    static boolean method3693(int i, int i_0_, int i_1_) {
+    static boolean method3693(int i, int i_0_) {
         if (i < 20) {
             gameSceneBaseY = 87;
         }
@@ -64,7 +64,7 @@ public class Class320_Sub4 extends Class320 {
 
     final int method3675(int i, byte b) {
         if (b != 54) {
-            method3693(-57, 54, 121);
+            method3693(-57, 54);
         }
         anInt8239++;
         return 1;

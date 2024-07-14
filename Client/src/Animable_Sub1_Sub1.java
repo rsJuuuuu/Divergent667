@@ -43,7 +43,7 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
     static Index aClass302_10618;
     /*synthetic*/ static Class<?> aClass10619;
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10606++;
         if (aDrawableModel10610 == null) {
             return true;
@@ -51,14 +51,14 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
         return !aDrawableModel10610.r();
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10585++;
         if (aDrawableModel10610 == null) {
             return null;
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10598, (byte) 89, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10598, 1);
         if (Node_Sub15_Sub10.aBoolean9850) {
             aDrawableModel10610.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
         } else {
@@ -78,7 +78,7 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
         return 0;
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_1_, byte b, int i_2_, Animable animable) {
+    final void method816(int i, boolean bool, int i_1_, byte b, int i_2_, Animable animable) {
         anInt10605++;
         if (b <= 101) {
             method828(-126, -84, null, false);
@@ -179,14 +179,14 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
     final boolean method821(int i) {
         anInt10586++;
         if (i != 0) {
-            method69(-43);
+            method69();
         }
         return aBoolean10588;
     }
 
     final Class171 method809(GraphicsToolkit graphicstoolkit, int i) {
         if (aClass171_10615 == null) {
-            aClass171_10615 = Class167.method1752(0, anInt5937, anInt5934, method831(102, graphicstoolkit, 0), anInt5940);
+            aClass171_10615 = Class167.method1752(anInt5937, anInt5934, method831(102, graphicstoolkit, 0), anInt5940);
         }
         anInt10592++;
         if (i >= -93) {
@@ -197,7 +197,7 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
 
     public final int method68(int i) {
         if (i != 23796) {
-            method816(90, false, null, -97, (byte) -34, 87, null);
+            method816(90, false, -97, (byte) -34, 87, null);
         }
         anInt10611++;
         return aByte10608;
@@ -239,7 +239,7 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
         return aShort10607;
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         anInt10593++;
         if (aDrawableModel10610 != null) {
             aDrawableModel10610.method617();
@@ -283,7 +283,7 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
             if (Node_Sub15_Sub2.aBoolean9780) {
                 int i_26_ = -5 + (i_18_ + i_16_);
                 int i_27_ = i_17_ + (i_15_ - 8);
-                StandardSprite.aClass52_8945.method543((byte) 123, i_26_, "Fps:" + Node_Sub9_Sub4.anInt9732, 16776960, -1, i_27_);
+                StandardSprite.aClass52_8945.method543(i_26_, "Fps:" + Node_Sub9_Sub4.anInt9732, 16776960, -1, i_27_);
                 i_27_ -= 15;
                 Runtime runtime = Runtime.getRuntime();
                 int i_28_ = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L);
@@ -291,7 +291,7 @@ public class Animable_Sub1_Sub1 extends Animable_Sub1 implements Interface19 {
                 if (i_28_ > 65536) {
                     i_29_ = 16711680;
                 }
-                StandardSprite.aClass52_8945.method543((byte) 108, i_26_, "Mem:" + i_28_ + "k", i_29_, -1, i_27_);
+                StandardSprite.aClass52_8945.method543(i_26_, "Mem:" + i_28_ + "k", i_29_, -1, i_27_);
             }
         }
     }

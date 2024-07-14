@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 public class Class262_Sub17 extends Class262 {
     private final int anInt7832;
-    static boolean aBoolean7833 = false;
     static int anInt7834;
     private final int anInt7835;
     private final int anInt7836;

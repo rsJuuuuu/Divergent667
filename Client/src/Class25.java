@@ -38,9 +38,9 @@ public class Class25 {
             if (calcs != 0) {
                 i_7_ = (0xf & i_7_ << calcs) + (i_7_ >> -calcs + 4);
             }
-            Class78.method778(0, sceneY, sizeY, true, sceneX, i_7_, 0, 127, sizeX);
+            Class78.method778(0, sceneY, sizeY, true, sceneX, i_7_, 0, sizeX);
         }else{
-            Class78.method778(calcs, sceneY, 0, true, sceneX, 0, routeType, 48, 0);
+            Class78.method778(calcs, sceneY, 0, true, sceneX, 0, routeType, 0);
         }
     }
 

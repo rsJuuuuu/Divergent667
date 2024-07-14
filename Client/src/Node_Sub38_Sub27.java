@@ -28,7 +28,7 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
         Class94.method1065();
         anInt10379++;
         if (i_0_ == 0) {
-            Class93.aGraphicsToolkit1241 = Class262_Sub9.method3171(Class262_Sub2.index31, (byte) 55, TemporaryItemDefinition.aD565, 0, Node_Sub38_Sub20.aCanvas10309, 2 * Class213.aNode_Sub27_2512.aClass320_Sub13_7283.method3734());
+            Class93.aGraphicsToolkit1241 = Class262_Sub9.method3171(Class262_Sub2.index31, TemporaryItemDefinition.aD565, 0, Node_Sub38_Sub20.aCanvas10309, 2 * Class213.aNode_Sub27_2512.aClass320_Sub13_7283.method3734());
             if (string != null) {
                 Class93.aGraphicsToolkit1241.GA(0);
                 Class357 class357 = Class44.method461(Class285.anInt3600, AnimableAnimator_Sub1.aClass302_9091);
@@ -39,7 +39,7 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
         } else {
             GraphicsToolkit graphicstoolkit = null;
             if (string != null) {
-                graphicstoolkit = Class262_Sub9.method3171(Class262_Sub2.index31, (byte) -82, TemporaryItemDefinition.aD565, 0, Node_Sub38_Sub20.aCanvas10309, 0);
+                graphicstoolkit = Class262_Sub9.method3171(Class262_Sub2.index31, TemporaryItemDefinition.aD565, 0, Node_Sub38_Sub20.aCanvas10309, 0);
                 graphicstoolkit.GA(0);
                 Class357 class357 = Class44.method461(Class285.anInt3600, AnimableAnimator_Sub1.aClass302_9091);
                 Class52 class52 = graphicstoolkit.a(class357, Class383.method4187(Node_Sub38_Sub39.aClass302_10500, Class285.anInt3600), true);
@@ -47,7 +47,7 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
                 Class169_Sub3.method1779(graphicstoolkit, string, true, class357, class52);
             }
             try {
-                Class93.aGraphicsToolkit1241 = Class262_Sub9.method3171(Class262_Sub2.index31, (byte) -113, TemporaryItemDefinition.aD565, i_0_, Node_Sub38_Sub20.aCanvas10309, 2 * Class213.aNode_Sub27_2512.aClass320_Sub13_7283.method3734());
+                Class93.aGraphicsToolkit1241 = Class262_Sub9.method3171(Class262_Sub2.index31, TemporaryItemDefinition.aD565, i_0_, Node_Sub38_Sub20.aCanvas10309, 2 * Class213.aNode_Sub27_2512.aClass320_Sub13_7283.method3734());
                 if (string != null) {
                     graphicstoolkit.GA(0);
                     Class357 class357 = Class44.method461(Class285.anInt3600, AnimableAnimator_Sub1.aClass302_9091);
@@ -92,7 +92,7 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
         Class213.aNode_Sub27_2512.method2690(32, i_0_, Class213.aNode_Sub27_2512.aClass320_Sub29_7270);
         Class59.method591();
         Class93.aGraphicsToolkit1241.b(10000);
-        Class93.aGraphicsToolkit1241.X(32);
+        Class93.aGraphicsToolkit1241.X();
         Class290_Sub6.aClass336_8114 = Class93.aGraphicsToolkit1241.y();
         Node_Sub5.aClass336_7032 = Class93.aGraphicsToolkit1241.y();
         Class116.method1163();
@@ -104,7 +104,7 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
             anIntArray10372 = null;
         }
         Class325.method3814(Class93.aGraphicsToolkit1241, Class377_Sub1.GAME_SCENE_HEIGHT >> 3, Node_Sub54.GAME_SCENE_WDITH >> 3);
-        Class120.method1228(-127);
+        Class120.method1228();
         Class152.aBoolean1942 = true;
         Node_Sub52.aClass244Array7654 = null;
         Class269.aBoolean3472 = false;
@@ -222,19 +222,17 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
     final void method2785() {
         anInt10375++;
         aByteArray10371 = Class169_Sub3.method1778(anInt10389);
-        method2884(7 - 8);
+        method2884();
         int i_51_ = -1 + anInt10382;
-        if (7 == 7) {
-            for (/**/; i_51_ >= 1; i_51_--) {
-                short s = aShortArray10386[i_51_];
-                if (s > 8) {
-                    break;
-                }
-                if (s < -8) {
-                    break;
-                }
-                anInt10382--;
+        for (/**/; i_51_ >= 1; i_51_--) {
+            short s = aShortArray10386[i_51_];
+            if (s > 8) {
+                break;
             }
+            if (s < -8) {
+                break;
+            }
+            anInt10382--;
         }
     }
 
@@ -330,11 +328,8 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
         return class38;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10381++;
-        if (bool) {
-            method2775(17, -97);
-        }
         int i_64_ = i;
         while_234_:
         do {
@@ -441,8 +436,8 @@ public class Node_Sub38_Sub27 extends Node_Sub38 {
         anInt10389 = 0;
     }
 
-    private void method2884(int i) {
-        if (i > (~anInt10378)) {
+    private void method2884() {
+        if (-1 > (~anInt10378)) {
             aShortArray10374 = new short[anInt10382];
             aShortArray10386 = new short[anInt10382];
             for (int i_81_ = 0; i_81_ < anInt10382; i_81_++) {

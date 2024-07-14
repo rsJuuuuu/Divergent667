@@ -82,7 +82,7 @@ public class Animable_Sub2_Sub1 extends Animable_Sub2 implements Interface19 {
         return i != 0;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10641++;
         DrawableModel drawablemodel = aClass310_10632.method3597(graphicstoolkit, false, true, true, 2048);
         if (drawablemodel == null) {
@@ -90,7 +90,7 @@ public class Animable_Sub2_Sub1 extends Animable_Sub2 implements Interface19 {
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10635, (byte) -57, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10635, 1);
         int i_8_ = anInt5934 >> 9;
         int i_9_ = anInt5940 >> 9;
         aClass310_10632.method3600(i_9_, drawablemodel, true, -9827, graphicstoolkit, i_8_, i_8_, i_9_, class336);
@@ -109,7 +109,7 @@ public class Animable_Sub2_Sub1 extends Animable_Sub2 implements Interface19 {
         }
         aBoolean10642 = drawablemodel.F() || aClass310_10632.anEntityNode_Sub4_3931 != null;
         if (aClass171_10647 == null) {
-            aClass171_10647 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+            aClass171_10647 = Class167.method1752(anInt5937, anInt5934, drawablemodel, anInt5940);
         } else {
             Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10647, -79);
         }
@@ -124,7 +124,7 @@ public class Animable_Sub2_Sub1 extends Animable_Sub2 implements Interface19 {
         return aBoolean10642;
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_10_, byte b, int i_11_, Animable animable) {
+    final void method816(int i, boolean bool, int i_10_, byte b, int i_11_, Animable animable) {
         anInt10626++;
         if (b >= 101) {
             throw new IllegalStateException();
@@ -167,15 +167,15 @@ public class Animable_Sub2_Sub1 extends Animable_Sub2 implements Interface19 {
     public final void method70(GraphicsToolkit graphicstoolkit, int i) {
         anInt10624++;
         if (i < -42) {
-            aClass310_10632.method3588(graphicstoolkit);
+            aClass310_10632.method3588();
         }
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         anInt10623++;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10622++;
         return false;
     }

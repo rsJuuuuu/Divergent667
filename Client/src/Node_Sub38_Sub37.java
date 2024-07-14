@@ -25,11 +25,11 @@ public class Node_Sub38_Sub37 extends Node_Sub38 {
     static int anInt10481;
     private int anInt10482 = 0;
 
-    private void method2905(int i) {
+    private void method2905() {
         anInt10478++;
         int[] is = anIntArrayArray10476[0];
         int[] is_0_ = anIntArrayArray10476[1];
-        int[] is_1_ = anIntArrayArray10476[i + anIntArrayArray10476.length];
+        int[] is_1_ = anIntArrayArray10476[-2 + anIntArrayArray10476.length];
         int[] is_2_ = anIntArrayArray10476[-1 + anIntArrayArray10476.length];
         anIntArray10479 = new int[]{-is_0_[0] - (-is[0] - is[0]), -is_0_[1] + is[1] + is[1]};
         anIntArray10477 = new int[]{-is_2_[0] - (-is_1_[0] - is_1_[0]), is_1_[1] + (-is_2_[1] + is_1_[1])};
@@ -39,17 +39,15 @@ public class Node_Sub38_Sub37 extends Node_Sub38 {
         if (anIntArrayArray10476 == null) {
             anIntArrayArray10476 = new int[][]{new int[2], {4096, 4096}};
         }
-        if (7 == 7) {
-            anInt10472++;
-            if (anIntArrayArray10476.length < 2) {
-                throw new RuntimeException("Curve operation requires at least two markers");
-            }
-            if (anInt10482 == 2) {
-                method2905(7 ^ -7);
-            }
-            Node_Sub37.method2772((byte) 54);
-            method2909();
+        anInt10472++;
+        if (anIntArrayArray10476.length < 2) {
+            throw new RuntimeException("Curve operation requires at least two markers");
         }
+        if (anInt10482 == 2) {
+            method2905();
+        }
+        Node_Sub37.method2772((byte) 54);
+        method2909();
     }
 
     public static void method2906() {
@@ -106,11 +104,8 @@ public class Node_Sub38_Sub37 extends Node_Sub38 {
         super(1, true);
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10468++;
-        if (bool) {
-            aPlaneArray10466 = null;
-        }
         if (i == 0) {
             anInt10482 = buffer.readUnsignedByte();
             anIntArrayArray10476 = new int[buffer.readUnsignedByte()][2];

@@ -18,7 +18,7 @@ public class Class96 {
     static Applet anApplet1270;
     static int[] anIntArray1271 = new int[1];
     static Class61 aClass61_1272 = new Class61(10);
-    static Class170 aClass170_1273 = new Class170(4, 1);
+    static Class170 aClass170_1273 = new Class170(1);
 
     public static void method1070() {
         anIntArray1271 = null;

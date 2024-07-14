@@ -44,7 +44,7 @@ abstract class Class262_Sub15 extends Class262 {
         Class213.aNode_Sub27_2512.method2690(55, 0, Class213.aNode_Sub27_2512.aClass320_Sub18_7303);
         Class213.aNode_Sub27_2512.method2690(47, 4, Class213.aNode_Sub27_2512.aClass320_Sub15_7273);
         Class320_Sub12.method3728(0);
-        Class120.method1228(-106);
+        Class120.method1228();
         Class152.aBoolean1942 = true;
     }
 

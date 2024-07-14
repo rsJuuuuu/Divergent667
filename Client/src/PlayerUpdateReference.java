@@ -27,7 +27,7 @@ public class PlayerUpdateReference {
 
     static void method3808(boolean bool) {
         anInt4075++;
-        for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620(16776960)) {
+        for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620()) {
             if (node_sub47.aNode_Sub9_Sub2_7568 != null) {
                 Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
                 node_sub47.aNode_Sub9_Sub2_7568 = null;
@@ -39,7 +39,7 @@ public class PlayerUpdateReference {
             node_sub47.method2160((byte) 43);
         }
         if (bool) {
-            for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620(16776960)) {
+            for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620()) {
                 if (node_sub47.aNode_Sub9_Sub2_7568 != null) {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
                     node_sub47.aNode_Sub9_Sub2_7568 = null;

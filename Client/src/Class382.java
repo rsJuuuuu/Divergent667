@@ -51,7 +51,7 @@ public class Class382 implements Interface11 {
     public final void method33(int i) {
         anInt5242++;
         if (i != 404) {
-            method30(36);
+            method30();
         }
         OpenGL.glBindFramebufferEXT(36009, anInt5241);
         anInt5239 |= 0x2;
@@ -119,7 +119,7 @@ public class Class382 implements Interface11 {
         anInt5259 |= i_5_;
     }
 
-    static int method4179(Class289 class289, byte b, GraphicsToolkit graphicstoolkit) {
+    static int method4179(Class289 class289, GraphicsToolkit graphicstoolkit) {
         anInt5255++;
         if (class289.anInt3629 != -1) {
             return class289.anInt3629;
@@ -169,7 +169,7 @@ public class Class382 implements Interface11 {
         anInt5247++;
     }
 
-    final void method4183(int i, byte b) {
+    final void method4183(int i) {
         anInt5236++;
         if (anInt5234 == -1) {
             throw new RuntimeException();
@@ -214,14 +214,14 @@ public class Class382 implements Interface11 {
         OpenGL.glReadBuffer(Node_Sub38_Sub2.anIntArray10096[0]);
     }
 
-    public final void method30(int i) {
+    public final void method30() {
         anInt5245++;
         OpenGL.glBindFramebufferEXT(36160, anInt5241);
         anInt5239 |= 0x4;
         anInt5234 = method4177(36009);
     }
 
-    public final void method31(byte b) {
+    public final void method31() {
         anInt5240++;
         OpenGL.glBindFramebufferEXT(36008, anInt5241);
         anInt5239 |= 0x1;

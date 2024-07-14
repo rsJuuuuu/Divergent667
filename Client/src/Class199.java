@@ -73,10 +73,10 @@ public class Class199 {
         Node_Sub43.aClass312_7541.method3614();
         anInt2436++;
         if (!ClientScript.aBoolean9510) {
-            for (Node_Sub14 node_sub14 = (Node_Sub14) class312.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) class312.method3620(16776960)) {
+            for (Node_Sub14 node_sub14 = (Node_Sub14) class312.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) class312.method3620()) {
                 Class79 class79 = Class20.aClass215_322.method2069((byte) 122, node_sub14.anInt7128);
                 if (Class220.method2099(class79)) {
-                    boolean bool = Class339_Sub4.method3933(graphicstoolkit, 0, class79, -118, node_sub14, 0);
+                    boolean bool = Class339_Sub4.method3933(graphicstoolkit, 0, class79, node_sub14, 0);
                     if (bool) {
                         Class277_Sub1.method3360(node_sub14, graphicstoolkit, class79);
                     }

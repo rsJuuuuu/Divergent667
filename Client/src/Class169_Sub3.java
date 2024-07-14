@@ -90,7 +90,7 @@ public class Class169_Sub3 extends Class169 {
                 Class310.method3589(i_5_, i_9_, (byte) 109, i_6_, i_10_);
             } else {
                 int i_11_ = class357.method4030(null, string, 250);
-                int i_12_ = 13 * class357.method4028(string, null, (byte) 77, 250);
+                int i_12_ = 13 * class357.method4028(string, null, 250);
                 int i_13_ = 4;
                 int i_14_ = i_13_ + 6;
                 int i_15_ = i_13_ + 6;
@@ -138,10 +138,7 @@ public class Class169_Sub3 extends Class169 {
         return 100;
     }
 
-    static void method1782(int i) {
-        if (i < 126) {
-            method1782(5);
-        }
+    static void method1782() {
         for (int i_19_ = 0; Class290_Sub11.anInt8181 > i_19_; i_19_++) {
             int i_20_ = AnimableAnimator.method254(Class259.anInt3300 + i_19_, 16939, Class290_Sub11.anInt8181) * Class117.anInt1479;
             for (int i_21_ = 0; Class117.anInt1479 > i_21_; i_21_++) {

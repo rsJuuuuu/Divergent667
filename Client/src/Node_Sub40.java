@@ -14,7 +14,7 @@ public class Node_Sub40 extends Node {
     static String[][] aStringArrayArray7505 = {{"M1", "M2", "S1", "F"}, {"M1", "M2", "M3", "S1", "S2", "F"}, {"M1", "M2", "M3", "M4", "S1", "S2", "S3", "F"}};
     protected int anInt7506;
     static int anInt7507;
-    static Class170 aClass170_7508 = new Class170(0, 1);
+    static Class170 aClass170_7508 = new Class170(1);
     static int anInt7509;
     protected int[] anIntArray7510;
     protected int[] anIntArray7511;
@@ -78,7 +78,7 @@ public class Node_Sub40 extends Node {
                 } else {
                     i_19_ = Node_Sub15_Sub4.anInt9800 * 5;
                 }
-                for (Node_Sub14 node_sub14 = (Node_Sub14) Class20.aClass312_331.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) Class20.aClass312_331.method3620(16776960)) {
+                for (Node_Sub14 node_sub14 = (Node_Sub14) Class20.aClass312_331.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) Class20.aClass312_331.method3620()) {
                     Class79 class79 = Class20.aClass215_322.method2069((byte) 115, node_sub14.anInt7128);
                     if (Class220.method2099(class79)) {
                         if (node_sub14.anInt7128 == Class253.anInt3201) {

@@ -39,7 +39,7 @@ public class Class288 {
         }
     }
 
-    Class288(GLXToolkit glxtoolkit, long l, Class237[] class237s) {
+    Class288(GLXToolkit glxtoolkit, long l) {
         aLong3626 = l;
         aGLXToolkit3627 = glxtoolkit;
     }

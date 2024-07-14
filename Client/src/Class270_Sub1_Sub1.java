@@ -56,7 +56,7 @@ public class Class270_Sub1_Sub1 extends Class270_Sub1 {
         int i_7_ = 2147483647;
         int i_8_ = i_5_ - Class20.anInt354;
         int i_9_ = i_3_ - Class20.anInt343;
-        for (Node_Sub14 node_sub14 = (Node_Sub14) Class20.aClass312_331.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) Class20.aClass312_331.method3620(16776960)) {
+        for (Node_Sub14 node_sub14 = (Node_Sub14) Class20.aClass312_331.method3613(); node_sub14 != null; node_sub14 = (Node_Sub14) Class20.aClass312_331.method3620()) {
             if (i == node_sub14.anInt7128) {
                 int i_10_ = node_sub14.anInt7125;
                 int i_11_ = node_sub14.anInt7120;

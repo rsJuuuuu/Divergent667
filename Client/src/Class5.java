@@ -19,7 +19,7 @@ public class Class5 {
                 byte[] bs = Class320_Sub20.method3756(new Class328_Sub1());
                 Class105.anObject5203 = Class135.method1588(bs);
             }
-            byte[] bs = Class320_Sub15.method3739((byte) 2, false, Class105.anObject5203);
+            byte[] bs = Class320_Sub15.method3739(false, Class105.anObject5203);
             byte[] bs_0_ = new byte[4 * Objects.requireNonNull(bs).length];
             int i_1_ = 0;
             for (int i_2_ = 0; i_2_ < 16; i_2_++) {
@@ -65,9 +65,9 @@ public class Class5 {
         if (aBoolean128 || anAbstractToolkit126.method1295(Class259.aClass68_3268, Class372.aClass372_4594)) {
             Class169_Sub1.method1768();
             if (aBoolean128) {
-                byte[] bs = Class320_Sub15.method3739((byte) 8, false, Class320_Sub6.anObject8265);
+                byte[] bs = Class320_Sub15.method3739(false, Class320_Sub6.anObject8265);
                 anInterface13_Impl3_130 = anAbstractToolkit126.method1262(Class259.aClass68_3268, bs);
-                bs = Class320_Sub15.method3739((byte) 127, false, Class347.anObject4286);
+                bs = Class320_Sub15.method3739(false, Class347.anObject4286);
                 anAbstractToolkit126.method1262(Class259.aClass68_3268, bs);
             } else {
                 anInterface13_Impl1Array131 = new Interface13_Impl1[16];

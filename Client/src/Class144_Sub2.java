@@ -14,11 +14,8 @@ public class Class144_Sub2 extends Class144 {
     static int anInt6820;
     static int anInt6821;
 
-    final void method1629(int i, int i_0_, int i_1_) {
+    final void method1629(int i, int i_1_) {
         anInt6820++;
-        if (i_0_ != -12850) {
-            method1629(85, 97, 74);
-        }
     }
 
     static void method1633(int i_2_) {
@@ -27,11 +24,8 @@ public class Class144_Sub2 extends Class144 {
         Class166.aClass61_5097.method608(false);
     }
 
-    final void method1630(int i, int i_3_, int i_4_) {
+    final void method1630(int i, int i_4_) {
         anInt6816++;
-        if (i_3_ != -1) {
-            anInt6817 = 74;
-        }
         int i_5_ = anInt6817 * i_4_ >> 12;
         int i_6_ = anInt6818 * i_4_ >> 12;
         int i_7_ = anInt6813 * i >> 12;
@@ -39,7 +33,7 @@ public class Class144_Sub2 extends Class144 {
         ConfigDefinitions.method738(i_7_, anInt1788, i_8_, i_5_, anInt1787, anInt1785, i_6_);
     }
 
-    static boolean method1634(int i, int i_9_) {
+    static boolean method1634(int i_9_) {
         anInt6814++;
         return (0x10 & i_9_) != 0;
     }

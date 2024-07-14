@@ -314,7 +314,7 @@ public class Class291_Sub1 extends Class291 implements KeyListener, FocusListene
         }
     }
 
-    final boolean method3450(int i, int i_14_) {
+    final boolean method3450(int i_14_) {
         anInt8201++;
 
         if (i_14_ < 0 || i_14_ >= 112) {

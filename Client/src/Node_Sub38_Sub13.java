@@ -14,9 +14,6 @@ public class Node_Sub38_Sub13 extends Node_Sub38 {
     static int anInt10240;
 
     final void method2785() {
-        if (7 != 7) {
-            method2775(69, 15);
-        }
         anInt10239 = anInt10237 - anInt10234;
         anInt10233++;
     }
@@ -36,7 +33,7 @@ public class Node_Sub38_Sub13 extends Node_Sub38 {
                         int i_7_ = class48.anInt706;
                         AnimableAnimator_Sub1 animableanimator_sub1 = actor.anAnimableAnimator_Sub1Array10894[i_6_];
                         if (animableanimator_sub1 != null && animableanimator_sub1.method245(-127)) {
-                            if (i_3_ == animableanimator_sub1.method250((byte) -89)) {
+                            if (i_3_ == animableanimator_sub1.method250()) {
                                 if (i_7_ == 0) {
                                     animableanimator_sub1 = actor.anAnimableAnimator_Sub1Array10894[i_6_] = null;
                                 } else if (i_7_ == 1) {
@@ -104,7 +101,7 @@ public class Node_Sub38_Sub13 extends Node_Sub38 {
         return is;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10238++;
         switch (i) {
             case 0:

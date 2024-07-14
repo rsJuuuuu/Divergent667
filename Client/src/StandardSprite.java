@@ -83,15 +83,15 @@ public class StandardSprite extends GLSprite {
         class336_sub1.method3863(i, i_8_, 0);
         anAbstractToolkit8935.method1266((byte) 127);
         Class336_Sub1 class336_sub1_11_ = anAbstractToolkit8935.method1306();
-        class336_sub1_11_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -116), anInterface13_Impl1_8925.method45((float) anInt8942, 105));
+        class336_sub1_11_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -116), anInterface13_Impl1_8925.method45((float) anInt8942));
         anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
         anAbstractToolkit8935.method1362(1);
         anAbstractToolkit8935.method1312(interface13_impl1);
         anAbstractToolkit8935.method1318(Class116.aClass94_5075, Class117_Sub1.aClass94_4924);
         anAbstractToolkit8935.method1304(0, Class200_Sub1.aClass135_5139);
         Class336_Sub1 class336_sub1_12_ = anAbstractToolkit8935.method1306();
-        class336_sub1_12_.method3877(1.0F, interface13_impl1.method49((float) anInt8915, (byte) -121), interface13_impl1.method45((float) anInt8942, -79));
-        class336_sub1_12_.method3875(0.0F, interface13_impl1.method49((float) (-i_10_ + i_8_), (byte) -40), interface13_impl1.method45((float) (-i_9_ + i), -109));
+        class336_sub1_12_.method3877(1.0F, interface13_impl1.method49((float) anInt8915, (byte) -121), interface13_impl1.method45((float) anInt8942));
+        class336_sub1_12_.method3875(0.0F, interface13_impl1.method49((float) (-i_10_ + i_8_), (byte) -40), interface13_impl1.method45((float) (-i_9_ + i)));
         anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
         anAbstractToolkit8935.method1283();
         anAbstractToolkit8935.method1255();
@@ -118,7 +118,7 @@ public class StandardSprite extends GLSprite {
         anAbstractToolkit8935.method1336(i_15_);
         Objects.requireNonNull(class336_sub1).method3877(0.0F, (float) anInt8915, (float) anInt8942);
         class336_sub1.method3863(i, i_13_, 0);
-        class336_sub1_17_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -56), anInterface13_Impl1_8925.method45((float) anInt8942, 98));
+        class336_sub1_17_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -56), anInterface13_Impl1_8925.method45((float) anInt8942));
         anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
         anAbstractToolkit8935.method1266((byte) 108);
         anAbstractToolkit8935.method1283();
@@ -157,7 +157,7 @@ public class StandardSprite extends GLSprite {
         boolean bool = aBoolean8944 && anInt8939 == 0 && anInt8922 == 0;
         boolean bool_31_ = aBoolean8916 && anInt8929 == 0 && anInt8940 == 0;
         if (bool_31_ & bool) {
-            class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_26_, (byte) -22), anInterface13_Impl1_8925.method45((float) i_25_, -74));
+            class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_26_, (byte) -22), anInterface13_Impl1_8925.method45((float) i_25_));
             Objects.requireNonNull(class336_sub1).method3877(0.0F, (float) i_26_, (float) i_25_);
             class336_sub1.method3863(i, i_24_, 0);
             anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
@@ -166,7 +166,7 @@ public class StandardSprite extends GLSprite {
         } else if (bool_31_) {
             int i_32_ = i_24_ + i_26_;
             int i_33_ = method1186();
-            class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -94), anInterface13_Impl1_8925.method45((float) i_25_, 118));
+            class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -94), anInterface13_Impl1_8925.method45((float) i_25_));
             anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
             int i_34_ = anInt8939 + i_24_;
             int i_35_ = i_34_ + anInt8915;
@@ -180,7 +180,7 @@ public class StandardSprite extends GLSprite {
             }
             if (i_34_ < i_32_) {
                 int i_36_ = -i_34_ + i_32_;
-                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_36_, (byte) -102), anInterface13_Impl1_8925.method45((float) i_25_, 98));
+                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_36_, (byte) -102), anInterface13_Impl1_8925.method45((float) i_25_));
                 anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
                 Objects.requireNonNull(class336_sub1).method3877(0.0F, (float) i_36_, (float) i_25_);
                 class336_sub1.method3863(i, i_34_, 0);
@@ -190,7 +190,7 @@ public class StandardSprite extends GLSprite {
         } else if (bool) {
             int i_50_ = i + i_25_;
             int i_51_ = method1197();
-            class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_26_, (byte) -73), anInterface13_Impl1_8925.method45((float) anInt8942, 110));
+            class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_26_, (byte) -73), anInterface13_Impl1_8925.method45((float) anInt8942));
             anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
             int i_52_ = i + anInt8929;
             int i_53_ = anInt8942 + i_52_;
@@ -204,7 +204,7 @@ public class StandardSprite extends GLSprite {
             }
             if (i_50_ > i_52_) {
                 int i_54_ = i_50_ - i_52_;
-                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_26_, (byte) -107), anInterface13_Impl1_8925.method45((float) i_54_, -64));
+                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_26_, (byte) -107), anInterface13_Impl1_8925.method45((float) i_54_));
                 anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
                 Objects.requireNonNull(class336_sub1).method3877(0.0F, (float) i_26_, (float) i_54_);
                 class336_sub1.method3863(i_52_, i_24_, 0);
@@ -218,7 +218,7 @@ public class StandardSprite extends GLSprite {
             int i_40_ = method1186();
             int i_41_ = anInt8939 + i_24_;
             for (int i_42_ = i_41_ + anInt8915; i_42_ <= i_37_; i_42_ += i_40_) {
-                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -102), anInterface13_Impl1_8925.method45((float) anInt8942, -98));
+                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -102), anInterface13_Impl1_8925.method45((float) anInt8942));
                 anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
                 int i_43_ = i + anInt8929;
                 for (int i_44_ = anInt8942 + i_43_; i_44_ <= i_38_; i_44_ += i_39_) {
@@ -230,7 +230,7 @@ public class StandardSprite extends GLSprite {
                 }
                 if (i_38_ > i_43_) {
                     int i_45_ = i_38_ - i_43_;
-                    class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -124), anInterface13_Impl1_8925.method45((float) i_45_, -69));
+                    class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -124), anInterface13_Impl1_8925.method45((float) i_45_));
                     anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
                     Objects.requireNonNull(class336_sub1).method3877(0.0F, (float) anInt8915, (float) i_45_);
                     class336_sub1.method3863(i_43_, i_41_, 0);
@@ -241,7 +241,7 @@ public class StandardSprite extends GLSprite {
             }
             if (i_37_ > i_41_) {
                 int i_46_ = -i_41_ + i_37_;
-                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_46_, (byte) -119), anInterface13_Impl1_8925.method45((float) anInt8942, 83));
+                class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_46_, (byte) -119), anInterface13_Impl1_8925.method45((float) anInt8942));
                 anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
                 int i_47_ = anInt8929 + i;
                 int i_48_ = anInt8942 + i_47_;
@@ -255,7 +255,7 @@ public class StandardSprite extends GLSprite {
                 }
                 if (i_47_ < i_38_) {
                     int i_49_ = -i_47_ + i_38_;
-                    class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_46_, (byte) -30), anInterface13_Impl1_8925.method45((float) i_49_, 108));
+                    class336_sub1_30_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) i_46_, (byte) -30), anInterface13_Impl1_8925.method45((float) i_49_));
                     anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
                     Objects.requireNonNull(class336_sub1).method3877(0.0F, (float) i_46_, (float) i_49_);
                     class336_sub1.method3863(i_47_, i_41_, 0);
@@ -400,7 +400,7 @@ public class StandardSprite extends GLSprite {
         anAbstractToolkit8935.method1304(1, InterfaceSettings.aClass135_7421);
         anAbstractToolkit8935.method1366(InterfaceSettings.aClass135_7421, 1);
         anAbstractToolkit8935.method1336(i_67_);
-        class336_sub1_70_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -20), anInterface13_Impl1_8925.method45((float) anInt8942, -99));
+        class336_sub1_70_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -20), anInterface13_Impl1_8925.method45((float) anInt8942));
         if (aBoolean8933) {
             i_64_ = anInt8942 * i_64_ / method1197();
             i_65_ = anInt8915 * i_65_ / method1186();
@@ -457,13 +457,13 @@ public class StandardSprite extends GLSprite {
         if (aBoolean8933) {
             float f_96_ = (float) anInt8942 / (float) method1197();
             float f_97_ = (float) anInt8915 / (float) method1186();
-            Objects.requireNonNull(class336_sub1).method3880(f_97_ * (-f + f_91_), (byte) 118, (f_90_ - f_88_) * f_96_, 1.0F, f_96_ * (f_89_ - f), 0.0F, 0.0F, f_97_ * (-f_88_ + f_92_));
+            Objects.requireNonNull(class336_sub1).method3880(f_97_ * (-f + f_91_), (f_90_ - f_88_) * f_96_, 1.0F, f_96_ * (f_89_ - f), 0.0F, 0.0F, f_97_ * (-f_88_ + f_92_));
             class336_sub1.method3875(0.0F, (f_88_ + (float) anInt8939) * f_97_, f_96_ * ((float) anInt8929 + f));
         } else {
-            Objects.requireNonNull(class336_sub1).method3880(f_91_ - f, (byte) 94, -f_88_ + f_90_, 1.0F, -f + f_89_, 0.0F, 0.0F, f_92_ - f_88_);
+            Objects.requireNonNull(class336_sub1).method3880(f_91_ - f, -f_88_ + f_90_, 1.0F, -f + f_89_, 0.0F, 0.0F, f_92_ - f_88_);
             class336_sub1.method3875(0.0F, f_88_, f);
         }
-        class336_sub1_95_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -125), anInterface13_Impl1_8925.method45((float) anInt8942, 109));
+        class336_sub1_95_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -125), anInterface13_Impl1_8925.method45((float) anInt8942));
         anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
         anAbstractToolkit8935.method1362(1);
         anAbstractToolkit8935.method1312(interface13_impl1);
@@ -472,7 +472,7 @@ public class StandardSprite extends GLSprite {
         Class336_Sub1 class336_sub1_98_ = anAbstractToolkit8935.method1306();
         class336_sub1_98_.method3857(class336_sub1);
         class336_sub1_98_.method3863(-i_93_, -i_94_, 0);
-        class336_sub1_98_.method3889(interface13_impl1.method49(1.0F, (byte) -86), (byte) 111, interface13_impl1.method45(1.0F, -57));
+        class336_sub1_98_.method3889(interface13_impl1.method49(1.0F, (byte) -86), interface13_impl1.method45(1.0F));
         anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
         anAbstractToolkit8935.method1266((byte) 123);
         anAbstractToolkit8935.method1283();
@@ -491,7 +491,7 @@ public class StandardSprite extends GLSprite {
         anInt8915 = i_99_;
         anInt8942 = i;
         anAbstractToolkit8935 = abstracttoolkit;
-        anInterface13_Impl1_8925 = abstracttoolkit.method1291(bool ? Class99.aClass68_1290 : CacheNode_Sub19.aClass68_9621, Class372.aClass372_4594, i_99_, i, -99);
+        anInterface13_Impl1_8925 = abstracttoolkit.method1291(bool ? Class99.aClass68_1290 : CacheNode_Sub19.aClass68_9621, Class372.aClass372_4594, i_99_, i);
         anInterface13_Impl1_8925.method51(true, true, false);
         aBoolean8936 = i != anInterface13_Impl1_8925.method44(19809);
         aBoolean8941 = i_99_ != anInterface13_Impl1_8925.method46((byte) 122);
@@ -533,9 +533,9 @@ public class StandardSprite extends GLSprite {
             f_101_ = f_119_ + f_101_ + f_115_;
             f_104_ = f_104_ + f_118_ + f_122_;
         }
-        Objects.requireNonNull(class336_sub1).method3880(-f + f_103_, (byte) -45, -f_100_ + f_102_, 1.0F, -f + f_101_, 0.0F, 0.0F, -f_100_ + f_104_);
+        Objects.requireNonNull(class336_sub1).method3880(-f + f_103_, -f_100_ + f_102_, 1.0F, -f + f_101_, 0.0F, 0.0F, -f_100_ + f_104_);
         class336_sub1.method3875(0.0F, f_100_, f);
-        class336_sub1_108_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -78), anInterface13_Impl1_8925.method45((float) anInt8942, 98));
+        class336_sub1_108_.method3877(1.0F, anInterface13_Impl1_8925.method49((float) anInt8915, (byte) -78), anInterface13_Impl1_8925.method45((float) anInt8942));
         anAbstractToolkit8935.method1297(BufferedConnection.aClass346_615);
         anAbstractToolkit8935.method1266((byte) 117);
         anAbstractToolkit8935.method1283();

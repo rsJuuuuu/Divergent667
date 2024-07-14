@@ -132,7 +132,7 @@ public class Node_Sub32 extends Node {
         if (!Class213.aBoolean2510 && Class315.anInt4035 < 500) {
             i_41_ = i_41_ != -1 ? i_41_ : Class239.anInt2928;
             CacheNode_Sub13 cachenode_sub13 = new CacheNode_Sub13(string, string_42_, i_41_, i_39_, i, l, i_37_, i_38_, bool_40_, bool, l_43_, bool_44_);
-            Client.method114((byte) -109, cachenode_sub13);
+            Client.method114(cachenode_sub13);
         }
     }
 

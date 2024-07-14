@@ -68,7 +68,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
             }
         }
         if (Class243.aClass340_3069 != null) {
-            Class243.aClass340_3069.method3954(Class204.loadPercentage, Node_Sub15_Sub12.aString9867, Class252.aClass110_3189, 121, Class43.aLong663);
+            Class243.aClass340_3069.method3954(Class204.loadPercentage, Node_Sub15_Sub12.aString9867, Class252.aClass110_3189, Class43.aLong663);
             if (Class235_Sub1.anInterface16Array8978 != null) {
                 for (int i_3_ = Class51_Sub1.anInt9064 + 1; Class235_Sub1.anInterface16Array8978.length > i_3_; i_3_++) {
                     if (Class235_Sub1.anInterface16Array8978[i_3_].method58(27285) >= 100 && Class51_Sub1.anInt9064 == -1 + i_3_ && Class151.anInt1843 >= 1 && Class243.aClass340_3069.method3956()) {
@@ -93,7 +93,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
         index36 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10485++;
         while_268_:
         do {
@@ -112,9 +112,6 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
             } while (false);
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         } while (false);
-        if (bool) {
-            method2778(121);
-        }
     }
 
     static void method2916() {
@@ -157,7 +154,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                 if (node_sub5 != null || TemporaryItemDefinition.aLong562 < Class313.method3650() - 2000L) {
                     Node_Sub13 node_sub13 = null;
                     int i_7_ = 0;
-                    for (Node_Sub5 node_sub5_8_ = (Node_Sub5) Node_Sub38_Sub35.aClass312_10452.method3613(); node_sub5_8_ != null; node_sub5_8_ = (Node_Sub5) Node_Sub38_Sub35.aClass312_10452.method3620(16776960)) {
+                    for (Node_Sub5 node_sub5_8_ = (Node_Sub5) Node_Sub38_Sub35.aClass312_10452.method3613(); node_sub5_8_ != null; node_sub5_8_ = (Node_Sub5) Node_Sub38_Sub35.aClass312_10452.method3620()) {
                         if (node_sub13 != null && -i_7_ + node_sub13.aPacket7113.offset >= 240) {
                             break;
                         }
@@ -297,7 +294,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                     if (Class320_Sub22.anInt8415 == 2) {
                         Class314.method3652(66);
                     } else if (Class320_Sub22.anInt8415 == 3) {
-                        Class309.method3586(92);
+                        Class309.method3586();
                     }
                 }
                 if (Mobile_Sub4.aBoolean10988) {
@@ -364,7 +361,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                             OutcommingPacket.method3668();
                             Node_Sub36_Sub1.aBoolean10030 = true;
                         }
-                        for (int i_22_ = Class24.aClass275_442.method3334(-114, true); i_22_ != -1; i_22_ = Class24.aClass275_442.method3334(-112, false)) {
+                        for (int i_22_ = Class24.aClass275_442.method3334(true); i_22_ != -1; i_22_ = Class24.aClass275_442.method3334(false)) {
                             Class188_Sub2_Sub1.method1907(i_22_, (byte) 108);
                             Class75.anIntArray1005[Node_Sub30.method2723(Class341.anInt4231++, 31)] = i_22_;
                         }
@@ -382,7 +379,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                 IComponentDefinitions widget = Class76.method771((int) l);
                                 if (!cachenode_sub2.aString9428.equals(Objects.requireNonNull(widget).aString4790)) {
                                     widget.aString4790 = cachenode_sub2.aString9428;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 4) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
@@ -393,7 +390,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                     widget.anInt4683 = i_34_;
                                     widget.modelType = i_32_;
                                     widget.anInt4864 = i_33_;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 5) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
@@ -407,7 +404,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                         widget.anAnimator4755.method249(true, cachenode_sub2.anInt9434);
                                     }
                                     widget.anInt4773 = cachenode_sub2.anInt9434;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 6) {
                                 int i_27_ = cachenode_sub2.anInt9434;
@@ -418,14 +415,14 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                 IComponentDefinitions widget = Class76.method771((int) l);
                                 if (i_31_ != Objects.requireNonNull(widget).anInt4754) {
                                     widget.anInt4754 = i_31_;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 7) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
                                 boolean bool = cachenode_sub2.anInt9434 == 1;
                                 if (!bool == Objects.requireNonNull(widget).hidden) {
                                     widget.hidden = bool;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 8) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
@@ -440,14 +437,14 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                             widget.anInt4787 = 32 * widget.anInt4787 / widget.anInt4693;
                                         }
                                     }
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 9) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
                                 if (Objects.requireNonNull(widget).anInt4718 != cachenode_sub2.anInt9434 || cachenode_sub2.anInt9432 != widget.anInt4831) {
                                     widget.anInt4831 = cachenode_sub2.anInt9432;
                                     widget.anInt4718 = cachenode_sub2.anInt9434;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 10) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
@@ -455,7 +452,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                     widget.anInt4681 = cachenode_sub2.anInt9434;
                                     widget.anInt4811 = cachenode_sub2.anInt9432;
                                     widget.anInt4682 = cachenode_sub2.anInt9429;
-                                    ClientScript.method2321(-1, widget);
+                                    ClientScript.method2321(widget);
                                 }
                             } else if (i_23_ == 11) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
@@ -463,7 +460,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                 widget.anInt4762 = widget.anInt4816 = cachenode_sub2.anInt9432;
                                 widget.anInt4679 = widget.anInt4850 = cachenode_sub2.anInt9434;
                                 widget.aByte4720 = (byte) 0;
-                                ClientScript.method2321(-1, widget);
+                                ClientScript.method2321(widget);
                             } else if (i_23_ == 12) {
                                 IComponentDefinitions widget = Class76.method771((int) l);
                                 int i_24_ = cachenode_sub2.anInt9434;
@@ -476,7 +473,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                                     }
                                     if (widget.anInt4734 != i_24_) {
                                         widget.anInt4734 = i_24_;
-                                        ClientScript.method2321(-1, widget);
+                                        ClientScript.method2321(widget);
                                     }
                                 }
                             } else if (i_23_ == 14) {
@@ -518,7 +515,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                         if (Class41.aWidget622 != null) {
                             GLPlane.anInt7937++;
                             if (GLPlane.anInt7937 >= 15) {
-                                ClientScript.method2321(-1, Class41.aWidget622);
+                                ClientScript.method2321(Class41.aWidget622);
                                 Class41.aWidget622 = null;
                             }
                         }
@@ -587,7 +584,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                         if (Class58.aWidget861 != null) {
                             Class277_Sub1.method3357();
                         }
-                        if (Class339_Sub7.rights > 0 && Class175.aClass291_2100.method3450(94, 82) && Class175.aClass291_2100.method3450(-71, 81) && Class339_Sub8.anInt8739 != 0) {
+                        if (Class339_Sub7.rights > 0 && Class175.aClass291_2100.method3450(82) && Class175.aClass291_2100.method3450(81) && Class339_Sub8.anInt8739 != 0) {
                             int i_38_ = -Class339_Sub8.anInt8739 + Class295.myPlayer.plane;
                             if (i_38_ >= 0) {
                                 if (i_38_ > 3) {
@@ -604,7 +601,7 @@ public class Node_Sub38_Sub38 extends Node_Sub38 {
                         if (Class331.aBoolean4129 && Animable_Sub2_Sub1.aLong10630 < Class313.method3650() - 60000L) {
                             Class144.method1631((byte) 123);
                         }
-                        for (EntityNode_Sub3_Sub1 entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1113((byte) 100); entitynode_sub3_sub1 != null; entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1108(73)) {
+                        for (EntityNode_Sub3_Sub1 entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1113(); entitynode_sub3_sub1 != null; entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1108(73)) {
                             if (Class313.method3650() / 1000L - 5L > (long) entitynode_sub3_sub1.anInt9162) {
                                 if (entitynode_sub3_sub1.aShort9164 > 0) {
                                     Class28.method331(entitynode_sub3_sub1.aString9156 + Translation.aTranslation_382.getTranslatedString(Class35.language), "", 0, "", "", 5);

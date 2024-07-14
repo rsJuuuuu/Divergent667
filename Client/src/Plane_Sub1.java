@@ -1318,11 +1318,7 @@ public class Plane_Sub1 extends Plane {
             Class358 class358 = aClass358ArrayArray7972[i][i_346_];
             if (class358 != null) {
                 if (i_350_ != 0) {
-                    if ((class358.aByte4455 & 0x4) != 0) {
-                        if ((i_350_ & 0x1) != 0) {
-                            return;
-                        }
-                    } else if ((i_350_ & 0x2) != 0) {
+                    if ((i_350_ & 0x2) != 0) {
                         return;
                     }
                 }

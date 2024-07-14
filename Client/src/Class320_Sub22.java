@@ -46,7 +46,7 @@ public class Class320_Sub22 extends Class320 {
         return 1;
     }
 
-    static int method3766(byte b, int i, char c) {
+    static int method3766(byte b, char c) {
         anInt8421++;
         int i_0_ = c << 4;
         if (Character.isUpperCase(c) || Character.isTitleCase(c)) {

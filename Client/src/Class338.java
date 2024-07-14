@@ -95,7 +95,7 @@ public class Class338 {
 
     static boolean method3911(int i, int i_8_) {
         anInt4195++;
-        return !(!((i & 0x800) != 0 | Class150_Sub3.method1663((byte) -21, i, i_8_)) && !Class110.method1135(i, i_8_));
+        return !(!((i & 0x800) != 0 | Class150_Sub3.method1663(i)) && !Class110.method1135(i, i_8_));
     }
 
     final void method3912(int i, int i_10_, int i_11_) {
@@ -278,7 +278,7 @@ public class Class338 {
         }
     }
 
-    Class338(Class353 class353, int i, Index class302, Index class302_34_) {
+    Class338(Index class302, Index class302_34_) {
         aClass302_4193 = class302_34_;
         aClass302_4192 = class302;
         aClass302_4192.method3537(34);

@@ -36,7 +36,7 @@ public class Mobile_Sub3 extends Mobile implements Interface19 {
 
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_0_, byte b, int i_1_, Animable animable) {
+    final void method816(int i, boolean bool, int i_0_, byte b, int i_1_, Animable animable) {
         if (b < 101) {
             aClass192_10778 = null;
         }
@@ -58,7 +58,7 @@ public class Mobile_Sub3 extends Mobile implements Interface19 {
         return drawablemodel.method624(i_2_, i, class336, false, 0);
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10783++;
         DrawableModel drawablemodel = aClass310_10777.method3597(graphicstoolkit, false, true, true, 2048);
         if (drawablemodel == null) {
@@ -66,7 +66,7 @@ public class Mobile_Sub3 extends Mobile implements Interface19 {
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10780, (byte) 116, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10780, 1);
         aClass310_10777.method3600(aShort9124, drawablemodel, true, -9827, graphicstoolkit, aShort9130, aShort9119, aShort9120, class336);
         if (Node_Sub15_Sub10.aBoolean9850) {
             drawablemodel.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
@@ -83,7 +83,7 @@ public class Mobile_Sub3 extends Mobile implements Interface19 {
         }
         aBoolean10786 = drawablemodel.F() || aClass310_10777.anEntityNode_Sub4_3931 != null;
         if (aClass171_10774 == null) {
-            aClass171_10774 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+            aClass171_10774 = Class167.method1752(anInt5937, anInt5934, drawablemodel, anInt5940);
         } else {
             Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10774, -107);
         }
@@ -168,16 +168,16 @@ public class Mobile_Sub3 extends Mobile implements Interface19 {
         aClass310_10777.method3598(class121);
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10787++;
         return false;
     }
 
     public final void method70(GraphicsToolkit graphicstoolkit, int i) {
         if (i >= -42) {
-            method816(72, true, null, -2, (byte) 37, -105, null);
+            method816(72, true, -2, (byte) 37, -105, null);
         }
-        aClass310_10777.method3588(graphicstoolkit);
+        aClass310_10777.method3588();
         anInt10792++;
     }
 
@@ -195,12 +195,12 @@ public class Mobile_Sub3 extends Mobile implements Interface19 {
     public final void method74(GraphicsToolkit graphicstoolkit, int i) {
         anInt10770++;
         if (i > -46) {
-            method69(-83);
+            method69();
         }
         aClass310_10777.method3587(graphicstoolkit);
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         anInt10788++;
     }
 

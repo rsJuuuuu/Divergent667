@@ -76,7 +76,7 @@ public class Class315 {
         anInt4028++;
     }
 
-    Class315(Class353 class353, int i, Index class302) {
+    Class315(Index class302) {
         aClass302_4026 = class302;
         if (aClass302_4026 == null) {
             anInt4024 = 0;

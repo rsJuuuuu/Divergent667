@@ -57,7 +57,7 @@ public class Class339_Sub1 extends Class339 {
         } else {
             aGLToolkit4202.method1472(-96, 0, 5890);
         }
-        aGLToolkit4202.method1474(126, 8448, 8448);
+        aGLToolkit4202.method1474(8448, 8448);
     }
 
     final void method3917(Class169 class169, int i, int i_2_) {
@@ -66,7 +66,7 @@ public class Class339_Sub1 extends Class339 {
             aClass25_8635 = null;
         }
         anInt8638++;
-        aGLToolkit4202.method1434((byte) 55, i);
+        aGLToolkit4202.method1434(i);
     }
 
     private void method3924() {
@@ -85,14 +85,14 @@ public class Class339_Sub1 extends Class339 {
         OpenGL.glRotatef(22.5F, 1.0F, 0.0F, 0.0F);
         OpenGL.glMatrixMode(5888);
         if (aBoolean8633) {
-            aGLToolkit4202.method1474(126, 7681, 260);
+            aGLToolkit4202.method1474(7681, 260);
             aGLToolkit4202.method1464(5890, 770, 0);
             aGLToolkit4202.method1472(-103, 0, 34167);
         } else {
-            aGLToolkit4202.method1474(126, 8448, 7681);
+            aGLToolkit4202.method1474(8448, 7681);
             aGLToolkit4202.method1464(34168, 768, 0);
             aGLToolkit4202.method1457(33984, 2);
-            aGLToolkit4202.method1474(-83, 7681, 260);
+            aGLToolkit4202.method1474(7681, 260);
             aGLToolkit4202.method1464(34168, 768, 0);
             aGLToolkit4202.method1464(34168, 770, 1);
             aGLToolkit4202.method1472(-32, 0, 34167);
@@ -108,14 +108,14 @@ public class Class339_Sub1 extends Class339 {
         OpenGL.glLoadIdentity();
         OpenGL.glMatrixMode(5888);
         if (aBoolean8633) {
-            aGLToolkit4202.method1474(-49, 8448, 8448);
+            aGLToolkit4202.method1474(8448, 8448);
             aGLToolkit4202.method1464(5890, 768, 0);
             aGLToolkit4202.method1472(-44, 0, 5890);
         } else {
-            aGLToolkit4202.method1474(-3, 8448, 8448);
+            aGLToolkit4202.method1474(8448, 8448);
             aGLToolkit4202.method1464(5890, 768, 0);
             aGLToolkit4202.method1457(33984, 2);
-            aGLToolkit4202.method1474(127, 8448, 8448);
+            aGLToolkit4202.method1474(8448, 8448);
             aGLToolkit4202.method1464(5890, 768, 0);
             aGLToolkit4202.method1464(34168, 768, 1);
             aGLToolkit4202.method1472(-36, 0, 5890);
@@ -124,8 +124,8 @@ public class Class339_Sub1 extends Class339 {
         aClass25_8635.method309();
     }
 
-    final void method3920(boolean bool) {
-        aGLToolkit4202.method1474(127, 7681, 8448);
+    final void method3920() {
+        aGLToolkit4202.method1474(7681, 8448);
         anInt8632++;
     }
 

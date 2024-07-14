@@ -158,7 +158,7 @@ public class Class32 {
         return node_sub9_sub1_18_;
     }
 
-    Class32(Class353 class353, int i, Index class302) {
+    Class32(Index class302) {
         aClass302_517 = class302;
         if (aClass302_517 != null) {
             aClass302_517.method3537(35);

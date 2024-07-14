@@ -70,7 +70,7 @@ public class Class250 {
 
     static Class329 method3095(int i) {
         anInt3169++;
-        Class329[] class329s = Class154.method1698(54);
+        Class329[] class329s = Class154.method1698();
         for (int i_5_ = 0; Objects.requireNonNull(class329s).length > i_5_; i_5_++) {
             Class329 class329 = class329s[i_5_];
             if (class329.anInt4123 == i) {

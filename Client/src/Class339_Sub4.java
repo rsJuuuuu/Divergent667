@@ -28,7 +28,7 @@ public class Class339_Sub4 extends Class339 {
         anInt8669++;
         if (!aBoolean8672) {
             aGLToolkit4202.method1444(i_0_ ^ 0x6e81, class169);
-            aGLToolkit4202.method1434((byte) -77, i);
+            aGLToolkit4202.method1434(i);
         }
     }
 
@@ -49,7 +49,7 @@ public class Class339_Sub4 extends Class339 {
         DrawableModel.method638(strings, is, strings.length - 1, 0);
     }
 
-    static boolean method3933(GraphicsToolkit graphicstoolkit, int i, Class79 class79, int i_2_, Node_Sub14 node_sub14, int i_3_) {
+    static boolean method3933(GraphicsToolkit graphicstoolkit, int i, Class79 class79, Node_Sub14 node_sub14, int i_3_) {
         anInt8675++;
         int i_4_ = 2147483647;
         int i_5_ = -2147483648;
@@ -103,7 +103,7 @@ public class Class339_Sub4 extends Class339 {
         if (class79.aString1085 != null) {
             class299 = Node_Sub25_Sub3.method2672(class79.anInt1090);
             if (class299 != null) {
-                i_12_ = Class85.aClass357_1159.method4029(Node_Sub38_Sub3.aStringArray10107, null, -100, null, class79.aString1085);
+                i_12_ = Class85.aClass357_1159.method4029(Node_Sub38_Sub3.aStringArray10107, null, null, class79.aString1085);
                 i_14_ = node_sub14.anInt7118 - class79.anInt1092 * (Class20.anInt339 - Class20.anInt350) / (-Class20.anInt352 + Class20.anInt337);
                 i_13_ = class79.anInt1071 * (Class20.anInt348 - Class20.anInt344) / (-Class20.anInt349 + Class20.anInt341) + node_sub14.anInt7126;
                 if (glsprite == null) {
@@ -228,7 +228,7 @@ public class Class339_Sub4 extends Class339 {
 
     final void method3919(int i, int i_25_, int i_26_) {
         if (i != -13437) {
-            method3933(null, 114, null, 95, null, -85);
+            method3933(null, 114, null, null, -85);
         }
         if (aBoolean8672) {
             int i_27_ = 1 << (0x3 & i_26_);
@@ -244,7 +244,7 @@ public class Class339_Sub4 extends Class339 {
         anInt8680++;
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8666++;
     }
 

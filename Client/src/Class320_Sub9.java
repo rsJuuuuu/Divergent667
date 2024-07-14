@@ -20,10 +20,7 @@ public class Class320_Sub9 extends Class320 {
         super(i, node_sub27);
     }
 
-    static boolean method3713(int i, int i_0_, int i_1_) {
-        if (i < 78) {
-            method3716(false, 89, false, 111, null, -76);
-        }
+    static boolean method3713(int i_0_) {
         anInt8291++;
         return (0x10000 & i_0_) != 0;
     }
@@ -31,9 +28,6 @@ public class Class320_Sub9 extends Class320 {
     final void method3673(byte b) {
         anInt4064 = method3677(0);
         anInt8288++;
-        if (b > -35) {
-            method3673((byte) 6);
-        }
     }
 
     final int method3675(int i, byte b) {
@@ -54,13 +48,13 @@ public class Class320_Sub9 extends Class320 {
     }
 
     static void method3714(int i, int i_2_, int i_3_, int i_4_) {
-        for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620(16776960))
+        for (Node_Sub47 node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class290_Sub6.aClass312_8122.method3620())
             Class338.method3913(i, node_sub47, i_4_, i_3_, i_2_);
         anInt8289++;
-        for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620(16776960)) {
+        for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620()) {
             int i_5_ = 1;
             Class259 class259 = node_sub47.aNpc7583.method868((byte) -125);
-            int i_6_ = node_sub47.aNpc7583.anAnimator10860.method250((byte) 92);
+            int i_6_ = node_sub47.aNpc7583.anAnimator10860.method250();
             if (i_6_ == -1 || node_sub47.aNpc7583.aBoolean10867) {
                 i_5_ = 0;
             } else if (Objects.requireNonNull(class259).anInt3252 != i_6_ && i_6_ != class259.anInt3271 && class259.anInt3293 != i_6_ && class259.anInt3270 != i_6_) {
@@ -114,7 +108,7 @@ public class Class320_Sub9 extends Class320 {
         for (Node_Sub47 node_sub47 = (Node_Sub47) Class320_Sub3.aHashTable8234.method1516(); node_sub47 != null; node_sub47 = (Node_Sub47) Class320_Sub3.aHashTable8234.method1520(69)) {
             int i_8_ = 1;
             Class259 class259 = node_sub47.aPlayer7573.method868((byte) -125);
-            int i_9_ = node_sub47.aPlayer7573.anAnimator10860.method250((byte) 82);
+            int i_9_ = node_sub47.aPlayer7573.anAnimator10860.method250();
             if (i_9_ == -1 || node_sub47.aPlayer7573.aBoolean10867) {
                 i_8_ = 0;
             } else if (Objects.requireNonNull(class259).anInt3252 == i_9_ || class259.anInt3271 == i_9_ || i_9_ == class259.anInt3293 || i_9_ == class259.anInt3270) {
@@ -173,30 +167,28 @@ public class Class320_Sub9 extends Class320 {
         return anInt4064;
     }
 
-    static void method3716(boolean bool, int i, boolean bool_11_, int i_12_, IComponentDefinitions[] widgets, int i_13_) {
+    static void method3716(int i, boolean bool_11_, int i_12_, IComponentDefinitions[] widgets, int i_13_) {
         anInt8286++;
         int i_14_ = 0;
-        if (bool) {
-            for (/**/; i_14_ < widgets.length; i_14_++) {
-                IComponentDefinitions widget = widgets[i_14_];
-                if (widget != null && i_13_ == widget.parentId) {
-                    Node_Sub39.method2921(bool_11_, i_12_, i, widget);
-                    Node_Sub38_Sub23.method2862(widget, i, i_12_, -8525);
-                    if (-widget.anInt4809 + widget.anInt4735 < widget.anInt4817) {
-                        widget.anInt4817 = -widget.anInt4809 + widget.anInt4735;
-                    }
-                    if (widget.anInt4817 < 0) {
-                        widget.anInt4817 = 0;
-                    }
-                    if (widget.anInt4734 > widget.anInt4691 - widget.anInt4695) {
-                        widget.anInt4734 = -widget.anInt4695 + widget.anInt4691;
-                    }
-                    if (widget.anInt4734 < 0) {
-                        widget.anInt4734 = 0;
-                    }
-                    if (widget.type == 0) {
-                        Class270_Sub1.method3300(widget, (byte) -10, bool_11_);
-                    }
+        for (/**/; i_14_ < widgets.length; i_14_++) {
+            IComponentDefinitions widget = widgets[i_14_];
+            if (widget != null && i_13_ == widget.parentId) {
+                Node_Sub39.method2921(bool_11_, i_12_, i, widget);
+                Node_Sub38_Sub23.method2862(widget, i, i_12_, -8525);
+                if (-widget.anInt4809 + widget.anInt4735 < widget.anInt4817) {
+                    widget.anInt4817 = -widget.anInt4809 + widget.anInt4735;
+                }
+                if (widget.anInt4817 < 0) {
+                    widget.anInt4817 = 0;
+                }
+                if (widget.anInt4734 > widget.anInt4691 - widget.anInt4695) {
+                    widget.anInt4734 = -widget.anInt4695 + widget.anInt4691;
+                }
+                if (widget.anInt4734 < 0) {
+                    widget.anInt4734 = 0;
+                }
+                if (widget.type == 0) {
+                    Class270_Sub1.method3300(widget, bool_11_);
                 }
             }
         }

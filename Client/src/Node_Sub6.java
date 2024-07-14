@@ -139,7 +139,7 @@ public class Node_Sub6 extends Node {
                                     Class93.aGraphicsToolkit1241.KA(i_1_, i_2_, i_6_, i_3_);
                                     if (Class71.aBoolean967) {
                                         if (bool) {
-                                            Class362.method4053(i_10_, i_12_, i_9_, (byte) 55, i_11_);
+                                            Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                         } else {
                                             Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                         }
@@ -162,7 +162,7 @@ public class Node_Sub6 extends Node {
                                     Class93.aGraphicsToolkit1241.KA(i_1_, i_2_, i_6_, i_3_);
                                     if (Class71.aBoolean967) {
                                         if (bool) {
-                                            Class362.method4053(i_10_, i_12_, i_9_, (byte) -86, i_11_);
+                                            Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                         } else {
                                             Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                         }
@@ -188,7 +188,7 @@ public class Node_Sub6 extends Node {
                                     int i_28_ = i_15_ + 15;
                                     if (Class71.aBoolean967) {
                                         if (bool) {
-                                            Class362.method4053(i_10_, i_12_, i_9_, (byte) 76, i_11_);
+                                            Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                         } else {
                                             Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                         }
@@ -198,7 +198,7 @@ public class Node_Sub6 extends Node {
                                         if (Node_Sub9_Sub4.anInt9732 < 20) {
                                             i_29_ = -65536;
                                         }
-                                        StandardSprite.aClass52_8945.method543((byte) -108, i_27_, "Fps:" + Node_Sub9_Sub4.anInt9732, i_29_, -1, i_28_);
+                                        StandardSprite.aClass52_8945.method543(i_27_, "Fps:" + Node_Sub9_Sub4.anInt9732, i_29_, -1, i_28_);
                                         i_28_ += 15;
                                         Runtime runtime = Runtime.getRuntime();
                                         int i_30_ = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L);
@@ -215,14 +215,14 @@ public class Node_Sub6 extends Node {
                                             }
                                             i_31_ = -65536;
                                         }
-                                        StandardSprite.aClass52_8945.method543((byte) -108, i_27_, "Mem:" + i_30_ + "k", i_31_, -1, i_28_);
+                                        StandardSprite.aClass52_8945.method543(i_27_, "Mem:" + i_30_ + "k", i_31_, -1, i_28_);
                                         i_28_ += 15;
-                                        StandardSprite.aClass52_8945.method543((byte) -14, i_27_, "Game: In:" + Class218.aClass123_2566.anInt1577 + "B/s Out:" + Class218.aClass123_2566.anInt1572 + "B/s", -256, -1, i_28_);
+                                        StandardSprite.aClass52_8945.method543(i_27_, "Game: In:" + Class218.aClass123_2566.anInt1577 + "B/s Out:" + Class218.aClass123_2566.anInt1572 + "B/s", -256, -1, i_28_);
                                         i_28_ += 15;
-                                        StandardSprite.aClass52_8945.method543((byte) 116, i_27_, "Lobby: In:" + Class218.aClass123_2560.anInt1577 + "B/s Out:" + Class218.aClass123_2560.anInt1572 + "B/s", -256, -1, i_28_);
+                                        StandardSprite.aClass52_8945.method543(i_27_, "Lobby: In:" + Class218.aClass123_2560.anInt1577 + "B/s Out:" + Class218.aClass123_2560.anInt1572 + "B/s", -256, -1, i_28_);
                                         i_28_ += 15;
                                         int i_33_ = Class93.aGraphicsToolkit1241.E() / 1024;
-                                        StandardSprite.aClass52_8945.method543((byte) -115, i_27_, "Offheap:" + i_33_ + "k", i_33_ > 65536 ? -65536 : -256, -1, i_28_);
+                                        StandardSprite.aClass52_8945.method543(i_27_, "Offheap:" + i_33_ + "k", i_33_ > 65536 ? -65536 : -256, -1, i_28_);
                                         i_28_ += 15;
                                         int i_34_ = 0;
                                         int i_35_ = 0;
@@ -237,17 +237,17 @@ public class Node_Sub6 extends Node {
                                         int i_38_ = 100 * i_36_ / i_34_;
                                         int i_39_ = i_35_ * 10000 / i_34_;
                                         String string = "Cache:" + Class301.method3503(0, true, i_39_, 2, true) + "% (" + i_38_ + "%)";
-                                        CacheNode_Sub18.aClass52_9609.method543((byte) 121, i_27_, string, -256, -1, i_28_);
+                                        CacheNode_Sub18.aClass52_9609.method543(i_27_, string, -256, -1, i_28_);
                                         i_28_ += 12;
                                     }
                                     if (Class280.anInt3570 > 0) {
-                                        CacheNode_Sub18.aClass52_9609.method543((byte) 81, i_27_, "Particles: " + za_Sub2.anInt10514 + " / " + Class280.anInt3570, -256, -1, i_28_);
+                                        CacheNode_Sub18.aClass52_9609.method543(i_27_, "Particles: " + za_Sub2.anInt10514 + " / " + Class280.anInt3570, -256, -1, i_28_);
                                     }
                                     i_28_ += 12;
                                     if (Class186.aBoolean2259) {
-                                        CacheNode_Sub18.aClass52_9609.method543((byte) 117, i_27_, "Polys: " + Class93.aGraphicsToolkit1241.I() + " Models: " + Class93.aGraphicsToolkit1241.M(), -256, -1, i_28_);
+                                        CacheNode_Sub18.aClass52_9609.method543(i_27_, "Polys: " + Class93.aGraphicsToolkit1241.I() + " Models: " + Class93.aGraphicsToolkit1241.M(), -256, -1, i_28_);
                                         i_28_ += 12;
-                                        CacheNode_Sub18.aClass52_9609.method543((byte) -109, i_27_, "Ls: " + Class365_Sub1.anInt8769 + " La: " + Class304.anInt3835 + " NPC: " + Class258.anInt5291 + " Pl: " + Node_Sub13.anInt7107, -256, -1, i_28_);
+                                        CacheNode_Sub18.aClass52_9609.method543(i_27_, "Ls: " + Class365_Sub1.anInt8769 + " La: " + Class304.anInt3835 + " NPC: " + Class258.anInt5291 + " Pl: " + Node_Sub13.anInt7107, -256, -1, i_28_);
                                         Class64.method712();
                                     }
                                     Class195.aBooleanArray2387[i_13_] = true;
@@ -305,7 +305,7 @@ public class Node_Sub6 extends Node {
                                 }
                                 if (Class71.aBoolean967) {
                                     if (bool) {
-                                        Class362.method4053(i_10_, i_12_, i_9_, (byte) -33, i_11_);
+                                        Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                     } else {
                                         Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                     }
@@ -314,7 +314,7 @@ public class Node_Sub6 extends Node {
                                 Class52 class52 = widget.method4155(Class93.aGraphicsToolkit1241);
                                 if (class52 == null) {
                                     if (Class287.aBoolean3606) {
-                                        ClientScript.method2321(-1, widget);
+                                        ClientScript.method2321(widget);
                                     }
                                 } else {
                                     int i_44_ = widget.anInt4754;
@@ -350,18 +350,18 @@ public class Node_Sub6 extends Node {
                                         if (Class204.aBoolean2454) {
                                             if (Class71.aBoolean967) {
                                                 if (bool) {
-                                                    Class362.method4053(i_10_, i_12_, i_9_, (byte) -111, i_11_);
+                                                    Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                                 } else {
                                                     Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                                 }
                                             }
                                         } else {
-                                            Class357 class357 = Class150_Sub2.method1660((byte) -30, widget.anInt4759, Class93.aGraphicsToolkit1241);
+                                            Class357 class357 = Class150_Sub2.method1660(widget.anInt4759, Class93.aGraphicsToolkit1241);
                                             int i_45_ = Objects.requireNonNull(class357).method4030(Node_Sub52.aGLSpriteArray7655, string, widget.anInt4809);
                                             int i_46_ = class357.method4034(widget.anInt4809, widget.anInt4697, string, Node_Sub52.aGLSpriteArray7655);
                                             if (Class71.aBoolean967) {
                                                 if (bool) {
-                                                    Class362.method4053(i_15_, i_15_ + i_46_, i_14_, (byte) -71, i_14_ + i_45_);
+                                                    Class362.method4053(i_15_, i_15_ + i_46_, i_14_, i_14_ + i_45_);
                                                 } else {
                                                     Node_Sub38_Sub27.method2881(i_15_, i_14_ + i_45_, i_46_ + i_15_, i_14_);
                                                 }
@@ -384,7 +384,7 @@ public class Node_Sub6 extends Node {
                                     }
                                     if (glsprite == null) {
                                         if (Class287.aBoolean3606) {
-                                            ClientScript.method2321(-1, widget);
+                                            ClientScript.method2321(widget);
                                         }
                                     } else {
                                         int i_47_ = glsprite.method1197();
@@ -435,7 +435,7 @@ public class Node_Sub6 extends Node {
                                 }
                                 if (Class71.aBoolean967) {
                                     if (bool) {
-                                        Class362.method4053(i_10_, i_12_, i_9_, (byte) 120, i_11_);
+                                        Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                     } else {
                                         Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                     }
@@ -461,12 +461,12 @@ public class Node_Sub6 extends Node {
                                     } else if (widget.anAnimator4755 == null || !widget.anAnimator4755.method245(-125)) {
                                         drawablemodel = widget.method4153(Class93.aGraphicsToolkit1241, null, InputStream_Sub2.aClass281_83, Class42.aClass181_643, (byte) 58, Class18.aClass37_306, Class295.myPlayer.aPlayerDefinition11137, Class24.aClass275_442, Class366.aClass279_4526, EntityNode_Sub3_Sub1.aClass86_9166, 2048, null);
                                         if (drawablemodel == null && Class287.aBoolean3606) {
-                                            ClientScript.method2321(-1, widget);
+                                            ClientScript.method2321(widget);
                                         }
                                     } else {
                                         drawablemodel = widget.method4153(Class93.aGraphicsToolkit1241, widget.anAnimator4755, InputStream_Sub2.aClass281_83, Class42.aClass181_643, (byte) 124, Class18.aClass37_306, Class295.myPlayer.aPlayerDefinition11137, Class24.aClass275_442, Class366.aClass279_4526, EntityNode_Sub3_Sub1.aClass86_9166, 2048, null);
                                         if (drawablemodel == null && Class287.aBoolean3606) {
-                                            ClientScript.method2321(-1, widget);
+                                            ClientScript.method2321(widget);
                                         }
                                     }
                                 } else {
@@ -474,7 +474,7 @@ public class Node_Sub6 extends Node {
                                     itemdefinition = itemdefinition.method1674(widget.anInt4831);
                                     drawablemodel = itemdefinition.method1689(widget.anAnimator4755, 2048, widget.aBoolean4723 ? Class295.myPlayer.aPlayerDefinition11137 : null, 1, Class93.aGraphicsToolkit1241, 100);
                                     if (drawablemodel == null) {
-                                        ClientScript.method2321(-1, widget);
+                                        ClientScript.method2321(widget);
                                     } else {
                                         i_54_ = -drawablemodel.fa() >> 1;
                                     }
@@ -548,7 +548,7 @@ public class Node_Sub6 extends Node {
                                 }
                                 if (Class71.aBoolean967) {
                                     if (bool) {
-                                        Class362.method4053(i_10_, i_12_, i_9_, (byte) -50, i_11_);
+                                        Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                     } else {
                                         Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                     }
@@ -576,7 +576,7 @@ public class Node_Sub6 extends Node {
                                 }
                                 if (Class71.aBoolean967) {
                                     if (bool) {
-                                        Class362.method4053(i_10_, i_12_, i_9_, (byte) -32, i_11_);
+                                        Class362.method4053(i_10_, i_12_, i_9_, i_11_);
                                     } else {
                                         Node_Sub38_Sub27.method2881(i_10_, i_11_, i_12_, i_9_);
                                     }

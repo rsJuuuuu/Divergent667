@@ -18,7 +18,7 @@ public class Class133 {
         throw new IllegalStateException();
     }
 
-    Class133(int i, int i_0_) {
+    Class133(int i) {
         packetId = i;
     }
 }

@@ -137,7 +137,7 @@ public class Class149 implements Interface5 {
         anIntArray5025[i] = 0;
     }
 
-    public Class149() throws Exception {
+    public Class149() {
         anIntArray5025 = new int[2];
         aDirectSoundBufferArray5033 = new DirectSoundBuffer[2];
         anIntArray5032 = new int[2];

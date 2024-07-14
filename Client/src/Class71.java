@@ -30,7 +30,7 @@ public class Class71 {
         anInt953++;
     }
 
-    static boolean method741(int i, int i_1_) {
+    static boolean method741(int i_1_) {
         anInt957++;
         return (i_1_ & 0xc580) != 0;
     }
@@ -95,7 +95,7 @@ public class Class71 {
         anInt955++;
     }
 
-    Class71(Class353 class353, int i, Index class302) {
+    Class71(Index class302) {
         aClass302_951 = class302;
         anInt956 = aClass302_951.method3537(4);
     }

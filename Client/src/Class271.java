@@ -45,19 +45,11 @@ public class Class271 {
         return bs_0_;
     }
 
-    static void method3313(Object[] objects, int[] is, byte b) {
+    static void method3313(Object[] objects, int[] is) {
         Class238.method3019(is.length - 1, 0, is, objects);
         anInt3478++;
-        if (b != -83) {
-            method3313(null, null, (byte) 102);
-        }
-    }
-
-    private Class271(int i) {
-        /* empty */
     }
 
     public Class271() {
-        this(-1);
     }
 }

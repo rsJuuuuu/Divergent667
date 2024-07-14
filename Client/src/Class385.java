@@ -35,11 +35,11 @@ public class Class385 {
             Class57.aClass336_850 = graphicstoolkit.n();
             Class320_Sub21.anInt8406 = 0;
             for (int i_0_ = 0; i_0_ < Class167.anInt2033; i_0_++)
-                Mobile_Sub4.method915(i, Node_Sub25_Sub2.aClass54Array9959[i_0_], graphicstoolkit);
+                Mobile_Sub4.method915(i, Node_Sub25_Sub2.aClass54Array9959[i_0_]);
             for (int i_1_ = 0; i_1_ < NpcDefinition.anInt2885; i_1_++)
-                Mobile_Sub4.method915(i, GLXToolkit.aClass54Array9292[i_1_], graphicstoolkit);
+                Mobile_Sub4.method915(i, GLXToolkit.aClass54Array9292[i_1_]);
             for (int i_2_ = 0; Class83.anInt5183 > i_2_; i_2_++)
-                Mobile_Sub4.method915(i, IsaacCipher.aClass54Array1840[i_2_], graphicstoolkit);
+                Mobile_Sub4.method915(i, IsaacCipher.aClass54Array1840[i_2_]);
             Class233.anInt2786 = 0;
             if (Class320_Sub21.anInt8406 > 0) {
                 int i_3_ = Node_Sub38.anIntArray7451.length;

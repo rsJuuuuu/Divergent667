@@ -12,11 +12,9 @@ public class Class187 {
     static int anInt2267;
     static int anInt2268;
     private final boolean aBoolean2269;
-    static int anInt2270;
     static int anInt2271;
     static int anInt2272;
     static int anInt2273;
-    static int anInt2274;
     static long aLong2275 = 1L;
     static int anInt2276;
     static OutcommingPacket aClass318_2277;
@@ -67,20 +65,8 @@ public class Class187 {
         anInt2264 = i;
     }
 
-    static boolean method1882(int i, int i_4_) {
-        if (i > 0) {
-            return true;
-        }
-        anInt2274++;
-        return !(i_4_ != 2 && i_4_ != 3);
-    }
-
-    final boolean method1883(int i) {
-        anInt2270++;
-        if (i <= 26) {
-            aBoolean2266 = false;
-        }
-        return aBoolean2269;
+    final boolean method1883() {
+        return !aBoolean2269;
     }
 
     static {

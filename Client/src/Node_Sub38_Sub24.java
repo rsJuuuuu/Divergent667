@@ -27,7 +27,7 @@ public class Node_Sub38_Sub24 extends Node_Sub38 {
         }
         int[] is = aClass146_7460.method1645(i_0_);
         if (aClass146_7460.aBoolean1819) {
-            method2870(aClass146_7460.method1642((byte) 123));
+            method2870(aClass146_7460.method1642());
         }
         return is;
     }
@@ -43,7 +43,7 @@ public class Node_Sub38_Sub24 extends Node_Sub38 {
         }
         Class257.aFloat3243 = (float) i_3_;
         Node_Sub12.aFloat5450 = (float) i_2_;
-        Class169_Sub4.method1787((byte) -19);
+        Class169_Sub4.method1787();
         Node_Sub25_Sub1.aBoolean9950 = true;
     }
 
@@ -62,7 +62,7 @@ public class Node_Sub38_Sub24 extends Node_Sub38 {
         anInt10353++;
         int i_7_ = Class339_Sub7.anInt8728;
         int i_8_ = Node_Sub38_Sub1.anInt10083;
-        Class188_Sub1_Sub2.method1897(1, is);
+        Class188_Sub1_Sub2.method1897(is);
         Class52.method544(r_Sub2.anInt11054, Class303.anInt3824);
         if (aClass144Array10350 != null) {
             for (Class144 class144 : aClass144Array10350) {
@@ -72,10 +72,10 @@ public class Node_Sub38_Sub24 extends Node_Sub38 {
                     if (i_11_ < 0) {
                         class144.method1626(i_7_, i_8_);
                     } else {
-                        class144.method1630(i_8_, 0xffffffff, i_7_);
+                        class144.method1630(i_8_, i_7_);
                     }
                 } else if (i_11_ >= 0) {
-                    class144.method1629(i_8_, -12850, i_7_);
+                    class144.method1629(i_8_, i_7_);
                 }
             }
         }
@@ -107,7 +107,7 @@ public class Node_Sub38_Sub24 extends Node_Sub38 {
         return is;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         if (i == 0) {
             aClass144Array10350 = new Class144[buffer.readUnsignedByte()];
             int i_24_ = 0;
@@ -140,9 +140,6 @@ public class Node_Sub38_Sub24 extends Node_Sub38 {
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         }
         anInt10349++;
-        if (bool) {
-            method2780(false, null, -67);
-        }
     }
 
     public Node_Sub38_Sub24() {

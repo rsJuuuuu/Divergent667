@@ -53,10 +53,7 @@ public class Node_Sub38_Sub3 extends Node_Sub38 {
         aStringArray10107 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (bool) {
-            anInt10104 = -61;
-        }
+    final void method2780(BufferedStream buffer, int i) {
         while_2_:
         do {
             do {

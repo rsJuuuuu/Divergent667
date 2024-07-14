@@ -80,7 +80,7 @@ public class Class365_Sub1 extends Class365 {
 
     static void method4070() {
         if (Class188.anInt2281 != -1) {
-            Node_Sub38_Sub5.method2802(Class188.anInt2281, false, -1, -1, -11493);
+            Node_Sub38_Sub5.method2802(Class188.anInt2281, false, -1, -1);
             Class188.anInt2281 = -1;
         }
         anInt8758++;

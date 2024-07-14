@@ -292,7 +292,7 @@ public class Class195 {
                         return;
                     }
                     Class320_Sub23.aClass123_8432.aClass365_1557 = CacheNode_Sub6.method2311((Socket)
-                            Class320_Sub23.aClass123_8432.aClass241_1565.anObject2956, (byte) 118);
+                            Class320_Sub23.aClass123_8432.aClass241_1565.anObject2956);
                     Class320_Sub23.aClass123_8432.aClass241_1565 = null;
                     Class320_Sub23.aClass123_8432.method1511((byte) 47);
                     Node_Sub13 node_sub13 = Node_Sub25_Sub1.method2660();
@@ -366,7 +366,7 @@ public class Class195 {
                             Class320_Sub23.aClass123_8432.aPacket1570.offset, 0);
                     Class320_Sub23.aClass123_8432.aPacket1570.method2192(Class121.isaacKeys, 98);
                     Class320_Sub23.aClass123_8432.aPacket1570.offset = 0;
-                    String string = Class320_Sub23.aClass123_8432.aPacket1570.method2180((byte) -73);
+                    String string = Class320_Sub23.aClass123_8432.aPacket1570.method2180();
                     Class320_Sub23.aClass123_8432.aPacket1570.offset = 0;
                     String string_36_ = "opensn";
                     if (!Animable_Sub2_Sub1.aBoolean10628 ||
@@ -450,7 +450,7 @@ public class Class195 {
                         packet.writeByte(Class262_Sub5.method3163() ? 1 : 0);
                         packet.writeByte(Animable_Sub2_Sub1.aBoolean10628 ? 1 : 0);
                         packet.writeByte(!Node_Sub32.aBoolean7379 ? 0 : 1);
-                        Class339_Sub2.method3928(67, packet);
+                        Class339_Sub2.method3928(packet);
                         packet.encryptXteas(Class121.isaacKeys, i_38_, packet.offset);
                         packet.method2194(packet.offset - i_37_);
                     } else {
@@ -479,7 +479,7 @@ public class Class195 {
                         EntityNode_Sub3.method941(packet);
                         packet.writeString(Class83.aString5186);
                         packet.writeInt(Class170.anInt2056);
-                        Class339_Sub2.method3928(-101, packet);
+                        Class339_Sub2.method3928(packet);
                         packet.encryptXteas(Class121.isaacKeys, i_41_, packet.offset);
                         packet.method2194(-i_40_ + packet.offset);
                     }
@@ -627,7 +627,7 @@ public class Class195 {
                             Class290_Sub11.aBoolean8175 = packet.readUnsignedByte() == 1;
                             Class166.myPlayerIndex = packet.readUnsignedShort();
                             Class64.aBoolean5046 = packet.readUnsignedByte() == 1;
-                            Class56.anInt837 = packet.read24BitInteger((byte) 94);
+                            Class56.anInt837 = packet.readSignedInt24();
                             Class101.aBoolean1313 = packet.readUnsignedByte() == 1;
                             Node_Sub32.aString7378 = packet.readString();
                             Class186.aClass112_2256.method1141(Class101.aBoolean1313);
@@ -663,7 +663,7 @@ public class Class195 {
                             Class333.anInt4149 = packet.readUnsignedShort();
                             Class342.anInt4234 = packet.readUnsignedShort();
                             Class225.aBoolean2676 = packet.readUnsignedByte() == 1;
-                            Class295.myPlayer.username = Class295.myPlayer.displayName = Node_Sub40.myPlayerDisplayName = packet.method2180((byte) -55);
+                            Class295.myPlayer.username = Class295.myPlayer.displayName = Node_Sub40.myPlayerDisplayName = packet.method2180();
                             Node_Sub38_Sub29.anInt10409 = packet.readUnsignedByte();
                             Class236.anInt2902 = packet.readInt();
                             Class312.aBoolean3960 = packet.readUnsignedByte() == 1;
@@ -672,7 +672,7 @@ public class Class195 {
                             if (Class262_Sub23.aClass197_7884.id == 65535) {
                                 Class262_Sub23.aClass197_7884.id = -1;
                             }
-                            Class262_Sub23.aClass197_7884.ipadress = packet.method2180((byte) 124);
+                            Class262_Sub23.aClass197_7884.ipadress = packet.method2180();
                             if (Class240.aClass329_2943 != Node_Sub38_Sub1.aClass329_10086) {
                                 Class262_Sub23.aClass197_7884.firstPort = Settings.PORT_ID;// 40000
                                 // -

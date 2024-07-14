@@ -123,7 +123,7 @@ public class Class262_Sub23 extends Class262 {
             Interface21 interface21 = Class320_Sub7.anInterface21Array8275[i_3_];
             int i_4_ = interface21.method75(-29764);
             char c = interface21.method77(-24069);
-            int i_5_ = interface21.method78(88);
+            int i_5_ = interface21.method78();
             if (i_4_ == 84) {
                 Node_Sub21.method2618(false);
             }
@@ -136,7 +136,7 @@ public class Class262_Sub23 extends Class262 {
                             Transferable transferable = Class102.aClipboard1315.getContents(null);
                             if (transferable != null) {
                                 String string = (String) transferable.getTransferData(DataFlavor.stringFlavor);
-                                String[] strings = Class106.method1120((byte) 49, string, '\n');
+                                String[] strings = Class106.method1120(string, '\n');
                                 Class194.method1960(strings);
                             }
                         } catch (Exception exception) {
@@ -260,7 +260,7 @@ public class Class262_Sub23 extends Class262 {
         anInt7879 = buffer.readUnsignedShort();
         anInt7877 = buffer.readUnsignedByte();
         anInt7895 = buffer.readUnsignedByte();
-        anInt7881 = buffer.read24BitInteger();
+        anInt7881 = buffer.readInt24();
         anInt7880 = buffer.readUnsignedShort();
         anInt7882 = buffer.readUnsignedByte();
     }

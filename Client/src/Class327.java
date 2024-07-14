@@ -5,7 +5,6 @@
 import java.util.Objects;
 
 public class Class327 implements Interface16 {
-    static boolean aBoolean5347;
     static int[] anIntArray5348 = new int[13];
     static int anInt5349;
     static int anInt5350;
@@ -17,14 +16,10 @@ public class Class327 implements Interface16 {
     private GraphicsToolkit aGraphicsToolkit5356;
     private Interface10[] anInterface10Array5357;
     static int anInt5358;
-    private boolean aBoolean5359;
     static int anInt5360;
 
     public final boolean method61(boolean bool, long l) {
         anInt5358++;
-        if (bool) {
-            aBoolean5359 = false;
-        }
         return (long) aClass55_5354.anInt831 + l <= Class313.method3650();
     }
 
@@ -52,7 +47,6 @@ public class Class327 implements Interface16 {
     public final void method62(int i) {
         if (aGraphicsToolkit5356 != Class93.aGraphicsToolkit1241) {
             aGraphicsToolkit5356 = Class93.aGraphicsToolkit1241;
-            aBoolean5359 = true;
         }
         anInt5355++;
         aGraphicsToolkit5356.GA(0);
@@ -81,17 +75,13 @@ public class Class327 implements Interface16 {
         return i_2_ * 100 / Objects.requireNonNull(anInterface10Array5357).length;
     }
 
-    public final void method63(boolean bool, byte b) {
+    public final void method63() {
         anInt5352++;
         Interface10[] interface10s = anInterface10Array5357;
         for (Interface10 interface10 : interface10s) {
             if (interface10 != null) {
-                interface10.method27(true, 109);
+                interface10.method27(true);
             }
-        }
-        aBoolean5359 = false;
-        if (b >= -61) {
-            method61(true, -87L);
         }
     }
 
@@ -109,7 +99,4 @@ public class Class327 implements Interface16 {
         anInt5350++;
     }
 
-    static {
-        aBoolean5347 = false;
-    }
 }

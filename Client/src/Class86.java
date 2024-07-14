@@ -29,7 +29,7 @@ public class Class86 {
     private final String[] aStringArray1184;
     private final Index index37;
 
-    final void method1000(byte b) {
+    final void method1000() {
         anInt1177++;
         synchronized (aClass61_1174) {
             aClass61_1174.method608(false);
@@ -48,9 +48,6 @@ public class Class86 {
     }
 
     final GLSprite method1002(int i, GraphicsToolkit graphicstoolkit, GraphicsToolkit graphicstoolkit_0_, PlayerDefinition playerdefinition, boolean bool, int i_1_, int i_2_, boolean bool_3_, int i_4_, Class52 class52, int i_5_) {
-        if (-16139 != -16139) {
-            aClass61_1176 = null;
-        }
         anInt1166++;
         GLSprite glsprite = method1007(playerdefinition, (byte) 18, graphicstoolkit_0_, i_4_, i_5_, i, i_2_, i_1_);
         if (glsprite != null) {
@@ -74,9 +71,9 @@ public class Class86 {
         }
         GLSprite glsprite_9_;
         if (bool) {
-            glsprite_9_ = graphicstoolkit.method1235(36, 36, 32, is, 7468);
+            glsprite_9_ = graphicstoolkit.method1235(36, 36, 32, is);
         } else {
-            glsprite_9_ = graphicstoolkit_0_.method1235(36, 36, 32, is, -16139 ^ -8743);
+            glsprite_9_ = graphicstoolkit_0_.method1235(36, 36, 32, is);
         }
         if (!bool) {
             Class296 class296 = new Class296();
@@ -143,7 +140,7 @@ public class Class86 {
         aClass296_1180.anInt5427 = i_14_;
         aClass296_1180.anInt5431 = graphicstoolkit.anInt1537;
         if (b < 8) {
-            method1000((byte) -95);
+            method1000();
         }
         aClass296_1180.anInt5434 = i;
         anInt1165++;
@@ -165,7 +162,7 @@ public class Class86 {
         anInt1167++;
         if (aBoolean1162 == !bool) {
             aBoolean1162 = bool;
-            method1000((byte) -72);
+            method1000();
         }
     }
 

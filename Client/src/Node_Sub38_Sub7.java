@@ -45,7 +45,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
             method2811(true, -62, 43);
         }
         if (aClass146_7460.aBoolean1819) {
-            int[][] is_2_ = aClass146_7460.method1642((byte) 126);
+            int[][] is_2_ = aClass146_7460.method1642();
             int i_3_ = 0;
             int i_4_ = 0;
             int i_5_ = 0;
@@ -130,7 +130,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
                                     i_35_ = Math.max(i_27_, i_33_);
                                     i_36_ = Class339_Sub7.anInt8728;
                                 }
-                                method2807(is_2_, i_21_ - i_32_, random, i_32_, i_5_ + i_35_, -i_35_ + i_36_, (byte) -58);
+                                method2807(is_2_, i_21_ - i_32_, random, i_32_, i_5_ + i_35_, -i_35_ + i_36_);
                             }
                         }
                     }
@@ -142,7 +142,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
                     bool = false;
                 }
                 if (Class339_Sub7.anInt8728 == i_20_) {
-                    method2807(is_2_, i_19_, random, i_21_, i_4_ + i_6_, i_18_, (byte) -58);
+                    method2807(is_2_, i_19_, random, i_21_, i_4_ + i_6_, i_18_);
                     if (bool) {
                         break;
                     }
@@ -184,7 +184,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
                     is_41_[2] = i_19_ + i_21_;
                     is_41_[1] = i_20_;
                     is_41_[0] = i_6_;
-                    method2807(is_2_, i_19_, random, i_21_, i_6_ + i_4_, i_18_, (byte) -58);
+                    method2807(is_2_, i_19_, random, i_21_, i_6_ + i_4_, i_18_);
                     i_6_ = i_20_;
                 }
             }
@@ -193,94 +193,89 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
     }
 
     final void method2785() {
-        if (7 != 7) {
-            method2807(null, 27, null, 76, -2, -58, (byte) 89);
-        }
         anInt10142++;
     }
 
-    private void method2807(int[][] is, int i, Random random, int i_42_, int i_43_, int i_44_, byte b) {
+    private void method2807(int[][] is, int i, Random random, int i_42_, int i_43_, int i_44_) {
         anInt10158++;
-        int i_45_ = anInt10157 <= 0 ? 4096 : -Class330.method3838(b - 5150, anInt10157, random) + 4096;
+        int i_45_ = anInt10157 <= 0 ? 4096 : -Class330.method3838((byte) -58 - 5150, anInt10157, random) + 4096;
         int i_46_ = anInt10141 * anInt10148 >> 12;
-        int i_47_ = anInt10148 - (i_46_ <= 0 ? 0 : Class330.method3838(b ^ 0x146e, i_46_, random));
+        int i_47_ = anInt10148 - (i_46_ <= 0 ? 0 : Class330.method3838((byte) -58 ^ 0x146e, i_46_, random));
         if (Class339_Sub7.anInt8728 <= i_43_) {
             i_43_ -= Class339_Sub7.anInt8728;
         }
-        if (b == -58) {
-            if (i_47_ <= 0) {
-                if (i_44_ + i_43_ > Class339_Sub7.anInt8728) {
-                    int i_48_ = -i_43_ + Class339_Sub7.anInt8728;
-                    for (int i_49_ = 0; i_49_ < i; i_49_++) {
-                        int[] is_50_ = is[i_49_ + i_42_];
-                        Class311.method3604(is_50_, i_43_, i_48_, i_45_);
-                        Class311.method3604(is_50_, 0, -i_48_ + i_44_, i_45_);
-                    }
-                } else {
-                    for (int i_51_ = 0; i > i_51_; i_51_++)
-                        Class311.method3604(is[i_51_ + i_42_], i_43_, i_44_, i_45_);
+        if (i_47_ <= 0) {
+            if (i_44_ + i_43_ > Class339_Sub7.anInt8728) {
+                int i_48_ = -i_43_ + Class339_Sub7.anInt8728;
+                for (int i_49_ = 0; i_49_ < i; i_49_++) {
+                    int[] is_50_ = is[i_49_ + i_42_];
+                    Class311.method3604(is_50_, i_43_, i_48_, i_45_);
+                    Class311.method3604(is_50_, 0, -i_48_ + i_44_, i_45_);
                 }
-            } else if (i > 0 && i_44_ > 0) {
-                int i_52_ = i_44_ / 2;
-                int i_53_ = i / 2;
-                int i_54_ = Math.min(i_52_, i_47_);
-                int i_55_ = Math.min(i_47_, i_53_);
-                int i_56_ = i_54_ + i_43_;
-                int i_57_ = i_44_ - (i_54_ * 2);
-                for (int i_58_ = 0; i > i_58_; i_58_++) {
-                    int[] is_59_ = is[i_42_ + i_58_];
-                    if (i_55_ > i_58_) {
-                        int i_60_ = i_45_ * i_58_ / i_55_;
-                        if (anInt10140 == 0) {
-                            for (int i_61_ = 0; i_54_ > i_61_; i_61_++) {
-                                int i_62_ = i_61_ * i_45_ / i_54_;
-                                is_59_[Node_Sub30.method2723(i_61_ + i_43_, Class303.anInt3824)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, i_44_ + (i_43_ - i_61_) - 1)] = i_62_ * i_60_ >> 12;
-                            }
-                        } else {
-                            for (int i_63_ = 0; i_54_ > i_63_; i_63_++) {
-                                int i_64_ = i_63_ * i_45_ / i_54_;
-                                is_59_[Node_Sub30.method2723(Class303.anInt3824, i_63_ + i_43_)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, -i_63_ + i_43_ - (-i_44_ + 1))] = Math.min(i_60_, i_64_);
-                            }
-                        }
-                        if (Class339_Sub7.anInt8728 < i_56_ + i_57_) {
-                            int i_65_ = -i_56_ + Class339_Sub7.anInt8728;
-                            Class311.method3604(is_59_, i_56_, i_65_, i_60_);
-                            Class311.method3604(is_59_, 0, -i_65_ + i_57_, i_60_);
-                        } else {
-                            Class311.method3604(is_59_, i_56_, i_57_, i_60_);
+            } else {
+                for (int i_51_ = 0; i > i_51_; i_51_++)
+                    Class311.method3604(is[i_51_ + i_42_], i_43_, i_44_, i_45_);
+            }
+        } else if (i > 0 && i_44_ > 0) {
+            int i_52_ = i_44_ / 2;
+            int i_53_ = i / 2;
+            int i_54_ = Math.min(i_52_, i_47_);
+            int i_55_ = Math.min(i_47_, i_53_);
+            int i_56_ = i_54_ + i_43_;
+            int i_57_ = i_44_ - (i_54_ * 2);
+            for (int i_58_ = 0; i > i_58_; i_58_++) {
+                int[] is_59_ = is[i_42_ + i_58_];
+                if (i_55_ > i_58_) {
+                    int i_60_ = i_45_ * i_58_ / i_55_;
+                    if (anInt10140 == 0) {
+                        for (int i_61_ = 0; i_54_ > i_61_; i_61_++) {
+                            int i_62_ = i_61_ * i_45_ / i_54_;
+                            is_59_[Node_Sub30.method2723(i_61_ + i_43_, Class303.anInt3824)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, i_44_ + (i_43_ - i_61_) - 1)] = i_62_ * i_60_ >> 12;
                         }
                     } else {
-                        int i_66_ = i - i_58_ - 1;
-                        if (i_55_ > i_66_) {
-                            int i_67_ = i_66_ * i_45_ / i_55_;
-                            if (anInt10140 == 0) {
-                                for (int i_70_ = 0; i_70_ < i_54_; i_70_++) {
-                                    int i_71_ = i_45_ * i_70_ / i_54_;
-                                    is_59_[Node_Sub30.method2723(i_43_ + i_70_, Class303.anInt3824)] = is_59_[Node_Sub30.method2723(-1 + (-i_70_ + (i_44_ + i_43_)), Class303.anInt3824)] = i_67_ * i_71_ >> 12;
-                                }
-                            } else {
-                                for (int i_68_ = 0; i_68_ < i_54_; i_68_++) {
-                                    int i_69_ = i_68_ * i_45_ / i_54_;
-                                    is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ + i_68_)] = is_59_[Node_Sub30.method2723(i_43_ + i_44_ + (-i_68_ - 1), Class303.anInt3824)] = Math.min(i_67_, i_69_);
-                                }
-                            }
-                            if (Class339_Sub7.anInt8728 >= i_57_ + i_56_) {
-                                Class311.method3604(is_59_, i_56_, i_57_, i_67_);
-                            } else {
-                                int i_72_ = Class339_Sub7.anInt8728 - i_56_;
-                                Class311.method3604(is_59_, i_56_, i_72_, i_67_);
-                                Class311.method3604(is_59_, 0, -i_72_ + i_57_, i_67_);
+                        for (int i_63_ = 0; i_54_ > i_63_; i_63_++) {
+                            int i_64_ = i_63_ * i_45_ / i_54_;
+                            is_59_[Node_Sub30.method2723(Class303.anInt3824, i_63_ + i_43_)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, -i_63_ + i_43_ - (-i_44_ + 1))] = Math.min(i_60_, i_64_);
+                        }
+                    }
+                    if (Class339_Sub7.anInt8728 < i_56_ + i_57_) {
+                        int i_65_ = -i_56_ + Class339_Sub7.anInt8728;
+                        Class311.method3604(is_59_, i_56_, i_65_, i_60_);
+                        Class311.method3604(is_59_, 0, -i_65_ + i_57_, i_60_);
+                    } else {
+                        Class311.method3604(is_59_, i_56_, i_57_, i_60_);
+                    }
+                } else {
+                    int i_66_ = i - i_58_ - 1;
+                    if (i_55_ > i_66_) {
+                        int i_67_ = i_66_ * i_45_ / i_55_;
+                        if (anInt10140 == 0) {
+                            for (int i_70_ = 0; i_70_ < i_54_; i_70_++) {
+                                int i_71_ = i_45_ * i_70_ / i_54_;
+                                is_59_[Node_Sub30.method2723(i_43_ + i_70_, Class303.anInt3824)] = is_59_[Node_Sub30.method2723(-1 + (-i_70_ + (i_44_ + i_43_)), Class303.anInt3824)] = i_67_ * i_71_ >> 12;
                             }
                         } else {
-                            for (int i_73_ = 0; i_54_ > i_73_; i_73_++)
-                                is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ + i_73_)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, -1 + (-i_73_ + (i_44_ + i_43_)))] = i_73_ * i_45_ / i_54_;
-                            if (i_56_ + i_57_ <= Class339_Sub7.anInt8728) {
-                                Class311.method3604(is_59_, i_56_, i_57_, i_45_);
-                            } else {
-                                int i_74_ = Class339_Sub7.anInt8728 - i_56_;
-                                Class311.method3604(is_59_, i_56_, i_74_, i_45_);
-                                Class311.method3604(is_59_, 0, -i_74_ + i_57_, i_45_);
+                            for (int i_68_ = 0; i_68_ < i_54_; i_68_++) {
+                                int i_69_ = i_68_ * i_45_ / i_54_;
+                                is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ + i_68_)] = is_59_[Node_Sub30.method2723(i_43_ + i_44_ + (-i_68_ - 1), Class303.anInt3824)] = Math.min(i_67_, i_69_);
                             }
+                        }
+                        if (Class339_Sub7.anInt8728 >= i_57_ + i_56_) {
+                            Class311.method3604(is_59_, i_56_, i_57_, i_67_);
+                        } else {
+                            int i_72_ = Class339_Sub7.anInt8728 - i_56_;
+                            Class311.method3604(is_59_, i_56_, i_72_, i_67_);
+                            Class311.method3604(is_59_, 0, -i_72_ + i_57_, i_67_);
+                        }
+                    } else {
+                        for (int i_73_ = 0; i_54_ > i_73_; i_73_++)
+                            is_59_[Node_Sub30.method2723(Class303.anInt3824, i_43_ + i_73_)] = is_59_[Node_Sub30.method2723(Class303.anInt3824, -1 + (-i_73_ + (i_44_ + i_43_)))] = i_73_ * i_45_ / i_54_;
+                        if (i_56_ + i_57_ <= Class339_Sub7.anInt8728) {
+                            Class311.method3604(is_59_, i_56_, i_57_, i_45_);
+                        } else {
+                            int i_74_ = Class339_Sub7.anInt8728 - i_56_;
+                            Class311.method3604(is_59_, i_56_, i_74_, i_45_);
+                            Class311.method3604(is_59_, 0, -i_74_ + i_57_, i_45_);
                         }
                     }
                 }
@@ -330,7 +325,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
         int i = 0;
         short s = 0;
         byte b = 0;
-        mobile.method845(86);
+        mobile.method845();
         if (mobile.aShort9119 < 0 || mobile.aShort9120 < 0 || mobile.aShort9130 >= Class328.anInt4115 || mobile.aShort9124 >= Node_Sub50.anInt7623) {
             return false;
         }
@@ -375,7 +370,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
             Node_Sub52.aMobileArray7648[Class63.anInt923++] = mobile;
         } else {
             int i_88_ = Class320_Sub10.aPlaneArray8300 == Class368.aPlaneArray4548 ? 1 : 0;
-            if (mobile.method814((byte) -59)) {
+            if (mobile.method814()) {
                 if (mobile.method813(0)) {
                     mobile.anAnimable5941 = SeekableFile.anAnimableArray3884[i_88_];
                     SeekableFile.anAnimableArray3884[i_88_] = mobile;
@@ -395,10 +390,7 @@ public class Node_Sub38_Sub7 extends Node_Sub38 {
         return true;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (bool) {
-            method2775(39, 29);
-        }
+    final void method2780(BufferedStream buffer, int i) {
         anInt10144++;
         while_71_:
         do {

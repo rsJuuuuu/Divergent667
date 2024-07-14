@@ -7,7 +7,6 @@ import java.util.Objects;
 public class Class284 {
     protected short[] aShortArray3592;
     protected short[] aShortArray3593;
-    static int anInt3594;
     protected short[] aShortArray3595;
     static EntityNode_Sub3_Sub2_Sub1[] anEntityNode_Sub3_Sub2_Sub1Array3596;
     static float aFloat3597;

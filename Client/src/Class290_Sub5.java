@@ -71,7 +71,7 @@ public class Class290_Sub5 extends Class290 {
         int i_1_ = buffer.readInt();
         int i_2_ = buffer.readInt();
         int i_3_ = buffer.readUnsignedShort();
-        return new Class150_Sub1(Objects.requireNonNull(class150).aClass379_5079, class150.aClass77_5087, class150.anInt5092, class150.anInt5080, class150.anInt5086, class150.anInt5081, class150.anInt5084, class150.anInt5083, class150.anInt5090, i_1_, i_2_, i_3_);
+        return new Class150_Sub1(Objects.requireNonNull(class150).aClass379_5079, class150.aClass77_5087, class150.anInt5092, class150.anInt5080, class150.anInt5086, class150.anInt5081, class150.anInt5084, class150.anInt5083, class150.anInt5090, i_2_, i_3_);
     }
 
     final void method3422(int i, boolean bool) {
@@ -90,7 +90,7 @@ public class Class290_Sub5 extends Class290 {
         super(abstracttoolkit);
     }
 
-    final void method3417(boolean bool, boolean bool_4_) {
+    final void method3417(boolean bool_4_) {
         if (bool_4_) {
             anInt8107 = 75;
         }

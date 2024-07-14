@@ -24,11 +24,8 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
         aClass124_9793 = null;
     }
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         clanchat.method497(aString9791, aLong9796);
-        if (i != 16) {
-            method2556(null, 9);
-        }
         anInt9797++;
     }
 
@@ -59,16 +56,13 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
         /* empty */
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9795++;
         if (buffer.readUnsignedByte() != 255) {
             buffer.offset--;
             aLong9796 = buffer.readLong();
         }
         aString9791 = buffer.readString2();
-        if (i != 29147) {
-            anInt9800 = 123;
-        }
     }
 
     static {

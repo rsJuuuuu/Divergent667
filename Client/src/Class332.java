@@ -22,7 +22,7 @@ public class Class332 {
                         Node_Sub36.method2752();
                         i_0_ = 1;
                     } else {
-                        Class194_Sub1.method1965((byte) -101);
+                        Class194_Sub1.method1965();
                         i_0_ = 2;
                     }
                 } else {

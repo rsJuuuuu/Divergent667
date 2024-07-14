@@ -29,7 +29,7 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1 {
     }
 
     Class265_Sub3(D3DToolkit d3dtoolkit, int i, int i_0_, boolean bool, int[] is, int i_2_) {
-        super(d3dtoolkit, Class99.aClass68_1290, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9200, i_0_ * i);
+        super(d3dtoolkit, Class99.aClass68_1290, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9200);
         if (aD3DToolkit3365.aBoolean9196) {
             anInt7903 = i;
             anInt7905 = i_0_;
@@ -91,7 +91,7 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1 {
     }
 
     Class265_Sub3(D3DToolkit d3dtoolkit, Class68 class68, Class372 class372, int i, int i_17_) {
-        super(d3dtoolkit, class68, class372, false, i_17_ * i);
+        super(d3dtoolkit, class68, class372, false);
         if (aD3DToolkit3365.aBoolean9196) {
             anInt7905 = i_17_;
             anInt7903 = i;
@@ -109,7 +109,7 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1 {
         super.method41((byte) -118, class228);
     }
 
-    public final float method45(float f, int i) {
+    public final float method45(float f) {
 
         return f / (float) anInt7903;
     }
@@ -121,7 +121,7 @@ public class Class265_Sub3 extends Class265 implements Interface13_Impl1 {
     }
 
     Class265_Sub3(D3DToolkit d3dtoolkit, Class68 class68, int i, int i_19_, boolean bool, byte[] bs, int i_20_, int i_21_) {
-        super(d3dtoolkit, class68, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9200, i_19_ * i);
+        super(d3dtoolkit, class68, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9200);
         if (aD3DToolkit3365.aBoolean9196) {
             anInt7905 = i_19_;
             anInt7903 = i;

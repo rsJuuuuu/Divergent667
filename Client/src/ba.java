@@ -13,7 +13,7 @@ public class ba extends r implements Interface3 {
         }
     }
 
-    ba(oa var_oa) {
+    ba() {
         /* empty */
     }
 }

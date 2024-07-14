@@ -47,7 +47,7 @@ public class Class243 {
         Class150_Sub3_Sub1.method1665(i);
         IComponentDefinitions widget = Class76.method771(i_2_);
         if (widget != null) {
-            ClientScript.method2321(-1, widget);
+            ClientScript.method2321(widget);
         }
         Node_Sub8.method2423();
         if (!bool && Class320_Sub15.WINDOWS_PANE_ID != -1) {

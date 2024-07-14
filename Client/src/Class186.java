@@ -21,7 +21,7 @@ public class Class186 {
     static int anInt2261;
     private final Class61 aClass61_2262 = new Class61(64);
 
-    static void method1870(byte b, Actor actor) {
+    static void method1870(Actor actor) {
         anInt2253++;
         Animator animator = actor.anAnimator10876;
         if (actor.toSecondTileTicketDelay == Class174.clientCycle || !animator.method245(-124) || animator.method226()) {
@@ -43,9 +43,6 @@ public class Class186 {
         }
         if (actor.forceMovementDirection == 2) {
             actor.method849(0, -117, false);
-        }
-        if (b <= 16) {
-            method1870((byte) -110, null);
         }
         if (actor.forceMovementDirection == 3) {
             actor.method849(4096, -120, false);
@@ -113,7 +110,7 @@ public class Class186 {
         return class255;
     }
 
-    Class186(Class353 class353, int i, Index class302, Index class302_7_) {
+    Class186(Index class302, Index class302_7_) {
         aClass302_2251 = class302;
         aClass302_2260 = class302_7_;
         aClass302_2251.method3537(46);

@@ -9,7 +9,7 @@ public class Class306 {
     static GraphicsToolkit method3566(Index class302, int i, d var_d, Canvas canvas) {
         GraphicsToolkit graphicstoolkit;
         try {
-            if (!Class352.method4012(71)) {
+            if (Class352.method4012()) {
                 throw new RuntimeException("");
             }
             if (!Node_Sub38_Sub2.method2793("jagdx")) {

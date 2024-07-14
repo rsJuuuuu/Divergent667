@@ -73,13 +73,13 @@ public class Class278 {
         return new Class119(class82.anInt1119, class182s, class82.anInt1113, i_4_, i_3_, i, class82.anInt1114, class82.anInt1109);
     }
 
-    static boolean method3367(int i, int i_6_, byte b) {
+    static boolean method3367(int i_6_) {
 
         anInt3540++;
         return (0x220 & i_6_) == 544 | (0x18 & i_6_) != 0;
     }
 
-    Class278(Class353 class353, int i, Index class302) {
+    Class278(Index class302) {
         aClass302_3539 = class302;
         aClass302_3539.method3537(29);
     }

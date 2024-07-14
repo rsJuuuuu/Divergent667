@@ -33,14 +33,14 @@ abstract class Class270_Sub1 extends Class270 {
         return bs_0_;
     }
 
-    static void method3300(IComponentDefinitions widget, byte b, boolean bool) {
+    static void method3300(IComponentDefinitions widget, boolean bool) {
         anInt8031++;
         int i = widget.anInt4735 != 0 ? widget.anInt4735 : widget.anInt4809;
 
         int i_2_ = widget.anInt4691 != 0 ? widget.anInt4691 : widget.anInt4695;
-        Class320_Sub9.method3716(true, i, bool, i_2_, Class134_Sub3.aWidgetArrayArray9035[widget.ihash >> 16], widget.ihash);
+        Class320_Sub9.method3716(i, bool, i_2_, Class134_Sub3.aWidgetArrayArray9035[widget.ihash >> 16], widget.ihash);
         if (widget.aWidgetArray4793 != null) {
-            Class320_Sub9.method3716(true, i, bool, i_2_, widget.aWidgetArray4793, widget.ihash);
+            Class320_Sub9.method3716(i, bool, i_2_, widget.aWidgetArray4793, widget.ihash);
         }
         Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, widget.ihash);
         if (node_sub2 != null) {

@@ -7,9 +7,9 @@ interface Interface11 {
 
     void method29(int i);
 
-    void method30(int i);
+    void method30();
 
-    void method31(byte b);
+    void method31();
 
     void method32(int i);
 

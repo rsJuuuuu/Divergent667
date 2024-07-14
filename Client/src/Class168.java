@@ -23,7 +23,7 @@ public class Class168 {
         }
         Node_Sub16.aClass312_7139.method3614();
         Class130.aClass312_1670.method3614();
-        for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+        for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
             int i = cachenode_sub13.anInt9562;
             if (i < 1000) {
                 cachenode_sub13.method2160((byte) 78);
@@ -40,7 +40,7 @@ public class Class168 {
             Node_Sub38_Sub23.aCacheNode_Sub13_10343 = null;
             Class52.aCacheNode_Sub13_788 = null;
         } else {
-            if (!Class116.aBoolean5072 || !Class175.aClass291_2100.method3450(-69, 81) || Class315.anInt4035 <= 2) {
+            if (!Class116.aBoolean5072 || !Class175.aClass291_2100.method3450(81) || Class315.anInt4035 <= 2) {
                 Node_Sub38_Sub23.aCacheNode_Sub13_10343 = (CacheNode_Sub13) Class368.aClass312_4549.aNode3958.aNode2799;
             } else {
                 Node_Sub38_Sub23.aCacheNode_Sub13_10343 = (CacheNode_Sub13) Class368.aClass312_4549.aNode3958.aNode2799.aNode2799;

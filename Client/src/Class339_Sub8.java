@@ -24,7 +24,7 @@ public class Class339_Sub8 extends Class339 {
         cachenode_sub2.method2291();
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8736++;
     }
 
@@ -51,7 +51,7 @@ public class Class339_Sub8 extends Class339 {
             Class262_Sub15.method3188();
         } else if (i <= 5000) {
             if (i > 2000) {
-                Class194_Sub1.method1965((byte) -119);
+                Class194_Sub1.method1965();
                 i_1_ = 2;
             } else {
                 i_1_ = 1;
@@ -72,7 +72,7 @@ public class Class339_Sub8 extends Class339 {
     final void method3917(Class169 class169, int i, int i_2_) {
         anInt8731++;
         aGLToolkit4202.method1444(i_2_ + 28287, class169);
-        aGLToolkit4202.method1434((byte) -78, i);
+        aGLToolkit4202.method1434(i);
         if (i_2_ != -28289) {
             anInt8739 = -121;
         }

@@ -173,9 +173,9 @@ public class Class245 {
             Node_Sub10.anInt7079 = Node_Sub38_Sub38.anInt10490 << 9;
             Class98.anInt5061 = Renderer.anInt3663 << 9;
         } else {
-            Class309.method3586(-120);
+            Class309.method3586();
         }
-        Class120.method1228(-104);
+        Class120.method1228();
     }
 
     final void method3070() {

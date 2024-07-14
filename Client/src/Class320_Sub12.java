@@ -24,11 +24,11 @@ public class Class320_Sub12 extends Class320 {
         return aNode_Sub27_4063.aClass320_Sub30_7275.method3796(false) != 0;
     }
 
-    static void method3727(Class121 class121, byte b, int i, int i_0_, int i_1_, int i_2_) {
+    static void method3727(Class121 class121, int i, int i_0_, int i_1_, int i_2_) {
         anInt8318++;
 
         Node_Sub19 node_sub19 = null;
-        for (Node_Sub19 node_sub19_4_ = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19_4_ != null; node_sub19_4_ = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620(16776960)) {
+        for (Node_Sub19 node_sub19_4_ = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(); node_sub19_4_ != null; node_sub19_4_ = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620()) {
             if (node_sub19_4_.anInt7165 == i && node_sub19_4_.anInt7171 == i_1_ && i_2_ == node_sub19_4_.anInt7161 && node_sub19_4_.anInt7166 == i_0_) {
                 node_sub19 = node_sub19_4_;
                 break;

@@ -13,5 +13,4 @@ public class Class358 {
     protected short aShort4452;
     protected short[] aShortArray4453;
     protected short[] aShortArray4454;
-    protected byte aByte4455;
 }

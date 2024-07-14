@@ -26,7 +26,7 @@ public class Class170 {
                             Class336_Sub3.method3901(animable_sub2, i, i_0_, i_1_, 1, 1);
                             if (animable_sub2_2_ != null && animable_sub2_2_.method821(0)) {
                                 Class336_Sub3.method3901(animable_sub2_2_, i, i_0_, i_1_, 1, 1);
-                                animable_sub2_2_.method816(0, false, CacheNode_Sub18.aGraphicsToolkit9607, 0, (byte) 126, 0, animable_sub2);
+                                animable_sub2_2_.method816(0, false, 0, (byte) 126, 0, animable_sub2);
                                 animable_sub2_2_.method811(27811);
                             }
                             animable_sub2.method811(27811);
@@ -49,7 +49,7 @@ public class Class170 {
         }
     }
 
-    Class170(int i, int i_3_) {
+    Class170(int i_3_) {
         anInt2047 = i_3_;
     }
 

@@ -89,7 +89,7 @@ class Animator {
                 return null;
             }
         }
-        return new Class288(glxtoolkit, l, class237s);
+        return new Class288(glxtoolkit, l);
     }
 
     final void method225(DrawableModel drawablemodel, int i_1_) {
@@ -131,7 +131,7 @@ class Animator {
 
     final void method228(int i, int i_4_, int i_5_, boolean bool) {
         anInt244++;
-        if (i != method250((byte) -62)) {
+        if (i != method250()) {
             if (i == -1) {
                 aClass48_233 = null;
             } else {
@@ -265,7 +265,7 @@ class Animator {
         anInt264++;
         if (i_18_ < -77 && drawablemodel != null) {
             class171.method1793(drawablemodel.fa(), drawablemodel.HA(), i_16_,
-                    i_17_, drawablemodel.G(), -45, drawablemodel.na(), i,
+                    i_17_, drawablemodel.G(), drawablemodel.na(), i,
                     drawablemodel.EA(), drawablemodel.V(), drawablemodel.RA());
         }
     }
@@ -281,11 +281,11 @@ class Animator {
     final void method241(DrawableModel drawablemodel) {
         anInt238++;
         if (method247(29340)) {
-            drawablemodel.method631(aClass226_270.anInt2685, 68,
+            drawablemodel.method631(aClass226_270.anInt2685,
                     aClass226_270.aCacheNode_Sub15_2683);
             if (aBoolean234 && aClass48_233.anIntArray712 != null
                     && aClass226_241.aBoolean2689) {
-                drawablemodel.method631(aClass226_241.anInt2685, 37,
+                drawablemodel.method631(aClass226_241.anInt2685,
                         aClass226_241.aCacheNode_Sub15_2683);
             }
         }
@@ -364,7 +364,7 @@ class Animator {
     final boolean method248(int i, int i_21_) {
         anInt249++;
         if (i >= -83) {
-            method250((byte) 67);
+            method250();
         }
         if (aClass48_233 == null || i_21_ == 0) {
             return false;
@@ -452,7 +452,7 @@ class Animator {
         method228(i, 0, 0, false);
     }
 
-    final int method250(byte b) {
+    final int method250() {
         anInt261++;
         if (aClass48_233 != null) {
             return aClass48_233.anInt711;

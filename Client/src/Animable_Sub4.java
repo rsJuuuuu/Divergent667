@@ -32,7 +32,7 @@ abstract class Animable_Sub4 extends Animable {
         }
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_0_, byte b, int i_1_, Animable animable) {
+    final void method816(int i, boolean bool, int i_0_, byte b, int i_1_, Animable animable) {
         if (b < 101) {
             anInt9153 = -26;
         }

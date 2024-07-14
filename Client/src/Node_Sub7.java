@@ -26,7 +26,7 @@ public class Node_Sub7 extends Node {
         Class368.aClass312_4549.method3614();
         Class261.aHashTable3306.method1517(false);
         Class184.aClass158_2189.method1722(true);
-        Client.method114((byte) 118, Class277.aCacheNode_Sub13_3509);
+        Client.method114(Class277.aCacheNode_Sub13_3509);
     }
 
     static void method2422(String string) {
@@ -39,14 +39,14 @@ public class Node_Sub7 extends Node {
         int i_0_ = Class247.aCalendar3144.get(Calendar.MINUTE);
         int i_1_ = Class247.aCalendar3144.get(Calendar.SECOND);
         String string_2_ = Integer.toString(i / 10) + i % 10 + ":" + i_0_ / 10 + i_0_ % 10 + ":" + i_1_ / 10 + i_1_ % 10;
-        String[] strings = Class106.method1120((byte) -113, string, '\n');
+        String[] strings = Class106.method1120(string, '\n');
         for (String s : strings) {
             for (int i_4_ = Class144_Sub4.anInt6848; i_4_ > 0; i_4_--)
                 Class210.aStringArray2502[i_4_] = Class210.aStringArray2502[-1 + i_4_];
             Class210.aStringArray2502[0] = string_2_ + ": " + s;
             if (Class270_Sub1.aFileOutputStream8027 != null) {
                 try {
-                    Class270_Sub1.aFileOutputStream8027.write(Class320_Sub21.method3763(-128, Class210.aStringArray2502[0] + "\n"));
+                    Class270_Sub1.aFileOutputStream8027.write(Class320_Sub21.method3763(Class210.aStringArray2502[0] + "\n"));
                 } catch (java.io.IOException ioexception) {
                     /* empty */
                 }

@@ -8,7 +8,6 @@ import java.awt.Toolkit;
 import java.awt.image.PixelGrabber;
 
 public class Class97 {
-    static int anInt1274;
     static int anInt1275;
     static int anInt1276;
     static Class103 aClass103_1277 = new Class103();
@@ -58,9 +57,6 @@ public class Class97 {
     }
 
     static GLSprite method1077(byte[] bs) {
-        if (-127 > -123) {
-            aClass103_1277 = null;
-        }
         anInt1276++;
         if (bs == null) {
             throw new RuntimeException("");
@@ -83,7 +79,7 @@ public class Class97 {
                         i_10_, is, 0, i_9_);
                 pixelgrabber.grabPixels();
                 return Class93.aGraphicsToolkit1241.method1235(i_9_, i_9_,
-                        i_10_, is, 7468);
+                        i_10_, is);
             } catch (InterruptedException interruptedexception) {
                 /* empty */
             }

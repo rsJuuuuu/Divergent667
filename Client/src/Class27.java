@@ -46,7 +46,7 @@ public class Class27 {
                 return 1;
             }
             if (i_2_ == 81) {
-                int i_4_ = aBuffer458.read24BitInteger();
+                int i_4_ = aBuffer458.readInt24();
                 i_3_ -= 3;
                 int i_5_ = anIntArray459[i];
                 aLong461 += (long) i_5_ * (long) (anInt464 - i_4_);

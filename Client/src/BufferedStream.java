@@ -5,79 +5,39 @@
 import java.math.BigInteger;
 
 class BufferedStream extends Node {
-    static int anInt6952;
-    static int anInt6953;
-    static int anInt6954;
-    static int anInt6955;
-    static int anInt6956;
-    static int anInt6957;
     static int anInt6958;
-    static int anInt6959;
     static int anInt6960;
-    static int anInt6961;
     static int anInt6962;
     static int anInt6963;
     static int anInt6964;
-    static int anInt6965;
-    static int anInt6966;
     static int anInt6967;
     static int anInt6968;
-    static int anInt6969;
     static int anInt6970;
-    static int anInt6971;
-    static int anInt6972;
-    static int anInt6973;
-    static int anInt6974;
     static int anInt6975;
     static int anInt6976;
     static int anInt6977;
-    static int anInt6978;
     static int anInt6979;
-    static int anInt6980;
     static int anInt6981;
-    static int anInt6982;
-    static int anInt6983;
-    static int anInt6984;
     static int anInt6985;
     static int anInt6986;
-    static int anInt6987;
     static int anInt6988;
-    static int anInt6989;
     static int anInt6990;
-    static int anInt6991;
-    static int anInt6992;
-    static int anInt6993;
-    static int anInt6994;
     static int anInt6995;
-    static int anInt6996;
-    static int anInt6997;
     static int anInt6998;
     static int anInt6999;
     static int anInt7000;
     static int anInt7001;
     protected int offset;
     static int anInt7003;
-    static int anInt7004;
-    static int anInt7005;
-    static int anInt7006;
-    static int anInt7007;
     static int anInt7008;
-    static int anInt7009;
     static int anInt7010;
     static int anInt7011;
     static int anInt7012;
-    static int anInt7013;
     static IncommingPacket aClass192_7014 = new IncommingPacket(136, 6);
-    static int anInt7015;
-    static int anInt7016;
-    static int anInt7017;
-    static int anInt7018;
     protected byte[] buffer;
     static int anInt7020;
-    static int anInt7021;
     static int anInt7022;
     static int anInt7023;
-    static int anInt7024;
     static int anInt7025;
 
     final int readIntLE() {
@@ -101,7 +61,7 @@ class BufferedStream extends Node {
         buffer[offset++] = (byte) i;
     }
 
-    final String method2180(byte b) {
+    final String method2180() {
         anInt7025++;
         byte b_0_ = buffer[offset++];
         if (b_0_ != 0) {
@@ -268,7 +228,7 @@ class BufferedStream extends Node {
         return -49152 + readUnsignedShort();
     }
 
-    final void writeJagString(String string, int i) {
+    final void writeJagString(String string) {
         anInt6977++;
         int i_26_ = string.indexOf('\0');
         if (i_26_ >= 0) {
@@ -352,7 +312,7 @@ class BufferedStream extends Node {
         buffer[offset - i - 1] = (byte) i;
     }
 
-    static void method2205(int i, Node node, Node node_38_) {
+    static void method2205(Node node, Node node_38_) {
         if (node_38_.aNode2799 != null) {
             node_38_.method2160((byte) 31);
         }
@@ -433,7 +393,7 @@ class BufferedStream extends Node {
         buffer[offset - (i + 1)] = (byte) i;
     }
 
-    final int method2218(int i) {
+    final int method2218() {
         offset += 2;
         anInt6976++;
         int i_48_ = (0xff & buffer[-2 + offset]) + (buffer[offset - 1] << 8 & 0xff00);
@@ -448,7 +408,7 @@ class BufferedStream extends Node {
         return (0xff & buffer[-1 + offset]) + ((buffer[-2 + offset] & 0xff) << 8);
     }
 
-    final int read24BitInteger() {
+    final int readInt24() {
         offset += 3;
         return ((buffer[offset - 2] & 0xff) << 8) + ((0xff & buffer[offset - 3]) << 16) + (buffer[-1 + offset] & 0xff);
     }
@@ -512,7 +472,7 @@ class BufferedStream extends Node {
         buffer[offset++] = (byte) 0;
     }
 
-    final int read24BitInteger(byte b) {
+    final int readSignedInt24() {
         anInt7000++;
         offset += 3;
         int i = (0xff & buffer[-1 + offset]) + (((0xff & buffer[-3 + offset]) << 16) + ((buffer[-2 + offset] & 0xff) << 8));

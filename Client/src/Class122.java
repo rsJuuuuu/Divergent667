@@ -8,15 +8,13 @@ public class Class122 {
     static int anInt1552;
     private final Index aClass302_1553;
     private final Class61 aClass61_1554 = new Class61(64);
-    static boolean[][] aBooleanArrayArray1555;
     static int[] anIntArray1556;
 
     public static void method1507() {
         anIntArray1556 = null;
-        aBooleanArrayArray1555 = null;
     }
 
-    final CacheNode_Sub3 method1508(byte b, int i) {
+    final CacheNode_Sub3 method1508(int i) {
         anInt1551++;
         CacheNode_Sub3 cachenode_sub3 = (CacheNode_Sub3) aClass61_1554.method607(i, 0);
         if (cachenode_sub3 != null) {
@@ -40,7 +38,7 @@ public class Class122 {
         return cachenode_sub3;
     }
 
-    Class122(int i, Index class302, Index class302_1_) {
+    Class122(Index class302, Index class302_1_) {
         aClass302_1553 = class302_1_;
         aClass302_1550 = class302;
         if (aClass302_1550 != null) {

@@ -185,7 +185,7 @@ public class StandardPlane extends Plane {
                 anAbstractToolkit8004.method1318(Class117_Sub1.aClass94_4924, Class116.aClass94_5075);
                 anAbstractToolkit8004.method1304(0, InterfaceSettings.aClass135_7421);
                 anAbstractToolkit8004.method1366(Class115.aClass135_1465, 0);
-                for (Node node = aClass312_7989.method3613(); node != null; node = aClass312_7989.method3620(16776960)) {
+                for (Node node = aClass312_7989.method3613(); node != null; node = aClass312_7989.method3620()) {
                     Node_Sub24 node_sub24 = (Node_Sub24) node;
                     node_sub24.method2646(i_27_, i, (byte) 51, i_25_, bools);
                 }
@@ -698,7 +698,7 @@ public class StandardPlane extends Plane {
                 fs[10] = 1.0F / (-aFloat7988 + aFloat7987);
                 fs[3] = 0.0F;
                 fs[15] = 1.0F;
-                Objects.requireNonNull(class336_sub1).method3880(0.0F, (byte) 88, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F);
+                Objects.requireNonNull(class336_sub1).method3880(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F);
                 anAbstractToolkit8004.method1339();
                 anAbstractToolkit8004.method1266((byte) 119);
                 if ((0x7 & anInt7981) == 0) {

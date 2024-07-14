@@ -15,7 +15,6 @@ public class Class79 {
     protected int[] anIntArray1049;
     protected int anInt1050 = -1;
     protected int anInt1051;
-    static boolean aBoolean1052 = false;
     private HashTable aHashTable1053;
     protected int anInt1054;
     protected int anInt1055;
@@ -87,7 +86,7 @@ public class Class79 {
             }
             i = interface17.method64(anInt1069, (byte) -42);
         } else {
-            i = interface17.method65(anInt1091, -43);
+            i = interface17.method65(anInt1091);
         }
         if (anInt1087 > i || anInt1042 < i) {
             return false;
@@ -100,7 +99,7 @@ public class Class79 {
                 i_0_ = interface17.method64(anInt1048, (byte) -42);
             }
         } else {
-            i_0_ = interface17.method65(anInt1044, -56);
+            i_0_ = interface17.method65(anInt1044);
         }
         return !(i_0_ < anInt1078 || anInt1072 < i_0_);
     }
@@ -219,9 +218,9 @@ public class Class79 {
         } else if (i == 3) {
             aString1085 = buffer.readString();
         } else if (i == 4) {
-            anInt1058 = buffer.read24BitInteger();
+            anInt1058 = buffer.readInt24();
         } else if (i == 5) {
-            anInt1054 = buffer.read24BitInteger();
+            anInt1054 = buffer.readInt24();
         } else if (i == 6) {
             anInt1090 = buffer.readUnsignedByte();
         } else if (i == 7) {
@@ -298,7 +297,7 @@ public class Class79 {
             }
             for (int i_9_ = 0; i_7_ > i_9_; i_9_++) {
                 boolean bool = buffer.readUnsignedByte() == 1;
-                int i_10_ = buffer.read24BitInteger();
+                int i_10_ = buffer.readInt24();
                 Node node;
                 if (bool) {
                     node = new Node_Sub18(buffer.readString());

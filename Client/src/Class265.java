@@ -20,7 +20,7 @@ abstract class Class265 {
 
     abstract IDirect3DBaseTexture method3232(int i);
 
-    Class265(D3DToolkit d3dtoolkit, Class68 class68, Class372 class372, boolean bool, int i) {
+    Class265(D3DToolkit d3dtoolkit, Class68 class68, Class372 class372, boolean bool) {
         aClass68_3367 = class68;
         aBoolean3364 = bool;
         aClass372_3366 = class372;

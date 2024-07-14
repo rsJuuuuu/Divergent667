@@ -36,7 +36,7 @@ public class Node_Sub38_Sub11 extends Node_Sub38 {
         Class44.aGraphicsToolkit668.a(Class113.aClass336_1440);
     }
 
-    private void method2827(int i) {
+    private void method2827() {
         anInt10202++;
         Random random = new Random(anInt10204);
         anInt10206 = 4096 / anInt10222;
@@ -44,9 +44,6 @@ public class Node_Sub38_Sub11 extends Node_Sub38 {
         anInt10211 = anInt10205 / 2;
         int i_0_ = anInt10206 / 2;
         anIntArrayArray10203 = new int[anInt10204][anInt10222 + 1];
-        if (i != 25428) {
-            anIntArray10218 = null;
-        }
         anIntArray10210 = new int[anInt10204 + 1];
         int i_1_ = anInt10219 / 2;
         anIntArrayArray10223 = new int[anInt10204][anInt10222];
@@ -66,14 +63,14 @@ public class Node_Sub38_Sub11 extends Node_Sub38 {
                     i_6_ += i_0_ * i_7_ >> 12;
                     anIntArrayArray10203[i_2_][i_5_] = i_6_ + anIntArrayArray10203[i_2_][i_5_ - 1];
                 }
-                anIntArrayArray10223[i_2_][i_5_] = anInt10209 > 0 ? 4096 - Class330.method3838(Node_Sub19.method2612(i, -30468), anInt10209, random) : 4096;
+                anIntArrayArray10223[i_2_][i_5_] = anInt10209 > 0 ? 4096 - Class330.method3838(Node_Sub19.method2612(25428, -30468), anInt10209, random) : 4096;
             }
             anIntArrayArray10203[i_2_][anInt10222] = 4096;
         }
         anIntArray10210[anInt10204] = 4096;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         while_148_:
         do {
             while_147_:
@@ -128,17 +125,11 @@ public class Node_Sub38_Sub11 extends Node_Sub38 {
             } while (false);
             anInt10209 = buffer.readUnsignedShort();
         } while (false);
-        if (bool) {
-            aClass318_10221 = null;
-        }
         anInt10216++;
     }
 
     final void method2785() {
-        if (7 != 7) {
-            method2780(true, null, 83);
-        }
-        method2827(7 + 25421);
+        method2827();
         anInt10200++;
     }
 

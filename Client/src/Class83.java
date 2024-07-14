@@ -23,7 +23,7 @@ public class Class83 implements Interface10 {
 
     }
 
-    public final void method27(boolean bool, int i) {
+    public final void method27(boolean bool) {
         if (bool) {
             int i_0_ = Math.max(Node_Sub38_Sub12.anInt10225, Class360.screenWidth);
             int i_1_ = Math.max(Class205.screenHeight, Class257.anInt3244);
@@ -68,13 +68,13 @@ public class Class83 implements Interface10 {
 
     static Class144_Sub1 method801(BufferedStream buffer) {
         anInt5184++;
-        return new Class144_Sub1(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.read24BitInteger(), buffer.read24BitInteger(), buffer.readUnsignedByte());
+        return new Class144_Sub1(buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readShort(), buffer.readInt24(), buffer.readInt24(), buffer.readUnsignedByte());
     }
 
     public final boolean method25(int i) {
         anInt5181++;
         if (i != 421) {
-            method27(false, 2);
+            method27(false);
         }
         return aClass302_5189.method3510(aClass166_5182.anInt5093);
     }

@@ -20,7 +20,7 @@ abstract class Class339 {
 
     abstract void method3919(int i, int i_1_, int i_2_);
 
-    abstract void method3920(boolean bool);
+    abstract void method3920();
 
     static int method3921(int i, int i_3_, int i_5_) {
         i_5_ &= 0x3;

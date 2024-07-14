@@ -5,7 +5,6 @@
 import jaggl.OpenGL;
 
 public class Class339_Sub5 extends Class339 {
-    static int anInt8681;
     static int anInt8682;
     static int anInt8683;
     static int anInt8684 = -1;
@@ -121,7 +120,7 @@ public class Class339_Sub5 extends Class339 {
         return false;
     }
 
-    final void method3920(boolean bool) {
+    final void method3920() {
         anInt8690++;
     }
 
@@ -170,7 +169,7 @@ public class Class339_Sub5 extends Class339 {
             method3922((byte) 64);
         }
         anInt8687++;
-        aGLToolkit4202.method1434((byte) -57, i);
+        aGLToolkit4202.method1434(i);
     }
 
     final void method3918(int i) {

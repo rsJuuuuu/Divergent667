@@ -48,7 +48,7 @@ public class Class310 {
         method3597(graphicstoolkit, true, true, true, 262144);
     }
 
-    final void method3588(GraphicsToolkit graphicstoolkit) {
+    final void method3588() {
         if (aR3942 != null) {
             Node_Sub23.method2636(aR3942, aByte3944, anAnimable3920.anInt5934, anAnimable3920.anInt5940, aBooleanArray3953);
             aBooleanArray3953 = null;
@@ -68,7 +68,7 @@ public class Class310 {
         if (b <= 101) {
             method3589(-1, -125, (byte) -126, -17, 94);
         }
-        Class362.method4053(i_2_, i_2_ + i_1_, i_0_, (byte) 121, i_0_ + i);
+        Class362.method4053(i_2_, i_2_ + i_1_, i_0_, i_0_ + i);
     }
 
     final int method3590() {
@@ -120,7 +120,7 @@ public class Class310 {
                     objectdefinition_10_ = null;
                 }
                 if (objectdefinition.method3037()) {
-                    if (bool && anAnimator3918.method245(-127) && objectdefinition.method3035(anAnimator3918.method250((byte) 95))) {
+                    if (bool && anAnimator3918.method245(-127) && objectdefinition.method3035(anAnimator3918.method250())) {
                         return;
                     }
                     if (objectdefinition.objectId != anInt3928) {
@@ -133,7 +133,7 @@ public class Class310 {
                         i = 1;
                     }
                 } else if (objectdefinition_10_ != null && objectdefinition_10_.method3037()) {
-                    if (bool && anAnimator3918.method245(-126) && objectdefinition_10_.method3035(anAnimator3918.method250((byte) -69))) {
+                    if (bool && anAnimator3918.method245(-126) && objectdefinition_10_.method3035(anAnimator3918.method250())) {
                         return;
                     }
                     if (anInt3928 != objectdefinition.objectId) {
@@ -170,7 +170,7 @@ public class Class310 {
             objectdefinition = objectdefinition.method3038(13, aa.anInt101 != 3 ? Class24.aClass275_442 : ProducingGraphicsBuffer.anInterface17_9901);
         }
         if (objectdefinition == null) {
-            method3588(graphicstoolkit);
+            method3588();
             anInt3928 = -1;
             return null;
         }
@@ -179,7 +179,7 @@ public class Class310 {
             aDrawableModel3939 = null;
             aBoolean3949 = false;
         }
-        method3599(anAnimable3920, bool_11_);
+        method3599(bool_11_);
         if (bool_12_) {
             bool_12_ = aBoolean3932 & !aBoolean3949 & Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730() != 0;
         }
@@ -264,7 +264,7 @@ public class Class310 {
         }
     }
 
-    private void method3599(Animable animable, boolean bool) {
+    private void method3599(boolean bool) {
         anInt3950++;
         if (!anAnimator3918.method245(-127)) {
             method3595(0, -1, (byte) -96, false);
@@ -304,7 +304,7 @@ public class Class310 {
                 } else {
                     anEntityNode_Sub4_3931.method958(Class174.clientCycle);
                 }
-                anEntityNode_Sub4_3931.method967(aByte3925, i_16_, i_15_, i_17_, i);
+                anEntityNode_Sub4_3931.method967(aByte3925);
             }
         }
     }

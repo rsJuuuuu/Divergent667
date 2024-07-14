@@ -24,7 +24,7 @@ public class Class345 {
         anInt4269++;
     }
 
-    static EntityNode_Sub6 method3972(boolean bool, byte b, int i) {
+    static EntityNode_Sub6 method3972(boolean bool, int i) {
         anInt4271++;
         synchronized (Class30.aClass103Array494) {
             EntityNode_Sub6 entitynode_sub6;

@@ -9,7 +9,7 @@ public class Class130 {
     static int anInt1671;
     static int anInt1672;
 
-    static void method1557(byte b, Index class302, GraphicsToolkit graphicstoolkit) {
+    static void method1557(Index class302, GraphicsToolkit graphicstoolkit) {
         anInt1671++;
         Class383[] class383s = Class383.method4187(class302, Class89.anInt1197);
         Class320_Sub5.aGLSpriteArray8254 = new GLSprite[Objects.requireNonNull(class383s).length];

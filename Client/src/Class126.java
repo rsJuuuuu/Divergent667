@@ -627,7 +627,7 @@ public class Class126 {
                     int i_21_ = -1;
                     int i_22_ = 1000;
                     if (string.length() > 15) {
-                        String[] strings = Class106.method1120((byte) -128, string, ' ');
+                        String[] strings = Class106.method1120(string, ' ');
                         try {
                             if (strings.length > 1) {
                                 i_22_ = Integer.parseInt(strings[1]);
@@ -734,11 +734,11 @@ public class Class126 {
                 }
                 if (string.startsWith("getclientvarp")) {
                     int i_28_ = Integer.parseInt(string.substring(14));
-                    Node_Sub7.method2422("varp=" + Class24.aClass275_442.method65(i_28_, 107));
+                    Node_Sub7.method2422("varp=" + Class24.aClass275_442.method65(i_28_));
                     return;
                 }
                 if (string.startsWith("directlogin")) {
-                    String[] strings = Class106.method1120((byte) 115, string.substring(12), ' ');
+                    String[] strings = Class106.method1120(string.substring(12), ' ');
                     if (strings.length >= 2) {
                         int i_29_ = strings.length > 2 ? Integer.parseInt(strings[2]) : 0;
                         Class39.method415(i_29_, strings[1], strings[0], 106);
@@ -746,7 +746,7 @@ public class Class126 {
                     }
                 }
                 if (string.startsWith("snlogin ")) {
-                    String[] strings = Class106.method1120((byte) -110, string.substring(8), ' ');
+                    String[] strings = Class106.method1120(string.substring(8), ' ');
                     int i_30_ = Integer.parseInt(strings[0]);
                     int i_31_ = strings.length == 2 ? Integer.parseInt(strings[1]) : 0;
                     Animable.method822(i_30_, i_31_);
@@ -757,11 +757,11 @@ public class Class126 {
                     return;
                 }
                 if (string.startsWith("csprofileoutputc")) {
-                    ClientScriptsExecutor.method3554(100, false);
+                    /* empty */
                     return;
                 }
                 if (string.startsWith("csprofileoutputt")) {
-                    ClientScriptsExecutor.method3554(10, true);
+                    /* empty */
                     return;
                 }
                 if (string.startsWith("texsize")) {
@@ -889,12 +889,12 @@ public class Class126 {
                         Node_Sub7.method2422("No such file");
                         return;
                     }
-                    byte[] bs = Class337.method3904((byte) 113, file);
+                    byte[] bs = Class337.method3904(file);
                     if (bs == null) {
                         Node_Sub7.method2422("Failed to read file");
                         return;
                     }
-                    String[] strings = Class106.method1120((byte) -57, Class197.method1998(Objects.requireNonNull(Class329.method3835(bs
+                    String[] strings = Class106.method1120(Class197.method1998(Objects.requireNonNull(Class329.method3835(bs
                     ))), '\n');
                     Class194.method1960(strings);
                 }

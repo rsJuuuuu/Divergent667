@@ -148,7 +148,7 @@ public class Class259 {
         anInt3248++;
         i = Class213.aNode_Sub27_2512.aClass320_Sub25_7274.method3776() * i >> 8;
         if (i != 0 && i_9_ != -1) {
-            if (!Class377_Sub1.aBoolean8775 && Class313.anInt4013 != -1 && Class36.method390(b ^ 0x11) && !Class113.method1152(-85)) {
+            if (!Class377_Sub1.aBoolean8775 && Class313.anInt4013 != -1 && Class36.method390() && !Class113.method1152(-85)) {
                 EntityNode_Sub1.aNode_Sub9_Sub1_5929 = Class230.method2129();
                 Node_Sub9_Sub1 node_sub9_sub1 = Class32.method359(EntityNode_Sub1.aNode_Sub9_Sub1_5929);
                 AnimableAnimator_Sub1.method256(node_sub9_sub1);

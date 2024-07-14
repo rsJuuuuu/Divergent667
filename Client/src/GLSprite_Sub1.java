@@ -46,7 +46,7 @@ public class GLSprite_Sub1 extends GLSprite {
         OpenGL.glPixelTransferf(3353, 0.499F);
         OpenGL.glPixelTransferf(3354, 0.5F);
         OpenGL.glPixelTransferf(3355, 0.499F);
-        aClass169_Sub2_Sub1_8854 = Class158.method1724(0, aClass169_Sub2_Sub1_8855.anInt10564, aClass169_Sub2_Sub1_8855.anInt10566, (byte) 83, 0, aGLToolkit8861);
+        aClass169_Sub2_Sub1_8854 = Class158.method1724(0, aClass169_Sub2_Sub1_8855.anInt10564, aClass169_Sub2_Sub1_8855.anInt10566, 0, aGLToolkit8861);
         anInt8869 = 3;
         OpenGL.glPixelTransferf(3348, 1.0F);
         OpenGL.glPixelTransferf(3349, 0.0F);
@@ -71,7 +71,7 @@ public class GLSprite_Sub1 extends GLSprite {
             float f_13_ = (float) aClass169_Sub2_Sub1_8855.anInt10564 * f_9_ + f_11_;
             if (aClass169_Sub2_Sub1_8854 == null) {
                 aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-                aGLToolkit8861.method1434((byte) 54, i_5_);
+                aGLToolkit8861.method1434(i_5_);
                 OpenGL.glBegin(7);
                 OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
                 OpenGL.glVertex2f(f_10_, f_11_);
@@ -103,7 +103,7 @@ public class GLSprite_Sub1 extends GLSprite {
             }
         } else if (aClass169_Sub2_Sub1_8854 == null) {
             aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-            aGLToolkit8861.method1434((byte) -88, i_5_);
+            aGLToolkit8861.method1434(i_5_);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
             OpenGL.glVertex2i(i, i_2_);
@@ -175,10 +175,10 @@ public class GLSprite_Sub1 extends GLSprite {
         aClass169_Sub2_Sub1_8855.method1757(true);
         aGLToolkit8861.method1461();
         aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-        aGLToolkit8861.method1434((byte) 94, 1);
+        aGLToolkit8861.method1434(1);
         aGLToolkit8861.method1457(33984, 1);
         aGLToolkit8861.method1444(-2, class169_sub2_sub1);
-        aGLToolkit8861.method1474(-70, 8448, 7681);
+        aGLToolkit8861.method1474(8448, 7681);
         aGLToolkit8861.method1464(34168, 768, 0);
         aGLToolkit8861.method1460(1);
         float f_37_ = class169_sub2_sub1.aFloat10567 / (float) class169_sub2_sub1.anInt10566;
@@ -199,7 +199,7 @@ public class GLSprite_Sub1 extends GLSprite {
         OpenGL.glVertex2f(f_15_, f_16_);
         OpenGL.glEnd();
         aGLToolkit8861.method1464(5890, 768, 0);
-        aGLToolkit8861.method1434((byte) -105, 0);
+        aGLToolkit8861.method1434(0);
         aGLToolkit8861.method1444(-2, null);
         aGLToolkit8861.method1457(33984, 0);
     }
@@ -263,10 +263,10 @@ public class GLSprite_Sub1 extends GLSprite {
         aClass169_Sub2_Sub1_8855.method1757(false);
         aGLToolkit8861.method1461();
         aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-        aGLToolkit8861.method1434((byte) 106, 1);
+        aGLToolkit8861.method1434(1);
         aGLToolkit8861.method1457(33984, 1);
         aGLToolkit8861.method1444(-2, class169_sub2_sub1);
-        aGLToolkit8861.method1474(-5, 8448, 7681);
+        aGLToolkit8861.method1474(8448, 7681);
         aGLToolkit8861.method1464(34168, 768, 0);
         aGLToolkit8861.method1460(1);
         i += anInt8879;
@@ -295,7 +295,7 @@ public class GLSprite_Sub1 extends GLSprite {
         OpenGL.glVertex2i(aClass169_Sub2_Sub1_8855.anInt10566 + i, i_48_);
         OpenGL.glEnd();
         aGLToolkit8861.method1464(5890, 768, 0);
-        aGLToolkit8861.method1434((byte) -78, 0);
+        aGLToolkit8861.method1434(0);
         aGLToolkit8861.method1444(-2, null);
         aGLToolkit8861.method1457(33984, 0);
     }
@@ -344,7 +344,7 @@ public class GLSprite_Sub1 extends GLSprite {
         i_61_ += anInt8865;
         if (aClass169_Sub2_Sub1_8854 == null) {
             aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-            aGLToolkit8861.method1434((byte) 127, i_62_);
+            aGLToolkit8861.method1434(i_62_);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
             OpenGL.glVertex2i(i, i_61_);
@@ -406,7 +406,7 @@ public class GLSprite_Sub1 extends GLSprite {
         aGLToolkit8861.method1461();
         aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
         aGLToolkit8861.method1460(1);
-        aGLToolkit8861.method1434((byte) -125, i);
+        aGLToolkit8861.method1434(i);
         OpenGL.glColor4ub((byte) (i_70_ >> 16), (byte) (i_70_ >> 8), (byte) i_70_, (byte) (i_70_ >> 24));
         OpenGL.glBegin(7);
         OpenGL.glTexCoord2f(0.0F, aClass169_Sub2_Sub1_8855.aFloat10568);
@@ -424,7 +424,7 @@ public class GLSprite_Sub1 extends GLSprite {
         aGLToolkit8861.method1457(33984, 1);
         anInt8870++;
         aGLToolkit8861.method1444(-2, null);
-        aGLToolkit8861.method1474(-25, 8448, 8448);
+        aGLToolkit8861.method1474(8448, 8448);
         aGLToolkit8861.method1464(34168, 768, 1);
         aGLToolkit8861.method1472(-34, 0, 5890);
         aGLToolkit8861.method1457(33984, 0);
@@ -439,7 +439,7 @@ public class GLSprite_Sub1 extends GLSprite {
         aGLToolkit8861.method1461();
         aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
         aGLToolkit8861.method1460(i_94_);
-        aGLToolkit8861.method1434((byte) -76, i_92_);
+        aGLToolkit8861.method1434(i_92_);
         OpenGL.glColor4ub((byte) (i_93_ >> 16), (byte) (i_93_ >> 8), (byte) i_93_, (byte) (i_93_ >> 24));
         if (aClass169_Sub2_Sub1_8855.aBoolean10562 && !aBoolean8852) {
             float f = aClass169_Sub2_Sub1_8855.aFloat10568 * (float) i_91_ / (float) aClass169_Sub2_Sub1_8855.anInt10564;
@@ -544,7 +544,7 @@ public class GLSprite_Sub1 extends GLSprite {
         anInt8853++;
     }
 
-    static void method1205(CacheNode_Sub4 cachenode_sub4, byte b) {
+    static void method1205(CacheNode_Sub4 cachenode_sub4) {
         anInt8866++;
         boolean bool = false;
         cachenode_sub4.method2275();
@@ -564,12 +564,12 @@ public class GLSprite_Sub1 extends GLSprite {
         aGLToolkit8861.method1457(33984, 1);
         anInt8867++;
         aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8855);
-        aGLToolkit8861.method1474(126, 7681, aGLToolkit8861.method1420(i, false));
+        aGLToolkit8861.method1474(7681, aGLToolkit8861.method1420(i, false));
         aGLToolkit8861.method1464(34167, 768, 1);
         aGLToolkit8861.method1472(-48, 0, 34168);
         aGLToolkit8861.method1457(33984, 0);
         aGLToolkit8861.method1444(-2, aClass169_Sub2_Sub1_8854);
-        aGLToolkit8861.method1474(-90, 7681, 34479);
+        aGLToolkit8861.method1474(7681, 34479);
         aGLToolkit8861.method1464(34166, 768, 1);
         if (anInt8869 == 0) {
             aGLToolkit8861.method1422(0.5F, 1.0F, 0.0F, 0.5F);
@@ -595,7 +595,7 @@ public class GLSprite_Sub1 extends GLSprite {
         anInt8878 = 0;
         anInt8879 = 0;
         aGLToolkit8861 = gltoolkit;
-        aClass169_Sub2_Sub1_8855 = Class158.method1724(i, i_122_, i_121_, (byte) 123, i_120_, gltoolkit);
+        aClass169_Sub2_Sub1_8855 = Class158.method1724(i, i_122_, i_121_, i_120_, gltoolkit);
     }
 
     GLSprite_Sub1(GLToolkit gltoolkit, int i, int i_123_, int[] is, int i_125_) {

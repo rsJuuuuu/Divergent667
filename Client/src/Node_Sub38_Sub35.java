@@ -40,7 +40,7 @@ public class Node_Sub38_Sub35 extends Node_Sub38 {
         anInt10450 = 4096;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10449++;
         while_264_:
         do {
@@ -59,9 +59,6 @@ public class Node_Sub38_Sub35 extends Node_Sub38 {
             } while (false);
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         } while (false);
-        if (bool) {
-            method2778(0);
-        }
     }
 
     final int[][] method2778(int i) {

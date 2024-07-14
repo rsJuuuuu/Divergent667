@@ -33,7 +33,7 @@ public class Class236 {
     private void method3013(int i, BufferedStream buffer) {
         anInt2900++;
         if (i == 1) {
-            int anInt2893 = buffer.read24BitInteger();
+            int anInt2893 = buffer.readInt24();
             method3015(anInt2893);
         } else if (i == 2) {
             anInt2891 = buffer.readUnsignedShort();

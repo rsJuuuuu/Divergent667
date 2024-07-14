@@ -3,10 +3,9 @@
  */
 
 public class Class316 {
-    static int anInt4036;
     static int anInt4037;
 
-    static boolean method3661(int i, int i_0_) {
+    static boolean method3661(int i) {
         anInt4037++;
         return (i & 0x180) != 0;
     }

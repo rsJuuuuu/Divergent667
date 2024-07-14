@@ -44,7 +44,7 @@ public class Class230_Sub1 extends Class230 {
         }
     }
 
-    public final void method27(boolean bool, int i) {
+    public final void method27(boolean bool) {
         anInt9011++;
         int i_4_ = aClass235_5213.aClass379_5118.method4160(-128, Node_Sub38_Sub12.anInt10225, aGLSprite5211.method1197()) + aClass235_5213.anInt5124;
         int i_5_ = aClass235_5213.aClass77_5123.method775(Class257.anInt3244, aGLSprite5211.method1186()) + aClass235_5213.anInt5116;

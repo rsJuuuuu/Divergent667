@@ -8,7 +8,7 @@ public class Class49 {
     protected Class52 aClass52_721;
     protected Class357 aClass357_722 = null;
 
-    static void method484(byte b, Index class302, Index class302_0_, int[] is) {
+    static void method484(Index class302, Index class302_0_, int[] is) {
         Class294.aClass302_3690 = class302_0_;
         Class188_Sub1.aClass302_6849 = class302;
         anInt720++;

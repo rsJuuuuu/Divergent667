@@ -27,14 +27,14 @@ public class Class179 {
         }
         if (!bool) {
             if (aBoolean2130) {
-                for (EntityNode_Sub6 entitynode_sub6_1_ = (EntityNode_Sub6) aClass103_2124.method1113((byte) -3); entitynode_sub6_1_ != null; entitynode_sub6_1_ = (EntityNode_Sub6) aClass103_2124.method1108(99)) {
+                for (EntityNode_Sub6 entitynode_sub6_1_ = (EntityNode_Sub6) aClass103_2124.method1113(); entitynode_sub6_1_ != null; entitynode_sub6_1_ = (EntityNode_Sub6) aClass103_2124.method1108(99)) {
                     if (entitynode_sub6_1_.anAnimable5990 == animable) {
                         entitynode_sub6_1_.method803();
                         Class148.method1650(entitynode_sub6_1_);
                     }
                 }
             }
-            for (EntityNode_Sub6 entitynode_sub6_2_ = (EntityNode_Sub6) aClass103_2124.method1113((byte) -117); entitynode_sub6_2_ != null; entitynode_sub6_2_ = (EntityNode_Sub6) aClass103_2124.method1108(94)) {
+            for (EntityNode_Sub6 entitynode_sub6_2_ = (EntityNode_Sub6) aClass103_2124.method1113(); entitynode_sub6_2_ != null; entitynode_sub6_2_ = (EntityNode_Sub6) aClass103_2124.method1108(94)) {
                 if (animable.anInt5944 >= entitynode_sub6_2_.anAnimable5990.anInt5944) {
                     Class262_Sub13.method3185(entitynode_sub6, entitynode_sub6_2_);
                     return;
@@ -61,15 +61,12 @@ public class Class179 {
         anInt2126++;
     }
 
-    static boolean method1816(int i, int i_3_, int i_4_) {
+    static boolean method1816(int i) {
         anInt2131++;
-        if (i_3_ != -1) {
-            return true;
-        }
         return (i & 0x34) != 0;
     }
 
-    static boolean method1817(int i_5_, int i_6_) {
+    static boolean method1817(int i_6_) {
         anInt2125++;
         return (i_6_ & 0x800) != 0;
     }

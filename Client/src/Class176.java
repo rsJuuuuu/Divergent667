@@ -38,7 +38,7 @@ public class Class176 {
         aNode_Sub9_Sub3_2106 = null;
     }
 
-    Class176(Class353 class353, int i, Index class302) {
+    Class176(Index class302) {
         aClass302_2101 = class302;
         anInt2105 = aClass302_2101.method3537(19);
     }

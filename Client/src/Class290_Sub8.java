@@ -26,9 +26,9 @@ public class Class290_Sub8 extends Class290 {
             idirect3ddevice.a(13, anAbstractToolkit3654.aFloat6323 * anAbstractToolkit3654.aFloat6300, anAbstractToolkit3654.aFloat6293 * anAbstractToolkit3654.aFloat6300, anAbstractToolkit3654.aFloat6300 * anAbstractToolkit3654.aFloat6365, 1.0F);
             idirect3ddevice.a(14, anAbstractToolkit3654.aFloat6274 * anAbstractToolkit3654.aFloat6323, anAbstractToolkit3654.aFloat6274 * anAbstractToolkit3654.aFloat6293, anAbstractToolkit3654.aFloat6365 * anAbstractToolkit3654.aFloat6274, 1.0F);
             idirect3ddevice.a(16, anAbstractToolkit3654.aFloat6323 * anAbstractToolkit3654.aFloat6272, anAbstractToolkit3654.aFloat6293 * anAbstractToolkit3654.aFloat6272, anAbstractToolkit3654.aFloat6365 * anAbstractToolkit3654.aFloat6272, 1.0F);
-            class336_sub1.method3890(anAbstractToolkit3654.aFloatArray6292[0], aFloatArray8148, anAbstractToolkit3654.aFloatArray6292[1], anAbstractToolkit3654.aFloatArray6292[2], (byte) -108);
+            class336_sub1.method3890(anAbstractToolkit3654.aFloatArray6292[0], aFloatArray8148, anAbstractToolkit3654.aFloatArray6292[1], anAbstractToolkit3654.aFloatArray6292[2]);
             idirect3ddevice.SetVertexShaderConstantF(15, aFloatArray8148, 1);
-            class336_sub1.method3890(anAbstractToolkit3654.aFloatArray6304[0], aFloatArray8148, anAbstractToolkit3654.aFloatArray6304[1], anAbstractToolkit3654.aFloatArray6304[2], (byte) 91);
+            class336_sub1.method3890(anAbstractToolkit3654.aFloatArray6304[0], aFloatArray8148, anAbstractToolkit3654.aFloatArray6304[1], anAbstractToolkit3654.aFloatArray6304[2]);
             idirect3ddevice.SetVertexShaderConstantF(17, aFloatArray8148, 1);
         }
     }
@@ -73,7 +73,7 @@ public class Class290_Sub8 extends Class290 {
         return aBoolean8141;
     }
 
-    final void method3417(boolean bool, boolean bool_2_) {
+    final void method3417(boolean bool_2_) {
         if (bool_2_) {
             method3415(false, -92, 99);
         }
@@ -125,14 +125,11 @@ public class Class290_Sub8 extends Class290 {
         }
     }
 
-    final void method3421(boolean bool) {
+    final void method3421() {
         if (null != anIDirect3DVertexShader8140) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8147.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1290();
             idirect3ddevice.SetVertexShaderConstantF(8, class336_sub1.method3891(aFloatArray8145), 2);
-        }
-        if (bool) {
-            aFloatArray8148 = null;
         }
     }
 
@@ -159,18 +156,15 @@ public class Class290_Sub8 extends Class290 {
         if (null != anIDirect3DVertexShader8140) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8147.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = aD3DToolkit8147.method1378();
-            idirect3ddevice.a(0, class336_sub1.method3881((byte) -111, aFloatArray8145));
-        }
-        if (i <= 10) {
-            method3421(true);
+            idirect3ddevice.a(0, class336_sub1.method3881(aFloatArray8145));
         }
     }
 
-    final void method3413(int i) {
+    final void method3413() {
         if (null != anIDirect3DVertexShader8140) {
             IDirect3DDevice idirect3ddevice = aD3DToolkit8147.anIDirect3DDevice9199;
             Class336_Sub1 class336_sub1 = aD3DToolkit8147.method1378();
-            idirect3ddevice.a(0, class336_sub1.method3881((byte) 52, aFloatArray8145));
+            idirect3ddevice.a(0, class336_sub1.method3881(aFloatArray8145));
         }
 
     }
@@ -190,9 +184,9 @@ public class Class290_Sub8 extends Class290 {
             aD3DToolkit8147.method1384((byte) 122, idirect3dvertexshader);
             method3443();
             method3412();
-            method3421(false);
+            method3421();
             method3410(107);
-            method3413(-121);
+            method3413();
             method3416();
         }
         if (i <= 4) {

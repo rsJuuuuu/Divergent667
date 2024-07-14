@@ -7,7 +7,6 @@ public class Node_Sub14 extends Node {
     protected int anInt7118;
     static int anInt7119 = -1;
     protected int anInt7120;
-    protected int anInt7121;
     static int anInt7122;
     static int anInt7123;
     static int anInt7124;

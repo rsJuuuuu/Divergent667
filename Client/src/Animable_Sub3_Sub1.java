@@ -129,7 +129,7 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3 {
         return false;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt11018++;
         return false;
     }
@@ -142,7 +142,7 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3 {
         anInt11019 = 0;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt11000++;
         Class256 class256 = Class290_Sub7.method3442(plane, anInt5934 >> Class36.anInt549, anInt5940 >> Class36.anInt549);
         Animable_Sub1 animable_sub1 = Class270_Sub1_Sub1.method3303(plane, anInt5934 >> Class36.anInt549, anInt5940 >> Class36.anInt549);
@@ -201,7 +201,7 @@ public class Animable_Sub3_Sub1 extends Animable_Sub3 {
             }
         }
         class336.method3863(anInt5934, -10 + anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(true, (byte) 69, 3);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(true, 3);
         anInt11011 = 0;
         aBoolean11002 = false;
         if (anInt11007 != -1) {

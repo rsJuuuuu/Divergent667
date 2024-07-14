@@ -57,7 +57,7 @@ public class Class290_Sub2 extends Class290 {
         anAbstractToolkit3654.method1336(-16777216);
         if (i < -84) {
             anAbstractToolkit3654.method1366(InterfaceSettings.aClass135_7421, 0);
-            method3421(false);
+            method3421();
         }
     }
 
@@ -73,23 +73,23 @@ public class Class290_Sub2 extends Class290 {
         anAbstractToolkit3654.method1366(Class106.aClass135_1354, 0);
     }
 
-    final void method3421(boolean bool) {
+    final void method3421() {
         if (anAbstractToolkit3654.method1250() == 0) {
             Class336_Sub1 class336_sub1 = anAbstractToolkit3654.method1290();
             anAbstractToolkit3654.method1362(1);
             Class336_Sub1 class336_sub1_2_ = anAbstractToolkit3654.method1306();
             class336_sub1_2_.method3857(class336_sub1);
-            class336_sub1_2_.method3889(0.125F, (byte) 116, 0.125F);
+            class336_sub1_2_.method3889(0.125F, 0.125F);
             class336_sub1_2_.method3875(aFloat8065, 0.0F, 0.0F);
             anAbstractToolkit3654.method1297(Class55.aClass346_829);
             anAbstractToolkit3654.method1362(0);
         }
-        if (!bool) {
+        if (!false) {
             anInt8068++;
         }
     }
 
-    final void method3417(boolean bool, boolean bool_3_) {
+    final void method3417(boolean bool_3_) {
         if (bool_3_) {
             method3415(true, -122, -128);
         }
@@ -121,6 +121,6 @@ public class Class290_Sub2 extends Class290 {
             Class173.anInt2089 = class343.anInt4248;
             Class134_Sub2.anInt9022 = class343.anInt4247;
         }
-        Class313.method3648(-118);
+        Class313.method3648();
     }
 }

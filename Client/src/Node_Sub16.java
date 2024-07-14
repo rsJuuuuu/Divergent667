@@ -69,7 +69,7 @@ public class Node_Sub16 extends Node {
             int i_9_ = i_6_;
             boolean bool_10_ = false;
             for (int j : is) {
-                if (j != -1 && !EntityNode_Sub3_Sub1.aClass86_9166.method1010(j, 14434).method1686(bool, null, -49)) {
+                if (j != -1 && !EntityNode_Sub3_Sub1.aClass86_9166.method1010(j, 14434).method1686(bool, null)) {
                     bool_10_ = true;
                 }
             }
@@ -95,7 +95,7 @@ public class Node_Sub16 extends Node {
                             models[i_13_].method2085(i_19_, i_17_, -89, i_18_);
                         }
                         if (i_14_ != 0 || i_15_ != 0 || i_16_ != 0) {
-                            models[i_13_].method2082(i_14_, i_15_, -96, i_16_);
+                            models[i_13_].method2082(i_14_, i_15_, i_16_);
                         }
                     }
                 }
@@ -127,7 +127,7 @@ public class Node_Sub16 extends Node {
         return drawablemodel_22_;
     }
 
-    static void method2589(Index class302, int i) {
+    static void method2589(Index class302) {
         Class89.anInt1197 = class302.method3519("hitbar_default", (byte) 39);
         anInt7131++;
         Node_Sub38_Sub20.anInt10313 = class302.method3519("timerbar_default", (byte) 46);
@@ -139,9 +139,6 @@ public class Node_Sub16 extends Node {
         Node_Sub21.anInt7186 = class302.method3519("cross", (byte) 98);
         OutcommingPacket.anInt4045 = class302.method3519("mapdots", (byte) 127);
         Class163.anInt2019 = class302.method3519("scrollbar", (byte) 117);
-        if (i != 1) {
-            method2589(null, 94);
-        }
         Class289.anInt3645 = class302.method3519("name_icons", (byte) 103);
         Class320_Sub3.anInt8225 = class302.method3519("floorshadows", (byte) 100);
         Node_Sub38_Sub32.anInt10436 = class302.method3519("compass", (byte) 61);
@@ -225,7 +222,7 @@ public class Node_Sub16 extends Node {
                                 }
                                 break while_100_;
                             } while (false);
-                            if (class84.method984(2, i_30_, (byte) -78, 2, i_32_, i_26_, i, i_25_, i_33_, i_29_)) {
+                            if (class84.method984(2, i_30_, 2, i_32_, i_26_, i, i_25_, i_33_, i_29_)) {
                                 Class219.anInt2623 = i_33_;
                                 Class315.anInt4033 = i_32_;
                                 return true;

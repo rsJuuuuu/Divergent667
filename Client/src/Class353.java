@@ -13,7 +13,7 @@ public class Class353 {
         throw new IllegalStateException();
     }
 
-    Class353(String string, String string_0_, int i) {
+    Class353(String string, int i) {
         aString4341 = string;
         anInt4344 = i;
     }

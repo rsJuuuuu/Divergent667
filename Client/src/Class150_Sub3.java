@@ -40,7 +40,7 @@ class Class150_Sub3 extends Class150 {
         aGLSpriteArray8973 = null;
     }
 
-    static boolean method1663(byte b, int i, int i_12_) {
+    static boolean method1663(int i) {
 
         anInt8966++;
         return (0x8000 & i) != 0;

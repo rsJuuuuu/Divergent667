@@ -21,10 +21,7 @@ public class Class73 {
         return aClass339Array982[3].method3922((byte) -73);
     }
 
-    static boolean method749(byte b, int i, int i_0_) {
-        if (b != -65) {
-            method749((byte) 11, -103, -77);
-        }
+    static boolean method749(int i) {
         anInt983++;
         return (i & 0x18) != 0 | (i & 0x220) == 544;
     }
@@ -52,7 +49,7 @@ public class Class73 {
         }
         if (anInt987 == i_4_) {
             if (anInt987 != 0) {
-                aClass339Array982[anInt987 & 0x7fffffff].method3920(bool_2_);
+                aClass339Array982[anInt987 & 0x7fffffff].method3920();
                 if (anInt991 != i_3_ || i_1_ != anInt989) {
                     aClass339Array982[anInt987 & 0x7fffffff].method3919(-13437, i_1_, i_3_);
                     anInt989 = i_1_;
@@ -65,7 +62,7 @@ public class Class73 {
             }
             if (i_4_ != 0) {
                 aClass339Array982[0x7fffffff & i_4_].method3923(bool_2_, 0);
-                aClass339Array982[i_4_ & 0x7fffffff].method3920(bool_2_);
+                aClass339Array982[i_4_ & 0x7fffffff].method3920();
                 aClass339Array982[i_4_ & 0x7fffffff].method3919(-13437, i_1_, i_3_);
             }
             anInt989 = i_1_;

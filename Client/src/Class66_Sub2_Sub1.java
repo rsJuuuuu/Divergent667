@@ -15,7 +15,7 @@ public class Class66_Sub2_Sub1 extends Class66_Sub2 {
     final void method726(int i, int i_0_, int i_2_, int i_3_) {
         anInt10579++;
         int i_4_ = aGLSprite8999.method1197();
-        int i_5_ = ((Class150_Sub3_Sub1) aClass150_5171).anInt10574 * Class295.method3471((byte) -65) / 10 % i_4_;
+        int i_5_ = ((Class150_Sub3_Sub1) aClass150_5171).anInt10574 * Class295.method3471() / 10 % i_4_;
         aGLSprite8999.method1192(i_0_ - (i_4_ - i_5_), i, -i_5_ + i_2_ + i_4_, i_3_);
     }
 

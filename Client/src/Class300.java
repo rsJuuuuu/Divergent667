@@ -16,7 +16,6 @@ public class Class300 {
     static int anInt3760;
     protected int anInt3761;
     static int anInt3762;
-    protected Class300 aClass300_3763;
     protected int anInt3764;
     static int anInt3765;
     protected int anInt3766;

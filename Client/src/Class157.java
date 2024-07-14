@@ -173,14 +173,14 @@ public class Class157 {
                     Class291_Sub1.method3454(0x3fff & -Class170.anInt2053, 0x3fff & -Class48.anInt704, -OutcommingPacket.anInt4050 & 0x3fff);
                     Class251.method3099(b, Class98.anInt5061, Node_Sub10.anInt7079, Class190.anInt2331, Class295.myPlayer.anInt5940 >> 9, Class246.anIntArray3107, Class362.anIntArray4497, Class174.clientCycle, 1 + Class295.myPlayer.plane, Class259.anIntArray3296, Class213.aNode_Sub27_2512.aClass320_Sub8_7280.method3712() == 0, Class308.anInt3912, MainFile.anIntArray135, Node_Sub38_Sub15.aByteArrayArrayArray10261, Class84.anIntArray1147, Class295.myPlayer.anInt5934 >> 9);
                 } else {
-                    Class151.method1671(Class174.clientCycle, Class98.anInt5061, Class190.anInt2331, Node_Sub10.anInt7079, Node_Sub38_Sub15.aByteArrayArrayArray10261, Class259.anIntArray3296, MainFile.anIntArray135, Class246.anIntArray3107, Class84.anIntArray1147, Class362.anIntArray4497, 1 + Class295.myPlayer.plane, b, Class295.myPlayer.anInt5934 >> 9, Class295.myPlayer.anInt5940 >> 9, Class213.aNode_Sub27_2512.aClass320_Sub8_7280.method3712() == 0, !Node_Sub15_Sub10.aBoolean9850 ? -1 : Class308.anInt3912, 0, false);
+                    Class151.method1671(Class174.clientCycle, Class98.anInt5061, Class190.anInt2331, Node_Sub10.anInt7079, Node_Sub38_Sub15.aByteArrayArrayArray10261, Class259.anIntArray3296, MainFile.anIntArray135, Class246.anIntArray3107, Class84.anIntArray1147, Class362.anIntArray4497, 1 + Class295.myPlayer.plane, b, Class213.aNode_Sub27_2512.aClass320_Sub8_7280.method3712() == 0, !Node_Sub15_Sub10.aBoolean9850 ? -1 : Class308.anInt3912, 0, false);
                 }
                 CacheNode_Sub16_Sub1.method2387();
                 if (Class151.anInt1843 == 11) {
-                    Class262_Sub6.drawTileStrings(i_3_, i_4_, i_2_, i_5_);
+                    Class262_Sub6.drawTileStrings(i_2_, i_5_);
                     Class339_Sub7.method3942(i_2_, i_3_, 256, 256, i_5_, i_4_, true);
-                    Class127.drawHintIcons(i_3_, i_2_, i_5_, i_4_);
-                    Class150_Sub1.method1656(i_3_, i_5_, i_2_, i_4_);
+                    Class127.drawHintIcons(i_2_, i_5_);
+                    Class150_Sub1.method1656();
                 }
                 Npc.method874();
                 Node_Sub10.anInt7079 = i_13_;
@@ -222,7 +222,7 @@ public class Class157 {
         int i_20_ = buffer.readUnsignedByte();
         for (int i_21_ = 0; i_20_ > i_21_; i_21_++) {
             int i_22_ = buffer.readUnsignedByte();
-            node_sub38.method2780(false, buffer, i_22_);
+            node_sub38.method2780(buffer, i_22_);
         }
         node_sub38.method2785();
         return node_sub38;

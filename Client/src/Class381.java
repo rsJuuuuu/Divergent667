@@ -27,7 +27,7 @@ public class Class381 {
         }
     }
 
-    static void method4173(int i, int i_2_, Actor actor, byte b, int i_3_, int i_4_, int i_5_) {
+    static void method4173(Actor actor, int i_4_) {
         Animable_Sub3.method919(actor.plane, actor.anInt5940, i_4_, actor.anInt5934, 0);
         anInt4893++;
     }

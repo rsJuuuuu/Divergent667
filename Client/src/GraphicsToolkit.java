@@ -71,16 +71,13 @@ abstract class GraphicsToolkit {
 
     abstract void ra();
 
-    final void method1234(int i, int i_37_, int i_38_, int i_39_, byte b, int i_40_) {
+    final void method1234(int i, int i_37_, int i_38_, int i_39_, int i_40_) {
         d(i_40_, i, i_38_, i_39_, i_37_, 1);
         anInt1530++;
 
     }
 
-    final GLSprite method1235(int i, int i_42_, int i_43_, int[] is, int i_45_) {
-        if (i_45_ != 7468) {
-            return null;
-        }
+    final GLSprite method1235(int i, int i_42_, int i_43_, int[] is) {
         anInt1536++;
         return a(is, i_42_, i, i_43_, true);
     }
@@ -351,7 +348,7 @@ abstract class GraphicsToolkit {
 
     abstract void DA(int i, int i_197_, int i_198_, int i_199_);
 
-    abstract void X(int i);
+    abstract void X();
 
     abstract void a(java.awt.Canvas canvas);
 

@@ -15,13 +15,11 @@ class Class188_Sub1 extends Class188 {
     private int anInt6858;
     static int[] SKILL_XP = new int[25];
     private final int anInt6860;
-    private byte[] aByteArray6861;
     private int anInt6863;
     static int anInt6864 = 2;
     static int anInt6865;
 
     void method1891(int i, byte b) {
-        aByteArray6861[i] = b;
         anInt6850++;
     }
 
@@ -54,7 +52,7 @@ class Class188_Sub1 extends Class188 {
         anInt6856++;
     }
 
-    final void method1886(int i) {
+    final void method1886() {
         anInt6851 = anInt6853;
         anInt6854 >>= 4;
         anInt6865++;
@@ -62,9 +60,6 @@ class Class188_Sub1 extends Class188 {
             anInt6854 = 0;
         } else if (anInt6854 > 255) {
             anInt6854 = 255;
-        }
-        if (i != 4096) {
-            method1886(-36);
         }
         method1891(anInt6858++, (byte) anInt6854);
         anInt6854 = 0;

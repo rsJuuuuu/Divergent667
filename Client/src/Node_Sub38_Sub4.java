@@ -29,7 +29,7 @@ public class Node_Sub38_Sub4 extends Node_Sub38 {
             aClass302_10116 = null;
         }
         anInt10111++;
-        for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620(16776960)) {
+        for (Node_Sub47 node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3613(); node_sub47 != null; node_sub47 = (Node_Sub47) Class200_Sub2.aClass312_4942.method3620()) {
             if (node_sub47.aNpc7583 == npc) {
                 if (node_sub47.aNode_Sub9_Sub2_7568 != null) {
                     Class176.aNode_Sub9_Sub3_2106.method2514(node_sub47.aNode_Sub9_Sub2_7568);
@@ -85,9 +85,6 @@ public class Node_Sub38_Sub4 extends Node_Sub38 {
     final void method2785() {
         anInt10112++;
         Node_Sub37.method2772((byte) 54);
-        if (7 != 7) {
-            anInt10118 = -19;
-        }
     }
 
     static int method2800() {
@@ -98,9 +95,9 @@ public class Node_Sub38_Sub4 extends Node_Sub38 {
         return Class148.anInt1825;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10110++;
-        if (!bool) {
+        if (!false) {
             while_7_:
             do {
                 do {

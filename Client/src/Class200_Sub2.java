@@ -19,10 +19,7 @@ public class Class200_Sub2 extends Class200 implements Interface1 {
         anInt4940 = 5123;
     }
 
-    public final int method3(byte b) {
-        if (b > -61) {
-            method1(-63);
-        }
+    public final int method3() {
         anInt4937++;
         return anInt4940;
     }

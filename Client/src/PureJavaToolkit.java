@@ -441,7 +441,7 @@ public class PureJavaToolkit extends GraphicsToolkit {
                         return;
                     } else {
                         int i_113_ = method1505(i_111_) ? 64 : anInt6775;
-                        glsprite = this.method1235(i_113_, i_113_, i_113_, is, 7468);
+                        glsprite = this.method1235(i_113_, i_113_, i_113_, is);
                         aClass61_6762.method601(glsprite, 25566, i_111_);
                     }
                 }
@@ -1590,7 +1590,7 @@ public class PureJavaToolkit extends GraphicsToolkit {
                             return;
                         }
                         int i_405_ = method1505(i_401_) ? 64 : anInt6775;
-                        glsprite = this.method1235(i_405_, i_405_, i_405_, is, 7468);
+                        glsprite = this.method1235(i_405_, i_405_, i_405_, is);
                         aClass61_6762.method601(glsprite, 25566, i_401_);
                     }
                     anInt6800 = i_401_;
@@ -1903,7 +1903,7 @@ public class PureJavaToolkit extends GraphicsToolkit {
         return aD1543.method10(i, -8217).aShort1221 & 0xffff;
     }
 
-    final void X(int i) {
+    final void X() {
         /* empty */
     }
 
@@ -2319,7 +2319,7 @@ public class PureJavaToolkit extends GraphicsToolkit {
                             return;
                         }
                         int i_626_ = method1505(i_622_) ? 64 : anInt6775;
-                        glsprite = this.method1235(i_626_, i_626_, i_626_, is, 7468);
+                        glsprite = this.method1235(i_626_, i_626_, i_626_, is);
                         aClass61_6762.method601(glsprite, 25566, i_622_);
                     }
                     anInt6800 = i_622_;

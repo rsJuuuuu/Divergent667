@@ -25,7 +25,7 @@ public class Class265_Sub2 extends Class265 implements Interface13_Impl2 {
     }
 
     Class265_Sub2(D3DToolkit d3dtoolkit, int i, boolean bool, int[][] is) {
-        super(d3dtoolkit, Class99.aClass68_1290, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9186, 6 * (i * i));
+        super(d3dtoolkit, Class99.aClass68_1290, Class372.aClass372_4594, bool && d3dtoolkit.aBoolean9186);
         anInt7901 = i;
         if (aBoolean3364) {
             anIDirect3DCubeTexture7902 = aD3DToolkit3365.anIDirect3DDevice9199.a(anInt7901, 0, 1024, 21, 1);

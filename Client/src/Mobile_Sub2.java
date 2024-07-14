@@ -38,7 +38,7 @@ public class Mobile_Sub2 extends Mobile implements Interface19 {
     private final int aShort10734; //object
     static int anInt10735;
 
-    public final void method69(int i) {
+    public final void method69() {
         if (aDrawableModel10724 != null) {
             aDrawableModel10724.method617();
         }
@@ -71,7 +71,7 @@ public class Mobile_Sub2 extends Mobile implements Interface19 {
         return aBoolean10714;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10710++;
         if (aDrawableModel10724 != null) {
             return !aDrawableModel10724.r();
@@ -82,7 +82,7 @@ public class Mobile_Sub2 extends Mobile implements Interface19 {
     final int method817(int i) {
         anInt10704++;
         if (i != 2) {
-            method814((byte) 111);
+            method814();
         }
         if (aDrawableModel10724 != null) {
             return aDrawableModel10724.fa();
@@ -161,7 +161,7 @@ public class Mobile_Sub2 extends Mobile implements Interface19 {
             return null;
         }
         if (aClass171_10711 == null) {
-            aClass171_10711 = Class167.method1752(0, anInt5937, anInt5934, method902(graphicstoolkit, 0), anInt5940);
+            aClass171_10711 = Class167.method1752(anInt5937, anInt5934, method902(graphicstoolkit, 0), anInt5940);
         }
         anInt10728++;
         return aClass171_10711;
@@ -233,14 +233,14 @@ public class Mobile_Sub2 extends Mobile implements Interface19 {
         return false;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10726++;
         if (aDrawableModel10724 == null) {
             return null;
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10721, (byte) 95, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10721, 1);
         if (Node_Sub15_Sub10.aBoolean9850) {
             aDrawableModel10724.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
         } else {
@@ -249,7 +249,7 @@ public class Mobile_Sub2 extends Mobile implements Interface19 {
         return entitynode_sub6;
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_16_, byte b, int i_17_, Animable animable) {
+    final void method816(int i, boolean bool, int i_16_, byte b, int i_17_, Animable animable) {
         anInt10717++;
         if (animable instanceof Animable_Sub2_Sub2) {
             Animable_Sub2_Sub2 animable_sub2_sub2 = (Animable_Sub2_Sub2) animable;

@@ -103,10 +103,10 @@ public class Class52_Sub1 extends Class52 {
         anInterface15_Impl2_5562 = abstracttoolkit.method1380(false);
         anInterface15_Impl2_5562.method37(20, 20480, -12093);
         for (int i_30_ = 0; i_30_ < 4; i_30_++) {
-            jaclib.memory.Buffer buffer = anInterface15_Impl2_5562.method40(-12, true);
+            jaclib.memory.Buffer buffer = anInterface15_Impl2_5562.method40(true);
             if (buffer != null) {
                 Stream stream = anAbstractToolkit5561.method1324(buffer);
-                float f = anInterface13_Impl1_5560.method45((float) i_1_, -51) / (float) i_1_;
+                float f = anInterface13_Impl1_5560.method45((float) i_1_) / (float) i_1_;
                 float f_31_ = anInterface13_Impl1_5560.method49((float) i_1_, (byte) -47) / (float) i_1_;
                 for (int i_32_ = 0; i_32_ < 256; i_32_++) {
                     Class383 class383 = class383s[i_32_];
@@ -165,7 +165,7 @@ public class Class52_Sub1 extends Class52 {
                     }
                 }
                 stream.c();
-                if (anInterface15_Impl2_5562.method39(-95)) {
+                if (anInterface15_Impl2_5562.method39()) {
                     break;
                 }
             }

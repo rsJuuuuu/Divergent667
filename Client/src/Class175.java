@@ -54,7 +54,7 @@ public class Class175 {
                     int i_5_ = (int) f;
                     Node_Sub38.anIntArray7451[i_4_] = i_5_ | i_5_ << 8 | i_5_ << 16 | -16777216;
                 }
-                GLSprite glsprite = CacheNode_Sub18.aGraphicsToolkit9607.method1235(Class144_Sub1.anInt6806, Class144_Sub1.anInt6806, Class331.anInt4130, Node_Sub38.anIntArray7451, 7468);
+                GLSprite glsprite = CacheNode_Sub18.aGraphicsToolkit9607.method1235(Class144_Sub1.anInt6806, Class144_Sub1.anInt6806, Class331.anInt4130, Node_Sub38.anIntArray7451);
                 Objects.requireNonNull(glsprite).method1191(i, 170, 1, 0, 0);
             }
         }

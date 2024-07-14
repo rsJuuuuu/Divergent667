@@ -60,8 +60,7 @@ class Class150 implements Interface7 {
         datainputstream.close();
     }
 
-    static float method1654(float f, float f_7_, float f_8_, int i, byte b) {
-
+    static float method1654(float f, float f_7_, float f_8_, int i) {
         anInt5091++;
         float[] fs = Class150_Sub3.aFloatArrayArray8967[i];
         return f * fs[2] + (fs[0] * f_7_ + f_8_ * fs[1]);

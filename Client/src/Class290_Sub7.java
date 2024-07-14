@@ -15,7 +15,7 @@ public class Class290_Sub7 extends Class290 {
     static Class365 aClass365_8135;
     static int anInt8136;
 
-    final void method3417(boolean bool, boolean bool_0_) {
+    final void method3417(boolean bool_0_) {
         anAbstractToolkit3654.method1318(Class117_Sub1.aClass94_4924, Class116.aClass94_5075);
         anInt8130++;
         if (bool_0_) {

@@ -54,7 +54,7 @@ public class Class337 implements Runnable {
         aClass192_4180 = null;
     }
 
-    static byte[] method3904(byte b, File file) {
+    static byte[] method3904(File file) {
         anInt4174++;
         return Animable_Sub3_Sub1.method924(file, (int) file.length());
     }

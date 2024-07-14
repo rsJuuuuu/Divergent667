@@ -39,13 +39,13 @@ public class Class320_Sub29 extends Class320 {
                 if (node_sub11 != null) {
                     for (Node_Sub8 node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
                             .method3613(); node_sub8 != null; node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
-                            .method3620(16776960)) {
+                            .method3620()) {
                         if (node_sub8.anInt7065 == (i_5_ & 0x7fff)
                                 && node_sub8.anInt7067 == i_6_) {
                             node_sub8.method2160((byte) 39);
                             node_sub8.anInt7067 = i_7_;
                             Node_Sub38_Sub1.method2789(Class50.basePlane,
-                                    (byte) -108, i_2_, i_4_, node_sub8);
+                                    i_2_, i_4_, node_sub8);
                             break;
                         }
                     }
@@ -92,7 +92,7 @@ public class Class320_Sub29 extends Class320 {
                 i_20_ = objectdefinition.aShortArray2988.length;
             }
             if ((i_11_ & 0x1) == 1) {
-                Class320_Sub12.method3727(null, (byte) 65, Class50.basePlane,
+                Class320_Sub12.method3727(null, Class50.basePlane,
                         i_10_, i_13_, i_14_);
             } else {
                 int[] is = null;
@@ -114,7 +114,7 @@ public class Class320_Sub29 extends Class320 {
                         ses_23_[i_24_] = (short) packet.readUnsignedShort();
                 }
                 Class320_Sub12.method3727(new Class121(Class187.aLong2275++,
-                                is, ses, ses_23_), (byte) -126, Class50.basePlane,
+                                is, ses, ses_23_), Class50.basePlane,
                         i_10_, i_13_, i_14_);
             }
         } else if (class257 == Class225.aClass257_2674) {// maybe
@@ -288,7 +288,7 @@ public class Class320_Sub29 extends Class320 {
                 if (bool
                         || Class134_Sub1.method1581(Class61.anInt898)) {
                     Node_Sub38_Sub1.method2789(Class50.basePlane,
-                            (byte) -108, i_76_, i_78_, new Node_Sub8(i_79_,
+                            i_76_, i_78_, new Node_Sub8(i_79_,
                                     i_80_));
                     if (bool) {
                         Node_Sub36.method2750(Class50.basePlane,
@@ -340,7 +340,7 @@ public class Class320_Sub29 extends Class320 {
             if (node_sub11 != null) {
                 for (Node_Sub8 node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
                         .method3613(); node_sub8 != null; node_sub8 = (Node_Sub8) node_sub11.aClass312_7104
-                        .method3620(16776960)) {
+                        .method3620()) {
                     if (node_sub8.anInt7065 == (i_92_ & 0x7fff)) {
                         node_sub8.method2160((byte) 111);
                         break;
@@ -363,7 +363,7 @@ public class Class320_Sub29 extends Class320 {
             int y = (0x7 & coordsHash) + Node_Sub21.baseY;
             int delay = packet.readUnsignedShort();
             int height = packet.readUnsignedByte();
-            int i_103_ = packet.read24BitInteger();
+            int i_103_ = packet.readInt24();
             String message = packet.readString();
             r.sendMessageOnTile(Class50.basePlane, delay, message, i_103_,
                     height, x, y);
@@ -446,7 +446,7 @@ public class Class320_Sub29 extends Class320 {
                     && Node_Sub54.GAME_SCENE_WDITH > i_127_
                     && i_125_ < Class377_Sub1.GAME_SCENE_HEIGHT;
             if (bool || Class134_Sub1.method1581(Class61.anInt898)) {
-                Node_Sub38_Sub1.method2789(Class50.basePlane, (byte) -108,
+                Node_Sub38_Sub1.method2789(Class50.basePlane,
                         i_126_, i_128_, new Node_Sub8(i_129_, i_130_));
                 if (bool) {
                     Node_Sub36.method2750(Class50.basePlane, i_125_,
@@ -522,7 +522,7 @@ public class Class320_Sub29 extends Class320 {
         if (b > -35) {
             aBoolean8486 = false;
         }
-        if (!Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883(55)) {
+        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883()) {
             anInt4064 = 0;
         }
         anInt8485++;
@@ -550,7 +550,7 @@ public class Class320_Sub29 extends Class320 {
         }
         aBoolean8486 = true;
         anInt8482++;
-        if (!Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883(38)) {
+        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883()) {
             return 0;
         }
         return 2;
@@ -564,7 +564,7 @@ public class Class320_Sub29 extends Class320 {
 
     final boolean method3793(byte b) {
         anInt8483++;
-        if (!Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883(101)) {
+        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(-13725)).method1883()) {
             return false;
         }
         if (b < 63) {
@@ -580,7 +580,7 @@ public class Class320_Sub29 extends Class320 {
 
     final int method3675(int i, byte b) {
         anInt8479++;
-        if (!Objects.requireNonNull(aNode_Sub27_4063.method2694(b ^ -13739)).method1883(88)) {
+        if (Objects.requireNonNull(aNode_Sub27_4063.method2694(b ^ -13739)).method1883()) {
             return 3;
         }
         if (b != 54) {

@@ -60,7 +60,7 @@ public class Class145 {
         return i_3_;
     }
 
-    Class145(GLToolkit gltoolkit, long l, Class210[] class210s) {
+    Class145(GLToolkit gltoolkit, long l) {
         aLong1795 = l;
         aGLToolkit1797 = gltoolkit;
     }

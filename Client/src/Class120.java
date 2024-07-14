@@ -10,10 +10,7 @@ public class Class120 {
     static int anInt1519;
     static int anInt1520;
 
-    static void method1228(int i) {
-        if (i > -93) {
-            method1228(-86);
-        }
+    static void method1228() {
         anInt1520++;
         Class320_Sub27.aBoolean8465 = true;
     }
@@ -33,7 +30,7 @@ public class Class120 {
         anInt1517++;
         FileOnDisk fileondisk = null;
         try {
-            Class241 class241 = Class240.aSignLink2946.method3631("2", (byte) 126);
+            Class241 class241 = Class240.aSignLink2946.method3631("2");
             while (class241.anInt2953 == 0)
                 Class262_Sub22.method3208(1L);
             if (class241.anInt2953 == 1) {

@@ -58,24 +58,24 @@ public class Node_Sub9_Sub3 extends Node_Sub9 {
     }
 
     private void method2515(int i) {
-        for (Node_Sub9 node_sub9 = (Node_Sub9) aClass312_9721.method3613(); node_sub9 != null; node_sub9 = (Node_Sub9) aClass312_9721.method3620(16776960))
+        for (Node_Sub9 node_sub9 = (Node_Sub9) aClass312_9721.method3613(); node_sub9 != null; node_sub9 = (Node_Sub9) aClass312_9721.method3620())
             node_sub9.method2426(i);
     }
 
     private void method2516(int[] is, int i, int i_3_) {
-        for (Node_Sub9 node_sub9 = (Node_Sub9) aClass312_9721.method3613(); node_sub9 != null; node_sub9 = (Node_Sub9) aClass312_9721.method3620(16776960))
+        for (Node_Sub9 node_sub9 = (Node_Sub9) aClass312_9721.method3613(); node_sub9 != null; node_sub9 = (Node_Sub9) aClass312_9721.method3620())
             node_sub9.method2430(is, i, i_3_);
     }
 
     final Node_Sub9 method2431() {
-        return (Node_Sub9) aClass312_9721.method3620(16776960);
+        return (Node_Sub9) aClass312_9721.method3620();
     }
 
     private void method2517(Node node, Node_Sub1 node_sub1) {
         for (/**/; node != aClass312_9722.aNode3958 && ((Node_Sub1) node).anInt6931 <= node_sub1.anInt6931; node = node.aNode2800) {
             /* empty */
         }
-        BufferedStream.method2205(-59, node, node_sub1);
+        BufferedStream.method2205(node, node_sub1);
         anInt9724 = ((Node_Sub1) aClass312_9722.aNode3958.aNode2800).anInt6931;
     }
 
@@ -115,7 +115,7 @@ public class Node_Sub9_Sub3 extends Node_Sub9 {
 
     private void method2518() {
         if (anInt9723 > 0) {
-            for (Node_Sub1 node_sub1 = (Node_Sub1) aClass312_9722.method3613(); node_sub1 != null; node_sub1 = (Node_Sub1) aClass312_9722.method3620(16776960))
+            for (Node_Sub1 node_sub1 = (Node_Sub1) aClass312_9722.method3613(); node_sub1 != null; node_sub1 = (Node_Sub1) aClass312_9722.method3620())
                 node_sub1.anInt6931 -= anInt9723;
             anInt9724 -= anInt9723;
             anInt9723 = 0;

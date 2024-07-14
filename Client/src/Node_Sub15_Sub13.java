@@ -12,11 +12,9 @@ public class Node_Sub15_Sub13 extends Node_Sub15 {
     static int anInt9874 = 0;
     private int anInt9875 = -1;
 
-    final void method2554(int i, BufferedStream buffer) {
-        if (i == 29147) {
-            anInt9875 = buffer.readUnsignedShort();
-            anInt9869++;
-        }
+    final void method2554(BufferedStream buffer) {
+        anInt9875 = buffer.readUnsignedShort();
+        anInt9869++;
     }
 
     public static void method2585() {
@@ -29,11 +27,9 @@ public class Node_Sub15_Sub13 extends Node_Sub15 {
         return new Class129[]{Class194_Sub3.aClass129_6901, Node_Sub41.aClass129_7515, Class123.aClass129_1564};
     }
 
-    final void method2556(ClanChat clanchat, int i) {
-        if (i == 16) {
-            anInt9872++;
-            clanchat.method502(anInt9875);
-        }
+    final void method2556(ClanChat clanchat) {
+        anInt9872++;
+        clanchat.method502(anInt9875);
     }
 
     Node_Sub15_Sub13() {

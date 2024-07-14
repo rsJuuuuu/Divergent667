@@ -17,11 +17,11 @@ public class Node_Sub15_Sub3 extends Node_Sub15 {
         }
     }
 
-    static int method2564(String string, boolean bool, char c) {
+    static int method2564(String string, char c) {
         anInt9786++;
         int i = 0;
         int i_1_ = string.length();
-        if (!bool) {
+        if (!true) {
             anInt9787 = -100;
         }
         for (int i_2_ = 0; i_1_ > i_2_; i_2_++) {
@@ -32,20 +32,15 @@ public class Node_Sub15_Sub3 extends Node_Sub15 {
         return i;
     }
 
-    final void method2556(ClanChat clanchat, int i) {
+    final void method2556(ClanChat clanchat) {
         clanchat.aString763 = aString9785;
-        if (i != 16) {
-            method2564(null, false, 't');
-        }
         anInt9790++;
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         aString9785 = buffer.readString();
         anInt9789++;
-        if (i == 29147) {
-            buffer.readInt();
-        }
+        buffer.readInt();
     }
 
     Node_Sub15_Sub3() {

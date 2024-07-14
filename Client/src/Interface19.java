@@ -5,7 +5,7 @@
 interface Interface19 {
     int method68(int i);
 
-    void method69(int i);
+    void method69();
 
     void method70(GraphicsToolkit graphicstoolkit, int i);
 

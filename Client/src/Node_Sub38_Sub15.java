@@ -24,7 +24,7 @@ public class Node_Sub38_Sub15 extends Node_Sub38 {
         anInt10254 = 2000;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10255++;
         while_158_:
         do {
@@ -58,9 +58,6 @@ public class Node_Sub38_Sub15 extends Node_Sub38 {
             } while (false);
             anInt10258 = buffer.readUnsignedShort();
         } while (false);
-        if (bool) {
-            method2775(-52, 90);
-        }
     }
 
     public static void method2838() {
@@ -73,7 +70,7 @@ public class Node_Sub38_Sub15 extends Node_Sub38 {
         int[] is = aClass146_7460.method1645(i_1_);
         if (aClass146_7460.aBoolean1819) {
             int i_2_ = anInt10258 >> 1;
-            int[][] is_3_ = aClass146_7460.method1642((byte) -46);
+            int[][] is_3_ = aClass146_7460.method1642();
             Random random = new Random(anInt10253);
             for (int i_4_ = 0; anInt10254 > i_4_; i_4_++) {
                 int i_5_ = anInt10258 > 0 ? anInt10252 + Class330.method3838(-5208, anInt10258, random) - i_2_ : anInt10252;
@@ -143,9 +140,6 @@ public class Node_Sub38_Sub15 extends Node_Sub38 {
     }
 
     final void method2785() {
-        if (7 != 7) {
-            method2775(73, -102);
-        }
         Node_Sub37.method2772((byte) 54);
         anInt10260++;
     }

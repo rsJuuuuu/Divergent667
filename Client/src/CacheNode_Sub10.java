@@ -117,7 +117,7 @@ public class CacheNode_Sub10 extends CacheNode {
     private void method2333(BufferedStream buffer, int i_8_) {
         anInt9517++;
         if (i_8_ == 1) {
-            aStringArray9529 = Class106.method1120((byte) -102, buffer.readString(), '<');
+            aStringArray9529 = Class106.method1120(buffer.readString(), '<');
         } else if (i_8_ == 2) {
             int i_9_ = buffer.readUnsignedByte();
             anIntArray9522 = new int[i_9_];

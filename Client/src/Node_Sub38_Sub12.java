@@ -122,8 +122,8 @@ public class Node_Sub38_Sub12 extends Node_Sub38 {
         return is;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
-        if (!bool) {
+    final void method2780(BufferedStream buffer, int i) {
+        if (!false) {
             anInt10226++;
             while_149_:
             do {

@@ -86,11 +86,11 @@ public class Class264 {
         Model model = new Model(models, i);
         if (aShortArray3349 != null) {
             for (int i_8_ = 0; aShortArray3349.length > i_8_; i_8_++)
-                model.method2089(aShortArray3349[i_8_], aShortArray3359[i_8_], -93);
+                model.method2089(aShortArray3349[i_8_], aShortArray3359[i_8_]);
         }
         if (aShortArray3356 != null) {
             for (int i_9_ = 0; aShortArray3356.length > i_9_; i_9_++)
-                model.method2087(aShortArray3356[i_9_], aShortArray3353[i_9_], 74);
+                model.method2087(aShortArray3356[i_9_], aShortArray3353[i_9_]);
         }
         return model;
     }
@@ -154,11 +154,11 @@ public class Class264 {
         }
         if (aShortArray3349 != null) {
             for (int i_14_ = 0; aShortArray3349.length > i_14_; i_14_++)
-                model.method2089(aShortArray3349[i_14_], aShortArray3359[i_14_], 77);
+                model.method2089(aShortArray3349[i_14_], aShortArray3359[i_14_]);
         }
         if (aShortArray3356 != null) {
             for (int i_15_ = 0; aShortArray3356.length > i_15_; i_15_++)
-                model.method2087(aShortArray3356[i_15_], aShortArray3353[i_15_], -114);
+                model.method2087(aShortArray3356[i_15_], aShortArray3353[i_15_]);
         }
         return model;
     }

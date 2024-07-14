@@ -15,7 +15,6 @@ abstract class Animable_Sub1 extends Animable {
     protected short aShort9102;
     static int anInt9103;
     static int anInt9104;
-    static boolean aBoolean9105;
 
     static void method824() {
         Client.anInt5471++;
@@ -51,7 +50,7 @@ abstract class Animable_Sub1 extends Animable {
         return Class139.aBooleanArrayArray1730[Node_Sub9_Sub1.anInt9656 + ((anInt5934 >> Class36.anInt549) - Class216.anInt2551)][Node_Sub9_Sub1.anInt9656 + (-EntityNode_Sub7.anInt6013 + (anInt5940 >> Class36.anInt549))];
     }
 
-    static void method826(int i, int i_1_, int i_3_, int i_5_, int i_6_, int i_7_) {
+    static void method826(int i, int i_1_, int i_5_, int i_6_) {
         anInt9097++;
         Animable_Sub3.method919(i_6_, i_5_, i, i_1_, 0);
     }

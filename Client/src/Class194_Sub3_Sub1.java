@@ -48,12 +48,9 @@ public class Class194_Sub3_Sub1 extends Class194_Sub3 {
         aClass241_9377 = null;
     }
 
-    static void method1982(int i) {
+    static void method1982() {
         try {
             anInt9372++;
-            if (i != 0) {
-                method1982(-44);
-            }
             for (Node_Sub3 node_sub3 = (Node_Sub3) Class56.aHashTable839.method1516(); node_sub3 != null; node_sub3 = (Node_Sub3) Class56.aHashTable839.method1520(106)) {
                 if (node_sub3.aClass189_Sub1_6943.method1920()) {
                     Renderer.method3446(node_sub3.anInt6947);
@@ -79,7 +76,7 @@ public class Class194_Sub3_Sub1 extends Class194_Sub3 {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class126.method1537(runtimeexception, "hfa.J(" + i + ')');
+            throw Class126.method1537(runtimeexception, "hfa.J(" + 0 + ')');
         }
     }
 }

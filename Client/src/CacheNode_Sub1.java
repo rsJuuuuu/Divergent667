@@ -32,7 +32,7 @@ public class CacheNode_Sub1 extends CacheNode {
             }
             for (int i_5_ = 0; i_3_ > i_5_; i_5_++) {
                 boolean bool = buffer.readUnsignedByte() == 1;
-                int i_6_ = buffer.read24BitInteger();
+                int i_6_ = buffer.readInt24();
                 Node node;
                 if (bool) {
                     node = new Node_Sub18(buffer.readString());

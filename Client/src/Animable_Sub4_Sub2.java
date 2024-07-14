@@ -38,7 +38,7 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19 {
         return aClass310_10794.anInt3926;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10803++;
         DrawableModel drawablemodel = aClass310_10794.method3597(graphicstoolkit, false, true, true, 2048);
         if (drawablemodel == null) {
@@ -46,7 +46,7 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19 {
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934 + aShort9145, anInt5937, anInt5940 + aShort9147);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10810, (byte) -50, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10810, 1);
         int i_2_ = anInt5934 >> 9;
         int i_3_ = anInt5940 >> 9;
         aClass310_10794.method3600(i_3_, drawablemodel, true, -9827, graphicstoolkit, i_2_, i_2_, i_3_, class336);
@@ -65,7 +65,7 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19 {
         }
         aBoolean10813 = drawablemodel.F() || aClass310_10794.anEntityNode_Sub4_3931 != null;
         if (aClass171_10793 == null) {
-            aClass171_10793 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+            aClass171_10793 = Class167.method1752(anInt5937, anInt5934, drawablemodel, anInt5940);
         } else {
             Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10793, -79);
         }
@@ -80,12 +80,12 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19 {
         return aClass310_10794.anInt3951;
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         anInt10798++;
     }
 
     public final void method70(GraphicsToolkit graphicstoolkit, int i) {
-        aClass310_10794.method3588(graphicstoolkit);
+        aClass310_10794.method3588();
         if (i < -42) {
             anInt10797++;
         }
@@ -124,12 +124,12 @@ public class Animable_Sub4_Sub2 extends Animable_Sub4 implements Interface19 {
     public final boolean method73(int i) {
         anInt10795++;
         if (i != -19717) {
-            method69(26);
+            method69();
         }
         return aClass310_10794.method3594(10);
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10801++;
         return false;
     }

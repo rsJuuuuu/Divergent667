@@ -29,14 +29,14 @@ public class Class322 {
         return anIDirect3DSwapChain4071.Present(0);
     }
 
-    final void method3805(IDirect3DSurface idirect3dsurface, IDirect3DSwapChain idirect3dswapchain, byte b) {
+    final void method3805(IDirect3DSurface idirect3dsurface, IDirect3DSwapChain idirect3dswapchain) {
         anIDirect3DSwapChain4071 = idirect3dswapchain;
         anIDirect3DSurface4072 = idirect3dsurface;
         anIDirect3DSurface4073 = anIDirect3DSwapChain4071.a(0, 0);
     }
 
     Class322(IDirect3DSwapChain idirect3dswapchain, IDirect3DSurface idirect3dsurface) {
-        method3805(idirect3dsurface, idirect3dswapchain, (byte) 117);
+        method3805(idirect3dsurface, idirect3dswapchain);
     }
 
     final boolean method3806() {

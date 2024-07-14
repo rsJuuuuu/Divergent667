@@ -28,7 +28,7 @@ abstract class Class169 implements Interface2 {
     static int anInt4964;
     static int[] anIntArray4965 = new int[32];
 
-    static char method1755(int i, int i_0_, char c) {
+    static char method1755(char c) {
         anInt4959++;
         if (c >= 192 && c <= 255) {
             if (c <= 198) {
@@ -76,9 +76,6 @@ abstract class Class169 implements Interface2 {
             if (c == 253 || c == 255) {
                 return 'y';
             }
-        }
-        if (i != 6272) {
-            return 'e';
         }
         if (c == 338) {
             return 'O';
@@ -130,7 +127,7 @@ abstract class Class169 implements Interface2 {
     static void method1760() {
         Class48.method478(12, (byte) 105);
         anInt4962++;
-        Class160.method1730(112);
+        Class160.method1730();
         System.gc();
     }
 

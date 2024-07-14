@@ -147,7 +147,7 @@ public class Class290_Sub4 extends Class290 {
                 return null;
             }
         }
-        return new Class145(gltoolkit, l, class210s);
+        return new Class145(gltoolkit, l);
     }
 
     static void method3432(int i, int i_15_, int i_16_) {
@@ -184,7 +184,7 @@ public class Class290_Sub4 extends Class290 {
         anInt8095++;
     }
 
-    final void method3417(boolean bool, boolean bool_18_) {
+    final void method3417(boolean bool_18_) {
         anAbstractToolkit3654.method1318(Class117_Sub1.aClass94_4924, Class116.aClass94_5075);
         anInt8094++;
         if (bool_18_) {

@@ -53,7 +53,6 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
     static int anInt33;
     static int anInt34;
     static int anInt35;
-    static int anInt36;
     static int anInt37;
     private boolean aBoolean38;
     static float[] aFloatArray39;
@@ -67,24 +66,6 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
     private boolean aBoolean47 = false;
     static int anInt48;
     static int anInt49;
-    public static int anInt50;
-    public static boolean aBoolean51;
-    public static boolean aBoolean52;
-    public static boolean aBoolean53;
-    public static boolean aBoolean54;
-    public static boolean aBoolean55;
-    public static boolean aBoolean56;
-    public static int anInt57;
-    public static boolean aBoolean58;
-    public static boolean aBoolean59;
-    public static boolean aBoolean60;
-    public static int anInt61;
-    public static boolean aBoolean62;
-    public static int anInt63;
-    public static int anInt64;
-    public static boolean aBoolean65;
-    public static int anInt66;
-    public static int anInt67;
 
     static void method83(int i) {
         anInt12++;
@@ -343,9 +324,9 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
                         /* empty */
                     }
                 }
-                Animable_Sub3.method918((byte) -121);
+                Animable_Sub3.method918();
                 Class79.method788();
-                method93(-50);
+                method93();
                 method99();
                 Animable_Sub3_Sub1.aClass234_11017 = Class300.method3498();
                 while (Class321.aLong4068 == 0L || Class313.method3650() < Class321.aLong4068) {
@@ -407,7 +388,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 
     public abstract void init();
 
-    synchronized void method93(int i) {
+    synchronized void method93() {
         if (Node_Sub38_Sub20.aCanvas10309 != null) {
             Node_Sub38_Sub20.aCanvas10309.removeFocusListener(this);
             Node_Sub38_Sub20.aCanvas10309.getParent().setBackground(Color.black);

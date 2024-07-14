@@ -74,7 +74,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
     }
 
     public final void method70(GraphicsToolkit graphicstoolkit, int i) {
-        aClass310_10652.method3588(graphicstoolkit);
+        aClass310_10652.method3588();
         if (i > -42) {
             method813(-38);
         }
@@ -88,7 +88,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
         }
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_3_, byte b, int i_4_, Animable animable) {
+    final void method816(int i, boolean bool, int i_3_, byte b, int i_4_, Animable animable) {
         if (b < 101) {
             aBoolean10658 = true;
         }
@@ -104,7 +104,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
         return aClass310_10652.anInt3933;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10651++;
         return false;
     }
@@ -147,7 +147,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
         aBoolean10672 = objectdefinition.anInt3057 != 0 && !bool;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10654++;
         DrawableModel drawablemodel = aClass310_10652.method3597(graphicstoolkit, false, true, true, 2048);
         if (drawablemodel == null) {
@@ -155,7 +155,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10672, (byte) 105, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10672, 1);
         int i_12_ = anInt5934 >> 9;
         int i_13_ = anInt5940 >> 9;
         aClass310_10652.method3600(i_13_, drawablemodel, true, -9827, graphicstoolkit, i_12_, i_12_, i_13_, class336);
@@ -174,7 +174,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
         }
         aBoolean10658 = drawablemodel.F() || aClass310_10652.anEntityNode_Sub4_3931 != null;
         if (aClass171_10661 == null) {
-            aClass171_10661 = Class167.method1752(0, anInt5937, anInt5934, drawablemodel, anInt5940);
+            aClass171_10661 = Class167.method1752(anInt5937, anInt5934, drawablemodel, anInt5940);
         } else {
             Animator.method239(drawablemodel, anInt5940, anInt5937, anInt5934, aClass171_10661, -98);
         }
@@ -207,7 +207,7 @@ public class Animable_Sub1_Sub2 extends Animable_Sub1 implements Interface19 {
         return aClass310_10652.anInt3926;
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         anInt10656++;
     }
 }

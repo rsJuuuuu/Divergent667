@@ -48,7 +48,7 @@ public class Node_Sub54 extends Node {
             graphicstoolkit.method1239(10 + i_2_, 1 + i * class299.method3487() + i_3_ - i_5_, i_5_, i_4_, class79.anInt1077);
         }
         if (class79.anInt1081 != 0) {
-            graphicstoolkit.method1234(i_5_, class79.anInt1081, 10 + i_2_, 1 + (class299.method3487() * i + (i_3_ - i_5_)), (byte) -88, i_4_);
+            graphicstoolkit.method1234(i_5_, class79.anInt1081, 10 + i_2_, 1 + (class299.method3487() * i + (i_3_ - i_5_)), i_4_);
         }
         int i_6_ = class79.anInt1058;
         if (node_sub14.aBoolean7127 && class79.anInt1054 != -1) {
@@ -83,7 +83,7 @@ public class Node_Sub54 extends Node {
         FileOnDisk fileondisk = null;
         Node_Sub27 node_sub27 = new Node_Sub27(Class209.aClass353_2483);
         try {
-            Class241 class241 = Class240.aSignLink2946.method3631("", (byte) 99);
+            Class241 class241 = Class240.aSignLink2946.method3631("");
             while (class241.anInt2953 == 0)
                 Class262_Sub22.method3208(1L);
             if (class241.anInt2953 == 1) {

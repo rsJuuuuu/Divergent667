@@ -87,7 +87,7 @@ public class Class113 {
         Class327.anInt5360 = -(Class20.anInt333 * i_3_ / i_6_) + Class20.anInt333;
         Class150_Sub3.anInt8963 = -1;
         Class262_Sub4.anInt7730 = -1;
-        Class207.method2039(9);
+        Class207.method2039();
     }
 
     static boolean method1152(int i) {

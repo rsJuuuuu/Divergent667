@@ -16,14 +16,11 @@ public class Node_Sub38_Sub31 extends Node_Sub38 {
         super(1, false);
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         if (i == 0) {
             aBoolean7463 = buffer.readUnsignedByte() == 1;
         }
         anInt10417++;
-        if (bool) {
-            aClass302_10422 = null;
-        }
     }
 
     private void method2891(int i, int i_0_) {
@@ -113,7 +110,7 @@ public class Node_Sub38_Sub31 extends Node_Sub38 {
             if (i != 1) {
                 method2892();
             }
-            Class241 class241 = Class240.aSignLink2946.method3631("", (byte) 122);
+            Class241 class241 = Class240.aSignLink2946.method3631("");
             while (class241.anInt2953 == 0)
                 Class262_Sub22.method3208(1L);
             if (class241.anInt2953 == 1) {

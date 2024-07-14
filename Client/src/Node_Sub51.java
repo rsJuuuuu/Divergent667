@@ -20,7 +20,7 @@ public class Node_Sub51 extends Node {
         Class150_Sub3.anInt8963 = -1;
         Class94.anInt1250 = i;
         anInt7629++;
-        Class207.method2039(105);
+        Class207.method2039();
     }
 
     static int method2969(Class377_Sub1 class377_sub1, boolean bool, Class377_Sub1 class377_sub1_1_, int i) {
@@ -84,13 +84,13 @@ public class Node_Sub51 extends Node {
             return -1;
         }
         if (i == 6) {
-            if (class377_sub1_1_.method4122(-80)) {
-                if (class377_sub1.method4122(-43)) {
+            if (class377_sub1_1_.method4122()) {
+                if (class377_sub1.method4122()) {
                     return 0;
                 }
                 return 1;
             }
-            if (class377_sub1.method4122(-107)) {
+            if (class377_sub1.method4122()) {
                 return -1;
             }
             return 0;

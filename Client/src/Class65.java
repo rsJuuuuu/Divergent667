@@ -88,7 +88,4 @@ public class Class65 {
         anInt927 = buffer.readUnsignedShort();
     }
 
-    private Class65() {
-        aClass227Array925 = new Class227[10];
-    }
 }

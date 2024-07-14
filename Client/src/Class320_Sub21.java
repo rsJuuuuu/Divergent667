@@ -33,11 +33,11 @@ public class Class320_Sub21 extends Class320 {
     static void method3760(GraphicsToolkit graphicstoolkit) {
         CacheNode_Sub18.aClass52_9609 = Class171.method1792(true, true, Node_Sub50.anInt7625, -115, graphicstoolkit);
         anInt8408++;
-        Class85.aClass357_1159 = Class150_Sub2.method1660((byte) -23, Node_Sub50.anInt7625, graphicstoolkit);
+        Class85.aClass357_1159 = Class150_Sub2.method1660(Node_Sub50.anInt7625, graphicstoolkit);
         StandardSprite.aClass52_8945 = Class171.method1792(true, true, Class285.anInt3600, -101, graphicstoolkit);
-        Class169_Sub3.aClass357_8820 = Class150_Sub2.method1660((byte) -69, Class285.anInt3600, graphicstoolkit);
+        Class169_Sub3.aClass357_8820 = Class150_Sub2.method1660(Class285.anInt3600, graphicstoolkit);
         Class262_Sub4.aClass52_7721 = Class171.method1792(true, true, Class340.anInt4220, -108, graphicstoolkit);
-        Class262_Sub15_Sub1.aClass357_10524 = Class150_Sub2.method1660((byte) 109, Class340.anInt4220, graphicstoolkit);
+        Class262_Sub15_Sub1.aClass357_10524 = Class150_Sub2.method1660(Class340.anInt4220, graphicstoolkit);
     }
 
     static Class169_Sub2_Sub1 method3761(int i, byte[] bs, GLToolkit gltoolkit, int i_3_) {
@@ -86,7 +86,7 @@ public class Class320_Sub21 extends Class320 {
         return 2;
     }
 
-    static byte[] method3763(int i, String string) {
+    static byte[] method3763(String string) {
         anInt8404++;
         int i_4_ = string.length();
         byte[] bs = new byte[i_4_];

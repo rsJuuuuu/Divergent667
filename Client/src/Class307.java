@@ -20,7 +20,7 @@ public class Class307 {
         anIntArray3896 = null;
     }
 
-    final void method3580(byte b) {
+    final void method3580() {
         aClass61_3899.method608(false);
         anInt3901++;
     }

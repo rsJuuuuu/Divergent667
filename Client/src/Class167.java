@@ -31,7 +31,7 @@ public class Class167 {
 
     final boolean method1749(Class169_Sub3 class169_sub3, Class169_Sub3 class169_sub3_3_) {
         anInt2040++;
-        if (!method1751(80)) {
+        if (!method1751()) {
             return false;
         }
         Class382 class382 = aGLToolkit2036.aClass382_6701;
@@ -85,7 +85,7 @@ public class Class167 {
 
     }
 
-    final boolean method1751(int i) {
+    final boolean method1751() {
         if (aGLToolkit2036.aBoolean6719 && aGLToolkit2036.aBoolean6738 && aClass145_2035 == null) {
             Class210 class210 = Class134.method1568("uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n", aGLToolkit2036, 35632);
             if (class210 != null) {
@@ -93,19 +93,13 @@ public class Class167 {
             }
         }
         anInt2038++;
-        if (i < 34) {
-            return false;
-        }
         return aClass145_2035 != null;
     }
 
-    static Class171 method1752(int i, int i_6_, int i_7_, DrawableModel drawablemodel, int i_8_) {
+    static Class171 method1752(int i_6_, int i_7_, DrawableModel drawablemodel, int i_8_) {
         anInt2037++;
         if (drawablemodel == null) {
             return null;
-        }
-        if (i != 0) {
-            method1752(-1, -28, -46, null, 113);
         }
         return new Class171(i_7_, i_6_, i_8_, drawablemodel.na(), drawablemodel.V(), drawablemodel.RA(), drawablemodel.fa(), drawablemodel.EA(), drawablemodel.HA(), drawablemodel.G());
     }

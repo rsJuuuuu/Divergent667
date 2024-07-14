@@ -151,10 +151,7 @@ public class Class312 {
         return node;
     }
 
-    final Node method3620(int i) {
-        if (i != 16776960) {
-            method3618(-17);
-        }
+    final Node method3620() {
         anInt3956++;
         Node node = aNode3970;
         if (node == aNode3958) {
@@ -225,7 +222,7 @@ public class Class312 {
                 Class244 class244 = Node_Sub52.aClass244Array7654[i_13_];
                 is[i_13_] = class244.anInt3078 * class244.anInt3084;
             }
-            Class271.method3313(Node_Sub52.aClass244Array7654, is, (byte) -83);
+            Class271.method3313(Node_Sub52.aClass244Array7654, is);
         }
         return Node_Sub52.aClass244Array7654;
     }

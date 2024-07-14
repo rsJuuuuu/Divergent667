@@ -27,7 +27,6 @@ public class Class298 {
     static Class298 aClass298_3725 = new Class298(Class172.aClass172_2077);
     static Class298 aClass298_3726 = new Class298(Class172.aClass172_2077);
     static Class298 aClass298_3727 = new Class298(Class172.aClass172_2077);
-    static Class298 aClass298_3740 = new Class298(Class172.aClass172_2077);
     static Class298 aClass298_3728 = new Class298(Class172.aClass172_2077);
     static Class298 aClass298_3729 = new Class298(Class172.aClass172_2077);
     static Class298 aClass298_3730 = new Class298(Class172.aClass172_2077);
@@ -66,7 +65,7 @@ public class Class298 {
 
     final void method3484(Interface12 interface12) {
         anInt3711++;
-        if (interface12.method34((byte) 88) != aClass172_3706) {
+        if (interface12.method34() != aClass172_3706) {
             throw new IllegalArgumentException();
         }
         anInterface12_3709 = interface12;

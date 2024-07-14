@@ -26,7 +26,7 @@ public class EntityNode_Sub3_Sub2_Sub1 extends EntityNode_Sub3_Sub2 {
         anEntityNode_Sub7_11027.aClass103_6006.method1110(this);
     }
 
-    final void method948(long l, int i) {
+    final void method948(int i) {
         aShort11026 -= i;
         if (aShort11026 <= 0) {
             method951();
@@ -259,7 +259,7 @@ public class EntityNode_Sub3_Sub2_Sub1 extends EntityNode_Sub3_Sub2 {
         }
     }
 
-    final void method949(GraphicsToolkit graphicstoolkit, long l) {
+    final void method949(GraphicsToolkit graphicstoolkit) {
         int i = anInt9174 >> 12 + Class36.anInt549;
         int i_45_ = anInt9173 >> 12 + Class36.anInt549;
         int i_46_ = anInt9171 >> 12;
@@ -332,28 +332,28 @@ public class EntityNode_Sub3_Sub2_Sub1 extends EntityNode_Sub3_Sub2 {
                     int i_53_ = anInt9173 >> 12;
                     if (Objects.requireNonNull(class261).anAnimable_Sub2_3314 != null) {
                         Class171 class171 = class261.anAnimable_Sub2_3314.method809(graphicstoolkit, -105);
-                        if (class171 != null && class171.method1795(i_46_, (byte) 119, i_53_, i_52_)) {
+                        if (class171 != null && class171.method1795(i_46_, i_53_, i_52_)) {
                             method951();
                             return;
                         }
                     }
                     if (class261.anAnimable_Sub2_3308 != null) {
                         Class171 class171 = class261.anAnimable_Sub2_3308.method809(graphicstoolkit, -120);
-                        if (class171 != null && class171.method1795(i_46_, (byte) 120, i_53_, i_52_)) {
+                        if (class171 != null && class171.method1795(i_46_, i_53_, i_52_)) {
                             method951();
                             return;
                         }
                     }
                     if (class261.anAnimable_Sub1_3317 != null) {
                         Class171 class171 = class261.anAnimable_Sub1_3317.method809(graphicstoolkit, -109);
-                        if (class171 != null && class171.method1795(i_46_, (byte) 107, i_53_, i_52_)) {
+                        if (class171 != null && class171.method1795(i_46_, i_53_, i_52_)) {
                             method951();
                             return;
                         }
                     }
                     for (Class256 class256 = class261.aClass256_3312; class256 != null; class256 = class256.aClass256_3238) {
                         Class171 class171 = class256.aMobile3239.method809(graphicstoolkit, -117);
-                        if (class171 != null && class171.method1795(i_46_, (byte) 119, i_53_, i_52_)) {
+                        if (class171 != null && class171.method1795(i_46_, i_53_, i_52_)) {
                             method951();
                             return;
                         }
@@ -364,7 +364,7 @@ public class EntityNode_Sub3_Sub2_Sub1 extends EntityNode_Sub3_Sub2 {
         }
     }
 
-    EntityNode_Sub3_Sub2_Sub1(EntityNode_Sub7 entitynode_sub7, int i, int i_54_, int i_55_, int i_56_, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, int i_63_, boolean bool, boolean bool_64_) {
+    EntityNode_Sub3_Sub2_Sub1(EntityNode_Sub7 entitynode_sub7, int i, int i_54_, int i_55_, int i_56_, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, int i_63_, boolean bool_64_) {
         anEntityNode_Sub7_11027 = entitynode_sub7;
         anInt9174 = i << 12;
         anInt9171 = i_54_ << 12;
@@ -378,11 +378,10 @@ public class EntityNode_Sub3_Sub2_Sub1 extends EntityNode_Sub3_Sub2 {
         aShort11025 = (short) i_57_;
         aShort11024 = (short) i_58_;
         anInt11028 = i_59_;
-        aByte9170 = anEntityNode_Sub7_11027.aClass300_6003.aByte3768;
         method947();
     }
 
-    final void method950(EntityNode_Sub7 entitynode_sub7, int i, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_, int i_72_, int i_73_, int i_74_, boolean bool, boolean bool_75_) {
+    final void method950(EntityNode_Sub7 entitynode_sub7, int i, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_, int i_72_, int i_73_, int i_74_, boolean bool_75_) {
         anEntityNode_Sub7_11027 = entitynode_sub7;
         anInt9174 = i << 12;
         anInt9171 = i_65_ << 12;
@@ -396,7 +395,6 @@ public class EntityNode_Sub3_Sub2_Sub1 extends EntityNode_Sub3_Sub2 {
         aShort11025 = (short) i_68_;
         aShort11024 = (short) i_69_;
         anInt11028 = i_70_;
-        aByte9170 = anEntityNode_Sub7_11027.aClass300_6003.aByte3768;
         method947();
     }
 

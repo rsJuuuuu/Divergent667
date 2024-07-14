@@ -38,7 +38,7 @@ public class Canvas extends java.awt.Canvas {
                     Node_Sub36.method2752();
                 } else {
                     i_1_ = 2;
-                    Class194_Sub1.method1965((byte) -98);
+                    Class194_Sub1.method1965();
                 }
             } else {
                 Class69.method736();

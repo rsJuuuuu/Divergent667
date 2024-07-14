@@ -96,7 +96,7 @@ public class Class223 {
                     }
                 }
                 if (!bool) {
-                    for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620(16776960)) {
+                    for (CacheNode_Sub13 cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3613(); cachenode_sub13 != null; cachenode_sub13 = (CacheNode_Sub13) Class368.aClass312_4549.method3620()) {
                         if (cachenode_sub13.anInt9562 == 58) {
                             cachenode_sub13.aString9565 = "<col=ffffff>" + string;
                             break;
@@ -110,11 +110,11 @@ public class Class223 {
     static void method2104(int i_7_, int i_8_) {
         anInt2652++;
         if (Class209.aClass353_2483 == Class169_Sub4.aClass353_8825) {
-            if (!Class78.method778(0, i_7_, 1, false, i_8_, 0, -2, -65, 1)) {
-                Class78.method778(0, i_7_, 1, false, i_8_, 0, -3, -59, 1);
+            if (!Class78.method778(0, i_7_, 1, false, i_8_, 0, -2, 1)) {
+                Class78.method778(0, i_7_, 1, false, i_8_, 0, -3, 1);
             }
-        } else if (!Class78.method778(0, i_7_, 1, false, i_8_, 0, -3, -69, 1)) {
-            Class78.method778(0, i_7_, 1, false, i_8_, 0, -2, 32, 1);
+        } else if (!Class78.method778(0, i_7_, 1, false, i_8_, 0, -3, 1)) {
+            Class78.method778(0, i_7_, 1, false, i_8_, 0, -2, 1);
         }
     }
 

@@ -22,7 +22,7 @@ public class t extends Plane implements Interface3 {
         anInt5021 = -1;
         int i_14_ = 0;
         float[] fs = new float[aClass312_5019.method3615(-87)];
-        for (Node_Sub29 node_sub29 = (Node_Sub29) aClass312_5019.method3613(); node_sub29 != null; node_sub29 = (Node_Sub29) aClass312_5019.method3620(16776960))
+        for (Node_Sub29 node_sub29 = (Node_Sub29) aClass312_5019.method3613(); node_sub29 != null; node_sub29 = (Node_Sub29) aClass312_5019.method3620())
             fs[i_14_++] = node_sub29.method2707();
         q(fs);
         for (int i_15_ = 0; i_15_ < i_12_ + i_12_; i_15_++) {
@@ -57,7 +57,7 @@ public class t extends Plane implements Interface3 {
         anInt5021 = i_22_;
         int i_24_ = 0;
         float[] fs = new float[aClass312_5019.method3615(-115)];
-        for (Node_Sub29 node_sub29 = (Node_Sub29) aClass312_5019.method3613(); node_sub29 != null; node_sub29 = (Node_Sub29) aClass312_5019.method3620(16776960))
+        for (Node_Sub29 node_sub29 = (Node_Sub29) aClass312_5019.method3613(); node_sub29 != null; node_sub29 = (Node_Sub29) aClass312_5019.method3620())
             fs[i_24_++] = node_sub29.method2707();
         q(fs);
         for (int i_25_ = 0; i_25_ < i_21_ + i_21_; i_25_++) {

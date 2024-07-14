@@ -11,12 +11,12 @@ public class Class106 {
     static Class135 aClass135_1354 = new Class135();
     static int anInt1355;
     static Class93 aClass93_1356;
-    static Class170 aClass170_1357 = new Class170(7, 2);
+    static Class170 aClass170_1357 = new Class170(2);
     static int anInt1358;
 
-    static String[] method1120(byte b, String string, char c) {
+    static String[] method1120(String string, char c) {
         anInt1352++;
-        int i = Node_Sub15_Sub3.method2564(string, true, c);
+        int i = Node_Sub15_Sub3.method2564(string, c);
         String[] strings = new String[1 + i];
         int i_1_ = 0;
         int i_2_ = 0;

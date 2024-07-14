@@ -29,7 +29,7 @@ public class Class117_Sub1 extends Class117 implements Interface1 {
     }
 
     public final void method4(int i, int i_1_, byte[] bs, int i_2_) {
-        this.method1165((byte) 108, i_1_, bs);
+        this.method1165(i_1_, bs);
         if (i_2_ != 2712) {
             aClass94_4924 = null;
         }
@@ -37,10 +37,7 @@ public class Class117_Sub1 extends Class117 implements Interface1 {
         anInt4926 = i;
     }
 
-    public final int method3(byte b) {
-        if (b > -61) {
-            aString4931 = null;
-        }
+    public final int method3() {
         anInt4928++;
         return anInt4926;
     }

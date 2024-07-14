@@ -19,7 +19,7 @@ public class Class267 {
         aClass266_3449 = null;
     }
 
-    final boolean method3287(byte b) {
+    final boolean method3287() {
         anInt3448++;
 
         return aChar3444 == 115;

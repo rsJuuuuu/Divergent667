@@ -35,10 +35,7 @@ class Node {
         return aNode2799 != null;
     }
 
-    static void method2162(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
-        if (i_2_ != 32021) {
-            method2164();
-        }
+    static void method2162(int i, int i_0_, int i_1_, int i_3_, int i_4_, int i_5_, int i_6_) {
         if (i_5_ < Class262_Sub4.anInt7722 || za_Sub2.anInt10513 < i_0_ || i_3_ < Class384.anInt4906 || Node_Sub25_Sub1.anInt9936 < i_4_) {
             Class288.method3404(i_4_, i_5_, i_1_, true, i_3_, i_0_, i_6_, i);
         } else {

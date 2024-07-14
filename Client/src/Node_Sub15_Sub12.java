@@ -31,10 +31,7 @@ public class Node_Sub15_Sub12 extends Node_Sub15 {
         aString9867 = null;
     }
 
-    final void method2556(ClanChat clanchat, int i) {
-        if (i != 16) {
-            anInt9865 = -104;
-        }
+    final void method2556(ClanChat clanchat) {
         clanchat.method492(aString9862, anInt9865);
         anInt9861++;
     }
@@ -43,12 +40,9 @@ public class Node_Sub15_Sub12 extends Node_Sub15 {
         /* empty */
     }
 
-    final void method2554(int i, BufferedStream buffer) {
+    final void method2554(BufferedStream buffer) {
         anInt9863++;
         anInt9865 = buffer.readInt();
-        if (i != 29147) {
-            aString9862 = null;
-        }
         aString9862 = buffer.readString();
     }
 }

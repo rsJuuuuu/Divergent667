@@ -90,7 +90,7 @@ public class Class262_Sub10 extends Class262 {
     }
 
     final void method3148(int i) {
-        Class188_Sub1_Sub1.method1895(anInt7772, false, 100, (byte) 21,
+        Class188_Sub1_Sub1.method1895(anInt7772, false, 100,
                 anInt7771, anInt7770, 100);
         if (i < -102) {
             anInt7767++;

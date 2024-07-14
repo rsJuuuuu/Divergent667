@@ -24,7 +24,6 @@ public class Class78 {
     protected int anInt1038;
     protected Class65 aClass65_1039;
     static int anInt1040;
-    protected Animable anAnimable1041;
 
     static void method776(int i, int i_1_, GraphicsToolkit graphicstoolkit) {
         anInt1029++;
@@ -132,7 +131,7 @@ public class Class78 {
                     i_24_ += Node_Sub36_Sub4.method2764(bool);
                 }
                 Class103 class103 = class179.aClass103_2124;
-                for (EntityNode_Sub6 entitynode_sub6 = (EntityNode_Sub6) class103.method1113((byte) -113); entitynode_sub6 != null; entitynode_sub6 = (EntityNode_Sub6) class103.method1108(115)) {
+                for (EntityNode_Sub6 entitynode_sub6 = (EntityNode_Sub6) class103.method1113(); entitynode_sub6 != null; entitynode_sub6 = (EntityNode_Sub6) class103.method1108(115)) {
                     if ((Node_Sub25_Sub1.aBoolean9952 || Class295.myPlayer.plane == entitynode_sub6.anAnimable5990.plane) && entitynode_sub6.method971(graphicstoolkit, i_24_, i_23_)) {
                         int i_27_;
                         int i_28_;
@@ -349,7 +348,7 @@ public class Class78 {
         return !(aByte1027 != 2 && aByte1027 != 3);
     }
 
-    static boolean method778(int i, int i_59_, int i_60_, boolean bool, int i_61_, int i_62_, int i_63_, int i_64_, int i_65_) {
+    static boolean method778(int i, int i_59_, int i_60_, boolean bool, int i_61_, int i_62_, int i_63_, int i_65_) {
         anInt1040++;
         int fromSceneX = Class295.myPlayer.scenePositionXQueue[0];
         int fromSceneY = Class295.myPlayer.scenePositionYQueue[0];
@@ -385,7 +384,7 @@ public class Class78 {
         Class280.anInt3570 = 0;
         //noinspection unused
         long l_71_ = Class313.method3650();
-        for (EntityNode_Sub4 entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1113((byte) -128); entitynode_sub4 != null; entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1108(109)) {
+        for (EntityNode_Sub4 entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1113(); entitynode_sub4 != null; entitynode_sub4 = (EntityNode_Sub4) Animable_Sub2.aClass103_9116.method1108(109)) {
             if (entitynode_sub4.method962(graphicstoolkit, l)) {
                 za_Sub2.anInt10514++;
             }
@@ -400,14 +399,13 @@ public class Class78 {
         aClass302_1033 = null;
     }
 
-    Class78(byte b, int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, Animable animable) {
+    Class78(byte b, int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_) {
         anInt1026 = i_76_;
         aByte1027 = b;
         anInt1038 = i;
         anInt1022 = i_73_;
         anInt1036 = i_75_;
         anInt1028 = i_72_;
-        anAnimable1041 = animable;
         anInt1034 = i_74_;
     }
 }

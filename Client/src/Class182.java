@@ -200,7 +200,7 @@ public class Class182 {
         }
     }
 
-    final void method1838(GraphicsToolkit graphicstoolkit, int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_) {
+    final void method1838(GraphicsToolkit graphicstoolkit, int i_42_, int i_43_, int i_46_, int i_47_, int i_48_, int i_49_) {
         if (aGLSprite2176 != null) {
             int[] is = new int[3];
             int i_50_ = -(anInt2172 - i_46_ << 16);
@@ -277,7 +277,7 @@ public class Class182 {
             if (anInt2180 == 0) {
                 if (Class376.aD4661.method7(9900, anInt2169)) {
                     int[] is = Class376.aD4661.method8(0.7F, anInt2169, anInt2177, false, false, anInt2177);
-                    aGLSprite2176 = graphicstoolkit.method1235(anInt2177, anInt2177, anInt2177, is, 7468);
+                    aGLSprite2176 = graphicstoolkit.method1235(anInt2177, anInt2177, anInt2177, is);
                 }
             } else if (anInt2180 == 2) {
                 method1837(graphicstoolkit, class182_63_);
@@ -314,8 +314,8 @@ public class Class182 {
                     is[i_67_ + i_69_] = is[i_67_ + i_71_] = is[i_68_ + i_69_] = is[i_68_ + i_71_] = 127 - i_73_ << 24 | 0xffffff;
                 }
             }
-            aGLSprite2178 = graphicstoolkit.method1235(128, 128, 128, is_64_, 7468);
-            aGLSprite2170 = graphicstoolkit.method1235(128, 128, 128, is, 7468);
+            aGLSprite2178 = graphicstoolkit.method1235(128, 128, 128, is_64_);
+            aGLSprite2170 = graphicstoolkit.method1235(128, 128, 128, is);
         }
     }
 

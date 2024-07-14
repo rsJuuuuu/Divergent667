@@ -41,7 +41,7 @@ public class Node_Sub38_Sub21 extends Node_Sub38 {
     static Class235_Sub1 method2859(BufferedStream buffer) {
         anInt10319++;
         Class235 class235 = Node_Sub40.method2928(buffer);
-        int i = buffer.read24BitInteger((byte) 99);
+        int i = buffer.readSignedInt24();
         return new Class235_Sub1(Objects.requireNonNull(class235).anInt5125, class235.aClass379_5118, class235.aClass77_5123, class235.anInt5124, class235.anInt5116, i);
     }
 

@@ -57,7 +57,7 @@ public class SignLink implements Runnable {
     }
 
     final Class241 method3627(int i, int i_0_, int i_2_) {
-        return method3643((i << 16) + 0, 6, null, 9, (i_2_ << 16) + i_0_);
+        return method3643((i << 16), 6, null, 9, (i_2_ << 16) + i_0_);
     }
 
     final Class241 method3628(Class<?> var_class, String string, int i) {
@@ -93,10 +93,7 @@ public class SignLink implements Runnable {
         return null;
     }
 
-    final Class241 method3631(String string, byte b) {
-        if (b <= 70) {
-            aString3987 = null;
-        }
+    final Class241 method3631(String string) {
         return method3643(0, 12, string, 9, 0);
     }
 
@@ -104,11 +101,8 @@ public class SignLink implements Runnable {
         return method3643(0, 3, null, 9, i);
     }
 
-    static FileOnDisk method3633(int i, String string) {
-        if (i != -15) {
-            method3633(-39, null);
-        }
-        return method3630(aString3987, anInt3978, string);
+    static FileOnDisk method3633() {
+        return method3630(aString3987, anInt3978, "2");
     }
 
     final Class241 method3634() {
@@ -185,17 +179,14 @@ public class SignLink implements Runnable {
         return method3643(0, 7, frame, 9, 0);
     }
 
-    final boolean method3640(int i) {
-        if (i < 118) {
-            aClass241_3983 = null;
-        }
+    final boolean method3640() {
         if (!aBoolean4005) {
-            return false;
+            return true;
         }
         if (aBoolean3985) {
-            return aClass11_3997 != null;
+            return aClass11_3997 == null;
         }
-        return anObject3980 != null;
+        return anObject3980 == null;
     }
 
     final Class241 method3641(Runnable runnable, int i) {
@@ -231,8 +222,8 @@ public class SignLink implements Runnable {
         aLong3999 = Class313.method3650() + 5000L;
     }
 
-    final Class241 method3645(int i, byte b, int[] is, Component component, Point point, int i_14_) {
-        return method3643(i, 17, new Object[]{component, is, point}, 9, i_14_);
+    final void method3645(int i, int[] is, Component component, Point point, int i_14_) {
+        method3643(i, 17, new Object[]{component, is, point}, 9, i_14_);
     }
 
     public final void run() {
@@ -492,7 +483,7 @@ public class SignLink implements Runnable {
         }
         Class351.method4005(anInt3978, aString3987, 15728);
         if (aBoolean4005) {
-            aFileOnDisk3994 = new FileOnDisk(Objects.requireNonNull(Class351.method4004((byte) 91, null, anInt3978, "random.dat")), 25L);
+            aFileOnDisk3994 = new FileOnDisk(Objects.requireNonNull(Class351.method4004((byte) 91, null, "random.dat")), 25L);
             aFileOnDisk3979 = new FileOnDisk(Class351.method4003("main_file_cache.dat2", 84), 314572800L);
             aFileOnDisk3992 = new FileOnDisk(Class351.method4003("main_file_cache.idx255", 86), 1048576L);
             aFileOnDiskArray4003 = new FileOnDisk[Class150_Sub1.INDEXES_COUNT];

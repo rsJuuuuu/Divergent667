@@ -131,7 +131,7 @@ public class Class287 {
         }
     }
 
-    final void method3399(AbstractToolkit abstracttoolkit) {
+    final void method3399() {
         anInt3617++;
         anInterface15_Impl2_3605.method37(24, 786336, -12093);
     }
@@ -153,7 +153,7 @@ public class Class287 {
                 if (bool) {
                     Node_Sub38_Sub37.method2907(node_sub19.anInt7166, -14347, node_sub19.aClass121_7160, node_sub19.anInt7161, node_sub19.anInt7165, node_sub19.anInt7171);
                 } else {
-                    Class128.method1544(node_sub19.anInt7161, node_sub19.anInt7168, node_sub19.anInt7167, node_sub19.anInt7171, -1, node_sub19.anInt7166, node_sub19.anInt7165, -128, node_sub19.anInt7169);
+                    Class128.method1544(node_sub19.anInt7161, node_sub19.anInt7168, node_sub19.anInt7167, node_sub19.anInt7171, -1, node_sub19.anInt7166, node_sub19.anInt7165, node_sub19.anInt7169);
                 }
                 node_sub19.aBoolean7159 = false;
                 if (bool || node_sub19.anInt7154 != node_sub19.anInt7169 || node_sub19.anInt7154 != -1) {
@@ -168,7 +168,7 @@ public class Class287 {
             if (bool) {
                 Node_Sub38_Sub37.method2907(node_sub19.anInt7166, i ^ 0x380a, null, node_sub19.anInt7161, node_sub19.anInt7165, node_sub19.anInt7171);
             } else {
-                Class128.method1544(node_sub19.anInt7161, node_sub19.anInt7164, node_sub19.anInt7170, node_sub19.anInt7171, -1, node_sub19.anInt7166, node_sub19.anInt7165, -39, node_sub19.anInt7154);
+                Class128.method1544(node_sub19.anInt7161, node_sub19.anInt7164, node_sub19.anInt7170, node_sub19.anInt7171, -1, node_sub19.anInt7166, node_sub19.anInt7165, node_sub19.anInt7154);
             }
             node_sub19.method2160((byte) 68);
         }
@@ -206,7 +206,7 @@ public class Class287 {
         float f_30_ = -f + f_21_;
         float f_31_ = -f_19_ + f_22_;
         float f_32_ = f_23_ - f_20_;
-        jaclib.memory.Buffer buffer = anInterface15_Impl2_3605.method40(-87, true);
+        jaclib.memory.Buffer buffer = anInterface15_Impl2_3605.method40(true);
         if (buffer != null) {
             Stream stream = abstracttoolkit.method1324(buffer);
             if (Stream.b()) {
@@ -441,7 +441,7 @@ public class Class287 {
                 }
             }
             stream.c();
-            if (anInterface15_Impl2_3605.method39(124)) {
+            if (anInterface15_Impl2_3605.method39()) {
                 abstracttoolkit.method1354(0, anInterface15_Impl2_3605);
                 abstracttoolkit.method1354(1, anInterface15_Impl2_3618);
                 abstracttoolkit.method1338(aClass213_3620, 9422);
@@ -488,7 +488,7 @@ public class Class287 {
             stream.c();
             anInterface15_Impl1_3622.method53(-3308);
         }
-        jaclib.memory.Buffer buffer_77_ = anInterface15_Impl2_3618.method40(112, true);
+        jaclib.memory.Buffer buffer_77_ = anInterface15_Impl2_3618.method40(true);
         if (buffer_77_ != null) {
             Stream stream = abstracttoolkit.method1324(buffer_77_);
             if (Stream.b()) {
@@ -523,7 +523,7 @@ public class Class287 {
                 }
             }
             stream.c();
-            anInterface15_Impl2_3618.method39(127);
+            anInterface15_Impl2_3618.method39();
         }
     }
 }

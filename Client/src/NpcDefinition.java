@@ -132,7 +132,7 @@ public class NpcDefinition {
         if (anInt2881 != -1) {
             i_1_ = interface17.method64(anInt2881, (byte) -42);
         } else if (anInt2882 != -1) {
-            i_1_ = interface17.method65(anInt2882, 119);
+            i_1_ = interface17.method65(anInt2882);
         }
         if (i_1_ < 0
                 || i_1_ >= anIntArray2827.length - 1
@@ -439,7 +439,7 @@ public class NpcDefinition {
                 boolean bool = buffer
                         .readUnsignedByte() == 1;
                 int i_20_ = buffer
-                        .read24BitInteger();
+                        .readInt24();
                 Node node;
                 if (bool) {
                     node = new Node_Sub18(
@@ -686,7 +686,7 @@ public class NpcDefinition {
                                 && anIntArrayArray2842[i_47_] != null) {
                             models[i_47_].method2082(
                                     anIntArrayArray2842[i_47_][0],
-                                    anIntArrayArray2842[i_47_][1], 126,
+                                    anIntArrayArray2842[i_47_][1],
                                     anIntArrayArray2842[i_47_][2]);
                         }
                     }
@@ -717,7 +717,7 @@ public class NpcDefinition {
                         }
                         if (i_49_ != 0 || i_50_ != 0
                                 || i_51_ != 0) {
-                            models[i_48_].method2082(i_49_, i_50_, -79, i_51_);
+                            models[i_48_].method2082(i_49_, i_50_, i_51_);
                         }
                     }
                 }
@@ -876,7 +876,7 @@ public class NpcDefinition {
         int i = -1;
         if (anInt2881 == -1) {
             if (anInt2882 != -1) {
-                i = interface17.method65(anInt2882, 111);
+                i = interface17.method65(anInt2882);
             }
         } else {
             i = interface17.method64(anInt2881, (byte) -42);

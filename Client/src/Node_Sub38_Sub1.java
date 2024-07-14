@@ -62,7 +62,7 @@ public class Node_Sub38_Sub1 extends Node_Sub38 {
         return is;
     }
 
-    static void method2789(int i, byte b, int i_12_, int i_13_, Node_Sub8 node_sub8) {
+    static void method2789(int i, int i_12_, int i_13_, Node_Sub8 node_sub8) {
         anInt10074++;
         long l = (long) i_12_ << 14 | (long) i << 28 | i_13_;
         Node_Sub11 node_sub11 = (Node_Sub11) Class266.aHashTable3380.method1518(3512, l);
@@ -76,20 +76,18 @@ public class Node_Sub38_Sub1 extends Node_Sub38 {
             if (itemdefinition.anInt1892 == 1) {
                 i_14_ *= 1 + node_sub8.anInt7067;
             }
-            for (Node_Sub8 node_sub8_15_ = (Node_Sub8) node_sub11.aClass312_7104.method3613(); node_sub8_15_ != null; node_sub8_15_ = (Node_Sub8) node_sub11.aClass312_7104.method3620(b + 16777068)) {
-                itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8_15_.anInt7065, b ^ -14346);
+            for (Node_Sub8 node_sub8_15_ = (Node_Sub8) node_sub11.aClass312_7104.method3613(); node_sub8_15_ != null; node_sub8_15_ = (Node_Sub8) node_sub11.aClass312_7104.method3620()) {
+                itemdefinition = EntityNode_Sub3_Sub1.aClass86_9166.method1010(node_sub8_15_.anInt7065, (byte) -108 ^ -14346);
                 int i_16_ = itemdefinition.anInt1924;
                 if (itemdefinition.anInt1892 == 1) {
                     i_16_ *= 1 + node_sub8_15_.anInt7067;
                 }
                 if (i_16_ < i_14_) {
-                    BufferedStream.method2205(b + 228, node_sub8_15_, node_sub8);
+                    BufferedStream.method2205(node_sub8_15_, node_sub8);
                     return;
                 }
             }
-            if (b == -108) {
-                node_sub11.aClass312_7104.method3625(node_sub8);
-            }
+            node_sub11.aClass312_7104.method3625(node_sub8);
         }
     }
 
@@ -98,11 +96,8 @@ public class Node_Sub38_Sub1 extends Node_Sub38 {
         aClass277_Sub1_10084 = null;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10080++;
-        if (bool) {
-            anInt10087 = -36;
-        }
         if (i == 0) {
             anInt10087 = buffer.readUnsignedShort();
         }
@@ -128,12 +123,9 @@ public class Node_Sub38_Sub1 extends Node_Sub38 {
         Class150_Sub3.anInt8963 = -1;
     }
 
-    final void method2782(int i, int i_19_, boolean bool) {
+    final void method2782(int i, int i_19_) {
         anInt10085++;
-        super.method2782(i, i_19_, bool);
-        if (bool) {
-            method2789(1, (byte) -69, 44, -98, null);
-        }
+        super.method2782(i, i_19_);
         if (anInt10087 >= 0 && Node_Sub38_Sub35.aD10455 != null) {
             int i_20_ = !Node_Sub38_Sub35.aD10455.method10(anInt10087, -8217).aBoolean1204 ? 128 : 64;
             anIntArray10089 = Node_Sub38_Sub35.aD10455.method11(i_20_, false, i_20_, anInt10087, (byte) 0, 1.0F);

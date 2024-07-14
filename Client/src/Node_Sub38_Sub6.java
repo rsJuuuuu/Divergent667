@@ -28,7 +28,7 @@ public class Node_Sub38_Sub6 extends Node_Sub38 {
         return is;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         do {
             if (i == 0) {
                 anInt10134 = buffer.readUnsignedShort();
@@ -38,7 +38,7 @@ public class Node_Sub38_Sub6 extends Node_Sub38 {
             }
             anInt10137 = buffer.readUnsignedShort();
         } while (false);
-        if (!bool) {
+        if (!false) {
             anInt10133++;
         }
     }

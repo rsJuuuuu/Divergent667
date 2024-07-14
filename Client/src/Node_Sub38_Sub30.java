@@ -44,20 +44,15 @@ public class Node_Sub38_Sub30 extends Node_Sub38 {
         return is;
     }
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10414++;
-        do {
-            if (i == 0) {
-                anInt10415 = buffer.readUnsignedByte();
-                break;
-            } else if (i != 1) {
-                break;
-            }
-            anInt10411 = buffer.readUnsignedByte();
-        } while (false);
-        if (bool) {
-            method2780(true, null, -94);
+        if (i == 0) {
+            anInt10415 = buffer.readUnsignedByte();
+            return;
+        } else if (i != 1) {
+            return;
         }
+        anInt10411 = buffer.readUnsignedByte();
     }
 
     public Node_Sub38_Sub30() {
@@ -68,9 +63,6 @@ public class Node_Sub38_Sub30 extends Node_Sub38 {
     final int[] method2775(int i, int i_14_) {
         anInt10413++;
         int[] is = aClass146_7460.method1645(i_14_);
-        if (i < 107) {
-            method2775(94, -126);
-        }
         if (aClass146_7460.aBoolean1819) {
             int i_15_ = Class339_Sub7.anInt8728 / anInt10415;
             int i_16_ = Node_Sub38_Sub1.anInt10083 / anInt10411;

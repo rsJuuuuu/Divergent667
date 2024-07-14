@@ -147,8 +147,8 @@ public class Node_Sub52 extends Node {
                         for (CacheNode_Sub13 cachenode_sub13_20_ = (CacheNode_Sub13) cachenode_sub4.aClass158_9457.method1723(); cachenode_sub13_20_ != null; cachenode_sub13_20_ = (CacheNode_Sub13) cachenode_sub4.aClass158_9457.method1721()) {
                             if (cachenode_sub13_20_ == cachenode_sub13) {
                                 bool = true;
-                                if (cachenode_sub4.method2301(39, cachenode_sub13)) {
-                                    GLSprite_Sub1.method1205(cachenode_sub4, (byte) 50);
+                                if (cachenode_sub4.method2301(cachenode_sub13)) {
+                                    GLSprite_Sub1.method1205(cachenode_sub4);
                                 }
                                 break;
                             }
@@ -166,8 +166,8 @@ public class Node_Sub52 extends Node {
                         break;
                     }
                 }
-                if (cachenode_sub4 != null && cachenode_sub4.method2301(13, cachenode_sub13)) {
-                    GLSprite_Sub1.method1205(cachenode_sub4, (byte) -93);
+                if (cachenode_sub4 != null && cachenode_sub4.method2301(cachenode_sub13)) {
+                    GLSprite_Sub1.method1205(cachenode_sub4);
                 }
             }
         }

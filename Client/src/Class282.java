@@ -38,7 +38,7 @@ public class Class282 {
             }
             if (Class71.aBoolean967) {
                 if (i_4_ >= 0 && Node_Sub53.anInt7669 == 2) {
-                    Class362.method4053(Class168.anInt2046, Class308.anInt3914, Node_Sub33.anInt7405, (byte) -115, Class320_Sub28.anInt8469);
+                    Class362.method4053(Class168.anInt2046, Class308.anInt3914, Node_Sub33.anInt7405, Class320_Sub28.anInt8469);
                 }
                 Class168.anInt2046 = i_9_;
                 Class308.anInt3914 = i_11_;

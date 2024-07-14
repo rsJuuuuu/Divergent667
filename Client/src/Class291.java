@@ -10,7 +10,7 @@ abstract class Class291 {
 
     abstract Interface21 method3449();
 
-    abstract boolean method3450(int i, int i_0_);
+    abstract boolean method3450(int i_0_);
 
     public Class291() {
         /* empty */

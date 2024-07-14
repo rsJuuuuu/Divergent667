@@ -206,7 +206,7 @@ public class Class48 {
                 int i_14_ = buffer.readUnsignedByte();
                 if (i_14_ > 0) {
                     anIntArrayArray700[i_13_] = new int[i_14_];
-                    anIntArrayArray700[i_13_][0] = buffer.read24BitInteger();
+                    anIntArrayArray700[i_13_][0] = buffer.readInt24();
                     for (int i_15_ = 1; i_14_ > i_15_; i_15_++)
                         anIntArrayArray700[i_13_][i_15_] = buffer.readUnsignedShort();
                 }

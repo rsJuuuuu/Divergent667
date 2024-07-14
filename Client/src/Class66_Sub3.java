@@ -40,7 +40,7 @@ public class Class66_Sub3 extends Class66 {
         return aClass302_5168.method3510(((Class150_Sub1) aClass150_5171).anInt8950);
     }
 
-    final void method721(int i, boolean bool, int i_3_) {
+    final void method721(int i, int i_3_) {
         anInt9004++;
         int i_4_ = this.method720() * aClass150_5171.anInt5086 / 10000;
         int[] is = new int[4];

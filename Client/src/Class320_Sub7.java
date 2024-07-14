@@ -71,7 +71,7 @@ public class Class320_Sub7 extends Class320 {
             return 3;
         }
         if (b != 54) {
-            method3711((byte) 78, -70, -78);
+            method3711(-70);
         }
         return 1;
     }
@@ -92,11 +92,8 @@ public class Class320_Sub7 extends Class320 {
         anInt8269++;
     }
 
-    static boolean method3711(byte b, int i, int i_1_) {
+    static boolean method3711(int i) {
         anInt8278++;
-        if (b < 28) {
-            return true;
-        }
         return (0x100100 & i) != 0;
     }
 }

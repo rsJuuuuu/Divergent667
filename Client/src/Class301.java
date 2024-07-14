@@ -65,13 +65,13 @@ public class Class301 {
             aBoolean3780 = gltoolkit.aBoolean6677;
             Class262.method3146(gltoolkit);
             if (aBoolean3780) {
-                byte[] bs = Class320_Sub15.method3739((byte) -64, false, Class320_Sub28.anObject8474);
+                byte[] bs = Class320_Sub15.method3739(false, Class320_Sub28.anObject8474);
                 aClass169_Sub3_3777 = new Class169_Sub3(gltoolkit, 6410, bs, 6410);
-                bs = Class320_Sub15.method3739((byte) 126, false, Class88.anObject5281);
+                bs = Class320_Sub15.method3739(false, Class88.anObject5281);
                 aClass169_Sub3_3776 = new Class169_Sub3(gltoolkit, 6410, bs, 6410);
                 Class167 class167 = gltoolkit.aClass167_6607;
-                if (class167.method1751(87)) {
-                    bs = Class320_Sub15.method3739((byte) 127, false, Node_Sub6.anObject7050);
+                if (class167.method1751()) {
+                    bs = Class320_Sub15.method3739(false, Node_Sub6.anObject7050);
                     aClass169_Sub3_3778 = new Class169_Sub3(gltoolkit);
                     Class169_Sub3 class169_sub3 = new Class169_Sub3(gltoolkit, 6409, bs, 6409);
                     if (class167.method1749(aClass169_Sub3_3778, class169_sub3)) {

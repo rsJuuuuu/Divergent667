@@ -10,13 +10,10 @@ public class Node_Sub38_Sub29 extends Node_Sub38 {
     static int anInt10409;
     private int anInt10410 = 585;
 
-    final void method2780(boolean bool, BufferedStream buffer, int i) {
+    final void method2780(BufferedStream buffer, int i) {
         anInt10405++;
         if (i == 0) {
             anInt10410 = buffer.readUnsignedShort();
-        }
-        if (bool) {
-            method2780(false, null, 11);
         }
     }
 

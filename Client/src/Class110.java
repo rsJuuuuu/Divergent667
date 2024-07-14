@@ -80,14 +80,14 @@ public class Class110 {
                     if (interface19 instanceof Animable_Sub2_Sub1) {
                         ((Animable_Sub2_Sub1) interface19).aClass310_10632.method3591(i_6_);
                     } else {
-                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, 58, interface19.method72(-32136));
+                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, interface19.method72(-32136));
                     }
                 }
                 if (interface19_11_ != null) {
                     if (interface19_11_ instanceof Animable_Sub2_Sub1) {
                         ((Animable_Sub2_Sub1) interface19_11_).aClass310_10632.method3591(i_6_);
                     } else {
-                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, 99, interface19_11_.method72(-32136));
+                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, interface19_11_.method72(-32136));
                     }
                 }
             } else if (i_10_ == 1) {
@@ -98,14 +98,14 @@ public class Class110 {
                     } else {
                         int i_12_ = interface19.method72(-32136);
                         if (i_5_ == 4 || i_5_ == 5) {
-                            Class128.method1544(i_4_, 4, i_8_, i_7_, i_6_, i_10_, i, -125, i_12_);
+                            Class128.method1544(i_4_, 4, i_8_, i_7_, i_6_, i_10_, i, i_12_);
                         } else if (i_5_ == 6) {
-                            Class128.method1544(i_4_, 4, i_8_ + 4, i_7_, i_6_, i_10_, i, -128, i_12_);
+                            Class128.method1544(i_4_, 4, i_8_ + 4, i_7_, i_6_, i_10_, i, i_12_);
                         } else if (i_5_ == 7) {
-                            Class128.method1544(i_4_, 4, (0x3 & i_8_ + 2) + 4, i_7_, i_6_, i_10_, i, -123, i_12_);
+                            Class128.method1544(i_4_, 4, (0x3 & i_8_ + 2) + 4, i_7_, i_6_, i_10_, i, i_12_);
                         } else if (i_5_ == 8) {
-                            Class128.method1544(i_4_, 4, 4 + i_8_, i_7_, i_6_, i_10_, i, -127, i_12_);
-                            Class128.method1544(i_4_, 4, (2 + i_8_ & 0x3) + 4, i_7_, i_6_, i_10_, i, -125, i_12_);
+                            Class128.method1544(i_4_, 4, 4 + i_8_, i_7_, i_6_, i_10_, i, i_12_);
+                            Class128.method1544(i_4_, 4, (2 + i_8_ & 0x3) + 4, i_7_, i_6_, i_10_, i, i_12_);
                         }
                     }
                 }
@@ -118,7 +118,7 @@ public class Class110 {
                     if (interface19 instanceof Mobile_Sub3) {
                         ((Mobile_Sub3) interface19).aClass310_10777.method3591(i_6_);
                     } else {
-                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, -124, interface19.method72(-32136));
+                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, interface19.method72(-32136));
                     }
                 }
             } else if (i_10_ == 3) {
@@ -127,7 +127,7 @@ public class Class110 {
                     if (interface19 instanceof Animable_Sub1_Sub2) {
                         ((Animable_Sub1_Sub2) interface19).aClass310_10652.method3591(i_6_);
                     } else {
-                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, 63, interface19.method72(-32136));
+                        Class128.method1544(i_4_, i_5_, i_8_, i_7_, i_6_, i_10_, i, interface19.method72(-32136));
                     }
                 }
             }
@@ -188,13 +188,13 @@ public class Class110 {
 
     static boolean method1135(int i, int i_18_) {
         anInt1380++;
-        if (!Class320_Sub4.method3693(75, i, i_18_)) {
+        if (!Class320_Sub4.method3693(75, i)) {
             return false;
         }
-        if ((0xb000 & i) != 0 | CacheNode_Sub3.method2296(i) | Class320_Sub7.method3711((byte) 86, i, i_18_)) {
+        if ((0xb000 & i) != 0 | CacheNode_Sub3.method2296(i) | Class320_Sub7.method3711(i)) {
             return true;
         }
-        return (Class73.method749((byte) -65, i, i_18_) | Class214.method2060(i, i_18_, 116)) & (0x37 & i_18_) == 0;
+        return (Class73.method749(i) | Class214.method2060(i, i_18_, 116)) & (0x37 & i_18_) == 0;
     }
 
     /*synthetic*/

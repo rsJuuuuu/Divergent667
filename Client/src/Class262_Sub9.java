@@ -18,7 +18,7 @@ public class Class262_Sub9 extends Class262 {
     final void method3148(int i) {
         Class121.aClass206Array1529[anInt7759].method2037(-61).method852(anInt7766, 0, anInt7761, (byte) -119, anInt7764, Class174.clientCycle, anInt7762, anInt7758);
         if (i >= -102) {
-            method3171(null, (byte) 71, null, -111, null, 38);
+            method3171(null, null, -111, null, 38);
         }
         anInt7763++;
     }
@@ -27,7 +27,7 @@ public class Class262_Sub9 extends Class262 {
         aClass318_7765 = null;
     }
 
-    static GraphicsToolkit method3171(Index class302, byte b, d var_d, int i, java.awt.Canvas canvas, int i_0_) {
+    static GraphicsToolkit method3171(Index class302, d var_d, int i, java.awt.Canvas canvas, int i_0_) {
         anInt7760++;
 
         int i_2_ = 0;

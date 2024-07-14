@@ -40,7 +40,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19 {
 
     final boolean method821(int i) {
         if (i != 0) {
-            method814((byte) 100);
+            method814();
         }
         anInt10742++;
         return aBoolean10746;
@@ -99,7 +99,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19 {
         }
     }
 
-    final void method816(int i, boolean bool, GraphicsToolkit graphicstoolkit, int i_8_, byte b, int i_9_, Animable animable) {
+    final void method816(int i, boolean bool, int i_8_, byte b, int i_9_, Animable animable) {
         if (animable instanceof Animable_Sub2_Sub2) {
             Animable_Sub2_Sub2 animable_sub2_sub2_10_ = (Animable_Sub2_Sub2) animable;
             if (aDrawableModel10756 != null && animable_sub2_sub2_10_.aDrawableModel10756 != null) {
@@ -125,7 +125,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19 {
         return aBoolean10740;
     }
 
-    final boolean method814(byte b) {
+    final boolean method814() {
         anInt10747++;
         if (aDrawableModel10756 == null) {
             return true;
@@ -146,7 +146,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19 {
 
     final Class171 method809(GraphicsToolkit graphicstoolkit, int i) {
         if (aClass171_10758 == null) {
-            aClass171_10758 = Class167.method1752(0, anInt5937, anInt5934, method841(graphicstoolkit, 0), anInt5940);
+            aClass171_10758 = Class167.method1752(anInt5937, anInt5934, method841(graphicstoolkit, 0), anInt5940);
         }
         if (i >= -93) {
             aClass171_10758 = null;
@@ -178,7 +178,7 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19 {
         }
     }
 
-    public final void method69(int i) {
+    public final void method69() {
         if (aDrawableModel10756 != null) {
             aDrawableModel10756.method617();
         }
@@ -291,14 +291,14 @@ public class Animable_Sub2_Sub2 extends Animable_Sub2 implements Interface19 {
         return l;
     }
 
-    final EntityNode_Sub6 method807(int i, GraphicsToolkit graphicstoolkit) {
+    final EntityNode_Sub6 method807(GraphicsToolkit graphicstoolkit) {
         anInt10749++;
         if (aDrawableModel10756 == null) {
             return null;
         }
         Class336 class336 = graphicstoolkit.A();
         class336.method3854(anInt5934, anInt5937, anInt5940);
-        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10752, (byte) -40, 1);
+        EntityNode_Sub6 entitynode_sub6 = Class345.method3972(aBoolean10752, 1);
         if (Node_Sub15_Sub10.aBoolean9850) {
             aDrawableModel10756.method622(class336, entitynode_sub6.anEntityNode_Sub5Array5995[0], Class308.anInt3912, 0);
         } else {
